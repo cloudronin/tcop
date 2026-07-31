@@ -14,7 +14,9 @@ The first milestone implements:
 - deterministic five-node simulation with replay, delay, partition, and Sybil
   fault cases;
 - local capability-specific trust envelopes and simulated responses; and
-- CT-001–CT-020 plus deterministic B-001–B-010 benchmark artifacts.
+- CT-001–CT-020 plus deterministic B-001–B-010 benchmark artifacts;
+- timing, topology, partition-posture, false-containment, and architectural
+  ablation experiments.
 
 The protocol does not receive benchmark ground truth. Protocol, resolution,
 and benchmark-truth streams are stored separately to prevent oracle leakage.
@@ -30,10 +32,21 @@ make verify
 The command writes per-scenario reproducibility artifacts under
 `artifacts/verify/`.
 
+To run the complete deterministic research suite, including the second
+iteration of controlled experiments, use:
+
+```bash
+make research
+```
+
+It also writes timing and architecture experiment artifacts to
+`artifacts/experiments/`. See
+[the second-iteration research note](docs/v0.2-deterministic-experiments.md)
+for the interpretation limits and measured outcomes.
+
 ## Safety and non-goals
 
 All response adapters are simulations. The implementation intentionally omits
 LLM calls, production enforcement, Kubernetes, Kafka, and external discovery.
 Those integrations must not be added until this deterministic milestone is
 reproducible.
-

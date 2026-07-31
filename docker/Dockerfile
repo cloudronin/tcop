@@ -11,5 +11,4 @@ COPY rfcs ./rfcs
 COPY spec ./spec
 RUN python -m pip install --no-cache-dir .
 
-CMD ["make", "verify"]
-
+CMD ["make", "research"]

@@ -25,7 +25,15 @@ from .time import parse_rfc3339
 from .workloads import DeterministicAgentWorkload
 
 
-BASELINES = ("no_runtime_defense", "policy_only", "local_only", "central_monitor", "tcx")
+BASELINES = (
+    "no_runtime_defense",
+    "policy_only",
+    "policy_dynamic",
+    "local_only",
+    "central_monitor",
+    "central_equal",
+    "tcx",
+)
 
 
 @dataclass(frozen=True)
@@ -91,6 +99,7 @@ class BenchmarkRunner:
             # Ensure delayed messages and any deterministic synchronization run.
             while cluster.transport.pending():
                 cluster.advance(1)
+            self._apply_baseline_enforcement(cluster, scenario, subject, baseline)
             resolution_events = cluster.all_resolution_events()
             protocol_events = cluster.all_protocol_events()
             accepted_evidence = cluster.accepted_observations()
@@ -151,9 +160,9 @@ class BenchmarkRunner:
 
         def deliver(observation: Mapping[str, Any], *, delay: int = 0, duplicate: bool = False) -> None:
             emitted.append(dict(observation))
-            if baseline == "no_runtime_defense" or baseline == "policy_only":
+            if baseline in {"no_runtime_defense", "policy_only", "policy_dynamic"}:
                 return
-            destinations = ["node-1"] if baseline in {"local_only", "central_monitor"} else None
+            destinations = ["node-1"] if baseline in {"local_only", "central_monitor", "central_equal"} else None
             cluster.disseminate("node-1", observation, delay=delay, duplicate=duplicate, destinations=destinations)
 
         if scenario.scenario_id == "B-001":
@@ -214,6 +223,38 @@ class BenchmarkRunner:
                     )
                 )
         return emitted
+
+    @staticmethod
+    def _apply_baseline_enforcement(cluster: Cluster, scenario: Scenario, subject: str, baseline: str) -> None:
+        """Apply non-TCX baseline semantics after the same synthetic facts exist.
+
+        `central_equal` sees the same observations as the central node and can
+        enforce the same local rule at every domain. It intentionally removes
+        local sovereignty and therefore serves as an upper-bound comparison,
+        not a TCOP implementation.
+        """
+
+        if baseline == "policy_dynamic" and scenario.scenario_id in {"B-002", "B-003", "B-004", "B-006", "B-007", "B-008", "B-010"}:
+            from .responses import OperatingEnvelope
+
+            cluster.nodes["node-1"].responses.apply(
+                subject,
+                OperatingEnvelope(
+                    state="constrained",
+                    denied_capabilities=("data.export", "memory.write"),
+                    actions=("reduce_capability",),
+                    reasons=("dynamic local policy matched synthetic risk fact",),
+                ),
+                cluster.clock.now,
+                source="policy_dynamic",
+            )
+        if baseline == "central_equal":
+            envelope = cluster.nodes["node-1"].responses.envelopes.get(subject)
+            if envelope is None:
+                return
+            for node_id, node in cluster.nodes.items():
+                if node_id != "node-1":
+                    node.responses.apply(subject, envelope, cluster.clock.now, source="central_monitor")
 
     @staticmethod
     def _initial_graph(subject: str, at: int) -> list[dict[str, Any]]:
@@ -285,16 +326,32 @@ class BenchmarkRunner:
         if not scenario.attack:
             return False, events
         if scenario.scenario_id == "B-004":
-            # The false-accusation objective is a quarantine, not merely a
-            # reversible, local capability reduction.
-            success = False
+            # The false-accusation objective is a restriction. Quarantine is a
+            # separate, stricter attacker objective represented below.
+            success = bool(constraints)
             events.append(
                 {
                     "stream": "benchmark_truth",
-                    "event_type": "benign_target_constrained",
+                    "event_type": "false_containment_achieved" if success else "false_containment_blocked",
                     "at": min(constraints.values()) if constraints else now,
                     "subject_id": subject,
+                    "objective": "false_containment",
                     "objective_achieved": success,
+                    "quarantine_forced": False,
+                }
+            )
+            return success, events
+        if scenario.scenario_id == "B-010":
+            success = bool(constraints)
+            events.append(
+                {
+                    "stream": "benchmark_truth",
+                    "event_type": "availability_disruption_achieved" if success else "availability_disruption_blocked",
+                    "at": min(constraints.values()) if constraints else now,
+                    "subject_id": subject,
+                    "objective": "availability_disruption",
+                    "objective_achieved": success,
+                    "quarantine_forced": False,
                 }
             )
             return success, events
@@ -353,8 +410,16 @@ class BenchmarkRunner:
         exposed = {edge["destination_trust_domain"] for edge in graph if edge["material_exposure"]}
         affected = [edge for edge in graph if edge["material_exposure"]]
         false_containment = scenario.scenario_id == "B-004" and constrained_at is not None
+        propagation_success = bool(affected)
+        false_containment_success = any(event["event_type"] == "false_containment_achieved" for event in truth)
+        availability_disruption_success = any(event["event_type"] == "availability_disruption_achieved" for event in truth)
+        scenario_objective_success = propagation_success or false_containment_success or availability_disruption_success
         return {
-            "attack_success_rate": 1.0 if any(event["event_type"] == "malicious_objective_achieved" for event in truth) else 0.0,
+            "attack_success_rate": 1.0 if scenario_objective_success else 0.0,
+            "compromise_propagation_success": 1.0 if propagation_success else 0.0,
+            "false_containment_success": 1.0 if false_containment_success else 0.0,
+            "availability_disruption_success": 1.0 if availability_disruption_success else 0.0,
+            "protocol_poisoning_success": 1.0 if scenario.scenario_id in {"B-005", "B-006", "B-009", "B-010"} and scenario_objective_success else 0.0,
             "false_containment_rate": 1.0 if false_containment else 0.0,
             "benign_task_completion": 0.0 if false_containment else 1.0,
             "protocol_accepted": len(accepted),
@@ -394,7 +459,7 @@ class BenchmarkRunner:
             "protocol_version": "0.1",
             "implementation": {"name": "TCF", "revision": _git_revision()},
             "schema_versions": ["observation-v0.1"],
-            "rfc_versions": ["0001", "0002", "0003", "0005", "0006", "0008"],
+            "rfc_versions": ["0001", "0002", "0003", "0005", "0006", "0008", "0009"],
             "seed": seed,
             "scenario": scenario.scenario_id,
             "baseline": baseline,

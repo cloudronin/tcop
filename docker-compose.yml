@@ -3,7 +3,6 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
-    command: make verify
+    command: make research
     volumes:
       - ./artifacts:/workspace/artifacts
-

@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from .benchmark import BASELINES, SCENARIO_BY_ID, SCENARIOS, BenchmarkRunner, verify
+from .experiments import run_deterministic_experiments
 
 
 def main() -> None:
@@ -21,10 +22,16 @@ def main() -> None:
     verify_parser = commands.add_parser("verify", help="run all benchmark baselines and reproducibility check")
     verify_parser.add_argument("--output", type=Path, default=Path("artifacts/verify"))
     verify_parser.add_argument("--seed", type=int, default=42)
+    experiments = commands.add_parser("experiments", help="run deterministic timing, topology, and failure-mode sweeps")
+    experiments.add_argument("--output", type=Path, default=Path("artifacts/experiments"))
     args = parser.parse_args()
 
     if args.command == "verify":
         print(json.dumps(verify(args.output, seed=args.seed), indent=2, sort_keys=True))
+        return
+    if args.command == "experiments":
+        result = run_deterministic_experiments(args.output)
+        print(json.dumps({"summary": result["summary"], "architecture_controls": result["architecture_controls"]}, indent=2, sort_keys=True))
         return
     identifiers = [scenario.scenario_id for scenario in SCENARIOS] if args.all else [args.scenario]
     if not all(identifiers):
@@ -36,4 +43,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

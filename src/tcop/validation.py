@@ -90,6 +90,8 @@ class ObservationValidator:
         clock_skew: int = 5,
         max_message_bytes: int = 32_768,
         max_rate_per_tick: int = 100,
+        enforce_scope: bool = True,
+        enforce_expiration: bool = True,
     ) -> None:
         self.registry = registry
         self.tenant = tenant
@@ -97,6 +99,8 @@ class ObservationValidator:
         self.clock_skew = clock_skew
         self.max_message_bytes = max_message_bytes
         self.max_rate_per_tick = max_rate_per_tick
+        self.enforce_scope = enforce_scope
+        self.enforce_expiration = enforce_expiration
         self.replay = ReplayWindow()
         self._rate: dict[tuple[int, str], int] = defaultdict(int)
 
@@ -125,7 +129,7 @@ class ObservationValidator:
             return ValidationResult.reject(ERROR_IDENTITY_UNKNOWN)
         if not self.registry.validate_authority_chain(identity.observer_id):
             return ValidationResult.reject(ERROR_SCOPE_VIOLATION, "invalid delegation chain")
-        if not all(identity.allows(scope, observation["observation_type"]) for scope in observation["scope"]):
+        if self.enforce_scope and not all(identity.allows(scope, observation["observation_type"]) for scope in observation["scope"]):
             return ValidationResult.reject(ERROR_SCOPE_VIOLATION)
 
         # 4. Verify signature over exact canonical unsigned bytes.
@@ -142,7 +146,7 @@ class ObservationValidator:
             expires_at = parse_rfc3339(observation["expires_at"])
         except ValueError as exc:
             return ValidationResult.reject(ERROR_SCHEMA_INVALID, str(exc))
-        if expires_at <= issued_at or expires_at < now:
+        if self.enforce_expiration and (expires_at <= issued_at or expires_at < now):
             return ValidationResult.reject(ERROR_EXPIRED)
         if observed_at > now + self.clock_skew or issued_at > now + self.clock_skew:
             return ValidationResult.reject(ERROR_FUTURE_TIMESTAMP)
@@ -200,4 +204,3 @@ class ObservationValidator:
         if not isinstance(observation["evidence"], list) or len(observation["evidence"]) > 16:
             return ValidationResult.reject(ERROR_SCHEMA_INVALID, "invalid evidence")
         return None
-

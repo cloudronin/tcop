@@ -133,6 +133,21 @@ class ConformanceTests(unittest.TestCase):
         self.assertTrue(self._send(recovery).accepted)
         self.assertEqual("recovered", self.cluster.nodes["node-1"].responses.envelopes[self.subject].state)
 
+    def test_withdrawal_retracts_a_prior_observation_and_restores_locally(self) -> None:
+        risk = self.cluster.observe("tool", self.subject, "tool.prohibited_export", "tool:data.export", severity="critical")
+        self.assertTrue(self._send(risk).accepted)
+        withdrawal = self.cluster.observe(
+            "recovery",
+            self.subject,
+            "recovery.withdrawal",
+            "recovery:withdrawal",
+            sequence_number=2,
+            severity="low",
+            metadata={"withdraws": risk["observation_id"]},
+        )
+        self.assertTrue(self._send(withdrawal).accepted)
+        self.assertEqual("recovered", self.cluster.nodes["node-1"].responses.envelopes[self.subject].state)
+
     def test_ct_016_transport_preserves_signed_canonical_payload(self) -> None:
         observation = self.cluster.observe("runtime", self.subject, "runtime.lifecycle", "runtime:default")
         before = canonical_bytes(unsigned_envelope(observation))
@@ -172,4 +187,3 @@ class ConformanceTests(unittest.TestCase):
         )
         self.assertEqual("identity_unknown", self._send(old_observation).code)
         self.assertTrue(self._send(new_observation).accepted)
-

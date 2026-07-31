@@ -10,7 +10,7 @@ from typing import Any, Iterable, Mapping
 
 from .identity import AuthorityRegistry, KeyMaterial
 from .protocol import make_observation
-from .responses import OperatingEnvelope, SimulatedResponseAdapter
+from .responses import ConnectivityPosture, OperatingEnvelope, SimulatedResponseAdapter, connectivity_loss_envelope
 from .store import EvidenceStore
 from .time import VirtualClock
 from .trust import ReferenceResolver
@@ -20,14 +20,40 @@ from .validation import ObservationValidator, ValidationResult
 class TrustNode:
     """One local sovereign receiver in a deterministic topology."""
 
-    def __init__(self, node_id: str, registry: AuthorityRegistry, clock: VirtualClock, *, tenant: str = "shared") -> None:
+    def __init__(
+        self,
+        node_id: str,
+        registry: AuthorityRegistry,
+        clock: VirtualClock,
+        *,
+        tenant: str = "shared",
+        resolution_delay: int = 0,
+        enforcement_delay: int = 0,
+        connectivity_posture: ConnectivityPosture = ConnectivityPosture.FAIL_OPEN,
+        enforce_scope: bool = True,
+        enforce_expiration: bool = True,
+        require_domain_diversity: bool = True,
+        capability_specific: bool = True,
+    ) -> None:
         self.node_id = node_id
         self.clock = clock
-        self.validator = ObservationValidator(registry, tenant=tenant)
+        self.validator = ObservationValidator(
+            registry,
+            tenant=tenant,
+            enforce_scope=enforce_scope,
+            enforce_expiration=enforce_expiration,
+        )
         self.store = EvidenceStore()
-        self.resolver = ReferenceResolver()
+        self.resolver = ReferenceResolver(
+            enforce_expiration=enforce_expiration,
+            require_domain_diversity=require_domain_diversity,
+            capability_specific=capability_specific,
+        )
         self.responses = SimulatedResponseAdapter()
         self.protocol_events: list[dict[str, Any]] = []
+        self.resolution_delay = resolution_delay
+        self.enforcement_delay = enforcement_delay
+        self.connectivity_posture = connectivity_posture
 
     def receive(self, observation: Mapping[str, Any]) -> ValidationResult:
         result = self.validator.validate(observation, self.clock.now)
@@ -54,13 +80,14 @@ class TrustNode:
         self.protocol_events.append({"stream": "protocol", "event_type": "observation_accepted", "at": self.clock.now, **payload})
         self.store.append_protocol_event("observation_accepted", self.clock.now, payload)
         subject_id = observation["subject"]["id"]
-        envelope = self.resolver.resolve(subject_id, self.store.observations_for(subject_id), self.clock.now)
-        self.responses.apply(subject_id, envelope, self.clock.now)
+        decision_at = self.clock.now + self.resolution_delay
+        envelope = self.resolver.resolve(subject_id, self.store.observations_for(subject_id), decision_at)
+        self.responses.apply(subject_id, envelope, decision_at + self.enforcement_delay)
         return result
 
     def heartbeat_missing(self, subject_id: str) -> OperatingEnvelope:
-        envelope = OperatingEnvelope(state="unknown", actions=("observe",), reasons=("heartbeat missing",))
-        self.responses.apply(subject_id, envelope, self.clock.now)
+        envelope = connectivity_loss_envelope(self.connectivity_posture)
+        self.responses.apply(subject_id, envelope, self.clock.now + self.enforcement_delay)
         self.protocol_events.append(
             {"stream": "protocol", "event_type": "peer_unreachable", "at": self.clock.now, "node_id": self.node_id, "subject_id": subject_id}
         )
@@ -137,7 +164,21 @@ class FaultingTransport:
 class Cluster:
     """Five sovereign trust nodes plus independently scoped test observers."""
 
-    def __init__(self, *, now: int = 1_800_000_000) -> None:
+    def __init__(
+        self,
+        *,
+        now: int = 1_800_000_000,
+        node_count: int = 5,
+        resolution_delay: int = 0,
+        enforcement_delay: int = 0,
+        connectivity_posture: ConnectivityPosture = ConnectivityPosture.FAIL_OPEN,
+        enforce_scope: bool = True,
+        enforce_expiration: bool = True,
+        require_domain_diversity: bool = True,
+        capability_specific: bool = True,
+    ) -> None:
+        if node_count < 3:
+            raise ValueError("a benchmark cluster requires at least three trust nodes")
         self.clock = VirtualClock(now)
         self.registry = AuthorityRegistry()
         self.observers: dict[str, KeyMaterial] = {}
@@ -152,7 +193,21 @@ class Cluster:
             key = KeyMaterial.deterministic(name, domain, scopes=scopes, observation_types=types)
             self.observers[name] = key
             self.registry.register(key.identity)
-        self.nodes = {f"node-{number}": TrustNode(f"node-{number}", self.registry, self.clock) for number in range(1, 6)}
+        self.nodes = {
+            f"node-{number}": TrustNode(
+                f"node-{number}",
+                self.registry,
+                self.clock,
+                resolution_delay=resolution_delay,
+                enforcement_delay=enforcement_delay,
+                connectivity_posture=connectivity_posture,
+                enforce_scope=enforce_scope,
+                enforce_expiration=enforce_expiration,
+                require_domain_diversity=require_domain_diversity,
+                capability_specific=capability_specific,
+            )
+            for number in range(1, node_count + 1)
+        }
         self.transport = FaultingTransport(self.clock, self.nodes)
 
     def observe(

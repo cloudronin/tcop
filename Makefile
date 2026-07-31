@@ -2,7 +2,7 @@ PYTHON ?= python3
 PYTHONPATH := src
 ARTIFACTS ?= artifacts/verify
 
-.PHONY: schema test verify benchmark report clean
+.PHONY: schema test verify benchmark experiments research report clean
 
 schema:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.schema_check
@@ -12,6 +12,11 @@ test:
 
 benchmark:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.cli benchmark --all --output $(ARTIFACTS)
+
+experiments:
+	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.cli experiments --output artifacts/experiments
+
+research: verify experiments
 
 verify: schema test
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.cli verify --output $(ARTIFACTS)

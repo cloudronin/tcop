@@ -24,7 +24,8 @@ class BenchmarkTests(unittest.TestCase):
     def test_false_accusation_is_bounded_not_quarantined(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             summary = BenchmarkRunner().run("B-004", output=Path(temporary))
-            self.assertEqual(0.0, summary["metrics"]["attack_success_rate"])
+            self.assertEqual(1.0, summary["metrics"]["attack_success_rate"])
+            self.assertEqual(1.0, summary["metrics"]["false_containment_success"])
             self.assertEqual(1.0, summary["metrics"]["false_containment_rate"])
 
     def test_delayed_critical_evidence_records_attack_window_loss(self) -> None:
@@ -32,6 +33,12 @@ class BenchmarkTests(unittest.TestCase):
             summary = BenchmarkRunner().run("B-007", output=Path(temporary))
             self.assertEqual(1.0, summary["metrics"]["attack_success_rate"])
             self.assertEqual(10, summary["metrics"]["context_dissemination_latency"])
+
+    def test_sybil_restriction_is_counted_as_availability_disruption(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            summary = BenchmarkRunner().run("B-010", output=Path(temporary))
+            self.assertEqual(1.0, summary["metrics"]["availability_disruption_success"])
+            self.assertEqual(1.0, summary["metrics"]["protocol_poisoning_success"])
 
     def test_artifacts_separate_truth_from_protocol_and_resolution(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -55,7 +62,7 @@ class BenchmarkTests(unittest.TestCase):
             runner = BenchmarkRunner()
             summaries = [runner.run("B-002", baseline=baseline, output=root) for baseline in BASELINES]
             analysis = write_analysis(root, summaries)
-            self.assertEqual(5, analysis["runs"])
+            self.assertEqual(len(BASELINES), analysis["runs"])
             report = (root / "benchmark-report.md").read_text(encoding="utf-8")
             self.assertIn("TCX", report)
             self.assertIn("B-002", report)
