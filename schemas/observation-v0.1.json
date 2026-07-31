@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcop.dev/schemas/observation-v0.1.json",
+  "title": "TCX v0.1 Observation Envelope",
+  "type": "object",
+  "required": [
+    "protocol_version", "message_type", "observation_id", "observer",
+    "subject", "observation_type", "scope", "tenant", "sequence_number",
+    "observed_at", "issued_at", "expires_at", "confidence", "severity",
+    "evidence", "metadata", "signature"
+  ],
+  "properties": {
+    "protocol_version": {"const": "0.1"},
+    "message_type": {"const": "observation"},
+    "observation_id": {"type": "string", "minLength": 8, "maxLength": 128},
+    "observer": {
+      "type": "object",
+      "required": ["id", "trust_domain", "key_id"],
+      "properties": {
+        "id": {"type": "string"},
+        "trust_domain": {"type": "string"},
+        "key_id": {"type": "string"}
+      }
+    },
+    "subject": {
+      "type": "object",
+      "required": ["id", "type"],
+      "properties": {
+        "id": {"type": "string"},
+        "type": {"enum": ["agent", "memory", "tool", "credential", "workflow", "observer", "resource"]}
+      }
+    },
+    "observation_type": {"type": "string", "pattern": "^[a-z]+(\\.[a-z_]+)+$"},
+    "scope": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "tenant": {"type": "string"},
+    "sequence_number": {"type": "integer", "minimum": 0},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "issued_at": {"type": "string", "format": "date-time"},
+    "expires_at": {"type": "string", "format": "date-time"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "severity": {"enum": ["informational", "low", "medium", "high", "critical"]},
+    "evidence": {"type": "array", "maxItems": 16},
+    "metadata": {"type": "object", "maxProperties": 32},
+    "extensions": {"type": "array", "maxItems": 16},
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "value"],
+      "properties": {"algorithm": {"const": "ed25519"}, "value": {"type": "string"}}
+    }
+  }
+}
+

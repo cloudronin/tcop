@@ -1,0 +1,17 @@
+{
+  "benchmark_version": "0.1",
+  "execution_profile": "deterministic-synthetic",
+  "scenarios": [
+    {"id": "B-001", "title": "Benign workflow", "attack": false, "propagates": false},
+    {"id": "B-002", "title": "Indirect prompt injection", "attack": true, "propagates": true},
+    {"id": "B-003", "title": "Memory poisoning", "attack": true, "propagates": true},
+    {"id": "B-004", "title": "Single malicious observer", "attack": true, "propagates": false},
+    {"id": "B-005", "title": "Forged observer", "attack": true, "propagates": false},
+    {"id": "B-006", "title": "Replay", "attack": true, "propagates": false},
+    {"id": "B-007", "title": "Delayed critical evidence", "attack": true, "propagates": true},
+    {"id": "B-008", "title": "Network partition", "attack": true, "propagates": true},
+    {"id": "B-009", "title": "Clock skew", "attack": true, "propagates": false},
+    {"id": "B-010", "title": "Sybil domain", "attack": true, "propagates": false}
+  ]
+}
+

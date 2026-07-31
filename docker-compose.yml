@@ -1,0 +1,9 @@
+services:
+  deterministic-verify:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    command: make verify
+    volumes:
+      - ./artifacts:/workspace/artifacts
+
