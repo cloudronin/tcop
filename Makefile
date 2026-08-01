@@ -4,7 +4,7 @@ ARTIFACTS ?= artifacts/verify
 
 # Developer-only shortcuts.  The installed `tcop` CLI is the public TCOP
 # contract; no research logic is implemented in this Makefile.
-.PHONY: schema test verify benchmark experiments research-regression research-witness research-reliability research-confirmation research-minimality research-minimality-core research-minimality-combinations research-minimality-validation research-federated-v0.6 research report clean
+.PHONY: schema test verify benchmark experiments research-regression research-witness research-reliability research-confirmation research-minimality research-minimality-core research-minimality-combinations research-minimality-validation research-federated-v0.6 research-evidence-v0.6 research report clean
 
 schema:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.schema_check
@@ -40,16 +40,20 @@ research-minimality-core: schema test
 research-minimality-combinations: schema test
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.cli minimality --stage combinations --artifact-dir artifacts/minimality-v0.5
 
-research-minimality-validation: schema test
+research-minimality-validation: research-minimality schema
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.cli minimality-validation --source artifacts/minimality-v0.5 --artifact-dir artifacts/minimality-v0.5-validation
 
 # This target performs the v0.6 atomic sequence: frozen-input verification,
 # strategy certification, harness conformance, replay, full matrix, reports,
 # and artifact verification. It writes only to the v0.6 artifact root.
-research-federated-v0.6: schema test
+research-federated-v0.6: research-minimality-validation schema test
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.cli study reproduce --plan benchmark/studies/v0.6-federated.yaml --selection full --source artifacts/minimality-v0.5-validation --output artifacts/federated-domain-v0.6
 
-research: research-regression research-witness research-reliability research-confirmation research-minimality research-federated-v0.6
+research-evidence-v0.6: research-federated-v0.6 schema test
+	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.cli study reproduce --plan benchmark/studies/v0.6-evidence.yaml --selection full --source artifacts/minimality-v0.5-validation --source-artifact artifacts/federated-domain-v0.6 --output artifacts/federated-domain-v0.6-evidence
+	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.cli artifact verify artifacts/federated-domain-v0.6-evidence --require-complete --require-replayable
+
+research: research-regression research-witness research-reliability research-confirmation research-evidence-v0.6
 
 verify: schema test
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.cli verify --artifact-dir $(ARTIFACTS)

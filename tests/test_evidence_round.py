@@ -17,6 +17,8 @@ SOURCE = ROOT / "artifacts" / "federated-domain-v0.6"
 
 class EvidenceRoundTests(unittest.TestCase):
     def test_smoke_audits_pairs_and_replays_diagnostics_without_mutating_source(self) -> None:
+        if not (SOURCE / "status.json").is_file():
+            self.skipTest("requires the generated v0.6 federation source artifact")
         source_before = artifact_root_digest(SOURCE)["artifact_root_digest"]
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / "evidence"

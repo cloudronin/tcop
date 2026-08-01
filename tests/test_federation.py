@@ -7,11 +7,16 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tcop.federation import ARCHITECTURES, PHASES, SCENARIOS, FrozenStrategyAdapter, generate_matrix, run_federated_study
+from tcop.federation import ARCHITECTURES, FROZEN_INDEX, FROZEN_ROOT, PHASES, SCENARIOS, FrozenStrategyAdapter, generate_matrix, run_federated_study
 
 
 class FederatedHarnessTests(unittest.TestCase):
+    def require_frozen_validation_inputs(self) -> None:
+        if not (FROZEN_ROOT / FROZEN_INDEX).is_file():
+            self.skipTest("requires the generated frozen v0.5 validation artifact")
+
     def test_frozen_strategy_certification_binds_all_admitted_profiles(self) -> None:
+        self.require_frozen_validation_inputs()
         certifications = FrozenStrategyAdapter().certify_all()
         self.assertEqual(set(certifications), {"containment-first", "balanced", "utility-preserving", "forensic-oriented"})
         self.assertEqual(certifications["balanced"]["canonical_manifest"], "V05_CONSOLIDATION_REDUCED")
@@ -28,6 +33,7 @@ class FederatedHarnessTests(unittest.TestCase):
         self.assertTrue(all(cell.strategy_id != "none" for cell in cells if cell.architecture_id == "A2"))
 
     def test_smoke_enforces_information_and_replay_invariants(self) -> None:
+        self.require_frozen_validation_inputs()
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary) / "federated"
             result = run_federated_study(root, stage="smoke")
