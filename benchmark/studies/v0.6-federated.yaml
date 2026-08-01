@@ -1,0 +1,35 @@
+# The public, immutable input contract for the TCOP v0.6 study CLI.
+# It declares the matrix boundary; it cannot override a frozen strategy or
+# supply benchmark truth to any architecture other than the A5 upper bound.
+study: TCOP v0.6 deterministic federated-domain early-warning evaluation
+frozen_inputs:
+  v0_1: 34e5a45bc6561a61b8001ce24206b481c2d01ae344fb81c311274824e2995cfa
+  v0_2: a9c5926fa97d3f19dad206aa1557957eca0385de3d771ccdf5ddfc0b63a3e2f0
+  v0_3: d0b23f5c54167d7b6d01c0bfeb6621f43e6113e6dc2d05dea9363ce700b0da94
+  v0_4: 16849be9aca4405849f2a87e9e1ab2d5f726125e6a72e5440265f82ab424a127
+phases:
+  - [0, authored_telemetry]
+  - [1, local_observation]
+  - [2, frozen_batch_evaluation]
+  - [3, context_publication]
+  - [4, network_delivery]
+  - [5, context_validation]
+  - [6, resolution]
+  - [7, enforcement]
+  - [8, autonomous_action]
+  - [9, metrics]
+information_streams:
+  - authored_facts
+  - benchmark_truth
+  - produced_observations
+  - transport_faults
+  - derived_decisions
+architectures:
+  A0: no-defense control
+  A1: isolated domain-local observer and policy
+  A2: TCOP bounded-context exchange with local enforcement
+  A3: faultable bounded-fact central comparator
+  A4: broader-telemetry upper bound
+  A5: truth-only upper bound
+selection_rule: Only complete deployment cells may enter deployment Pareto selection.
+artifact_root: artifacts/federated-domain-v0.6

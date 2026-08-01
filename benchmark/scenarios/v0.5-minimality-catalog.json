@@ -1,0 +1,13 @@
+{
+  "study": "TCOP v0.5 minimality and ablation study",
+  "scenario_corpus": "B-001 through B-070",
+  "canonical_seed": 42,
+  "seed_panel": [101, 211, 503, 997],
+  "catalogue": [
+    "M-001 coherent profile ladder", "M-002 foundational negative controls", "M-003 leave-one-out ablations",
+    "M-004 through M-012 interaction ablations", "M-013 dependency-valid F1-F8 sweep",
+    "M-014 cost-model sensitivity", "M-015 topology sensitivity", "M-016 fault sensitivity",
+    "M-017 complexity scaling", "M-018 profile-selection robustness"
+  ],
+  "advanced_combination_count": 80
+}

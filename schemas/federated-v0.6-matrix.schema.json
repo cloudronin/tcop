@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcop.example/schema/federated-v0.6-matrix.json",
+  "title": "TCOP v0.6 deterministic federated-domain matrix cell",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["cell_id", "topology_id", "scenario_id", "observer_id", "network_id", "architecture_id", "strategy_id", "seed", "classification", "disposition", "reason"],
+  "properties": {
+    "cell_id": {"type": "string", "minLength": 1},
+    "topology_id": {"enum": ["T1", "T2", "T3"]},
+    "scenario_id": {"pattern": "^S(0[1-9]|1[0-8])$"},
+    "observer_id": {"enum": ["O1", "O2", "O3"]},
+    "network_id": {"enum": ["N0", "N1", "N2", "N3", "N4"]},
+    "architecture_id": {"enum": ["A0", "A1", "A2", "A3", "A4", "A5"]},
+    "strategy_id": {"enum": ["none", "containment-first", "balanced", "utility-preserving", "forensic-oriented"]},
+    "seed": {"type": "integer", "enum": [42, 101, 211, 503, 997]},
+    "classification": {"enum": ["primary_deployment_cell", "sensitivity_cell", "negative_control", "upper_bound", "forensic_cell", "mechanism_probe"]},
+    "disposition": {"enum": ["scheduled", "pruned", "complete"]},
+    "reason": {"type": "string"}
+  },
+  "allOf": [
+    {"if": {"properties": {"architecture_id": {"const": "A2"}}}, "then": {"properties": {"strategy_id": {"enum": ["containment-first", "balanced", "utility-preserving", "forensic-oriented"]}}}},
+    {"if": {"properties": {"architecture_id": {"enum": ["A0", "A1", "A3", "A4", "A5"]}}}, "then": {"properties": {"strategy_id": {"const": "none"}}}}
+  ]
+}

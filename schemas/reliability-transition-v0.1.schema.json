@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TCOP observer reliability transition v0.1",
+  "type": "object",
+  "required": ["transition_version", "local_domain_id", "observer_control_group_id", "scope", "at", "from_state", "to_state", "reason"],
+  "properties": {
+    "transition_version": {"const": "tcop.reliability-transition/0.1"},
+    "from_state": {"type": "string"},
+    "to_state": {"type": "string"}
+  }
+}

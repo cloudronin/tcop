@@ -1,0 +1,10 @@
+{
+  "profile_id": "confirmation-high-risk-v0.4",
+  "fixed_point_scale": 1000,
+  "remote_first_campaign": {"minimum_diversity": 3, "minimum_influence": 400, "threshold": 1800, "maximum_state": "provisionally_constrained"},
+  "provisional": {"ttl_virtual_intervals": 3, "confirmation_deadline": 3, "expiry": "deescalate_to_monitored", "severity_milli": 700},
+  "confirmation": {"source_novelty_required": true, "same_source_later_interaction": false, "qualifying_types": ["direct_local","failed_independent_patrol","new_independent_control_group","established_compromise","human_adjudication"]},
+  "investigation": {"global_budget": 3, "high_risk_reserved_capacity": 1, "per_control_group_cap": 2, "cooldown": 2},
+  "campaign": {"novelty_window_virtual_intervals": 3, "rules": "canonical merge, incompatible split, append-only revision"},
+  "severity_milli": {"monitoring": 50, "short_credential_ttl": 100, "human_approval": 250, "low_risk_gate": 200, "high_risk_gate": 450, "provisional": 700, "quarantine": 1000}
+}

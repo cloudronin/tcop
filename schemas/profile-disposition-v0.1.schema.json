@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["disposition_version","feature_id"],"properties":{"disposition_version":{"const":"tcop.profile-disposition/0.1"},"feature_id":{"type":"string"}}}

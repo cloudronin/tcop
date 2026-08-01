@@ -1,0 +1,12 @@
+{
+  "version": "tcop.complexity-rules/0.1",
+  "policy_parameter_rule": "Count distinct enabled feature-declared parameters.",
+  "state_machine_rule": "Count feature-declared resolver state families.",
+  "operator_state_rule": "Count distinct externally visible state labels unlocked by enabled features.",
+  "schema_rule": "Count distinct enabled feature-declared schemas.",
+  "artifact_rule": "Count distinct enabled feature-declared artifact streams.",
+  "shared_module_rule": "Deduplicate feature-tagged symbols; never attribute a complete shared source file.",
+  "explanation_rule": "Count distinct enabled feature-declared operator concepts.",
+  "executable_line_rule": "Sum fixed pre-registered tagged-symbol line weights, deduplicated by symbol.",
+  "normalization_rule": "Scale each dimension relative to P7 = 1000."
+}

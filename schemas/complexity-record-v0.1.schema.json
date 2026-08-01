@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["complexity_version","profile_id"],"properties":{"complexity_version":{"const":"tcop.complexity-record/0.1"},"profile_id":{"type":"string"}}}

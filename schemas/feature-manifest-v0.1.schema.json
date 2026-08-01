@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["manifest_version","features"],"properties":{"manifest_version":{"const":"tcop.feature-manifest/0.1"},"features":{"type":"array"}}}

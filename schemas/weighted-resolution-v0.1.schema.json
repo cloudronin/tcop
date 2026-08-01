@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TCOP weighted local resolution v0.1",
+  "type": "object",
+  "required": ["resolution_version", "local_domain_id", "subject_id", "at", "state", "thresholds", "influences", "reason"],
+  "properties": {
+    "resolution_version": {"const": "tcop.weighted-resolution/0.1"},
+    "influences": {"type": "array"},
+    "thresholds": {"type": "object"}
+  }
+}

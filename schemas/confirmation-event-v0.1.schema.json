@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"TCOP confirmation event v0.1","type":"object","required":["confirmation_version","event_id","local_domain_id","requirement_id","at","candidate_type","source_novel","campaign_relation","accepted","reason"],"properties":{"confirmation_version":{"const":"tcop.confirmation-event/0.1"},"accepted":{"type":"boolean"}}}

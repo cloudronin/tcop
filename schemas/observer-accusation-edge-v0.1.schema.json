@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TCOP observer accusation graph edge v0.1",
+  "type": "object",
+  "required": ["edge_version", "local_domain_id", "from_control_group_id", "to_control_group_id", "scope", "observation_ids", "at"],
+  "properties": {
+    "edge_version": {"const": "tcop.observer-accusation-edge/0.1"},
+    "observation_ids": {"type": "array", "items": {"type": "string"}}
+  }
+}

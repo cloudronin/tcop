@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TCOP bounded compromise window v0.1",
+  "type": "object",
+  "required": ["window_version", "window_id", "local_domain_id", "observer_control_group_id", "scope", "observation_ids", "start", "end", "reason"],
+  "properties": {
+    "window_version": {"const": "tcop.compromise-window/0.1"},
+    "observation_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "start": {"type": "integer"},
+    "end": {"type": "integer"}
+  }
+}

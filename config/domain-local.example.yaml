@@ -1,0 +1,31 @@
+# Safe local-domain service configuration.  It contains no remote-control or
+# remote-enforcement operation: imported TCX is always resolved and acted upon
+# only by the receiving domain's local adapter.
+apiVersion: tcop.io/v0.6
+kind: Domain
+
+metadata:
+  domainId: enterprise-us
+
+spec:
+  identity:
+    keyRef: file://secrets/domain-us.key
+    certificateRef: file://config/domain-us.crt
+  strategy:
+    canonicalId: balanced
+    manifest: profiles/V05_CONSOLIDATION_REDUCED.json
+    expectedDigest: 4b2dfb385d71ee4ef3e8c598cf7cac4da80fdb62ed8d22d7ad241918c9e69890
+  observer:
+    adapter: local-event-stream
+    endpoint: unix:///var/run/local-observer.sock
+  gateway:
+    listen: 127.0.0.1:8443
+    transport: loopback
+    peers: []
+  disclosure:
+    policy: config/disclosure-us.yaml
+  resolver:
+    stateDirectory: .tcop-state
+  enforcement:
+    adapter: local-policy-api
+    endpoint: unix:///var/run/local-enforcement.sock

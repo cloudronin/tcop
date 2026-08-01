@@ -1,0 +1,17 @@
+# Frozen before the v0.6 evidence-round forensic evaluation.
+rubric_version: tcop.v0.6-forensic-quality/0.1
+scoring_mode: post_run_only
+runtime_truth_access: prohibited
+criteria:
+  first_observer_identification: {weight: 1, source: signed_observation_produced}
+  first_affected_domain_identification: {weight: 1, source: telemetry_available}
+  attack_chain_reconstruction: {weight: 1, source: ordered_authorized_events}
+  interaction_chain_reconstruction: {weight: 1, source: receipt_verified}
+  campaign_grouping_accuracy: {weight: 1, source: resolver_explanation}
+  relay_provenance_completeness: {weight: 1, source: relay_chain}
+  evidence_independence_reconstruction: {weight: 1, source: effective_evidence_class}
+  invalid_evidence_detection: {weight: 1, source: observation_validated}
+  decision_explanation_completeness: {weight: 1, source: local_resolution}
+  unexplained_event_count: {weight: 1, source: all_runtime_events}
+primary_scenarios: [S04, S05, S10, S12, S18]
+architectures: [A1, A2-balanced, A2-forensic-oriented, A3]

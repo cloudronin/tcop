@@ -4,13 +4,20 @@ from __future__ import annotations
 
 import json
 from hashlib import sha256
+from importlib.resources import files
 from pathlib import Path
 from typing import Any
 
 from .benchmark import BASELINES, SCENARIOS, BenchmarkRunner
+from .witness_benchmark import run_witness_suite
+from .reliability_benchmark import run_reliability_suite
+from .confirmation_benchmark import run_confirmation_suite
 
 
-FIXTURE = Path(__file__).parents[2] / "tests" / "fixtures" / "v0.1-regression.json"
+FIXTURE = files("tcop").joinpath("data/v0.1-regression.json")
+WITNESS_FIXTURE = files("tcop").joinpath("data/v0.2-regression.json")
+RELIABILITY_FIXTURE = files("tcop").joinpath("data/v0.3-regression.json")
+CONFIRMATION_EXPECTED_DIGEST = "16849be9aca4405849f2a87e9e1ab2d5f726125e6a72e5440265f82ab424a127"
 
 
 def run_v01_regression(output: Path, *, seed: int = 42) -> dict[str, Any]:
@@ -49,4 +56,57 @@ def run_v01_regression(output: Path, *, seed: int = 42) -> dict[str, Any]:
     (output / "regression-summary.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     if not result["passed"]:
         raise AssertionError("v0.1 deterministic regression digest changed")
+    return result
+
+
+def run_v02_regression(output: Path, *, seed: int = 42) -> dict[str, Any]:
+    """Freeze-check the completed v0.2 witness corpus without changing it."""
+
+    expected = json.loads(WITNESS_FIXTURE.read_text(encoding="utf-8"))
+    suite = run_witness_suite(output, seed=seed)
+    result = {
+        "version": "v0.2",
+        "seed": seed,
+        "suite_digest": suite["same_seed_digest"],
+        "expected_suite_digest": expected["suite_digest"],
+        "passed": suite["same_seed_digest"] == expected["suite_digest"],
+    }
+    (output / "regression-summary.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    if not result["passed"]:
+        raise AssertionError("v0.2 deterministic witness regression digest changed")
+    return result
+
+
+def run_v03_regression(output: Path, *, seed: int = 42) -> dict[str, Any]:
+    """Freeze-check the completed v0.3 reliability corpus without mutation."""
+
+    expected = json.loads(RELIABILITY_FIXTURE.read_text(encoding="utf-8"))
+    suite = run_reliability_suite(output, seed=seed)
+    result = {
+        "version": "v0.3",
+        "seed": seed,
+        "suite_digest": suite["same_seed_digest"],
+        "expected_suite_digest": expected["suite_digest"],
+        "passed": suite["same_seed_digest"] == expected["suite_digest"],
+    }
+    (output / "regression-summary.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    if not result["passed"]:
+        raise AssertionError("v0.3 deterministic reliability regression digest changed")
+    return result
+
+
+def run_v04_regression(output: Path, *, seed: int = 42) -> dict[str, Any]:
+    """Freeze-check the v0.4 confirmation corpus without changing it."""
+
+    suite = run_confirmation_suite(output, seed=seed)
+    result = {
+        "version": "v0.4",
+        "seed": seed,
+        "suite_digest": suite["same_seed_digest"],
+        "expected_suite_digest": CONFIRMATION_EXPECTED_DIGEST,
+        "passed": suite["same_seed_digest"] == CONFIRMATION_EXPECTED_DIGEST,
+    }
+    (output / "regression-summary.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    if not result["passed"]:
+        raise AssertionError("v0.4 deterministic confirmation digest changed")
     return result

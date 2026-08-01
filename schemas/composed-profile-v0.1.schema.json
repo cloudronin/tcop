@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["profile_version","profile_id","enabled_features","compatibility"],"properties":{"profile_version":{"const":"tcop.composed-profile/0.1"},"profile_id":{"type":"string"},"enabled_features":{"type":"array"},"compatibility":{"type":"array"}}}

@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tcop-framework"
-version = "0.2.0"
-description = "Deterministic TCOP reference framework with frozen v0.1 and witness v0.2 profiles"
+version = "0.6.0"
+description = "Deterministic TCOP framework and unified protocol, service, study, and artifact CLI"
 requires-python = ">=3.11"
-dependencies = ["cryptography>=41"]
+dependencies = ["cryptography>=41", "PyYAML>=6"]
 
 [project.scripts]
 tcop = "tcop.cli:main"
@@ -17,3 +17,6 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+tcop = ["data/*.json"]

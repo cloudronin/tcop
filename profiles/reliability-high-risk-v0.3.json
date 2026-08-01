@@ -1,0 +1,24 @@
+{
+  "profile_id": "high-risk-v0.3",
+  "fixed_point_scale": 1000,
+  "state_factors": {
+    "unknown": 400,
+    "normal": 1000,
+    "suspicious": 500,
+    "restricted": 200,
+    "quarantined": 0,
+    "probation": {"start": 100, "step_per_virtual_interval": 100, "maximum": 900, "minimum_duration": 5}
+  },
+  "weighted_corroboration": {
+    "minimum_contributor_influence": 400,
+    "constraint_threshold": 700,
+    "quarantine_threshold": 1800,
+    "minimum_quarantine_diversity": 3,
+    "per_control_group_cap": 1000
+  },
+  "batching": {
+    "same_virtual_time": "evaluate against frozen pre-batch ledger and commit atomically",
+    "ordering": ["virtual_time", "event_id"]
+  },
+  "retrospective_compromise": "requires both explicit observation IDs and an inclusive explicit interval"
+}

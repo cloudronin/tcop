@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["ablation_version","profile_id","disabled_features"],"properties":{"ablation_version":{"const":"tcop.ablation-manifest/0.1"},"profile_id":{"type":"string"},"disabled_features":{"type":"array"}}}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "frozen_profile_version",
+    "profile_name",
+    "profile_id",
+    "objective",
+    "enabled_features",
+    "dependencies",
+    "preventive_disposition",
+    "forensic_disposition",
+    "complexity_measurements",
+    "supporting_artifacts",
+    "content_digest"
+  ],
+  "properties": {
+    "frozen_profile_version": {
+      "const": "tcop.v0.5-validation-frozen-profile/0.1"
+    },
+    "profile_name": {
+      "type": "string"
+    },
+    "profile_id": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "enabled_features": {
+      "type": "array"
+    },
+    "dependencies": {
+      "type": "object"
+    },
+    "content_digest": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "profile": "tcop-confirmation-v0.4",
+  "protocol_input_profile": "tcx-v0.2",
+  "reliability_input_profile": "tcop-reliability-v0.3",
+  "scenarios": [
+    {"id":"B-051","title":"Genuine warning from quarantined observer"}, {"id":"B-052","title":"False tip from quarantined observer"}, {"id":"B-053","title":"Tip followed by patrol confirmation"}, {"id":"B-054","title":"Tip followed by clean patrol"}, {"id":"B-055","title":"Tip with patrol unavailable"}, {"id":"B-056","title":"Three reputable same-time colluders"}, {"id":"B-057","title":"Same colluders repeat after one batch"}, {"id":"B-058","title":"Same colluders create new interactions"}, {"id":"B-059","title":"New independent source confirms later"}, {"id":"B-060","title":"Direct local evidence confirms later"}, {"id":"B-061","title":"Patrol confirms later"}, {"id":"B-062","title":"Benign subject under provisional containment"}, {"id":"B-063","title":"Fast attack during confirmation delay"}, {"id":"B-064","title":"Staggered collusion across adjacent batches"}, {"id":"B-065","title":"Slow staggered collusion outside campaign window"}, {"id":"B-066","title":"High-risk versus low-risk capability"}, {"id":"B-067","title":"Tip-flood denial of service"}, {"id":"B-068","title":"Multiple quarantined observers send one genuine warning"}, {"id":"B-069","title":"Contradictory evidence during provisional containment"}, {"id":"B-070","title":"Central versus distributed staged confirmation"}
+  ],
+  "baselines": ["v0_3_weighted_full","tip_enabled_no_provisional","provisional_no_tip","provisional_no_source_novelty","provisional_no_campaign_grouping","provisional_immediate_quarantine","full_v0_4","central_weighted_staged_equal","local_direct_only","perfect_information_oracle"]
+}

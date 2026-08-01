@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"TCOP response severity v0.1","type":"object","required":["response_version","local_domain_id","subject_id","scope","at","state","severity_milli","reason"],"properties":{"response_version":{"const":"tcop.response-severity/0.1"},"severity_milli":{"type":"integer","minimum":0,"maximum":1000}}}

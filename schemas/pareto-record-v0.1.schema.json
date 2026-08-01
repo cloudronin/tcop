@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["pareto_version","profile_id","dimensions"],"properties":{"pareto_version":{"const":"tcop.pareto-record/0.1"},"profile_id":{"type":"string"},"dimensions":{"type":"array"}}}

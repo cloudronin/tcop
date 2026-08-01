@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TCOP local observer reliability record v0.1",
+  "type": "object",
+  "required": ["record_version", "local_domain_id", "observer_control_group_id", "scope", "issuer_state", "reliability_factor_milli", "confidence_milli", "state_since", "last_updated", "transition_reason", "policy_profile"],
+  "properties": {
+    "record_version": {"const": "tcop.observer-reliability/0.1"},
+    "local_domain_id": {"type": "string"},
+    "observer_control_group_id": {"type": "string"},
+    "scope": {"type": "string"},
+    "issuer_state": {"enum": ["unknown", "normal", "suspicious", "restricted", "quarantined", "probation"]},
+    "reliability_factor_milli": {"type": "integer", "minimum": 0, "maximum": 1000},
+    "confidence_milli": {"type": "integer", "minimum": 0, "maximum": 1000}
+  }
+}

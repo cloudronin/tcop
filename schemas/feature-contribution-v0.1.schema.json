@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["contribution_version","feature_id","preventive_disposition","forensic_assurance_disposition"],"properties":{"contribution_version":{"const":"tcop.feature-contribution/0.1"},"feature_id":{"type":"string"}}}

@@ -1,0 +1,38 @@
+{
+  "profile": "tcop-reliability-v0.3",
+  "protocol_input_profile": "tcx-v0.2",
+  "scenarios": [
+    {"id": "B-031", "title": "Reliable observer turns malicious"},
+    {"id": "B-032", "title": "Recently recovered observer accuses a subject"},
+    {"id": "B-033", "title": "Two low-reliability colluders"},
+    {"id": "B-034", "title": "Three probationary colluders"},
+    {"id": "B-035", "title": "One strong witness versus weak colluders"},
+    {"id": "B-036", "title": "Reputation farming followed by attack"},
+    {"id": "B-037", "title": "Alternating honest and malicious behavior"},
+    {"id": "B-038", "title": "Scope-specific compromise"},
+    {"id": "B-039", "title": "Circular accusation"},
+    {"id": "B-040", "title": "Historical reports before compromise"},
+    {"id": "B-041", "title": "Reports inside a compromise window"},
+    {"id": "B-042", "title": "Silence versus clean evidence"},
+    {"id": "B-043", "title": "Repeated same-group accusations"},
+    {"id": "B-044", "title": "Quarantined observer continues reporting"},
+    {"id": "B-045", "title": "False quarantine followed by recovery"},
+    {"id": "B-046", "title": "Patrol reliability degradation"},
+    {"id": "B-047", "title": "Evidence-order variation"},
+    {"id": "B-048", "title": "Partition with stale observer reliability"},
+    {"id": "B-049", "title": "Heterogeneous reliability policies"},
+    {"id": "B-050", "title": "Weighted TCX versus faultable central reliability"}
+  ],
+  "baselines": [
+    "v0_2_unweighted_two_domain",
+    "unweighted_three_domain",
+    "static_observer_blacklist",
+    "weighted_no_decay",
+    "weighted_no_hysteresis",
+    "weighted_no_scope_separation",
+    "weighted_no_control_group_cap",
+    "weighted_full_v0_3",
+    "central_weighted_equal",
+    "perfect_information_oracle"
+  ]
+}

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["deployment_profile_version","role","selection_status"],"properties":{"deployment_profile_version":{"const":"tcop.deployment-profile/0.1"},"role":{"type":"string"},"selection_status":{"type":"string"}}}

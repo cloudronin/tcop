@@ -1,0 +1,28 @@
+{
+  "trust_store_version": "tcop.trust-store/0.1",
+  "identities": [
+    {
+      "id": "observer-1",
+      "trust_domain": "partner.example",
+      "key_id": "v1",
+      "public_key": "<ed25519-public-key-hex>",
+      "scopes": ["tool:*"],
+      "observation_types": ["tool.prohibited_export"],
+      "delegated_by": null
+    }
+  ],
+  "control_groups": [
+    {
+      "id": "observer-1",
+      "admin_domain_id": "partner.example",
+      "control_group_id": "partner-security",
+      "role": "peer"
+    },
+    {
+      "id": "agent-1",
+      "admin_domain_id": "local.example",
+      "control_group_id": "local-workloads",
+      "role": "subject"
+    }
+  ]
+}

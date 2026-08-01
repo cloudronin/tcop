@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TCOP locally verified reliability input v0.1",
+  "type": "object",
+  "required": ["event_version", "event_id", "local_domain_id", "observer_control_group_id", "scope", "kind", "at", "supporting_observation_ids", "independent"],
+  "properties": {
+    "event_version": {"const": "tcop.reliability-input/0.1"},
+    "kind": {"enum": ["clean", "negative", "severe_compromise", "recovery", "unavailable", "nonconforming", "accusation"]},
+    "at": {"type": "integer"},
+    "supporting_observation_ids": {"type": "array", "items": {"type": "string"}}
+  }
+}
