@@ -11,6 +11,7 @@ from time import time
 from tcop.cli import build_parser, dispatch
 from tcop.cli_context import create_context, verify_context, verify_receipt
 from tcop.cli_support import EXIT_PROTOCOL, EXIT_SERVICE, TCOPCommandError
+from tcop.federation import FROZEN_INDEX, FROZEN_ROOT
 from tcop.identity import KeyMaterial
 from tcop.runtime_services import LocalServiceState
 
@@ -27,6 +28,8 @@ class TCOPCLITests(unittest.TestCase):
         self.assertTrue({"strategy", "context", "service", "study", "artifact", "admin"} <= set(command_action.choices))
 
     def test_strategy_verification_is_backed_by_frozen_certification(self) -> None:
+        if not (FROZEN_ROOT / FROZEN_INDEX).is_file():
+            self.skipTest("requires the generated frozen v0.5 validation artifact")
         value, output = self._dispatch("strategy", "verify", "balanced", "--format", "json")
         self.assertEqual(output, "json")
         self.assertTrue(value["certified"])
