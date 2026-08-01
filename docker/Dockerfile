@@ -6,6 +6,7 @@ COPY src ./src
 COPY tests ./tests
 COPY schemas ./schemas
 COPY benchmark ./benchmark
+COPY deploy ./deploy
 COPY docs ./docs
 COPY rfcs ./rfcs
 COPY spec ./spec

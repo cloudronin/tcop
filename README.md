@@ -112,6 +112,26 @@ tcop artifact verify artifacts/federated-domain-v0.6-evidence \
   --require-complete --require-replayable
 ```
 
+The v0.6 agent-validation layer is also separate. It refuses to run if the
+formally admitted source artifacts or frozen strategy certificates differ, and
+it never rewrites those inputs. The credential-free path exercises the same
+signed-context, receipt-correlation, local-authorization, causal-barrier, and
+negative-control contracts without claiming external validity:
+
+```bash
+tcop study agent prepare
+tcop study agent reproduce --selection smoke \
+  --output artifacts/v0.6-agent-validation
+tcop artifact verify artifacts/v0.6-agent-validation --require-replayable
+```
+
+The reference-gateway selection, generic local-authorization patch, and
+bounded five-service deployment are documented in
+`integrations/mcp-gateway/` and `deploy/agent-validation/`. A provider-neutral
+LLM run requires an explicit runtime configuration and an environment-variable
+credential; its captured tool trace is replayed deterministically and is never
+used to alter the frozen TCOP protocol or prior artifacts.
+
 The repository checkout supplies the frozen v0.5 validation inputs by default.
 An installed CLI used elsewhere must receive the equivalent immutable input
 root explicitly with `--source /path/to/minimality-v0.5-validation`.

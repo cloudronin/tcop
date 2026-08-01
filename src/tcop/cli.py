@@ -9,6 +9,14 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Any, Mapping
 
+from .agent_eval.plan import STUDY_PLAN as AGENT_STUDY_PLAN
+from .agent_eval.runner import AgentStudy, SELECTIONS as AGENT_SELECTIONS
+from .agent_eval.local_api import LocalAuthorizationEndpoint, serve_local_authorization
+from .agent_eval.origin_api import serve_origin_federation
+from .agent_eval.gateway_candidate import build_gateway_image, verify_gateway_source
+from .agent_eval.live_stack import probe_reference_gateway
+from .agent_eval.tool_service import serve_synthetic_mcp_tool_service
+from .agent_eval.trace_replay import create_fixture, receiver_for_fixture, scripted_trace
 from .benchmark import BASELINES, SCENARIO_BY_ID, SCENARIOS, BenchmarkRunner, verify
 from .cli_artifact import compare_artifacts, inspect_artifact, verify_artifact
 from .cli_context import create_context, inspect_context, relay_context, sign_context, verify_context, verify_receipt
@@ -194,6 +202,46 @@ def _add_study_and_artifact(commands: argparse._SubParsersAction[argparse.Argume
     validate.add_argument("--artifact-dir", type=Path, required=True); _format(validate)
     report = nested.add_parser("report", help="rebuild reports from existing run summaries only")
     report.add_argument("--artifact-dir", type=Path, required=True); _format(report)
+    agent = nested.add_parser("agent", help="run the isolated v0.6 agent-based external-validation study")
+    agent_nested = agent.add_subparsers(dest="agent_command", required=True)
+    def _agent_plan(parser: argparse.ArgumentParser) -> None:
+        parser.add_argument("--plan", type=Path, default=AGENT_STUDY_PLAN, help="admitted v0.6 agent-validation study plan")
+    agent_prepare = agent_nested.add_parser("prepare", help="fail closed unless the admitted source artifacts and frozen strategies verify")
+    _agent_plan(agent_prepare); _format(agent_prepare)
+    agent_generate = agent_nested.add_parser("generate-traces", help="capture eligible agent tool traces without changing protocol behavior")
+    _agent_plan(agent_generate); agent_generate.add_argument("--scenario", choices=("RA-01", "RA-02", "RA-03"), required=True); agent_generate.add_argument("--driver", choices=("scripted", "replay", "llm"), required=True); agent_generate.add_argument("--runtime-config", type=Path, help="provider-neutral LLM and gateway configuration; required for --driver llm"); agent_generate.add_argument("--output", type=Path, default=Path("artifacts/v0.6-agent-validation")); _format(agent_generate)
+    agent_replay = agent_nested.add_parser("replay", help="strictly replay identical captured traces through local-only and TCOP treatments")
+    _agent_plan(agent_replay); agent_replay.add_argument("--selection", choices=sorted(AGENT_SELECTIONS), default="causal-core"); agent_replay.add_argument("--output", type=Path, default=Path("artifacts/v0.6-agent-validation")); _format(agent_replay)
+    agent_live = agent_nested.add_parser("run-live", help="execute configured live-agent trials after trace capture is eligible")
+    _agent_plan(agent_live); agent_live.add_argument("--selection", choices=("end-to-end",), default="end-to-end"); agent_live.add_argument("--runtime-config", type=Path, required=True, help="provider-neutral LLM and gateway configuration"); agent_live.add_argument("--output", type=Path, default=Path("artifacts/v0.6-agent-validation-live")); _format(agent_live)
+    agent_freeze_live = agent_nested.add_parser("freeze-live", help="preregister and freeze live runtime inputs before any provider request")
+    _agent_plan(agent_freeze_live); agent_freeze_live.add_argument("--runtime-config", type=Path, required=True); agent_freeze_live.add_argument("--output", type=Path, default=Path("artifacts/v0.6-agent-validation-live")); _format(agent_freeze_live)
+    agent_finalize_live = agent_nested.add_parser("finalize-live", help="certify a verified live artifact after a documented artifact-gate correction")
+    agent_finalize_live.add_argument("--source", type=Path, required=True); agent_finalize_live.add_argument("--output", type=Path, required=True); _format(agent_finalize_live)
+    agent_reconcile_live = agent_nested.add_parser("reconcile-live", help="reconcile a derived live utility metric from verified immutable replay rows")
+    agent_reconcile_live.add_argument("--source", type=Path, required=True); agent_reconcile_live.add_argument("--output", type=Path, required=True); _format(agent_reconcile_live)
+    agent_origin_live = agent_nested.add_parser("revalidate-origin-path", help="run tcopd-a to tcopd-b real-gateway arms over frozen live traces without model sampling")
+    agent_origin_live.add_argument("--source", type=Path, required=True); agent_origin_live.add_argument("--output", type=Path, required=True); agent_origin_live.add_argument("--runtime-config", type=Path, required=True); _format(agent_origin_live)
+    agent_benchmark = agent_nested.add_parser("benchmark", help="measure separately predeclared gateway overhead settings")
+    _agent_plan(agent_benchmark); agent_benchmark.add_argument("--selection", choices=("gateway-overhead",), default="gateway-overhead"); agent_benchmark.add_argument("--output", type=Path, default=Path("artifacts/v0.6-agent-validation")); _format(agent_benchmark)
+    agent_report = agent_nested.add_parser("report", help="read existing agent-study reports without rerunning traces")
+    agent_report.add_argument("--artifact-dir", type=Path, required=True); _format(agent_report)
+    agent_reproduce = agent_nested.add_parser("reproduce", help="run the credential-free scripted smoke reproduction")
+    _agent_plan(agent_reproduce); agent_reproduce.add_argument("--selection", choices=("smoke",), default="smoke"); agent_reproduce.add_argument("--driver", choices=("scripted",), default="scripted"); agent_reproduce.add_argument("--output", type=Path, default=Path("artifacts/v0.6-agent-validation")); _format(agent_reproduce)
+    agent_evaluator = agent_nested.add_parser("serve-evaluator", help="run the receiver-local evaluator for the pinned reference gateway")
+    agent_evaluator.add_argument("--scenario", choices=("RA-01", "RA-02", "RA-03"), default="RA-01"); agent_evaluator.add_argument("--host", default="127.0.0.1"); agent_evaluator.add_argument("--port", type=int, default=8091)
+    agent_tools = agent_nested.add_parser("serve-tool-service", help="run the stateful synthetic MCP tool service")
+    agent_tools.add_argument("--host", default="127.0.0.1"); agent_tools.add_argument("--port", type=int, default=8092)
+    agent_origin = agent_nested.add_parser("serve-origin-relay", help="run tcopd-a's origin signing and federation relay for the live reference path")
+    agent_origin.add_argument("--host", default="127.0.0.1"); agent_origin.add_argument("--port", type=int, default=8090)
+    agent_gateway = agent_nested.add_parser("gateway", help="verify or build the pinned reference MCP gateway")
+    agent_gateway_nested = agent_gateway.add_subparsers(dest="agent_gateway_command", required=True)
+    agent_gateway_verify = agent_gateway_nested.add_parser("verify", help="verify source revision, license, and clean generic-hook patch application")
+    agent_gateway_verify.add_argument("--source", type=Path, required=True); _format(agent_gateway_verify)
+    agent_gateway_build = agent_gateway_nested.add_parser("build", help="build a local image from a verified pinned source and generic hook patch")
+    agent_gateway_build.add_argument("--source", type=Path, required=True); agent_gateway_build.add_argument("--tag", required=True); _format(agent_gateway_build)
+    agent_probe = agent_nested.add_parser("probe-gateway", help="exercise real reference-gateway allow/context/receiver-local-deny wiring")
+    agent_probe.add_argument("--gateway-endpoint", required=True); agent_probe.add_argument("--receiver-endpoint", required=True); agent_probe.add_argument("--token", required=True); agent_probe.add_argument("--artifact-dir", type=Path, help="record a passed probe in an existing agent-validation artifact"); _format(agent_probe)
     artifact = commands.add_parser("artifact", help="read-only artifact verification, inspection, and comparison")
     artifact_nested = artifact.add_subparsers(dest="artifact_command", required=True)
     artifact_verify = artifact_nested.add_parser("verify", help="verify an already-created artifact root")
@@ -400,6 +448,42 @@ def dispatch(args: argparse.Namespace) -> tuple[Any, str]:
     if args.command == "admin":
         return admin_query(args.endpoint, args.admin_command, domain=args.domain, since=args.since, scope=args.scope), args.format
     if args.command == "study":
+        if args.study_command == "agent":
+            study = AgentStudy(args.plan) if hasattr(args, "plan") else AgentStudy()
+            if args.agent_command == "prepare": return study.prepare(), args.format
+            if args.agent_command == "generate-traces": return study.generate_traces(args.output, scenario=args.scenario, driver=args.driver, runtime_config=args.runtime_config), args.format
+            if args.agent_command == "replay": return study.replay(args.output, selection=args.selection), args.format
+            if args.agent_command == "benchmark": return study.replay(args.output, selection=args.selection), args.format
+            if args.agent_command == "reproduce": return study.replay(args.output, selection=args.selection), args.format
+            if args.agent_command == "report": return study.report(args.artifact_dir), args.format
+            if args.agent_command == "serve-evaluator":
+                fixture = create_fixture(args.scenario, scripted_trace(args.scenario))
+                serve_local_authorization(LocalAuthorizationEndpoint(receiver_for_fixture(fixture)), host=args.host, port=args.port)
+                return {"served": True}, "json"
+            if args.agent_command == "serve-tool-service":
+                serve_synthetic_mcp_tool_service(host=args.host, port=args.port)
+                return {"served": True}, "json"
+            if args.agent_command == "serve-origin-relay":
+                serve_origin_federation(host=args.host, port=args.port)
+                return {"served": True}, "json"
+            if args.agent_command == "gateway":
+                if args.agent_gateway_command == "verify": return verify_gateway_source(args.source), args.format
+                if args.agent_gateway_command == "build": return build_gateway_image(args.source, tag=args.tag), args.format
+            if args.agent_command == "probe-gateway":
+                probe = probe_reference_gateway(gateway_endpoint=args.gateway_endpoint, receiver_endpoint=args.receiver_endpoint, token=args.token)
+                if args.artifact_dir:
+                    return {"probe": probe, "artifact": study.record_gateway_probe(args.artifact_dir, probe)}, args.format
+                return probe, args.format
+            if args.agent_command == "run-live":
+                return study.run_live(args.output, runtime_config=args.runtime_config, selection=args.selection), args.format
+            if args.agent_command == "freeze-live":
+                return study.freeze_live(args.output, runtime_config=args.runtime_config), args.format
+            if args.agent_command == "finalize-live":
+                return study.finalize_live(args.source, args.output), args.format
+            if args.agent_command == "reconcile-live":
+                return study.reconcile_live_metrics(args.source, args.output), args.format
+            if args.agent_command == "revalidate-origin-path":
+                return study.revalidate_live_origin_path(args.source, args.output, runtime_config=args.runtime_config), args.format
         plan_kind = _require_plan(args.plan) if hasattr(args, "plan") else "federated"
         if args.study_command == "verify-inputs":
             if plan_kind == "evidence":

@@ -1,0 +1,21 @@
+{
+  "format": "tcop.reference-gateway-selection/0.1",
+  "selected": {
+    "repository": "https://github.com/docker/mcp-gateway",
+    "revision": "2bd20fe83dd04870e8d87dc1ed059d4d19fc7c68",
+    "license": "MIT",
+    "baseline_build": "go build ./cmd/docker-mcp",
+    "patch": "tcop-authorization-adapter/patches/0001-local-authorization-evaluator.patch",
+    "patch_sha256": "6919343da9865be5c3453326a9afe0a473f2de32b5e0063f5cc4c04c51a1e520",
+    "clean_patch_application_verified": true,
+    "patched_gateway_package_tests_verified": true,
+    "authorization_cache": "disabled",
+    "gateway_contains_tcop_logic": false
+  },
+  "rejected": {
+    "repository": "https://github.com/microsoft/mcp-gateway",
+    "revision": "1a66c421fb9df7c81649b3f7da264d089e1c8423",
+    "reason": "Kubernetes-specific tool routing and deployment assumptions prevent a clean bounded Compose integration."
+  },
+  "scope": "Reference enforcement point; not a literal reproduction of the OpenAI--Hugging Face defensive architecture."
+}

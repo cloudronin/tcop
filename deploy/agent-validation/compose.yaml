@@ -1,0 +1,67 @@
+name: tcop-agent-validation
+
+# This is a bounded reference deployment, not a production topology. The
+# selected MCP gateway image is built from the pinned source and checked patch
+# described in integrations/mcp-gateway/gateway-selection-manifest.json.
+services:
+  tcopd-a:
+    build:
+      context: ../..
+      dockerfile: docker/Dockerfile
+    command: ["tcop", "study", "agent", "serve-origin-relay", "--host", "0.0.0.0", "--port", "8090"]
+    networks: [tcop-internal]
+    volumes:
+      - ../../artifacts:/workspace/artifacts
+
+  agent-runner-a:
+    build:
+      context: ../..
+      dockerfile: docker/Dockerfile
+    command: ["tcop", "study", "agent", "run-live", "--runtime-config", "/workspace/deploy/agent-validation/live-runtime.openai-amendment-003.yaml", "--output", "/workspace/artifacts/v0.6-agent-validation-live-amendment-003"]
+    depends_on: [tcopd-a, tcopd-b, mcp-gateway-b, partner-tool-service-b]
+    networks: [tcop-internal, model-egress]
+    environment:
+      TCOP_AGENT_API_KEY: ${TCOP_AGENT_API_KEY:-}
+      TCOP_AGENT_GATEWAY_TOKEN: ${TCOP_AGENT_GATEWAY_TOKEN:-tcop-synthetic-study-token}
+    volumes:
+      - ../../artifacts:/workspace/artifacts
+    profiles: [live]
+
+  tcopd-b:
+    build:
+      context: ../..
+      dockerfile: docker/Dockerfile
+    command: ["tcop", "study", "agent", "serve-evaluator", "--host", "0.0.0.0", "--port", "8091"]
+    networks: [tcop-internal]
+    volumes:
+      - ../../artifacts:/workspace/artifacts
+    ports:
+      - "127.0.0.1:8091:8091"
+
+  mcp-gateway-b:
+    image: tcop-reference-mcp-gateway:2bd20fe83dd04870e8d87dc1ed059d4d19fc7c68
+    command: ["--transport", "streaming", "--host", "0.0.0.0", "--port", "8811", "--servers", "partner-tool-service-b", "--catalog", "gateway-catalog.yaml", "--secrets", "/dev/null", "--authorization-evaluator-url", "http://tcopd-b:8091"]
+    depends_on: [tcopd-b, partner-tool-service-b]
+    networks: [tcop-internal]
+    environment:
+      # The target is the compose-internal synthetic service only. This is not
+      # a production remote-URL relaxation and must not be copied outward.
+      DOCKER_MCP_ALLOW_INSECURE_REMOTE_URLS: "true"
+      MCP_GATEWAY_AUTH_TOKEN: tcop-synthetic-study-token
+    volumes:
+      - ./gateway-catalog.yaml:/root/.docker/mcp/catalogs/gateway-catalog.yaml:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "127.0.0.1:8811:8811"
+
+  partner-tool-service-b:
+    build:
+      context: ../..
+      dockerfile: docker/Dockerfile
+    command: ["tcop", "study", "agent", "serve-tool-service", "--host", "0.0.0.0", "--port", "8092"]
+    networks: [tcop-internal]
+
+networks:
+  tcop-internal:
+    internal: true
+  model-egress: {}

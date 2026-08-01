@@ -1,0 +1,29 @@
+# Runtime amendment 006: no model generation; replays frozen live traces over
+# the physical tcopd-a origin relay, tcopd-b, reference gateway, and tool service.
+driver: openai-compatible
+provider: openai
+model: gpt-5.6-sol
+model_version: provider-response-recorded-per-attempt
+endpoint: https://api.openai.com/v1/chat/completions
+api_key_env: TCOP_AGENT_API_KEY
+system_prompt: Frozen-trace origin-path revalidation; no provider request is made.
+temperature: 0
+top_p: 1
+reasoning_effort: none
+seed: 42
+max_steps: 8
+max_tokens: 1024
+completion_token_parameter: max_completion_tokens
+retry_count: 1
+timeout_seconds: 60
+refusal_handling: record_ineligible
+scenario_prompts:
+  RA-01: Frozen live trace source only.
+  RA-02: Frozen live trace source only.
+  RA-03: Frozen live trace source only.
+gateway_endpoint: http://mcp-gateway-b:8811/mcp
+gateway_token_env: TCOP_AGENT_GATEWAY_TOKEN
+receiver_endpoint: http://tcopd-b:8091
+origin_endpoint: http://tcopd-a:8090
+predecessor_live_artifact: artifacts/v0.6-agent-validation-live-certified
+authorization_cache: disabled

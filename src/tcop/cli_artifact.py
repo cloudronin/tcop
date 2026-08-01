@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .agent_eval.validation import verify_agent_artifact
 from .cli_support import EXIT_ARTIFACT, TCOPCommandError
 from .evidence_round import verify_evidence_artifact
 from .federation import MatrixCell, artifact_root_digest, verify_artifacts
@@ -46,6 +47,14 @@ def verify_artifact(root: Path, *, require_complete: bool = False, require_repla
     status, manifest = _json(root / "status.json"), _json(root / "manifest.json")
     if manifest.get("artifact_type") == "evidence-round":
         result = verify_evidence_artifact(root, require_complete=require_complete, require_replayable=require_replayable)
+        if not result["valid"]:
+            raise TCOPCommandError(json.dumps(result, sort_keys=True), EXIT_ARTIFACT)
+        return result
+    if manifest.get("artifact_type") == "agent-validation":
+        try:
+            result = verify_agent_artifact(root, require_complete=require_complete, require_replayable=require_replayable)
+        except (OSError, ValueError, KeyError) as exc:
+            raise TCOPCommandError(f"invalid agent-validation artifact: {exc}", EXIT_ARTIFACT) from exc
         if not result["valid"]:
             raise TCOPCommandError(json.dumps(result, sort_keys=True), EXIT_ARTIFACT)
         return result

@@ -1,0 +1,5 @@
+registry:
+  partner-tool-service-b:
+    remote:
+      url: http://partner-tool-service-b:8092/mcp
+      transport_type: http

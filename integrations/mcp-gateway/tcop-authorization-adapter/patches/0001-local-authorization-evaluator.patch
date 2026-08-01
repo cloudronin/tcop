@@ -1,0 +1,166 @@
+From 2bd20fe83dd04870e8d87dc1ed059d4d19fc7c68 Mon Sep 17 00:00:00 2001
+Subject: [PATCH] gateway: add a generic local authorization evaluator hook
+
+---
+ cmd/docker-mcp/commands/gateway.go |  2 ++
+ pkg/gateway/config.go              |  1 +
+ pkg/gateway/handlers.go            | 13 +++++++++++++
+ pkg/gateway/local_authorization.go | 87 ++++++++++++++++++++++++++++++++++++
+ pkg/gateway/run.go                 |  1 +
+ 5 files changed, 104 insertions(+)
+ create mode 100644 pkg/gateway/local_authorization.go
+
+diff --git a/cmd/docker-mcp/commands/gateway.go b/cmd/docker-mcp/commands/gateway.go
+index 0000000..1111111 100644
+--- a/cmd/docker-mcp/commands/gateway.go
++++ b/cmd/docker-mcp/commands/gateway.go
+@@ -222,5 +222,7 @@ func gatewayCommand(docker docker.Client, dockerCli command.Cli, features featu
+ 	runCmd.Flags().BoolVar(&options.Static, "static", options.Static, "Enable static mode (aka pre-started servers)")
+ 	runCmd.Flags().StringVar(&options.LogFilePath, "log", options.LogFilePath, "Path to log file for stderr output (relative or absolute)")
++	runCmd.Flags().StringVar(&options.LocalAuthorizationURL, "authorization-evaluator-url", options.LocalAuthorizationURL, "Optional receiver-local authorization evaluator URL")
++
+ 
+ 	// Very experimental features
+ 	_ = runCmd.Flags().MarkHidden("log")
+diff --git a/pkg/gateway/config.go b/pkg/gateway/config.go
+index 0000000..1111111 100644
+--- a/pkg/gateway/config.go
++++ b/pkg/gateway/config.go
+@@ -41,3 +41,4 @@ type Options struct {
+ 	UseProfiles             bool
+ 	AllowUnauthenticated    bool
++	LocalAuthorizationURL   string
+ }
+diff --git a/pkg/gateway/handlers.go b/pkg/gateway/handlers.go
+index 0000000..1111111 100644
+--- a/pkg/gateway/handlers.go
++++ b/pkg/gateway/handlers.go
+@@ -85,6 +85,21 @@ func (g *Gateway) mcpServerToolHandler(serverName string, server *mcp.Server, _
+ 			}
+ 		}
+ 
++		if g.localAuthorization != nil {
++			decision, err := g.localAuthorization.Evaluate(ctx, LocalAuthorizationRequest{
++				SessionID:  req.Session.ID(),
++				ClientName: localClientName(req.Session),
++				Server:     serverConfig.Name,
++				Tool:       originalToolName,
++			})
++			if err != nil {
++				return nil, fmt.Errorf("local authorization evaluation failed: %w", err)
++			}
++			if !decision.Allowed {
++				return &mcp.CallToolResult{Content: []mcp.Content{&mcp.TextContent{Text: fmt.Sprintf("tool call denied by local policy %s (decision %s)", decision.PolicyID, decision.DecisionID)}}, IsError: true}, nil
++			}
++		}
++
+ 		// Debug logging to stderr
+ 		if os.Getenv("DOCKER_MCP_TELEMETRY_DEBUG") != "" {
+ 			fmt.Fprintf(os.Stderr, "[MCP-HANDLER] Tool call received: %s from server: %s\n", req.Params.Name, serverConfig.Name)
+diff --git a/pkg/gateway/local_authorization.go b/pkg/gateway/local_authorization.go
+new file mode 100644
+index 0000000..1111111
+--- /dev/null
++++ b/pkg/gateway/local_authorization.go
+@@ -0,0 +1,81 @@
++package gateway
++
++import (
++	"bytes"
++	"context"
++	"encoding/json"
++	"fmt"
++	"net/http"
++	"strings"
++	"time"
++
++	"github.com/modelcontextprotocol/go-sdk/mcp"
++)
++
++// LocalAuthorizationRequest is intentionally gateway-generic. Its fields are
++// local call facts, not remote instructions or protocol evidence.
++type LocalAuthorizationRequest struct {
++	SessionID  string `json:"session_id"`
++	ClientName string `json:"client_name"`
++	Server     string `json:"server"`
++	Tool       string `json:"tool"`
++}
++
++// LocalAuthorizationDecision is a decision made by the receiving deployment.
++type LocalAuthorizationDecision struct {
++	Allowed         bool   `json:"allowed"`
++	DecisionID      string `json:"decision_id"`
++	PolicyID        string `json:"policy_id"`
++	AuthorityDomain string `json:"authority_domain"`
++}
++
++type LocalAuthorizationEvaluator interface {
++	Evaluate(context.Context, LocalAuthorizationRequest) (LocalAuthorizationDecision, error)
++}
++
++type httpLocalAuthorizationEvaluator struct {
++	url    string
++	client *http.Client
++}
++
++func newLocalAuthorizationEvaluator(url string) LocalAuthorizationEvaluator {
++	if url == "" {
++		return nil
++	}
++	return &httpLocalAuthorizationEvaluator{url: strings.TrimRight(url, "/"), client: &http.Client{Timeout: 2 * time.Second}}
++}
++
++func (e *httpLocalAuthorizationEvaluator) Evaluate(ctx context.Context, request LocalAuthorizationRequest) (LocalAuthorizationDecision, error) {
++	body, err := json.Marshal(request)
++	if err != nil {
++		return LocalAuthorizationDecision{}, fmt.Errorf("encode local authorization request: %w", err)
++	}
++	httpRequest, err := http.NewRequestWithContext(ctx, http.MethodPost, e.url+"/v1/authorize", bytes.NewReader(body))
++	if err != nil {
++		return LocalAuthorizationDecision{}, fmt.Errorf("create local authorization request: %w", err)
++	}
++	httpRequest.Header.Set("Content-Type", "application/json")
++	response, err := e.client.Do(httpRequest)
++	if err != nil {
++		return LocalAuthorizationDecision{}, fmt.Errorf("call local authorization evaluator: %w", err)
++	}
++	defer response.Body.Close()
++	if response.StatusCode != http.StatusOK {
++		return LocalAuthorizationDecision{}, fmt.Errorf("local authorization evaluator returned HTTP %d", response.StatusCode)
++	}
++	var decision LocalAuthorizationDecision
++	if err := json.NewDecoder(response.Body).Decode(&decision); err != nil {
++		return LocalAuthorizationDecision{}, fmt.Errorf("decode local authorization decision: %w", err)
++	}
++	if decision.DecisionID == "" || decision.PolicyID == "" || decision.AuthorityDomain == "" {
++		return LocalAuthorizationDecision{}, fmt.Errorf("local authorization decision omitted required provenance")
++	}
++	return decision, nil
++}
++
++func localClientName(session *mcp.ServerSession) string {
++	if session == nil || session.InitializeParams() == nil {
++		return ""
++	}
++	return session.InitializeParams().ClientInfo.Name
++}
+diff --git a/pkg/gateway/run.go b/pkg/gateway/run.go
+index 0000000..1111111 100644
+--- a/pkg/gateway/run.go
++++ b/pkg/gateway/run.go
+@@ -64,4 +64,5 @@ type Gateway struct {
+ 	mcpServer      *mcp.Server
+ 	policyClient   policy.Client
++	localAuthorization LocalAuthorizationEvaluator
+ 	health         health.State
+ 	oauthProviders map[string]*oauth.Provider
+@@ -117,6 +118,7 @@ func NewGateway(config Config, docker docker.Client) *Gateway {
+ 		toolRegistrations:           make(map[string]ToolRegistration),
+ 		refreshingServers:           make(map[string]bool),
+ 	}
++	g.localAuthorization = newLocalAuthorizationEvaluator(config.LocalAuthorizationURL)
+ 	g.clientPool = newClientPool(config.Options, docker, g)
+
+ 	return g
+-- 
+2.43.0

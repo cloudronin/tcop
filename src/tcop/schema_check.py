@@ -100,6 +100,21 @@ def validate_federation_schema() -> None:
         raise ValueError("invalid federated v0.6 matrix schema")
 
 
+def validate_agent_validation_schemas() -> None:
+    """Validate study-only external-validation schemas separately from TCX."""
+
+    root = Path(__file__).resolve().parents[2] / "schemas"
+    expected = {
+        "agent-trace-v0.1.schema.json": "canonical_action_digest",
+        "agent-authorization-decision-v0.1.schema.json": "authority_domain",
+        "agent-validation-artifact-v0.1.schema.json": "artifact_type",
+    }
+    for filename, field in expected.items():
+        document = json.loads((root / filename).read_text(encoding="utf-8"))
+        if document.get("type") != "object" or field not in document.get("required", []):
+            raise ValueError(f"invalid agent-validation schema: {filename}")
+
+
 def main() -> None:
     validate_published_schema()
     validate_witness_schemas()
@@ -107,7 +122,8 @@ def main() -> None:
     validate_confirmation_schemas()
     validate_minimality_schemas()
     validate_federation_schema()
-    print("TCX v0.1 through v0.6 schemas: valid")
+    validate_agent_validation_schemas()
+    print("TCX v0.1 through v0.6 and agent-validation schemas: valid")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcop.dev/schemas/agent-validation-artifact-v0.1.schema.json",
+  "title": "TCOP v0.6 agent-validation artifact manifest",
+  "type": "object",
+  "required": ["artifact_type", "manifest_version", "source_evidence_digest", "source_federation_digest", "protocol_changed", "authorization_cache", "remote_enforcement_successes", "replayable", "complete"],
+  "properties": {
+    "artifact_type": {"const": "agent-validation"},
+    "manifest_version": {"const": "tcop.agent-validation/0.1"},
+    "source_evidence_digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "source_federation_digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "protocol_changed": {"const": false},
+    "authorization_cache": {"const": "disabled"},
+    "remote_enforcement_successes": {"const": 0},
+    "replayable": {"type": "boolean"},
+    "complete": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

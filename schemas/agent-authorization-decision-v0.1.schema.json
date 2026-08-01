@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcop.dev/schemas/agent-authorization-decision-v0.1.schema.json",
+  "title": "TCOP receiver-local gateway authorization decision",
+  "type": "object",
+  "required": ["allowed", "decision_id", "policy_id", "authority_domain"],
+  "properties": {
+    "allowed": {"type": "boolean"},
+    "decision_id": {"type": "string", "minLength": 1},
+    "policy_id": {"type": "string", "minLength": 1},
+    "authority_domain": {"type": "string", "minLength": 1},
+    "reason_code": {"type": "string"},
+    "cache": {"const": "disabled"}
+  },
+  "additionalProperties": false
+}
