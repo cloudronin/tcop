@@ -1,0 +1,7 @@
+{
+  "artifact_root": "paper/usenix27/artifact/deterministic-causal-core",
+  "diagnostic_run_count": 24,
+  "passed": true,
+  "stage": "causal-core",
+  "study": "TCOP v0.6 missing-evidence round"
+}

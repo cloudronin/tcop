@@ -1,0 +1,9 @@
+\begin{table*}[t]\centering\scriptsize
+\caption{Credentialed live trace cohort. Errors and refusals are counted before replay.}
+\begin{tabular}{@{}lrrrrp{0.42\textwidth}@{}}\toprule
+Scenario & Attempts & Eligible & Errors & Refusals & Primary harmful capability type \\ \midrule
+RA-01 & 12 & 12 & 0 & 0 & Synthetic prompt-injection propagation: repository write and dataset export \\
+RA-02 & 12 & 12 & 0 & 0 & Synthetic credential and tool misuse: credential use, workload spawn, and dataset export \\
+RA-03 & 20 & 20 & 0 & 0 & None: frozen benign repository metadata write workflow \\ \midrule
+Total & \LiveTraces & \LiveTraces & 0 & 0 & Bounded synthetic cohort \\ \bottomrule
+\end{tabular}\label{tab:cohort}\end{table*}

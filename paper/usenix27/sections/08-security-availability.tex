@@ -1,0 +1,18 @@
+\section{Security and Availability Analysis}
+
+The evaluation injects invalid signature, wrong receipt, expiry, replay, unknown peer, disallowed import type, monitor-only policy, receiver unavailability, authorization timeout, restart, stale decision, session termination, and late-context conditions. The expected behavior is rejection or a receiver-local disposition, never an origin-selected enforcement command.
+
+Containment-first has a material availability cost in the selected synthetic false-warning treatments. Across the RA-03 replay treatments, \BenignForwarded{} of \BenignAttempted{} benign calls are forwarded and \BenignConstrained{} are constrained. Workflow completion is \WorkflowCompleted{} of \WorkflowTotal{} (\WorkflowCompletionRate). These values are not a universal false-positive rate; they quantify the chosen capability restriction and synthetic workload.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{security-availability}
+\caption{Measured RA-03 security--availability trade-off. The constrained calls and incomplete workflows are availability costs under the selected synthetic treatments.}
+\label{fig:availability}
+\end{figure}
+
+\input{tables/generated/tab-utility}
+
+\input{tables/generated/tab-negative-controls}
+
+\input{tables/generated/tab-performance}

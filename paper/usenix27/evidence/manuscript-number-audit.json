@@ -1,0 +1,26 @@
+{
+  "audit_version": "paper-evidence-v1",
+  "checked_files": [
+    "paper/usenix27/main.tex",
+    "paper/usenix27/sections/01-introduction.tex",
+    "paper/usenix27/sections/02-problem-threat-model.tex",
+    "paper/usenix27/sections/06-deterministic-evaluation.tex",
+    "paper/usenix27/sections/07-agent-gateway-evaluation.tex",
+    "paper/usenix27/sections/09-related-work.tex",
+    "paper/usenix27/sections/05-containment-window.tex",
+    "paper/usenix27/sections/04-local-resolution-enforcement.tex",
+    "paper/usenix27/sections/03-architecture-protocol.tex",
+    "paper/usenix27/sections/08-security-availability.tex",
+    "paper/usenix27/sections/10-limitations-conclusion.tex",
+    "paper/usenix27/appendices/strategy-details.tex",
+    "paper/usenix27/appendices/extended-results.tex",
+    "paper/usenix27/appendices/ethics.tex",
+    "paper/usenix27/appendices/reproducibility-details.tex",
+    "paper/usenix27/appendices/failure-controls.tex",
+    "paper/usenix27/appendices/open-science.tex",
+    "paper/usenix27/appendices/amendment-history.tex"
+  ],
+  "manual_numeric_claims": [],
+  "pass": true,
+  "rule": "Principal numeric results must be represented by generated result macros or generated tables."
+}

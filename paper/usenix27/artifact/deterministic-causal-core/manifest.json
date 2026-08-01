@@ -1,0 +1,24 @@
+{
+  "artifact_type": "evidence-round",
+  "diagnostic_run_count": 24,
+  "frozen_input_digests": {
+    "v0.1": "34e5a45bc6561a61b8001ce24206b481c2d01ae344fb81c311274824e2995cfa",
+    "v0.2": "a9c5926fa97d3f19dad206aa1557957eca0385de3d771ccdf5ddfc0b63a3e2f0",
+    "v0.3": "d0b23f5c54167d7b6d01c0bfeb6621f43e6113e6dc2d05dea9363ce700b0da94",
+    "v0.4": "16849be9aca4405849f2a87e9e1ab2d5f726125e6a72e5440265f82ab424a127"
+  },
+  "frozen_strategy_digests": {
+    "balanced": "4b2dfb385d71ee4ef3e8c598cf7cac4da80fdb62ed8d22d7ad241918c9e69890",
+    "containment-first": "60a4c97851d19c6bcf09d24a063b480e9a29a49dca7e0665ead9013eaf8d2691",
+    "forensic-oriented": "e30ded1303d08c6067a5030d9e1741183bf30af96d218c2143bc1e21db237d96",
+    "utility-preserving": "7cf402995d0b4c0e6473aaad4cca7b420abcccf35b7844b65935d07ee9db8940"
+  },
+  "manifest_version": "tcop.v0.6-missing-evidence/0.1",
+  "passed": true,
+  "remote_enforcement_successes": 0,
+  "replay_passed": true,
+  "report_regeneration_digest_stable": true,
+  "selection": "causal-core",
+  "source_artifact_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+  "source_run_count": 414
+}

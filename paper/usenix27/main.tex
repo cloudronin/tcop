@@ -1,0 +1,39 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{template/usenix-2020-09}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\graphicspath{{figures/pdf/}}
+\hypersetup{pdftitle={Receiver-Sovereign Federated Early Warning for Cross-Domain Agent Tool Use},pdfauthor={}}
+\input{generated/results-macros}
+\date{}
+\title{\Large \bf Receiver-Sovereign Federated Early Warning for Cross-Domain Agent Tool Use}
+\author{Anonymous Submission}
+\begin{document}
+\maketitle
+\begin{abstract}
+Autonomous software increasingly crosses administrative boundaries while invoking consequential tools. A domain that first observes compromise may be unable to control a downstream domain, while a global enforcement service may be unacceptable for sovereignty, privacy, or outage reasons. TCOP is a receiver-sovereign federated early-warning architecture: domains exchange signed, scoped, time-bounded context, but the receiver alone performs correlation, applies policy, and issues any enforcement decision. We evaluate timing, authority, and availability consequences in deterministic matched experiments, frozen action-trace replay, and a physical reference gateway path. In the matched deterministic comparison, imported context improved \DeterministicImproved{} of \DeterministicPairs{} strict pairs and prevented \DeterministicActionsPrevented{} harmful actions, with no worsened pair. The live evaluation uses \LiveTraces{} captured traces and \LiveReplayPairs{} strict paired replays. Physical gateway arms show that context arriving before the first harmful opportunity can change local authorization, whereas later context can reduce subsequent blast radius without reversing completed actions. The same containment-first response constrains \BenignConstrained{} of \BenignAttempted{} selected benign calls, making availability cost a first-class result. TCOP is not a remote kill switch, does not create detections, and is not evaluated as an Internet-scale deployment.
+\end{abstract}
+\input{sections/01-introduction}
+\input{sections/02-problem-threat-model}
+\input{sections/03-architecture-protocol}
+\input{sections/04-local-resolution-enforcement}
+\input{sections/05-containment-window}
+\input{sections/06-deterministic-evaluation}
+\input{sections/07-agent-gateway-evaluation}
+\input{sections/08-security-availability}
+\input{sections/09-related-work}
+\input{sections/10-limitations-conclusion}
+\nocite{usenixTemplate}
+\bibliographystyle{plain}
+\bibliography{references}
+\appendix
+\input{appendices/open-science}
+\input{appendices/ethics}
+\input{appendices/strategy-details}
+\input{appendices/amendment-history}
+\input{appendices/extended-results}
+\input{appendices/failure-controls}
+\input{appendices/reproducibility-details}
+\end{document}

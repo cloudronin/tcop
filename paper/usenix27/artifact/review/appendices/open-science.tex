@@ -1,0 +1,7 @@
+\section{Open Science Appendix}
+
+The artifact is organized around four reproduction tiers. Tier 0 verifies immutable artifact roots, normalizes data, regenerates figures and tables, audits manuscript numbers, and builds the paper. Tier 1 reruns the deterministic causal-core study without external credentials. Tier 2 strictly replays frozen agent traces through local-only and TCOP treatments, again without model credentials. Tier 3 is an optional credentialed regeneration of live traces and is not required for the paper's causal findings.
+
+The artifact uses Python, the repository's existing TCOP CLI, Matplotlib for vector figures, and a TeX distribution for the draft PDF. Docker is required only for the optional reference-gateway smoke path. Raw source artifacts remain at repository-relative paths; normalized data, analysis scripts, figures, tables, and expected outputs live under the paper workspace. The anonymous artifact URL is a draft-mode TODO to be supplied by human authors before submission.
+
+Tier 0 and Tier 2 complete without provider credentials. Tier 3 documents its provider/runtime lock, eligibility criteria, bounded attempts, expected variability, and cost category separately from frozen-trace reproduction.

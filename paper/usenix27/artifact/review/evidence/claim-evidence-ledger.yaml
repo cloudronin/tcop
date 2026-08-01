@@ -1,0 +1,450 @@
+claims:
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: &id001
+  - frozen source roots verify
+  - synthetic test environment
+  evidence_strength: artifact-backed
+  claim_id: C-ARCH-01
+  proposed_paper_wording: TCOP exchanges signed, bounded context rather than enforcement
+    commands.
+  claim_category: architecture
+  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  exact_source_files:
+  - manifest.json
+  - reports/invariant-report.json
+  exact_supporting_values: Remote TCX action is not interpreted; remote enforcement
+    successes are zero.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 03-architecture-protocol.tex
+  planned_table_figure: fig-architecture
+  status: supported
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-AUTH-01
+  proposed_paper_wording: Every evaluated gateway block references a Domain-B-local
+    policy and decision.
+  claim_category: authority
+  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  exact_source_files:
+  - reports/authorization-audit.json
+  - reports/end-to-end-live-results.json
+  exact_supporting_values: Every gateway block references a Domain-B policy and decision.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 04-local-resolution-enforcement.tex
+  planned_table_figure: tab-physical-end-to-end
+  status: supported
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-AUTH-02
+  proposed_paper_wording: Remote enforcement successes were zero in every evaluated
+    arm.
+  claim_category: authority
+  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  exact_source_files:
+  - manifest.json
+  - reports/origin-federation-audit.json
+  exact_supporting_values: remote_enforcement_successes equals zero.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 04-local-resolution-enforcement.tex
+  planned_table_figure: tab-physical-end-to-end
+  status: supported
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-DETERMINISTIC-01
+  proposed_paper_wording: Across 54 strict deterministic pairs, containment-first
+    improved 30 outcomes, left 24 unchanged, worsened none, and prevented 36 harmful
+    actions.
+  claim_category: deterministic evaluation
+  source_artifact: artifacts/federated-domain-v0.6-evidence
+  exact_source_files:
+  - pairs/paired-results.jsonl
+  - reports/paired-causal-comparison.json
+  exact_supporting_values: 54 / 30 / 24 / 0 / 36.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id002
+  - 123 unmatched balanced or utility comparisons
+  caveats: *id002
+  planned_paper_section: 06-deterministic-evaluation.tex
+  planned_table_figure: fig-deterministic-outcomes
+  status: supported
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-TIMING-01
+  proposed_paper_wording: In 30 physical gateway arms, A1 forwarded 30 harmful calls;
+    A2 before the first harmful opportunity blocked 30; after initial harm it forwarded
+    10 completed calls and blocked 20 later calls.
+  claim_category: timing
+  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  exact_source_files:
+  - reports/end-to-end-live-results.json
+  exact_supporting_values: 30 / 30 / 10 / 20.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 07-agent-gateway-evaluation.tex
+  planned_table_figure: fig-physical-timing
+  status: supported
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-LIVE-01
+  proposed_paper_wording: The certified cohort contains 44 live traces and 220 strict
+    paired comparisons.
+  claim_category: live trace cohort
+  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  exact_source_files:
+  - reports/trace-generation-summary.json
+  - reports/paired-enforcement-results.json
+  exact_supporting_values: 44 eligible traces; 220 pairs.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 07-agent-gateway-evaluation.tex
+  planned_table_figure: tab-live-cohort
+  status: supported
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-UTILITY-01
+  proposed_paper_wording: Across six RA-03 replay treatments, 360 benign calls were
+    attempted, 320 forwarded, and 40 constrained.
+  claim_category: availability
+  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  exact_source_files:
+  - reports/benign-workload-impact.json
+  exact_supporting_values: 360 / 320 / 40.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id003
+  - Synthetic false-warning treatments and capability restriction
+  caveats: *id003
+  planned_paper_section: 08-security-availability.tex
+  planned_table_figure: fig-security-availability
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-UTILITY-02
+  proposed_paper_wording: Selected RA-03 workflow completion was 80 of 120 (66.7 percent).
+  claim_category: availability
+  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  exact_source_files:
+  - reports/benign-workload-impact.json
+  exact_supporting_values: 80 / 120 / 66.7 percent.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id004
+  - Synthetic workload only
+  caveats: *id004
+  planned_paper_section: 08-security-availability.tex
+  planned_table_figure: tab-utility
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-FAILURE-01
+  proposed_paper_wording: Invalid, expired, replayed, unknown-peer, wrong-receipt,
+    stale-decision, restart, timeout, and late-context controls passed.
+  claim_category: failure controls
+  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  exact_source_files:
+  - reports/negative-controls.json
+  exact_supporting_values: 16 passed controls.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 08-security-availability.tex
+  planned_table_figure: tab-negative-controls
+  status: supported
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-PERF-01
+  proposed_paper_wording: Measured sub-millisecond values are deterministic local
+    harness measurements, not production or inter-organizational latency estimates.
+  claim_category: performance
+  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  exact_source_files:
+  - reports/gateway-latency.json
+  - reports/federation-latency.json
+  exact_supporting_values: Performance-only selections with 20 samples each.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id005
+  - No production latency inference
+  caveats: *id005
+  planned_paper_section: 07-agent-gateway-evaluation.tex
+  planned_table_figure: tab-performance
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-CENTRAL-01
+  proposed_paper_wording: Under fact equivalence, receiver-local enforcement avoided
+    six failures associated with central outage or authority placement in evaluated
+    cells.
+  claim_category: central comparator
+  source_artifact: artifacts/federated-domain-v0.6-evidence
+  exact_source_files:
+  - reports/central-comparator-audit.json
+  exact_supporting_values: 54 fact-equivalent cells; three authority-placement and
+    three outage regressions.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 06-deterministic-evaluation.tex
+  planned_table_figure: tab-architecture-comparison
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-CENTRAL-02
+  proposed_paper_wording: The evaluation does not establish universal superiority
+    over centralized defense.
+  claim_category: limitation
+  source_artifact: artifacts/federated-domain-v0.6-evidence
+  exact_source_files:
+  - reports/central-comparator-audit.json
+  exact_supporting_values: Bounded comparator scope.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 10-limitations-conclusion.tex
+  planned_table_figure: tab-limitations
+  status: supported
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-LIMIT-01
+  proposed_paper_wording: TCOP does not create detections and cannot prevent an origin
+    compromise that no participating observer detects in time.
+  claim_category: limitation
+  source_artifact: architecture
+  exact_source_files:
+  - benchmark/studies/v0.6-agent-validation.yaml
+  - reports/containment-window-agent-results.json
+  exact_supporting_values: Context is actionable only before consequential actions.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 10-limitations-conclusion.tex
+  planned_table_figure: fig-containment-window
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-LIMIT-02
+  proposed_paper_wording: The Docker MCP Gateway is a reference enforcement point,
+    not a reconstruction of a public incident architecture.
+  claim_category: limitation
+  source_artifact: integrations/mcp-gateway
+  exact_source_files:
+  - GATEWAY_SELECTION.md
+  exact_supporting_values: Reference-only gateway role.
+  relevant_population_denominator: specified in source rows
+  exclusions: []
+  caveats:
+  - bounded evaluation scope
+  planned_paper_section: 07-agent-gateway-evaluation.tex
+  planned_table_figure: tab-limitations
+  status: supported
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-01
+  proposed_paper_wording: TCOP would have prevented the OpenAI/Hugging Face incident.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-02
+  proposed_paper_wording: TCOP eliminates harmful agent behavior.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-03
+  proposed_paper_wording: TCOP is superior to centralized defense.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-04
+  proposed_paper_wording: TCOP has production sub-millisecond latency.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-05
+  proposed_paper_wording: TCOP works at Internet scale.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-06
+  proposed_paper_wording: No benign cost was observed.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-07
+  proposed_paper_wording: The system automatically knows which remote warning is true.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-08
+  proposed_paper_wording: Outside-window context reversed completed harm.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-09
+  proposed_paper_wording: P7 improved forensic reconstruction.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: P-10
+  proposed_paper_wording: Balanced and utility strategies matched A1 causally.
+  claim_category: prohibited formulation
+  source_artifact: none
+  exact_source_files: []
+  exact_supporting_values: None; prohibited.
+  relevant_population_denominator: not applicable
+  exclusions: []
+  caveats:
+  - Do not use.
+  planned_paper_section: all
+  planned_table_figure: none
+  status: prohibited

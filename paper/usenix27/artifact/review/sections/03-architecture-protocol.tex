@@ -1,0 +1,14 @@
+\section{Architecture and Protocol Boundary}
+
+Each domain runs one \texttt{tcopd} instance near its local observation and enforcement boundaries. Local telemetry reaches the local \texttt{tcopd}; a signed \texttt{tcopd}-to-\texttt{tcopd} exchange carries TCX context across domains; and the receiving \texttt{tcopd} invokes a local authorization interface. Only the middle boundary is cross-domain TCOP. The gateway receives a Domain-B-local decision, not the TCX context.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{architecture}
+\caption{TCOP architecture and authority boundary. The cross-domain object is signed bounded context. Domain A cannot invoke Domain B enforcement; the gateway consumes a Domain-B-local policy and decision.}
+\label{fig:architecture}
+\end{figure*}
+
+An interaction receipt is an opaque Domain-B-minted correlation handle. It is not an authorization token and does not grant enforcement authority. A receiver accepts a context only after validating signature, scope, expiry, authorized peer identity, replay state, and receipt correlation. It then combines the accepted context with locally held facts. This makes the trust boundary explicit: imported evidence can influence a local policy calculation, but no remote field maps directly to an enforcement action.
+
+\input{tables/generated/tab-architecture-comparison}

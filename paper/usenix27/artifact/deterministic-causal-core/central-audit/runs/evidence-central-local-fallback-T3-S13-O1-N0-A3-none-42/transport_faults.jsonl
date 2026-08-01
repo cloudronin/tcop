@@ -1,0 +1,17 @@
+{"architecture":"A3","at":0,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":4,"stream":"transport_faults","topology_order":3}
+{"at":1,"event_type":"context_published","export_digest":"af6d2f944bec6fbda8e05a97c614b296f8c74aadb92a30af2a9a99bc6f089dc3","observation_id":"ca06e645b458601ffec5447340dd4d3b","phase":3,"phase_name":"context_publication","sequence":15,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":1,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":17,"stream":"transport_faults","topology_order":3}
+{"at":2,"event_type":"context_delivered","export_digest":"af6d2f944bec6fbda8e05a97c614b296f8c74aadb92a30af2a9a99bc6f089dc3","observation_id":"ca06e645b458601ffec5447340dd4d3b","phase":4,"phase_name":"network_delivery","replay":false,"route":"bounded_central_copy","sequence":27,"stream":"transport_faults","target":"central","topology_order":3}
+{"architecture":"A3","at":2,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":28,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":3,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":37,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":4,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":46,"stream":"transport_faults","topology_order":3}
+{"at":5,"event_type":"context_published","export_digest":"bf04cc72e9dc09ca141f2aa28d0cb065eac85b2de37d1df4c0742a5b511460b1","observation_id":"5e1d6220163e0834ffc478b9219a193a","phase":3,"phase_name":"context_publication","sequence":58,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":5,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":60,"stream":"transport_faults","topology_order":3}
+{"at":6,"event_type":"context_delivered","export_digest":"bf04cc72e9dc09ca141f2aa28d0cb065eac85b2de37d1df4c0742a5b511460b1","observation_id":"5e1d6220163e0834ffc478b9219a193a","phase":4,"phase_name":"network_delivery","replay":false,"route":"bounded_central_copy","sequence":70,"stream":"transport_faults","target":"central","topology_order":3}
+{"architecture":"A3","at":6,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":71,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":7,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":81,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":8,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":90,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":9,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":99,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":10,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":108,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":11,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":117,"stream":"transport_faults","topology_order":3}
+{"architecture":"A3","at":12,"event_type":"central_unavailable","phase":6,"phase_name":"resolution","sequence":126,"stream":"transport_faults","topology_order":3}

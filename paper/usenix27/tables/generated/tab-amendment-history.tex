@@ -1,0 +1,11 @@
+\begin{table*}[t]\centering\scriptsize
+\caption{Live runtime amendment history. Digest prefixes identify the immutable predecessor and successor roots; full digests are retained in the normalized amendment-chain data and source-verification report. The first two predecessor artifacts are retained provider-failure negatives.}
+\begin{tabular}{@{}p{0.07\textwidth}@{\hspace{0.2em}}p{0.16\textwidth}@{\hspace{0.2em}}p{0.09\textwidth}@{\hspace{0.2em}}p{0.07\textwidth}@{\hspace{0.2em}}p{0.08\textwidth}@{\hspace{0.2em}}p{0.09\textwidth}@{\hspace{0.2em}}p{0.12\textwidth}@{\hspace{0.2em}}p{0.12\textwidth}@{}}\toprule
+Amendment & Cause & Model sampling? & Traces? & Protocol / policy? & Result derivation? & Predecessor digest & Successor digest \\ \midrule
+001 & Provider completion-token field & No successful sampling & No & No & No & e5cf49806b70 & 698ca3c116af \\
+002 & Provider reasoning mode & No & No & No & No & 698ca3c116af & f9bccfcaeff8 \\
+003 & RA-03 eligibility aligned to frozen truth & Yes, eligible cohort capture & No & No & Eligibility only & f9bccfcaeff8 & cebc669a7a3c \\
+004 & Completion-gate ordering & No & No & No & No & cebc669a7a3c & 24a20e9c48a2 \\
+005 & Derived utility reconciliation & No & No & No & Yes, replay-row aggregation & 24a20e9c48a2 & 2b1f92ff4481 \\
+006 & Physical tcopd-a relay replay & No & No & No & Physical-path evidence & 2b1f92ff4481 & 546f3547b727 \\ \bottomrule
+\end{tabular}\label{tab:amendments}\end{table*}

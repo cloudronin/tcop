@@ -1,0 +1,12 @@
+\section{Containment Window}
+
+The containment window is action-relative. It is the interval in which imported context can change a receiver-local decision before a specified harmful action completes. Consequently, outside-window is incomplete unless it names the relevant action. A delivery after an initial harmful call can be outside the window for that call but inside the window for later calls.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{containment-window}
+\caption{Containment-window model. Early context supports prospective prevention. Context after an initial action can reduce later blast radius. Context after all relevant actions has forensic or coordination value only.}
+\label{fig:window}
+\end{figure*}
+
+This model prevents a misleading interpretation of late warnings. TCOP does not reverse completed harm. It can still enable a receiver to restrict subsequent opportunities if local correlation and policy make the context actionable before those opportunities. The evaluated timing labels therefore use causal action boundaries rather than a conversion from deterministic ticks to milliseconds.

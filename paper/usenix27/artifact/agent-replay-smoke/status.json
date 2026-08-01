@@ -1,0 +1,6 @@
+{
+  "artifact_root": "paper/usenix27/artifact/agent-replay-smoke",
+  "passed": true,
+  "stage": "full",
+  "study": "TCOP v0.6 agent-based external validation"
+}

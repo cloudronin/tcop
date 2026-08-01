@@ -1,0 +1,70 @@
+{
+  "amendment_chain_integrity": true,
+  "deterministic": {
+    "central_fact_equivalent_cells": 54,
+    "central_regressions": 6,
+    "excluded_unmatched_pairs": 123,
+    "harmful_actions_prevented": 36,
+    "improved": 30,
+    "strict_pairs": 54,
+    "unchanged": 24,
+    "worsened": 0
+  },
+  "frozen_strategy_digests": {
+    "balanced": "4b2dfb385d71ee4ef3e8c598cf7cac4da80fdb62ed8d22d7ad241918c9e69890",
+    "containment-first": "60a4c97851d19c6bcf09d24a063b480e9a29a49dca7e0665ead9013eaf8d2691",
+    "forensic-oriented": "e30ded1303d08c6067a5030d9e1741183bf30af96d218c2143bc1e21db237d96",
+    "utility-preserving": "7cf402995d0b4c0e6473aaad4cca7b420abcccf35b7844b65935d07ee9db8940"
+  },
+  "live": {
+    "a1": {
+      "blocked": 0,
+      "forwarded": 30
+    },
+    "early": {
+      "blocked": 30,
+      "forwarded": 0
+    },
+    "eligible_traces": 44,
+    "late": {
+      "blocked": 20,
+      "forwarded": 10
+    },
+    "paired_comparisons": 220,
+    "physical_arms": 30,
+    "physical_federation_exchanges": 20,
+    "remote_enforcement_successes": 0,
+    "replay_treatment_rows": 264
+  },
+  "negative_controls": {
+    "authorization_timeout": true,
+    "context_arrival_after_local_containment": true,
+    "disallowed_import_type": true,
+    "expired_context": true,
+    "gateway_cache_disabled": true,
+    "gateway_restart": true,
+    "invalid_signature": true,
+    "local_policy_monitor_only": true,
+    "no_remote_enforcement": true,
+    "remote_tcx_action_not_interpreted": true,
+    "replayed_context": true,
+    "session_termination_before_context_arrival": true,
+    "stale_decision": true,
+    "tcopd_b_unavailable": true,
+    "unknown_peer": true,
+    "wrong_receipt": true
+  },
+  "source_root_digests": {
+    "agent-validation-scripted-parent": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+    "federated-domain-parent": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+    "live-agent-validation-final": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+    "missing-evidence-round-admitted": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99"
+  },
+  "utility": {
+    "attempted": 360,
+    "constrained": 40,
+    "forwarded": 320,
+    "workflow_completion": 80,
+    "workflow_denominator": 120
+  }
+}

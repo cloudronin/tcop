@@ -1,0 +1,77 @@
+{
+  "a2_export_digests": [],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A3",
+    "cell_id": "evidence-central-containment-first-T3-S14-O1-N0-A3-none-42",
+    "classification": "mechanism_probe",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "A3 frozen policy parity diagnostic",
+    "scenario_id": "S14",
+    "seed": 42,
+    "strategy_id": "none",
+    "topology_id": "T3"
+  },
+  "evidence_diagnostic": {
+    "central_strategy": "containment-first",
+    "label": "central-policy-parity",
+    "local_fallback": false,
+    "network": null
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": null,
+    "early_warning_lead_time": null,
+    "false_containment": false,
+    "first_import_at": null,
+    "first_protection_at": null,
+    "forensic_records": 14,
+    "harmful_actions": 2,
+    "prevented_actions": 0,
+    "protocol_observations": 1,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 0
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "resilience",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S14",
+    "sender_unavailable": true,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Sender local observer unavailable"
+  },
+  "stream_digest": "9ce289d052237c3497e238bf81399332492ad2378f7a899dee3eecf478ff2079",
+  "topology": {
+    "domains": [
+      "internal-core",
+      "internal-data",
+      "external-partner"
+    ],
+    "topology_id": "T3",
+    "trust_model": "hybrid"
+  }
+}

@@ -1,0 +1,12 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Evaluative architecture roles. A2 is the receiver-sovereign TCOP configuration; the other rows are baselines, comparators, or upper bounds.}
+\begin{tabular}{@{}p{0.07\textwidth}@{\hspace{0.35em}}p{0.13\textwidth}@{\hspace{0.35em}}p{0.13\textwidth}@{\hspace{0.35em}}p{0.13\textwidth}@{\hspace{0.35em}}p{0.13\textwidth}@{\hspace{0.35em}}p{0.17\textwidth}@{}}\toprule
+Architecture & Visibility & Authority & Outage dependence & Privacy exposure & Evaluative role \\ \midrule
+A0 & None & None & N/A & None & No coordinated defense baseline \\
+A1 & Receiver-local & Domain B & Local only & Local only & Isolated capable observers \\
+A2 & Bounded exported facts & Domain B & Federation degrades to local operation & Bounded context & TCOP \\
+A3 & Equivalent exportable facts & Central service & Central decision path & Exported facts to central & Fact-equivalent central comparator \\
+A4 & Full telemetry & Central service & Central decision path & Full telemetry to central & Central upper bound \\
+A5 & Oracle & Oracle & Assumed & Oracle visibility & Oracle upper bound \\ \bottomrule
+\end{tabular}\label{tab:architectures}\end{table*}

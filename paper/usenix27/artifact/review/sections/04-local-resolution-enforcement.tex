@@ -1,0 +1,5 @@
+\section{Receiver-Local Resolution and Enforcement}
+
+The receiving pipeline is context validation, local correlation, receiver-local strategy selection, receiver-local policy evaluation, receiver-local decision creation, and gateway enforcement. A gateway patch is intentionally generic: it calls a local authorization-evaluator interface and does not embed TCOP resolver or strategy logic. Authorization caching is disabled for correctness and counterfactual replay; a separately predeclared performance selection evaluates caching without changing the correctness path.
+
+The evaluated authority invariant is strong: every gateway block must cite a Domain-B-local policy and decision, and remotely supplied TCX fields must never be interpreted as an enforcement action. The physical evaluation contains \PhysicalArms{} gateway arms and records \RemoteEnforcementSuccesses{} remote enforcement successes. Its authorization audit and all physical blocks satisfy the Domain-B provenance requirement.

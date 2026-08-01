@@ -1,0 +1,130 @@
+{
+  "breakdowns": {
+    "family": [
+      {
+        "eligible_pairs": 9,
+        "improved": 3,
+        "mean_harm_delta": -0.3333333333333333,
+        "median_harm_delta": 0,
+        "scenario_family": "adversarial",
+        "strategy": "containment-first",
+        "total_harmful_actions_prevented": 3,
+        "unchanged": 6,
+        "worsened": 0
+      },
+      {
+        "eligible_pairs": 9,
+        "improved": 0,
+        "mean_harm_delta": 0,
+        "median_harm_delta": 0,
+        "scenario_family": "negative_control",
+        "strategy": "containment-first",
+        "total_harmful_actions_prevented": 0,
+        "unchanged": 9,
+        "worsened": 0
+      },
+      {
+        "eligible_pairs": 15,
+        "improved": 12,
+        "mean_harm_delta": -0.8,
+        "median_harm_delta": -1,
+        "scenario_family": "opportunity",
+        "strategy": "containment-first",
+        "total_harmful_actions_prevented": 12,
+        "unchanged": 3,
+        "worsened": 0
+      },
+      {
+        "eligible_pairs": 3,
+        "improved": 3,
+        "mean_harm_delta": -1,
+        "median_harm_delta": -1,
+        "scenario_family": "privacy",
+        "strategy": "containment-first",
+        "total_harmful_actions_prevented": 3,
+        "unchanged": 0,
+        "worsened": 0
+      },
+      {
+        "eligible_pairs": 9,
+        "improved": 6,
+        "mean_harm_delta": -0.6666666666666666,
+        "median_harm_delta": -1,
+        "scenario_family": "resilience",
+        "strategy": "containment-first",
+        "total_harmful_actions_prevented": 6,
+        "unchanged": 3,
+        "worsened": 0
+      },
+      {
+        "eligible_pairs": 6,
+        "improved": 6,
+        "mean_harm_delta": -2,
+        "median_harm_delta": -2.0,
+        "scenario_family": "timing",
+        "strategy": "containment-first",
+        "total_harmful_actions_prevented": 12,
+        "unchanged": 0,
+        "worsened": 0
+      },
+      {
+        "eligible_pairs": 3,
+        "improved": 0,
+        "mean_harm_delta": 0,
+        "median_harm_delta": 0,
+        "scenario_family": "utility",
+        "strategy": "containment-first",
+        "total_harmful_actions_prevented": 0,
+        "unchanged": 3,
+        "worsened": 0
+      }
+    ],
+    "topology": [
+      {
+        "eligible_pairs": 18,
+        "improved": 10,
+        "mean_harm_delta": -0.6666666666666666,
+        "median_harm_delta": -1.0,
+        "strategy": "containment-first",
+        "topology": "T1",
+        "total_harmful_actions_prevented": 12,
+        "unchanged": 8,
+        "worsened": 0
+      },
+      {
+        "eligible_pairs": 18,
+        "improved": 10,
+        "mean_harm_delta": -0.6666666666666666,
+        "median_harm_delta": -1.0,
+        "strategy": "containment-first",
+        "topology": "T2",
+        "total_harmful_actions_prevented": 12,
+        "unchanged": 8,
+        "worsened": 0
+      },
+      {
+        "eligible_pairs": 18,
+        "improved": 10,
+        "mean_harm_delta": -0.6666666666666666,
+        "median_harm_delta": -1.0,
+        "strategy": "containment-first",
+        "topology": "T3",
+        "total_harmful_actions_prevented": 12,
+        "unchanged": 8,
+        "worsened": 0
+      }
+    ]
+  },
+  "summary": [
+    {
+      "eligible_pairs": 54,
+      "improved": 30,
+      "mean_harm_delta": -0.6666666666666666,
+      "median_harm_delta": -1.0,
+      "strategy": "containment-first",
+      "total_harmful_actions_prevented": 36,
+      "unchanged": 24,
+      "worsened": 0
+    }
+  ]
+}

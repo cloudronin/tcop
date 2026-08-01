@@ -1,0 +1,7 @@
+\section{Problem and Threat Model}
+
+We consider independently governed trust domains that run agents or automation with local observers and enforceable local choke points. Agents, observers, and peer domains can be honest, compromised, or faulty. Adversaries can relay, replay, delay, or suppress cross-domain messages; a peer can be malicious; and a network can partition. The receiving enforcement boundary is trusted only insofar as the receiver controls its policy and authorization adapter.
+
+TCOP assumes that at least one participating domain detects a useful fact, that the receiver has an enforceable choke point, and that public-key identity and peer authorization exist. The receiver's policy is outside remote control. TCOP does not guarantee that any observation is true, and a cross-domain context cannot directly invoke enforcement.
+
+Out of scope are preventing an undetected origin compromise, global consensus, replacing endpoint, identity, or monitoring systems, real-world actor attribution, production-scale Internet federation, and rollback of completed harmful actions. The implementation evaluates a bounded synthetic reference deployment rather than an uninstrumented incident.

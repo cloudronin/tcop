@@ -4,7 +4,7 @@ ARTIFACTS ?= artifacts/verify
 
 # Developer-only shortcuts.  The installed `tcop` CLI is the public TCOP
 # contract; no research logic is implemented in this Makefile.
-.PHONY: schema test verify benchmark experiments research-regression research-witness research-reliability research-confirmation research-minimality research-minimality-core research-minimality-combinations research-minimality-validation research-federated-v0.6 research-evidence-v0.6 research report clean
+.PHONY: schema test verify benchmark experiments research-regression research-witness research-reliability research-confirmation research-minimality research-minimality-core research-minimality-combinations research-minimality-validation research-federated-v0.6 research-evidence-v0.6 research report clean paper-verify-sources paper-extract paper-figures paper-tables paper-build paper-number-audit paper-anonymity-audit paper-reproduce-core paper-check
 
 schema:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.schema_check
@@ -63,3 +63,36 @@ report: verify
 
 clean:
 	rm -rf $(ARTIFACTS)
+
+# Paper-production conveniences. The scripts are the reproducible interface;
+# these targets do not change the public TCOP CLI.
+paper-verify-sources:
+	$(PYTHON) paper/usenix27/scripts/verify_sources.py
+
+paper-extract: paper-verify-sources
+	$(PYTHON) paper/usenix27/scripts/extract_results.py
+	$(PYTHON) paper/usenix27/scripts/paperlib.py inventory
+	$(PYTHON) paper/usenix27/scripts/generate_macros.py
+
+paper-figures: paper-extract
+	MPLCONFIGDIR=/private/tmp/tcop-mpl $(PYTHON) paper/usenix27/scripts/generate_figures.py
+
+paper-tables: paper-extract
+	$(PYTHON) paper/usenix27/scripts/generate_tables.py
+
+paper-build: paper-figures paper-tables
+	paper/usenix27/scripts/build_paper.sh
+
+paper-number-audit: paper-build
+	$(PYTHON) paper/usenix27/scripts/verify_manuscript_numbers.py
+
+paper-anonymity-audit: paper-build
+	$(PYTHON) paper/usenix27/scripts/verify_anonymity.py
+
+paper-reproduce-core:
+	paper/usenix27/scripts/reproduce_core.sh
+
+paper-check: paper-number-audit paper-anonymity-audit
+	$(PYTHON) paper/usenix27/scripts/verify_claims.py
+	$(PYTHON) paper/usenix27/scripts/verify_sources.py --stability-check
+	$(PYTHON) paper/usenix27/scripts/paperlib.py summary

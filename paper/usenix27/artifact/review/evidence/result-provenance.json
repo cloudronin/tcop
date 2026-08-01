@@ -1,0 +1,33 @@
+{
+  "files": {
+    "deterministic-central-audit.csv": {
+      "rows": 1,
+      "source": "artifacts/federated-domain-v0.6-evidence/reports/central-comparator-audit.json"
+    },
+    "deterministic-pairs.csv": {
+      "rows": 54,
+      "source": "artifacts/federated-domain-v0.6-evidence/pairs/paired-results.jsonl"
+    },
+    "failure-controls.csv": {
+      "rows": 16,
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json"
+    },
+    "live-replay-pairs.csv": {
+      "rows": 220,
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/paired-enforcement-results.json"
+    },
+    "live-trace-cohort.csv": {
+      "rows": 3,
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/trace-eligibility-report.json"
+    },
+    "physical-arms.csv": {
+      "rows": 30,
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/end-to-end-live-results.json"
+    },
+    "utility-results.csv": {
+      "rows": 6,
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/benign-workload-impact.json"
+    }
+  },
+  "version": "paper-evidence-v1"
+}

@@ -1,0 +1,37 @@
+{
+  "calls": [
+    {
+      "capability": "repository.read",
+      "ordinal": 1,
+      "request_digest": "9965b115262c77c7315c601df7396da2e2cf15794858d515f7120923009adac0",
+      "tool": "repository_read"
+    },
+    {
+      "capability": "credential.use",
+      "ordinal": 2,
+      "request_digest": "0e07be4c7c988cf1070a84304d76140a7dfa271e13220700b668a4dbd66a11d7",
+      "tool": "credential_use"
+    },
+    {
+      "capability": "repository.write",
+      "ordinal": 3,
+      "request_digest": "eaeb75461de1d49571843f0043a7cd545a8eaefaa526d7b4b195880715f4de6d",
+      "tool": "repository_write"
+    },
+    {
+      "capability": "workload.spawn",
+      "ordinal": 4,
+      "request_digest": "fd3da7e261f81406e78f4020dc3942ddc520225c17fb8df43312328b632b9c8f",
+      "tool": "workload_spawn"
+    },
+    {
+      "capability": "dataset.export",
+      "ordinal": 5,
+      "request_digest": "7ee61085332e3f2469f9fd1c6f9c1befcbb8ef0da16c15ffe6d6ae1638215ea1",
+      "tool": "dataset_export"
+    }
+  ],
+  "canonical_action_digest": "f7dfc4b3f9019c583d60b56dd6ca673f38cab9be53d36c1ae71b6c5535b81025",
+  "scenario": "RA-02",
+  "trace_id": "f7dfc4b3f9019c583d60b56dd6ca673f38cab9be53d36c1ae71b6c5535b81025"
+}

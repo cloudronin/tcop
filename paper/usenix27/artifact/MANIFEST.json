@@ -1,0 +1,8 @@
+{
+  "artifact_name": "TCOP anonymous USENIX reviewer package",
+  "format_version": "0.1",
+  "contains_live_model_credentials": false,
+  "default_reproduction": "tier-0-and-tier-2",
+  "expected_results": "expected-results.json",
+  "source_paths_are_repository_relative": true
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "blast_radius": 3,
+    "communication_volume": 132,
+    "configuration": "A2:containment-first",
+    "harmful_actions": 3,
+    "pareto_eligible": true
+  }
+]

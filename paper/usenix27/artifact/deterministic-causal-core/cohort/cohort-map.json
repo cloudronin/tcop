@@ -1,0 +1,1769 @@
+{
+  "aggregate:A0:none:negative_control": {
+    "architectures": {
+      "A0": 21
+    },
+    "cell_count": 21,
+    "cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "cohort_id": "aggregate:A0:none:negative_control",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 21
+    },
+    "observer_profiles": {
+      "O1": 21
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S06-O1-N0-A0-none-42",
+      "T1-S07-O1-N0-A0-none-42",
+      "T1-S08-O1-N0-A0-none-42",
+      "T1-S09-O1-N0-A0-none-42",
+      "T1-S10-O1-N0-A0-none-42",
+      "T1-S16-O1-N0-A0-none-42",
+      "T1-S18-O1-N0-A0-none-42",
+      "T2-S06-O1-N0-A0-none-42",
+      "T2-S07-O1-N0-A0-none-42",
+      "T2-S08-O1-N0-A0-none-42",
+      "T2-S09-O1-N0-A0-none-42",
+      "T2-S10-O1-N0-A0-none-42",
+      "T2-S16-O1-N0-A0-none-42",
+      "T2-S18-O1-N0-A0-none-42",
+      "T3-S06-O1-N0-A0-none-42",
+      "T3-S07-O1-N0-A0-none-42",
+      "T3-S08-O1-N0-A0-none-42",
+      "T3-S09-O1-N0-A0-none-42",
+      "T3-S10-O1-N0-A0-none-42",
+      "T3-S16-O1-N0-A0-none-42",
+      "T3-S18-O1-N0-A0-none-42"
+    ],
+    "scenario_families": {
+      "adversarial": 9,
+      "negative_control": 9,
+      "utility": 3
+    },
+    "strategies": {
+      "none": 21
+    },
+    "topologies": {
+      "T1": 7,
+      "T2": 7,
+      "T3": 7
+    }
+  },
+  "aggregate:A0:none:primary_deployment_cell": {
+    "architectures": {
+      "A0": 33
+    },
+    "cell_count": 33,
+    "cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "cohort_id": "aggregate:A0:none:primary_deployment_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 33
+    },
+    "observer_profiles": {
+      "O1": 33
+    },
+    "pareto_eligible": true,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S01-O1-N0-A0-none-42",
+      "T1-S02-O1-N0-A0-none-42",
+      "T1-S03-O1-N0-A0-none-42",
+      "T1-S04-O1-N0-A0-none-42",
+      "T1-S05-O1-N0-A0-none-42",
+      "T1-S11-O1-N0-A0-none-42",
+      "T1-S12-O1-N0-A0-none-42",
+      "T1-S13-O1-N0-A0-none-42",
+      "T1-S14-O1-N0-A0-none-42",
+      "T1-S15-O1-N0-A0-none-42",
+      "T1-S17-O1-N0-A0-none-42",
+      "T2-S01-O1-N0-A0-none-42",
+      "T2-S02-O1-N0-A0-none-42",
+      "T2-S03-O1-N0-A0-none-42",
+      "T2-S04-O1-N0-A0-none-42",
+      "T2-S05-O1-N0-A0-none-42",
+      "T2-S11-O1-N0-A0-none-42",
+      "T2-S12-O1-N0-A0-none-42",
+      "T2-S13-O1-N0-A0-none-42",
+      "T2-S14-O1-N0-A0-none-42",
+      "T2-S15-O1-N0-A0-none-42",
+      "T2-S17-O1-N0-A0-none-42",
+      "T3-S01-O1-N0-A0-none-42",
+      "T3-S02-O1-N0-A0-none-42",
+      "T3-S03-O1-N0-A0-none-42",
+      "T3-S04-O1-N0-A0-none-42",
+      "T3-S05-O1-N0-A0-none-42",
+      "T3-S11-O1-N0-A0-none-42",
+      "T3-S12-O1-N0-A0-none-42",
+      "T3-S13-O1-N0-A0-none-42",
+      "T3-S14-O1-N0-A0-none-42",
+      "T3-S15-O1-N0-A0-none-42",
+      "T3-S17-O1-N0-A0-none-42"
+    ],
+    "scenario_families": {
+      "opportunity": 15,
+      "privacy": 3,
+      "resilience": 9,
+      "timing": 6
+    },
+    "strategies": {
+      "none": 33
+    },
+    "topologies": {
+      "T1": 11,
+      "T2": 11,
+      "T3": 11
+    }
+  },
+  "aggregate:A1:none:negative_control": {
+    "architectures": {
+      "A1": 21
+    },
+    "cell_count": 21,
+    "cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "cohort_id": "aggregate:A1:none:negative_control",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 21
+    },
+    "observer_profiles": {
+      "O1": 21
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S06-O1-N0-A1-none-42",
+      "T1-S07-O1-N0-A1-none-42",
+      "T1-S08-O1-N0-A1-none-42",
+      "T1-S09-O1-N0-A1-none-42",
+      "T1-S10-O1-N0-A1-none-42",
+      "T1-S16-O1-N0-A1-none-42",
+      "T1-S18-O1-N0-A1-none-42",
+      "T2-S06-O1-N0-A1-none-42",
+      "T2-S07-O1-N0-A1-none-42",
+      "T2-S08-O1-N0-A1-none-42",
+      "T2-S09-O1-N0-A1-none-42",
+      "T2-S10-O1-N0-A1-none-42",
+      "T2-S16-O1-N0-A1-none-42",
+      "T2-S18-O1-N0-A1-none-42",
+      "T3-S06-O1-N0-A1-none-42",
+      "T3-S07-O1-N0-A1-none-42",
+      "T3-S08-O1-N0-A1-none-42",
+      "T3-S09-O1-N0-A1-none-42",
+      "T3-S10-O1-N0-A1-none-42",
+      "T3-S16-O1-N0-A1-none-42",
+      "T3-S18-O1-N0-A1-none-42"
+    ],
+    "scenario_families": {
+      "adversarial": 9,
+      "negative_control": 9,
+      "utility": 3
+    },
+    "strategies": {
+      "none": 21
+    },
+    "topologies": {
+      "T1": 7,
+      "T2": 7,
+      "T3": 7
+    }
+  },
+  "aggregate:A1:none:primary_deployment_cell": {
+    "architectures": {
+      "A1": 33
+    },
+    "cell_count": 33,
+    "cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "cohort_id": "aggregate:A1:none:primary_deployment_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 33
+    },
+    "observer_profiles": {
+      "O1": 33
+    },
+    "pareto_eligible": true,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S01-O1-N0-A1-none-42",
+      "T1-S02-O1-N0-A1-none-42",
+      "T1-S03-O1-N0-A1-none-42",
+      "T1-S04-O1-N0-A1-none-42",
+      "T1-S05-O1-N0-A1-none-42",
+      "T1-S11-O1-N0-A1-none-42",
+      "T1-S12-O1-N0-A1-none-42",
+      "T1-S13-O1-N0-A1-none-42",
+      "T1-S14-O1-N0-A1-none-42",
+      "T1-S15-O1-N0-A1-none-42",
+      "T1-S17-O1-N0-A1-none-42",
+      "T2-S01-O1-N0-A1-none-42",
+      "T2-S02-O1-N0-A1-none-42",
+      "T2-S03-O1-N0-A1-none-42",
+      "T2-S04-O1-N0-A1-none-42",
+      "T2-S05-O1-N0-A1-none-42",
+      "T2-S11-O1-N0-A1-none-42",
+      "T2-S12-O1-N0-A1-none-42",
+      "T2-S13-O1-N0-A1-none-42",
+      "T2-S14-O1-N0-A1-none-42",
+      "T2-S15-O1-N0-A1-none-42",
+      "T2-S17-O1-N0-A1-none-42",
+      "T3-S01-O1-N0-A1-none-42",
+      "T3-S02-O1-N0-A1-none-42",
+      "T3-S03-O1-N0-A1-none-42",
+      "T3-S04-O1-N0-A1-none-42",
+      "T3-S05-O1-N0-A1-none-42",
+      "T3-S11-O1-N0-A1-none-42",
+      "T3-S12-O1-N0-A1-none-42",
+      "T3-S13-O1-N0-A1-none-42",
+      "T3-S14-O1-N0-A1-none-42",
+      "T3-S15-O1-N0-A1-none-42",
+      "T3-S17-O1-N0-A1-none-42"
+    ],
+    "scenario_families": {
+      "opportunity": 15,
+      "privacy": 3,
+      "resilience": 9,
+      "timing": 6
+    },
+    "strategies": {
+      "none": 33
+    },
+    "topologies": {
+      "T1": 11,
+      "T2": 11,
+      "T3": 11
+    }
+  },
+  "aggregate:A1:none:sensitivity_cell": {
+    "architectures": {
+      "A1": 15
+    },
+    "cell_count": 15,
+    "cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "cohort_id": "aggregate:A1:none:sensitivity_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N1": 3,
+      "N2": 6,
+      "N3": 3,
+      "N4": 3
+    },
+    "observer_profiles": {
+      "O1": 6,
+      "O2": 6,
+      "O3": 3
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S11-O1-N1-A1-none-42",
+      "T1-S11-O1-N2-A1-none-101",
+      "T1-S12-O2-N3-A1-none-211",
+      "T1-S13-O2-N4-A1-none-503",
+      "T1-S17-O3-N2-A1-none-997",
+      "T2-S11-O1-N1-A1-none-42",
+      "T2-S11-O1-N2-A1-none-101",
+      "T2-S12-O2-N3-A1-none-211",
+      "T2-S13-O2-N4-A1-none-503",
+      "T2-S17-O3-N2-A1-none-997",
+      "T3-S11-O1-N1-A1-none-42",
+      "T3-S11-O1-N2-A1-none-101",
+      "T3-S12-O2-N3-A1-none-211",
+      "T3-S13-O2-N4-A1-none-503",
+      "T3-S17-O3-N2-A1-none-997"
+    ],
+    "scenario_families": {
+      "resilience": 6,
+      "timing": 9
+    },
+    "strategies": {
+      "none": 15
+    },
+    "topologies": {
+      "T1": 5,
+      "T2": 5,
+      "T3": 5
+    }
+  },
+  "aggregate:A2:balanced:negative_control": {
+    "architectures": {
+      "A2": 21
+    },
+    "cell_count": 21,
+    "cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "cohort_id": "aggregate:A2:balanced:negative_control",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 21
+    },
+    "observer_profiles": {
+      "O1": 21
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S06-O1-N0-A2-balanced-42",
+      "T1-S07-O1-N0-A2-balanced-42",
+      "T1-S08-O1-N0-A2-balanced-42",
+      "T1-S09-O1-N0-A2-balanced-42",
+      "T1-S10-O1-N0-A2-balanced-42",
+      "T1-S16-O1-N0-A2-balanced-42",
+      "T1-S18-O1-N0-A2-balanced-42",
+      "T2-S06-O1-N0-A2-balanced-42",
+      "T2-S07-O1-N0-A2-balanced-42",
+      "T2-S08-O1-N0-A2-balanced-42",
+      "T2-S09-O1-N0-A2-balanced-42",
+      "T2-S10-O1-N0-A2-balanced-42",
+      "T2-S16-O1-N0-A2-balanced-42",
+      "T2-S18-O1-N0-A2-balanced-42",
+      "T3-S06-O1-N0-A2-balanced-42",
+      "T3-S07-O1-N0-A2-balanced-42",
+      "T3-S08-O1-N0-A2-balanced-42",
+      "T3-S09-O1-N0-A2-balanced-42",
+      "T3-S10-O1-N0-A2-balanced-42",
+      "T3-S16-O1-N0-A2-balanced-42",
+      "T3-S18-O1-N0-A2-balanced-42"
+    ],
+    "scenario_families": {
+      "adversarial": 9,
+      "negative_control": 9,
+      "utility": 3
+    },
+    "strategies": {
+      "balanced": 21
+    },
+    "topologies": {
+      "T1": 7,
+      "T2": 7,
+      "T3": 7
+    }
+  },
+  "aggregate:A2:balanced:primary_deployment_cell": {
+    "architectures": {
+      "A2": 33
+    },
+    "cell_count": 33,
+    "cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "cohort_id": "aggregate:A2:balanced:primary_deployment_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 33
+    },
+    "observer_profiles": {
+      "O1": 33
+    },
+    "pareto_eligible": true,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S01-O1-N0-A2-balanced-42",
+      "T1-S02-O1-N0-A2-balanced-42",
+      "T1-S03-O1-N0-A2-balanced-42",
+      "T1-S04-O1-N0-A2-balanced-42",
+      "T1-S05-O1-N0-A2-balanced-42",
+      "T1-S11-O1-N0-A2-balanced-42",
+      "T1-S12-O1-N0-A2-balanced-42",
+      "T1-S13-O1-N0-A2-balanced-42",
+      "T1-S14-O1-N0-A2-balanced-42",
+      "T1-S15-O1-N0-A2-balanced-42",
+      "T1-S17-O1-N0-A2-balanced-42",
+      "T2-S01-O1-N0-A2-balanced-42",
+      "T2-S02-O1-N0-A2-balanced-42",
+      "T2-S03-O1-N0-A2-balanced-42",
+      "T2-S04-O1-N0-A2-balanced-42",
+      "T2-S05-O1-N0-A2-balanced-42",
+      "T2-S11-O1-N0-A2-balanced-42",
+      "T2-S12-O1-N0-A2-balanced-42",
+      "T2-S13-O1-N0-A2-balanced-42",
+      "T2-S14-O1-N0-A2-balanced-42",
+      "T2-S15-O1-N0-A2-balanced-42",
+      "T2-S17-O1-N0-A2-balanced-42",
+      "T3-S01-O1-N0-A2-balanced-42",
+      "T3-S02-O1-N0-A2-balanced-42",
+      "T3-S03-O1-N0-A2-balanced-42",
+      "T3-S04-O1-N0-A2-balanced-42",
+      "T3-S05-O1-N0-A2-balanced-42",
+      "T3-S11-O1-N0-A2-balanced-42",
+      "T3-S12-O1-N0-A2-balanced-42",
+      "T3-S13-O1-N0-A2-balanced-42",
+      "T3-S14-O1-N0-A2-balanced-42",
+      "T3-S15-O1-N0-A2-balanced-42",
+      "T3-S17-O1-N0-A2-balanced-42"
+    ],
+    "scenario_families": {
+      "opportunity": 15,
+      "privacy": 3,
+      "resilience": 9,
+      "timing": 6
+    },
+    "strategies": {
+      "balanced": 33
+    },
+    "topologies": {
+      "T1": 11,
+      "T2": 11,
+      "T3": 11
+    }
+  },
+  "aggregate:A2:balanced:sensitivity_cell": {
+    "architectures": {
+      "A2": 15
+    },
+    "cell_count": 15,
+    "cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "cohort_id": "aggregate:A2:balanced:sensitivity_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N1": 3,
+      "N2": 6,
+      "N3": 3,
+      "N4": 3
+    },
+    "observer_profiles": {
+      "O1": 6,
+      "O2": 6,
+      "O3": 3
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S11-O1-N1-A2-balanced-42",
+      "T1-S11-O1-N2-A2-balanced-101",
+      "T1-S12-O2-N3-A2-balanced-211",
+      "T1-S13-O2-N4-A2-balanced-503",
+      "T1-S17-O3-N2-A2-balanced-997",
+      "T2-S11-O1-N1-A2-balanced-42",
+      "T2-S11-O1-N2-A2-balanced-101",
+      "T2-S12-O2-N3-A2-balanced-211",
+      "T2-S13-O2-N4-A2-balanced-503",
+      "T2-S17-O3-N2-A2-balanced-997",
+      "T3-S11-O1-N1-A2-balanced-42",
+      "T3-S11-O1-N2-A2-balanced-101",
+      "T3-S12-O2-N3-A2-balanced-211",
+      "T3-S13-O2-N4-A2-balanced-503",
+      "T3-S17-O3-N2-A2-balanced-997"
+    ],
+    "scenario_families": {
+      "resilience": 6,
+      "timing": 9
+    },
+    "strategies": {
+      "balanced": 15
+    },
+    "topologies": {
+      "T1": 5,
+      "T2": 5,
+      "T3": 5
+    }
+  },
+  "aggregate:A2:containment-first:negative_control": {
+    "architectures": {
+      "A2": 21
+    },
+    "cell_count": 21,
+    "cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "cohort_id": "aggregate:A2:containment-first:negative_control",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 21
+    },
+    "observer_profiles": {
+      "O1": 21
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S06-O1-N0-A2-containment-first-42",
+      "T1-S07-O1-N0-A2-containment-first-42",
+      "T1-S08-O1-N0-A2-containment-first-42",
+      "T1-S09-O1-N0-A2-containment-first-42",
+      "T1-S10-O1-N0-A2-containment-first-42",
+      "T1-S16-O1-N0-A2-containment-first-42",
+      "T1-S18-O1-N0-A2-containment-first-42",
+      "T2-S06-O1-N0-A2-containment-first-42",
+      "T2-S07-O1-N0-A2-containment-first-42",
+      "T2-S08-O1-N0-A2-containment-first-42",
+      "T2-S09-O1-N0-A2-containment-first-42",
+      "T2-S10-O1-N0-A2-containment-first-42",
+      "T2-S16-O1-N0-A2-containment-first-42",
+      "T2-S18-O1-N0-A2-containment-first-42",
+      "T3-S06-O1-N0-A2-containment-first-42",
+      "T3-S07-O1-N0-A2-containment-first-42",
+      "T3-S08-O1-N0-A2-containment-first-42",
+      "T3-S09-O1-N0-A2-containment-first-42",
+      "T3-S10-O1-N0-A2-containment-first-42",
+      "T3-S16-O1-N0-A2-containment-first-42",
+      "T3-S18-O1-N0-A2-containment-first-42"
+    ],
+    "scenario_families": {
+      "adversarial": 9,
+      "negative_control": 9,
+      "utility": 3
+    },
+    "strategies": {
+      "containment-first": 21
+    },
+    "topologies": {
+      "T1": 7,
+      "T2": 7,
+      "T3": 7
+    }
+  },
+  "aggregate:A2:containment-first:primary_deployment_cell": {
+    "architectures": {
+      "A2": 33
+    },
+    "cell_count": 33,
+    "cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc",
+    "cohort_id": "aggregate:A2:containment-first:primary_deployment_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 33
+    },
+    "observer_profiles": {
+      "O1": 33
+    },
+    "pareto_eligible": true,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S01-O1-N0-A2-containment-first-42",
+      "T1-S02-O1-N0-A2-containment-first-42",
+      "T1-S03-O1-N0-A2-containment-first-42",
+      "T1-S04-O1-N0-A2-containment-first-42",
+      "T1-S05-O1-N0-A2-containment-first-42",
+      "T1-S11-O1-N0-A2-containment-first-42",
+      "T1-S12-O1-N0-A2-containment-first-42",
+      "T1-S13-O1-N0-A2-containment-first-42",
+      "T1-S14-O1-N0-A2-containment-first-42",
+      "T1-S15-O1-N0-A2-containment-first-42",
+      "T1-S17-O1-N0-A2-containment-first-42",
+      "T2-S01-O1-N0-A2-containment-first-42",
+      "T2-S02-O1-N0-A2-containment-first-42",
+      "T2-S03-O1-N0-A2-containment-first-42",
+      "T2-S04-O1-N0-A2-containment-first-42",
+      "T2-S05-O1-N0-A2-containment-first-42",
+      "T2-S11-O1-N0-A2-containment-first-42",
+      "T2-S12-O1-N0-A2-containment-first-42",
+      "T2-S13-O1-N0-A2-containment-first-42",
+      "T2-S14-O1-N0-A2-containment-first-42",
+      "T2-S15-O1-N0-A2-containment-first-42",
+      "T2-S17-O1-N0-A2-containment-first-42",
+      "T3-S01-O1-N0-A2-containment-first-42",
+      "T3-S02-O1-N0-A2-containment-first-42",
+      "T3-S03-O1-N0-A2-containment-first-42",
+      "T3-S04-O1-N0-A2-containment-first-42",
+      "T3-S05-O1-N0-A2-containment-first-42",
+      "T3-S11-O1-N0-A2-containment-first-42",
+      "T3-S12-O1-N0-A2-containment-first-42",
+      "T3-S13-O1-N0-A2-containment-first-42",
+      "T3-S14-O1-N0-A2-containment-first-42",
+      "T3-S15-O1-N0-A2-containment-first-42",
+      "T3-S17-O1-N0-A2-containment-first-42"
+    ],
+    "scenario_families": {
+      "opportunity": 15,
+      "privacy": 3,
+      "resilience": 9,
+      "timing": 6
+    },
+    "strategies": {
+      "containment-first": 33
+    },
+    "topologies": {
+      "T1": 11,
+      "T2": 11,
+      "T3": 11
+    }
+  },
+  "aggregate:A2:forensic-oriented:forensic_cell": {
+    "architectures": {
+      "A2": 15
+    },
+    "cell_count": 15,
+    "cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024",
+    "cohort_id": "aggregate:A2:forensic-oriented:forensic_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 15
+    },
+    "observer_profiles": {
+      "O1": 15
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S01-O1-N0-A2-forensic-oriented-42",
+      "T1-S04-O1-N0-A2-forensic-oriented-42",
+      "T1-S11-O1-N0-A2-forensic-oriented-42",
+      "T1-S15-O1-N0-A2-forensic-oriented-42",
+      "T1-S17-O1-N0-A2-forensic-oriented-42",
+      "T2-S01-O1-N0-A2-forensic-oriented-42",
+      "T2-S04-O1-N0-A2-forensic-oriented-42",
+      "T2-S11-O1-N0-A2-forensic-oriented-42",
+      "T2-S15-O1-N0-A2-forensic-oriented-42",
+      "T2-S17-O1-N0-A2-forensic-oriented-42",
+      "T3-S01-O1-N0-A2-forensic-oriented-42",
+      "T3-S04-O1-N0-A2-forensic-oriented-42",
+      "T3-S11-O1-N0-A2-forensic-oriented-42",
+      "T3-S15-O1-N0-A2-forensic-oriented-42",
+      "T3-S17-O1-N0-A2-forensic-oriented-42"
+    ],
+    "scenario_families": {
+      "opportunity": 6,
+      "privacy": 3,
+      "timing": 6
+    },
+    "strategies": {
+      "forensic-oriented": 15
+    },
+    "topologies": {
+      "T1": 5,
+      "T2": 5,
+      "T3": 5
+    }
+  },
+  "aggregate:A2:utility-preserving:negative_control": {
+    "architectures": {
+      "A2": 21
+    },
+    "cell_count": 21,
+    "cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda",
+    "cohort_id": "aggregate:A2:utility-preserving:negative_control",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 21
+    },
+    "observer_profiles": {
+      "O1": 21
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S06-O1-N0-A2-utility-preserving-42",
+      "T1-S07-O1-N0-A2-utility-preserving-42",
+      "T1-S08-O1-N0-A2-utility-preserving-42",
+      "T1-S09-O1-N0-A2-utility-preserving-42",
+      "T1-S10-O1-N0-A2-utility-preserving-42",
+      "T1-S16-O1-N0-A2-utility-preserving-42",
+      "T1-S18-O1-N0-A2-utility-preserving-42",
+      "T2-S06-O1-N0-A2-utility-preserving-42",
+      "T2-S07-O1-N0-A2-utility-preserving-42",
+      "T2-S08-O1-N0-A2-utility-preserving-42",
+      "T2-S09-O1-N0-A2-utility-preserving-42",
+      "T2-S10-O1-N0-A2-utility-preserving-42",
+      "T2-S16-O1-N0-A2-utility-preserving-42",
+      "T2-S18-O1-N0-A2-utility-preserving-42",
+      "T3-S06-O1-N0-A2-utility-preserving-42",
+      "T3-S07-O1-N0-A2-utility-preserving-42",
+      "T3-S08-O1-N0-A2-utility-preserving-42",
+      "T3-S09-O1-N0-A2-utility-preserving-42",
+      "T3-S10-O1-N0-A2-utility-preserving-42",
+      "T3-S16-O1-N0-A2-utility-preserving-42",
+      "T3-S18-O1-N0-A2-utility-preserving-42"
+    ],
+    "scenario_families": {
+      "adversarial": 9,
+      "negative_control": 9,
+      "utility": 3
+    },
+    "strategies": {
+      "utility-preserving": 21
+    },
+    "topologies": {
+      "T1": 7,
+      "T2": 7,
+      "T3": 7
+    }
+  },
+  "aggregate:A2:utility-preserving:primary_deployment_cell": {
+    "architectures": {
+      "A2": 33
+    },
+    "cell_count": 33,
+    "cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c",
+    "cohort_id": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 33
+    },
+    "observer_profiles": {
+      "O1": 33
+    },
+    "pareto_eligible": true,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S01-O1-N0-A2-utility-preserving-42",
+      "T1-S02-O1-N0-A2-utility-preserving-42",
+      "T1-S03-O1-N0-A2-utility-preserving-42",
+      "T1-S04-O1-N0-A2-utility-preserving-42",
+      "T1-S05-O1-N0-A2-utility-preserving-42",
+      "T1-S11-O1-N0-A2-utility-preserving-42",
+      "T1-S12-O1-N0-A2-utility-preserving-42",
+      "T1-S13-O1-N0-A2-utility-preserving-42",
+      "T1-S14-O1-N0-A2-utility-preserving-42",
+      "T1-S15-O1-N0-A2-utility-preserving-42",
+      "T1-S17-O1-N0-A2-utility-preserving-42",
+      "T2-S01-O1-N0-A2-utility-preserving-42",
+      "T2-S02-O1-N0-A2-utility-preserving-42",
+      "T2-S03-O1-N0-A2-utility-preserving-42",
+      "T2-S04-O1-N0-A2-utility-preserving-42",
+      "T2-S05-O1-N0-A2-utility-preserving-42",
+      "T2-S11-O1-N0-A2-utility-preserving-42",
+      "T2-S12-O1-N0-A2-utility-preserving-42",
+      "T2-S13-O1-N0-A2-utility-preserving-42",
+      "T2-S14-O1-N0-A2-utility-preserving-42",
+      "T2-S15-O1-N0-A2-utility-preserving-42",
+      "T2-S17-O1-N0-A2-utility-preserving-42",
+      "T3-S01-O1-N0-A2-utility-preserving-42",
+      "T3-S02-O1-N0-A2-utility-preserving-42",
+      "T3-S03-O1-N0-A2-utility-preserving-42",
+      "T3-S04-O1-N0-A2-utility-preserving-42",
+      "T3-S05-O1-N0-A2-utility-preserving-42",
+      "T3-S11-O1-N0-A2-utility-preserving-42",
+      "T3-S12-O1-N0-A2-utility-preserving-42",
+      "T3-S13-O1-N0-A2-utility-preserving-42",
+      "T3-S14-O1-N0-A2-utility-preserving-42",
+      "T3-S15-O1-N0-A2-utility-preserving-42",
+      "T3-S17-O1-N0-A2-utility-preserving-42"
+    ],
+    "scenario_families": {
+      "opportunity": 15,
+      "privacy": 3,
+      "resilience": 9,
+      "timing": 6
+    },
+    "strategies": {
+      "utility-preserving": 33
+    },
+    "topologies": {
+      "T1": 11,
+      "T2": 11,
+      "T3": 11
+    }
+  },
+  "aggregate:A3:none:negative_control": {
+    "architectures": {
+      "A3": 21
+    },
+    "cell_count": 21,
+    "cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e",
+    "cohort_id": "aggregate:A3:none:negative_control",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 21
+    },
+    "observer_profiles": {
+      "O1": 21
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S06-O1-N0-A3-none-42",
+      "T1-S07-O1-N0-A3-none-42",
+      "T1-S08-O1-N0-A3-none-42",
+      "T1-S09-O1-N0-A3-none-42",
+      "T1-S10-O1-N0-A3-none-42",
+      "T1-S16-O1-N0-A3-none-42",
+      "T1-S18-O1-N0-A3-none-42",
+      "T2-S06-O1-N0-A3-none-42",
+      "T2-S07-O1-N0-A3-none-42",
+      "T2-S08-O1-N0-A3-none-42",
+      "T2-S09-O1-N0-A3-none-42",
+      "T2-S10-O1-N0-A3-none-42",
+      "T2-S16-O1-N0-A3-none-42",
+      "T2-S18-O1-N0-A3-none-42",
+      "T3-S06-O1-N0-A3-none-42",
+      "T3-S07-O1-N0-A3-none-42",
+      "T3-S08-O1-N0-A3-none-42",
+      "T3-S09-O1-N0-A3-none-42",
+      "T3-S10-O1-N0-A3-none-42",
+      "T3-S16-O1-N0-A3-none-42",
+      "T3-S18-O1-N0-A3-none-42"
+    ],
+    "scenario_families": {
+      "adversarial": 9,
+      "negative_control": 9,
+      "utility": 3
+    },
+    "strategies": {
+      "none": 21
+    },
+    "topologies": {
+      "T1": 7,
+      "T2": 7,
+      "T3": 7
+    }
+  },
+  "aggregate:A3:none:primary_deployment_cell": {
+    "architectures": {
+      "A3": 33
+    },
+    "cell_count": 33,
+    "cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9",
+    "cohort_id": "aggregate:A3:none:primary_deployment_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 33
+    },
+    "observer_profiles": {
+      "O1": 33
+    },
+    "pareto_eligible": true,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S01-O1-N0-A3-none-42",
+      "T1-S02-O1-N0-A3-none-42",
+      "T1-S03-O1-N0-A3-none-42",
+      "T1-S04-O1-N0-A3-none-42",
+      "T1-S05-O1-N0-A3-none-42",
+      "T1-S11-O1-N0-A3-none-42",
+      "T1-S12-O1-N0-A3-none-42",
+      "T1-S13-O1-N0-A3-none-42",
+      "T1-S14-O1-N0-A3-none-42",
+      "T1-S15-O1-N0-A3-none-42",
+      "T1-S17-O1-N0-A3-none-42",
+      "T2-S01-O1-N0-A3-none-42",
+      "T2-S02-O1-N0-A3-none-42",
+      "T2-S03-O1-N0-A3-none-42",
+      "T2-S04-O1-N0-A3-none-42",
+      "T2-S05-O1-N0-A3-none-42",
+      "T2-S11-O1-N0-A3-none-42",
+      "T2-S12-O1-N0-A3-none-42",
+      "T2-S13-O1-N0-A3-none-42",
+      "T2-S14-O1-N0-A3-none-42",
+      "T2-S15-O1-N0-A3-none-42",
+      "T2-S17-O1-N0-A3-none-42",
+      "T3-S01-O1-N0-A3-none-42",
+      "T3-S02-O1-N0-A3-none-42",
+      "T3-S03-O1-N0-A3-none-42",
+      "T3-S04-O1-N0-A3-none-42",
+      "T3-S05-O1-N0-A3-none-42",
+      "T3-S11-O1-N0-A3-none-42",
+      "T3-S12-O1-N0-A3-none-42",
+      "T3-S13-O1-N0-A3-none-42",
+      "T3-S14-O1-N0-A3-none-42",
+      "T3-S15-O1-N0-A3-none-42",
+      "T3-S17-O1-N0-A3-none-42"
+    ],
+    "scenario_families": {
+      "opportunity": 15,
+      "privacy": 3,
+      "resilience": 9,
+      "timing": 6
+    },
+    "strategies": {
+      "none": 33
+    },
+    "topologies": {
+      "T1": 11,
+      "T2": 11,
+      "T3": 11
+    }
+  },
+  "aggregate:A3:none:sensitivity_cell": {
+    "architectures": {
+      "A3": 15
+    },
+    "cell_count": 15,
+    "cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4",
+    "cohort_id": "aggregate:A3:none:sensitivity_cell",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N1": 3,
+      "N2": 6,
+      "N3": 3,
+      "N4": 3
+    },
+    "observer_profiles": {
+      "O1": 6,
+      "O2": 6,
+      "O3": 3
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S11-O1-N1-A3-none-42",
+      "T1-S11-O1-N2-A3-none-101",
+      "T1-S12-O2-N3-A3-none-211",
+      "T1-S13-O2-N4-A3-none-503",
+      "T1-S17-O3-N2-A3-none-997",
+      "T2-S11-O1-N1-A3-none-42",
+      "T2-S11-O1-N2-A3-none-101",
+      "T2-S12-O2-N3-A3-none-211",
+      "T2-S13-O2-N4-A3-none-503",
+      "T2-S17-O3-N2-A3-none-997",
+      "T3-S11-O1-N1-A3-none-42",
+      "T3-S11-O1-N2-A3-none-101",
+      "T3-S12-O2-N3-A3-none-211",
+      "T3-S13-O2-N4-A3-none-503",
+      "T3-S17-O3-N2-A3-none-997"
+    ],
+    "scenario_families": {
+      "resilience": 6,
+      "timing": 9
+    },
+    "strategies": {
+      "none": 15
+    },
+    "topologies": {
+      "T1": 5,
+      "T2": 5,
+      "T3": 5
+    }
+  },
+  "aggregate:A4:none:upper_bound": {
+    "architectures": {
+      "A4": 15
+    },
+    "cell_count": 15,
+    "cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a",
+    "cohort_id": "aggregate:A4:none:upper_bound",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 15
+    },
+    "observer_profiles": {
+      "O1": 15
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S01-O1-N0-A4-none-42",
+      "T1-S04-O1-N0-A4-none-42",
+      "T1-S11-O1-N0-A4-none-42",
+      "T1-S15-O1-N0-A4-none-42",
+      "T1-S17-O1-N0-A4-none-42",
+      "T2-S01-O1-N0-A4-none-42",
+      "T2-S04-O1-N0-A4-none-42",
+      "T2-S11-O1-N0-A4-none-42",
+      "T2-S15-O1-N0-A4-none-42",
+      "T2-S17-O1-N0-A4-none-42",
+      "T3-S01-O1-N0-A4-none-42",
+      "T3-S04-O1-N0-A4-none-42",
+      "T3-S11-O1-N0-A4-none-42",
+      "T3-S15-O1-N0-A4-none-42",
+      "T3-S17-O1-N0-A4-none-42"
+    ],
+    "scenario_families": {
+      "opportunity": 6,
+      "privacy": 3,
+      "timing": 6
+    },
+    "strategies": {
+      "none": 15
+    },
+    "topologies": {
+      "T1": 5,
+      "T2": 5,
+      "T3": 5
+    }
+  },
+  "aggregate:A5:none:upper_bound": {
+    "architectures": {
+      "A5": 15
+    },
+    "cell_count": 15,
+    "cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad",
+    "cohort_id": "aggregate:A5:none:upper_bound",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 15
+    },
+    "observer_profiles": {
+      "O1": 15
+    },
+    "pareto_eligible": false,
+    "purpose": "traceable original aggregate",
+    "run_ids": [
+      "T1-S01-O1-N0-A5-none-42",
+      "T1-S04-O1-N0-A5-none-42",
+      "T1-S11-O1-N0-A5-none-42",
+      "T1-S15-O1-N0-A5-none-42",
+      "T1-S17-O1-N0-A5-none-42",
+      "T2-S01-O1-N0-A5-none-42",
+      "T2-S04-O1-N0-A5-none-42",
+      "T2-S11-O1-N0-A5-none-42",
+      "T2-S15-O1-N0-A5-none-42",
+      "T2-S17-O1-N0-A5-none-42",
+      "T3-S01-O1-N0-A5-none-42",
+      "T3-S04-O1-N0-A5-none-42",
+      "T3-S11-O1-N0-A5-none-42",
+      "T3-S15-O1-N0-A5-none-42",
+      "T3-S17-O1-N0-A5-none-42"
+    ],
+    "scenario_families": {
+      "opportunity": 6,
+      "privacy": 3,
+      "timing": 6
+    },
+    "strategies": {
+      "none": 15
+    },
+    "topologies": {
+      "T1": 5,
+      "T2": 5,
+      "T3": 5
+    }
+  },
+  "primary:benign_utility": {
+    "architectures": {
+      "A0": 3,
+      "A1": 3,
+      "A2": 9,
+      "A3": 3
+    },
+    "cell_count": 18,
+    "cell_set_digest": "37baf3f1d22146839b2c69eda42419f753e604642d060c18646711037589f76b",
+    "cohort_id": "primary:benign_utility",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 18
+    },
+    "observer_profiles": {
+      "O1": 18
+    },
+    "pareto_eligible": false,
+    "purpose": "primary-class audit",
+    "run_ids": [
+      "T1-S16-O1-N0-A0-none-42",
+      "T1-S16-O1-N0-A1-none-42",
+      "T1-S16-O1-N0-A2-balanced-42",
+      "T1-S16-O1-N0-A2-containment-first-42",
+      "T1-S16-O1-N0-A2-utility-preserving-42",
+      "T1-S16-O1-N0-A3-none-42",
+      "T2-S16-O1-N0-A0-none-42",
+      "T2-S16-O1-N0-A1-none-42",
+      "T2-S16-O1-N0-A2-balanced-42",
+      "T2-S16-O1-N0-A2-containment-first-42",
+      "T2-S16-O1-N0-A2-utility-preserving-42",
+      "T2-S16-O1-N0-A3-none-42",
+      "T3-S16-O1-N0-A0-none-42",
+      "T3-S16-O1-N0-A1-none-42",
+      "T3-S16-O1-N0-A2-balanced-42",
+      "T3-S16-O1-N0-A2-containment-first-42",
+      "T3-S16-O1-N0-A2-utility-preserving-42",
+      "T3-S16-O1-N0-A3-none-42"
+    ],
+    "scenario_families": {
+      "utility": 18
+    },
+    "strategies": {
+      "balanced": 3,
+      "containment-first": 3,
+      "none": 9,
+      "utility-preserving": 3
+    },
+    "topologies": {
+      "T1": 6,
+      "T2": 6,
+      "T3": 6
+    }
+  },
+  "primary:false_warning": {
+    "architectures": {
+      "A0": 6,
+      "A1": 6,
+      "A2": 18,
+      "A3": 6
+    },
+    "cell_count": 36,
+    "cell_set_digest": "dcdc9b553cd5795c0565727b77736ef02db3242f092a7f3bf19d970df507f6dd",
+    "cohort_id": "primary:false_warning",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 36
+    },
+    "observer_profiles": {
+      "O1": 36
+    },
+    "pareto_eligible": false,
+    "purpose": "primary-class audit",
+    "run_ids": [
+      "T1-S08-O1-N0-A0-none-42",
+      "T1-S08-O1-N0-A1-none-42",
+      "T1-S08-O1-N0-A2-balanced-42",
+      "T1-S08-O1-N0-A2-containment-first-42",
+      "T1-S08-O1-N0-A2-utility-preserving-42",
+      "T1-S08-O1-N0-A3-none-42",
+      "T1-S09-O1-N0-A0-none-42",
+      "T1-S09-O1-N0-A1-none-42",
+      "T1-S09-O1-N0-A2-balanced-42",
+      "T1-S09-O1-N0-A2-containment-first-42",
+      "T1-S09-O1-N0-A2-utility-preserving-42",
+      "T1-S09-O1-N0-A3-none-42",
+      "T2-S08-O1-N0-A0-none-42",
+      "T2-S08-O1-N0-A1-none-42",
+      "T2-S08-O1-N0-A2-balanced-42",
+      "T2-S08-O1-N0-A2-containment-first-42",
+      "T2-S08-O1-N0-A2-utility-preserving-42",
+      "T2-S08-O1-N0-A3-none-42",
+      "T2-S09-O1-N0-A0-none-42",
+      "T2-S09-O1-N0-A1-none-42",
+      "T2-S09-O1-N0-A2-balanced-42",
+      "T2-S09-O1-N0-A2-containment-first-42",
+      "T2-S09-O1-N0-A2-utility-preserving-42",
+      "T2-S09-O1-N0-A3-none-42",
+      "T3-S08-O1-N0-A0-none-42",
+      "T3-S08-O1-N0-A1-none-42",
+      "T3-S08-O1-N0-A2-balanced-42",
+      "T3-S08-O1-N0-A2-containment-first-42",
+      "T3-S08-O1-N0-A2-utility-preserving-42",
+      "T3-S08-O1-N0-A3-none-42",
+      "T3-S09-O1-N0-A0-none-42",
+      "T3-S09-O1-N0-A1-none-42",
+      "T3-S09-O1-N0-A2-balanced-42",
+      "T3-S09-O1-N0-A2-containment-first-42",
+      "T3-S09-O1-N0-A2-utility-preserving-42",
+      "T3-S09-O1-N0-A3-none-42"
+    ],
+    "scenario_families": {
+      "adversarial": 18,
+      "negative_control": 18
+    },
+    "strategies": {
+      "balanced": 6,
+      "containment-first": 6,
+      "none": 18,
+      "utility-preserving": 6
+    },
+    "topologies": {
+      "T1": 12,
+      "T2": 12,
+      "T3": 12
+    }
+  },
+  "primary:forensic": {
+    "architectures": {
+      "A2": 15
+    },
+    "cell_count": 15,
+    "cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024",
+    "cohort_id": "primary:forensic",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 15
+    },
+    "observer_profiles": {
+      "O1": 15
+    },
+    "pareto_eligible": false,
+    "purpose": "primary-class audit",
+    "run_ids": [
+      "T1-S01-O1-N0-A2-forensic-oriented-42",
+      "T1-S04-O1-N0-A2-forensic-oriented-42",
+      "T1-S11-O1-N0-A2-forensic-oriented-42",
+      "T1-S15-O1-N0-A2-forensic-oriented-42",
+      "T1-S17-O1-N0-A2-forensic-oriented-42",
+      "T2-S01-O1-N0-A2-forensic-oriented-42",
+      "T2-S04-O1-N0-A2-forensic-oriented-42",
+      "T2-S11-O1-N0-A2-forensic-oriented-42",
+      "T2-S15-O1-N0-A2-forensic-oriented-42",
+      "T2-S17-O1-N0-A2-forensic-oriented-42",
+      "T3-S01-O1-N0-A2-forensic-oriented-42",
+      "T3-S04-O1-N0-A2-forensic-oriented-42",
+      "T3-S11-O1-N0-A2-forensic-oriented-42",
+      "T3-S15-O1-N0-A2-forensic-oriented-42",
+      "T3-S17-O1-N0-A2-forensic-oriented-42"
+    ],
+    "scenario_families": {
+      "opportunity": 6,
+      "privacy": 3,
+      "timing": 6
+    },
+    "strategies": {
+      "forensic-oriented": 15
+    },
+    "topologies": {
+      "T1": 5,
+      "T2": 5,
+      "T3": 5
+    }
+  },
+  "primary:mechanism_probe": {
+    "architectures": {
+      "A1": 9,
+      "A2": 9,
+      "A3": 9
+    },
+    "cell_count": 27,
+    "cell_set_digest": "6ccd66fed5d7e57793a9ffdb575982486d8e9fc93d21f0d78baf5dfa2b185838",
+    "cohort_id": "primary:mechanism_probe",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N1": 9,
+      "N2": 18
+    },
+    "observer_profiles": {
+      "O1": 18,
+      "O3": 9
+    },
+    "pareto_eligible": false,
+    "purpose": "primary-class audit",
+    "run_ids": [
+      "T1-S11-O1-N1-A1-none-42",
+      "T1-S11-O1-N1-A2-balanced-42",
+      "T1-S11-O1-N1-A3-none-42",
+      "T1-S11-O1-N2-A1-none-101",
+      "T1-S11-O1-N2-A2-balanced-101",
+      "T1-S11-O1-N2-A3-none-101",
+      "T1-S17-O3-N2-A1-none-997",
+      "T1-S17-O3-N2-A2-balanced-997",
+      "T1-S17-O3-N2-A3-none-997",
+      "T2-S11-O1-N1-A1-none-42",
+      "T2-S11-O1-N1-A2-balanced-42",
+      "T2-S11-O1-N1-A3-none-42",
+      "T2-S11-O1-N2-A1-none-101",
+      "T2-S11-O1-N2-A2-balanced-101",
+      "T2-S11-O1-N2-A3-none-101",
+      "T2-S17-O3-N2-A1-none-997",
+      "T2-S17-O3-N2-A2-balanced-997",
+      "T2-S17-O3-N2-A3-none-997",
+      "T3-S11-O1-N1-A1-none-42",
+      "T3-S11-O1-N1-A2-balanced-42",
+      "T3-S11-O1-N1-A3-none-42",
+      "T3-S11-O1-N2-A1-none-101",
+      "T3-S11-O1-N2-A2-balanced-101",
+      "T3-S11-O1-N2-A3-none-101",
+      "T3-S17-O3-N2-A1-none-997",
+      "T3-S17-O3-N2-A2-balanced-997",
+      "T3-S17-O3-N2-A3-none-997"
+    ],
+    "scenario_families": {
+      "timing": 27
+    },
+    "strategies": {
+      "balanced": 9,
+      "none": 18
+    },
+    "topologies": {
+      "T1": 9,
+      "T2": 9,
+      "T3": 9
+    }
+  },
+  "primary:negative_control": {
+    "architectures": {
+      "A0": 12,
+      "A1": 12,
+      "A2": 36,
+      "A3": 12
+    },
+    "cell_count": 72,
+    "cell_set_digest": "a14485d4dc613634b4f5054a7408c113999c3fe2ae71ddc63d6069ae667f0478",
+    "cohort_id": "primary:negative_control",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 72
+    },
+    "observer_profiles": {
+      "O1": 72
+    },
+    "pareto_eligible": false,
+    "purpose": "primary-class audit",
+    "run_ids": [
+      "T1-S06-O1-N0-A0-none-42",
+      "T1-S06-O1-N0-A1-none-42",
+      "T1-S06-O1-N0-A2-balanced-42",
+      "T1-S06-O1-N0-A2-containment-first-42",
+      "T1-S06-O1-N0-A2-utility-preserving-42",
+      "T1-S06-O1-N0-A3-none-42",
+      "T1-S07-O1-N0-A0-none-42",
+      "T1-S07-O1-N0-A1-none-42",
+      "T1-S07-O1-N0-A2-balanced-42",
+      "T1-S07-O1-N0-A2-containment-first-42",
+      "T1-S07-O1-N0-A2-utility-preserving-42",
+      "T1-S07-O1-N0-A3-none-42",
+      "T1-S10-O1-N0-A0-none-42",
+      "T1-S10-O1-N0-A1-none-42",
+      "T1-S10-O1-N0-A2-balanced-42",
+      "T1-S10-O1-N0-A2-containment-first-42",
+      "T1-S10-O1-N0-A2-utility-preserving-42",
+      "T1-S10-O1-N0-A3-none-42",
+      "T1-S18-O1-N0-A0-none-42",
+      "T1-S18-O1-N0-A1-none-42",
+      "T1-S18-O1-N0-A2-balanced-42",
+      "T1-S18-O1-N0-A2-containment-first-42",
+      "T1-S18-O1-N0-A2-utility-preserving-42",
+      "T1-S18-O1-N0-A3-none-42",
+      "T2-S06-O1-N0-A0-none-42",
+      "T2-S06-O1-N0-A1-none-42",
+      "T2-S06-O1-N0-A2-balanced-42",
+      "T2-S06-O1-N0-A2-containment-first-42",
+      "T2-S06-O1-N0-A2-utility-preserving-42",
+      "T2-S06-O1-N0-A3-none-42",
+      "T2-S07-O1-N0-A0-none-42",
+      "T2-S07-O1-N0-A1-none-42",
+      "T2-S07-O1-N0-A2-balanced-42",
+      "T2-S07-O1-N0-A2-containment-first-42",
+      "T2-S07-O1-N0-A2-utility-preserving-42",
+      "T2-S07-O1-N0-A3-none-42",
+      "T2-S10-O1-N0-A0-none-42",
+      "T2-S10-O1-N0-A1-none-42",
+      "T2-S10-O1-N0-A2-balanced-42",
+      "T2-S10-O1-N0-A2-containment-first-42",
+      "T2-S10-O1-N0-A2-utility-preserving-42",
+      "T2-S10-O1-N0-A3-none-42",
+      "T2-S18-O1-N0-A0-none-42",
+      "T2-S18-O1-N0-A1-none-42",
+      "T2-S18-O1-N0-A2-balanced-42",
+      "T2-S18-O1-N0-A2-containment-first-42",
+      "T2-S18-O1-N0-A2-utility-preserving-42",
+      "T2-S18-O1-N0-A3-none-42",
+      "T3-S06-O1-N0-A0-none-42",
+      "T3-S06-O1-N0-A1-none-42",
+      "T3-S06-O1-N0-A2-balanced-42",
+      "T3-S06-O1-N0-A2-containment-first-42",
+      "T3-S06-O1-N0-A2-utility-preserving-42",
+      "T3-S06-O1-N0-A3-none-42",
+      "T3-S07-O1-N0-A0-none-42",
+      "T3-S07-O1-N0-A1-none-42",
+      "T3-S07-O1-N0-A2-balanced-42",
+      "T3-S07-O1-N0-A2-containment-first-42",
+      "T3-S07-O1-N0-A2-utility-preserving-42",
+      "T3-S07-O1-N0-A3-none-42",
+      "T3-S10-O1-N0-A0-none-42",
+      "T3-S10-O1-N0-A1-none-42",
+      "T3-S10-O1-N0-A2-balanced-42",
+      "T3-S10-O1-N0-A2-containment-first-42",
+      "T3-S10-O1-N0-A2-utility-preserving-42",
+      "T3-S10-O1-N0-A3-none-42",
+      "T3-S18-O1-N0-A0-none-42",
+      "T3-S18-O1-N0-A1-none-42",
+      "T3-S18-O1-N0-A2-balanced-42",
+      "T3-S18-O1-N0-A2-containment-first-42",
+      "T3-S18-O1-N0-A2-utility-preserving-42",
+      "T3-S18-O1-N0-A3-none-42"
+    ],
+    "scenario_families": {
+      "adversarial": 36,
+      "negative_control": 36
+    },
+    "strategies": {
+      "balanced": 12,
+      "containment-first": 12,
+      "none": 36,
+      "utility-preserving": 12
+    },
+    "topologies": {
+      "T1": 24,
+      "T2": 24,
+      "T3": 24
+    }
+  },
+  "primary:primary_opportunity": {
+    "architectures": {
+      "A0": 18,
+      "A1": 18,
+      "A2": 72,
+      "A3": 24
+    },
+    "cell_count": 132,
+    "cell_set_digest": "55eb72bf8204c0dc6883999a82d4537eec0055fbdcfe4a9787ab86228bd87646",
+    "cohort_id": "primary:primary_opportunity",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 132
+    },
+    "observer_profiles": {
+      "O1": 132
+    },
+    "pareto_eligible": false,
+    "purpose": "primary-class audit",
+    "run_ids": [
+      "T1-S01-O1-N0-A0-none-42",
+      "T1-S01-O1-N0-A1-none-42",
+      "T1-S01-O1-N0-A2-balanced-42",
+      "T1-S01-O1-N0-A2-containment-first-42",
+      "T1-S01-O1-N0-A2-utility-preserving-42",
+      "T1-S01-O1-N0-A3-none-42",
+      "T1-S02-O1-N0-A0-none-42",
+      "T1-S02-O1-N0-A1-none-42",
+      "T1-S02-O1-N0-A2-balanced-42",
+      "T1-S02-O1-N0-A2-containment-first-42",
+      "T1-S02-O1-N0-A2-utility-preserving-42",
+      "T1-S02-O1-N0-A3-none-42",
+      "T1-S03-O1-N0-A0-none-42",
+      "T1-S03-O1-N0-A1-none-42",
+      "T1-S03-O1-N0-A2-balanced-42",
+      "T1-S03-O1-N0-A2-containment-first-42",
+      "T1-S03-O1-N0-A2-utility-preserving-42",
+      "T1-S03-O1-N0-A3-none-42",
+      "T1-S04-O1-N0-A0-none-42",
+      "T1-S04-O1-N0-A1-none-42",
+      "T1-S04-O1-N0-A2-balanced-42",
+      "T1-S04-O1-N0-A2-containment-first-42",
+      "T1-S04-O1-N0-A2-utility-preserving-42",
+      "T1-S04-O1-N0-A3-none-42",
+      "T1-S05-O1-N0-A0-none-42",
+      "T1-S05-O1-N0-A1-none-42",
+      "T1-S05-O1-N0-A2-balanced-42",
+      "T1-S05-O1-N0-A2-containment-first-42",
+      "T1-S05-O1-N0-A2-utility-preserving-42",
+      "T1-S05-O1-N0-A3-none-42",
+      "T1-S11-O1-N0-A2-balanced-42",
+      "T1-S11-O1-N0-A2-containment-first-42",
+      "T1-S11-O1-N0-A2-utility-preserving-42",
+      "T1-S11-O1-N0-A3-none-42",
+      "T1-S15-O1-N0-A0-none-42",
+      "T1-S15-O1-N0-A1-none-42",
+      "T1-S15-O1-N0-A2-balanced-42",
+      "T1-S15-O1-N0-A2-containment-first-42",
+      "T1-S15-O1-N0-A2-utility-preserving-42",
+      "T1-S15-O1-N0-A3-none-42",
+      "T1-S17-O1-N0-A2-balanced-42",
+      "T1-S17-O1-N0-A2-containment-first-42",
+      "T1-S17-O1-N0-A2-utility-preserving-42",
+      "T1-S17-O1-N0-A3-none-42",
+      "T2-S01-O1-N0-A0-none-42",
+      "T2-S01-O1-N0-A1-none-42",
+      "T2-S01-O1-N0-A2-balanced-42",
+      "T2-S01-O1-N0-A2-containment-first-42",
+      "T2-S01-O1-N0-A2-utility-preserving-42",
+      "T2-S01-O1-N0-A3-none-42",
+      "T2-S02-O1-N0-A0-none-42",
+      "T2-S02-O1-N0-A1-none-42",
+      "T2-S02-O1-N0-A2-balanced-42",
+      "T2-S02-O1-N0-A2-containment-first-42",
+      "T2-S02-O1-N0-A2-utility-preserving-42",
+      "T2-S02-O1-N0-A3-none-42",
+      "T2-S03-O1-N0-A0-none-42",
+      "T2-S03-O1-N0-A1-none-42",
+      "T2-S03-O1-N0-A2-balanced-42",
+      "T2-S03-O1-N0-A2-containment-first-42",
+      "T2-S03-O1-N0-A2-utility-preserving-42",
+      "T2-S03-O1-N0-A3-none-42",
+      "T2-S04-O1-N0-A0-none-42",
+      "T2-S04-O1-N0-A1-none-42",
+      "T2-S04-O1-N0-A2-balanced-42",
+      "T2-S04-O1-N0-A2-containment-first-42",
+      "T2-S04-O1-N0-A2-utility-preserving-42",
+      "T2-S04-O1-N0-A3-none-42",
+      "T2-S05-O1-N0-A0-none-42",
+      "T2-S05-O1-N0-A1-none-42",
+      "T2-S05-O1-N0-A2-balanced-42",
+      "T2-S05-O1-N0-A2-containment-first-42",
+      "T2-S05-O1-N0-A2-utility-preserving-42",
+      "T2-S05-O1-N0-A3-none-42",
+      "T2-S11-O1-N0-A2-balanced-42",
+      "T2-S11-O1-N0-A2-containment-first-42",
+      "T2-S11-O1-N0-A2-utility-preserving-42",
+      "T2-S11-O1-N0-A3-none-42",
+      "T2-S15-O1-N0-A0-none-42",
+      "T2-S15-O1-N0-A1-none-42",
+      "T2-S15-O1-N0-A2-balanced-42",
+      "T2-S15-O1-N0-A2-containment-first-42",
+      "T2-S15-O1-N0-A2-utility-preserving-42",
+      "T2-S15-O1-N0-A3-none-42",
+      "T2-S17-O1-N0-A2-balanced-42",
+      "T2-S17-O1-N0-A2-containment-first-42",
+      "T2-S17-O1-N0-A2-utility-preserving-42",
+      "T2-S17-O1-N0-A3-none-42",
+      "T3-S01-O1-N0-A0-none-42",
+      "T3-S01-O1-N0-A1-none-42",
+      "T3-S01-O1-N0-A2-balanced-42",
+      "T3-S01-O1-N0-A2-containment-first-42",
+      "T3-S01-O1-N0-A2-utility-preserving-42",
+      "T3-S01-O1-N0-A3-none-42",
+      "T3-S02-O1-N0-A0-none-42",
+      "T3-S02-O1-N0-A1-none-42",
+      "T3-S02-O1-N0-A2-balanced-42",
+      "T3-S02-O1-N0-A2-containment-first-42",
+      "T3-S02-O1-N0-A2-utility-preserving-42",
+      "T3-S02-O1-N0-A3-none-42",
+      "T3-S03-O1-N0-A0-none-42",
+      "T3-S03-O1-N0-A1-none-42",
+      "T3-S03-O1-N0-A2-balanced-42",
+      "T3-S03-O1-N0-A2-containment-first-42",
+      "T3-S03-O1-N0-A2-utility-preserving-42",
+      "T3-S03-O1-N0-A3-none-42",
+      "T3-S04-O1-N0-A0-none-42",
+      "T3-S04-O1-N0-A1-none-42",
+      "T3-S04-O1-N0-A2-balanced-42",
+      "T3-S04-O1-N0-A2-containment-first-42",
+      "T3-S04-O1-N0-A2-utility-preserving-42",
+      "T3-S04-O1-N0-A3-none-42",
+      "T3-S05-O1-N0-A0-none-42",
+      "T3-S05-O1-N0-A1-none-42",
+      "T3-S05-O1-N0-A2-balanced-42",
+      "T3-S05-O1-N0-A2-containment-first-42",
+      "T3-S05-O1-N0-A2-utility-preserving-42",
+      "T3-S05-O1-N0-A3-none-42",
+      "T3-S11-O1-N0-A2-balanced-42",
+      "T3-S11-O1-N0-A2-containment-first-42",
+      "T3-S11-O1-N0-A2-utility-preserving-42",
+      "T3-S11-O1-N0-A3-none-42",
+      "T3-S15-O1-N0-A0-none-42",
+      "T3-S15-O1-N0-A1-none-42",
+      "T3-S15-O1-N0-A2-balanced-42",
+      "T3-S15-O1-N0-A2-containment-first-42",
+      "T3-S15-O1-N0-A2-utility-preserving-42",
+      "T3-S15-O1-N0-A3-none-42",
+      "T3-S17-O1-N0-A2-balanced-42",
+      "T3-S17-O1-N0-A2-containment-first-42",
+      "T3-S17-O1-N0-A2-utility-preserving-42",
+      "T3-S17-O1-N0-A3-none-42"
+    ],
+    "scenario_families": {
+      "opportunity": 90,
+      "privacy": 18,
+      "timing": 24
+    },
+    "strategies": {
+      "balanced": 24,
+      "containment-first": 24,
+      "none": 60,
+      "utility-preserving": 24
+    },
+    "topologies": {
+      "T1": 44,
+      "T2": 44,
+      "T3": 44
+    }
+  },
+  "primary:resilience": {
+    "architectures": {
+      "A0": 9,
+      "A1": 15,
+      "A2": 33,
+      "A3": 15
+    },
+    "cell_count": 72,
+    "cell_set_digest": "793a1e82f710b74aeb0da9b3d0e101c40329c02a82295c4d290b91a1489cdf7a",
+    "cohort_id": "primary:resilience",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 54,
+      "N3": 9,
+      "N4": 9
+    },
+    "observer_profiles": {
+      "O1": 54,
+      "O2": 18
+    },
+    "pareto_eligible": false,
+    "purpose": "primary-class audit",
+    "run_ids": [
+      "T1-S12-O1-N0-A0-none-42",
+      "T1-S12-O1-N0-A1-none-42",
+      "T1-S12-O1-N0-A2-balanced-42",
+      "T1-S12-O1-N0-A2-containment-first-42",
+      "T1-S12-O1-N0-A2-utility-preserving-42",
+      "T1-S12-O1-N0-A3-none-42",
+      "T1-S12-O2-N3-A1-none-211",
+      "T1-S12-O2-N3-A2-balanced-211",
+      "T1-S12-O2-N3-A3-none-211",
+      "T1-S13-O1-N0-A0-none-42",
+      "T1-S13-O1-N0-A1-none-42",
+      "T1-S13-O1-N0-A2-balanced-42",
+      "T1-S13-O1-N0-A2-containment-first-42",
+      "T1-S13-O1-N0-A2-utility-preserving-42",
+      "T1-S13-O1-N0-A3-none-42",
+      "T1-S13-O2-N4-A1-none-503",
+      "T1-S13-O2-N4-A2-balanced-503",
+      "T1-S13-O2-N4-A3-none-503",
+      "T1-S14-O1-N0-A0-none-42",
+      "T1-S14-O1-N0-A1-none-42",
+      "T1-S14-O1-N0-A2-balanced-42",
+      "T1-S14-O1-N0-A2-containment-first-42",
+      "T1-S14-O1-N0-A2-utility-preserving-42",
+      "T1-S14-O1-N0-A3-none-42",
+      "T2-S12-O1-N0-A0-none-42",
+      "T2-S12-O1-N0-A1-none-42",
+      "T2-S12-O1-N0-A2-balanced-42",
+      "T2-S12-O1-N0-A2-containment-first-42",
+      "T2-S12-O1-N0-A2-utility-preserving-42",
+      "T2-S12-O1-N0-A3-none-42",
+      "T2-S12-O2-N3-A1-none-211",
+      "T2-S12-O2-N3-A2-balanced-211",
+      "T2-S12-O2-N3-A3-none-211",
+      "T2-S13-O1-N0-A0-none-42",
+      "T2-S13-O1-N0-A1-none-42",
+      "T2-S13-O1-N0-A2-balanced-42",
+      "T2-S13-O1-N0-A2-containment-first-42",
+      "T2-S13-O1-N0-A2-utility-preserving-42",
+      "T2-S13-O1-N0-A3-none-42",
+      "T2-S13-O2-N4-A1-none-503",
+      "T2-S13-O2-N4-A2-balanced-503",
+      "T2-S13-O2-N4-A3-none-503",
+      "T2-S14-O1-N0-A0-none-42",
+      "T2-S14-O1-N0-A1-none-42",
+      "T2-S14-O1-N0-A2-balanced-42",
+      "T2-S14-O1-N0-A2-containment-first-42",
+      "T2-S14-O1-N0-A2-utility-preserving-42",
+      "T2-S14-O1-N0-A3-none-42",
+      "T3-S12-O1-N0-A0-none-42",
+      "T3-S12-O1-N0-A1-none-42",
+      "T3-S12-O1-N0-A2-balanced-42",
+      "T3-S12-O1-N0-A2-containment-first-42",
+      "T3-S12-O1-N0-A2-utility-preserving-42",
+      "T3-S12-O1-N0-A3-none-42",
+      "T3-S12-O2-N3-A1-none-211",
+      "T3-S12-O2-N3-A2-balanced-211",
+      "T3-S12-O2-N3-A3-none-211",
+      "T3-S13-O1-N0-A0-none-42",
+      "T3-S13-O1-N0-A1-none-42",
+      "T3-S13-O1-N0-A2-balanced-42",
+      "T3-S13-O1-N0-A2-containment-first-42",
+      "T3-S13-O1-N0-A2-utility-preserving-42",
+      "T3-S13-O1-N0-A3-none-42",
+      "T3-S13-O2-N4-A1-none-503",
+      "T3-S13-O2-N4-A2-balanced-503",
+      "T3-S13-O2-N4-A3-none-503",
+      "T3-S14-O1-N0-A0-none-42",
+      "T3-S14-O1-N0-A1-none-42",
+      "T3-S14-O1-N0-A2-balanced-42",
+      "T3-S14-O1-N0-A2-containment-first-42",
+      "T3-S14-O1-N0-A2-utility-preserving-42",
+      "T3-S14-O1-N0-A3-none-42"
+    ],
+    "scenario_families": {
+      "resilience": 72
+    },
+    "strategies": {
+      "balanced": 15,
+      "containment-first": 9,
+      "none": 39,
+      "utility-preserving": 9
+    },
+    "topologies": {
+      "T1": 24,
+      "T2": 24,
+      "T3": 24
+    }
+  },
+  "primary:timing_expired": {
+    "architectures": {
+      "A0": 6,
+      "A1": 6
+    },
+    "cell_count": 12,
+    "cell_set_digest": "e50a2c82a25cd72a0b3ff602e3e13ba24de3a72abbd2d4e3fe6ff6c1a6167de3",
+    "cohort_id": "primary:timing_expired",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 12
+    },
+    "observer_profiles": {
+      "O1": 12
+    },
+    "pareto_eligible": false,
+    "purpose": "primary-class audit",
+    "run_ids": [
+      "T1-S11-O1-N0-A0-none-42",
+      "T1-S11-O1-N0-A1-none-42",
+      "T1-S17-O1-N0-A0-none-42",
+      "T1-S17-O1-N0-A1-none-42",
+      "T2-S11-O1-N0-A0-none-42",
+      "T2-S11-O1-N0-A1-none-42",
+      "T2-S17-O1-N0-A0-none-42",
+      "T2-S17-O1-N0-A1-none-42",
+      "T3-S11-O1-N0-A0-none-42",
+      "T3-S11-O1-N0-A1-none-42",
+      "T3-S17-O1-N0-A0-none-42",
+      "T3-S17-O1-N0-A1-none-42"
+    ],
+    "scenario_families": {
+      "timing": 12
+    },
+    "strategies": {
+      "none": 12
+    },
+    "topologies": {
+      "T1": 4,
+      "T2": 4,
+      "T3": 4
+    }
+  },
+  "primary:upper_bound": {
+    "architectures": {
+      "A4": 15,
+      "A5": 15
+    },
+    "cell_count": 30,
+    "cell_set_digest": "b63e800bb094239c69e77d28c93e72a71e65654659c61a7493cd5d4d8242e226",
+    "cohort_id": "primary:upper_bound",
+    "exclusion_rule": "none",
+    "inclusion_rule": "pre-registered source matrix membership",
+    "network_profiles": {
+      "N0": 30
+    },
+    "observer_profiles": {
+      "O1": 30
+    },
+    "pareto_eligible": false,
+    "purpose": "primary-class audit",
+    "run_ids": [
+      "T1-S01-O1-N0-A4-none-42",
+      "T1-S01-O1-N0-A5-none-42",
+      "T1-S04-O1-N0-A4-none-42",
+      "T1-S04-O1-N0-A5-none-42",
+      "T1-S11-O1-N0-A4-none-42",
+      "T1-S11-O1-N0-A5-none-42",
+      "T1-S15-O1-N0-A4-none-42",
+      "T1-S15-O1-N0-A5-none-42",
+      "T1-S17-O1-N0-A4-none-42",
+      "T1-S17-O1-N0-A5-none-42",
+      "T2-S01-O1-N0-A4-none-42",
+      "T2-S01-O1-N0-A5-none-42",
+      "T2-S04-O1-N0-A4-none-42",
+      "T2-S04-O1-N0-A5-none-42",
+      "T2-S11-O1-N0-A4-none-42",
+      "T2-S11-O1-N0-A5-none-42",
+      "T2-S15-O1-N0-A4-none-42",
+      "T2-S15-O1-N0-A5-none-42",
+      "T2-S17-O1-N0-A4-none-42",
+      "T2-S17-O1-N0-A5-none-42",
+      "T3-S01-O1-N0-A4-none-42",
+      "T3-S01-O1-N0-A5-none-42",
+      "T3-S04-O1-N0-A4-none-42",
+      "T3-S04-O1-N0-A5-none-42",
+      "T3-S11-O1-N0-A4-none-42",
+      "T3-S11-O1-N0-A5-none-42",
+      "T3-S15-O1-N0-A4-none-42",
+      "T3-S15-O1-N0-A5-none-42",
+      "T3-S17-O1-N0-A4-none-42",
+      "T3-S17-O1-N0-A5-none-42"
+    ],
+    "scenario_families": {
+      "opportunity": 12,
+      "privacy": 6,
+      "timing": 12
+    },
+    "strategies": {
+      "none": 30
+    },
+    "topologies": {
+      "T1": 10,
+      "T2": 10,
+      "T3": 10
+    }
+  }
+}

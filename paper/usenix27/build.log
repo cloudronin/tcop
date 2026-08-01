@@ -1,0 +1,433 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size10.clo))
+(./template/usenix-2020-09.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/mathptmx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pslatex/pslatex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/breakurl/breakurl.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifpdf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty))
+
+Package breakurl Warning: You are using breakurl while processing via pdflatex.
+
+(breakurl)                \burl will be just a synonym of \url.
+(breakurl)                 on input line 48.
+
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+)))) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(./generated/results-macros.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omspzccm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+
+Package microtype Warning: \nonfrenchspacing is active. Adjustment of
+(microtype)                interword spacing will disable it. You might want
+(microtype)                to add `\microtypecontext{spacing=nonfrench}'
+(microtype)                to your preamble.
+
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omlptmcm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omxpsycm.fd)
+(./sections/01-introduction.tex
+Underfull \hbox (badness 5064) in paragraph at lines 3--4
+\T1/ptm/m/n/10 (+20) Independently gov-erned do-mains in-creas-ingly in-ter-act
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(./tables/generated/tab-design-requirements.tex
+Underfull \hbox (badness 2205) in paragraph at lines 7--7
+[]|\T1/ptm/m/n/8 (+20) Bounded scope and
+
+Underfull \hbox (badness 2932) in paragraph at lines 10--10
+[]|\T1/ptm/m/n/8 (+20) No re-mote en-force-
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]|\T1/ptm/m/n/8 (+20) Explicit avail-abil-ity
+)) (./sections/02-problem-threat-model.tex [1{/usr/local/texlive/2026/texmf-var
+/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/e
+nc/dvips/base/8r.enc}]) (./sections/03-architecture-protocol.tex
+(./tables/generated/tab-architecture-comparison.tex
+Underfull \hbox (badness 6608) in paragraph at lines 9--9
+[]|\T1/ptm/m/n/7 (+20) Equivalent ex-portable
+
+Underfull \hbox (badness 3690) in paragraph at lines 9--10
+[]|\T1/ptm/m/n/7 (+20) Fact-equivalent cen-tral com-
+)) (./sections/04-local-resolution-enforcement.tex
+Underfull \vbox (badness 10000) has occurred while \output is active)
+(./sections/05-containment-window.tex)
+(./sections/06-deterministic-evaluation.tex
+
+LaTeX Warning: Reference `fig:deterministic' on page 2 undefined on input line 
+5.
+
+(./tables/generated/tab-deterministic-summary.tex))
+(./sections/07-agent-gateway-evaluation.tex [2]
+(./tables/generated/tab-live-cohort.tex)
+(./tables/generated/tab-physical-end-to-end.tex)
+
+LaTeX Warning: Reference `fig:physical' on page 3 undefined on input line 9.
+
+(./tables/generated/tab-replay-timing.tex))
+(./sections/08-security-availability.tex [3 <./figures/pdf/architecture.pdf>]
+(./tables/generated/tab-utility.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--6
+[]|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
+) (./tables/generated/tab-negative-controls.tex)
+(./tables/generated/tab-performance.tex)) (./sections/09-related-work.tex
+Underfull \vbox (badness 10000) has occurred while \output is active
+(./tables/generated/tab-amendment-history.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+[]|\T1/ptm/m/n/7 (+20) Model sam-
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+[]|\T1/ptm/m/n/7 (+20) Result deriva-
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\T1/ptm/m/n/7 (+20) Provider completion-token
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\T1/ptm/m/n/7 (+20) No suc-cess-ful
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]|\T1/ptm/m/n/7 (+20) Physical-path
+
+Underfull \vbox (badness 1424) has occurred while \output is active [4 <./figur
+es/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes.pdf>]))
+(./sections/10-limitations-conclusion.tex
+(./tables/generated/tab-limitations.tex))
+
+LaTeX Warning: Citation `usenixTemplate' undefined on input line 28.
+
+(./main.bbl
+Underfull \hbox (badness 2435) in paragraph at lines 4--9
+[]\T1/ptm/m/n/10 (+20) USENIX As-so-ci-a-tion.  Tem-plates for con-fer-ence
+
+Underfull \hbox (badness 2027) in paragraph at lines 4--9
+\T1/ptm/m/n/10 (+20) pa-pers.  [][]$\T1/pcr/m/n/10 https : / / www . usenix . o
+rg / conferences /
+) (./appendices/open-science.tex [5 <./figures/pdf/physical-timing.pdf>])
+(./appendices/ethics.tex) (./appendices/strategy-details.tex
+Underfull \hbox (badness 2707) in paragraph at lines 3--4
+\T1/ptm/m/n/10 (+20) The study cer-ti-fies four objective-specific frozen con-
+
+Underfull \hbox (badness 7133) in paragraph at lines 3--4
+\T1/ptm/m/n/10 (+20) fig-u-ra-tions: containment-first (P2), bal-anced fed-er-a
+ted
+) (./appendices/amendment-history.tex [6 <./figures/pdf/live-replay-treatments.
+pdf> <./figures/pdf/security-availability.pdf>])
+(./appendices/extended-results.tex
+Underfull \hbox (badness 2005) in paragraph at lines 3--4
+\T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
+) (./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
+) [7] [8 <./figures/pdf/artifact-lineage.pdf>] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/local/texlive/2026/te
+xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
+e1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on main.pdf (8 pages, 173816 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+  ===Source file 'main.bbl' for 'pdflatex'
+Create bibtex main
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Category 'other':
+  Rerun of 'bibtex main' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99e (TeX Live 2026)
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.out
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size10.clo))
+(./template/usenix-2020-09.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/mathptmx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pslatex/pslatex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/breakurl/breakurl.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifpdf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty))
+
+Package breakurl Warning: You are using breakurl while processing via pdflatex.
+
+(breakurl)                \burl will be just a synonym of \url.
+(breakurl)                 on input line 48.
+
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+)))) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(./generated/results-macros.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omspzccm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+
+Package microtype Warning: \nonfrenchspacing is active. Adjustment of
+(microtype)                interword spacing will disable it. You might want
+(microtype)                to add `\microtypecontext{spacing=nonfrench}'
+(microtype)                to your preamble.
+
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./main.out) (./main.out)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omlptmcm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omxpsycm.fd)
+(./sections/01-introduction.tex
+Underfull \hbox (badness 5064) in paragraph at lines 3--4
+\T1/ptm/m/n/10 (+20) Independently gov-erned do-mains in-creas-ingly in-ter-act
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(./tables/generated/tab-design-requirements.tex
+Underfull \hbox (badness 2205) in paragraph at lines 7--7
+[]|\T1/ptm/m/n/8 (+20) Bounded scope and
+
+Underfull \hbox (badness 2932) in paragraph at lines 10--10
+[]|\T1/ptm/m/n/8 (+20) No re-mote en-force-
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]|\T1/ptm/m/n/8 (+20) Explicit avail-abil-ity
+)) (./sections/02-problem-threat-model.tex [1{/usr/local/texlive/2026/texmf-var
+/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/e
+nc/dvips/base/8r.enc}]) (./sections/03-architecture-protocol.tex
+(./tables/generated/tab-architecture-comparison.tex
+Underfull \hbox (badness 6608) in paragraph at lines 9--9
+[]|\T1/ptm/m/n/7 (+20) Equivalent ex-portable
+
+Underfull \hbox (badness 3690) in paragraph at lines 9--10
+[]|\T1/ptm/m/n/7 (+20) Fact-equivalent cen-tral com-
+)) (./sections/04-local-resolution-enforcement.tex
+Underfull \vbox (badness 10000) has occurred while \output is active)
+(./sections/05-containment-window.tex)
+(./sections/06-deterministic-evaluation.tex
+(./tables/generated/tab-deterministic-summary.tex))
+(./sections/07-agent-gateway-evaluation.tex [2]
+(./tables/generated/tab-live-cohort.tex)
+(./tables/generated/tab-physical-end-to-end.tex)
+(./tables/generated/tab-replay-timing.tex))
+(./sections/08-security-availability.tex [3 <./figures/pdf/architecture.pdf>]
+(./tables/generated/tab-utility.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--6
+[]|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
+) (./tables/generated/tab-negative-controls.tex)
+(./tables/generated/tab-performance.tex)) (./sections/09-related-work.tex
+Underfull \vbox (badness 10000) has occurred while \output is active
+(./tables/generated/tab-amendment-history.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+[]|\T1/ptm/m/n/7 (+20) Model sam-
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+[]|\T1/ptm/m/n/7 (+20) Result deriva-
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\T1/ptm/m/n/7 (+20) Provider completion-token
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\T1/ptm/m/n/7 (+20) No suc-cess-ful
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]|\T1/ptm/m/n/7 (+20) Physical-path
+
+Underfull \vbox (badness 1424) has occurred while \output is active [4 <./figur
+es/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes.pdf>]))
+(./sections/10-limitations-conclusion.tex
+(./tables/generated/tab-limitations.tex)) (./main.bbl
+Underfull \hbox (badness 2435) in paragraph at lines 4--9
+[]\T1/ptm/m/n/10 (+20) USENIX As-so-ci-a-tion.  Tem-plates for con-fer-ence
+
+Underfull \hbox (badness 2027) in paragraph at lines 4--9
+\T1/ptm/m/n/10 (+20) pa-pers.  [][]$\T1/pcr/m/n/10 https : / / www . usenix . o
+rg / conferences /
+) (./appendices/open-science.tex [5 <./figures/pdf/physical-timing.pdf>])
+(./appendices/ethics.tex) (./appendices/strategy-details.tex
+Underfull \hbox (badness 2707) in paragraph at lines 3--4
+\T1/ptm/m/n/10 (+20) The study cer-ti-fies four objective-specific frozen con-
+
+Underfull \hbox (badness 7133) in paragraph at lines 3--4
+\T1/ptm/m/n/10 (+20) fig-u-ra-tions: containment-first (P2), bal-anced fed-er-a
+ted
+) (./appendices/amendment-history.tex [6 <./figures/pdf/live-replay-treatments.
+pdf> <./figures/pdf/security-availability.pdf>])
+(./appendices/extended-results.tex
+Underfull \hbox (badness 2005) in paragraph at lines 3--4
+\T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
+) (./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
+) [7] [8 <./figures/pdf/artifact-lineage.pdf>] (./main.aux) )
+(see the transcript file for additional information)</usr/local/texlive/2026/te
+xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
+e1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on main.pdf (8 pages, 174759 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: All targets (main.pdf) are up-to-date
+
+Latexmk: Using bibtex to make bibliography file(s).
+Latexmk: Using bibtex to make bibliography file(s).

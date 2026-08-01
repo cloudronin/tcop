@@ -1,0 +1,7 @@
+{
+  "audit_version": "paper-evidence-v1",
+  "findings": [],
+  "pass": true,
+  "pdf_metadata": "{\"/Author\": \"\", \"/CreationDate\": \"D:20260801134021-07'00'\", \"/Creator\": \"LaTeX with hyperref\", \"/Keywords\": \"\", \"/ModDate\": \"D:20260801134021-07'00'\", \"/PTEX.Fullbanner\": \"This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) kpathsea version 6.4.2\", \"/Producer\": \"pdfTeX-1.40.29\", \"/Subject\": \"\", \"/Title\": \"Receiver-Sovereign Federated Early Warning for Cross-Domain Agent Tool Use\", \"/Trapped\": \"/False\"}",
+  "scope": "artifact/review and generated PDF metadata"
+}

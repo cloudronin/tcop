@@ -1,0 +1,83 @@
+{
+  "a2_export_digests": [
+    "29f5ec9fd70f32f3b8dde352963303c8f4407890f785e07170324a2e76bfb9f0",
+    "1a2092d292371310dcb03fbc4e960611d455110662480869f591179bdef8d487"
+  ],
+  "a3_input_digests": [
+    "29f5ec9fd70f32f3b8dde352963303c8f4407890f785e07170324a2e76bfb9f0",
+    "1a2092d292371310dcb03fbc4e960611d455110662480869f591179bdef8d487"
+  ],
+  "cell": {
+    "architecture_id": "A3",
+    "cell_id": "evidence-central-balanced-T1-S13-O1-N0-A3-none-42",
+    "classification": "mechanism_probe",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "A3 frozen policy parity diagnostic",
+    "scenario_id": "S13",
+    "seed": 42,
+    "strategy_id": "none",
+    "topology_id": "T1"
+  },
+  "evidence_diagnostic": {
+    "central_strategy": "balanced",
+    "label": "central-policy-parity",
+    "local_fallback": false,
+    "network": null
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": null,
+    "early_warning_lead_time": 3,
+    "false_containment": false,
+    "first_import_at": 2,
+    "first_protection_at": null,
+    "forensic_records": 19,
+    "harmful_actions": 2,
+    "prevented_actions": 0,
+    "protocol_observations": 2,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 2
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": true,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "resilience",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S13",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Central observer outage"
+  },
+  "stream_digest": "aa3798f7cd3b8760fd67cd28bbc70f28c071cfc45e784be2d0732e6fe64fef54",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

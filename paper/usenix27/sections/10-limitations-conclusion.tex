@@ -1,0 +1,9 @@
+\section{Limitations and Conclusion}
+
+The evaluation uses synthetic tools and attack scenarios, a limited set of malicious scenario classes, receipt-based correlation in the evaluated path, one reference gateway, local harness performance measurements, and one frozen model/runtime selection. Strict action-trace replay approximates adaptive behavior after denial; it does not model an agent that changes its strategy after each blocked call. TCOP is not evaluated on a production incident, Internet-scale federation, or real-world attack frequency.
+
+TCOP is useful only when a participating observer detects a useful fact in time and the receiver has an enforceable local boundary. It cannot create detections, guarantee observation truth, prevent an undetected origin compromise, or reverse completed harm. The evaluated central comparison is bounded and does not support universal claims about centralized defense.
+
+Within those limits, the evidence supports a systems-security conclusion: signed bounded context can reduce downstream blast radius when it becomes actionable inside a containment window, while preserving receiver-local decision authority. The accompanying artifact makes the frozen deterministic and replay results reproducible without live-model credentials and retains the observed availability cost as part of the design trade-off.
+
+\input{tables/generated/tab-limitations}

@@ -1,0 +1,25 @@
+{
+  "calls": [
+    {
+      "capability": "public.read",
+      "ordinal": 1,
+      "request_digest": "3d34492a609d45bd2d4110bb5a2d9db90fe7aa8cdf471695715e6dbb29ba2d24",
+      "tool": "public_search"
+    },
+    {
+      "capability": "repository.read",
+      "ordinal": 2,
+      "request_digest": "317b7928c7cbf93355dcacd942c040d5f5ef6ed0a9421990b711e31633409c08",
+      "tool": "repository_read"
+    },
+    {
+      "capability": "repository.write",
+      "ordinal": 3,
+      "request_digest": "b6eb5ddc96ca243ebd5f3adaefd45dfda6eeedb3184af90d1f263435a3ed2210",
+      "tool": "repository_write"
+    }
+  ],
+  "canonical_action_digest": "f77bb24e6a8cc1fd44f342a1aa5d888f7bc16632f8c6c47cfdabd1d1a1bebf44",
+  "scenario": "RA-03",
+  "trace_id": "f77bb24e6a8cc1fd44f342a1aa5d888f7bc16632f8c6c47cfdabd1d1a1bebf44"
+}

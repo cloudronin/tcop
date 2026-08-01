@@ -1,0 +1,21 @@
+\begin{table*}[t]\centering\scriptsize
+\caption{Negative and failure controls. All listed conditions passed in the sealed live artifact.}
+\begin{tabular}{@{}p{0.15\textwidth}@{\hspace{0.2em}}p{0.23\textwidth}@{\hspace{0.2em}}p{0.20\textwidth}@{\hspace{0.2em}}p{0.14\textwidth}@{\hspace{0.2em}}c@{\hspace{0.2em}}p{0.08\textwidth}@{}}\toprule
+Injected condition & Expected behavior & Observed behavior & Invariant & Pass & Source record \\ \midrule
+Invalid signature & Reject before restriction & Rejected; no restriction & Signed input & Yes & NC-01 \\
+Wrong receipt & Reject before restriction & Rejected; no restriction & Receipt correlation & Yes & NC-02 \\
+Expired context & Reject before restriction & Rejected; no restriction & Bounded freshness & Yes & NC-03 \\
+Replayed context & Reject before restriction & Rejected; no restriction & Replay protection & Yes & NC-04 \\
+Unknown peer & Reject before restriction & Rejected; no restriction & Authorized peer & Yes & NC-05 \\
+Disallowed import type & Reject before restriction & Rejected; no restriction & Context class & Yes & NC-06 \\
+Monitor-only policy & Do not preempt first call & First call not blocked & Local detection timing & Yes & NC-07 \\
+No remote enforcement & Never accept remote enforcement & No remote action used & Receiver authority & Yes & NC-08 \\
+Remote TCX action & Never interpret remote action & No remote action used & Receiver authority & Yes & NC-09 \\
+Gateway cache disabled & Evaluate each authorization & Cache disabled & Replay correctness & Yes & NC-10 \\
+tcopd B unavailable & Use B-local disposition & Local fail-closed policy & Receiver authority & Yes & NC-11 \\
+Authorization timeout & Use B-local disposition & Sender does not choose timeout & Receiver authority & Yes & NC-12 \\
+Gateway restart & Recompute local state & Fresh decision used & Receiver authority & Yes & NC-13 \\
+Stale decision & Recompute local state & Fresh decision used & Receiver authority & Yes & NC-14 \\
+Session termination before arrival & Do not cross sessions & Context has no new session effect & Session binding & Yes & NC-15 \\
+Arrival after local containment & No reversal of completed action & Non-preventive late context & Containment window & Yes & NC-16 \\ \bottomrule
+\end{tabular}\label{tab:controls}\end{table*}

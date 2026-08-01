@@ -1,0 +1,315 @@
+[
+  {
+    "caption_caveats": [
+      "Domain A cannot directly invoke Domain B enforcement."
+    ],
+    "claims": [
+      "C-ARCH-01",
+      "C-AUTH-01"
+    ],
+    "function": "generate_architecture",
+    "id": "fig-architecture",
+    "input_files": [
+      "manifest.json",
+      "reports/authorization-audit.json"
+    ],
+    "output": "paper/usenix27/figures/pdf/architecture.pdf",
+    "preview": "paper/usenix27/figures/png-preview/architecture.png",
+    "script": "scripts/generate_figures.py",
+    "sha256": "a4e7f04980a3059cf965105b85b4293ea0a99c429b9e4a2c51db4ec293f4d9a4",
+    "source_artifacts": [
+      {
+        "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+        "paths": [
+          "artifacts/v0.6-agent-validation-live-origin-certified"
+        ]
+      },
+      {
+        "digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+        "paths": [
+          "artifacts/v0.6-agent-validation"
+        ]
+      },
+      {
+        "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "paths": [
+          "artifacts/federated-domain-v0.6-evidence"
+        ]
+      },
+      {
+        "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "paths": [
+          "artifacts/federated-domain-v0.6"
+        ]
+      }
+    ],
+    "svg": "paper/usenix27/figures/svg/architecture.svg"
+  },
+  {
+    "caption_caveats": [
+      "A context can be too late for one action but early enough for later actions."
+    ],
+    "claims": [
+      "C-TIMING-01",
+      "C-LIMIT-01"
+    ],
+    "function": "generate_containment_window",
+    "id": "fig-containment-window",
+    "input_files": [
+      "data/generated/live-timing-summary.csv"
+    ],
+    "output": "paper/usenix27/figures/pdf/containment-window.pdf",
+    "preview": "paper/usenix27/figures/png-preview/containment-window.png",
+    "script": "scripts/generate_figures.py",
+    "sha256": "ecb8edd2ded613032ecf12dbec250f1169abe823a89f2174679a8ff583fc1ce1",
+    "source_artifacts": [
+      {
+        "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+        "paths": [
+          "artifacts/v0.6-agent-validation-live-origin-certified"
+        ]
+      },
+      {
+        "digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+        "paths": [
+          "artifacts/v0.6-agent-validation"
+        ]
+      },
+      {
+        "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "paths": [
+          "artifacts/federated-domain-v0.6-evidence"
+        ]
+      },
+      {
+        "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "paths": [
+          "artifacts/federated-domain-v0.6"
+        ]
+      }
+    ],
+    "svg": "paper/usenix27/figures/svg/containment-window.svg"
+  },
+  {
+    "caption_caveats": [
+      "Unchanged pairs are shown explicitly."
+    ],
+    "claims": [
+      "C-DETERMINISTIC-01"
+    ],
+    "function": "generate_deterministic_outcomes",
+    "id": "fig-deterministic-outcomes",
+    "input_files": [
+      "data/generated/deterministic-pairs.csv"
+    ],
+    "output": "paper/usenix27/figures/pdf/deterministic-outcomes.pdf",
+    "preview": "paper/usenix27/figures/png-preview/deterministic-outcomes.png",
+    "script": "scripts/generate_figures.py",
+    "sha256": "a8b02ecbd29ad76f7db4e9cce92f33246618d67458b08024645b477d8b08f86d",
+    "source_artifacts": [
+      {
+        "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+        "paths": [
+          "artifacts/v0.6-agent-validation-live-origin-certified"
+        ]
+      },
+      {
+        "digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+        "paths": [
+          "artifacts/v0.6-agent-validation"
+        ]
+      },
+      {
+        "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "paths": [
+          "artifacts/federated-domain-v0.6-evidence"
+        ]
+      },
+      {
+        "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "paths": [
+          "artifacts/federated-domain-v0.6"
+        ]
+      }
+    ],
+    "svg": "paper/usenix27/figures/svg/deterministic-outcomes.svg"
+  },
+  {
+    "caption_caveats": [
+      "The late arm separates completed calls from subsequently prevented calls."
+    ],
+    "claims": [
+      "C-TIMING-01"
+    ],
+    "function": "generate_physical_timing",
+    "id": "fig-physical-timing",
+    "input_files": [
+      "data/generated/physical-arms.csv"
+    ],
+    "output": "paper/usenix27/figures/pdf/physical-timing.pdf",
+    "preview": "paper/usenix27/figures/png-preview/physical-timing.png",
+    "script": "scripts/generate_figures.py",
+    "sha256": "d5356d079f83f05189c5e15967ba1254b9364d8ac009006464d0989f6ecc0cd5",
+    "source_artifacts": [
+      {
+        "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+        "paths": [
+          "artifacts/v0.6-agent-validation-live-origin-certified"
+        ]
+      },
+      {
+        "digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+        "paths": [
+          "artifacts/v0.6-agent-validation"
+        ]
+      },
+      {
+        "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "paths": [
+          "artifacts/federated-domain-v0.6-evidence"
+        ]
+      },
+      {
+        "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "paths": [
+          "artifacts/federated-domain-v0.6"
+        ]
+      }
+    ],
+    "svg": "paper/usenix27/figures/svg/physical-timing.svg"
+  },
+  {
+    "caption_caveats": [
+      "Early and boundary share the tested discrete preauthorization region."
+    ],
+    "claims": [
+      "C-TIMING-01",
+      "C-LIVE-01"
+    ],
+    "function": "generate_live_replay_treatments",
+    "id": "fig-live-replay-treatments",
+    "input_files": [
+      "data/generated/live-timing-summary.csv"
+    ],
+    "output": "paper/usenix27/figures/pdf/live-replay-treatments.pdf",
+    "preview": "paper/usenix27/figures/png-preview/live-replay-treatments.png",
+    "script": "scripts/generate_figures.py",
+    "sha256": "c9e2a8f9a8f3b97d04f57d7a8209b1a4581f133267fa12aea201070fe0ee9e5c",
+    "source_artifacts": [
+      {
+        "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+        "paths": [
+          "artifacts/v0.6-agent-validation-live-origin-certified"
+        ]
+      },
+      {
+        "digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+        "paths": [
+          "artifacts/v0.6-agent-validation"
+        ]
+      },
+      {
+        "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "paths": [
+          "artifacts/federated-domain-v0.6-evidence"
+        ]
+      },
+      {
+        "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "paths": [
+          "artifacts/federated-domain-v0.6"
+        ]
+      }
+    ],
+    "svg": "paper/usenix27/figures/svg/live-replay-treatments.svg"
+  },
+  {
+    "caption_caveats": [
+      "The constrained calls are a measured synthetic-treatment cost, not a universal false-positive rate."
+    ],
+    "claims": [
+      "C-UTILITY-01",
+      "C-UTILITY-02"
+    ],
+    "function": "generate_security_availability",
+    "id": "fig-security-availability",
+    "input_files": [
+      "data/generated/utility-results.csv"
+    ],
+    "output": "paper/usenix27/figures/pdf/security-availability.pdf",
+    "preview": "paper/usenix27/figures/png-preview/security-availability.png",
+    "script": "scripts/generate_figures.py",
+    "sha256": "52ed1555a309b9399c5a89ee80168132360dad509059b4f3c3d7a8cc973cd694",
+    "source_artifacts": [
+      {
+        "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+        "paths": [
+          "artifacts/v0.6-agent-validation-live-origin-certified"
+        ]
+      },
+      {
+        "digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+        "paths": [
+          "artifacts/v0.6-agent-validation"
+        ]
+      },
+      {
+        "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "paths": [
+          "artifacts/federated-domain-v0.6-evidence"
+        ]
+      },
+      {
+        "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "paths": [
+          "artifacts/federated-domain-v0.6"
+        ]
+      }
+    ],
+    "svg": "paper/usenix27/figures/svg/security-availability.svg"
+  },
+  {
+    "caption_caveats": [
+      "The first two provider-failure artifacts remain retained negative results."
+    ],
+    "claims": [
+      "C-LIVE-01"
+    ],
+    "function": "generate_artifact_lineage",
+    "id": "fig-artifact-lineage",
+    "input_files": [
+      "data/generated/amendment-chain.csv"
+    ],
+    "output": "paper/usenix27/figures/pdf/artifact-lineage.pdf",
+    "preview": "paper/usenix27/figures/png-preview/artifact-lineage.png",
+    "script": "scripts/generate_figures.py",
+    "sha256": "c4045e55c22b4e56a9c924563cfbd3e55f40297ef3af9d56a1f2c9d6de3a786b",
+    "source_artifacts": [
+      {
+        "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+        "paths": [
+          "artifacts/v0.6-agent-validation-live-origin-certified"
+        ]
+      },
+      {
+        "digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+        "paths": [
+          "artifacts/v0.6-agent-validation"
+        ]
+      },
+      {
+        "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "paths": [
+          "artifacts/federated-domain-v0.6-evidence"
+        ]
+      },
+      {
+        "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "paths": [
+          "artifacts/federated-domain-v0.6"
+        ]
+      }
+    ],
+    "svg": "paper/usenix27/figures/svg/artifact-lineage.svg"
+  }
+]

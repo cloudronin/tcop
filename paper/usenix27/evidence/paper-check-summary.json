@@ -1,0 +1,14 @@
+{
+  "body_pages": 5,
+  "checks": {
+    "anonymity": true,
+    "claims": true,
+    "latex": true,
+    "numbers": true,
+    "page_budget": true,
+    "source": true
+  },
+  "missing": [],
+  "paper_check": "pass",
+  "total_pages": 8
+}

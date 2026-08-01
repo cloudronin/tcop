@@ -1,0 +1,44 @@
+[
+  {
+    "diagnostic_only": true,
+    "harmful_actions": 1,
+    "local_fallback": true,
+    "run_id": "evidence-central-local-fallback-T1-S13-O1-N0-A3-none-42",
+    "source_a3_run": "T1-S13-O1-N0-A3-none-42"
+  },
+  {
+    "diagnostic_only": true,
+    "harmful_actions": 1,
+    "local_fallback": true,
+    "run_id": "evidence-central-local-fallback-T1-S14-O1-N0-A3-none-42",
+    "source_a3_run": "T1-S14-O1-N0-A3-none-42"
+  },
+  {
+    "diagnostic_only": true,
+    "harmful_actions": 1,
+    "local_fallback": true,
+    "run_id": "evidence-central-local-fallback-T2-S13-O1-N0-A3-none-42",
+    "source_a3_run": "T2-S13-O1-N0-A3-none-42"
+  },
+  {
+    "diagnostic_only": true,
+    "harmful_actions": 1,
+    "local_fallback": true,
+    "run_id": "evidence-central-local-fallback-T2-S14-O1-N0-A3-none-42",
+    "source_a3_run": "T2-S14-O1-N0-A3-none-42"
+  },
+  {
+    "diagnostic_only": true,
+    "harmful_actions": 1,
+    "local_fallback": true,
+    "run_id": "evidence-central-local-fallback-T3-S13-O1-N0-A3-none-42",
+    "source_a3_run": "T3-S13-O1-N0-A3-none-42"
+  },
+  {
+    "diagnostic_only": true,
+    "harmful_actions": 1,
+    "local_fallback": true,
+    "run_id": "evidence-central-local-fallback-T3-S14-O1-N0-A3-none-42",
+    "source_a3_run": "T3-S14-O1-N0-A3-none-42"
+  }
+]

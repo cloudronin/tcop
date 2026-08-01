@@ -1,0 +1,5 @@
+\section{Reproducibility Details}
+
+The default reviewer workflow avoids live credentials. It verifies source roots, regenerates all paper-local derivatives, and invokes strict replay on frozen traces. Exact expected counts and full source digests are machine-checkable in the anonymous artifact manifest. The deterministic causal-core tier writes a new output root and compares its declared deterministic results; it never overwrites the sealed sources.
+
+The live provider environment is documented only for optional trace regeneration. A current provider response can differ from the frozen cohort; such a replication does not replace the trace-replay evidence or modify the paper's claims.

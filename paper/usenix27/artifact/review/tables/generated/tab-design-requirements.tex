@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{TCOP design requirements.}
+\begin{tabular}{@{}p{0.29\columnwidth}@{\hspace{0.7em}}p{0.62\columnwidth}@{}}\toprule
+Requirement & Mechanism \\ \midrule
+Signed provenance & Signed TCX context with authorized peer identity \\
+Bounded scope and expiry & Scoped, time-bounded context validation \\
+Replay protection & Receiver replay checks and fresh local decisions \\
+Receiver-local correlation and policy & Domain B correlates and applies its own strategy and policy \\
+No remote enforcement command & Imported context never maps directly to allow, deny, quarantine, revoke, or suspend \\
+Capability-scoped response & Domain B restricts only locally selected capabilities \\
+Audit linkage & Receipt and decision records link context to local action \\
+Partition-local operation & Local controls remain available during federation failure \\
+Explicit availability cost & Benign restriction impact is measured, not hidden \\ \bottomrule
+\end{tabular}\label{tab:requirements}\end{table}

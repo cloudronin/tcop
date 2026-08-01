@@ -1,0 +1,8 @@
+{
+  "eligible_pair_count": 54,
+  "excluded_pair_count": 123,
+  "mismatch_fields": {
+    "local_policy_configuration": 123
+  },
+  "pair_count": 177
+}

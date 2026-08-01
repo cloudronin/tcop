@@ -1,0 +1,27 @@
+\section{Agent, Replay, and Gateway Evaluation}
+
+We separate live trace generation from causal evaluation. A credentialed model runtime generated action attempts in a bounded synthetic environment. The model did not judge security outcomes. The certified cohort contains \LiveTraces{} eligible traces with no model error or refusal recorded in the cohort. We freeze these action traces and compare treatments through strict replay, avoiding model nondeterminism in the paired evidence.
+
+\input{tables/generated/tab-live-cohort}
+
+\input{tables/generated/tab-physical-end-to-end}
+
+The strict replay matrix contains \LiveReplayPairs{} paired comparisons. In the physical reference path, \PhysicalFederationExchanges{} signed exchanges traverse \texttt{tcopd}-A to \texttt{tcopd}-B, followed by a receiver-local evaluator and Docker MCP Gateway. Figure~\ref{fig:physical} shows a prospective arm, a no-context arm, and a late arm. The latter still blocks later opportunities but never claims to undo completed calls.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{physical-timing}
+\caption{Physical end-to-end timing result. The late arm separates already forwarded harmful calls from subsequent calls blocked by a Domain-B-local decision.}
+\label{fig:physical}
+\end{figure}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{live-replay-treatments}
+\caption{Strict replay results by action-relative delivery placement. Early and boundary treatments share the tested discrete preauthorization region.}
+\label{fig:replay-timing}
+\end{figure*}
+
+\input{tables/generated/tab-replay-timing}
+
+The reported sub-millisecond values are local deterministic harness measurements. They characterize implementation overhead within the test harness and do not estimate production or inter-organizational latency. The Docker MCP Gateway is a reference enforcement point, not a literal reproduction of a public defensive architecture.

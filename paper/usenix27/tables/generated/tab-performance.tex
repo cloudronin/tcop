@@ -1,0 +1,7 @@
+\begin{table*}[t]\centering\small
+\caption{Local harness performance. These deterministic local measurements characterize implementation overhead in the test harness and are not production inter-domain latency estimates.}
+\begin{tabular}{lrrrr}\toprule
+Selection & Authorization p95 (ms) & Gateway p95 (ms) & Warning-to-enforcement p95 (ms) & Cache hit rate \\ \midrule
+Disabled & 0.019750 & 0.024584 & 0.331624 & 0.00 \\
+Enabled, fixed 5s TTL & 0.000667 & 0.027250 & 0.328208 & 0.95 \\ \bottomrule
+\end{tabular}\label{tab:performance}\end{table*}

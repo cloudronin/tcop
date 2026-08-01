@@ -1,0 +1,868 @@
+{
+  "excluded_pair_count": 123,
+  "pairs": [
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "651e2dbb58acf3063fbca4292185d9edcb97f5ab51fe8464d42aea144b4420a9",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "651e2dbb58acf3063fbca4292185d9edcb97f5ab51fe8464d42aea144b4420a9",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "284aeabc14308a2b574fbccc17d3307ea7f9c0860ac833a6d3ac6dbcd750f4ca",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "284aeabc14308a2b574fbccc17d3307ea7f9c0860ac833a6d3ac6dbcd750f4ca",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "78e158579b0fb5ac43db303d94287d2742f58fdc83d5afdde6b18e113b2a51db",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "78e158579b0fb5ac43db303d94287d2742f58fdc83d5afdde6b18e113b2a51db",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "adba4826fce6b1b417090b69a22766980ec484c580075fe8d203ee530ba4bdcf",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "adba4826fce6b1b417090b69a22766980ec484c580075fe8d203ee530ba4bdcf",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "1d15ec93a3c5ea66656b916426a2f829d1b9a94e3de6fe14bbbcb0f5ea922491",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "1d15ec93a3c5ea66656b916426a2f829d1b9a94e3de6fe14bbbcb0f5ea922491",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "55421b25735e1137cfe98be436d480951b8f732d2a2168c66aa360e86c2bf897",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "55421b25735e1137cfe98be436d480951b8f732d2a2168c66aa360e86c2bf897",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "36227bd54a70db54844fd985c118479e22c2de2eef8d4b0d6619a5c15f66aca9",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "36227bd54a70db54844fd985c118479e22c2de2eef8d4b0d6619a5c15f66aca9",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "831305bd037eff82cf781107f84c1dfda4af3650c5fcbcba117312d45758742e",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "831305bd037eff82cf781107f84c1dfda4af3650c5fcbcba117312d45758742e",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "d78db503f4b90d3a05f542afe063b48bd8769a30264ad0012e696c52e58509ad",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "d78db503f4b90d3a05f542afe063b48bd8769a30264ad0012e696c52e58509ad",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "c9a6eb24133ba91250e7bd575a0de6a0bc009bfc81debbc60d783e71997f03b1",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "c9a6eb24133ba91250e7bd575a0de6a0bc009bfc81debbc60d783e71997f03b1",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "289727cfa4bde42c7ef331ef62fc33b6368b2175343fec440d39f617c0d3fbd2",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "289727cfa4bde42c7ef331ef62fc33b6368b2175343fec440d39f617c0d3fbd2",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "3d485ec6e1dd36e9eedfece729dea98d91ba9a8da34a43705fadc5af66eddf04",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "c1d98de75346d64de98f3f5c0fe134e8c7356d137e5f22d43d7b0e1c15befcfa",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "2ca29fc3f6caef783b8b608330f28461cd42058c38f0330313b5211a666e813f",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "2ca29fc3f6caef783b8b608330f28461cd42058c38f0330313b5211a666e813f",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "0b9a3f88860403606b51ab53eda0f249e759b6f597163c073606c40bb680bc91",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "091f969890db677b2ab2ef900449b02f6db4706a6cde02e0421781755aae8e43",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "091f969890db677b2ab2ef900449b02f6db4706a6cde02e0421781755aae8e43",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "30bb33f4bedb63b52596a97d9b4b60c1bbff82d764a280700df68e8fc7760599",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "90168a6de7c9728ea495d1d4b6b03ef3f207c2dd06caf1fbcb83615f96027b3c",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "90168a6de7c9728ea495d1d4b6b03ef3f207c2dd06caf1fbcb83615f96027b3c",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "1ffd645a0f7f07365b1bcc1bb291f7a30130ca708e5bbfe897c707661005f0f6",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "1ffd645a0f7f07365b1bcc1bb291f7a30130ca708e5bbfe897c707661005f0f6",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "fbe224d1a9feb711a6748f5d6e51a5579512abe66a336b372830b5301a981c96",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "fbe224d1a9feb711a6748f5d6e51a5579512abe66a336b372830b5301a981c96",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "e75798035c69c204a67d014cb65ca875183e09096de64460526632cef6c40955",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "e75798035c69c204a67d014cb65ca875183e09096de64460526632cef6c40955",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "f24f7e77fa1073ef000af3dc72c97da19b087131514786a1024ff21552cb712d",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "ae23cbaad5bba6663acae3935cab338b15a5baaee30f06052d1b26bf7e6f5993",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "ae23cbaad5bba6663acae3935cab338b15a5baaee30f06052d1b26bf7e6f5993",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "d0874521c01f8b461e400cf6317a545d6bfdefca44538406bbc34677445fa333",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "d0874521c01f8b461e400cf6317a545d6bfdefca44538406bbc34677445fa333",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "7f778d39c53176c3971e3892ebfba82ed91b5fb15e208fbbb90ce9f9bf988100",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "7f778d39c53176c3971e3892ebfba82ed91b5fb15e208fbbb90ce9f9bf988100",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "7344916c89d0d97c819164d12360370cc0b11dee63927b6b25ff06417492ac73",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "7344916c89d0d97c819164d12360370cc0b11dee63927b6b25ff06417492ac73",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "dd5fdd8f26742185f8e8a0582d6d7d43ac2c2a5d2969fcc8b094a7af16c0a348",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "dd5fdd8f26742185f8e8a0582d6d7d43ac2c2a5d2969fcc8b094a7af16c0a348",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "5a4f4459fed3af0e56f3f05d319195371cff8cf252db67e987ee6ac1fa3c660a",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "5a4f4459fed3af0e56f3f05d319195371cff8cf252db67e987ee6ac1fa3c660a",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "c9ce1343a6ad68ac88f50c80e2d69de062981916059bbea43ee702a8143e47dc",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "c9ce1343a6ad68ac88f50c80e2d69de062981916059bbea43ee702a8143e47dc",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "3532137377dcc1229d6f247e92f0bd992cf56a1551123470cfffdc586f32bf0c",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "3532137377dcc1229d6f247e92f0bd992cf56a1551123470cfffdc586f32bf0c",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "aab2a0e5d2a47a6562584546bd2d7925a4c44fc5b4ef15d21478a3f8ec594519",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "aab2a0e5d2a47a6562584546bd2d7925a4c44fc5b4ef15d21478a3f8ec594519",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "0a5b15f712112dd1e4c26787b4a7b083f92a87a6dd0d17358e8baaebee85b799",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "0a5b15f712112dd1e4c26787b4a7b083f92a87a6dd0d17358e8baaebee85b799",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "59916daeae9ff901b3c2c1f2a559c53e0d0bf4406049b21ea2c951eab2895e31",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "59916daeae9ff901b3c2c1f2a559c53e0d0bf4406049b21ea2c951eab2895e31",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "2c6fbc7bca3aeb3aabfb2415339ea1d0e075cb8b842a79d8943cb5a197ae979a",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "2c6fbc7bca3aeb3aabfb2415339ea1d0e075cb8b842a79d8943cb5a197ae979a",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "c2846c8bfb2a9a2ac4f5791462e34c1432a62c2763e6b170ee90d69c7f3ae2e2",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "9f75d30b7961aab21e0ade4199a26b7885ee33d7f16f30715c0d47b905b5ee9c",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "2de9407eef5724eb63db4c81901703c6342f720bd5afb7836d401750c12ea82d",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "2de9407eef5724eb63db4c81901703c6342f720bd5afb7836d401750c12ea82d",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "67f6a5871764f0d7ece7f364c6229937cf0826ae33e70f2912fc981a6bc1aeb2",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "6de55518f3a0020de5afaac54347ab6c5a5a2223cb3b919906956e97885f274e",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "6de55518f3a0020de5afaac54347ab6c5a5a2223cb3b919906956e97885f274e",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "c2fa07c08db37060f61cefdcf5bf77a4b0c478228c81a855bf00384166982cab",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "868f194c2790ea6467b36bcffbe9aa57fa40f6347696bd72e1b3a2c76599cc9a",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "868f194c2790ea6467b36bcffbe9aa57fa40f6347696bd72e1b3a2c76599cc9a",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "fca80a52b5c1694294bf027c04279c3826ba53f6472ec21c83f46229c00e52da",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "fca80a52b5c1694294bf027c04279c3826ba53f6472ec21c83f46229c00e52da",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "419b15937f5479f8662dbf7b81e03b8b43ea2e2f60fd08ba7770a2e029585535",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "419b15937f5479f8662dbf7b81e03b8b43ea2e2f60fd08ba7770a2e029585535",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "74a47a670ed34563bff774b06a87b911b5616901e671ca4daffc5538f751b1b1",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "74a47a670ed34563bff774b06a87b911b5616901e671ca4daffc5538f751b1b1",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "0ea581cbd88cbe12c9300db74a7587b6c4f33b37387422d9c9ed3bc3b854e0c5",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "e29ec873c0c9d93638d24b87d3329caab4de58f400f26c73d9b9cfe6ecc87d2e",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "e29ec873c0c9d93638d24b87d3329caab4de58f400f26c73d9b9cfe6ecc87d2e",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "1154eeb1bba03b38b342060750f7203f391f8793ffa1854e300cad844dd6f6eb",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "1154eeb1bba03b38b342060750f7203f391f8793ffa1854e300cad844dd6f6eb",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "7fa6088b012b767e641f7bc8c7c29b4621063fdfacbef05b85a8797edd18ac51",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "7fa6088b012b767e641f7bc8c7c29b4621063fdfacbef05b85a8797edd18ac51",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "7847d5a3b207f396349d8f34acaa4174f4e94b0d8ff7cf2412c6ac47e479eb40",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "7847d5a3b207f396349d8f34acaa4174f4e94b0d8ff7cf2412c6ac47e479eb40",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "e4be62c9a42366efe44b25ff003d0ce971155fa31808b2a034af95e8c6e93b16",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "e4be62c9a42366efe44b25ff003d0ce971155fa31808b2a034af95e8c6e93b16",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "f704859d629aeec721b054ff347533299220a258f8f1b1899d518cb48890b2a0",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "f704859d629aeec721b054ff347533299220a258f8f1b1899d518cb48890b2a0",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "744b6022f6d9fa52e99de22abd883020ebf3b8c845d4967bfee9f5005ddc26c6",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "744b6022f6d9fa52e99de22abd883020ebf3b8c845d4967bfee9f5005ddc26c6",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "b2450a500447a916731801a67e937171a71c3d044d9587854dad2a8965490ba2",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "b2450a500447a916731801a67e937171a71c3d044d9587854dad2a8965490ba2",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "2f0d915de8c30d228ac01956bb8ea3aab6e0845c38826e6294515ce41dab6d87",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "2f0d915de8c30d228ac01956bb8ea3aab6e0845c38826e6294515ce41dab6d87",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "39fe897ad8dfa181e882561206cec2b57b74f7c87a890ed7e22d8e19f3e64586",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "39fe897ad8dfa181e882561206cec2b57b74f7c87a890ed7e22d8e19f3e64586",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "477b395cc9ae7b4a4f8b07678118b74624b4ef78a20d983a2e33b9faa0e7c86f",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "477b395cc9ae7b4a4f8b07678118b74624b4ef78a20d983a2e33b9faa0e7c86f",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "141ec640b2ea4b5da47e2160e3ceb16191a8db4928670c0482e61bbafb3c00db",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "141ec640b2ea4b5da47e2160e3ceb16191a8db4928670c0482e61bbafb3c00db",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "473d6b1488aab6a793dd0d608712e61269d40baa45803b4f6d57c8c056d092a5",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "c9ec34f75d44ee2fa9f23c1141819265f77848e08f38ae34734a9eafe801cf32",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "68eec56db591e0b98fdd909694e268d623cf98a11cfc0cba012f09ed81a8d431",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "68eec56db591e0b98fdd909694e268d623cf98a11cfc0cba012f09ed81a8d431",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "fa9006565cd8ec9e4f373eba28eb2feddfda22ed6216fe56ca1fa07ed28e09b6",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "9650e44689e1df9247377a28fd5286ab769f5a48cad5829d8f52582953e10d37",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "9650e44689e1df9247377a28fd5286ab769f5a48cad5829d8f52582953e10d37",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "8e83a658c7694ce2b56b69fa7c51393be43bf3f743d5df474cec04a3fc02aa56",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "adfd3c29c98f665f698762c72ee9b356a044b587a43da8e95bddef354057ed71",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "adfd3c29c98f665f698762c72ee9b356a044b587a43da8e95bddef354057ed71",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "f366c75dbdab6e345e0b17f9bb0be8d58a84aed2abc40b34b47aa6637af1b74a",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "f366c75dbdab6e345e0b17f9bb0be8d58a84aed2abc40b34b47aa6637af1b74a",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "dd6c779b844302dad7ea0f44ce4506cc7a754ae6ca2257a3f041e4ffb7920ed5",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "dd6c779b844302dad7ea0f44ce4506cc7a754ae6ca2257a3f041e4ffb7920ed5",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "f53d960ad7f64cfaa427abfae1be20f7074ddc16a3caa6640383046e93b9904a",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "f53d960ad7f64cfaa427abfae1be20f7074ddc16a3caa6640383046e93b9904a",
+      "strategy": "utility-preserving"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "aa32f806fc6314c1aa67ae59a919daa423644add42cef3e9d18668999ae8c6ef",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "711d0154557592626e3c6e644f60f2bd9fdd6171bb6110f9d6a79f61bcf303e0",
+      "strategy": "balanced"
+    },
+    {
+      "mismatch_fields": [
+        "local_policy_configuration"
+      ],
+      "pair_key": "711d0154557592626e3c6e644f60f2bd9fdd6171bb6110f9d6a79f61bcf303e0",
+      "strategy": "utility-preserving"
+    }
+  ],
+  "reason": "Balanced and utility strategy comparisons use unmatched receiver-local policy configuration and are excluded from causal A1/A2 inference.",
+  "source": "artifacts/federated-domain-v0.6-evidence/pairs/paired-results.jsonl"
+}

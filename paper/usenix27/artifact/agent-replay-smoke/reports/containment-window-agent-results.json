@@ -1,0 +1,128 @@
+[
+  {
+    "context_delivered": false,
+    "harmful_actions_blocked": 0,
+    "harmful_actions_forwarded": 2,
+    "scenario": "RA-01",
+    "treatment": "NO_CONTEXT"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 2,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-01",
+    "treatment": "INSIDE_WINDOW_EARLY"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 2,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-01",
+    "treatment": "INSIDE_WINDOW_BOUNDARY"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 1,
+    "harmful_actions_forwarded": 1,
+    "scenario": "RA-01",
+    "treatment": "OUTSIDE_WINDOW"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 1,
+    "harmful_actions_forwarded": 1,
+    "scenario": "RA-01",
+    "treatment": "POST_LOCAL_DETECTION"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 0,
+    "harmful_actions_forwarded": 2,
+    "scenario": "RA-01",
+    "treatment": "POST_LOCAL_CONTAINMENT"
+  },
+  {
+    "context_delivered": false,
+    "harmful_actions_blocked": 0,
+    "harmful_actions_forwarded": 4,
+    "scenario": "RA-02",
+    "treatment": "NO_CONTEXT"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 4,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-02",
+    "treatment": "INSIDE_WINDOW_EARLY"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 4,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-02",
+    "treatment": "INSIDE_WINDOW_BOUNDARY"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 3,
+    "harmful_actions_forwarded": 1,
+    "scenario": "RA-02",
+    "treatment": "OUTSIDE_WINDOW"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 3,
+    "harmful_actions_forwarded": 1,
+    "scenario": "RA-02",
+    "treatment": "POST_LOCAL_DETECTION"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 2,
+    "harmful_actions_forwarded": 2,
+    "scenario": "RA-02",
+    "treatment": "POST_LOCAL_CONTAINMENT"
+  },
+  {
+    "context_delivered": false,
+    "harmful_actions_blocked": 0,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-03",
+    "treatment": "NO_CONTEXT"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 0,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-03",
+    "treatment": "INSIDE_WINDOW_EARLY"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 0,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-03",
+    "treatment": "INSIDE_WINDOW_BOUNDARY"
+  },
+  {
+    "context_delivered": true,
+    "harmful_actions_blocked": 0,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-03",
+    "treatment": "OUTSIDE_WINDOW"
+  },
+  {
+    "context_delivered": false,
+    "harmful_actions_blocked": 0,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-03",
+    "treatment": "POST_LOCAL_DETECTION"
+  },
+  {
+    "context_delivered": false,
+    "harmful_actions_blocked": 0,
+    "harmful_actions_forwarded": 0,
+    "scenario": "RA-03",
+    "treatment": "POST_LOCAL_CONTAINMENT"
+  }
+]

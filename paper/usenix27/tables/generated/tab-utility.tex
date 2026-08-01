@@ -1,0 +1,8 @@
+\begin{table*}[t]\centering\scriptsize
+\caption{Measured RA-03 availability cost under selected synthetic false-warning treatments and capability restriction; this is not a universal false-positive rate.}
+\begin{tabular}{@{}p{0.22\textwidth}rrrp{0.23\textwidth}p{0.21\textwidth}@{}}\toprule
+Treatment group & Attempted & Forwarded & Constrained & Workflow completion & Affected capability \\ \midrule
+Inside-window early and boundary & 120 & 80 & 40 & 0/40 & repository.write in frozen benign metadata workflow \\
+No context, outside window, post-detection, and post-containment & 240 & 240 & 0 & 80/80 & no restriction in these treatments \\ \midrule
+All selected treatments & \BenignAttempted & \BenignForwarded & \BenignConstrained & \WorkflowCompleted/\WorkflowTotal (\WorkflowCompletionRate) & selected synthetic capability restriction \\ \bottomrule
+\end{tabular}\label{tab:utility}\end{table*}

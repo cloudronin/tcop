@@ -1,0 +1,16 @@
+\section{Deterministic Evaluation}
+
+The deterministic evaluation compares isolated capable local observers (A1) against the same receiver configuration with valid imported context (A2). It holds local facts, local policy, strategy, and action inputs fixed before treatment effects. TCOP transports observations but creates no detections. Exact replay and frozen strategies make the paired result auditable.
+
+For containment-first, the study includes \DeterministicPairs{} strict input-equivalent pairs. It improves \DeterministicImproved{}, leaves \DeterministicUnchanged{} unchanged, worsens \DeterministicWorsened{}, and prevents \DeterministicActionsPrevented{} harmful actions. Figure~\ref{fig:deterministic} exposes the unchanged cases rather than presenting only improved cells.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{deterministic-outcomes}
+\caption{Deterministic strict-pair outcomes. The full matched population includes improved and unchanged pairs; no pair worsened.}
+\label{fig:deterministic}
+\end{figure}
+
+\input{tables/generated/tab-deterministic-summary}
+
+The study deliberately excludes \DeterministicExcludedPairs{} candidate balanced and utility comparisons from causal A1/A2 inference because their receiver-local policies do not match. A fact-equivalent central audit includes \CentralAuditCells{} cells and finds \CentralRegressions{} regressions associated with authority placement or central outage. This bounded comparison does not establish universal superiority to centralized defense; it demonstrates that a receiver-local decision path avoids those specific evaluated dependencies.

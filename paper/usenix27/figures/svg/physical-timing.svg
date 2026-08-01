@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="355.8025pt" height="162.225998pt" viewBox="0 0 355.8025 162.225998" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-01T13:42:57.765441</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 162.225998 
+L 355.8025 162.225998 
+L 355.8025 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 36.1225 131.325248 
+L 348.6025 131.325248 
+L 348.6025 25.197248 
+L 36.1225 25.197248 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 50.326136 131.325248 
+L 131.489773 131.325248 
+L 131.489773 37.682895 
+L 50.326136 37.682895 
+z
+" clip-path="url(#p99e0bc1bc7)" style="fill: #8da0cb"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 151.780682 131.325248 
+L 232.944318 131.325248 
+L 232.944318 131.325248 
+L 151.780682 131.325248 
+z
+" clip-path="url(#p99e0bc1bc7)" style="fill: #8da0cb"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 253.235227 131.325248 
+L 334.398864 131.325248 
+L 334.398864 100.11113 
+L 253.235227 100.11113 
+z
+" clip-path="url(#p99e0bc1bc7)" style="fill: #8da0cb"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 50.326136 37.682895 
+L 131.489773 37.682895 
+L 131.489773 37.682895 
+L 50.326136 37.682895 
+z
+" clip-path="url(#p99e0bc1bc7)" style="fill: #66a061"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 151.780682 131.325248 
+L 232.944318 131.325248 
+L 232.944318 37.682895 
+L 151.780682 37.682895 
+z
+" clip-path="url(#p99e0bc1bc7)" style="fill: #66a061"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 253.235227 100.11113 
+L 334.398864 100.11113 
+L 334.398864 37.682895 
+L 253.235227 37.682895 
+z
+" clip-path="url(#p99e0bc1bc7)" style="fill: #66a061"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mcab63d59fe" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mcab63d59fe" x="90.907955" y="131.325248" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font: 8px 'DejaVu Sans'" transform="translate(85.626705 144.403998)">A1</text>
+      <text style="font: 8px 'DejaVu Sans'" transform="translate(69.57733 153.362248)">no context</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mcab63d59fe" x="192.3625" y="131.325248" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font: 8px 'DejaVu Sans'" transform="translate(187.08125 144.403998)">A2</text>
+      <text style="font: 8px 'DejaVu Sans'" transform="translate(145.829375 153.362248)">before first opportunity</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mcab63d59fe" x="293.817045" y="131.325248" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font: 8px 'DejaVu Sans'" transform="translate(288.535795 144.403998)">A2</text>
+      <text style="font: 8px 'DejaVu Sans'" transform="translate(260.35517 153.362248)">after initial harm</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <defs>
+       <path id="me261802977" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#me261802977" x="36.1225" y="131.325248" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font: 8px 'DejaVu Sans'; text-anchor: end" x="29.1225" y="134.364623" transform="rotate(-0 29.1225 134.364623)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#me261802977" x="36.1225" y="100.11113" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font: 8px 'DejaVu Sans'; text-anchor: end" x="29.1225" y="103.150505" transform="rotate(-0 29.1225 103.150505)">10</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#me261802977" x="36.1225" y="68.897012" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font: 8px 'DejaVu Sans'; text-anchor: end" x="29.1225" y="71.936387" transform="rotate(-0 29.1225 71.936387)">20</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#me261802977" x="36.1225" y="37.682895" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font: 8px 'DejaVu Sans'; text-anchor: end" x="29.1225" y="40.72227" transform="rotate(-0 29.1225 40.72227)">30</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font: 8px 'DejaVu Sans'; text-anchor: middle" x="13.27875" y="78.261248" transform="rotate(-90 13.27875 78.261248)">Harmful calls</text>
+    </g>
+   </g>
+   <g id="patch_9">
+    <path d="M 36.1225 131.325248 
+L 36.1225 25.197248 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 348.6025 131.325248 
+L 348.6025 25.197248 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 36.1225 131.325248 
+L 348.6025 131.325248 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 36.1225 25.197248 
+L 348.6025 25.197248 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #ffffff; font: 700 7px 'DejaVu Sans'; text-anchor: middle" x="90.907955" y="86.435634" transform="rotate(-0 90.907955 86.435634)">30</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #ffffff; font: 700 7px 'DejaVu Sans'; text-anchor: middle" x="192.3625" y="86.435634" transform="rotate(-0 192.3625 86.435634)">30</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #ffffff; font: 700 7px 'DejaVu Sans'; text-anchor: middle" x="293.817045" y="117.649751" transform="rotate(-0 293.817045 117.649751)">10</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #ffffff; font: 700 7px 'DejaVu Sans'; text-anchor: middle" x="293.817045" y="70.828575" transform="rotate(-0 293.817045 70.828575)">20</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_13">
+     <path d="M 86.33 15.318906 
+L 100.33 15.318906 
+L 100.33 10.418906 
+L 86.33 10.418906 
+z
+" style="fill: #8da0cb"/>
+    </g>
+    <g id="text_13">
+     <text style="font: 7px 'DejaVu Sans'; text-anchor: start" x="105.93" y="15.318906" transform="rotate(-0 105.93 15.318906)">Forwarded harmful calls</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 204.09625 15.318906 
+L 218.09625 15.318906 
+L 218.09625 10.418906 
+L 204.09625 10.418906 
+z
+" style="fill: #66a061"/>
+    </g>
+    <g id="text_14">
+     <text style="font: 7px 'DejaVu Sans'; text-anchor: start" x="223.69625" y="15.318906" transform="rotate(-0 223.69625 15.318906)">Blocked harmful calls</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p99e0bc1bc7">
+   <rect x="36.1225" y="25.197248" width="312.48" height="106.128"/>
+  </clipPath>
+ </defs>
+</svg>

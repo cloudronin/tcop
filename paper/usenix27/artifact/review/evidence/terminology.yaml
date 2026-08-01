@@ -1,0 +1,17 @@
+trust_domain: An independently governed security or administrative domain that observes
+  locally and retains local enforcement authority.
+tcx_context: Signed, scoped, time-bounded evidence/context exchanged between domains.
+receiver_local_decision: A decision created by the receiving domain using its own
+  correlation, strategy, and policy.
+containment_window: The interval during which imported context can still change local
+  enforcement before a specified harmful action completes.
+blast_radius_reduction: Prevention or restriction of subsequent harmful actions after
+  some earlier harm may already have occurred.
+interaction_receipt: An opaque Domain-B-minted correlation handle. It is neither an
+  authorization token nor an enforcement command.
+physical_treatment_labels:
+- before the first harmful opportunity
+- at the first-action authorization boundary
+- after initial harm but before subsequent harmful actions
+- after receiver-local detection
+- after partial local containment

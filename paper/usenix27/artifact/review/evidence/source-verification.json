@@ -1,0 +1,270 @@
+{
+  "amendment_chain": [
+    {
+      "amendment": "base-live",
+      "artifact_digest": "e5cf49806b7049d6b66018ba41b618d0be4ce9505e8be17b62fe932e008d8519",
+      "artifact_path": "artifacts/v0.6-agent-validation-live",
+      "declared_predecessor_digest": null,
+      "digest_match": true,
+      "predecessor_digest": null,
+      "predecessor_match": true,
+      "predecessor_path": null,
+      "reason": "sealed initial provider failure",
+      "recorded_digest": "e5cf49806b7049d6b66018ba41b618d0be4ce9505e8be17b62fe932e008d8519"
+    },
+    {
+      "amendment": "001",
+      "artifact_digest": "698ca3c116af6f8bcc74028731fb79543286d162bbc3abef01b13e0ee740aba5",
+      "artifact_path": "artifacts/v0.6-agent-validation-live-amendment-001",
+      "declared_predecessor_digest": "e5cf49806b7049d6b66018ba41b618d0be4ce9505e8be17b62fe932e008d8519",
+      "digest_match": true,
+      "predecessor_digest": "e5cf49806b7049d6b66018ba41b618d0be4ce9505e8be17b62fe932e008d8519",
+      "predecessor_match": true,
+      "predecessor_path": "artifacts/v0.6-agent-validation-live",
+      "reason": "provider completion-token field",
+      "recorded_digest": "698ca3c116af6f8bcc74028731fb79543286d162bbc3abef01b13e0ee740aba5"
+    },
+    {
+      "amendment": "002",
+      "artifact_digest": "f9bccfcaeff8b9e256c679b5b6938bc3cfd3fd895e3a9a1129c93498d5df1652",
+      "artifact_path": "artifacts/v0.6-agent-validation-live-amendment-002",
+      "declared_predecessor_digest": "698ca3c116af6f8bcc74028731fb79543286d162bbc3abef01b13e0ee740aba5",
+      "digest_match": true,
+      "predecessor_digest": "698ca3c116af6f8bcc74028731fb79543286d162bbc3abef01b13e0ee740aba5",
+      "predecessor_match": true,
+      "predecessor_path": "artifacts/v0.6-agent-validation-live-amendment-001",
+      "reason": "provider reasoning mode",
+      "recorded_digest": "f9bccfcaeff8b9e256c679b5b6938bc3cfd3fd895e3a9a1129c93498d5df1652"
+    },
+    {
+      "amendment": "003",
+      "artifact_digest": "cebc669a7a3cb8566d512d3be5c48d759c1676b461950ff9fbb0a10b2a967e96",
+      "artifact_path": "artifacts/v0.6-agent-validation-live-amendment-003",
+      "declared_predecessor_digest": "f9bccfcaeff8b9e256c679b5b6938bc3cfd3fd895e3a9a1129c93498d5df1652",
+      "digest_match": true,
+      "predecessor_digest": "f9bccfcaeff8b9e256c679b5b6938bc3cfd3fd895e3a9a1129c93498d5df1652",
+      "predecessor_match": true,
+      "predecessor_path": "artifacts/v0.6-agent-validation-live-amendment-002",
+      "reason": "RA-03 eligibility alignment",
+      "recorded_digest": "cebc669a7a3cb8566d512d3be5c48d759c1676b461950ff9fbb0a10b2a967e96"
+    },
+    {
+      "amendment": "004",
+      "artifact_digest": "24a20e9c48a2061874503ed56b54f68d1de92bc6a6800a42fb5398170fbd17bd",
+      "artifact_path": "artifacts/v0.6-agent-validation-live-final",
+      "declared_predecessor_digest": "cebc669a7a3cb8566d512d3be5c48d759c1676b461950ff9fbb0a10b2a967e96",
+      "digest_match": true,
+      "predecessor_digest": "cebc669a7a3cb8566d512d3be5c48d759c1676b461950ff9fbb0a10b2a967e96",
+      "predecessor_match": true,
+      "predecessor_path": "artifacts/v0.6-agent-validation-live-amendment-003",
+      "reason": "completion-gate ordering",
+      "recorded_digest": "24a20e9c48a2061874503ed56b54f68d1de92bc6a6800a42fb5398170fbd17bd"
+    },
+    {
+      "amendment": "005",
+      "artifact_digest": "2b1f92ff4481f6f3cb9a591c4ae77a3325757c4063d7c42439782e0474845f64",
+      "artifact_path": "artifacts/v0.6-agent-validation-live-certified",
+      "declared_predecessor_digest": "24a20e9c48a2061874503ed56b54f68d1de92bc6a6800a42fb5398170fbd17bd",
+      "digest_match": true,
+      "predecessor_digest": "24a20e9c48a2061874503ed56b54f68d1de92bc6a6800a42fb5398170fbd17bd",
+      "predecessor_match": true,
+      "predecessor_path": "artifacts/v0.6-agent-validation-live-final",
+      "reason": "derived RA-03 utility reconciliation",
+      "recorded_digest": "2b1f92ff4481f6f3cb9a591c4ae77a3325757c4063d7c42439782e0474845f64"
+    },
+    {
+      "amendment": "006",
+      "artifact_digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+      "artifact_path": "artifacts/v0.6-agent-validation-live-origin-certified",
+      "declared_predecessor_digest": "2b1f92ff4481f6f3cb9a591c4ae77a3325757c4063d7c42439782e0474845f64",
+      "digest_match": true,
+      "predecessor_digest": "2b1f92ff4481f6f3cb9a591c4ae77a3325757c4063d7c42439782e0474845f64",
+      "predecessor_match": true,
+      "predecessor_path": "artifacts/v0.6-agent-validation-live-certified",
+      "reason": "physical tcopd-a relay replay",
+      "recorded_digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b"
+    }
+  ],
+  "artifacts": [
+    {
+      "amendment_references": [],
+      "artifact_command_result": {
+        "artifact_root": "artifacts/v0.6-agent-validation-live-origin-certified",
+        "artifact_root_digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+        "complete": true,
+        "local_authority_invariants": true,
+        "replay_equivalence": true,
+        "run_count": 264,
+        "scripted_parent_unchanged": true,
+        "source_evidence_digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "source_federation_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "study": "TCOP v0.6 agent-based external validation",
+        "valid": true
+      },
+      "artifact_id": "live-agent-validation-final",
+      "complete": true,
+      "computed_digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+      "expected_digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+      "git_revision": "d135da06f499cd34f64088fd9e19d1c20c1418ef",
+      "parent_references": {
+        "finalization": "runtime-amendment-006",
+        "finalized_from": "artifacts/v0.6-agent-validation-live-certified",
+        "source_evidence_digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "source_federation_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "source_scripted_artifact_digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f"
+      },
+      "pass": true,
+      "reason": null,
+      "recorded_digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+      "relative_path": "artifacts/v0.6-agent-validation-live-origin-certified",
+      "replayability_status": true,
+      "schema_validation_status": true,
+      "verification_command": "tcop artifact verify artifacts/v0.6-agent-validation-live-origin-certified --require-complete --require-replayable --format json",
+      "verification_timestamp": "2026-08-01T00:00:00Z"
+    },
+    {
+      "amendment_references": [],
+      "artifact_command_result": {
+        "artifact_root": "artifacts/v0.6-agent-validation",
+        "artifact_root_digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+        "complete": false,
+        "local_authority_invariants": true,
+        "replay_equivalence": true,
+        "run_count": 18,
+        "scripted_parent_unchanged": true,
+        "source_evidence_digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "source_federation_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "study": "TCOP v0.6 agent-based external validation",
+        "valid": true
+      },
+      "artifact_id": "agent-validation-scripted-parent",
+      "complete": false,
+      "computed_digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+      "expected_digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+      "git_revision": "d135da06f499cd34f64088fd9e19d1c20c1418ef",
+      "parent_references": {
+        "source_evidence_digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "source_federation_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50"
+      },
+      "pass": true,
+      "reason": null,
+      "recorded_digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+      "relative_path": "artifacts/v0.6-agent-validation",
+      "replayability_status": true,
+      "schema_validation_status": true,
+      "verification_command": "tcop artifact verify artifacts/v0.6-agent-validation --require-replayable --format json",
+      "verification_timestamp": "2026-08-01T00:00:00Z"
+    },
+    {
+      "amendment_references": [
+        "spec/v0.6-agent-validation-source-artifact-amendment.md"
+      ],
+      "artifact_command_result": {
+        "artifact_root": "artifacts/federated-domain-v0.6-evidence",
+        "artifact_root_digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "completed_cells": 414,
+        "diagnostic_runs": 129,
+        "included_cells": 414,
+        "missing": [],
+        "remote_enforcement_successes": 0,
+        "replay_failures": 0,
+        "study": "TCOP v0.6 missing-evidence round",
+        "valid": true
+      },
+      "artifact_id": "missing-evidence-round-admitted",
+      "complete": true,
+      "computed_digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+      "expected_digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+      "git_revision": "d135da06f499cd34f64088fd9e19d1c20c1418ef",
+      "parent_references": {
+        "source_artifact_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "source_run_count": 414
+      },
+      "pass": true,
+      "reason": "The unavailable cd26169 source is formally superseded by the admitted retained 0ab19a source.",
+      "recorded_digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+      "relative_path": "artifacts/federated-domain-v0.6-evidence",
+      "replayability_status": true,
+      "schema_validation_status": true,
+      "source_artifact_amendment_verified": true,
+      "verification_command": "tcop artifact verify artifacts/federated-domain-v0.6-evidence --require-complete --require-replayable --format json",
+      "verification_timestamp": "2026-08-01T00:00:00Z"
+    },
+    {
+      "amendment_references": [],
+      "artifact_command_result": {
+        "artifact_root": "artifacts/federated-domain-v0.6",
+        "artifact_root_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "completed_cells": 414,
+        "digest_match": true,
+        "frozen_inputs_verified": true,
+        "included_cells": 414,
+        "invariant_failures": 0,
+        "missing_runs": 0,
+        "replay_failures": 0,
+        "strategies_certified": 4,
+        "study": "TCOP v0.6 federated-domain",
+        "valid": true
+      },
+      "artifact_id": "federated-domain-parent",
+      "complete": true,
+      "computed_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+      "expected_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+      "git_revision": "d135da06f499cd34f64088fd9e19d1c20c1418ef",
+      "parent_references": {},
+      "pass": true,
+      "reason": null,
+      "recorded_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+      "relative_path": "artifacts/federated-domain-v0.6",
+      "replayability_status": true,
+      "schema_validation_status": true,
+      "verification_command": "tcop artifact verify artifacts/federated-domain-v0.6 --require-complete --require-replayable --format json",
+      "verification_timestamp": "2026-08-01T00:00:00Z"
+    }
+  ],
+  "frozen_strategies": [
+    {
+      "computed_digest": "60a4c97851d19c6bcf09d24a063b480e9a29a49dca7e0665ead9013eaf8d2691",
+      "expected_digest": "60a4c97851d19c6bcf09d24a063b480e9a29a49dca7e0665ead9013eaf8d2691",
+      "index_digest": "0f37d198e92cf93904d28bfde091b0cf65c21f9b63a96e4c15d663054ec426f2",
+      "manifest_path": "artifacts/minimality-v0.5-validation/frozen-v0.6-profiles/containment-first.json",
+      "profile_id": "P2",
+      "strategy": "containment-first",
+      "valid": true
+    },
+    {
+      "computed_digest": "4b2dfb385d71ee4ef3e8c598cf7cac4da80fdb62ed8d22d7ad241918c9e69890",
+      "expected_digest": "4b2dfb385d71ee4ef3e8c598cf7cac4da80fdb62ed8d22d7ad241918c9e69890",
+      "index_digest": "0f37d198e92cf93904d28bfde091b0cf65c21f9b63a96e4c15d663054ec426f2",
+      "manifest_path": "artifacts/minimality-v0.5-validation/frozen-v0.6-profiles/balanced.json",
+      "profile_id": "V05_CONSOLIDATION_REDUCED",
+      "strategy": "balanced",
+      "valid": true
+    },
+    {
+      "computed_digest": "7cf402995d0b4c0e6473aaad4cca7b420abcccf35b7844b65935d07ee9db8940",
+      "expected_digest": "7cf402995d0b4c0e6473aaad4cca7b420abcccf35b7844b65935d07ee9db8940",
+      "index_digest": "0f37d198e92cf93904d28bfde091b0cf65c21f9b63a96e4c15d663054ec426f2",
+      "manifest_path": "artifacts/minimality-v0.5-validation/frozen-v0.6-profiles/utility-preserving.json",
+      "profile_id": "F-10110000",
+      "strategy": "utility-preserving",
+      "valid": true
+    },
+    {
+      "computed_digest": "e30ded1303d08c6067a5030d9e1741183bf30af96d218c2143bc1e21db237d96",
+      "expected_digest": "e30ded1303d08c6067a5030d9e1741183bf30af96d218c2143bc1e21db237d96",
+      "index_digest": "0f37d198e92cf93904d28bfde091b0cf65c21f9b63a96e4c15d663054ec426f2",
+      "manifest_path": "artifacts/minimality-v0.5-validation/frozen-v0.6-profiles/forensic-extension.json",
+      "profile_id": "P7",
+      "strategy": "forensic-oriented",
+      "valid": true
+    }
+  ],
+  "pass": true,
+  "schema_validation": {
+    "output": "TCX v0.1 through v0.6 and agent-validation schemas: valid",
+    "passed": true
+  },
+  "verification_timestamp": "2026-08-01T00:00:00Z",
+  "verification_version": "paper-evidence-v1"
+}

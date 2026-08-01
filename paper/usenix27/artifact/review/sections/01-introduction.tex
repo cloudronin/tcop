@@ -1,0 +1,17 @@
+\section{Introduction}
+
+Independently governed domains increasingly interact through autonomous software, delegated workflows, and tool-using agents. A compromise may be observed in one domain before a downstream domain can recognize the resulting requests locally. Existing local controls do not automatically transport timely runtime evidence across that governance boundary. Conversely, a global enforcement service can be infeasible: it can centralize sensitive telemetry, create a high-value outage dependency, or be institutionally unacceptable.
+
+TCOP addresses this coordination problem without transferring enforcement authority. An origin domain exports signed and bounded TCX context. The receiving domain validates it, correlates it to its own local state, selects a receiver-local strategy and policy, and records a receiver-local decision. The imported context is evidence for a local decision, not an instruction to allow, deny, quarantine, revoke, suspend, or select a restriction duration.
+
+The key question is timing. Imported context is useful only while it arrives within the containment window of a consequential action. It may prospectively prevent an early action, reduce blast radius after an initial action, or become forensic and coordination evidence after all relevant actions have completed. This paper evaluates that timing dependence together with authority preservation, failure behavior, and availability cost.
+
+This paper makes four contributions:
+\begin{itemize}
+\item a receiver-sovereign architecture and signed-context protocol boundary for cross-domain early warning;
+\item a containment-window model that distinguishes prospective prevention from subsequent blast-radius reduction;
+\item deterministic matched evaluation with frozen strategies and explicit exclusions for unmatched local policies; and
+\item live-agent trace capture, strict replay, physical federation, and reference-gateway validation with no remote enforcement success.
+\end{itemize}
+
+\input{tables/generated/tab-design-requirements}

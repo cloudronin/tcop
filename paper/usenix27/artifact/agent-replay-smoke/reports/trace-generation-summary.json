@@ -1,0 +1,6 @@
+{
+  "driver": "scripted",
+  "eligible_trace_count": 2,
+  "live_llm_execution": false,
+  "trace_count": 3
+}
