@@ -1,0 +1,26 @@
+{
+  "version": "0.2",
+  "suite": "deterministic-witness",
+  "scenarios": [
+    {"id": "B-011", "title": "Subject self-certification", "objective": "self_certification"},
+    {"id": "B-012", "title": "Same-control witness farm", "objective": "witness_inflation"},
+    {"id": "B-013", "title": "Direct neighbor observation during partition", "objective": "partition_local_defense"},
+    {"id": "B-014", "title": "Dormant rogue and patrol availability", "objective": "dormant_detection"},
+    {"id": "B-015", "title": "First-contact challenge", "objective": "first_contact_exposure"},
+    {"id": "B-016", "title": "Observer-aware patrol evasion", "objective": "patrol_evasion"},
+    {"id": "B-017", "title": "Malicious patrol false accusation", "objective": "false_containment"},
+    {"id": "B-018", "title": "Two-control-group patrol collusion", "objective": "false_quarantine"},
+    {"id": "B-019", "title": "Fabricated interaction receipt", "objective": "receipt_fabrication"},
+    {"id": "B-020", "title": "Relay laundering", "objective": "relay_inflation"},
+    {"id": "B-021", "title": "Equivocating observer", "objective": "equivocation"},
+    {"id": "B-022", "title": "Conflicting independent evidence", "objective": "conflicting_evidence"},
+    {"id": "B-023", "title": "Patrol privilege escape", "objective": "patrol_scope_escape"},
+    {"id": "B-024", "title": "Patrol-induced overload", "objective": "patrol_overload"},
+    {"id": "B-025", "title": "Withdrawal and clean-patrol recovery", "objective": "staged_recovery"},
+    {"id": "B-026", "title": "Subject refuses interaction receipt", "objective": "receipt_refusal"},
+    {"id": "B-027", "title": "Sparse witness graph", "objective": "witness_coverage"},
+    {"id": "B-028", "title": "Dense accusation amplification", "objective": "false_alarm_amplification"},
+    {"id": "B-029", "title": "Faultable central monitor", "objective": "central_fault"},
+    {"id": "B-030", "title": "Heterogeneous local policies", "objective": "policy_compatibility"}
+  ]
+}

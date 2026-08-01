@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcop.example/schemas/witness-edge-v0.1.json",
+  "title": "TCOP witness edge v0.1",
+  "type": "object",
+  "required": ["observer_id", "observer_admin_domain_id", "observer_control_group_id", "subject_id", "subject_admin_domain_id", "subject_control_group_id", "interaction_id", "interaction_type", "observation_mode", "observation_id", "evidence_class", "scope", "issued_at", "expires_at", "receipt_verification_state", "relay_chain"],
+  "properties": {"observer_id": {"type": "string"}, "observer_admin_domain_id": {"type": "string"}, "observer_control_group_id": {"type": "string"}, "subject_id": {"type": "string"}, "subject_admin_domain_id": {"type": "string"}, "subject_control_group_id": {"type": "string"}, "interaction_id": {"type": ["string", "null"]}, "interaction_type": {"type": "string"}, "observation_mode": {"type": "string"}, "observation_id": {"type": "string"}, "evidence_class": {"type": "string"}, "scope": {"type": "array", "items": {"type": "string"}}, "issued_at": {"type": "string"}, "expires_at": {"type": "string"}, "receipt_verification_state": {"type": "string"}, "relay_chain": {"type": "array", "items": {"type": "string"}}},
+  "additionalProperties": false
+}

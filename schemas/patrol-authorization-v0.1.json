@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcop.example/schemas/patrol-authorization-v0.1.json",
+  "title": "TCOP patrol authorization v0.1",
+  "type": "object",
+  "required": ["authorization_id", "patrol_id", "targets", "capabilities", "challenge_profile_id", "issued_at", "expires_at", "query_budget", "rate_limit", "max_concurrency", "synthetic_data_only"],
+  "properties": {
+    "authorization_id": {"type": "string"}, "patrol_id": {"type": "string"},
+    "targets": {"type": "array", "items": {"type": "string"}},
+    "capabilities": {"type": "array", "items": {"type": "string"}},
+    "challenge_profile_id": {"type": "string"}, "issued_at": {"type": "string"}, "expires_at": {"type": "string"},
+    "query_budget": {"type": "integer", "minimum": 0}, "rate_limit": {"type": "integer", "minimum": 1},
+    "max_concurrency": {"type": "integer", "minimum": 1}, "synthetic_data_only": {"const": true}
+  },
+  "additionalProperties": false
+}

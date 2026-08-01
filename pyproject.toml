@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tcop-framework"
-version = "0.1.0"
-description = "Deterministic reference implementation for the Trust Context Project"
+version = "0.2.0"
+description = "Deterministic TCOP reference framework with frozen v0.1 and witness v0.2 profiles"
 requires-python = ">=3.11"
 dependencies = ["cryptography>=41"]
 

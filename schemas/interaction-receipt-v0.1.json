@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcop.example/schemas/interaction-receipt-v0.1.json",
+  "title": "TCOP interaction receipt v0.1",
+  "type": "object",
+  "required": ["receipt_version", "interaction_id", "observer_id", "observer_key_id", "observer_admin_domain_id", "subject_id", "subject_admin_domain_id", "started_at", "completed_at", "request_hash", "response_hash", "capability", "receipt_mode", "observer_signature", "subject_ack_signature"],
+  "properties": {
+    "receipt_version": {"const": "tcop.receipt/0.1"},
+    "interaction_id": {"type": "string", "minLength": 1},
+    "observer_id": {"type": "string"}, "observer_key_id": {"type": "string"},
+    "observer_admin_domain_id": {"type": "string"}, "subject_id": {"type": "string"},
+    "subject_admin_domain_id": {"type": "string"}, "subject_ack_key_id": {"type": ["string", "null"]},
+    "started_at": {"type": "string"}, "completed_at": {"type": "string"},
+    "request_hash": {"type": "string"}, "response_hash": {"type": "string"},
+    "capability": {"type": "string"}, "workflow_id": {"type": ["string", "null"]},
+    "challenge_profile_id": {"type": ["string", "null"]}, "transport_evidence_hash": {"type": ["string", "null"]},
+    "receipt_mode": {"enum": ["bilateral", "unilateral_transport", "third_party_witnessed"]},
+    "observer_signature": {"type": "object"}, "subject_ack_signature": {"type": ["object", "null"]}
+  },
+  "additionalProperties": false
+}
