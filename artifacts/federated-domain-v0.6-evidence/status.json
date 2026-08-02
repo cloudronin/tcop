@@ -1,0 +1,7 @@
+{
+  "artifact_root": "artifacts/federated-domain-v0.6-evidence",
+  "diagnostic_run_count": 129,
+  "passed": true,
+  "stage": "full",
+  "study": "TCOP v0.6 missing-evidence round"
+}

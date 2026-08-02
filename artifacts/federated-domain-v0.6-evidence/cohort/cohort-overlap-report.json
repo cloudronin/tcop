@@ -1,0 +1,15 @@
+{
+  "cohort_count": 27,
+  "primary_assignment_complete": true,
+  "primary_class_counts": {
+    "benign_utility": 18,
+    "false_warning": 36,
+    "forensic": 15,
+    "mechanism_probe": 27,
+    "negative_control": 72,
+    "primary_opportunity": 132,
+    "resilience": 72,
+    "timing_expired": 12,
+    "upper_bound": 30
+  }
+}

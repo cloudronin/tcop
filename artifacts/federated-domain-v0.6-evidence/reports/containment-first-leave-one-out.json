@@ -1,0 +1,58 @@
+[
+  {
+    "excluded_family": "adversarial",
+    "headline_result_preserved": true,
+    "improved_pairs": 27,
+    "mean_harm_delta": -0.7333333333333333,
+    "remaining_pairs": 45,
+    "worsened_pairs": 0
+  },
+  {
+    "excluded_family": "negative_control",
+    "headline_result_preserved": true,
+    "improved_pairs": 30,
+    "mean_harm_delta": -0.8,
+    "remaining_pairs": 45,
+    "worsened_pairs": 0
+  },
+  {
+    "excluded_family": "opportunity",
+    "headline_result_preserved": true,
+    "improved_pairs": 18,
+    "mean_harm_delta": -0.6153846153846154,
+    "remaining_pairs": 39,
+    "worsened_pairs": 0
+  },
+  {
+    "excluded_family": "privacy",
+    "headline_result_preserved": true,
+    "improved_pairs": 27,
+    "mean_harm_delta": -0.6470588235294118,
+    "remaining_pairs": 51,
+    "worsened_pairs": 0
+  },
+  {
+    "excluded_family": "resilience",
+    "headline_result_preserved": true,
+    "improved_pairs": 24,
+    "mean_harm_delta": -0.6666666666666666,
+    "remaining_pairs": 45,
+    "worsened_pairs": 0
+  },
+  {
+    "excluded_family": "timing",
+    "headline_result_preserved": true,
+    "improved_pairs": 24,
+    "mean_harm_delta": -0.5,
+    "remaining_pairs": 48,
+    "worsened_pairs": 0
+  },
+  {
+    "excluded_family": "utility",
+    "headline_result_preserved": true,
+    "improved_pairs": 30,
+    "mean_harm_delta": -0.7058823529411765,
+    "remaining_pairs": 51,
+    "worsened_pairs": 0
+  }
+]

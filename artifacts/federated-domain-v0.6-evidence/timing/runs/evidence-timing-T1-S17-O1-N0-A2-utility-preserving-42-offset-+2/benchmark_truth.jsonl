@@ -1,0 +1,1 @@
+{"allowed_reader":"A5_only","at":0,"event_type":"ground_truth","intended_harm_ticks":[2,3,4],"malicious":true,"phase":0,"phase_name":"authored_telemetry","sequence":2,"stream":"benchmark_truth","topology_order":3}

@@ -1,0 +1,1073 @@
+[
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A0:none:primary_deployment_cell",
+    "right_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A1:none:negative_control",
+    "right_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A1:none:primary_deployment_cell",
+    "right_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A1:none:sensitivity_cell",
+    "right_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A2:balanced:negative_control",
+    "right_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A2:balanced:primary_deployment_cell",
+    "right_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A2:balanced:sensitivity_cell",
+    "right_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A2:containment-first:negative_control",
+    "right_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A2:containment-first:primary_deployment_cell",
+    "right_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:negative_control",
+    "left_cell_set_digest": "ae6733152c20981c0304cb43c9d7a193ee1f830b810c2c2a120f14a4147e6373",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A1:none:negative_control",
+    "right_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A1:none:primary_deployment_cell",
+    "right_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A1:none:sensitivity_cell",
+    "right_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A2:balanced:negative_control",
+    "right_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A2:balanced:primary_deployment_cell",
+    "right_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A2:balanced:sensitivity_cell",
+    "right_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A2:containment-first:negative_control",
+    "right_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A2:containment-first:primary_deployment_cell",
+    "right_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A0:none:primary_deployment_cell",
+    "left_cell_set_digest": "06fffb109b957753d2ac99f274956b0894587bbcff8814d613c5e7cd99ea6fd9",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A1:none:primary_deployment_cell",
+    "right_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A1:none:sensitivity_cell",
+    "right_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A2:balanced:negative_control",
+    "right_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A2:balanced:primary_deployment_cell",
+    "right_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A2:balanced:sensitivity_cell",
+    "right_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A2:containment-first:negative_control",
+    "right_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A2:containment-first:primary_deployment_cell",
+    "right_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:negative_control",
+    "left_cell_set_digest": "434841ca32aac3fe15c6a47c3c7768a914045be7198c494d2a0b1885765c07f2",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A1:none:sensitivity_cell",
+    "right_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A2:balanced:negative_control",
+    "right_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A2:balanced:primary_deployment_cell",
+    "right_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A2:balanced:sensitivity_cell",
+    "right_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A2:containment-first:negative_control",
+    "right_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A2:containment-first:primary_deployment_cell",
+    "right_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:primary_deployment_cell",
+    "left_cell_set_digest": "2a5ad32176bbf779f69463edf15dc9380ffae4f6d276f7ba0387128f4962e6af",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A2:balanced:negative_control",
+    "right_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A2:balanced:primary_deployment_cell",
+    "right_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A2:balanced:sensitivity_cell",
+    "right_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A2:containment-first:negative_control",
+    "right_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A2:containment-first:primary_deployment_cell",
+    "right_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A1:none:sensitivity_cell",
+    "left_cell_set_digest": "01113f86e90b7fe9cc507665c14ae89b5945a641a359ad6c12bc68c5431e3c4e",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A2:balanced:primary_deployment_cell",
+    "right_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A2:balanced:sensitivity_cell",
+    "right_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A2:containment-first:negative_control",
+    "right_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A2:containment-first:primary_deployment_cell",
+    "right_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:negative_control",
+    "left_cell_set_digest": "981d290dc8d632d5a84af85877cc37045b4c51eb5af57c54b7d6cc926ccb0fc7",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A2:balanced:sensitivity_cell",
+    "right_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A2:containment-first:negative_control",
+    "right_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A2:containment-first:primary_deployment_cell",
+    "right_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:primary_deployment_cell",
+    "left_cell_set_digest": "0f0e4eafd6b4f1e29f4d18a9137ad230cd6689f641a03089fa92d45d5a71d718",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A2:containment-first:negative_control",
+    "right_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A2:containment-first:primary_deployment_cell",
+    "right_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:balanced:sensitivity_cell",
+    "left_cell_set_digest": "795e6d7da12fca195cad55aaee1ec4208d5c712c9a609d58f99423440ec94aa4",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:negative_control",
+    "left_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "right": "aggregate:A2:containment-first:primary_deployment_cell",
+    "right_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:negative_control",
+    "left_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:negative_control",
+    "left_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:negative_control",
+    "left_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:negative_control",
+    "left_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:negative_control",
+    "left_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:negative_control",
+    "left_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:negative_control",
+    "left_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:negative_control",
+    "left_cell_set_digest": "fddaac1de55964eca177b612a4c2c28a1860db633f740e12e2b1748a8d0a273b",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:primary_deployment_cell",
+    "left_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc",
+    "right": "aggregate:A2:forensic-oriented:forensic_cell",
+    "right_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:primary_deployment_cell",
+    "left_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:primary_deployment_cell",
+    "left_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:primary_deployment_cell",
+    "left_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:primary_deployment_cell",
+    "left_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:primary_deployment_cell",
+    "left_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:primary_deployment_cell",
+    "left_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:containment-first:primary_deployment_cell",
+    "left_cell_set_digest": "8fe3dc48f45d6214092527e8e029e31814f553f21b3d4dc2706d2dd283de90fc",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:forensic-oriented:forensic_cell",
+    "left_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024",
+    "right": "aggregate:A2:utility-preserving:negative_control",
+    "right_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:forensic-oriented:forensic_cell",
+    "left_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:forensic-oriented:forensic_cell",
+    "left_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:forensic-oriented:forensic_cell",
+    "left_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:forensic-oriented:forensic_cell",
+    "left_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:forensic-oriented:forensic_cell",
+    "left_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:forensic-oriented:forensic_cell",
+    "left_cell_set_digest": "26cd550c412cf517260de57b85fbb4f94203083155ec495bfa60b36e08bf4024",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:negative_control",
+    "left_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda",
+    "right": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "right_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:negative_control",
+    "left_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:negative_control",
+    "left_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:negative_control",
+    "left_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:negative_control",
+    "left_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:negative_control",
+    "left_cell_set_digest": "9addf956b3684b3844cccea405a78d127dbdae8b371a22c566f40236ea3bafda",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "left_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c",
+    "right": "aggregate:A3:none:negative_control",
+    "right_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "left_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "left_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "left_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A2:utility-preserving:primary_deployment_cell",
+    "left_cell_set_digest": "eb39564ff3158b345dabddb37b08b0ee2e66d406ca7380448d20cf1c1fb4502c",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A3:none:negative_control",
+    "left_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e",
+    "right": "aggregate:A3:none:primary_deployment_cell",
+    "right_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A3:none:negative_control",
+    "left_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A3:none:negative_control",
+    "left_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A3:none:negative_control",
+    "left_cell_set_digest": "87b215cbe341e33faf010af050f1c60eeb94449b57c22b0f46c3a2792712043e",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A3:none:primary_deployment_cell",
+    "left_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9",
+    "right": "aggregate:A3:none:sensitivity_cell",
+    "right_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A3:none:primary_deployment_cell",
+    "left_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A3:none:primary_deployment_cell",
+    "left_cell_set_digest": "58614c20c26272fb2f301b2f7144b82173d3f5f7163a226ac8d4e57ea73d1ac9",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A3:none:sensitivity_cell",
+    "left_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4",
+    "right": "aggregate:A4:none:upper_bound",
+    "right_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A3:none:sensitivity_cell",
+    "left_cell_set_digest": "c62b45a439813c8ba90731370322aa112a281567ea1be4be347f631f500fc7b4",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  },
+  {
+    "directly_comparable": false,
+    "left": "aggregate:A4:none:upper_bound",
+    "left_cell_set_digest": "e5b6d7a123a9b5417c140ca71d432ff67ef2cf243cc0e338bd34e7579079580a",
+    "right": "aggregate:A5:none:upper_bound",
+    "right_cell_set_digest": "7c6b59ce889a1360580a1931e27750ae344da62208f27054c1adcbd4272453ad"
+  }
+]

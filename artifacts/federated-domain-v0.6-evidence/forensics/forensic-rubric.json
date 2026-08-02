@@ -1,0 +1,6 @@
+{
+  "digest": "d8f6a0b20a14d4b748ca27644b4aa94553471494b446f6e47f3bc7bd3fdef33f",
+  "frozen_before_run": true,
+  "path": "benchmark/rubrics/v0.6-forensic-quality.yaml",
+  "runtime_truth_access": "prohibited"
+}

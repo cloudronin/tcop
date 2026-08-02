@@ -1,0 +1,146 @@
+[
+  {
+    "earliest_effective_receipt_offset": -2,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": 1,
+    "latest_receipt_that_prevents_harm": 0,
+    "scenario_id": "S01",
+    "strategy": "containment-first"
+  },
+  {
+    "earliest_effective_receipt_offset": null,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": null,
+    "scenario_id": "S01",
+    "strategy": "balanced"
+  },
+  {
+    "earliest_effective_receipt_offset": null,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": null,
+    "scenario_id": "S01",
+    "strategy": "utility-preserving"
+  },
+  {
+    "earliest_effective_receipt_offset": -2,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": 1,
+    "latest_receipt_that_prevents_harm": 0,
+    "scenario_id": "S02",
+    "strategy": "containment-first"
+  },
+  {
+    "earliest_effective_receipt_offset": 1,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": 4,
+    "scenario_id": "S02",
+    "strategy": "balanced"
+  },
+  {
+    "earliest_effective_receipt_offset": 1,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": 4,
+    "scenario_id": "S02",
+    "strategy": "utility-preserving"
+  },
+  {
+    "earliest_effective_receipt_offset": -2,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": 1,
+    "latest_receipt_that_prevents_harm": 0,
+    "scenario_id": "S03",
+    "strategy": "containment-first"
+  },
+  {
+    "earliest_effective_receipt_offset": 1,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": 4,
+    "scenario_id": "S03",
+    "strategy": "balanced"
+  },
+  {
+    "earliest_effective_receipt_offset": 1,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": 4,
+    "scenario_id": "S03",
+    "strategy": "utility-preserving"
+  },
+  {
+    "earliest_effective_receipt_offset": -2,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": 1,
+    "latest_receipt_that_prevents_harm": 0,
+    "scenario_id": "S04",
+    "strategy": "containment-first"
+  },
+  {
+    "earliest_effective_receipt_offset": null,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": null,
+    "scenario_id": "S04",
+    "strategy": "balanced"
+  },
+  {
+    "earliest_effective_receipt_offset": null,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": null,
+    "scenario_id": "S04",
+    "strategy": "utility-preserving"
+  },
+  {
+    "earliest_effective_receipt_offset": -2,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": 1,
+    "latest_receipt_that_prevents_harm": 0,
+    "scenario_id": "S11",
+    "strategy": "containment-first"
+  },
+  {
+    "earliest_effective_receipt_offset": null,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": null,
+    "scenario_id": "S11",
+    "strategy": "balanced"
+  },
+  {
+    "earliest_effective_receipt_offset": null,
+    "feasible_offset_count": 6,
+    "first_entirely_ineffective_offset": -2,
+    "latest_receipt_that_prevents_harm": null,
+    "scenario_id": "S11",
+    "strategy": "utility-preserving"
+  },
+  {
+    "earliest_effective_receipt_offset": -1,
+    "feasible_offset_count": 5,
+    "first_entirely_ineffective_offset": 1,
+    "latest_receipt_that_prevents_harm": 0,
+    "scenario_id": "S17",
+    "strategy": "containment-first"
+  },
+  {
+    "earliest_effective_receipt_offset": null,
+    "feasible_offset_count": 5,
+    "first_entirely_ineffective_offset": -1,
+    "latest_receipt_that_prevents_harm": null,
+    "scenario_id": "S17",
+    "strategy": "balanced"
+  },
+  {
+    "earliest_effective_receipt_offset": null,
+    "feasible_offset_count": 5,
+    "first_entirely_ineffective_offset": -1,
+    "latest_receipt_that_prevents_harm": null,
+    "scenario_id": "S17",
+    "strategy": "utility-preserving"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "audited_cells": 54,
+  "authority_placement_tested": true,
+  "fact_equivalence_verified": true,
+  "policy_parity_tested": true,
+  "regression_cells": 6,
+  "root_causes": {
+    "authority-placement effect": 3,
+    "central outage": 3,
+    "no_regression": 48
+  }
+}

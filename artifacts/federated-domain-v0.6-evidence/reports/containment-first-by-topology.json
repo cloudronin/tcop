@@ -1,0 +1,35 @@
+[
+  {
+    "eligible_pairs": 18,
+    "improved": 10,
+    "mean_harm_delta": -0.6666666666666666,
+    "median_harm_delta": -1.0,
+    "strategy": "containment-first",
+    "topology": "T1",
+    "total_harmful_actions_prevented": 12,
+    "unchanged": 8,
+    "worsened": 0
+  },
+  {
+    "eligible_pairs": 18,
+    "improved": 10,
+    "mean_harm_delta": -0.6666666666666666,
+    "median_harm_delta": -1.0,
+    "strategy": "containment-first",
+    "topology": "T2",
+    "total_harmful_actions_prevented": 12,
+    "unchanged": 8,
+    "worsened": 0
+  },
+  {
+    "eligible_pairs": 18,
+    "improved": 10,
+    "mean_harm_delta": -0.6666666666666666,
+    "median_harm_delta": -1.0,
+    "strategy": "containment-first",
+    "topology": "T3",
+    "total_harmful_actions_prevented": 12,
+    "unchanged": 8,
+    "worsened": 0
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "a2_export_digests": [
+    "d85773d5332ce71f9e837d5386c819427edef91277b452ba90d9cf6a277a8390",
+    "5f4458ea112cb8ae48e3781652cf683a36a787dc75c807e5bcba437f9bf2bc69"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "evidence-timing-T1-S17-O1-N0-A2-utility-preserving-42-offset-+2",
+    "classification": "mechanism_probe",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "pre-registered missing-evidence receipt-offset sweep",
+    "scenario_id": "S17",
+    "seed": 42,
+    "strategy_id": "utility-preserving",
+    "topology_id": "T1"
+  },
+  "evidence_diagnostic": {
+    "central_strategy": null,
+    "label": "timing",
+    "local_fallback": false,
+    "network": {
+      "central_unavailable": false,
+      "delay": 3,
+      "drop": false,
+      "network_id": "timing-+2",
+      "partition": null
+    }
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": -1,
+    "early_warning_lead_time": 1,
+    "false_containment": false,
+    "first_import_at": 4,
+    "first_protection_at": 0,
+    "forensic_records": 48,
+    "harmful_actions": 3,
+    "prevented_actions": 0,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": true,
+    "false_warning": false,
+    "family": "timing",
+    "harmful_at": [
+      2,
+      3,
+      4
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S17",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Fast cross-domain campaign"
+  },
+  "stream_digest": "5ce898c9938cb01c7520cbb88ba9db6ec2543ba3e8c6223088596bdd76b70144",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

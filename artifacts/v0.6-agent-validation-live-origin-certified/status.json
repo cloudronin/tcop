@@ -1,0 +1,7 @@
+{
+  "artifact_root": "/workspace/artifacts/v0.6-agent-validation-live-amendment-003",
+  "finalization": "runtime-amendment-006",
+  "passed": true,
+  "stage": "live-full",
+  "study": "TCOP v0.6 agent-based external validation"
+}

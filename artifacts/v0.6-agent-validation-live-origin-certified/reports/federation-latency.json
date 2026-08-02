@@ -1,0 +1,19 @@
+{
+  "performance_only": true,
+  "selections": [
+    {
+      "p50_ms": 0.263958,
+      "p95_ms": 0.306083,
+      "p99_ms": 0.327833,
+      "sample_count": 20,
+      "selection": "disabled"
+    },
+    {
+      "p50_ms": 0.271333,
+      "p95_ms": 0.302583,
+      "p99_ms": 0.42475,
+      "sample_count": 20,
+      "selection": "enabled_fixed_ttl_5s"
+    }
+  ]
+}

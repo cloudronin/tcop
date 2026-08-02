@@ -1,0 +1,6 @@
+{
+  "remote_enforcement_successes": 0,
+  "tcopd_a_signed_exchange_trials": 20,
+  "tcopd_b_local_authorization_trials": 30,
+  "trial_count": 30
+}

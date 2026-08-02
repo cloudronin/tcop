@@ -1,0 +1,29 @@
+{
+  "blocking_issues": [],
+  "external_validity_claim_ready": true,
+  "gates": {
+    "frozen_strategies_unchanged": true,
+    "invariants": true,
+    "live_end_to_end_minimums": true,
+    "local_decision_references": true,
+    "minimum_eligible_trace_counts": true,
+    "scripted_parent_unchanged": true,
+    "source_unchanged": true,
+    "strict_replay_matrix": true
+  },
+  "inside_window_prevention": {
+    "improved_pairs": 108,
+    "supported": true,
+    "unchanged_pairs": 112,
+    "worsened_pairs": 0
+  },
+  "outside_window_result": {
+    "forensic_only_value_observed": true,
+    "preventive_value_observed": true
+  },
+  "real_gateway_integration_verified": true,
+  "receipt_correlation_verified": true,
+  "remote_enforcement_successes": 0,
+  "signed_federation_exchange_verified": true,
+  "strict_trace_replay_pairs": 220
+}

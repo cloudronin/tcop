@@ -1,0 +1,86 @@
+{
+  "a2_export_digests": [
+    "38270025351e9ccfccf8726ee1d1082132b95838f2bffe3ab12b1f58a1d1c161",
+    "6889763274c6e1652d1adfe0368e829d7c74a285fdb69ac28119ac8335008342"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "evidence-timing-T1-S03-O1-N0-A2-balanced-42-offset-+1",
+    "classification": "mechanism_probe",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "pre-registered missing-evidence receipt-offset sweep",
+    "scenario_id": "S03",
+    "seed": 42,
+    "strategy_id": "balanced",
+    "topology_id": "T1"
+  },
+  "evidence_diagnostic": {
+    "central_strategy": null,
+    "label": "timing",
+    "local_fallback": false,
+    "network": {
+      "central_unavailable": false,
+      "delay": 4,
+      "drop": false,
+      "network_id": "timing-+1",
+      "partition": null
+    }
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": -1,
+    "early_warning_lead_time": 0,
+    "false_containment": false,
+    "first_import_at": 5,
+    "first_protection_at": 0,
+    "forensic_records": 48,
+    "harmful_actions": 0,
+    "prevented_actions": 2,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "opportunity",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "financial.transfer",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S03",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Credential abuse reaches downstream"
+  },
+  "stream_digest": "87909a14543bfd9d5a657d7bff15f37aa317fbecef1a1c0f713cc560200bd7d4",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

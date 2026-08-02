@@ -1,0 +1,9 @@
+{
+  "excluded": [
+    "upper_bound",
+    "mechanism_probe",
+    "A3 policy parity",
+    "A3 local fallback",
+    "forensic-only preventive"
+  ]
+}

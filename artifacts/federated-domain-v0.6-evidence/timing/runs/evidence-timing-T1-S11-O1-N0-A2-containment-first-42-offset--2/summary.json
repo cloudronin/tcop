@@ -1,0 +1,87 @@
+{
+  "a2_export_digests": [
+    "bdcc484d0d5be8193f47941222922fc16148cd5473d870fde68185a62ef18b40",
+    "494f3b7c0b99b39c1f17e17f5808ec7c2b92210a5f114045c8bed332f6597b09"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "evidence-timing-T1-S11-O1-N0-A2-containment-first-42-offset--2",
+    "classification": "mechanism_probe",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "pre-registered missing-evidence receipt-offset sweep",
+    "scenario_id": "S11",
+    "seed": 42,
+    "strategy_id": "containment-first",
+    "topology_id": "T1"
+  },
+  "evidence_diagnostic": {
+    "central_strategy": null,
+    "label": "timing",
+    "local_fallback": false,
+    "network": {
+      "central_unavailable": false,
+      "delay": 0,
+      "drop": false,
+      "network_id": "timing--2",
+      "partition": null
+    }
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": 0,
+    "early_warning_lead_time": 4,
+    "false_containment": false,
+    "first_import_at": 1,
+    "first_protection_at": 1,
+    "forensic_records": 48,
+    "harmful_actions": 0,
+    "prevented_actions": 3,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "timing",
+    "harmful_at": [
+      3,
+      5,
+      7
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S11",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Delayed imported warning"
+  },
+  "stream_digest": "05292e133dadc42dc08894adb261c2399da0e0f8fe757ee79b8f8fb58c20ca21",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

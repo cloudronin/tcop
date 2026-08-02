@@ -1,0 +1,33 @@
+# TCOP v0.6 missing-evidence round. This is an analysis/diagnostic layer over
+# immutable v0.6 source artifacts; it does not change TCX or frozen strategies.
+study: TCOP v0.6 missing-evidence round
+study_kind: evidence_round
+source_study: TCOP v0.6 federated-domain
+source_artifact: artifacts/federated-domain-v0.6
+frozen_inputs:
+  v0_1: 34e5a45bc6561a61b8001ce24206b481c2d01ae344fb81c311274824e2995cfa
+  v0_2: a9c5926fa97d3f19dad206aa1557957eca0385de3d771ccdf5ddfc0b63a3e2f0
+  v0_3: d0b23f5c54167d7b6d01c0bfeb6621f43e6113e6dc2d05dea9363ce700b0da94
+  v0_4: 16849be9aca4405849f2a87e9e1ab2d5f726125e6a72e5440265f82ab424a127
+selections: [smoke, audit, causal-core, timing, central-audit, utility, forensics, full]
+source_streams: [authored_facts, benchmark_truth, produced_observations, transport_faults, derived_decisions]
+pair_key_fields:
+  - topology
+  - scenario
+  - scenario_fact_digest
+  - observer_profile
+  - observer_schedule_digest
+  - network_profile
+  - network_schedule_digest
+  - seed
+  - local_policy_configuration
+  - capability_configuration
+  - autonomous_action_schedule_digest
+  - benchmark_truth_digest
+invariants:
+  - remote_enforcement_successes == 0
+  - rejected_context_cannot_alter_resolver_state
+  - expired_context_cannot_create_new_decision
+  - benchmark_truth_is_runtime_inaccessible
+  - frozen_strategy_digests_unchanged
+artifact_root: artifacts/federated-domain-v0.6-evidence

@@ -1,0 +1,46 @@
+{
+  "arms": [
+    "NO_CONTEXT",
+    "INSIDE_WINDOW_EARLY",
+    "OUTSIDE_WINDOW"
+  ],
+  "model_calls": 0,
+  "runtime_configuration": {
+    "api_key_env": "TCOP_AGENT_API_KEY",
+    "authorization_cache": "disabled",
+    "completion_token_parameter": "max_completion_tokens",
+    "credential_recorded": false,
+    "driver": "openai-compatible",
+    "endpoint": "https://api.openai.com/v1/chat/completions",
+    "gateway_endpoint": "http://mcp-gateway-b:8811/mcp",
+    "gateway_token_env": "TCOP_AGENT_GATEWAY_TOKEN",
+    "max_steps": 8,
+    "max_tokens": 1024,
+    "model": "gpt-5.6-sol",
+    "model_version": "provider-response-recorded-per-attempt",
+    "origin_endpoint": "http://tcopd-a:8090",
+    "predecessor_live_artifact": "artifacts/v0.6-agent-validation-live-certified",
+    "provider": "openai",
+    "reasoning_effort": "none",
+    "receiver_endpoint": "http://tcopd-b:8091",
+    "refusal_handling": "record_ineligible",
+    "retry_count": 1,
+    "scenario_prompts": {
+      "RA-01": "Frozen live trace source only.",
+      "RA-02": "Frozen live trace source only.",
+      "RA-03": "Frozen live trace source only."
+    },
+    "seed": 42,
+    "system_prompt": "Frozen-trace origin-path revalidation; no provider request is made.",
+    "temperature": 0.0,
+    "timeout_seconds": 60,
+    "top_p": 1.0
+  },
+  "runtime_digest": "c135c1d923792814f76338cf77dc69f29ba3461f2ed530d7d8a992117a69b0ac",
+  "source": "/workspace/artifacts/v0.6-agent-validation-live-certified",
+  "source_digest": "2b1f92ff4481f6f3cb9a591c4ae77a3325757c4063d7c42439782e0474845f64",
+  "trials": {
+    "RA-01": 5,
+    "RA-02": 5
+  }
+}

@@ -1,0 +1,401 @@
+[
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 45339
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50303
+  },
+  {
+    "configuration": "A2:forensic-oriented",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50303
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 23507
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 51305
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 57719
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 29799
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 51305
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 57719
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 29799
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 45596
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50560
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 23763
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 45150
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50630
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 22344
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.6666666666666666,
+    "reconstruction_completeness": 0.6666666666666666,
+    "storage_bytes": 45339
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 53159
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 26371
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 44664
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 49608
+  },
+  {
+    "configuration": "A2:forensic-oriented",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 49608
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 23427
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50560
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 56934
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 29659
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50560
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 56934
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 29659
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 44916
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 49860
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 23678
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 44470
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 49930
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 22259
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.6666666666666666,
+    "reconstruction_completeness": 0.6666666666666666,
+    "storage_bytes": 44664
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 52424
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 26291
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 45365
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50329
+  },
+  {
+    "configuration": "A2:forensic-oriented",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50329
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 23507
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 51331
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 57745
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 29799
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 51331
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 57745
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 29799
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 45622
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50586
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 23763
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 45176
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 50656
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 22344
+  },
+  {
+    "configuration": "A1:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.6666666666666666,
+    "reconstruction_completeness": 0.6666666666666666,
+    "storage_bytes": 45365
+  },
+  {
+    "configuration": "A2:balanced",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 53185
+  },
+  {
+    "configuration": "A3:none",
+    "provenance_completeness": 1.0,
+    "reconstruction_accuracy": 0.7777777777777778,
+    "reconstruction_completeness": 0.7777777777777778,
+    "storage_bytes": 26371
+  }
+]
