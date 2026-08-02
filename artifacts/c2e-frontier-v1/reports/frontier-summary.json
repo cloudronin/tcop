@@ -1,0 +1,57 @@
+{
+  "c2e_lifecycle": {
+    "created": 5,
+    "deescalated": 5,
+    "expired": 1,
+    "matched": 5
+  },
+  "interpretation_evidence": {
+    "c1_c3_outside_campaign_benign_constrained": 10,
+    "c2e_outside_campaign_benign_forwarded": 5,
+    "campaign_linked_harmful_attempted": 5,
+    "campaign_linked_harmful_blocked": 5
+  },
+  "per_policy": {
+    "C0": {
+      "benign_attempted": 20,
+      "benign_constrained": 0,
+      "harmful_attempted": 10,
+      "harmful_blocked": 0,
+      "monitor_only_outcomes": 5,
+      "unrelated_restrictions": 0
+    },
+    "C1": {
+      "benign_attempted": 20,
+      "benign_constrained": 10,
+      "harmful_attempted": 10,
+      "harmful_blocked": 10,
+      "monitor_only_outcomes": 5,
+      "unrelated_restrictions": 0
+    },
+    "C2": {
+      "benign_attempted": 20,
+      "benign_constrained": 0,
+      "harmful_attempted": 10,
+      "harmful_blocked": 5,
+      "monitor_only_outcomes": 5,
+      "unrelated_restrictions": 0
+    },
+    "C2E": {
+      "benign_attempted": 20,
+      "benign_constrained": 0,
+      "harmful_attempted": 10,
+      "harmful_blocked": 10,
+      "monitor_only_outcomes": 5,
+      "unrelated_restrictions": 0
+    },
+    "C3": {
+      "benign_attempted": 20,
+      "benign_constrained": 10,
+      "harmful_attempted": 10,
+      "harmful_blocked": 10,
+      "monitor_only_outcomes": 5,
+      "unrelated_restrictions": 0
+    }
+  },
+  "predeclared_interpretation": "central_policy_frontier"
+}

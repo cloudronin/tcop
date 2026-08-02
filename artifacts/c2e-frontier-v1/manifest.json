@@ -1,0 +1,7 @@
+{
+  "episodes": 150,
+  "interpretation": "central_policy_frontier",
+  "plan_hash": "2d13945a007495990bfaba576f8b3d35fa6171611f2413c827e10ba04cb83fca",
+  "status": "COMPLETE",
+  "traces": 30
+}

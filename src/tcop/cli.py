@@ -50,6 +50,8 @@ from .external_adaptive_crosshost import (
 from .external_acquisition import DEFAULT_BUNDLE as EXTERNAL_INPUT_BUNDLE, seal_acquisition_bundle
 from .adaptive_agent_authorization import ROOT as ADAPTIVE_AUTH_ROOT, run_adaptive_authorization, verify_adaptive_authorization, report_adaptive_authorization
 from .independent_warning_admission import ROOT as INDEPENDENT_WARNING_ROOT, acquire_independent, run_independent_warning, verify_independent_warning, report_independent_warning
+from .c2e_frontier import ROOT as C2E_FRONTIER_ROOT, run_c2e_frontier, verify_c2e_frontier, report_c2e_frontier
+from .independent_warning_v2 import ROOT as INDEPENDENT_WARNING_V2_ROOT, PREFLIGHT as INDEPENDENT_WARNING_V2_PREFLIGHT, ACQUISITION as INDEPENDENT_WARNING_V2_ACQUISITION, acquire_v2, preflight_v2, run_v2, verify_v2, report_v2
 from .experiments import run_deterministic_experiments
 from .evidence_round import DEFAULT_SOURCE as EVIDENCE_SOURCE, SELECTIONS as EVIDENCE_SELECTIONS, EvidenceRound, evidence_selection_matrix, run_evidence_study
 from .federation import (
@@ -285,6 +287,22 @@ def _add_study_and_artifact(commands: argparse._SubParsersAction[argparse.Argume
     independent_run = independent_nested.add_parser("run", help="run the held-out warning admission frontier"); independent_run.add_argument("--output", type=Path, default=INDEPENDENT_WARNING_ROOT); independent_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/independent-warning-admission-v1.yaml")); _format(independent_run)
     for name in ("verify", "report"):
         parser=independent_nested.add_parser(name, help=f"{name} the sealed independent warning study"); parser.add_argument("--artifact-dir", type=Path, default=INDEPENDENT_WARNING_ROOT); _format(parser)
+    c2e_frontier = nested.add_parser("c2e-frontier", help="run the separately rooted C2E campaign-selectivity frontier study")
+    c2e_nested = c2e_frontier.add_subparsers(dest="c2e_frontier_command", required=True)
+    c2e_run = c2e_nested.add_parser("run", help="run the 150-episode predeclared C2E selectivity study")
+    c2e_run.add_argument("--output", type=Path, default=C2E_FRONTIER_ROOT); c2e_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/c2e-frontier-v1.yaml")); _format(c2e_run)
+    for name in ("verify", "report"):
+        parser = c2e_nested.add_parser(name, help=f"{name} the sealed C2E frontier study"); parser.add_argument("--artifact-dir", type=Path, default=C2E_FRONTIER_ROOT); _format(parser)
+    independent_warning_v2 = nested.add_parser("independent-warning-v2", help="run the externally stratified independent-warning admission study")
+    independent_v2_nested = independent_warning_v2.add_subparsers(dest="independent_warning_v2_command", required=True)
+    v2_acquire = independent_v2_nested.add_parser("acquire", help="seal the pinned external corpus and detector inputs without policy execution")
+    v2_acquire.add_argument("--output", type=Path, default=INDEPENDENT_WARNING_V2_ACQUISITION); v2_acquire.add_argument("--plan", type=Path, default=Path("benchmark/studies/independent-warning-admission-v2-external-stratified.yaml")); _format(v2_acquire)
+    v2_preflight = independent_v2_nested.add_parser("preflight", help="enumerate and normalize external candidates without invoking receiver policy")
+    v2_preflight.add_argument("--output", type=Path, default=INDEPENDENT_WARNING_V2_PREFLIGHT); v2_preflight.add_argument("--plan", type=Path, default=Path("benchmark/studies/independent-warning-admission-v2-external-stratified.yaml")); _format(v2_preflight)
+    v2_run = independent_v2_nested.add_parser("run", help="run frozen receiver policies only after the v2 preflight is admitted")
+    v2_run.add_argument("--output", type=Path, default=INDEPENDENT_WARNING_V2_ROOT); v2_run.add_argument("--preflight-dir", type=Path, default=INDEPENDENT_WARNING_V2_PREFLIGHT); v2_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/independent-warning-admission-v2-external-stratified.yaml")); _format(v2_run)
+    for name in ("verify", "report"):
+        parser = independent_v2_nested.add_parser(name, help=f"{name} the v2 external-warning study"); parser.add_argument("--artifact-dir", type=Path, default=INDEPENDENT_WARNING_V2_ROOT if name == "verify" else INDEPENDENT_WARNING_V2_PREFLIGHT); _format(parser)
     artifact = commands.add_parser("artifact", help="read-only artifact verification, inspection, and comparison")
     artifact_nested = artifact.add_subparsers(dest="artifact_command", required=True)
     artifact_verify = artifact_nested.add_parser("verify", help="verify an already-created artifact root")
@@ -511,6 +529,16 @@ def dispatch(args: argparse.Namespace) -> tuple[Any, str]:
             if args.independent_warning_command == "run": return run_independent_warning(args.output, args.plan), args.format
             if args.independent_warning_command == "verify": return verify_independent_warning(args.artifact_dir), args.format
             if args.independent_warning_command == "report": return report_independent_warning(args.artifact_dir), args.format
+        if args.study_command == "c2e-frontier":
+            if args.c2e_frontier_command == "run": return run_c2e_frontier(args.output, args.plan), args.format
+            if args.c2e_frontier_command == "verify": return verify_c2e_frontier(args.artifact_dir), args.format
+            if args.c2e_frontier_command == "report": return report_c2e_frontier(args.artifact_dir), args.format
+        if args.study_command == "independent-warning-v2":
+            if args.independent_warning_v2_command == "acquire": return acquire_v2(args.output, args.plan), args.format
+            if args.independent_warning_v2_command == "preflight": return preflight_v2(args.output, args.plan), args.format
+            if args.independent_warning_v2_command == "run": return run_v2(args.output, args.preflight_dir, args.plan), args.format
+            if args.independent_warning_v2_command == "verify": return verify_v2(args.artifact_dir), args.format
+            if args.independent_warning_v2_command == "report": return report_v2(args.artifact_dir), args.format
         if args.study_command == "agent":
             study = AgentStudy(args.plan) if hasattr(args, "plan") else AgentStudy()
             if args.agent_command == "prepare": return study.prepare(), args.format

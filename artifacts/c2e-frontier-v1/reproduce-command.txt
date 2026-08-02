@@ -1,0 +1,1 @@
+tcop study c2e-frontier run --plan benchmark/studies/c2e-frontier-v1.yaml --output artifacts/c2e-frontier-v1

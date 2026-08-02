@@ -1,0 +1,13 @@
+{
+  "gates": {
+    "all_passed": true,
+    "invalid_no_restriction": true,
+    "no_local_relation_no_c2e_restriction": true,
+    "protocol_controls_no_restriction": true,
+    "sender_only_no_c2e_restriction": true,
+    "stable": true
+  },
+  "policy_execution": true,
+  "rows": 540,
+  "status": "COMPLETE"
+}

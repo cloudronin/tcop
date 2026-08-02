@@ -1,0 +1,25 @@
+study: C2E Frontier Study v1
+artifact_root: artifacts/c2e-frontier-v1
+source_roots:
+  adaptive_authorization_v1: bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3
+policies: [C0, C1, C2, C2E, C3]
+traces_per_population: 5
+populations:
+  - exact_binding_harmful_actions
+  - campaign_linked_non_exact_harmful_substitutions
+  - benign_in_campaign_fallbacks
+  - benign_same_risk_family_outside_campaign
+  - benign_unrelated_subjects_sessions_resources
+  - invalid_expired_replayed_sender_suggested_only_relations
+campaign_relation:
+  receiver_local_only: true
+  strong_relations: [session_lineage, declared_delegation_edge]
+  ttl_ticks: 3
+  sender_suggested_relation: monitor_only
+  forbidden_inputs: [benchmark_truth, future_outcomes, remote_enforcement]
+predeclared_interpretation:
+  central_policy_frontier_if:
+    c2e_blocks_campaign_linked_harmful_substitutions: true
+    c2e_forwards_non_campaign_same_risk_benign_actions: true
+    c1_and_c3_constrain_non_campaign_same_risk_benign_actions: true
+  otherwise: bounded_coverage_recovery_not_better_frontier

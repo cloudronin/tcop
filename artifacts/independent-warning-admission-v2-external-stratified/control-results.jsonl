@@ -1,0 +1,9 @@
+{"gate":"all_passed","passed":true}
+{"gate":"invalid_no_restriction","passed":true}
+{"gate":"sender_only_no_c2e_restriction","passed":true}
+{"gate":"no_local_relation_no_c2e_restriction","passed":true}
+{"gate":"protocol_controls_no_restriction","passed":true}
+{"gate":"stable","passed":true}
+{"gate":"malformed","restriction_created":false,"validated":false}
+{"gate":"unknown_issuer","restriction_created":false,"validated":false}
+{"gate":"invalid_signature","restriction_created":false,"validated":false}

@@ -1,0 +1,1 @@
+tcop study c2e-frontier verify --artifact-dir artifacts/c2e-frontier-v1

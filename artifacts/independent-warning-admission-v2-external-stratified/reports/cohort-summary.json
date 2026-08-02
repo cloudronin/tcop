@@ -1,0 +1,27 @@
+{
+  "C0": {
+    "forwarded": 84,
+    "rejected_before_policy": 24,
+    "restricted": 0
+  },
+  "C1": {
+    "forwarded": 12,
+    "rejected_before_policy": 24,
+    "restricted": 72
+  },
+  "C2": {
+    "forwarded": 72,
+    "rejected_before_policy": 24,
+    "restricted": 12
+  },
+  "C2E": {
+    "forwarded": 60,
+    "rejected_before_policy": 24,
+    "restricted": 24
+  },
+  "C3": {
+    "forwarded": 0,
+    "rejected_before_policy": 24,
+    "restricted": 84
+  }
+}

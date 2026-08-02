@@ -1,0 +1,12 @@
+{
+  "episodes": 150,
+  "populations": [
+    "exact_binding_harmful_actions",
+    "campaign_linked_non_exact_harmful_substitutions",
+    "benign_in_campaign_fallbacks",
+    "benign_same_risk_family_outside_campaign",
+    "benign_unrelated_subjects_sessions_resources",
+    "invalid_expired_replayed_sender_suggested_only_relations"
+  ],
+  "traces": 30
+}

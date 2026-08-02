@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  1 AUG 2026 23:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  2 AUG 2026 01:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -603,35 +603,40 @@ line 20.
 (pdftex.def)             Requested size: 505.89pt x 227.6444pt.
 
 (./tables/generated/tab-replay-timing.tex))
-(./sections/08-security-availability.tex [4 <./figures/pdf/containment-window.p
-df> <./figures/pdf/deterministic-outcomes.pdf> <./figures/pdf/physical-timing.p
-df>]
-<figures/pdf/security-availability.pdf, id=166, 420.68982pt x 192.0646pt>
+(./sections/08-security-availability.tex
+Underfull \hbox (badness 1881) in paragraph at lines 33--1
+ []\T1/ptm/b/n/10 (+20) C2E se-lec-tiv-ity fron-tier.[] \T1/ptm/m/n/10 (+20) Th
+e sep-a-rately sealed C2E-
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 33--1
+\T1/ptm/m/n/10 (+20) C2E blocks all ten harm-ful ac-tions, in-clud-ing all five
+
+ []
+
+[4 <./figures/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes
+.pdf> <./figures/pdf/physical-timing.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<figures/pdf/security-availability.pdf, id=167, 420.68982pt x 192.0646pt>
 File: figures/pdf/security-availability.pdf Graphic file (type pdf)
 <use figures/pdf/security-availability.pdf>
 Package pdftex.def Info: figures/pdf/security-availability.pdf  used on input l
 ine 9.
 (pdftex.def)             Requested size: 241.02039pt x 110.03477pt.
- (./tables/generated/tab-utility.tex
+
+(./tables/generated/tab-utility.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
  []
 
 ) (./tables/generated/tab-negative-controls.tex)
-(./tables/generated/tab-performance.tex)) (./sections/09-related-work.tex
-Underfull \hbox (badness 10000) in paragraph at lines 21--1
- []\T1/ptm/b/n/10 (+20) Independent warn-ing ad-mis-sion.[] \T1/ptm/m/n/10 (+20
-) The independent-
- []
+(./tables/generated/tab-performance.tex) [5 <./figures/pdf/live-replay-treatmen
+ts.pdf>]) (./sections/09-related-work.tex
+Underfull \vbox (badness 1902) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./figures/pdf/live-replay-treatments.pdf> <./figures/pdf/security-availabi
-lity.pdf>]
 (./tables/generated/tab-amendment-history.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 []|\T1/ptm/m/n/7 (+20) Model sam-
@@ -657,8 +662,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\T1/ptm/m/n/7 (+20) Physical-path
  []
 
-)) (./sections/10-limitations-conclusion.tex
-(./tables/generated/tab-limitations.tex)) (./main.bbl
+)) (./sections/10-limitations-conclusion.tex [6 <./figures/pdf/security-availab
+ility.pdf>] (./tables/generated/tab-limitations.tex)) (./main.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -674,8 +679,8 @@ Underfull \hbox (badness 2027) in paragraph at lines 4--9
 rg / conferences /
  []
 
-) (./appendices/open-science.tex [6]) (./appendices/ethics.tex)
-(./appendices/strategy-details.tex
+) (./appendices/open-science.tex) (./appendices/ethics.tex)
+(./appendices/strategy-details.tex [7]
 Underfull \hbox (badness 2707) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The study cer-ti-fies four objective-specific frozen con-
  []
@@ -687,7 +692,7 @@ ted
  []
 
 ) (./appendices/amendment-history.tex
-<figures/pdf/artifact-lineage.pdf, id=202, 412.11966pt x 145.22658pt>
+<figures/pdf/artifact-lineage.pdf, id=210, 412.11966pt x 145.22658pt>
 File: figures/pdf/artifact-lineage.pdf Graphic file (type pdf)
 <use figures/pdf/artifact-lineage.pdf>
 Package pdftex.def Info: figures/pdf/artifact-lineage.pdf  used on input line 7
@@ -698,15 +703,10 @@ Underfull \hbox (badness 2005) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
  []
 
+) (./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
+[8]) [9
 
-Underfull \vbox (badness 3590) has occurred while \output is active []
-
- [7])
-(./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
-Underfull \vbox (badness 3590) has occurred while \output is active []
-
-) [8]
-[9 <./figures/pdf/artifact-lineage.pdf>] (./main.aux)
+ <./figures/pdf/artifact-lineage.pdf>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -715,21 +715,21 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A6F4637D5A7A52AFC0F1218D221985AF;3067.
  ) 
 Here is how much of TeX's memory you used:
- 12796 strings out of 467525
- 208900 string characters out of 5418983
- 672735 words of memory out of 5000000
+ 12798 strings out of 467525
+ 208919 string characters out of 5418983
+ 671735 words of memory out of 5000000
  41108 multiletter control sequences out of 15000+600000
- 687265 words of font info for 287 fonts, out of 8000000 for 9000
+ 687328 words of font info for 288 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,10n,93p,1510b,462s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,10n,93p,1510b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/
 local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (9 pages, 177804 bytes).
+Output written on main.pdf (9 pages, 179380 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
  76468 words of extra memory for PDF output out of 89155 (max. 10000000)
 

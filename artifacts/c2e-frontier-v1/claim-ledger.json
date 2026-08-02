@@ -1,0 +1,10 @@
+[
+  {
+    "claim": "C2E selectivity under the frozen reference policy",
+    "status": "supported"
+  },
+  {
+    "claim": "deployment prevalence, detector quality, universal containment",
+    "status": "unsupported"
+  }
+]

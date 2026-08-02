@@ -1,0 +1,26 @@
+{
+  "corpus": {
+    "license": "MIT",
+    "license_sha256": "4285a071f2d382338e52b4fb0a186d952984a34d43a33d8872e1a1d8cb43401e",
+    "retrieval_date": "2026-08-02T05:11:24.582014+00:00",
+    "revision": "a75aba7631d3ca5fb7ab938965c97ead2f9ff84b",
+    "run_scope": "runs/Meta-SecAlign-70B",
+    "url": "https://github.com/ethz-spylab/agentdojo"
+  },
+  "detector": {
+    "configuration_sha256": "cd54ac39a1f2c3c5146bd5295b34038f8b4d9069e2f844450da014a523bb7653",
+    "inference_environment": {
+      "torch": "2.2.2",
+      "transformers": "4.44.0"
+    },
+    "model_card_sha256": "5d2a3e0c46397609a784a5034dc823da408aa8b5a414828609f32dc18ee16933",
+    "revision": "a8ded8e697ce7c355e395a0df51f94adb4a2fd27",
+    "url": "https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M",
+    "variant": "Llama-Prompt-Guard-2-86M"
+  },
+  "input_bundle": {
+    "digest": "ea872812e64f1a843a30997b90ff418855ad7ab52462a20e9a6e3c00a144f397",
+    "lock_digest": "2f9fc51607e6b0d58d9b24938a55b9eab084c627720516c2ed754c57d8fbe90f",
+    "path": "artifacts/external-warning-adaptive-crosshost-v1-inputs-hf-approved"
+  }
+}

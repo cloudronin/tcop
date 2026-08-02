@@ -138,20 +138,24 @@ res/pdf/architecture.pdf>] (./tables/generated/tab-live-cohort.tex)
 LaTeX Warning: Reference `fig:physical' on page 4 undefined on input line 9.
 
 (./tables/generated/tab-replay-timing.tex))
-(./sections/08-security-availability.tex [4 <./figures/pdf/containment-window.p
-df> <./figures/pdf/deterministic-outcomes.pdf> <./figures/pdf/physical-timing.p
-df>] (./tables/generated/tab-utility.tex
+(./sections/08-security-availability.tex
+Underfull \hbox (badness 1881) in paragraph at lines 33--1
+ []\T1/ptm/b/n/10 (+20) C2E se-lec-tiv-ity fron-tier.[] \T1/ptm/m/n/10 (+20) Th
+e sep-a-rately sealed C2E-
+
+Underfull \hbox (badness 1590) in paragraph at lines 33--1
+\T1/ptm/m/n/10 (+20) C2E blocks all ten harm-ful ac-tions, in-clud-ing all five
+
+[4 <./figures/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes
+.pdf> <./figures/pdf/physical-timing.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active
+(./tables/generated/tab-utility.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
 ) (./tables/generated/tab-negative-controls.tex)
-(./tables/generated/tab-performance.tex)) (./sections/09-related-work.tex
-Underfull \hbox (badness 10000) in paragraph at lines 21--1
- []\T1/ptm/b/n/10 (+20) Independent warn-ing ad-mis-sion.[] \T1/ptm/m/n/10 (+20
-) The independent-
-
-Underfull \vbox (badness 10000) has occurred while \output is active
-Underfull \vbox (badness 10000) has occurred while \output is active [5 <./figu
-res/pdf/live-replay-treatments.pdf> <./figures/pdf/security-availability.pdf>]
+(./tables/generated/tab-performance.tex) [5 <./figures/pdf/live-replay-treatmen
+ts.pdf>]) (./sections/09-related-work.tex
+Underfull \vbox (badness 1902) has occurred while \output is active
 (./tables/generated/tab-amendment-history.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 []|\T1/ptm/m/n/7 (+20) Model sam-
@@ -167,8 +171,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\T1/ptm/m/n/7 (+20) Physical-path
-)) (./sections/10-limitations-conclusion.tex
-(./tables/generated/tab-limitations.tex))
+)) (./sections/10-limitations-conclusion.tex [6 <./figures/pdf/security-availab
+ility.pdf>] (./tables/generated/tab-limitations.tex))
 
 LaTeX Warning: Citation `usenixTemplate' undefined on input line 28.
 
@@ -179,8 +183,8 @@ Underfull \hbox (badness 2435) in paragraph at lines 4--9
 Underfull \hbox (badness 2027) in paragraph at lines 4--9
 \T1/ptm/m/n/10 (+20) pa-pers.  [][]$\T1/pcr/m/n/10 https : / / www . usenix . o
 rg / conferences /
-) (./appendices/open-science.tex [6]) (./appendices/ethics.tex)
-(./appendices/strategy-details.tex
+) (./appendices/open-science.tex) (./appendices/ethics.tex)
+(./appendices/strategy-details.tex [7]
 Underfull \hbox (badness 2707) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The study cer-ti-fies four objective-specific frozen con-
 
@@ -190,11 +194,8 @@ ted
 ) (./appendices/amendment-history.tex) (./appendices/extended-results.tex
 Underfull \hbox (badness 2005) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
-
-Underfull \vbox (badness 3590) has occurred while \output is active [7])
-(./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
-Underfull \vbox (badness 3590) has occurred while \output is active) [8]
-[9 <./figures/pdf/artifact-lineage.pdf>] (./main.aux)
+) (./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
+[8]) [9 <./figures/pdf/artifact-lineage.pdf>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -212,7 +213,7 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (9 pages, 176500 bytes).
+Output written on main.pdf (9 pages, 178114 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
@@ -371,20 +372,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active [3 <./figu
 res/pdf/architecture.pdf>] (./tables/generated/tab-live-cohort.tex)
 (./tables/generated/tab-physical-end-to-end.tex)
 (./tables/generated/tab-replay-timing.tex))
-(./sections/08-security-availability.tex [4 <./figures/pdf/containment-window.p
-df> <./figures/pdf/deterministic-outcomes.pdf> <./figures/pdf/physical-timing.p
-df>] (./tables/generated/tab-utility.tex
+(./sections/08-security-availability.tex
+Underfull \hbox (badness 1881) in paragraph at lines 33--1
+ []\T1/ptm/b/n/10 (+20) C2E se-lec-tiv-ity fron-tier.[] \T1/ptm/m/n/10 (+20) Th
+e sep-a-rately sealed C2E-
+
+Underfull \hbox (badness 1590) in paragraph at lines 33--1
+\T1/ptm/m/n/10 (+20) C2E blocks all ten harm-ful ac-tions, in-clud-ing all five
+
+[4 <./figures/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes
+.pdf> <./figures/pdf/physical-timing.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active
+(./tables/generated/tab-utility.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
 ) (./tables/generated/tab-negative-controls.tex)
-(./tables/generated/tab-performance.tex)) (./sections/09-related-work.tex
-Underfull \hbox (badness 10000) in paragraph at lines 21--1
- []\T1/ptm/b/n/10 (+20) Independent warn-ing ad-mis-sion.[] \T1/ptm/m/n/10 (+20
-) The independent-
-
-Underfull \vbox (badness 10000) has occurred while \output is active
-Underfull \vbox (badness 10000) has occurred while \output is active [5 <./figu
-res/pdf/live-replay-treatments.pdf> <./figures/pdf/security-availability.pdf>]
+(./tables/generated/tab-performance.tex) [5 <./figures/pdf/live-replay-treatmen
+ts.pdf>]) (./sections/09-related-work.tex
+Underfull \vbox (badness 1902) has occurred while \output is active
 (./tables/generated/tab-amendment-history.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 []|\T1/ptm/m/n/7 (+20) Model sam-
@@ -400,16 +405,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\T1/ptm/m/n/7 (+20) Physical-path
-)) (./sections/10-limitations-conclusion.tex
-(./tables/generated/tab-limitations.tex)) (./main.bbl
+)) (./sections/10-limitations-conclusion.tex [6 <./figures/pdf/security-availab
+ility.pdf>] (./tables/generated/tab-limitations.tex)) (./main.bbl
 Underfull \hbox (badness 2435) in paragraph at lines 4--9
 []\T1/ptm/m/n/10 (+20) USENIX As-so-ci-a-tion.  Tem-plates for con-fer-ence
 
 Underfull \hbox (badness 2027) in paragraph at lines 4--9
 \T1/ptm/m/n/10 (+20) pa-pers.  [][]$\T1/pcr/m/n/10 https : / / www . usenix . o
 rg / conferences /
-) (./appendices/open-science.tex [6]) (./appendices/ethics.tex)
-(./appendices/strategy-details.tex
+) (./appendices/open-science.tex) (./appendices/ethics.tex)
+(./appendices/strategy-details.tex [7]
 Underfull \hbox (badness 2707) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The study cer-ti-fies four objective-specific frozen con-
 
@@ -419,21 +424,19 @@ ted
 ) (./appendices/amendment-history.tex) (./appendices/extended-results.tex
 Underfull \hbox (badness 2005) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
-
-Underfull \vbox (badness 3590) has occurred while \output is active [7])
-(./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
-Underfull \vbox (badness 3590) has occurred while \output is active) [8]
-[9 <./figures/pdf/artifact-lineage.pdf>] (./main.aux) )
+) (./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
+[8]) [9 <./figures/pdf/artifact-lineage.pdf>] (./main.aux) )
 (see the transcript file for additional information)</usr/local/texlive/2026/te
 xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (9 pages, 177804 bytes).
+Output written on main.pdf (9 pages, 179380 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
 Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
 Latexmk: Found input bbl file 'main.bbl'
 Latexmk: Log file says output to 'main.pdf'
   ===Source file 'main.bbl' for 'pdflatex'

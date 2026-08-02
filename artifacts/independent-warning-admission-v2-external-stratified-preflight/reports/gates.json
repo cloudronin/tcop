@@ -1,0 +1,9 @@
+{
+  "K": 25,
+  "eligible_external_negative": 96,
+  "eligible_external_positive_exact": 25,
+  "excluded": [],
+  "minimum": 12,
+  "policy_execution": false,
+  "status": "READY"
+}

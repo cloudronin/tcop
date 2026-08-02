@@ -1,0 +1,110 @@
+{
+  "substitution_no_local_relation:delegation_target": {
+    "C0": {
+      "forwarded": 4,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C1": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 4
+    },
+    "C2": {
+      "forwarded": 4,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C2E": {
+      "forwarded": 4,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C3": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 4
+    }
+  },
+  "substitution_no_local_relation:session": {
+    "C0": {
+      "forwarded": 8,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C1": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 8
+    },
+    "C2": {
+      "forwarded": 8,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C2E": {
+      "forwarded": 8,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C3": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 8
+    }
+  },
+  "substitution_with_local_relation:delegation_target": {
+    "C0": {
+      "forwarded": 4,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C1": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 4
+    },
+    "C2": {
+      "forwarded": 4,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C2E": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 4
+    },
+    "C3": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 4
+    }
+  },
+  "substitution_with_local_relation:session": {
+    "C0": {
+      "forwarded": 8,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C1": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 8
+    },
+    "C2": {
+      "forwarded": 8,
+      "rejected_before_policy": 0,
+      "restricted": 0
+    },
+    "C2E": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 8
+    },
+    "C3": {
+      "forwarded": 0,
+      "rejected_before_policy": 0,
+      "restricted": 8
+    }
+  }
+}
