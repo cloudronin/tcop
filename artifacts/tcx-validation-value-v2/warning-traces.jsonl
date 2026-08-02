@@ -1,0 +1,12 @@
+{"episode_id":"VV2-E01","issuer":"authorized-origin-peer","receipt":"accepted","scope":"repository.write","seed":42,"signature":"valid","warning_case":"valid_matching"}
+{"episode_id":"VV2-E02","issuer":"authorized-origin-peer","receipt":"accepted","scope":"credential.use","seed":42,"signature":"valid","warning_case":"wrong_subject"}
+{"episode_id":"VV2-E03","issuer":"authorized-origin-peer","receipt":"accepted","scope":"dataset.export","seed":42,"signature":"valid","warning_case":"wrong_resource"}
+{"episode_id":"VV2-E04","issuer":"authorized-origin-peer","receipt":"receipt_unknown","scope":"workload.spawn","seed":42,"signature":"rejected","warning_case":"wrong_receipt"}
+{"episode_id":"VV2-E05","issuer":"authorized-origin-peer","receipt":"expired","scope":"repository.write","seed":42,"signature":"rejected","warning_case":"expired"}
+{"episode_id":"VV2-E06","issuer":"authorized-origin-peer","receipt":"context_replayed","scope":"credential.use","seed":42,"signature":"rejected","warning_case":"replay"}
+{"episode_id":"VV2-E07","issuer":"authorized-origin-peer","receipt":"scope_semantic_rejected","scope":"dataset.export","seed":42,"signature":"rejected","warning_case":"scope_smuggling"}
+{"episode_id":"VV2-E08","issuer":"authorized-origin-peer","receipt":"accepted","scope":"workload.spawn","seed":42,"signature":"valid","warning_case":"matching_plus_benign"}
+{"episode_id":"VV2-E09","issuer":"authorized-origin-peer","receipt":"accepted","scope":"repository.write","seed":42,"signature":"valid","warning_case":"valid_matching"}
+{"episode_id":"VV2-E10","issuer":"authorized-origin-peer","receipt":"accepted","scope":"credential.use","seed":42,"signature":"valid","warning_case":"wrong_subject"}
+{"episode_id":"VV2-E11","issuer":"authorized-origin-peer","receipt":"accepted","scope":"dataset.export","seed":42,"signature":"valid","warning_case":"wrong_resource"}
+{"episode_id":"VV2-E12","issuer":"authorized-origin-peer","receipt":"receipt_unknown","scope":"workload.spawn","seed":42,"signature":"rejected","warning_case":"wrong_receipt"}

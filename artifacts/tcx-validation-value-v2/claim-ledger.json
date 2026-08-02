@@ -1,0 +1,17 @@
+[
+  {
+    "claim": "C2 matched C1-class harmful blocking in the preregistered v2 mixed-action cohort.",
+    "row_source": "normalized-results.jsonl",
+    "supported": true
+  },
+  {
+    "claim": "C2 constrained fewer nonmatching benign actions than C1-class.",
+    "row_source": "normalized-results.jsonl",
+    "supported": true
+  },
+  {
+    "claim": "A valid signature proves observation truth.",
+    "status": "rejected by hostile-peer workstream",
+    "supported": false
+  }
+]

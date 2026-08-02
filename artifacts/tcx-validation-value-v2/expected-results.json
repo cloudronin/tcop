@@ -1,0 +1,9 @@
+{
+  "gates": {
+    "C2_fewer_nonmatching_benign_constraints": true,
+    "matching_containment_equal_C2_C1_class": true,
+    "no_cross_session_restriction": true,
+    "properties_pass": true
+  },
+  "primary_hypothesis": "C2 equals C1-class on matching harmful containment and constrains fewer nonmatching benign actions"
+}

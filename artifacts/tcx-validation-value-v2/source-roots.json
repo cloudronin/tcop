@@ -1,0 +1,13 @@
+{
+  "expected": {
+    "comparator_v1": "2a7c267f69aa736122de7366359983e838ba29316e142957c7e8049d63cbf421",
+    "federated_evidence": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+    "live_replay": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b"
+  },
+  "observed": {
+    "comparator_v1": "2a7c267f69aa736122de7366359983e838ba29316e142957c7e8049d63cbf421",
+    "federated_evidence": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+    "live_replay": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b"
+  },
+  "passed": true
+}

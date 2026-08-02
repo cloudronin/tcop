@@ -70,10 +70,16 @@ tcop artifact verify artifacts/v0.6-agent-validation-live-origin-certified \
 # Verify the separately rooted C0-C3 context-versus-blanket comparator.
 tcop study comparator verify \
   --artifact-dir artifacts/context-value-comparator-v1
+
+# Verify the five-condition TCX validation-value study.
+tcop study validation-value verify \
+  --artifact-dir artifacts/tcx-validation-value-v2
 ```
 
 The expected result is a successful verification for each root. The comparator
-artifact digest is `2a7c267f69aa736122de7366359983e838ba29316e142957c7e8049d63cbf421`.
+artifact digest is `2a7c267f69aa736122de7366359983e838ba29316e142957c7e8049d63cbf421`;
+the v2 validation-value digest is
+`da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d`.
 For an end-to-end paper check, run `make paper-check`; the reviewer workspace
 and paper-specific source verifier are in [paper/usenix27](paper/usenix27).
 
@@ -84,12 +90,21 @@ and paper-specific source verifier are in [paper/usenix27](paper/usenix27).
 | Frozen live traces and causal replay | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/trace-generation-summary.json`, `reports/paired-enforcement-results.json` |
 | Availability cost | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/benign-workload-impact.json` |
 | Context versus blanket restriction | `artifacts/context-value-comparator-v1` | `reports/summary.json`, `cohort/cohort-census.json`, `decision-traces/decision-traces.jsonl` |
+| TCX validation-value frontier | `artifacts/tcx-validation-value-v2` | `reports/condition-summary.json`, `reports/matching-harmful-summary.json`, `hostile-peer-results.csv`, `correlation-results.csv` |
 
 The context comparator is explicitly separate from the original A1:A2 result.
 Its frozen cohorts lacked an episode containing both a matching harmful action
 and a same-capability nonmatching benign action, so its primary C1/C2 test is
 a separately labeled deterministic policy-selectivity fixture. It reports the
 full cohorts without pooling them into a live-agent selectivity claim.
+
+The v2 validation-value study replaces that fixture as the primary selectivity
+evidence. It has twelve preregistered mixed-action episodes and evaluates C0,
+C1-allow, C1-class, C2, and C3 without credentials. C1-class and C2 each
+block all three accepted matching harmful actions; C2 forwards all twelve
+benign actions while C1-class constrains seven. Its hostile-peer, correlation,
+and protocol-mutation workstreams establish the tested trust boundary and must
+be read as deterministic synthetic evidence, not deployment-rate estimates.
 
 ## Scope
 

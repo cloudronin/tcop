@@ -1,0 +1,9 @@
+{
+  "artifact_type": "tcx-validation-value-v2",
+  "complete": true,
+  "normalized_row_count": 120,
+  "replayable": true,
+  "result_digest": "170493158a9475c315f678a630c525e81ea1f6794b7e5d0b754cd1a64360aeec",
+  "source_roots_unmodified": true,
+  "version": "tcop.validation-value/2.0"
+}

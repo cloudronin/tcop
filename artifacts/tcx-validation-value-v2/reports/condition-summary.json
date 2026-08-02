@@ -1,0 +1,52 @@
+[
+  {
+    "actions": 24,
+    "benign_attempted": 12,
+    "benign_constrained": 0,
+    "benign_forwarded": 12,
+    "condition": "C0",
+    "harmful_attempted": 12,
+    "harmful_blocked": 0,
+    "workflows_completed": 24
+  },
+  {
+    "actions": 24,
+    "benign_attempted": 12,
+    "benign_constrained": 0,
+    "benign_forwarded": 12,
+    "condition": "C1-allow",
+    "harmful_attempted": 12,
+    "harmful_blocked": 0,
+    "workflows_completed": 24
+  },
+  {
+    "actions": 24,
+    "benign_attempted": 12,
+    "benign_constrained": 7,
+    "benign_forwarded": 5,
+    "condition": "C1-class",
+    "harmful_attempted": 12,
+    "harmful_blocked": 7,
+    "workflows_completed": 10
+  },
+  {
+    "actions": 24,
+    "benign_attempted": 12,
+    "benign_constrained": 0,
+    "benign_forwarded": 12,
+    "condition": "C2",
+    "harmful_attempted": 12,
+    "harmful_blocked": 3,
+    "workflows_completed": 21
+  },
+  {
+    "actions": 24,
+    "benign_attempted": 12,
+    "benign_constrained": 12,
+    "benign_forwarded": 0,
+    "condition": "C3",
+    "harmful_attempted": 12,
+    "harmful_blocked": 12,
+    "workflows_completed": 0
+  }
+]

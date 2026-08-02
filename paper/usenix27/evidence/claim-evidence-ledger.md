@@ -6,6 +6,7 @@
 | C-AUTH-01 | supported | Every gateway block references a Domain-B policy and decision. | bounded evaluation scope |
 | C-AUTH-02 | supported | remote_enforcement_successes equals zero. | bounded evaluation scope |
 | C-DETERMINISTIC-01 | supported | 54 / 30 / 24 / 0 / 36. | 123 unmatched balanced or utility comparisons |
+| C-VALIDATION-01 | supported with qualification | C1-class/C2 matching block 3/3; benign constraints 7/0; C3 12. | Synthetic credential-free cohort only; mismatched-warning controls are separate. |
 | C-TIMING-01 | supported | 30 / 30 / 10 / 20. | bounded evaluation scope |
 | C-LIVE-01 | supported | 44 eligible traces; 220 pairs. | bounded evaluation scope |
 | C-UTILITY-01 | supported with qualification | 360 / 320 / 40. | Synthetic false-warning treatments and capability restriction |

@@ -87,6 +87,30 @@ claims:
   extraction_script_function: scripts/paperlib.py:extract_results
   assumptions: *id001
   evidence_strength: artifact-backed
+  claim_id: C-VALIDATION-01
+  proposed_paper_wording: In the preregistered v2 mixed-action cohort, C2 blocked
+    the same three accepted matching harmful actions as C1-class while constraining
+    no benign action; C1-class constrained seven benign actions and C3 constrained
+    twelve.
+  claim_category: validation value
+  source_artifact: artifacts/tcx-validation-value-v2
+  exact_source_files:
+  - reports/condition-summary.json
+  - reports/matching-harmful-summary.json
+  - reports/gates.json
+  exact_supporting_values: C1-class/C2 matching block 3/3; benign constraints 7/0;
+    C3 12.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id003
+  - Synthetic credential-free cohort only; mismatched-warning controls are separate.
+  caveats: *id003
+  planned_paper_section: 06-deterministic-evaluation.tex
+  planned_table_figure: none
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
   claim_id: C-TIMING-01
   proposed_paper_wording: In 30 physical gateway arms, A1 forwarded 30 harmful calls;
     A2 before the first harmful opportunity blocked 30; after initial harm it forwarded
@@ -136,9 +160,9 @@ claims:
   - reports/benign-workload-impact.json
   exact_supporting_values: 360 / 320 / 40.
   relevant_population_denominator: specified in source rows
-  exclusions: &id003
+  exclusions: &id004
   - Synthetic false-warning treatments and capability restriction
-  caveats: *id003
+  caveats: *id004
   planned_paper_section: 08-security-availability.tex
   planned_table_figure: fig-security-availability
   status: supported with qualification
@@ -154,9 +178,9 @@ claims:
   - reports/benign-workload-impact.json
   exact_supporting_values: 80 / 120 / 66.7 percent.
   relevant_population_denominator: specified in source rows
-  exclusions: &id004
+  exclusions: &id005
   - Synthetic workload only
-  caveats: *id004
+  caveats: *id005
   planned_paper_section: 08-security-availability.tex
   planned_table_figure: tab-utility
   status: supported with qualification
@@ -193,9 +217,9 @@ claims:
   - reports/federation-latency.json
   exact_supporting_values: Performance-only selections with 20 samples each.
   relevant_population_denominator: specified in source rows
-  exclusions: &id005
+  exclusions: &id006
   - No production latency inference
-  caveats: *id005
+  caveats: *id006
   planned_paper_section: 07-agent-gateway-evaluation.tex
   planned_table_figure: tab-performance
   status: supported with qualification

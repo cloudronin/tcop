@@ -1,0 +1,15 @@
+{
+  "fields": [
+    "issuer",
+    "signature",
+    "observation identifier",
+    "receipt reference",
+    "subject",
+    "resource namespace",
+    "capability class",
+    "scope",
+    "issued time",
+    "expiry time",
+    "version"
+  ]
+}

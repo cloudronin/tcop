@@ -1,0 +1,1 @@
+digraph TCX { received -> parsed -> signature_checked -> issuer_authorized -> freshness_checked -> replay_checked -> receipt_resolved -> binding_matched -> local_policy -> local_decision -> gateway_disposition }

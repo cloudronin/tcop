@@ -1,0 +1,85 @@
+{
+  "action_semantic_smuggling_rejected": true,
+  "corpus_cases": 11,
+  "covered_states": [
+    "received",
+    "parsed",
+    "signature_checked",
+    "issuer_authorized",
+    "freshness_checked",
+    "replay_checked",
+    "receipt_resolved",
+    "binding_matched",
+    "receiver_local_policy",
+    "local_decision",
+    "gateway_disposition"
+  ],
+  "failures": [],
+  "generator": "deterministic field-transition mutator through LocalAuthorizationEvaluator",
+  "mutations": {
+    "action_semantic": {
+      "code": "accepted_independent_peer",
+      "passed": true,
+      "remote_action_fields_ignored": [
+        "action",
+        "enforcement"
+      ]
+    },
+    "expires_at": {
+      "accepted": false,
+      "code": "expired",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "passed": true,
+      "restriction_created": false
+    },
+    "issued_at": {
+      "code": "signature_invalid",
+      "passed": true,
+      "restriction_created": false
+    },
+    "issuer": {
+      "code": "identity_unknown",
+      "passed": true,
+      "restriction_created": false
+    },
+    "observation_id": {
+      "code": "signature_invalid",
+      "passed": true,
+      "restriction_created": false
+    },
+    "receipt_reference": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "passed": true,
+      "restriction_created": false
+    },
+    "replay": {
+      "code": "context_replayed",
+      "passed": true,
+      "restriction_created": false
+    },
+    "scope": {
+      "code": "signature_invalid",
+      "passed": true,
+      "restriction_created": false
+    },
+    "signature": {
+      "code": "signature_invalid",
+      "passed": true,
+      "restriction_created": false
+    },
+    "subject": {
+      "code": "principal_or_time_invalid",
+      "passed": true,
+      "restriction_created": false
+    },
+    "version": {
+      "code": "schema_invalid",
+      "passed": true,
+      "restriction_created": false
+    }
+  },
+  "passed": true,
+  "seed": 42
+}

@@ -1,0 +1,5 @@
+{
+  "excluded": [],
+  "note": "No live-model sampling; all episodes are preregistered deterministic synthetic traces.",
+  "predecessor_artifacts_unmodified": true
+}

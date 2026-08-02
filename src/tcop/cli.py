@@ -40,6 +40,7 @@ from .confirmation_benchmark import (
     run_confirmation_suite,
 )
 from .context_comparator import EVIDENCE_ROOT as COMPARATOR_ROOT, run_context_comparator, verify_context_comparator
+from .validation_value import ROOT as VALIDATION_VALUE_ROOT, run_validation_value, verify_validation_value
 from .experiments import run_deterministic_experiments
 from .evidence_round import DEFAULT_SOURCE as EVIDENCE_SOURCE, SELECTIONS as EVIDENCE_SELECTIONS, EvidenceRound, evidence_selection_matrix, run_evidence_study
 from .federation import (
@@ -249,6 +250,12 @@ def _add_study_and_artifact(commands: argparse._SubParsersAction[argparse.Argume
     comparator_run.add_argument("--output", type=Path, default=COMPARATOR_ROOT); _format(comparator_run)
     comparator_verify = comparator_nested.add_parser("verify", help="verify a sealed context-value comparator artifact")
     comparator_verify.add_argument("--artifact-dir", type=Path, default=COMPARATOR_ROOT); _format(comparator_verify)
+    validation_value = nested.add_parser("validation-value", help="run or verify the separately rooted TCX validation-value v2 study")
+    validation_nested = validation_value.add_subparsers(dest="validation_value_command", required=True)
+    validation_run = validation_nested.add_parser("run", help="run the deterministic v2 mixed-action, hostile-peer, correlation, and protocol-assurance workstreams")
+    validation_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/tcx-validation-value-v2.yaml")); validation_run.add_argument("--output", type=Path, default=VALIDATION_VALUE_ROOT); _format(validation_run)
+    validation_verify = validation_nested.add_parser("verify", help="verify a sealed TCX validation-value v2 artifact")
+    validation_verify.add_argument("--artifact-dir", type=Path, default=VALIDATION_VALUE_ROOT); _format(validation_verify)
     artifact = commands.add_parser("artifact", help="read-only artifact verification, inspection, and comparison")
     artifact_nested = artifact.add_subparsers(dest="artifact_command", required=True)
     artifact_verify = artifact_nested.add_parser("verify", help="verify an already-created artifact root")
@@ -458,6 +465,9 @@ def dispatch(args: argparse.Namespace) -> tuple[Any, str]:
         if args.study_command == "comparator":
             if args.comparator_command == "run": return run_context_comparator(args.output), args.format
             if args.comparator_command == "verify": return verify_context_comparator(args.artifact_dir), args.format
+        if args.study_command == "validation-value":
+            if args.validation_value_command == "run": return run_validation_value(args.output, args.plan), args.format
+            if args.validation_value_command == "verify": return verify_validation_value(args.artifact_dir), args.format
         if args.study_command == "agent":
             study = AgentStudy(args.plan) if hasattr(args, "plan") else AgentStudy()
             if args.agent_command == "prepare": return study.prepare(), args.format
