@@ -35,21 +35,25 @@ differ only in clock, transport, persistence, telemetry, and local enforcement
 adapters. The gateway consumes a Domain-B-local policy and decision, never a
 remote enforcement instruction.
 
-## Final-paper results and claim boundary
+## Consistency-revision results and claim boundary
 
 | Evidence | Result | What it supports |
 | --- | --- | --- |
-| Matched synthetic containment | A containment-first receiver strategy reduced 39 baseline harmful calls to 3 when validated evidence arrived inside the tested containment window. | A causal comparison under matched frozen policy and synthetic scenarios, not deployment effectiveness. |
-| TCX Validation-Value v2 | On the accepted binding-matched harmful subset, Exact Binding blocked all 3 actions and constrained none of 12 benign actions. The broad class guard also blocked the 3 matching actions but constrained 7 benign actions. | Receiver-side semantic binding, validation, hostile-peer handling, and correlation behavior. |
-| Post-denial substitution replay | Exact Binding forwarded all 15 eligible substitutions. The evaluated receiver-local Campaign Correlation strategy blocked those substitutions and forwarded the tested outside-campaign same-risk benign actions. | A bounded strategy tradeoff, not mandatory TCOP behavior or a general escalation policy. |
-| C2E frontier | Across the predeclared 150-episode population, Campaign Correlation blocked campaign-linked harmful substitutions without restricting the tested outside-campaign benign actions. | Deterministic strategy selectivity under declared receiver-local relations. |
-| Full external-warning ledger | The sealed population contains 72 attack-bearing and 96 benign source cases. Twenty-five warnings normalize to receiver-actionable exact bindings. Arrival Guard (C1), Exact Binding (C2), and Campaign Correlation (C2E) block those 25 conditionally; Standing Guard (C3) blocks all 72 attack-bearing cases and constrains all 96 benign cases. | Conditional receiver authorization outcomes, not detector quality, warning prevalence, or deployment rates. |
+| Matched synthetic containment | Across 54 strict input-equivalent pairs, the containment-first receiver improved 30, left 24 unchanged, and worsened none. Harmful calls fell from 39 to 3, preventing 36 of 39 baseline calls. | A causal comparison under matched frozen policy and synthetic scenarios, not deployment effectiveness. |
+| TCX Validation-Value v2 | Across 12 mixed actions, Exact Binding (C2) blocks 3 harmful actions and constrains none of 12 benign actions. The broad Arrival Guard (C1-class) blocks 7 harmful actions and constrains 7 benign actions; both block the 3 accepted binding-matched harmful actions. | Receiver-side semantic binding, validation, hostile-peer handling, and correlation behavior. |
+| Post-denial substitution replay | Exact Binding forwards all 15 eligible substitutions. The evaluated receiver-local Campaign Correlation strategy blocks those substitutions and forwards the tested outside-campaign same-risk benign actions. | A bounded strategy tradeoff, not mandatory TCOP behavior or a general escalation policy. |
+| Campaign Correlation frontier (C2E artifact identifier) | Across the predeclared 150-episode population, Campaign Correlation blocks campaign-linked harmful substitutions without restricting the tested outside-campaign benign actions. | Deterministic strategy selectivity under declared receiver-local relations. |
+| Full external-warning ledger | The sealed 168-case population contains 72 attack-bearing and 96 benign source cases: 25 receiver-actionable exact bindings, 47 attack-bearing no-warning cases, and 96 benign no-warning cases. C1, C2, and Campaign Correlation block the 25 exact bindings; Standing Guard (C3) blocks all 72 attack-bearing cases and constrains all 96 benign cases. | Conditional receiver authorization outcomes, not detector quality, warning prevalence, or deployment rates. |
 
 The protocol controls separately show that invalid signatures, wrong receipts,
 expired or replayed contexts, unauthorized peers, and action-like remote
 metadata create no receiver restriction. The single-environment reference path
 also records Domain-B-local policy and decision provenance for every gateway
 block.
+
+These counts have different units of analysis, including strict pairs,
+validation episodes, replay treatments, and gateway calls. They are reported
+separately and must not be pooled.
 
 It also contains a separate v0.2 deterministic witness profile. The profile
 adds receiver-classified control-group evidence, interaction receipts,
@@ -86,7 +90,7 @@ python -m pip install -e .
 # credential is read.
 (cd paper/usenix27 && ./artifact/reproduce.sh --all-no-credentials)
 
-# Verify the final-paper study roots directly through the public CLI.
+# Verify the consistency-revision study roots directly through the public CLI.
 tcop study validation-value verify --artifact-dir artifacts/tcx-validation-value-v2
 tcop study adaptive-authorization verify --artifact-dir artifacts/adaptive-agent-authorization-v1
 tcop study c2e-frontier verify --artifact-dir artifacts/c2e-frontier-v1
@@ -105,13 +109,13 @@ cannot replace frozen replay evidence.
 
 | Paper result | Evidence root | What to inspect |
 | --- | --- | --- |
-| Receiver-local authority and no remote enforcement | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/authorization-audit.json`, `reports/origin-federation-audit.json` |
+| Single-environment reference-path deployment | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/authorization-audit.json`, `reports/origin-federation-audit.json` |
 | Deterministic A1:A2 containment result | `artifacts/federated-domain-v0.6-evidence` | `pairs/paired-results.jsonl`, `reports/paired-causal-comparison.json` |
 | Frozen live traces and causal replay | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/trace-generation-summary.json`, `reports/paired-enforcement-results.json` |
 | Availability cost | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/benign-workload-impact.json` |
 | TCX validation-value frontier | `artifacts/tcx-validation-value-v2` | `reports/condition-summary.json`, `reports/matching-harmful-summary.json`, `hostile-peer-results.csv`, `correlation-results.csv` |
 | Post-denial substitution replay | `artifacts/adaptive-agent-authorization-v1` | `reports/summary.json`, `decision-traces.jsonl` |
-| C2E frontier | `artifacts/c2e-frontier-v1` | `reports/frontier-summary.json`, `escalation-lifecycle.jsonl`, `c2e-field-use-traces.jsonl` |
+| Campaign Correlation frontier (C2E artifact identifier) | `artifacts/c2e-frontier-v1` | `reports/frontier-summary.json`, `escalation-lifecycle.jsonl`, `c2e-field-use-traces.jsonl` |
 | Independent Warning Admission v2 | `artifacts/independent-warning-admission-v2-external-stratified` | `reports/cohort-summary.json`, `reports/substitution-summary.json`, `candidate-ledger.csv` |
 | Full external-warning ledger | `artifacts/independent-warning-admission-v3-full-population` | `reports/pipeline-coverage.json`, `reports/authorization-outcomes.json`, `candidate-ledger.csv` |
 
@@ -130,7 +134,8 @@ The reference framework includes:
 - deterministic simulation with replay, delay, partition, and Sybil fault
   cases, including the preserved v0.1–v0.5 regression path;
 - receiver-local capability envelopes, strategy certification, and separately
-  rooted studies for validation value, timing, substitution, C2E selectivity,
+  rooted studies for validation value, timing, substitution, Campaign
+  Correlation selectivity (artifact identifier C2E),
   and independent-warning admission; and
 - a bounded single-environment reference gateway and frozen live-trace replay
   path, alongside the credential-free deterministic evidence.
