@@ -1,10 +1,10 @@
 {
   "appendix_declared": true,
-  "appendix_first_pdf_page": 5,
+  "appendix_first_pdf_page": 6,
   "body_limit": 13,
-  "body_pages": 5,
+  "body_pages": 6,
   "note": "The official submission page limit applies to body content. This check locates the first rendered appendix and counts its page toward the body when body and appendix material share it.",
   "pass": true,
   "pdf": "paper/usenix27/main.pdf",
-  "total_pages": 8
+  "total_pages": 9
 }

@@ -1,0 +1,11 @@
+[
+  {
+    "claim": "With identical arrival timing, C2 preserved matching harmful containment and constrained fewer benign fixture actions than C1.",
+    "scope": "controlled policy-selectivity fixture and deterministic replay only",
+    "status": "supported"
+  },
+  {
+    "claim": "TCOP universally dominates always-on containment.",
+    "status": "not_claimed"
+  }
+]

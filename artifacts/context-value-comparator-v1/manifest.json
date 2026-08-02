@@ -1,0 +1,10 @@
+{
+  "artifact_type": "context-value-comparator",
+  "complete": true,
+  "controls_passed": true,
+  "normalized_row_count": 3824,
+  "replayable": true,
+  "result_digest": "6d8f6583897b4c5737fc1d6c3ce86df13473d167e867d6707ed00d63a120662f",
+  "source_dependencies_unmodified": true,
+  "version": "tcop.context-value-comparator/1.0"
+}

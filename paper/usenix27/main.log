@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  1 AUG 2026 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  1 AUG 2026 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -547,7 +547,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<figures/pdf/architecture.pdf, id=80, 412.11966pt x 164.70332pt>
+<figures/pdf/architecture.pdf, id=84, 412.11966pt x 164.70332pt>
 File: figures/pdf/architecture.pdf Graphic file (type pdf)
 <use figures/pdf/architecture.pdf>
 Package pdftex.def Info: figures/pdf/architecture.pdf  used on input line 7.
@@ -568,7 +568,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 (./sections/05-containment-window.tex
-<figures/pdf/containment-window.pdf, id=81, 498.43834pt x 153.57375pt>
+<figures/pdf/containment-window.pdf, id=85, 498.43834pt x 153.57375pt>
 File: figures/pdf/containment-window.pdf Graphic file (type pdf)
 <use figures/pdf/containment-window.pdf>
 Package pdftex.def Info: figures/pdf/containment-window.pdf  used on input line
@@ -576,24 +576,24 @@ Package pdftex.def Info: figures/pdf/containment-window.pdf  used on input line
 (pdftex.def)             Requested size: 505.89pt x 155.87921pt.
 )
 (./sections/06-deterministic-evaluation.tex
-<figures/pdf/deterministic-outcomes.pdf, id=83, 285.85481pt x 166.4341pt>
+<figures/pdf/deterministic-outcomes.pdf, id=87, 285.85481pt x 166.4341pt>
 File: figures/pdf/deterministic-outcomes.pdf Graphic file (type pdf)
 <use figures/pdf/deterministic-outcomes.pdf>
 Package pdftex.def Info: figures/pdf/deterministic-outcomes.pdf  used on input 
 line 9.
 (pdftex.def)             Requested size: 241.02039pt x 140.33444pt.
 
-(./tables/generated/tab-deterministic-summary.tex))
-(./sections/07-agent-gateway-evaluation.tex [2]
-(./tables/generated/tab-live-cohort.tex)
+(./tables/generated/tab-deterministic-summary.tex) [2])
+(./sections/07-agent-gateway-evaluation.tex
+(./tables/generated/tab-live-cohort.tex [3 <./figures/pdf/architecture.pdf>])
 (./tables/generated/tab-physical-end-to-end.tex)
-<figures/pdf/physical-timing.pdf, id=92, 357.15182pt x 162.84018pt>
+<figures/pdf/physical-timing.pdf, id=118, 357.15182pt x 162.84018pt>
 File: figures/pdf/physical-timing.pdf Graphic file (type pdf)
 <use figures/pdf/physical-timing.pdf>
 Package pdftex.def Info: figures/pdf/physical-timing.pdf  used on input line 13
 .
 (pdftex.def)             Requested size: 241.02039pt x 109.89249pt.
-<figures/pdf/live-replay-treatments.pdf, id=93, 418.762pt x 188.43471pt>
+<figures/pdf/live-replay-treatments.pdf, id=119, 418.762pt x 188.43471pt>
 File: figures/pdf/live-replay-treatments.pdf Graphic file (type pdf)
 <use figures/pdf/live-replay-treatments.pdf>
 Package pdftex.def Info: figures/pdf/live-replay-treatments.pdf  used on input 
@@ -601,24 +601,22 @@ line 20.
 (pdftex.def)             Requested size: 505.89pt x 227.6444pt.
 
 (./tables/generated/tab-replay-timing.tex))
-(./sections/08-security-availability.tex [3 <./figures/pdf/architecture.pdf>]
-<figures/pdf/security-availability.pdf, id=117, 420.68982pt x 192.0646pt>
+(./sections/08-security-availability.tex
+<figures/pdf/security-availability.pdf, id=120, 420.68982pt x 192.0646pt>
 File: figures/pdf/security-availability.pdf Graphic file (type pdf)
 <use figures/pdf/security-availability.pdf>
 Package pdftex.def Info: figures/pdf/security-availability.pdf  used on input l
 ine 9.
 (pdftex.def)             Requested size: 241.02039pt x 110.03477pt.
-
-(./tables/generated/tab-utility.tex
+ (./tables/generated/tab-utility.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
  []
 
 ) (./tables/generated/tab-negative-controls.tex)
 (./tables/generated/tab-performance.tex)) (./sections/09-related-work.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[4 <./figures/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes
+.pdf> <./figures/pdf/physical-timing.pdf>]
 (./tables/generated/tab-amendment-history.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 []|\T1/ptm/m/n/7 (+20) Model sam-
@@ -644,12 +642,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\T1/ptm/m/n/7 (+20) Physical-path
  []
 
+)) (./sections/10-limitations-conclusion.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \vbox (badness 1424) has occurred while \output is active []
 
- [4 <./figures/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcome
-s.pdf>]))
-(./sections/10-limitations-conclusion.tex
+Underfull \vbox (badness 2460) has occurred while \output is active []
+
+ [5 <./figures/pdf/live-replay-treatments.pdf> <./figures/pdf/security-availabi
+lity.pdf>]
 (./tables/generated/tab-limitations.tex)) (./main.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
@@ -666,8 +666,8 @@ Underfull \hbox (badness 2027) in paragraph at lines 4--9
 rg / conferences /
  []
 
-) (./appendices/open-science.tex [5 <./figures/pdf/physical-timing.pdf>])
-(./appendices/ethics.tex) (./appendices/strategy-details.tex
+) (./appendices/open-science.tex) (./appendices/ethics.tex)
+(./appendices/strategy-details.tex
 Underfull \hbox (badness 2707) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The study cer-ti-fies four objective-specific frozen con-
  []
@@ -678,45 +678,56 @@ Underfull \hbox (badness 7133) in paragraph at lines 3--4
 ted
  []
 
-) (./appendices/amendment-history.tex [6 <./figures/pdf/live-replay-treatments.
-pdf> <./figures/pdf/security-availability.pdf>]
-<figures/pdf/artifact-lineage.pdf, id=196, 412.11966pt x 145.22658pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6])
+(./appendices/amendment-history.tex
+<figures/pdf/artifact-lineage.pdf, id=200, 412.11966pt x 145.22658pt>
 File: figures/pdf/artifact-lineage.pdf Graphic file (type pdf)
 <use figures/pdf/artifact-lineage.pdf>
 Package pdftex.def Info: figures/pdf/artifact-lineage.pdf  used on input line 7
 .
 (pdftex.def)             Requested size: 505.89pt x 178.27971pt.
-)
-(./appendices/extended-results.tex
+) (./appendices/extended-results.tex
 Underfull \hbox (badness 2005) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
  []
 
-) (./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
-) [7] [8 <./figures/pdf/artifact-lineage.pdf>] (./main.aux)
+
+Underfull \vbox (badness 3590) has occurred while \output is active []
+
+)
+(./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
+Underfull \vbox (badness 3590) has occurred while \output is active []
+
+ [7])
+[8
+
+] [9 <./figures/pdf/artifact-lineage.pdf>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4A580ADBBD29DF7D3BF30D6304E1FB2F;2830.
+(rerunfilecheck)             Checksum: A6F4637D5A7A52AFC0F1218D221985AF;3067.
  ) 
 Here is how much of TeX's memory you used:
- 12776 strings out of 467525
- 208698 string characters out of 5418983
- 670732 words of memory out of 5000000
- 41105 multiletter control sequences out of 15000+600000
+ 12779 strings out of 467525
+ 208734 string characters out of 5418983
+ 671735 words of memory out of 5000000
+ 41106 multiletter control sequences out of 15000+600000
  684015 words of font info for 278 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,10n,93p,1510b,477s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,10n,93p,1510b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/
 local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 174759 bytes).
+Output written on main.pdf (9 pages, 176129 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
- 72364 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 261 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 72372 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -1,0 +1,75 @@
+{
+  "by_condition": {
+    "C0": {
+      "attempted": 956,
+      "benign_attempted": 562,
+      "benign_constrained": 0,
+      "harmful_attempted": 394,
+      "harmful_prevented": 0,
+      "workflow_completed": 361
+    },
+    "C1": {
+      "attempted": 956,
+      "benign_attempted": 562,
+      "benign_constrained": 62,
+      "harmful_attempted": 394,
+      "harmful_prevented": 295,
+      "workflow_completed": 320
+    },
+    "C2": {
+      "attempted": 956,
+      "benign_attempted": 562,
+      "benign_constrained": 61,
+      "harmful_attempted": 394,
+      "harmful_prevented": 295,
+      "workflow_completed": 321
+    },
+    "C3": {
+      "attempted": 956,
+      "benign_attempted": 562,
+      "benign_constrained": 142,
+      "harmful_attempted": 394,
+      "harmful_prevented": 394,
+      "workflow_completed": 240
+    }
+  },
+  "primary_result": {
+    "availability_improved_C2_vs_C1": true,
+    "containment_preserved_C2_vs_C1": true,
+    "interpretation": "The primary C1 versus C2 test is the separately labeled controlled fixture because the frozen cohorts lack within-episode selectivity pairs; aggregate cohorts remain reported without pooling."
+  },
+  "selectivity_fixture": {
+    "C0": {
+      "attempted": 2,
+      "benign_attempted": 1,
+      "benign_constrained": 0,
+      "harmful_attempted": 1,
+      "harmful_prevented": 0,
+      "workflow_completed": 1
+    },
+    "C1": {
+      "attempted": 2,
+      "benign_attempted": 1,
+      "benign_constrained": 1,
+      "harmful_attempted": 1,
+      "harmful_prevented": 1,
+      "workflow_completed": 0
+    },
+    "C2": {
+      "attempted": 2,
+      "benign_attempted": 1,
+      "benign_constrained": 0,
+      "harmful_attempted": 1,
+      "harmful_prevented": 1,
+      "workflow_completed": 1
+    },
+    "C3": {
+      "attempted": 2,
+      "benign_attempted": 1,
+      "benign_constrained": 1,
+      "harmful_attempted": 1,
+      "harmful_prevented": 1,
+      "workflow_completed": 0
+    }
+  }
+}

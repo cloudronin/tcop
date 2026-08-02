@@ -1,0 +1,36 @@
+{
+  "C1": {
+    "allowed_input": [
+      "validity",
+      "arrival_time",
+      "ttl"
+    ],
+    "rule": "restrict guarded capability class during TTL"
+  },
+  "C2": {
+    "allowed_input": [
+      "issuer",
+      "signature_result",
+      "observation_id",
+      "receipt_ref",
+      "capability_class",
+      "subject",
+      "resource_namespace",
+      "scope",
+      "issue_expiry",
+      "receiver_local_authorization"
+    ],
+    "forbidden": [
+      "scenario",
+      "harm",
+      "treatment",
+      "oracle"
+    ],
+    "rule": "restrict only locally matching bindings during TTL"
+  },
+  "C3": {
+    "rule": "restrict guarded capability class for episode",
+    "tcop_message_access": "none"
+  },
+  "policy_id": "context-value-comparator-v1"
+}

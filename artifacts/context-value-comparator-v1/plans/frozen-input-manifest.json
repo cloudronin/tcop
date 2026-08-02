@@ -1,0 +1,10 @@
+{
+  "federated": {
+    "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+    "path": "artifacts/federated-domain-v0.6-evidence"
+  },
+  "live": {
+    "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+    "path": "artifacts/v0.6-agent-validation-live-origin-certified"
+  }
+}

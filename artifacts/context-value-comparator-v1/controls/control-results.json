@@ -1,0 +1,142 @@
+[
+  {
+    "condition": "C0",
+    "control": "invalid_signature",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C1",
+    "control": "invalid_signature",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C2",
+    "control": "invalid_signature",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C3",
+    "control": "invalid_signature",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C0",
+    "control": "unknown_receipt",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C1",
+    "control": "unknown_receipt",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C2",
+    "control": "unknown_receipt",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C3",
+    "control": "unknown_receipt",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C0",
+    "control": "expired_context",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C1",
+    "control": "expired_context",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C2",
+    "control": "expired_context",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C3",
+    "control": "expired_context",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C0",
+    "control": "replayed_context",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C1",
+    "control": "replayed_context",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C2",
+    "control": "replayed_context",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C3",
+    "control": "replayed_context",
+    "passed": true,
+    "reason": "receiver_validation_rejected_before_policy_dispatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C2",
+    "control": "context_target_mismatch",
+    "passed": true,
+    "reason": "context_binding_mismatch",
+    "restriction_created": false
+  },
+  {
+    "condition": "C1",
+    "control": "context_target_mismatch",
+    "passed": true,
+    "reason": "arrival_only_blanket",
+    "restriction_created": true
+  },
+  {
+    "condition": "C1",
+    "control": "C1_opaque_interface",
+    "passed": true,
+    "reason": "ArrivalToken exposes validity_time_ttl_only",
+    "restriction_created": false
+  },
+  {
+    "condition": "C3",
+    "control": "C3_no_tcop_message",
+    "passed": true,
+    "reason": "always_policy_has_no_context_parameter",
+    "restriction_created": false
+  }
+]

@@ -129,21 +129,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active)
 LaTeX Warning: Reference `fig:deterministic' on page 2 undefined on input line 
 5.
 
-(./tables/generated/tab-deterministic-summary.tex))
-(./sections/07-agent-gateway-evaluation.tex [2]
-(./tables/generated/tab-live-cohort.tex)
+(./tables/generated/tab-deterministic-summary.tex) [2])
+(./sections/07-agent-gateway-evaluation.tex
+(./tables/generated/tab-live-cohort.tex [3 <./figures/pdf/architecture.pdf>])
 (./tables/generated/tab-physical-end-to-end.tex)
 
-LaTeX Warning: Reference `fig:physical' on page 3 undefined on input line 9.
+LaTeX Warning: Reference `fig:physical' on page 4 undefined on input line 9.
 
 (./tables/generated/tab-replay-timing.tex))
-(./sections/08-security-availability.tex [3 <./figures/pdf/architecture.pdf>]
-(./tables/generated/tab-utility.tex
+(./sections/08-security-availability.tex (./tables/generated/tab-utility.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
 ) (./tables/generated/tab-negative-controls.tex)
 (./tables/generated/tab-performance.tex)) (./sections/09-related-work.tex
-Underfull \vbox (badness 10000) has occurred while \output is active
+[4 <./figures/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes
+.pdf> <./figures/pdf/physical-timing.pdf>]
 (./tables/generated/tab-amendment-history.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 []|\T1/ptm/m/n/7 (+20) Model sam-
@@ -159,10 +159,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\T1/ptm/m/n/7 (+20) Physical-path
-
-Underfull \vbox (badness 1424) has occurred while \output is active [4 <./figur
-es/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes.pdf>]))
-(./sections/10-limitations-conclusion.tex
+)) (./sections/10-limitations-conclusion.tex
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 2460) has occurred while \output is active [5 <./figur
+es/pdf/live-replay-treatments.pdf> <./figures/pdf/security-availability.pdf>]
 (./tables/generated/tab-limitations.tex))
 
 LaTeX Warning: Citation `usenixTemplate' undefined on input line 28.
@@ -174,21 +174,24 @@ Underfull \hbox (badness 2435) in paragraph at lines 4--9
 Underfull \hbox (badness 2027) in paragraph at lines 4--9
 \T1/ptm/m/n/10 (+20) pa-pers.  [][]$\T1/pcr/m/n/10 https : / / www . usenix . o
 rg / conferences /
-) (./appendices/open-science.tex [5 <./figures/pdf/physical-timing.pdf>])
-(./appendices/ethics.tex) (./appendices/strategy-details.tex
+) (./appendices/open-science.tex) (./appendices/ethics.tex)
+(./appendices/strategy-details.tex
 Underfull \hbox (badness 2707) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The study cer-ti-fies four objective-specific frozen con-
 
 Underfull \hbox (badness 7133) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) fig-u-ra-tions: containment-first (P2), bal-anced fed-er-a
 ted
-) (./appendices/amendment-history.tex [6 <./figures/pdf/live-replay-treatments.
-pdf> <./figures/pdf/security-availability.pdf>])
-(./appendices/extended-results.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active [6])
+(./appendices/amendment-history.tex) (./appendices/extended-results.tex
 Underfull \hbox (badness 2005) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
-) (./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
-) [7] [8 <./figures/pdf/artifact-lineage.pdf>] (./main.aux)
+
+Underfull \vbox (badness 3590) has occurred while \output is active)
+(./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
+Underfull \vbox (badness 3590) has occurred while \output is active [7])
+[8] [9 <./figures/pdf/artifact-lineage.pdf>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -206,7 +209,7 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (8 pages, 173816 bytes).
+Output written on main.pdf (9 pages, 174882 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
@@ -359,18 +362,18 @@ Underfull \hbox (badness 3690) in paragraph at lines 9--10
 Underfull \vbox (badness 10000) has occurred while \output is active)
 (./sections/05-containment-window.tex)
 (./sections/06-deterministic-evaluation.tex
-(./tables/generated/tab-deterministic-summary.tex))
-(./sections/07-agent-gateway-evaluation.tex [2]
-(./tables/generated/tab-live-cohort.tex)
+(./tables/generated/tab-deterministic-summary.tex) [2])
+(./sections/07-agent-gateway-evaluation.tex
+(./tables/generated/tab-live-cohort.tex [3 <./figures/pdf/architecture.pdf>])
 (./tables/generated/tab-physical-end-to-end.tex)
 (./tables/generated/tab-replay-timing.tex))
-(./sections/08-security-availability.tex [3 <./figures/pdf/architecture.pdf>]
-(./tables/generated/tab-utility.tex
+(./sections/08-security-availability.tex (./tables/generated/tab-utility.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
 ) (./tables/generated/tab-negative-controls.tex)
 (./tables/generated/tab-performance.tex)) (./sections/09-related-work.tex
-Underfull \vbox (badness 10000) has occurred while \output is active
+[4 <./figures/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes
+.pdf> <./figures/pdf/physical-timing.pdf>]
 (./tables/generated/tab-amendment-history.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 []|\T1/ptm/m/n/7 (+20) Model sam-
@@ -386,10 +389,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\T1/ptm/m/n/7 (+20) Physical-path
-
-Underfull \vbox (badness 1424) has occurred while \output is active [4 <./figur
-es/pdf/containment-window.pdf> <./figures/pdf/deterministic-outcomes.pdf>]))
-(./sections/10-limitations-conclusion.tex
+)) (./sections/10-limitations-conclusion.tex
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 2460) has occurred while \output is active [5 <./figur
+es/pdf/live-replay-treatments.pdf> <./figures/pdf/security-availability.pdf>]
 (./tables/generated/tab-limitations.tex)) (./main.bbl
 Underfull \hbox (badness 2435) in paragraph at lines 4--9
 []\T1/ptm/m/n/10 (+20) USENIX As-so-ci-a-tion.  Tem-plates for con-fer-ence
@@ -397,27 +400,30 @@ Underfull \hbox (badness 2435) in paragraph at lines 4--9
 Underfull \hbox (badness 2027) in paragraph at lines 4--9
 \T1/ptm/m/n/10 (+20) pa-pers.  [][]$\T1/pcr/m/n/10 https : / / www . usenix . o
 rg / conferences /
-) (./appendices/open-science.tex [5 <./figures/pdf/physical-timing.pdf>])
-(./appendices/ethics.tex) (./appendices/strategy-details.tex
+) (./appendices/open-science.tex) (./appendices/ethics.tex)
+(./appendices/strategy-details.tex
 Underfull \hbox (badness 2707) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The study cer-ti-fies four objective-specific frozen con-
 
 Underfull \hbox (badness 7133) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) fig-u-ra-tions: containment-first (P2), bal-anced fed-er-a
 ted
-) (./appendices/amendment-history.tex [6 <./figures/pdf/live-replay-treatments.
-pdf> <./figures/pdf/security-availability.pdf>])
-(./appendices/extended-results.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active [6])
+(./appendices/amendment-history.tex) (./appendices/extended-results.tex
 Underfull \hbox (badness 2005) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
-) (./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
-) [7] [8 <./figures/pdf/artifact-lineage.pdf>] (./main.aux) )
+
+Underfull \vbox (badness 3590) has occurred while \output is active)
+(./appendices/failure-controls.tex) (./appendices/reproducibility-details.tex
+Underfull \vbox (badness 3590) has occurred while \output is active [7])
+[8] [9 <./figures/pdf/artifact-lineage.pdf>] (./main.aux) )
 (see the transcript file for additional information)</usr/local/texlive/2026/te
 xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (8 pages, 174759 bytes).
+Output written on main.pdf (9 pages, 176129 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'

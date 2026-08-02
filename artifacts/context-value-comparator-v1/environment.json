@@ -1,0 +1,5 @@
+{
+  "command": "tcop study comparator run",
+  "execution": "deterministic replay only",
+  "python": "3.12.2"
+}

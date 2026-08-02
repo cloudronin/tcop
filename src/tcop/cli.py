@@ -39,6 +39,7 @@ from .confirmation_benchmark import (
     run_confirmation_experiments,
     run_confirmation_suite,
 )
+from .context_comparator import EVIDENCE_ROOT as COMPARATOR_ROOT, run_context_comparator, verify_context_comparator
 from .experiments import run_deterministic_experiments
 from .evidence_round import DEFAULT_SOURCE as EVIDENCE_SOURCE, SELECTIONS as EVIDENCE_SELECTIONS, EvidenceRound, evidence_selection_matrix, run_evidence_study
 from .federation import (
@@ -242,6 +243,12 @@ def _add_study_and_artifact(commands: argparse._SubParsersAction[argparse.Argume
     agent_gateway_build.add_argument("--source", type=Path, required=True); agent_gateway_build.add_argument("--tag", required=True); _format(agent_gateway_build)
     agent_probe = agent_nested.add_parser("probe-gateway", help="exercise real reference-gateway allow/context/receiver-local-deny wiring")
     agent_probe.add_argument("--gateway-endpoint", required=True); agent_probe.add_argument("--receiver-endpoint", required=True); agent_probe.add_argument("--token", required=True); agent_probe.add_argument("--artifact-dir", type=Path, help="record a passed probe in an existing agent-validation artifact"); _format(agent_probe)
+    comparator = nested.add_parser("comparator", help="run or verify the separately rooted context-value comparator")
+    comparator_nested = comparator.add_subparsers(dest="comparator_command", required=True)
+    comparator_run = comparator_nested.add_parser("run", help="run C0 through C3 against frozen deterministic and replay inputs")
+    comparator_run.add_argument("--output", type=Path, default=COMPARATOR_ROOT); _format(comparator_run)
+    comparator_verify = comparator_nested.add_parser("verify", help="verify a sealed context-value comparator artifact")
+    comparator_verify.add_argument("--artifact-dir", type=Path, default=COMPARATOR_ROOT); _format(comparator_verify)
     artifact = commands.add_parser("artifact", help="read-only artifact verification, inspection, and comparison")
     artifact_nested = artifact.add_subparsers(dest="artifact_command", required=True)
     artifact_verify = artifact_nested.add_parser("verify", help="verify an already-created artifact root")
@@ -448,6 +455,9 @@ def dispatch(args: argparse.Namespace) -> tuple[Any, str]:
     if args.command == "admin":
         return admin_query(args.endpoint, args.admin_command, domain=args.domain, since=args.since, scope=args.scope), args.format
     if args.command == "study":
+        if args.study_command == "comparator":
+            if args.comparator_command == "run": return run_context_comparator(args.output), args.format
+            if args.comparator_command == "verify": return verify_context_comparator(args.artifact_dir), args.format
         if args.study_command == "agent":
             study = AgentStudy(args.plan) if hasattr(args, "plan") else AgentStudy()
             if args.agent_command == "prepare": return study.prepare(), args.format
