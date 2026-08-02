@@ -1,9 +1,18 @@
-# TCOP Reference Framework (TCF)
+# TCOP: Receiver-Sovereign Federated Early Warning
 
-TCOP is operated and evaluated through the installed `tcop` command. The CLI
-is the single interface for protocol validation, frozen-strategy certification,
-deterministic study reproduction, artifact review, safe local services, and
-observational administration.
+TCOP is a receiver-sovereign federated early-warning architecture for
+cross-domain agent tool use. Domains exchange signed, scoped, time-bounded
+context. The receiving domain alone correlates that context with its local
+state, applies its own policy, and issues any enforcement decision.
+
+TCOP is not a remote kill switch. It does not create detections, does not send
+enforcement commands across domains, and is not presented as an Internet-scale
+deployment. This repository is a deterministic reference framework and an
+evidence package for the accompanying paper.
+
+The installed `tcop` command is the single interface for protocol validation,
+frozen-strategy certification, deterministic study reproduction, artifact
+review, safe local services, and observational administration.
 
 ```text
 TCOP protocol core ── deterministic experiments / artifact replay
@@ -11,11 +20,10 @@ TCOP protocol core ── deterministic experiments / artifact replay
                    └─ read-only operational diagnostics
 ```
 
-Those modes use the same signing, TCX validation, receipt handling, frozen
-strategy adapters, local resolver behavior, and gateway acceptance boundary.
-They differ only in their clock, transport, persistence, telemetry, and local
-enforcement adapters. TCOP is still a deterministic reference implementation,
-not a production security control.
+Those modes share signing, TCX validation, receipt handling, frozen strategy
+adapters, local resolver behavior, and the gateway acceptance boundary. They
+differ only in clock, transport, persistence, telemetry, and local enforcement
+adapters.
 
 It also contains a separate v0.2 deterministic witness profile. The profile
 adds receiver-classified control-group evidence, interaction receipts,
@@ -36,6 +44,52 @@ changing the frozen earlier profiles.
 The separate v0.5 minimality profile is an analysis/composition layer over
 v0.1–v0.4. It evaluates declared coherent profiles, ablations, interactions,
 complexity, Pareto frontiers, and profile selection without adding a defense.
+
+## Paper reviewer quickstart
+
+The question protected by the paper is whether signed cross-domain context can
+arrive early enough for a receiving domain to make a useful local decision,
+without granting another domain enforcement authority. Review starts from the
+sealed artifacts, not from a model call or a live service.
+
+```bash
+python -m pip install -e .
+
+# Validate the strict deterministic A1:A2 evidence and frozen strategies.
+tcop study verify-inputs \
+  --plan benchmark/studies/v0.6-evidence.yaml \
+  --source artifacts/minimality-v0.5-validation \
+  --source-artifact artifacts/federated-domain-v0.6
+
+# Verify the credential-free and certified live-replay evidence roots.
+tcop artifact verify artifacts/federated-domain-v0.6-evidence \
+  --require-complete --require-replayable
+tcop artifact verify artifacts/v0.6-agent-validation-live-origin-certified \
+  --require-complete --require-replayable
+
+# Verify the separately rooted C0-C3 context-versus-blanket comparator.
+tcop study comparator verify \
+  --artifact-dir artifacts/context-value-comparator-v1
+```
+
+The expected result is a successful verification for each root. The comparator
+artifact digest is `2a7c267f69aa736122de7366359983e838ba29316e142957c7e8049d63cbf421`.
+For an end-to-end paper check, run `make paper-check`; the reviewer workspace
+and paper-specific source verifier are in [paper/usenix27](paper/usenix27).
+
+| Paper result | Evidence root | What to inspect |
+| --- | --- | --- |
+| Receiver-local authority and no remote enforcement | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/authorization-audit.json`, `reports/origin-federation-audit.json` |
+| Deterministic A1:A2 containment result | `artifacts/federated-domain-v0.6-evidence` | `pairs/paired-results.jsonl`, `reports/paired-causal-comparison.json` |
+| Frozen live traces and causal replay | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/trace-generation-summary.json`, `reports/paired-enforcement-results.json` |
+| Availability cost | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/benign-workload-impact.json` |
+| Context versus blanket restriction | `artifacts/context-value-comparator-v1` | `reports/summary.json`, `cohort/cohort-census.json`, `decision-traces/decision-traces.jsonl` |
+
+The context comparator is explicitly separate from the original A1:A2 result.
+Its frozen cohorts lacked an episode containing both a matching harmful action
+and a same-capability nonmatching benign action, so its primary C1/C2 test is
+a separately labeled deterministic policy-selectivity fixture. It reports the
+full cohorts without pooling them into a live-agent selectivity claim.
 
 ## Scope
 

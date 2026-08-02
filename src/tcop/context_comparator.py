@@ -55,7 +55,9 @@ def _read(path: Path) -> Any:
 
 
 def _root_digest(root: Path) -> str:
-    files = {str(path.relative_to(root)): _file_digest(path) for path in sorted(root.rglob("*")) if path.is_file() and path.name != "artifact-root-digest.json"}
+    # Finder metadata is not an evidence record and must not make a sealed
+    # reviewer artifact appear to have changed after ordinary local browsing.
+    files = {str(path.relative_to(root)): _file_digest(path) for path in sorted(root.rglob("*")) if path.is_file() and path.name not in {"artifact-root-digest.json", ".DS_Store"}}
     return _digest(files)
 
 
