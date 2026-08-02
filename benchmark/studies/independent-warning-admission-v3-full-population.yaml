@@ -1,0 +1,20 @@
+study: Independent Warning Admission v3 Full Population
+study_id: independent-warning-admission-v3-full-population
+artifact_root: artifacts/independent-warning-admission-v3-full-population
+predecessor:
+  artifact_root: artifacts/independent-warning-admission-v2-external-stratified
+  digest: 4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907
+preflight_root: artifacts/independent-warning-admission-v2-external-stratified-preflight
+population: all_168_preserved_detector_outputs
+detector_execution: forbidden
+policies: [C0, C1, C2, C2E, C3]
+policy_semantics:
+  C0: local_only
+  C1: arrival_guard_after_accepted_exact_warning
+  C2: exact_binding_after_accepted_exact_warning
+  C2E: receiver_local_campaign_strategy_after_accepted_exact_warning
+  C3: standing_guard_without_imported_evidence
+claims:
+  - report detector coverage, evidence admission, and policy outcomes separately
+  - report no-warning attacks as outside conditional TCOP coverage
+  - do_not_estimate detector_quality_or_production_effectiveness

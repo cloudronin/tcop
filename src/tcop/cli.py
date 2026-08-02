@@ -52,6 +52,7 @@ from .adaptive_agent_authorization import ROOT as ADAPTIVE_AUTH_ROOT, run_adapti
 from .independent_warning_admission import ROOT as INDEPENDENT_WARNING_ROOT, acquire_independent, run_independent_warning, verify_independent_warning, report_independent_warning
 from .c2e_frontier import ROOT as C2E_FRONTIER_ROOT, run_c2e_frontier, verify_c2e_frontier, report_c2e_frontier
 from .independent_warning_v2 import ROOT as INDEPENDENT_WARNING_V2_ROOT, PREFLIGHT as INDEPENDENT_WARNING_V2_PREFLIGHT, ACQUISITION as INDEPENDENT_WARNING_V2_ACQUISITION, acquire_v2, preflight_v2, run_v2, verify_v2, report_v2
+from .independent_warning_full import ROOT as INDEPENDENT_WARNING_FULL_ROOT, run_full_population, verify_full_population, report_full_population
 from .experiments import run_deterministic_experiments
 from .evidence_round import DEFAULT_SOURCE as EVIDENCE_SOURCE, SELECTIONS as EVIDENCE_SELECTIONS, EvidenceRound, evidence_selection_matrix, run_evidence_study
 from .federation import (
@@ -303,6 +304,12 @@ def _add_study_and_artifact(commands: argparse._SubParsersAction[argparse.Argume
     v2_run.add_argument("--output", type=Path, default=INDEPENDENT_WARNING_V2_ROOT); v2_run.add_argument("--preflight-dir", type=Path, default=INDEPENDENT_WARNING_V2_PREFLIGHT); v2_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/independent-warning-admission-v2-external-stratified.yaml")); _format(v2_run)
     for name in ("verify", "report"):
         parser = independent_v2_nested.add_parser(name, help=f"{name} the v2 external-warning study"); parser.add_argument("--artifact-dir", type=Path, default=INDEPENDENT_WARNING_V2_ROOT if name == "verify" else INDEPENDENT_WARNING_V2_PREFLIGHT); _format(parser)
+    independent_warning_full = nested.add_parser("independent-warning-full", help="evaluate every sealed v2 external-warning candidate without detector inference")
+    independent_full_nested = independent_warning_full.add_subparsers(dest="independent_warning_full_command", required=True)
+    full_run = independent_full_nested.add_parser("run", help="run frozen receiver policies over the complete sealed external population")
+    full_run.add_argument("--output", type=Path, default=INDEPENDENT_WARNING_FULL_ROOT); full_run.add_argument("--preflight-dir", type=Path, default=Path("artifacts/independent-warning-admission-v2-external-stratified-preflight")); full_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/independent-warning-admission-v3-full-population.yaml")); _format(full_run)
+    for name in ("verify", "report"):
+        parser = independent_full_nested.add_parser(name, help=f"{name} the full-population external-warning study"); parser.add_argument("--artifact-dir", type=Path, default=INDEPENDENT_WARNING_FULL_ROOT); _format(parser)
     artifact = commands.add_parser("artifact", help="read-only artifact verification, inspection, and comparison")
     artifact_nested = artifact.add_subparsers(dest="artifact_command", required=True)
     artifact_verify = artifact_nested.add_parser("verify", help="verify an already-created artifact root")
@@ -539,6 +546,10 @@ def dispatch(args: argparse.Namespace) -> tuple[Any, str]:
             if args.independent_warning_v2_command == "run": return run_v2(args.output, args.preflight_dir, args.plan), args.format
             if args.independent_warning_v2_command == "verify": return verify_v2(args.artifact_dir), args.format
             if args.independent_warning_v2_command == "report": return report_v2(args.artifact_dir), args.format
+        if args.study_command == "independent-warning-full":
+            if args.independent_warning_full_command == "run": return run_full_population(args.output, args.preflight_dir, args.plan), args.format
+            if args.independent_warning_full_command == "verify": return verify_full_population(args.artifact_dir), args.format
+            if args.independent_warning_full_command == "report": return report_full_population(args.artifact_dir), args.format
         if args.study_command == "agent":
             study = AgentStudy(args.plan) if hasattr(args, "plan") else AgentStudy()
             if args.agent_command == "prepare": return study.prepare(), args.format
