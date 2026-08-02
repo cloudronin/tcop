@@ -1,14 +1,23 @@
-# TCOP: Receiver-Sovereign Federated Early Warning
+# TCOP: Receiver-Bound Runtime Evidence for Cross-Domain Agent Authorization
 
-TCOP is a receiver-sovereign federated early-warning architecture for
-cross-domain agent tool use. Domains exchange signed, scoped, time-bounded
-context. The receiving domain alone correlates that context with its local
-state, applies its own policy, and issues any enforcement decision.
+TCOP is a protocol for carrying signed, scoped, time-bounded runtime evidence
+from an observing domain to the local authorization boundary of a receiving
+domain. Before that evidence can affect a pending agent action, the receiver
+validates provenance, freshness, replay state, receipt correlation, subject,
+resource namespace, capability, and scope against its own state. The receiver
+then creates the authorization decision under its own policy.
 
-TCOP is not a remote kill switch. It does not create detections, does not send
-enforcement commands across domains, and is not presented as an Internet-scale
-deployment. This repository is a deterministic reference framework and an
-evidence package for the accompanying paper.
+This repository is the reference implementation and sealed evidence package
+for the final USENIX Security 2027 paper, *TCOP: Receiver-Bound Runtime
+Evidence for Cross-Domain Agent Authorization*. It is organized so reviewers
+can inspect the evidence-to-authorization boundary, reproduce the
+credential-free results, and distinguish protocol behavior from the receiver
+strategies evaluated on top of it.
+
+TCOP is not a remote kill switch, a detector, or a mandated containment
+strategy. It carries evidence. An imported TCX field never maps directly to
+allow, deny, quarantine, revoke, or suspend. The receiver alone chooses
+whether to reject, monitor, restrict, or otherwise handle accepted evidence.
 
 The installed `tcop` command is the single interface for protocol validation,
 frozen-strategy certification, deterministic study reproduction, artifact
@@ -23,7 +32,24 @@ TCOP protocol core ── deterministic experiments / artifact replay
 Those modes share signing, TCX validation, receipt handling, frozen strategy
 adapters, local resolver behavior, and the gateway acceptance boundary. They
 differ only in clock, transport, persistence, telemetry, and local enforcement
-adapters.
+adapters. The gateway consumes a Domain-B-local policy and decision, never a
+remote enforcement instruction.
+
+## Final-paper results and claim boundary
+
+| Evidence | Result | What it supports |
+| --- | --- | --- |
+| Matched synthetic containment | A containment-first receiver strategy reduced 39 baseline harmful calls to 3 when validated evidence arrived inside the tested containment window. | A causal comparison under matched frozen policy and synthetic scenarios, not deployment effectiveness. |
+| TCX Validation-Value v2 | On the accepted binding-matched harmful subset, Exact Binding blocked all 3 actions and constrained none of 12 benign actions. The broad class guard also blocked the 3 matching actions but constrained 7 benign actions. | Receiver-side semantic binding, validation, hostile-peer handling, and correlation behavior. |
+| Post-denial substitution replay | Exact Binding forwarded all 15 eligible substitutions. The evaluated receiver-local Campaign Correlation strategy blocked those substitutions and forwarded the tested outside-campaign same-risk benign actions. | A bounded strategy tradeoff, not mandatory TCOP behavior or a general escalation policy. |
+| C2E frontier | Across the predeclared 150-episode population, Campaign Correlation blocked campaign-linked harmful substitutions without restricting the tested outside-campaign benign actions. | Deterministic strategy selectivity under declared receiver-local relations. |
+| Full external-warning ledger | The sealed population contains 72 attack-bearing and 96 benign source cases. Twenty-five warnings normalize to receiver-actionable exact bindings. Arrival Guard (C1), Exact Binding (C2), and Campaign Correlation (C2E) block those 25 conditionally; Standing Guard (C3) blocks all 72 attack-bearing cases and constrains all 96 benign cases. | Conditional receiver authorization outcomes, not detector quality, warning prevalence, or deployment rates. |
+
+The protocol controls separately show that invalid signatures, wrong receipts,
+expired or replayed contexts, unauthorized peers, and action-like remote
+metadata create no receiver restriction. The single-environment reference path
+also records Domain-B-local policy and decision provenance for every gateway
+block.
 
 It also contains a separate v0.2 deterministic witness profile. The profile
 adds receiver-classified control-group evidence, interaction receipts,
@@ -47,41 +73,35 @@ complexity, Pareto frontiers, and profile selection without adding a defense.
 
 ## Paper reviewer quickstart
 
-The question protected by the paper is whether signed cross-domain context can
-arrive early enough for a receiving domain to make a useful local decision,
-without granting another domain enforcement authority. Review starts from the
-sealed artifacts, not from a model call or a live service.
+The paper asks whether signed cross-domain runtime evidence can reach a
+receiver in time to inform one pending local authorization decision, without
+giving the observing domain enforcement authority. Review starts from sealed
+artifacts, not a live model call or service.
 
 ```bash
 python -m pip install -e .
 
-# Validate the strict deterministic A1:A2 evidence and frozen strategies.
-tcop study verify-inputs \
-  --plan benchmark/studies/v0.6-evidence.yaml \
-  --source artifacts/minimality-v0.5-validation \
-  --source-artifact artifacts/federated-domain-v0.6
+# Default paper reproduction: Tier 0 source and paper checks, deterministic
+# causal replay, and strict replay of frozen agent traces. No provider
+# credential is read.
+(cd paper/usenix27 && ./artifact/reproduce.sh --all-no-credentials)
 
-# Verify the credential-free and certified live-replay evidence roots.
-tcop artifact verify artifacts/federated-domain-v0.6-evidence \
-  --require-complete --require-replayable
-tcop artifact verify artifacts/v0.6-agent-validation-live-origin-certified \
-  --require-complete --require-replayable
-
-# Verify the separately rooted C0-C3 context-versus-blanket comparator.
-tcop study comparator verify \
-  --artifact-dir artifacts/context-value-comparator-v1
-
-# Verify the five-condition TCX validation-value study.
-tcop study validation-value verify \
-  --artifact-dir artifacts/tcx-validation-value-v2
+# Verify the final-paper study roots directly through the public CLI.
+tcop study validation-value verify --artifact-dir artifacts/tcx-validation-value-v2
+tcop study adaptive-authorization verify --artifact-dir artifacts/adaptive-agent-authorization-v1
+tcop study c2e-frontier verify --artifact-dir artifacts/c2e-frontier-v1
+tcop study independent-warning-v2 verify \
+  --artifact-dir artifacts/independent-warning-admission-v2-external-stratified
+tcop study independent-warning-full verify \
+  --artifact-dir artifacts/independent-warning-admission-v3-full-population
 ```
 
-The expected result is a successful verification for each root. The comparator
-artifact digest is `2a7c267f69aa736122de7366359983e838ba29316e142957c7e8049d63cbf421`;
-the v2 validation-value digest is
-`da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d`.
-For an end-to-end paper check, run `make paper-check`; the reviewer workspace
-and paper-specific source verifier are in [paper/usenix27](paper/usenix27).
+The default workflow is credential-free. It verifies source roots, regenerates
+paper-local data, figures, and tables, builds the paper, audits claims,
+numbers, and anonymity, reruns the deterministic core, and strictly replays
+frozen agent traces. Tier 3 can regenerate live traces with a separately
+configured provider credential, but is not needed for any causal claim and
+cannot replace frozen replay evidence.
 
 | Paper result | Evidence root | What to inspect |
 | --- | --- | --- |
@@ -89,36 +109,31 @@ and paper-specific source verifier are in [paper/usenix27](paper/usenix27).
 | Deterministic A1:A2 containment result | `artifacts/federated-domain-v0.6-evidence` | `pairs/paired-results.jsonl`, `reports/paired-causal-comparison.json` |
 | Frozen live traces and causal replay | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/trace-generation-summary.json`, `reports/paired-enforcement-results.json` |
 | Availability cost | `artifacts/v0.6-agent-validation-live-origin-certified` | `reports/benign-workload-impact.json` |
-| Context versus blanket restriction | `artifacts/context-value-comparator-v1` | `reports/summary.json`, `cohort/cohort-census.json`, `decision-traces/decision-traces.jsonl` |
 | TCX validation-value frontier | `artifacts/tcx-validation-value-v2` | `reports/condition-summary.json`, `reports/matching-harmful-summary.json`, `hostile-peer-results.csv`, `correlation-results.csv` |
+| Post-denial substitution replay | `artifacts/adaptive-agent-authorization-v1` | `reports/summary.json`, `decision-traces.jsonl` |
+| C2E frontier | `artifacts/c2e-frontier-v1` | `reports/frontier-summary.json`, `escalation-lifecycle.jsonl`, `c2e-field-use-traces.jsonl` |
+| Independent Warning Admission v2 | `artifacts/independent-warning-admission-v2-external-stratified` | `reports/cohort-summary.json`, `reports/substitution-summary.json`, `candidate-ledger.csv` |
+| Full external-warning ledger | `artifacts/independent-warning-admission-v3-full-population` | `reports/pipeline-coverage.json`, `reports/authorization-outcomes.json`, `candidate-ledger.csv` |
 
-The context comparator is explicitly separate from the original A1:A2 result.
-Its frozen cohorts lacked an episode containing both a matching harmful action
-and a same-capability nonmatching benign action, so its primary C1/C2 test is
-a separately labeled deterministic policy-selectivity fixture. It reports the
-full cohorts without pooling them into a live-agent selectivity claim.
+Every study root contains its own plan, manifest, normalized outputs, source
+or selection ledger where applicable, report, and verifier. The final paper
+preserves predecessor roots and amendment lineage; review the studies as
+separate evidence streams rather than pooling their denominators.
 
-The v2 validation-value study replaces that fixture as the primary selectivity
-evidence. It has twelve preregistered mixed-action episodes and evaluates C0,
-C1-allow, C1-class, C2, and C3 without credentials. C1-class and C2 each
-block all three accepted matching harmful actions; C2 forwards all twelve
-benign actions while C1-class constrains seven. Its hostile-peer, correlation,
-and protocol-mutation workstreams establish the tested trust boundary and must
-be read as deterministic synthetic evidence, not deployment-rate estimates.
+## Repository scope
 
-## Scope
+The reference framework includes:
 
-The first milestone implements:
-
-- signed, scoped, expiring observations and strict validation;
-- static trust-domain and observer authority configuration;
-- append-only SQLite evidence storage and JSONL exports;
-- deterministic five-node simulation with replay, delay, partition, and Sybil
-  fault cases;
-- local capability-specific trust envelopes and simulated responses; and
-- CT-001–CT-020 plus deterministic B-001–B-010 benchmark artifacts;
-- timing, topology, partition-posture, false-containment, and architectural
-  ablation experiments.
+- signed, scoped, expiring runtime observations and strict receiver validation;
+- static trust-domain and observer authority configuration, append-only
+  evidence storage, and JSONL exports;
+- deterministic simulation with replay, delay, partition, and Sybil fault
+  cases, including the preserved v0.1–v0.5 regression path;
+- receiver-local capability envelopes, strategy certification, and separately
+  rooted studies for validation value, timing, substitution, C2E selectivity,
+  and independent-warning admission; and
+- a bounded single-environment reference gateway and frozen live-trace replay
+  path, alongside the credential-free deterministic evidence.
 
 The protocol does not receive benchmark ground truth. Protocol, resolution,
 and benchmark-truth streams are stored separately to prevent oracle leakage.
@@ -235,7 +250,14 @@ developer shortcut that delegates to `tcop`; it is not the public interface.
 
 ## Safety and non-goals
 
-All response adapters are simulations. The implementation intentionally omits
-LLM calls, production enforcement, Kubernetes, Kafka, and external discovery.
-Those integrations must not be added until this deterministic milestone is
-reproducible.
+All evaluated tools, target systems, and enforcement actions are synthetic.
+The default review workflow uses no provider credential. Optional credentialed
+trace generation is bounded, separately locked, and cannot replace the frozen
+replay evidence used for paper claims.
+
+TCOP is not a production deployment, Internet-scale federation, global
+consensus system, or key-lifecycle service. This repository does not expose a
+cross-domain enforcement interface, attack real systems, or reverse completed
+actions. Docker is needed only for the optional reference-gateway smoke path;
+production enforcement, Kubernetes, Kafka, and external discovery remain out
+of scope.
