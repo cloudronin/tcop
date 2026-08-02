@@ -1,0 +1,40 @@
+[
+  {
+    "central_unavailable": false,
+    "delay": 1,
+    "drop": false,
+    "network_id": "N0",
+    "partition": null
+  },
+  {
+    "central_unavailable": false,
+    "delay": 3,
+    "drop": false,
+    "network_id": "N1",
+    "partition": null
+  },
+  {
+    "central_unavailable": false,
+    "delay": 7,
+    "drop": false,
+    "network_id": "N2",
+    "partition": null
+  },
+  {
+    "central_unavailable": false,
+    "delay": 2,
+    "drop": false,
+    "network_id": "N3",
+    "partition": [
+      2,
+      6
+    ]
+  },
+  {
+    "central_unavailable": true,
+    "delay": 3,
+    "drop": true,
+    "network_id": "N4",
+    "partition": null
+  }
+]

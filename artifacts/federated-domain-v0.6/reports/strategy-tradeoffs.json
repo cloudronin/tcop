@@ -1,0 +1,38 @@
+{
+  "primary_strategy_outcomes": [
+    {
+      "architecture_id": "A2",
+      "cell_classification": "primary_deployment_cell",
+      "deployment_eligible": true,
+      "mean_false_containment": 0.0,
+      "mean_forensic_records": 48.2727,
+      "mean_harmful_actions": 1.0909,
+      "mean_protocol_observations": 2.0909,
+      "run_count": 33,
+      "strategy_id": "balanced"
+    },
+    {
+      "architecture_id": "A2",
+      "cell_classification": "primary_deployment_cell",
+      "deployment_eligible": true,
+      "mean_false_containment": 0.0,
+      "mean_forensic_records": 48.2727,
+      "mean_harmful_actions": 0.0909,
+      "mean_protocol_observations": 2.0909,
+      "run_count": 33,
+      "strategy_id": "containment-first"
+    },
+    {
+      "architecture_id": "A2",
+      "cell_classification": "primary_deployment_cell",
+      "deployment_eligible": true,
+      "mean_false_containment": 0.0,
+      "mean_forensic_records": 48.2727,
+      "mean_harmful_actions": 1.0909,
+      "mean_protocol_observations": 2.0909,
+      "run_count": 33,
+      "strategy_id": "utility-preserving"
+    }
+  ],
+  "selection_rule": "no universal strategy winner is inferred; strategies remain domain-local and capability-specific."
+}

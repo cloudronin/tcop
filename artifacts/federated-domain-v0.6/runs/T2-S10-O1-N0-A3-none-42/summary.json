@@ -1,0 +1,81 @@
+{
+  "a2_export_digests": [
+    "26799c2a81cb6acfb0cfa50e38c1ad1224ce2ae018c53f1562894ee077cc1350",
+    "65a5e49cc19c50c04d1447a91279501a95fccced8812885c11cbe31d61eeab5f",
+    "643b39f0f8fe579ee69785ab17dc78aad10e2b349dad985121304263002bbe2b",
+    "f8751efd327bb4863225978870ea94fb7feb55298fd06b54194a066f78828cc8"
+  ],
+  "a3_input_digests": [
+    "26799c2a81cb6acfb0cfa50e38c1ad1224ce2ae018c53f1562894ee077cc1350",
+    "65a5e49cc19c50c04d1447a91279501a95fccced8812885c11cbe31d61eeab5f",
+    "643b39f0f8fe579ee69785ab17dc78aad10e2b349dad985121304263002bbe2b",
+    "f8751efd327bb4863225978870ea94fb7feb55298fd06b54194a066f78828cc8"
+  ],
+  "cell": {
+    "architecture_id": "A3",
+    "cell_id": "T2-S10-O1-N0-A3-none-42",
+    "classification": "negative_control",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S10",
+    "seed": 42,
+    "strategy_id": "none",
+    "topology_id": "T2"
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": 1,
+    "early_warning_lead_time": 3,
+    "false_containment": false,
+    "first_import_at": 2,
+    "first_protection_at": 2,
+    "forensic_records": 25,
+    "harmful_actions": 0,
+    "prevented_actions": 2,
+    "protocol_observations": 4,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 2,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "adversarial",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S10",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Conflicting clean and threat evidence"
+  },
+  "stream_digest": "a76a3f94401b13eee883a737764c18b8df43f30b699bd0772ae8235d86734b29",
+  "topology": {
+    "domains": [
+      "provider",
+      "platform",
+      "downstream"
+    ],
+    "topology_id": "T2",
+    "trust_model": "partner_federation"
+  }
+}

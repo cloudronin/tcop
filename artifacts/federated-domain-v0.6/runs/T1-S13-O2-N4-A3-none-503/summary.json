@@ -1,0 +1,77 @@
+{
+  "a2_export_digests": [
+    "031a9b261981eda43d95b3b3295562105674c2dd7116e3fdfdb9fab293606c8a",
+    "25f7d0ecd0d771665b222d3d51237102161500d512bd313cb0a64de96227eac6"
+  ],
+  "a3_input_digests": [
+    "031a9b261981eda43d95b3b3295562105674c2dd7116e3fdfdb9fab293606c8a",
+    "25f7d0ecd0d771665b222d3d51237102161500d512bd313cb0a64de96227eac6"
+  ],
+  "cell": {
+    "architecture_id": "A3",
+    "cell_id": "T1-S13-O2-N4-A3-none-503",
+    "classification": "sensitivity_cell",
+    "disposition": "scheduled",
+    "network_id": "N4",
+    "observer_id": "O2",
+    "reason": "",
+    "scenario_id": "S13",
+    "seed": 503,
+    "strategy_id": "none",
+    "topology_id": "T1"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": null,
+    "early_warning_lead_time": null,
+    "false_containment": false,
+    "first_import_at": null,
+    "first_protection_at": null,
+    "forensic_records": 17,
+    "harmful_actions": 2,
+    "prevented_actions": 0,
+    "protocol_observations": 2,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 0
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": true,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "resilience",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S13",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Central observer outage"
+  },
+  "stream_digest": "85d9cc9c8fc412716823661fa7c2baae9161f672f6aab46cb09dc82682631106",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

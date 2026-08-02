@@ -1,0 +1,77 @@
+{
+  "a2_export_digests": [
+    "8c42c837d61223ce9abc3b26044626dde8ee81ff7637663f54c955c7d786cc7b",
+    "d8285e8210fd83ffcd4f90b9623d3babcd1eab91b677b0f7ddb6541bee873e4c"
+  ],
+  "a3_input_digests": [
+    "8c42c837d61223ce9abc3b26044626dde8ee81ff7637663f54c955c7d786cc7b",
+    "d8285e8210fd83ffcd4f90b9623d3babcd1eab91b677b0f7ddb6541bee873e4c"
+  ],
+  "cell": {
+    "architecture_id": "A3",
+    "cell_id": "T2-S18-O1-N0-A3-none-42",
+    "classification": "negative_control",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S18",
+    "seed": 42,
+    "strategy_id": "none",
+    "topology_id": "T2"
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": 1,
+    "early_warning_lead_time": 3,
+    "false_containment": false,
+    "first_import_at": 2,
+    "first_protection_at": 2,
+    "forensic_records": 29,
+    "harmful_actions": 0,
+    "prevented_actions": 2,
+    "protocol_observations": 2,
+    "rejected_observations": 4,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "adversarial",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": true,
+    "scenario_id": "S18",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": true,
+    "title": "Tampered and replayed imported evidence"
+  },
+  "stream_digest": "4057918a740754a7bba0f691aeec56bafa277a192fee2b3827a4f0fd80c8b4cc",
+  "topology": {
+    "domains": [
+      "provider",
+      "platform",
+      "downstream"
+    ],
+    "topology_id": "T2",
+    "trust_model": "partner_federation"
+  }
+}

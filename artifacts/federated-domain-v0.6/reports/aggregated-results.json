@@ -1,0 +1,200 @@
+[
+  {
+    "architecture_id": "A0",
+    "cell_classification": "negative_control",
+    "deployment_eligible": false,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 0.0,
+    "mean_harmful_actions": 0.8571,
+    "mean_protocol_observations": 0.0,
+    "run_count": 21,
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "cell_classification": "primary_deployment_cell",
+    "deployment_eligible": true,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 0.0,
+    "mean_harmful_actions": 2.2727,
+    "mean_protocol_observations": 0.0,
+    "run_count": 33,
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "cell_classification": "negative_control",
+    "deployment_eligible": false,
+    "mean_false_containment": 0.4286,
+    "mean_forensic_records": 42.0,
+    "mean_harmful_actions": 0.1429,
+    "mean_protocol_observations": 3.0,
+    "run_count": 21,
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "cell_classification": "primary_deployment_cell",
+    "deployment_eligible": true,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 41.0909,
+    "mean_harmful_actions": 1.0909,
+    "mean_protocol_observations": 2.0909,
+    "run_count": 33,
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "cell_classification": "sensitivity_cell",
+    "deployment_eligible": true,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 41.0,
+    "mean_harmful_actions": 1.6,
+    "mean_protocol_observations": 2.0,
+    "run_count": 15,
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A2",
+    "cell_classification": "negative_control",
+    "deployment_eligible": false,
+    "mean_false_containment": 0.4286,
+    "mean_forensic_records": 54.1429,
+    "mean_harmful_actions": 0.1429,
+    "mean_protocol_observations": 3.0,
+    "run_count": 21,
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "cell_classification": "primary_deployment_cell",
+    "deployment_eligible": true,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 48.2727,
+    "mean_harmful_actions": 1.0909,
+    "mean_protocol_observations": 2.0909,
+    "run_count": 33,
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "cell_classification": "sensitivity_cell",
+    "deployment_eligible": true,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 47.0,
+    "mean_harmful_actions": 1.6,
+    "mean_protocol_observations": 2.0,
+    "run_count": 15,
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "cell_classification": "negative_control",
+    "deployment_eligible": false,
+    "mean_false_containment": 0.4286,
+    "mean_forensic_records": 54.1429,
+    "mean_harmful_actions": 0.0,
+    "mean_protocol_observations": 3.0,
+    "run_count": 21,
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "cell_classification": "primary_deployment_cell",
+    "deployment_eligible": true,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 48.2727,
+    "mean_harmful_actions": 0.0909,
+    "mean_protocol_observations": 2.0909,
+    "run_count": 33,
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "cell_classification": "forensic_cell",
+    "deployment_eligible": false,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 48.0,
+    "mean_harmful_actions": 1.4,
+    "mean_protocol_observations": 2.0,
+    "run_count": 15,
+    "strategy_id": "forensic-oriented"
+  },
+  {
+    "architecture_id": "A2",
+    "cell_classification": "negative_control",
+    "deployment_eligible": false,
+    "mean_false_containment": 0.4286,
+    "mean_forensic_records": 54.1429,
+    "mean_harmful_actions": 0.1429,
+    "mean_protocol_observations": 3.0,
+    "run_count": 21,
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "cell_classification": "primary_deployment_cell",
+    "deployment_eligible": true,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 48.2727,
+    "mean_harmful_actions": 1.0909,
+    "mean_protocol_observations": 2.0909,
+    "run_count": 33,
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A3",
+    "cell_classification": "negative_control",
+    "deployment_eligible": false,
+    "mean_false_containment": 0.4286,
+    "mean_forensic_records": 23.4286,
+    "mean_harmful_actions": 0.0,
+    "mean_protocol_observations": 3.0,
+    "run_count": 21,
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "cell_classification": "primary_deployment_cell",
+    "deployment_eligible": true,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 19.0909,
+    "mean_harmful_actions": 0.3636,
+    "mean_protocol_observations": 2.0909,
+    "run_count": 33,
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "cell_classification": "sensitivity_cell",
+    "deployment_eligible": true,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 18.4,
+    "mean_harmful_actions": 2.2,
+    "mean_protocol_observations": 2.0,
+    "run_count": 15,
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A4",
+    "cell_classification": "upper_bound",
+    "deployment_eligible": false,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 16.0,
+    "mean_harmful_actions": 0.0,
+    "mean_protocol_observations": 3.0,
+    "run_count": 15,
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A5",
+    "cell_classification": "upper_bound",
+    "deployment_eligible": false,
+    "mean_false_containment": 0.0,
+    "mean_forensic_records": 0.0,
+    "mean_harmful_actions": 0.0,
+    "mean_protocol_observations": 0.0,
+    "run_count": 15,
+    "strategy_id": "none"
+  }
+]

@@ -1,0 +1,1892 @@
+[
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S01",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S02",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S03",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S04",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S05",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S06",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S07",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S08",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S09",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S10",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 3,
+    "harmful_actions_median": 3,
+    "harmful_actions_min": 3,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S11",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 3,
+    "harmful_actions_median": 3,
+    "harmful_actions_min": 3,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S12",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S13",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S14",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S15",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S16",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 3,
+    "harmful_actions_median": 3,
+    "harmful_actions_min": 3,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S17",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A0",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S18",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S01",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S02",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S03",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S04",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S05",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S06",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S07",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S08",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S09",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S10",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S11",
+    "seeds": [
+      42,
+      42,
+      101,
+      42,
+      42,
+      101,
+      42,
+      42,
+      101
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1.0,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S12",
+    "seeds": [
+      42,
+      211,
+      42,
+      211,
+      42,
+      211
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 1.5,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S13",
+    "seeds": [
+      42,
+      503,
+      42,
+      503,
+      42,
+      503
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S14",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S15",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S16",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 3,
+    "harmful_actions_median": 3.0,
+    "harmful_actions_min": 3,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S17",
+    "seeds": [
+      42,
+      997,
+      42,
+      997,
+      42,
+      997
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A1",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S18",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S01",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S02",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S03",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S04",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S05",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S06",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S07",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S08",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S09",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S10",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S11",
+    "seeds": [
+      42,
+      42,
+      101,
+      42,
+      42,
+      101,
+      42,
+      42,
+      101
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1.0,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S12",
+    "seeds": [
+      42,
+      211,
+      42,
+      211,
+      42,
+      211
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 1.5,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S13",
+    "seeds": [
+      42,
+      503,
+      42,
+      503,
+      42,
+      503
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S14",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S15",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S16",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 3,
+    "harmful_actions_median": 3.0,
+    "harmful_actions_min": 3,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S17",
+    "seeds": [
+      42,
+      997,
+      42,
+      997,
+      42,
+      997
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S18",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "balanced"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S01",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S02",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S03",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S04",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S05",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S06",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S07",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S08",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S09",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S10",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S11",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S12",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S13",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S14",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S15",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S16",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S17",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S18",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "containment-first"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S01",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "forensic-oriented"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S04",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "forensic-oriented"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S11",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "forensic-oriented"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S15",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "forensic-oriented"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 3,
+    "harmful_actions_median": 3,
+    "harmful_actions_min": 3,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S17",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "forensic-oriented"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S01",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S02",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S03",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S04",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S05",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S06",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S07",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S08",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S09",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S10",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S11",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S12",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S13",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S14",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S15",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S16",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 3,
+    "harmful_actions_median": 3,
+    "harmful_actions_min": 3,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S17",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A2",
+    "disposition_changes": 0,
+    "harmful_actions_max": 1,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 1,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S18",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "utility-preserving"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S01",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S02",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S03",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S04",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S05",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S06",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S07",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S08",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S09",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S10",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 1,
+    "harmful_actions_max": 3,
+    "harmful_actions_median": 1,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S11",
+    "seeds": [
+      42,
+      42,
+      101,
+      42,
+      42,
+      101,
+      42,
+      42,
+      101
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 1,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 1.0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S12",
+    "seeds": [
+      42,
+      211,
+      42,
+      211,
+      42,
+      211
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2.0,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S13",
+    "seeds": [
+      42,
+      503,
+      42,
+      503,
+      42,
+      503
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 2,
+    "harmful_actions_median": 2,
+    "harmful_actions_min": 2,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S14",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S15",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S16",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 1,
+    "harmful_actions_max": 3,
+    "harmful_actions_median": 1.5,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S17",
+    "seeds": [
+      42,
+      997,
+      42,
+      997,
+      42,
+      997
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A3",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S18",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A4",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S01",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A4",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S04",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A4",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S11",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A4",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S15",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A4",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S17",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A5",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S01",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A5",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S04",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A5",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S11",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A5",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S15",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  },
+  {
+    "architecture_id": "A5",
+    "disposition_changes": 0,
+    "harmful_actions_max": 0,
+    "harmful_actions_median": 0,
+    "harmful_actions_min": 0,
+    "interpretation": "deterministic sensitivity run, not real-world probability estimate",
+    "scenario_id": "S17",
+    "seeds": [
+      42,
+      42,
+      42
+    ],
+    "strategy_id": "none"
+  }
+]

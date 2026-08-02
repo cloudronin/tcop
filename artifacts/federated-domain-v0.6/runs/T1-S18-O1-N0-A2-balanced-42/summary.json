@@ -1,0 +1,74 @@
+{
+  "a2_export_digests": [
+    "79882b6ddcb40ba98ba27c356668bdb4b16c5e226a92366a88d1052f0cd677d4",
+    "f80f9beecedf57d63f3b5287d46f74506a85955ebcc9bc4db026fa534965d07c"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T1-S18-O1-N0-A2-balanced-42",
+    "classification": "negative_control",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S18",
+    "seed": 42,
+    "strategy_id": "balanced",
+    "topology_id": "T1"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": -1,
+    "early_warning_lead_time": 3,
+    "false_containment": false,
+    "first_import_at": 2,
+    "first_protection_at": 0,
+    "forensic_records": 58,
+    "harmful_actions": 1,
+    "prevented_actions": 1,
+    "protocol_observations": 2,
+    "rejected_observations": 5,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 6
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "adversarial",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": true,
+    "scenario_id": "S18",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": true,
+    "title": "Tampered and replayed imported evidence"
+  },
+  "stream_digest": "29a7220edb8e84b304d70cf48bfcd35196641e8eab86511453d553723992fee0",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

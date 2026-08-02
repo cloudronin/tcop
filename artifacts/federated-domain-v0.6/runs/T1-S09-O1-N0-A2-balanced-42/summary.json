@@ -1,0 +1,78 @@
+{
+  "a2_export_digests": [
+    "4c4568b562415db2db078821880a993810aabcce4aa5247f1cae6d2a1ebf2d2e",
+    "7df4aa5353d687f9a0a2d9d593e8ac11f4dc9950b1d2e5a10dc16238872c0e60",
+    "4123c1cf1318e7bde731bf9ad31dee98d422d42a4a42ec913a612b8cf95a7abc",
+    "5f4e0fed7af31b43873646e9313ecbb42af4c9af8091811b601ca1e4d72abae8",
+    "0d38de7e056bc6cdc18fbe430cbdec0f547bac7c320fee295cb88a71c4bfc7ac",
+    "74e607ed739ff3c5eb8d98104319790ca4f1a72906d981569c16d6fadb235118"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T1-S09-O1-N0-A2-balanced-42",
+    "classification": "negative_control",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S09",
+    "seed": 42,
+    "strategy_id": "balanced",
+    "topology_id": "T1"
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": -1,
+    "early_warning_lead_time": 3,
+    "false_containment": true,
+    "first_import_at": 2,
+    "first_protection_at": 0,
+    "forensic_records": 66,
+    "harmful_actions": 0,
+    "prevented_actions": 0,
+    "protocol_observations": 6,
+    "rejected_observations": 3,
+    "utility_restriction_ticks": 39,
+    "validated_observations": 12
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 3,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": true,
+    "family": "adversarial",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": false,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S09",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Colluding external warnings"
+  },
+  "stream_digest": "675dd382e04637b64a448224755c882877af0db28f48fc5e5a7701932fac2387",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

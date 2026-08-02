@@ -1,0 +1,179 @@
+{
+  "complexity_measurements": {
+    "C1_balanced": 6351,
+    "C2_safety_critical": 3760,
+    "C3_utility_sensitive": 11234,
+    "dynamic_complexity": 733,
+    "operational_cost": 17,
+    "operator_complexity": 736,
+    "profile_id": "V05_CONSOLIDATION_REDUCED",
+    "raw_run_count": 70,
+    "security_loss": 137,
+    "severity_weighted_harm": 137,
+    "static_complexity": 766,
+    "utility_loss": 129
+  },
+  "content_digest": "4b2dfb385d71ee4ef3e8c598cf7cac4da80fdb62ed8d22d7ad241918c9e69890",
+  "dependencies": {
+    "CAMPAIGN_GROUPING": [
+      "PROVISIONAL_CONTAINMENT",
+      "SOURCE_NOVEL_CONFIRMATION"
+    ],
+    "CAPABILITY_SPECIFIC_RESPONSE": [
+      "LOCAL_RESOLUTION"
+    ],
+    "CONTROL_GROUP_INDEPENDENCE": [
+      "LOCAL_RESOLUTION"
+    ],
+    "CONTROL_GROUP_WEIGHT_CAP": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "FRESHNESS_TTL": [
+      "SIGNED_CONTEXT"
+    ],
+    "IMMUTABLE_PROVENANCE": [
+      "SIGNED_CONTEXT"
+    ],
+    "INTERACTION_RECEIPTS": [
+      "SIGNED_CONTEXT",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "INVESTIGATION_BUDGETS": [
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "LOCAL_RESOLUTION": [
+      "SIGNED_CONTEXT"
+    ],
+    "PASSIVE_LOCAL_WITNESS": [
+      "SIGNED_CONTEXT",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "PROVISIONAL_CONTAINMENT": [
+      "CONTROL_GROUP_INDEPENDENCE",
+      "CAPABILITY_SPECIFIC_RESPONSE"
+    ],
+    "RELAY_NON_INFLATION": [
+      "IMMUTABLE_PROVENANCE",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "RELIABILITY_SCOPE_SEPARATION": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "RELIABILITY_WEIGHTING": [
+      "PASSIVE_LOCAL_WITNESS",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "REPLAY_PROTECTION": [
+      "SIGNED_CONTEXT",
+      "FRESHNESS_TTL"
+    ],
+    "SCOPE_AUTHORITY": [
+      "SIGNED_CONTEXT"
+    ],
+    "SIGNED_CONTEXT": [],
+    "SOURCE_NOVEL_CONFIRMATION": [
+      "PROVISIONAL_CONTAINMENT"
+    ],
+    "TIP_ONLY_INVESTIGATION": [
+      "INTERACTION_RECEIPTS"
+    ]
+  },
+  "enabled_features": [
+    "CAMPAIGN_GROUPING",
+    "CAPABILITY_SPECIFIC_RESPONSE",
+    "CONTROL_GROUP_INDEPENDENCE",
+    "CONTROL_GROUP_WEIGHT_CAP",
+    "FRESHNESS_TTL",
+    "IMMUTABLE_PROVENANCE",
+    "INTERACTION_RECEIPTS",
+    "INVESTIGATION_BUDGETS",
+    "LOCAL_RESOLUTION",
+    "PASSIVE_LOCAL_WITNESS",
+    "PROVISIONAL_CONTAINMENT",
+    "RELAY_NON_INFLATION",
+    "RELIABILITY_SCOPE_SEPARATION",
+    "RELIABILITY_WEIGHTING",
+    "REPLAY_PROTECTION",
+    "SCOPE_AUTHORITY",
+    "SIGNED_CONTEXT",
+    "SOURCE_NOVEL_CONFIRMATION",
+    "TIP_ONLY_INVESTIGATION"
+  ],
+  "equivalence_classifications": [
+    "exact_runtime_equivalent",
+    "not_equivalent",
+    "not_equivalent",
+    "not_equivalent"
+  ],
+  "forensic_disposition": {
+    "CAMPAIGN_GROUPING": "high_assurance",
+    "CAPABILITY_SPECIFIC_RESPONSE": "core",
+    "CONTROL_GROUP_INDEPENDENCE": "core",
+    "CONTROL_GROUP_WEIGHT_CAP": "optional",
+    "FRESHNESS_TTL": "core",
+    "IMMUTABLE_PROVENANCE": "high_assurance",
+    "INTERACTION_RECEIPTS": "high_assurance",
+    "INVESTIGATION_BUDGETS": "optional",
+    "LOCAL_RESOLUTION": "core",
+    "PASSIVE_LOCAL_WITNESS": "optional",
+    "PROVISIONAL_CONTAINMENT": "optional",
+    "RELAY_NON_INFLATION": "core",
+    "RELIABILITY_SCOPE_SEPARATION": "optional",
+    "RELIABILITY_WEIGHTING": "optional",
+    "REPLAY_PROTECTION": "core",
+    "SCOPE_AUTHORITY": "core",
+    "SIGNED_CONTEXT": "core",
+    "SOURCE_NOVEL_CONFIRMATION": "optional",
+    "TIP_ONLY_INVESTIGATION": "optional"
+  },
+  "frozen_profile_version": "tcop.v0.5-validation-frozen-profile/0.1",
+  "known_failure_modes": [
+    "deterministic B-001--B-070 evidence only; no real-world probability inference",
+    "native-backend activation gaps identified by v0.5 validation remain explicit limitations",
+    "v0.6 may test federated observation architecture but may not silently add profile mechanisms"
+  ],
+  "objective": "balanced_federated",
+  "policy_parameters": [
+    "global_investigation_budget",
+    "group_contribution_cap",
+    "per_group_tip_cap",
+    "scope_registry",
+    "scope_separation",
+    "skew",
+    "ttl"
+  ],
+  "preventive_disposition": {
+    "CAMPAIGN_GROUPING": "high_assurance",
+    "CAPABILITY_SPECIFIC_RESPONSE": "core",
+    "CONTROL_GROUP_INDEPENDENCE": "core",
+    "CONTROL_GROUP_WEIGHT_CAP": "standard",
+    "FRESHNESS_TTL": "core",
+    "IMMUTABLE_PROVENANCE": "core",
+    "INTERACTION_RECEIPTS": "high_assurance",
+    "INVESTIGATION_BUDGETS": "standard",
+    "LOCAL_RESOLUTION": "core",
+    "PASSIVE_LOCAL_WITNESS": "neutral",
+    "PROVISIONAL_CONTAINMENT": "standard",
+    "RELAY_NON_INFLATION": "core",
+    "RELIABILITY_SCOPE_SEPARATION": "standard",
+    "RELIABILITY_WEIGHTING": "standard",
+    "REPLAY_PROTECTION": "core",
+    "SCOPE_AUTHORITY": "core",
+    "SIGNED_CONTEXT": "core",
+    "SOURCE_NOVEL_CONFIRMATION": "standard",
+    "TIP_ONLY_INVESTIGATION": "standard"
+  },
+  "profile_id": "V05_CONSOLIDATION_REDUCED",
+  "profile_name": "balanced",
+  "selection_explanation": "Jointly reduced, dependency-valid executed composition; exact-runtime-equivalent to F-10111100 and strictly lower in declared static complexity.",
+  "selection_status": "policy_dependent",
+  "supporting_artifacts": [
+    "source-v0.5-freeze-manifest.json",
+    "profile-equivalence-report.json",
+    "feature-dispositions.json",
+    "pareto-frontiers.json",
+    "decision-change-attribution.jsonl",
+    "objective-profile-selection.json"
+  ],
+  "v0.6_admission_scope": "This immutable profile is one of the only objective-specific profiles admitted to the deterministic v0.6 federated-domain study."
+}

@@ -1,0 +1,35 @@
+{
+  "artifact_streams": [
+    "authored_facts",
+    "benchmark_truth",
+    "produced_observations",
+    "transport_faults",
+    "derived_decisions"
+  ],
+  "frozen_profile_index": "artifacts/minimality-v0.5-validation/frozen-v0.6-profile-manifests.json",
+  "manifest_version": "tcop.federated-domain/0.6",
+  "matrix_cell_count": 414,
+  "no_new_protocol_fields": true,
+  "no_remote_enforcement_for_a2": true,
+  "passed": true,
+  "phase_order": {
+    "authored_telemetry": 0,
+    "autonomous_action": 8,
+    "context_publication": 3,
+    "context_validation": 5,
+    "enforcement": 7,
+    "frozen_batch_evaluation": 2,
+    "local_observation": 1,
+    "metrics": 9,
+    "network_delivery": 4,
+    "resolution": 6
+  },
+  "result_digest": "949931ae3d00be5ae239bd19424acc5efe91c879c8fdf887bba72634a62d5bff",
+  "stage": "full",
+  "upstream_frozen_digests": {
+    "v0.1": "34e5a45bc6561a61b8001ce24206b481c2d01ae344fb81c311274824e2995cfa",
+    "v0.2": "a9c5926fa97d3f19dad206aa1557957eca0385de3d771ccdf5ddfc0b63a3e2f0",
+    "v0.3": "d0b23f5c54167d7b6d01c0bfeb6621f43e6113e6dc2d05dea9363ce700b0da94",
+    "v0.4": "16849be9aca4405849f2a87e9e1ab2d5f726125e6a72e5440265f82ab424a127"
+  }
+}

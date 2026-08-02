@@ -1,0 +1,75 @@
+{
+  "a2_export_digests": [
+    "4cc36d379bf6d22af9feb6d19aa7f709fd30a06c2dd620d7103196488683360b",
+    "07de7e0851ccc2661b5ccba7b49edaf013e136b4e19427e7871194ab79501ecd"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T1-S12-O1-N0-A2-balanced-42",
+    "classification": "primary_deployment_cell",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S12",
+    "seed": 42,
+    "strategy_id": "balanced",
+    "topology_id": "T1"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": -1,
+    "early_warning_lead_time": 3,
+    "false_containment": false,
+    "first_import_at": 2,
+    "first_protection_at": 0,
+    "forensic_records": 48,
+    "harmful_actions": 1,
+    "prevented_actions": 2,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "resilience",
+    "harmful_at": [
+      4,
+      7,
+      9
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S12",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Partition then synchronization after heal"
+  },
+  "stream_digest": "f332c98dfd4b55537471da8b5f7834397e8d010b73c51a97e2efc8f1eb262a1a",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

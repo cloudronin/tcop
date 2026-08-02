@@ -1,0 +1,72 @@
+{
+  "a2_export_digests": [],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A0",
+    "cell_id": "T1-S12-O1-N0-A0-none-42",
+    "classification": "primary_deployment_cell",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S12",
+    "seed": 42,
+    "strategy_id": "none",
+    "topology_id": "T1"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": null,
+    "early_warning_lead_time": null,
+    "false_containment": false,
+    "first_import_at": null,
+    "first_protection_at": null,
+    "forensic_records": 0,
+    "harmful_actions": 3,
+    "prevented_actions": 0,
+    "protocol_observations": 0,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 0
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "resilience",
+    "harmful_at": [
+      4,
+      7,
+      9
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S12",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Partition then synchronization after heal"
+  },
+  "stream_digest": "c54e782ae3e651161247dce3e9d090a483328a5688f90ea6f52d6cf612c6b509",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

@@ -1,0 +1,3 @@
+{"at":0,"event_type":"scenario_authored","network_profile":"N1","observer_profile":"O1","phase":0,"phase_name":"authored_telemetry","scenario_id":"S11","sequence":1,"stream":"authored_facts","topology_id":"T3","topology_order":3}
+{"at":1,"domain":"internal-core","event_type":"telemetry_available","phase":0,"phase_name":"authored_telemetry","sequence":11,"stream":"authored_facts","topology_order":0}
+{"at":5,"domain":"internal-data","event_type":"telemetry_available","phase":0,"phase_name":"authored_telemetry","sequence":50,"stream":"authored_facts","topology_order":1}

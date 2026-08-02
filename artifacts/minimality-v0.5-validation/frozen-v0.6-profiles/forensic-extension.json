@@ -1,0 +1,235 @@
+{
+  "complexity_measurements": {
+    "C1_balanced": 7751,
+    "C2_safety_critical": 4343,
+    "C3_utility_sensitive": 13800,
+    "dynamic_complexity": 818,
+    "operational_cost": 17,
+    "operator_complexity": 1000,
+    "profile_id": "P7",
+    "raw_run_count": 70,
+    "security_loss": 137,
+    "severity_weighted_harm": 137,
+    "static_complexity": 1000,
+    "utility_loss": 129
+  },
+  "content_digest": "e30ded1303d08c6067a5030d9e1741183bf30af96d218c2143bc1e21db237d96",
+  "dependencies": {
+    "ACCUSATION_CYCLE_REPORTING": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "ACTIVE_PATROL": [
+      "SIGNED_CONTEXT",
+      "SCOPE_AUTHORITY"
+    ],
+    "CAMPAIGN_GROUPING": [
+      "PROVISIONAL_CONTAINMENT",
+      "SOURCE_NOVEL_CONFIRMATION"
+    ],
+    "CAPABILITY_SPECIFIC_RESPONSE": [
+      "LOCAL_RESOLUTION"
+    ],
+    "COMPROMISE_WINDOW_REWEIGHT": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "CONTROL_GROUP_INDEPENDENCE": [
+      "LOCAL_RESOLUTION"
+    ],
+    "CONTROL_GROUP_WEIGHT_CAP": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "DIRECT_LOCAL_EMERGENCY_PATH": [
+      "SIGNED_CONTEXT",
+      "SCOPE_AUTHORITY",
+      "LOCAL_RESOLUTION"
+    ],
+    "FRESHNESS_TTL": [
+      "SIGNED_CONTEXT"
+    ],
+    "IMMUTABLE_PROVENANCE": [
+      "SIGNED_CONTEXT"
+    ],
+    "INTERACTION_RECEIPTS": [
+      "SIGNED_CONTEXT",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "INVESTIGATION_BUDGETS": [
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "LOCAL_RESOLUTION": [
+      "SIGNED_CONTEXT"
+    ],
+    "PASSIVE_LOCAL_WITNESS": [
+      "SIGNED_CONTEXT",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "PROBATION_HYSTERESIS": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "PROVISIONAL_CONTAINMENT": [
+      "CONTROL_GROUP_INDEPENDENCE",
+      "CAPABILITY_SPECIFIC_RESPONSE"
+    ],
+    "RELAY_NON_INFLATION": [
+      "IMMUTABLE_PROVENANCE",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "RELIABILITY_CONFIDENCE_DECAY": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "RELIABILITY_SCOPE_SEPARATION": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "RELIABILITY_WEIGHTING": [
+      "PASSIVE_LOCAL_WITNESS",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "REPLAY_PROTECTION": [
+      "SIGNED_CONTEXT",
+      "FRESHNESS_TTL"
+    ],
+    "RESERVED_HIGH_RISK_CAPACITY": [
+      "INVESTIGATION_BUDGETS"
+    ],
+    "SCOPE_AUTHORITY": [
+      "SIGNED_CONTEXT"
+    ],
+    "SEVERITY_WEIGHTED_RESPONSE": [
+      "CAPABILITY_SPECIFIC_RESPONSE"
+    ],
+    "SIGNED_CONTEXT": [],
+    "SOURCE_NOVEL_CONFIRMATION": [
+      "PROVISIONAL_CONTAINMENT"
+    ],
+    "TIP_ONLY_INVESTIGATION": [
+      "INTERACTION_RECEIPTS"
+    ]
+  },
+  "enabled_features": [
+    "ACCUSATION_CYCLE_REPORTING",
+    "ACTIVE_PATROL",
+    "CAMPAIGN_GROUPING",
+    "CAPABILITY_SPECIFIC_RESPONSE",
+    "COMPROMISE_WINDOW_REWEIGHT",
+    "CONTROL_GROUP_INDEPENDENCE",
+    "CONTROL_GROUP_WEIGHT_CAP",
+    "DIRECT_LOCAL_EMERGENCY_PATH",
+    "FRESHNESS_TTL",
+    "IMMUTABLE_PROVENANCE",
+    "INTERACTION_RECEIPTS",
+    "INVESTIGATION_BUDGETS",
+    "LOCAL_RESOLUTION",
+    "PASSIVE_LOCAL_WITNESS",
+    "PROBATION_HYSTERESIS",
+    "PROVISIONAL_CONTAINMENT",
+    "RELAY_NON_INFLATION",
+    "RELIABILITY_CONFIDENCE_DECAY",
+    "RELIABILITY_SCOPE_SEPARATION",
+    "RELIABILITY_WEIGHTING",
+    "REPLAY_PROTECTION",
+    "RESERVED_HIGH_RISK_CAPACITY",
+    "SCOPE_AUTHORITY",
+    "SEVERITY_WEIGHTED_RESPONSE",
+    "SIGNED_CONTEXT",
+    "SOURCE_NOVEL_CONFIRMATION",
+    "TIP_ONLY_INVESTIGATION"
+  ],
+  "equivalence_classifications": [
+    "not_equivalent",
+    "not_equivalent",
+    "not_equivalent",
+    "not_equivalent"
+  ],
+  "forensic_disposition": {
+    "ACCUSATION_CYCLE_REPORTING": "high_assurance",
+    "ACTIVE_PATROL": "high_assurance",
+    "CAMPAIGN_GROUPING": "high_assurance",
+    "CAPABILITY_SPECIFIC_RESPONSE": "core",
+    "COMPROMISE_WINDOW_REWEIGHT": "high_assurance",
+    "CONTROL_GROUP_INDEPENDENCE": "core",
+    "CONTROL_GROUP_WEIGHT_CAP": "optional",
+    "DIRECT_LOCAL_EMERGENCY_PATH": "high_assurance",
+    "FRESHNESS_TTL": "core",
+    "IMMUTABLE_PROVENANCE": "high_assurance",
+    "INTERACTION_RECEIPTS": "high_assurance",
+    "INVESTIGATION_BUDGETS": "optional",
+    "LOCAL_RESOLUTION": "core",
+    "PASSIVE_LOCAL_WITNESS": "optional",
+    "PROBATION_HYSTERESIS": "optional",
+    "PROVISIONAL_CONTAINMENT": "optional",
+    "RELAY_NON_INFLATION": "core",
+    "RELIABILITY_CONFIDENCE_DECAY": "optional",
+    "RELIABILITY_SCOPE_SEPARATION": "optional",
+    "RELIABILITY_WEIGHTING": "optional",
+    "REPLAY_PROTECTION": "core",
+    "RESERVED_HIGH_RISK_CAPACITY": "optional",
+    "SCOPE_AUTHORITY": "core",
+    "SEVERITY_WEIGHTED_RESPONSE": "optional",
+    "SIGNED_CONTEXT": "core",
+    "SOURCE_NOVEL_CONFIRMATION": "optional",
+    "TIP_ONLY_INVESTIGATION": "optional"
+  },
+  "frozen_profile_version": "tcop.v0.5-validation-frozen-profile/0.1",
+  "known_failure_modes": [
+    "deterministic B-001--B-070 evidence only; no real-world probability inference",
+    "native-backend activation gaps identified by v0.5 validation remain explicit limitations",
+    "v0.6 may test federated observation architecture but may not silently add profile mechanisms"
+  ],
+  "objective": "forensic_extension",
+  "policy_parameters": [
+    "authorized_enforcement_points",
+    "confidence_decay",
+    "global_investigation_budget",
+    "group_contribution_cap",
+    "high_risk_reserved_capacity",
+    "minimum_dwell",
+    "per_group_tip_cap",
+    "probation_duration",
+    "scope_registry",
+    "scope_separation",
+    "skew",
+    "ttl"
+  ],
+  "preventive_disposition": {
+    "ACCUSATION_CYCLE_REPORTING": "high_assurance",
+    "ACTIVE_PATROL": "high_assurance",
+    "CAMPAIGN_GROUPING": "high_assurance",
+    "CAPABILITY_SPECIFIC_RESPONSE": "core",
+    "COMPROMISE_WINDOW_REWEIGHT": "high_assurance",
+    "CONTROL_GROUP_INDEPENDENCE": "core",
+    "CONTROL_GROUP_WEIGHT_CAP": "standard",
+    "DIRECT_LOCAL_EMERGENCY_PATH": "insufficiently_exercised",
+    "FRESHNESS_TTL": "core",
+    "IMMUTABLE_PROVENANCE": "core",
+    "INTERACTION_RECEIPTS": "high_assurance",
+    "INVESTIGATION_BUDGETS": "standard",
+    "LOCAL_RESOLUTION": "core",
+    "PASSIVE_LOCAL_WITNESS": "neutral",
+    "PROBATION_HYSTERESIS": "standard",
+    "PROVISIONAL_CONTAINMENT": "standard",
+    "RELAY_NON_INFLATION": "core",
+    "RELIABILITY_CONFIDENCE_DECAY": "standard",
+    "RELIABILITY_SCOPE_SEPARATION": "standard",
+    "RELIABILITY_WEIGHTING": "standard",
+    "REPLAY_PROTECTION": "core",
+    "RESERVED_HIGH_RISK_CAPACITY": "standard",
+    "SCOPE_AUTHORITY": "core",
+    "SEVERITY_WEIGHTED_RESPONSE": "insufficiently_exercised",
+    "SIGNED_CONTEXT": "core",
+    "SOURCE_NOVEL_CONFIRMATION": "standard",
+    "TIP_ONLY_INVESTIGATION": "standard"
+  },
+  "profile_id": "P7",
+  "profile_name": "forensic-extension",
+  "selection_explanation": "Retained separately for declared forensic and assurance streams, not merely because it is the largest profile.",
+  "selection_status": "policy_dependent",
+  "supporting_artifacts": [
+    "source-v0.5-freeze-manifest.json",
+    "profile-equivalence-report.json",
+    "feature-dispositions.json",
+    "pareto-frontiers.json",
+    "decision-change-attribution.jsonl",
+    "objective-profile-selection.json"
+  ],
+  "v0.6_admission_scope": "This immutable profile is one of the only objective-specific profiles admitted to the deterministic v0.6 federated-domain study."
+}

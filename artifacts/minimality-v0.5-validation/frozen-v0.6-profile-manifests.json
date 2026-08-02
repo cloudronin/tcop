@@ -1,0 +1,30 @@
+{
+  "frozen_profile_index_version": "tcop.v0.5-validation-frozen-profile-index/0.1",
+  "index_digest": "0f37d198e92cf93904d28bfde091b0cf65c21f9b63a96e4c15d663054ec426f2",
+  "profiles": [
+    {
+      "content_digest": "60a4c97851d19c6bcf09d24a063b480e9a29a49dca7e0665ead9013eaf8d2691",
+      "path": "frozen-v0.6-profiles/containment-first.json",
+      "profile_id": "P2",
+      "profile_name": "containment-first"
+    },
+    {
+      "content_digest": "4b2dfb385d71ee4ef3e8c598cf7cac4da80fdb62ed8d22d7ad241918c9e69890",
+      "path": "frozen-v0.6-profiles/balanced.json",
+      "profile_id": "V05_CONSOLIDATION_REDUCED",
+      "profile_name": "balanced"
+    },
+    {
+      "content_digest": "7cf402995d0b4c0e6473aaad4cca7b420abcccf35b7844b65935d07ee9db8940",
+      "path": "frozen-v0.6-profiles/utility-preserving.json",
+      "profile_id": "F-10110000",
+      "profile_name": "utility-preserving"
+    },
+    {
+      "content_digest": "e30ded1303d08c6067a5030d9e1741183bf30af96d218c2143bc1e21db237d96",
+      "path": "frozen-v0.6-profiles/forensic-extension.json",
+      "profile_id": "P7",
+      "profile_name": "forensic-extension"
+    }
+  ]
+}

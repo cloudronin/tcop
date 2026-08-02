@@ -1,0 +1,85 @@
+{
+  "a2_export_digests": [
+    "e1f8a5b76f5c5fb53d48a856ef8f8a41f66ab19b7bc4e1e1d13e97a8043ad689",
+    "4e0c2325031a51864c5f9a8a14ce7c37d9e153a696f42b40643cc1abcffb59c5",
+    "7141a3994f52543dc404c2af480988a589846703b8aeb9b87c020ea93428be69",
+    "8682c9cdfe12ed7f1bdba1f4d36b0fc4bd15af90e4d7707491229492c1a2dcaf",
+    "0c445e5830e591e43b0dcd087d7822330fa0d40df96b90ec7e6f36cf5940bf1f",
+    "6aa8dd811b1861ae50638149a5de480cef2d01f8db718ec07affe29c511bab5b"
+  ],
+  "a3_input_digests": [
+    "e1f8a5b76f5c5fb53d48a856ef8f8a41f66ab19b7bc4e1e1d13e97a8043ad689",
+    "4e0c2325031a51864c5f9a8a14ce7c37d9e153a696f42b40643cc1abcffb59c5",
+    "7141a3994f52543dc404c2af480988a589846703b8aeb9b87c020ea93428be69",
+    "8682c9cdfe12ed7f1bdba1f4d36b0fc4bd15af90e4d7707491229492c1a2dcaf",
+    "0c445e5830e591e43b0dcd087d7822330fa0d40df96b90ec7e6f36cf5940bf1f",
+    "6aa8dd811b1861ae50638149a5de480cef2d01f8db718ec07affe29c511bab5b"
+  ],
+  "cell": {
+    "architecture_id": "A3",
+    "cell_id": "T2-S09-O1-N0-A3-none-42",
+    "classification": "negative_control",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S09",
+    "seed": 42,
+    "strategy_id": "none",
+    "topology_id": "T2"
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": 1,
+    "early_warning_lead_time": 3,
+    "false_containment": true,
+    "first_import_at": 2,
+    "first_protection_at": 2,
+    "forensic_records": 31,
+    "harmful_actions": 0,
+    "prevented_actions": 0,
+    "protocol_observations": 6,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 11,
+    "validated_observations": 6
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 3,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": true,
+    "family": "adversarial",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": false,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S09",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Colluding external warnings"
+  },
+  "stream_digest": "88b7c9fbb9e334c476e76c612739d581339e3f96c4c2b5e20d1444017724a3ca",
+  "topology": {
+    "domains": [
+      "provider",
+      "platform",
+      "downstream"
+    ],
+    "topology_id": "T2",
+    "trust_model": "partner_federation"
+  }
+}

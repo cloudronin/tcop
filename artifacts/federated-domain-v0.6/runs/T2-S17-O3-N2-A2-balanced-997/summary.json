@@ -1,0 +1,75 @@
+{
+  "a2_export_digests": [
+    "e45c90df4a166c6f6b0cec033768b8123530b2565c3bcb90922ce5b4d8ce8446",
+    "3031e9648bf62a2acc689aeedc12176a0fdf3cfe917c13dc084d43b15f9a2764"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T2-S17-O3-N2-A2-balanced-997",
+    "classification": "sensitivity_cell",
+    "disposition": "scheduled",
+    "network_id": "N2",
+    "observer_id": "O3",
+    "reason": "",
+    "scenario_id": "S17",
+    "seed": 997,
+    "strategy_id": "balanced",
+    "topology_id": "T2"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": -1,
+    "early_warning_lead_time": -3,
+    "false_containment": false,
+    "first_import_at": 8,
+    "first_protection_at": 0,
+    "forensic_records": 45,
+    "harmful_actions": 3,
+    "prevented_actions": 0,
+    "protocol_observations": 2,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 3
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": true,
+    "false_warning": false,
+    "family": "timing",
+    "harmful_at": [
+      2,
+      3,
+      4
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S17",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Fast cross-domain campaign"
+  },
+  "stream_digest": "d41e42a1ef102ef41836fc0d6176ef20aaa255d6aabd1ffb3ebda43ee8e164a2",
+  "topology": {
+    "domains": [
+      "provider",
+      "platform",
+      "downstream"
+    ],
+    "topology_id": "T2",
+    "trust_model": "partner_federation"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "a2_export_digests": [
+    "b27890cab63b5ac952dba334120a6814ae8b6ee265b7cf77402ce8515927ab30",
+    "f7b5bdbfd60a1db1f597e094463853090e18f9e011198ac1abbcf414f8cfbcc5"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T3-S17-O1-N0-A2-containment-first-42",
+    "classification": "primary_deployment_cell",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S17",
+    "seed": 42,
+    "strategy_id": "containment-first",
+    "topology_id": "T3"
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": 0,
+    "early_warning_lead_time": 3,
+    "false_containment": false,
+    "first_import_at": 2,
+    "first_protection_at": 1,
+    "forensic_records": 48,
+    "harmful_actions": 0,
+    "prevented_actions": 3,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": true,
+    "false_warning": false,
+    "family": "timing",
+    "harmful_at": [
+      2,
+      3,
+      4
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S17",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Fast cross-domain campaign"
+  },
+  "stream_digest": "1c1ef9d9dd0b5902a2e37484923e6b5c6f04d0aa64f0f5c9576944115a77846f",
+  "topology": {
+    "domains": [
+      "internal-core",
+      "internal-data",
+      "external-partner"
+    ],
+    "topology_id": "T3",
+    "trust_model": "hybrid"
+  }
+}

@@ -1,0 +1,959 @@
+[
+  {
+    "aggregate_equal": true,
+    "classification": "exact_runtime_equivalent",
+    "compared_profile": "F-00000000",
+    "cost_model_equal": true,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [],
+      "trace_divergence_count": 0
+    },
+    "first_divergent_mechanisms": [],
+    "first_divergent_virtual_time": null,
+    "identical_final_response_count": 350,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-001",
+      "security_delta": 0,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S5": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S6": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S7": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      }
+    },
+    "reference_profile": "P2",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 0
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "exact_runtime_equivalent",
+    "compared_profile": "F-10110000",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "confirmation-explanations.txt",
+        "response-severity.jsonl"
+      ],
+      "trace_divergence_count": 0
+    },
+    "first_divergent_mechanisms": [
+      "DIRECT_LOCAL_EMERGENCY_PATH",
+      "SEVERITY_WEIGHTED_RESPONSE"
+    ],
+    "first_divergent_virtual_time": null,
+    "identical_final_response_count": 350,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-001",
+      "security_delta": 0,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S5": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S6": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S7": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      }
+    },
+    "reference_profile": "P5",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 0
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "not_equivalent",
+    "compared_profile": "F-10111100",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "confirmation-events.jsonl",
+        "confirmation-requirements.jsonl",
+        "evidence-campaigns.jsonl",
+        "interaction-receipts.jsonl",
+        "investigative-actions.jsonl",
+        "investigative-tips.jsonl",
+        "observer-reliability.jsonl",
+        "provisional-responses.jsonl",
+        "weighted-resolutions.jsonl"
+      ],
+      "trace_divergence_count": 270
+    },
+    "first_divergent_mechanisms": [
+      "CAMPAIGN_GROUPING",
+      "CONTROL_GROUP_WEIGHT_CAP",
+      "INTERACTION_RECEIPTS",
+      "INVESTIGATION_BUDGETS",
+      "PASSIVE_LOCAL_WITNESS",
+      "PROVISIONAL_CONTAINMENT",
+      "RELIABILITY_SCOPE_SEPARATION",
+      "RELIABILITY_WEIGHTING",
+      "RESERVED_HIGH_RISK_CAPACITY",
+      "SOURCE_NOVEL_CONFIRMATION",
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "first_divergent_virtual_time": {
+      "left_stream": "observer-classification.jsonl",
+      "right_stream": "observer-classification.jsonl",
+      "scenario_id": "B-011",
+      "seed": 42,
+      "virtual_time": 1900000042
+    },
+    "identical_final_response_count": 150,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-044",
+      "security_delta": 2000,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 3.889,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 5.5,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 133.333,
+        "utility_loss": -433.333
+      },
+      "S5": {
+        "operational_cost": 31.3,
+        "security_loss": 70,
+        "utility_loss": 75
+      },
+      "S6": {
+        "operational_cost": 25,
+        "security_loss": 90,
+        "utility_loss": -775
+      },
+      "S7": {
+        "operational_cost": 11.714,
+        "security_loss": 0,
+        "utility_loss": -214.286
+      }
+    },
+    "reference_profile": "P2",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 270
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "not_equivalent",
+    "compared_profile": "F-10110000",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "confirmation-events.jsonl",
+        "confirmation-requirements.jsonl",
+        "interaction-receipts.jsonl",
+        "observer-reliability.jsonl",
+        "provisional-responses.jsonl",
+        "weighted-resolutions.jsonl"
+      ],
+      "trace_divergence_count": 270
+    },
+    "first_divergent_mechanisms": [
+      "CONTROL_GROUP_WEIGHT_CAP",
+      "INTERACTION_RECEIPTS",
+      "PASSIVE_LOCAL_WITNESS",
+      "PROVISIONAL_CONTAINMENT",
+      "RELIABILITY_SCOPE_SEPARATION",
+      "RELIABILITY_WEIGHTING",
+      "SOURCE_NOVEL_CONFIRMATION"
+    ],
+    "first_divergent_virtual_time": {
+      "left_stream": "observer-classification.jsonl",
+      "right_stream": "observer-classification.jsonl",
+      "scenario_id": "B-011",
+      "seed": 42,
+      "virtual_time": 1900000042
+    },
+    "identical_final_response_count": 150,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-044",
+      "security_delta": 2000,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 3.333,
+        "security_loss": 222.222,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 5.5,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 133.333,
+        "utility_loss": -433.333
+      },
+      "S5": {
+        "operational_cost": 31.3,
+        "security_loss": 70,
+        "utility_loss": 75
+      },
+      "S6": {
+        "operational_cost": 20,
+        "security_loss": 600,
+        "utility_loss": -900
+      },
+      "S7": {
+        "operational_cost": 11,
+        "security_loss": 0,
+        "utility_loss": -285.714
+      }
+    },
+    "reference_profile": "P2",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 270
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "not_equivalent",
+    "compared_profile": "P7",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "compromise-windows.jsonl",
+        "confirmation-events.jsonl",
+        "confirmation-explanations.txt",
+        "confirmation-requirements.jsonl",
+        "evidence-campaigns.jsonl",
+        "interaction-receipts.jsonl",
+        "investigative-actions.jsonl",
+        "investigative-tips.jsonl",
+        "observer-accusation-graph.json",
+        "observer-reliability.jsonl",
+        "patrol-events.jsonl",
+        "provisional-responses.jsonl",
+        "reliability-transitions.jsonl",
+        "response-severity.jsonl",
+        "weighted-resolutions.jsonl"
+      ],
+      "trace_divergence_count": 290
+    },
+    "first_divergent_mechanisms": [
+      "ACCUSATION_CYCLE_REPORTING",
+      "ACTIVE_PATROL",
+      "CAMPAIGN_GROUPING",
+      "COMPROMISE_WINDOW_REWEIGHT",
+      "CONTROL_GROUP_WEIGHT_CAP",
+      "DIRECT_LOCAL_EMERGENCY_PATH",
+      "INTERACTION_RECEIPTS",
+      "INVESTIGATION_BUDGETS",
+      "PASSIVE_LOCAL_WITNESS",
+      "PROBATION_HYSTERESIS",
+      "PROVISIONAL_CONTAINMENT",
+      "RELIABILITY_CONFIDENCE_DECAY",
+      "RELIABILITY_SCOPE_SEPARATION",
+      "RELIABILITY_WEIGHTING",
+      "RESERVED_HIGH_RISK_CAPACITY",
+      "SEVERITY_WEIGHTED_RESPONSE",
+      "SOURCE_NOVEL_CONFIRMATION",
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "first_divergent_virtual_time": {
+      "left_stream": "observer-classification.jsonl",
+      "right_stream": "observer-classification.jsonl",
+      "scenario_id": "B-011",
+      "seed": 42,
+      "virtual_time": 1900000042
+    },
+    "identical_final_response_count": 125,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-044",
+      "security_delta": 2000,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 3.889,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 6.75,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 133.333,
+        "utility_loss": -433.333
+      },
+      "S5": {
+        "operational_cost": 32.8,
+        "security_loss": 70,
+        "utility_loss": 75
+      },
+      "S6": {
+        "operational_cost": 25,
+        "security_loss": 90,
+        "utility_loss": -775
+      },
+      "S7": {
+        "operational_cost": 12.429,
+        "security_loss": 0,
+        "utility_loss": -214.286
+      }
+    },
+    "reference_profile": "P2",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 290
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "not_equivalent",
+    "compared_profile": "V05_CONSOLIDATION_REDUCED",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "confirmation-events.jsonl",
+        "confirmation-requirements.jsonl",
+        "evidence-campaigns.jsonl",
+        "interaction-receipts.jsonl",
+        "investigative-actions.jsonl",
+        "investigative-tips.jsonl",
+        "observer-reliability.jsonl",
+        "provisional-responses.jsonl",
+        "weighted-resolutions.jsonl"
+      ],
+      "trace_divergence_count": 270
+    },
+    "first_divergent_mechanisms": [
+      "CAMPAIGN_GROUPING",
+      "CONTROL_GROUP_WEIGHT_CAP",
+      "INTERACTION_RECEIPTS",
+      "INVESTIGATION_BUDGETS",
+      "PASSIVE_LOCAL_WITNESS",
+      "PROVISIONAL_CONTAINMENT",
+      "RELIABILITY_SCOPE_SEPARATION",
+      "RELIABILITY_WEIGHTING",
+      "SOURCE_NOVEL_CONFIRMATION",
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "first_divergent_virtual_time": {
+      "left_stream": "observer-classification.jsonl",
+      "right_stream": "observer-classification.jsonl",
+      "scenario_id": "B-011",
+      "seed": 42,
+      "virtual_time": 1900000042
+    },
+    "identical_final_response_count": 150,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-044",
+      "security_delta": 2000,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 3.889,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 5.5,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 133.333,
+        "utility_loss": -433.333
+      },
+      "S5": {
+        "operational_cost": 31.3,
+        "security_loss": 70,
+        "utility_loss": 75
+      },
+      "S6": {
+        "operational_cost": 25,
+        "security_loss": 90,
+        "utility_loss": -775
+      },
+      "S7": {
+        "operational_cost": 11.714,
+        "security_loss": 0,
+        "utility_loss": -214.286
+      }
+    },
+    "reference_profile": "P2",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 270
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "not_equivalent",
+    "compared_profile": "F-10110000",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "evidence-campaigns.jsonl",
+        "investigative-actions.jsonl",
+        "investigative-tips.jsonl"
+      ],
+      "trace_divergence_count": 100
+    },
+    "first_divergent_mechanisms": [
+      "CAMPAIGN_GROUPING",
+      "INVESTIGATION_BUDGETS",
+      "RESERVED_HIGH_RISK_CAPACITY",
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "first_divergent_virtual_time": {
+      "left_stream": "confirmation-requirements.jsonl",
+      "right_stream": "confirmation-requirements.jsonl",
+      "scenario_id": "B-051",
+      "seed": 42,
+      "virtual_time": 2100000043
+    },
+    "identical_final_response_count": 290,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-059",
+      "security_delta": 2000,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": -0.556,
+        "security_loss": 222.222,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S5": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S6": {
+        "operational_cost": -5,
+        "security_loss": 510,
+        "utility_loss": -125
+      },
+      "S7": {
+        "operational_cost": -0.714,
+        "security_loss": 0,
+        "utility_loss": -71.429
+      }
+    },
+    "reference_profile": "F-10111100",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 100
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "not_equivalent",
+    "compared_profile": "P7",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "compromise-windows.jsonl",
+        "confirmation-explanations.txt",
+        "observer-accusation-graph.json",
+        "patrol-events.jsonl",
+        "reliability-transitions.jsonl",
+        "response-severity.jsonl"
+      ],
+      "trace_divergence_count": 130
+    },
+    "first_divergent_mechanisms": [
+      "ACCUSATION_CYCLE_REPORTING",
+      "ACTIVE_PATROL",
+      "COMPROMISE_WINDOW_REWEIGHT",
+      "DIRECT_LOCAL_EMERGENCY_PATH",
+      "PROBATION_HYSTERESIS",
+      "RELIABILITY_CONFIDENCE_DECAY",
+      "SEVERITY_WEIGHTED_RESPONSE"
+    ],
+    "first_divergent_virtual_time": {
+      "left_stream": "patrol-events.jsonl",
+      "right_stream": "observer-classification.jsonl",
+      "scenario_id": "B-014",
+      "seed": 42,
+      "virtual_time": 1900000042
+    },
+    "identical_final_response_count": 320,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-001",
+      "security_delta": 0,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 1.25,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S5": {
+        "operational_cost": 1.5,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S6": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S7": {
+        "operational_cost": 0.714,
+        "security_loss": 0,
+        "utility_loss": 0
+      }
+    },
+    "reference_profile": "F-10111100",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 130
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "exact_runtime_equivalent",
+    "compared_profile": "V05_CONSOLIDATION_REDUCED",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [],
+      "trace_divergence_count": 0
+    },
+    "first_divergent_mechanisms": [
+      "RESERVED_HIGH_RISK_CAPACITY"
+    ],
+    "first_divergent_virtual_time": null,
+    "identical_final_response_count": 350,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-001",
+      "security_delta": 0,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S5": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S6": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S7": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      }
+    },
+    "reference_profile": "F-10111100",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 0
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "not_equivalent",
+    "compared_profile": "P7",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "compromise-windows.jsonl",
+        "confirmation-explanations.txt",
+        "evidence-campaigns.jsonl",
+        "investigative-actions.jsonl",
+        "investigative-tips.jsonl",
+        "observer-accusation-graph.json",
+        "patrol-events.jsonl",
+        "reliability-transitions.jsonl",
+        "response-severity.jsonl"
+      ],
+      "trace_divergence_count": 230
+    },
+    "first_divergent_mechanisms": [
+      "ACCUSATION_CYCLE_REPORTING",
+      "ACTIVE_PATROL",
+      "CAMPAIGN_GROUPING",
+      "COMPROMISE_WINDOW_REWEIGHT",
+      "DIRECT_LOCAL_EMERGENCY_PATH",
+      "INVESTIGATION_BUDGETS",
+      "PROBATION_HYSTERESIS",
+      "RELIABILITY_CONFIDENCE_DECAY",
+      "RESERVED_HIGH_RISK_CAPACITY",
+      "SEVERITY_WEIGHTED_RESPONSE",
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "first_divergent_virtual_time": {
+      "left_stream": "patrol-events.jsonl",
+      "right_stream": "observer-classification.jsonl",
+      "scenario_id": "B-014",
+      "seed": 42,
+      "virtual_time": 1900000042
+    },
+    "identical_final_response_count": 260,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-001",
+      "security_delta": 0,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 0.556,
+        "security_loss": -222.222,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 1.25,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S5": {
+        "operational_cost": 1.5,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S6": {
+        "operational_cost": 5,
+        "security_loss": -510,
+        "utility_loss": 125
+      },
+      "S7": {
+        "operational_cost": 1.429,
+        "security_loss": 0,
+        "utility_loss": 71.429
+      }
+    },
+    "reference_profile": "F-10110000",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 230
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "not_equivalent",
+    "compared_profile": "V05_CONSOLIDATION_REDUCED",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "evidence-campaigns.jsonl",
+        "investigative-actions.jsonl",
+        "investigative-tips.jsonl"
+      ],
+      "trace_divergence_count": 100
+    },
+    "first_divergent_mechanisms": [
+      "CAMPAIGN_GROUPING",
+      "INVESTIGATION_BUDGETS",
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "first_divergent_virtual_time": {
+      "left_stream": "confirmation-requirements.jsonl",
+      "right_stream": "confirmation-requirements.jsonl",
+      "scenario_id": "B-051",
+      "seed": 42,
+      "virtual_time": 2100000043
+    },
+    "identical_final_response_count": 290,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-001",
+      "security_delta": 0,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 0.556,
+        "security_loss": -222.222,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S5": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S6": {
+        "operational_cost": 5,
+        "security_loss": -510,
+        "utility_loss": 125
+      },
+      "S7": {
+        "operational_cost": 0.714,
+        "security_loss": 0,
+        "utility_loss": 71.429
+      }
+    },
+    "reference_profile": "F-10110000",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 100
+  },
+  {
+    "aggregate_equal": false,
+    "classification": "not_equivalent",
+    "compared_profile": "V05_CONSOLIDATION_REDUCED",
+    "cost_model_equal": false,
+    "different_final_response_equal_aggregate_cost_count": 0,
+    "equivalence_version": "tcop.profile-equivalence/0.1",
+    "evidence_and_explanation_difference": {
+      "declared_artifact_stream_difference": [
+        "compromise-windows.jsonl",
+        "confirmation-explanations.txt",
+        "observer-accusation-graph.json",
+        "patrol-events.jsonl",
+        "reliability-transitions.jsonl",
+        "response-severity.jsonl"
+      ],
+      "trace_divergence_count": 130
+    },
+    "first_divergent_mechanisms": [
+      "ACCUSATION_CYCLE_REPORTING",
+      "ACTIVE_PATROL",
+      "COMPROMISE_WINDOW_REWEIGHT",
+      "DIRECT_LOCAL_EMERGENCY_PATH",
+      "PROBATION_HYSTERESIS",
+      "RELIABILITY_CONFIDENCE_DECAY",
+      "RESERVED_HIGH_RISK_CAPACITY",
+      "SEVERITY_WEIGHTED_RESPONSE"
+    ],
+    "first_divergent_virtual_time": {
+      "left_stream": "observer-classification.jsonl",
+      "right_stream": "patrol-events.jsonl",
+      "scenario_id": "B-014",
+      "seed": 42,
+      "virtual_time": 1900000042
+    },
+    "identical_final_response_count": 320,
+    "maximum_individual_scenario_regression": {
+      "scenario_id": "B-001",
+      "security_delta": 0,
+      "seed": 42,
+      "utility_delta": 0
+    },
+    "per_family_deltas": {
+      "S1": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S2": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S3": {
+        "operational_cost": -1.25,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S4": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S5": {
+        "operational_cost": -1.5,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S6": {
+        "operational_cost": 0,
+        "security_loss": 0,
+        "utility_loss": 0
+      },
+      "S7": {
+        "operational_cost": -0.714,
+        "security_loss": 0,
+        "utility_loss": 0
+      }
+    },
+    "reference_profile": "P7",
+    "shared_scenario_seed_count": 350,
+    "trace_divergence_count": 130
+  }
+]

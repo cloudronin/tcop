@@ -1,0 +1,8 @@
+{
+  "artifact_root": "artifacts/federated-domain-v0.6",
+  "manifest_digest": "dc0b10827367827d0181532f390aa503c4860ea26ae05e1e46d4c30e25866f33",
+  "matrix_cell_count": 414,
+  "passed": true,
+  "stage": "full",
+  "study": "TCOP v0.6 federated-domain"
+}

@@ -1,0 +1,78 @@
+{
+  "a2_export_digests": [
+    "8da6d6b9d84acb2437bdec28ec7cfd0ffcb6575e31236dd423b0cfd83a976bac",
+    "52b967e6e4db26afd223b17e3ff388118eb78f51879ea0f3b276fc6f42542fda"
+  ],
+  "a3_input_digests": [
+    "8da6d6b9d84acb2437bdec28ec7cfd0ffcb6575e31236dd423b0cfd83a976bac",
+    "52b967e6e4db26afd223b17e3ff388118eb78f51879ea0f3b276fc6f42542fda"
+  ],
+  "cell": {
+    "architecture_id": "A3",
+    "cell_id": "T3-S11-O1-N2-A3-none-101",
+    "classification": "sensitivity_cell",
+    "disposition": "scheduled",
+    "network_id": "N2",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S11",
+    "seed": 101,
+    "strategy_id": "none",
+    "topology_id": "T3"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": 7,
+    "early_warning_lead_time": -3,
+    "false_containment": false,
+    "first_import_at": 8,
+    "first_protection_at": 8,
+    "forensic_records": 19,
+    "harmful_actions": 3,
+    "prevented_actions": 0,
+    "protocol_observations": 2,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 2
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "timing",
+    "harmful_at": [
+      3,
+      5,
+      7
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S11",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Delayed imported warning"
+  },
+  "stream_digest": "3a25dadb07830ca857226142fa9e03836043878a8a48ff7b1da15981df800312",
+  "topology": {
+    "domains": [
+      "internal-core",
+      "internal-data",
+      "external-partner"
+    ],
+    "topology_id": "T3",
+    "trust_model": "hybrid"
+  }
+}

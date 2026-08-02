@@ -1,0 +1,12 @@
+{
+  "authored_telemetry": 0,
+  "autonomous_action": 8,
+  "context_publication": 3,
+  "context_validation": 5,
+  "enforcement": 7,
+  "frozen_batch_evaluation": 2,
+  "local_observation": 1,
+  "metrics": 9,
+  "network_delivery": 4,
+  "resolution": 6
+}

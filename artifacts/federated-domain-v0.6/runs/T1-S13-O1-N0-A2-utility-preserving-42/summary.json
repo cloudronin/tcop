@@ -1,0 +1,74 @@
+{
+  "a2_export_digests": [
+    "29f5ec9fd70f32f3b8dde352963303c8f4407890f785e07170324a2e76bfb9f0",
+    "1a2092d292371310dcb03fbc4e960611d455110662480869f591179bdef8d487"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T1-S13-O1-N0-A2-utility-preserving-42",
+    "classification": "primary_deployment_cell",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S13",
+    "seed": 42,
+    "strategy_id": "utility-preserving",
+    "topology_id": "T1"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": -1,
+    "early_warning_lead_time": 3,
+    "false_containment": false,
+    "first_import_at": 2,
+    "first_protection_at": 0,
+    "forensic_records": 48,
+    "harmful_actions": 1,
+    "prevented_actions": 1,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": true,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "resilience",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S13",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Central observer outage"
+  },
+  "stream_digest": "7a894d5f74680b460e4a9458cf4f93a741df1a9fc71072c9276d01db01d356f5",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "a2_export_digests": [
+    "1494b5b1f340c2fa2083ae53c95d9c94fe7a939a1d90ac2f48099e0f35eb7aa0",
+    "6f5103a3929205e0728cf02c67cb92a9087b6e169d008175c7b0fca63e0de5c2"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T3-S12-O1-N0-A2-containment-first-42",
+    "classification": "primary_deployment_cell",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S12",
+    "seed": 42,
+    "strategy_id": "containment-first",
+    "topology_id": "T3"
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": 0,
+    "early_warning_lead_time": 3,
+    "false_containment": false,
+    "first_import_at": 2,
+    "first_protection_at": 1,
+    "forensic_records": 48,
+    "harmful_actions": 0,
+    "prevented_actions": 3,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "resilience",
+    "harmful_at": [
+      4,
+      7,
+      9
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S12",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Partition then synchronization after heal"
+  },
+  "stream_digest": "3f3f74b1fa3311b23e18851b35646c8ddfedc689f7f9918f4cb33692d0620b51",
+  "topology": {
+    "domains": [
+      "internal-core",
+      "internal-data",
+      "external-partner"
+    ],
+    "topology_id": "T3",
+    "trust_model": "hybrid"
+  }
+}

@@ -1,0 +1,709 @@
+{
+  "P0_P1_behaviorally_identical": true,
+  "P1_policy_runtime_active": false,
+  "conclusion": "The frozen v0.5 corpus does not execute P1 static policy. P0/P1 equality is an inactive-baseline result, not evidence that static policy is ineffective.",
+  "policy_addressable_forbidden_action_present": false,
+  "report_version": "tcop.policy-activation-report/0.1",
+  "scenarios": [
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-001"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-002"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-003"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-004"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-005"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-006"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-007"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-008"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-009"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-010"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-011"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-012"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-013"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-014"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-015"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-016"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-017"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-018"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-019"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-020"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-021"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-022"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-023"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-024"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-025"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-026"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-027"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-028"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-029"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-030"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-031"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-032"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-033"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-034"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-035"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-036"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-037"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-038"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-039"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-040"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-041"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-042"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-043"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-044"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-045"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-046"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-047"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-048"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-049"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-050"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-051"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-052"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-053"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-054"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-055"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-056"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-057"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-058"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-059"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-060"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-061"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-062"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-063"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-064"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-065"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-066"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-067"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-068"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-069"
+    },
+    {
+      "actions_allowed": 0,
+      "actions_blocked": 0,
+      "exercise_reason": "P1 declares static authorization but enables no policy feature and maps to the no-runtime backend.",
+      "expected_to_exercise_static_policy": false,
+      "first_decision_that_differs_from_P0": null,
+      "policy_rules_evaluated": 0,
+      "rule_matches": 0,
+      "scenario_id": "B-070"
+    }
+  ]
+}

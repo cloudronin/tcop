@@ -1,0 +1,75 @@
+{
+  "a2_export_digests": [
+    "a0f840e1529ddfe3b0b95a11f0d03c76883b906b7aa69d46075e5d670b5b5bff",
+    "a9d2109607fb9d1f92f89c37295d745e78fc458a3b5d54704a0cd60f85d94376"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T3-S12-O2-N3-A2-balanced-211",
+    "classification": "sensitivity_cell",
+    "disposition": "scheduled",
+    "network_id": "N3",
+    "observer_id": "O2",
+    "reason": "",
+    "scenario_id": "S12",
+    "seed": 211,
+    "strategy_id": "balanced",
+    "topology_id": "T3"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": -1,
+    "early_warning_lead_time": -4,
+    "false_containment": false,
+    "first_import_at": 9,
+    "first_protection_at": 0,
+    "forensic_records": 49,
+    "harmful_actions": 1,
+    "prevented_actions": 2,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "resilience",
+    "harmful_at": [
+      4,
+      7,
+      9
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S12",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Partition then synchronization after heal"
+  },
+  "stream_digest": "1f3ec8494f2d1c9d691ffa2cde7ab745bbf2cdea74e97e69f43a70a964757690",
+  "topology": {
+    "domains": [
+      "internal-core",
+      "internal-data",
+      "external-partner"
+    ],
+    "topology_id": "T3",
+    "trust_model": "hybrid"
+  }
+}

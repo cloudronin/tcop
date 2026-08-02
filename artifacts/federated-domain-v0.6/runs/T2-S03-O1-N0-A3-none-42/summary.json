@@ -1,0 +1,77 @@
+{
+  "a2_export_digests": [
+    "9da88bfa5595e6a7e45eede6991cbd7414295f2ee9742a72df41cf0d43bdc2db",
+    "0478b73ab300df5afa5df1592cd0fe652f40833402c320eb5b8fa1abfb759beb"
+  ],
+  "a3_input_digests": [
+    "9da88bfa5595e6a7e45eede6991cbd7414295f2ee9742a72df41cf0d43bdc2db",
+    "0478b73ab300df5afa5df1592cd0fe652f40833402c320eb5b8fa1abfb759beb"
+  ],
+  "cell": {
+    "architecture_id": "A3",
+    "cell_id": "T2-S03-O1-N0-A3-none-42",
+    "classification": "primary_deployment_cell",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S03",
+    "seed": 42,
+    "strategy_id": "none",
+    "topology_id": "T2"
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": 1,
+    "early_warning_lead_time": 3,
+    "false_containment": false,
+    "first_import_at": 2,
+    "first_protection_at": 2,
+    "forensic_records": 19,
+    "harmful_actions": 0,
+    "prevented_actions": 2,
+    "protocol_observations": 2,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 2
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "opportunity",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "financial.transfer",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S03",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Credential abuse reaches downstream"
+  },
+  "stream_digest": "bbae905175166ef56bb64e37664e461e8f7ec8e23ce7bdc4525984c64d1a2bef",
+  "topology": {
+    "domains": [
+      "provider",
+      "platform",
+      "downstream"
+    ],
+    "topology_id": "T2",
+    "trust_model": "partner_federation"
+  }
+}

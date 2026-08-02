@@ -1,0 +1,76 @@
+{
+  "a2_export_digests": [
+    "48fd80910b7e413050e1c895acc2fe592fb7681711af36439fb50ab8d9c06ae1",
+    "d0e9dac3afe8c00234e764d24c2bb436593be6b70666e5745a784682092651b0",
+    "69ebb75fa228b28c1078de121acd04976af19ddcf48d516c6d566e2f86ef88f5",
+    "2b87a27f238c28ec8163b32c3daa4ee05cd81ea74fe7a9c61a01a225787017b2"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T3-S16-O1-N0-A2-balanced-42",
+    "classification": "negative_control",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S16",
+    "seed": 42,
+    "strategy_id": "balanced",
+    "topology_id": "T3"
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": -1,
+    "early_warning_lead_time": 3,
+    "false_containment": true,
+    "first_import_at": 2,
+    "first_protection_at": 0,
+    "forensic_records": 58,
+    "harmful_actions": 0,
+    "prevented_actions": 0,
+    "protocol_observations": 4,
+    "rejected_observations": 3,
+    "utility_restriction_ticks": 39,
+    "validated_observations": 8
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 2,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": true,
+    "family": "utility",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": false,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S16",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Benign high-volume workflow"
+  },
+  "stream_digest": "53052a74f621bbc2f0fb9691a2666d79db8fd80add4ddfc1515a22bbf306e3d9",
+  "topology": {
+    "domains": [
+      "internal-core",
+      "internal-data",
+      "external-partner"
+    ],
+    "topology_id": "T3",
+    "trust_model": "hybrid"
+  }
+}

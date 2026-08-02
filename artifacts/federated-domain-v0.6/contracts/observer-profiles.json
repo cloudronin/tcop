@@ -1,0 +1,20 @@
+[
+  {
+    "availability": "available",
+    "coverage": "strong_local",
+    "local_detection_delay": 4,
+    "observer_id": "O1"
+  },
+  {
+    "availability": "available",
+    "coverage": "partial_coverage",
+    "local_detection_delay": 7,
+    "observer_id": "O2"
+  },
+  {
+    "availability": "intermittent",
+    "coverage": "degraded_coverage",
+    "local_detection_delay": 10,
+    "observer_id": "O3"
+  }
+]

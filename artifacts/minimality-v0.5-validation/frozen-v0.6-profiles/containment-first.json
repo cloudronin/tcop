@@ -1,0 +1,111 @@
+{
+  "complexity_measurements": {
+    "C1_balanced": 3776,
+    "C2_safety_critical": 2359,
+    "C3_utility_sensitive": 6848,
+    "dynamic_complexity": 305,
+    "operational_cost": 6,
+    "operator_complexity": 314,
+    "profile_id": "P2",
+    "raw_run_count": 70,
+    "security_loss": 86,
+    "severity_weighted_harm": 86,
+    "static_complexity": 268,
+    "utility_loss": 343
+  },
+  "content_digest": "60a4c97851d19c6bcf09d24a063b480e9a29a49dca7e0665ead9013eaf8d2691",
+  "dependencies": {
+    "CAPABILITY_SPECIFIC_RESPONSE": [
+      "LOCAL_RESOLUTION"
+    ],
+    "CONTROL_GROUP_INDEPENDENCE": [
+      "LOCAL_RESOLUTION"
+    ],
+    "FRESHNESS_TTL": [
+      "SIGNED_CONTEXT"
+    ],
+    "IMMUTABLE_PROVENANCE": [
+      "SIGNED_CONTEXT"
+    ],
+    "LOCAL_RESOLUTION": [
+      "SIGNED_CONTEXT"
+    ],
+    "RELAY_NON_INFLATION": [
+      "IMMUTABLE_PROVENANCE",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "REPLAY_PROTECTION": [
+      "SIGNED_CONTEXT",
+      "FRESHNESS_TTL"
+    ],
+    "SCOPE_AUTHORITY": [
+      "SIGNED_CONTEXT"
+    ],
+    "SIGNED_CONTEXT": []
+  },
+  "enabled_features": [
+    "CAPABILITY_SPECIFIC_RESPONSE",
+    "CONTROL_GROUP_INDEPENDENCE",
+    "FRESHNESS_TTL",
+    "IMMUTABLE_PROVENANCE",
+    "LOCAL_RESOLUTION",
+    "RELAY_NON_INFLATION",
+    "REPLAY_PROTECTION",
+    "SCOPE_AUTHORITY",
+    "SIGNED_CONTEXT"
+  ],
+  "equivalence_classifications": [
+    "exact_runtime_equivalent",
+    "not_equivalent",
+    "not_equivalent",
+    "not_equivalent",
+    "not_equivalent"
+  ],
+  "forensic_disposition": {
+    "CAPABILITY_SPECIFIC_RESPONSE": "core",
+    "CONTROL_GROUP_INDEPENDENCE": "core",
+    "FRESHNESS_TTL": "core",
+    "IMMUTABLE_PROVENANCE": "high_assurance",
+    "LOCAL_RESOLUTION": "core",
+    "RELAY_NON_INFLATION": "core",
+    "REPLAY_PROTECTION": "core",
+    "SCOPE_AUTHORITY": "core",
+    "SIGNED_CONTEXT": "core"
+  },
+  "frozen_profile_version": "tcop.v0.5-validation-frozen-profile/0.1",
+  "known_failure_modes": [
+    "deterministic B-001--B-070 evidence only; no real-world probability inference",
+    "native-backend activation gaps identified by v0.5 validation remain explicit limitations",
+    "v0.6 may test federated observation architecture but may not silently add profile mechanisms"
+  ],
+  "objective": "containment_first",
+  "policy_parameters": [
+    "scope_registry",
+    "skew",
+    "ttl"
+  ],
+  "preventive_disposition": {
+    "CAPABILITY_SPECIFIC_RESPONSE": "core",
+    "CONTROL_GROUP_INDEPENDENCE": "core",
+    "FRESHNESS_TTL": "core",
+    "IMMUTABLE_PROVENANCE": "core",
+    "LOCAL_RESOLUTION": "core",
+    "RELAY_NON_INFLATION": "core",
+    "REPLAY_PROTECTION": "core",
+    "SCOPE_AUTHORITY": "core",
+    "SIGNED_CONTEXT": "core"
+  },
+  "profile_id": "P2",
+  "profile_name": "containment-first",
+  "selection_explanation": "Canonical representative of the exact P2/F-00000000 composition alias.",
+  "selection_status": "not_distinct",
+  "supporting_artifacts": [
+    "source-v0.5-freeze-manifest.json",
+    "profile-equivalence-report.json",
+    "feature-dispositions.json",
+    "pareto-frontiers.json",
+    "decision-change-attribution.jsonl",
+    "objective-profile-selection.json"
+  ],
+  "v0.6_admission_scope": "This immutable profile is one of the only objective-specific profiles admitted to the deterministic v0.6 federated-domain study."
+}

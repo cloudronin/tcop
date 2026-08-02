@@ -1,0 +1,8 @@
+{
+  "A0": "no_defense",
+  "A1": "isolated_local",
+  "A2": "federated_tcop",
+  "A3": "bounded_central",
+  "A4": "full_telemetry_upper_bound",
+  "A5": "truth_oracle_upper_bound"
+}

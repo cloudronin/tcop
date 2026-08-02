@@ -1,0 +1,107 @@
+{
+  "coverage_profile_backends": {
+    "I-05-high-off-on": [
+      "v0.1:tcx",
+      "v0.2:tcx_passive_plus_patrol",
+      "v0.4:full_v0_4"
+    ],
+    "I-05-low-off-on": [
+      "v0.1:tcx",
+      "v0.2:tcx_passive_plus_patrol",
+      "v0.4:full_v0_4"
+    ],
+    "I-05-medium-off-on": [
+      "v0.1:tcx",
+      "v0.2:tcx_passive_plus_patrol",
+      "v0.4:full_v0_4"
+    ]
+  },
+  "coverage_profile_features": {
+    "I-05-high-off-on": [
+      "ACTIVE_PATROL",
+      "CAMPAIGN_GROUPING",
+      "CAPABILITY_SPECIFIC_RESPONSE",
+      "CONTROL_GROUP_INDEPENDENCE",
+      "DIRECT_LOCAL_EMERGENCY_PATH",
+      "FRESHNESS_TTL",
+      "IMMUTABLE_PROVENANCE",
+      "INTERACTION_RECEIPTS",
+      "INVESTIGATION_BUDGETS",
+      "LOCAL_RESOLUTION",
+      "PROVISIONAL_CONTAINMENT",
+      "RELAY_NON_INFLATION",
+      "REPLAY_PROTECTION",
+      "RESERVED_HIGH_RISK_CAPACITY",
+      "SCOPE_AUTHORITY",
+      "SEVERITY_WEIGHTED_RESPONSE",
+      "SIGNED_CONTEXT",
+      "SOURCE_NOVEL_CONFIRMATION",
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "I-05-low-off-on": [
+      "ACTIVE_PATROL",
+      "CAMPAIGN_GROUPING",
+      "CAPABILITY_SPECIFIC_RESPONSE",
+      "CONTROL_GROUP_INDEPENDENCE",
+      "DIRECT_LOCAL_EMERGENCY_PATH",
+      "FRESHNESS_TTL",
+      "IMMUTABLE_PROVENANCE",
+      "INTERACTION_RECEIPTS",
+      "INVESTIGATION_BUDGETS",
+      "LOCAL_RESOLUTION",
+      "PROVISIONAL_CONTAINMENT",
+      "RELAY_NON_INFLATION",
+      "REPLAY_PROTECTION",
+      "RESERVED_HIGH_RISK_CAPACITY",
+      "SCOPE_AUTHORITY",
+      "SEVERITY_WEIGHTED_RESPONSE",
+      "SIGNED_CONTEXT",
+      "SOURCE_NOVEL_CONFIRMATION",
+      "TIP_ONLY_INVESTIGATION"
+    ],
+    "I-05-medium-off-on": [
+      "ACTIVE_PATROL",
+      "CAMPAIGN_GROUPING",
+      "CAPABILITY_SPECIFIC_RESPONSE",
+      "CONTROL_GROUP_INDEPENDENCE",
+      "DIRECT_LOCAL_EMERGENCY_PATH",
+      "FRESHNESS_TTL",
+      "IMMUTABLE_PROVENANCE",
+      "INTERACTION_RECEIPTS",
+      "INVESTIGATION_BUDGETS",
+      "LOCAL_RESOLUTION",
+      "PROVISIONAL_CONTAINMENT",
+      "RELAY_NON_INFLATION",
+      "REPLAY_PROTECTION",
+      "RESERVED_HIGH_RISK_CAPACITY",
+      "SCOPE_AUTHORITY",
+      "SEVERITY_WEIGHTED_RESPONSE",
+      "SIGNED_CONTEXT",
+      "SOURCE_NOVEL_CONFIRMATION",
+      "TIP_ONLY_INVESTIGATION"
+    ]
+  },
+  "coverage_values_change_witness_availability": false,
+  "coverage_wiring_conclusion": "low/medium/high are declared interaction labels only; their composed features, content-addressed inputs, and native backends are identical.",
+  "disabled_cell_wiring_conclusion": "Some ACTIVE_PATROL-disabled confirmation rows still use full_v0_4, whose frozen scenario facts include patrol observations. Those cells cannot establish patrol neutrality.",
+  "disabled_cell_wiring_exception_count": 30,
+  "disabled_cells_emit_no_patrol_state_or_contribution": false,
+  "enabled_patrol_event_count": 25,
+  "patrol_findings_can_enter_selected_native_backends": true,
+  "preventive_interpretation": "insufficiently_exercised_or_unwired; no preventive-neutral conclusion is drawn from I-05.",
+  "report_version": "tcop.patrol-validation-report/0.1",
+  "selected_scenarios_with_active_patrol_observations": [
+    "B-014",
+    "B-015",
+    "B-016",
+    "B-017",
+    "B-024",
+    "B-025",
+    "B-051",
+    "B-053",
+    "B-054",
+    "B-061",
+    "B-063",
+    "B-068"
+  ]
+}

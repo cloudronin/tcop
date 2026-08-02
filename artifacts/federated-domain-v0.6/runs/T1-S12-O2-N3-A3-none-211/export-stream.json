@@ -1,0 +1,116 @@
+[
+  {
+    "export_digest": "9dbc2753428a2dbbda0808313d400364e1bac82e3b91ad34b1340323f06f7038",
+    "observation": {
+      "challenge_profile_id": null,
+      "challenge_profile_version": null,
+      "confidence": 0.9,
+      "declared_evidence_class": "independent_peer",
+      "evidence": [
+        {
+          "digest": "ee9fd968974f47ba79757d873352b44c428abd55c11c03a82a44cdd4c9e1d34b",
+          "type": "trace_hash"
+        }
+      ],
+      "expires_at": "1970-01-01T00:00:09Z",
+      "interaction_id": "interaction::T1::S12::O2::N3::211::enterprise-us::1::0",
+      "interaction_receipt_hash": "f990dc438a07a16b7447aa93a15bf3f6fadc1695544e3a057ebf12b6d4799557",
+      "issued_at": "1970-01-01T00:00:01Z",
+      "message_type": "observation",
+      "metadata": {},
+      "observation_id": "dba24f189ad2ca391efbd9368812a802",
+      "observation_mode": "passive",
+      "observation_type": "tool.prohibited_export",
+      "observed_at": "1970-01-01T00:00:01Z",
+      "observer": {
+        "id": "observer::enterprise-us",
+        "key_id": "v1",
+        "trust_domain": "enterprise-us"
+      },
+      "observer_admin_domain_id": "enterprise-us",
+      "observer_control_group_id": "control::enterprise-us",
+      "original_observation_id": null,
+      "patrol_authorization_ref": null,
+      "privacy_profile": "hashes-only",
+      "protocol_version": "0.2",
+      "receipt_mode": "bilateral",
+      "relay_chain": [],
+      "scope": [
+        "tool:data.export"
+      ],
+      "sequence_number": 1,
+      "severity": "critical",
+      "signature": {
+        "algorithm": "ed25519",
+        "value": "e3141dd8b950e6ee815eade5c454051e1bc479dea6a0dcfded0fa0c03d91204ed1d2b10ec07526b14865983ac2aa6781eab123740656219117424842ac629706"
+      },
+      "subject": {
+        "id": "subject::workflow",
+        "type": "agent"
+      },
+      "subject_admin_domain_id": "workflow",
+      "subject_control_group_id": "control::workflow",
+      "synthetic_data_only": null,
+      "tenant": "shared"
+    },
+    "origin_domain": "enterprise-us",
+    "published_at": 1
+  },
+  {
+    "export_digest": "87e606553f00e05c8691b4c57e16be3a9457a14a765f4b4128f7ce7a9bc377d3",
+    "observation": {
+      "challenge_profile_id": null,
+      "challenge_profile_version": null,
+      "confidence": 0.9,
+      "declared_evidence_class": "independent_peer",
+      "evidence": [
+        {
+          "digest": "013c204a8fb9a799b06fb2d25fd767616cbbcdd491547df18d2460607142e416",
+          "type": "trace_hash"
+        }
+      ],
+      "expires_at": "1970-01-01T00:00:15Z",
+      "interaction_id": "interaction::T1::S12::O2::N3::211::enterprise-eu::7::0",
+      "interaction_receipt_hash": "ca5d77b8956de42847c39350207f76887bfcdc7168a6c8cb63629d7a74262b9f",
+      "issued_at": "1970-01-01T00:00:07Z",
+      "message_type": "observation",
+      "metadata": {},
+      "observation_id": "b2566f783e8bf556c4c7d22f835ea1e3",
+      "observation_mode": "passive",
+      "observation_type": "tool.prohibited_export",
+      "observed_at": "1970-01-01T00:00:07Z",
+      "observer": {
+        "id": "observer::enterprise-eu",
+        "key_id": "v1",
+        "trust_domain": "enterprise-eu"
+      },
+      "observer_admin_domain_id": "enterprise-eu",
+      "observer_control_group_id": "control::enterprise-eu",
+      "original_observation_id": null,
+      "patrol_authorization_ref": null,
+      "privacy_profile": "hashes-only",
+      "protocol_version": "0.2",
+      "receipt_mode": "bilateral",
+      "relay_chain": [],
+      "scope": [
+        "tool:data.export"
+      ],
+      "sequence_number": 1,
+      "severity": "critical",
+      "signature": {
+        "algorithm": "ed25519",
+        "value": "65bac8c9430dd6e708a0461706e18f42486ccf396fabbb006e9e13528e0080b1981238ce0e528a150fffaaa99fd556c5b0e47ce260278fb9f24001cc8f496e02"
+      },
+      "subject": {
+        "id": "subject::workflow",
+        "type": "agent"
+      },
+      "subject_admin_domain_id": "workflow",
+      "subject_control_group_id": "control::workflow",
+      "synthetic_data_only": null,
+      "tenant": "shared"
+    },
+    "origin_domain": "enterprise-us",
+    "published_at": 7
+  }
+]

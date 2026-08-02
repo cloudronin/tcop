@@ -1,0 +1,71 @@
+{
+  "a2_export_digests": [],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A1",
+    "cell_id": "T3-S15-O1-N0-A1-none-42",
+    "classification": "primary_deployment_cell",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S15",
+    "seed": 42,
+    "strategy_id": "none",
+    "topology_id": "T3"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": 0,
+    "early_warning_lead_time": null,
+    "false_containment": false,
+    "first_import_at": null,
+    "first_protection_at": 1,
+    "forensic_records": 41,
+    "harmful_actions": 1,
+    "prevented_actions": 1,
+    "protocol_observations": 2,
+    "rejected_observations": 0,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 2
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "privacy",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S15",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Bounded disclosure"
+  },
+  "stream_digest": "1d4a4101ad5a73de85cbda8556ed4f815c7310d0465815da256f02e3faa5aa8e",
+  "topology": {
+    "domains": [
+      "internal-core",
+      "internal-data",
+      "external-partner"
+    ],
+    "topology_id": "T3",
+    "trust_model": "hybrid"
+  }
+}

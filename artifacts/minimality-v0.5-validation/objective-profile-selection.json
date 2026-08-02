@@ -1,0 +1,149 @@
+{
+  "conclusion": "No universal winner is manufactured. Objective records retain only executed profile compositions.",
+  "profiles": [
+    {
+      "disposition_changes_across_seeds": [],
+      "interpretation": "Fixed deterministic sensitivity inputs; not an estimate of real-world probability.",
+      "objective": "containment_first",
+      "profile_id": "P2",
+      "seed_panel": {
+        "101": {
+          "operational_cost": 5.786,
+          "security_loss": 85.714,
+          "utility_loss": 342.857
+        },
+        "211": {
+          "operational_cost": 5.786,
+          "security_loss": 85.714,
+          "utility_loss": 342.857
+        },
+        "42": {
+          "operational_cost": 5.786,
+          "security_loss": 85.714,
+          "utility_loss": 342.857
+        },
+        "503": {
+          "operational_cost": 5.786,
+          "security_loss": 85.714,
+          "utility_loss": 342.857
+        },
+        "997": {
+          "operational_cost": 5.786,
+          "security_loss": 85.714,
+          "utility_loss": 342.857
+        }
+      },
+      "selection_status": "not_distinct"
+    },
+    {
+      "disposition_changes_across_seeds": [],
+      "interpretation": "Fixed deterministic sensitivity inputs; not an estimate of real-world probability.",
+      "objective": "balanced_federated",
+      "profile_id": "V05_CONSOLIDATION_REDUCED",
+      "seed_panel": {
+        "101": {
+          "operational_cost": 16.757,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        },
+        "211": {
+          "operational_cost": 16.757,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        },
+        "42": {
+          "operational_cost": 16.757,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        },
+        "503": {
+          "operational_cost": 16.757,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        },
+        "997": {
+          "operational_cost": 16.757,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        }
+      },
+      "selection_status": "policy_dependent"
+    },
+    {
+      "disposition_changes_across_seeds": [],
+      "interpretation": "Fixed deterministic sensitivity inputs; not an estimate of real-world probability.",
+      "objective": "utility_preserving",
+      "profile_id": "F-10110000",
+      "seed_panel": {
+        "101": {
+          "operational_cost": 15.9,
+          "security_loss": 238.571,
+          "utility_loss": 103.571
+        },
+        "211": {
+          "operational_cost": 15.9,
+          "security_loss": 238.571,
+          "utility_loss": 103.571
+        },
+        "42": {
+          "operational_cost": 15.9,
+          "security_loss": 238.571,
+          "utility_loss": 103.571
+        },
+        "503": {
+          "operational_cost": 15.9,
+          "security_loss": 238.571,
+          "utility_loss": 103.571
+        },
+        "997": {
+          "operational_cost": 15.9,
+          "security_loss": 238.571,
+          "utility_loss": 103.571
+        }
+      },
+      "selection_status": "policy_dependent"
+    },
+    {
+      "disposition_changes_across_seeds": [],
+      "interpretation": "Fixed deterministic sensitivity inputs; not an estimate of real-world probability.",
+      "objective": "forensic_extension",
+      "profile_id": "P7",
+      "seed_panel": {
+        "101": {
+          "operational_cost": 17.329,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        },
+        "211": {
+          "operational_cost": 17.329,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        },
+        "42": {
+          "operational_cost": 17.329,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        },
+        "503": {
+          "operational_cost": 17.329,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        },
+        "997": {
+          "operational_cost": 17.329,
+          "security_loss": 137.143,
+          "utility_loss": 128.571
+        }
+      },
+      "selection_status": "policy_dependent"
+    }
+  ],
+  "seeds": [
+    42,
+    101,
+    211,
+    503,
+    997
+  ],
+  "selection_version": "tcop.v0.5-validation-objective-selection/0.1"
+}

@@ -1,0 +1,75 @@
+{
+  "a2_export_digests": [
+    "9dbc2753428a2dbbda0808313d400364e1bac82e3b91ad34b1340323f06f7038",
+    "87e606553f00e05c8691b4c57e16be3a9457a14a765f4b4128f7ce7a9bc377d3"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T1-S12-O2-N3-A2-balanced-211",
+    "classification": "sensitivity_cell",
+    "disposition": "scheduled",
+    "network_id": "N3",
+    "observer_id": "O2",
+    "reason": "",
+    "scenario_id": "S12",
+    "seed": 211,
+    "strategy_id": "balanced",
+    "topology_id": "T1"
+  },
+  "metrics": {
+    "attack_success": true,
+    "blast_radius_domains": 1,
+    "containment_latency": -1,
+    "early_warning_lead_time": -4,
+    "false_containment": false,
+    "first_import_at": 9,
+    "first_protection_at": 0,
+    "forensic_records": 49,
+    "harmful_actions": 1,
+    "prevented_actions": 2,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "resilience",
+    "harmful_at": [
+      4,
+      7,
+      9
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 1,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 5,
+    "replay": false,
+    "scenario_id": "S12",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Partition then synchronization after heal"
+  },
+  "stream_digest": "22a0c330fae30b96b531f96681197871384604c8728a2e9e19f6f31788420455",
+  "topology": {
+    "domains": [
+      "enterprise-us",
+      "enterprise-eu",
+      "enterprise-apac"
+    ],
+    "topology_id": "T1",
+    "trust_model": "intra_enterprise"
+  }
+}

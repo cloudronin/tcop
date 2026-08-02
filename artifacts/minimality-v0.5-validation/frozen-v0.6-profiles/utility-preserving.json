@@ -1,0 +1,159 @@
+{
+  "complexity_measurements": {
+    "C1_balanced": 5998,
+    "C2_safety_critical": 4350,
+    "C3_utility_sensitive": 10125,
+    "dynamic_complexity": 668,
+    "operational_cost": 16,
+    "operator_complexity": 631,
+    "profile_id": "F-10110000",
+    "raw_run_count": 70,
+    "security_loss": 239,
+    "severity_weighted_harm": 239,
+    "static_complexity": 660,
+    "utility_loss": 104
+  },
+  "content_digest": "7cf402995d0b4c0e6473aaad4cca7b420abcccf35b7844b65935d07ee9db8940",
+  "dependencies": {
+    "CAPABILITY_SPECIFIC_RESPONSE": [
+      "LOCAL_RESOLUTION"
+    ],
+    "CONTROL_GROUP_INDEPENDENCE": [
+      "LOCAL_RESOLUTION"
+    ],
+    "CONTROL_GROUP_WEIGHT_CAP": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "FRESHNESS_TTL": [
+      "SIGNED_CONTEXT"
+    ],
+    "IMMUTABLE_PROVENANCE": [
+      "SIGNED_CONTEXT"
+    ],
+    "INTERACTION_RECEIPTS": [
+      "SIGNED_CONTEXT",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "LOCAL_RESOLUTION": [
+      "SIGNED_CONTEXT"
+    ],
+    "PASSIVE_LOCAL_WITNESS": [
+      "SIGNED_CONTEXT",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "PROVISIONAL_CONTAINMENT": [
+      "CONTROL_GROUP_INDEPENDENCE",
+      "CAPABILITY_SPECIFIC_RESPONSE"
+    ],
+    "RELAY_NON_INFLATION": [
+      "IMMUTABLE_PROVENANCE",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "RELIABILITY_SCOPE_SEPARATION": [
+      "RELIABILITY_WEIGHTING"
+    ],
+    "RELIABILITY_WEIGHTING": [
+      "PASSIVE_LOCAL_WITNESS",
+      "CONTROL_GROUP_INDEPENDENCE"
+    ],
+    "REPLAY_PROTECTION": [
+      "SIGNED_CONTEXT",
+      "FRESHNESS_TTL"
+    ],
+    "SCOPE_AUTHORITY": [
+      "SIGNED_CONTEXT"
+    ],
+    "SIGNED_CONTEXT": [],
+    "SOURCE_NOVEL_CONFIRMATION": [
+      "PROVISIONAL_CONTAINMENT"
+    ]
+  },
+  "enabled_features": [
+    "CAPABILITY_SPECIFIC_RESPONSE",
+    "CONTROL_GROUP_INDEPENDENCE",
+    "CONTROL_GROUP_WEIGHT_CAP",
+    "FRESHNESS_TTL",
+    "IMMUTABLE_PROVENANCE",
+    "INTERACTION_RECEIPTS",
+    "LOCAL_RESOLUTION",
+    "PASSIVE_LOCAL_WITNESS",
+    "PROVISIONAL_CONTAINMENT",
+    "RELAY_NON_INFLATION",
+    "RELIABILITY_SCOPE_SEPARATION",
+    "RELIABILITY_WEIGHTING",
+    "REPLAY_PROTECTION",
+    "SCOPE_AUTHORITY",
+    "SIGNED_CONTEXT",
+    "SOURCE_NOVEL_CONFIRMATION"
+  ],
+  "equivalence_classifications": [
+    "exact_runtime_equivalent",
+    "not_equivalent",
+    "not_equivalent",
+    "not_equivalent",
+    "not_equivalent"
+  ],
+  "forensic_disposition": {
+    "CAPABILITY_SPECIFIC_RESPONSE": "core",
+    "CONTROL_GROUP_INDEPENDENCE": "core",
+    "CONTROL_GROUP_WEIGHT_CAP": "optional",
+    "FRESHNESS_TTL": "core",
+    "IMMUTABLE_PROVENANCE": "high_assurance",
+    "INTERACTION_RECEIPTS": "high_assurance",
+    "LOCAL_RESOLUTION": "core",
+    "PASSIVE_LOCAL_WITNESS": "optional",
+    "PROVISIONAL_CONTAINMENT": "optional",
+    "RELAY_NON_INFLATION": "core",
+    "RELIABILITY_SCOPE_SEPARATION": "optional",
+    "RELIABILITY_WEIGHTING": "optional",
+    "REPLAY_PROTECTION": "core",
+    "SCOPE_AUTHORITY": "core",
+    "SIGNED_CONTEXT": "core",
+    "SOURCE_NOVEL_CONFIRMATION": "optional"
+  },
+  "frozen_profile_version": "tcop.v0.5-validation-frozen-profile/0.1",
+  "known_failure_modes": [
+    "deterministic B-001--B-070 evidence only; no real-world probability inference",
+    "native-backend activation gaps identified by v0.5 validation remain explicit limitations",
+    "v0.6 may test federated observation architecture but may not silently add profile mechanisms"
+  ],
+  "objective": "utility_preserving",
+  "policy_parameters": [
+    "group_contribution_cap",
+    "scope_registry",
+    "scope_separation",
+    "skew",
+    "ttl"
+  ],
+  "preventive_disposition": {
+    "CAPABILITY_SPECIFIC_RESPONSE": "core",
+    "CONTROL_GROUP_INDEPENDENCE": "core",
+    "CONTROL_GROUP_WEIGHT_CAP": "standard",
+    "FRESHNESS_TTL": "core",
+    "IMMUTABLE_PROVENANCE": "core",
+    "INTERACTION_RECEIPTS": "high_assurance",
+    "LOCAL_RESOLUTION": "core",
+    "PASSIVE_LOCAL_WITNESS": "neutral",
+    "PROVISIONAL_CONTAINMENT": "standard",
+    "RELAY_NON_INFLATION": "core",
+    "RELIABILITY_SCOPE_SEPARATION": "standard",
+    "RELIABILITY_WEIGHTING": "standard",
+    "REPLAY_PROTECTION": "core",
+    "SCOPE_AUTHORITY": "core",
+    "SIGNED_CONTEXT": "core",
+    "SOURCE_NOVEL_CONFIRMATION": "standard"
+  },
+  "profile_id": "F-10110000",
+  "profile_name": "utility-preserving",
+  "selection_explanation": "Executed staged composition retained for its measured utility objective, not declared universally superior.",
+  "selection_status": "policy_dependent",
+  "supporting_artifacts": [
+    "source-v0.5-freeze-manifest.json",
+    "profile-equivalence-report.json",
+    "feature-dispositions.json",
+    "pareto-frontiers.json",
+    "decision-change-attribution.jsonl",
+    "objective-profile-selection.json"
+  ],
+  "v0.6_admission_scope": "This immutable profile is one of the only objective-specific profiles admitted to the deterministic v0.6 federated-domain study."
+}

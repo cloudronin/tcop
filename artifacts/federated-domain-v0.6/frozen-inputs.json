@@ -1,0 +1,204 @@
+{
+  "passed": true,
+  "strategy_certifications": {
+    "balanced": {
+      "canonical_manifest": "V05_CONSOLIDATION_REDUCED",
+      "certification_version": "tcop.frozen-strategy-certification/0.1",
+      "expected_decision_digest": "089682bc7455207d35f5a866196914f2a21934a6dbe543625361fa72d17e8bc1",
+      "expected_outcome_digest": "e346dd539f6ea15d39338168707663d356ce0152a1d50875df53cf01d48b8f7e",
+      "fixed_runtime_compatibility_configuration": {
+        "confirmation": "full_v0_4",
+        "reliability": "frozen-v0.5-balanced-no-decay-or-hysteresis"
+      },
+      "fixture_corpus": [
+        "B-001..B-070 \u00d7 [42,101,211,503,997]"
+      ],
+      "fixture_record_count": 350,
+      "fixture_semantics": "frozen v0.5 native digest corpus; federation inputs cannot override profile parameters",
+      "manifest_digest": "4b2dfb385d71ee4ef3e8c598cf7cac4da80fdb62ed8d22d7ad241918c9e69890",
+      "required_feature_closure": [
+        "CAMPAIGN_GROUPING",
+        "CAPABILITY_SPECIFIC_RESPONSE",
+        "CONTROL_GROUP_INDEPENDENCE",
+        "CONTROL_GROUP_WEIGHT_CAP",
+        "FRESHNESS_TTL",
+        "IMMUTABLE_PROVENANCE",
+        "INTERACTION_RECEIPTS",
+        "INVESTIGATION_BUDGETS",
+        "LOCAL_RESOLUTION",
+        "PASSIVE_LOCAL_WITNESS",
+        "PROVISIONAL_CONTAINMENT",
+        "RELAY_NON_INFLATION",
+        "RELIABILITY_SCOPE_SEPARATION",
+        "RELIABILITY_WEIGHTING",
+        "REPLAY_PROTECTION",
+        "SCOPE_AUTHORITY",
+        "SIGNED_CONTEXT",
+        "SOURCE_NOVEL_CONFIRMATION",
+        "TIP_ONLY_INVESTIGATION"
+      ],
+      "required_feature_closure_digest": "1b779e8355564dd3f4502d47adffc8d3dc3391acee6978499c000bdd69cc48d6",
+      "resolver_entrypoint": "tcop.confirmation.ConfirmationResolver",
+      "strategy_id": "balanced",
+      "validator_entrypoint": "tcop.witness.WitnessValidator"
+    },
+    "containment-first": {
+      "canonical_manifest": "P2",
+      "certification_version": "tcop.frozen-strategy-certification/0.1",
+      "expected_decision_digest": "f8d735838bdab2cb35687dde615a3fccff94764f8ae0f236ab17fd958bd3377c",
+      "expected_outcome_digest": "29e02d59516657e450d31adc38f2a64abbc9b3261429d195b91acfabe3700833",
+      "fixed_runtime_compatibility_configuration": {
+        "confirmation": "not_applicable",
+        "reliability": "not_applicable"
+      },
+      "fixture_corpus": [
+        "B-001..B-070 \u00d7 [42,101,211,503,997]"
+      ],
+      "fixture_record_count": 350,
+      "fixture_semantics": "frozen v0.5 native digest corpus; federation inputs cannot override profile parameters",
+      "manifest_digest": "60a4c97851d19c6bcf09d24a063b480e9a29a49dca7e0665ead9013eaf8d2691",
+      "required_feature_closure": [
+        "CAPABILITY_SPECIFIC_RESPONSE",
+        "CONTROL_GROUP_INDEPENDENCE",
+        "FRESHNESS_TTL",
+        "IMMUTABLE_PROVENANCE",
+        "LOCAL_RESOLUTION",
+        "RELAY_NON_INFLATION",
+        "REPLAY_PROTECTION",
+        "SCOPE_AUTHORITY",
+        "SIGNED_CONTEXT"
+      ],
+      "required_feature_closure_digest": "a5ffbbb0da068a4fb52b3f61cad6d5144b72a06d0c8a2da645bd623fa33088a0",
+      "resolver_entrypoint": "tcop.trust.ReferenceResolver",
+      "strategy_id": "containment-first",
+      "validator_entrypoint": "tcop.witness.WitnessValidator"
+    },
+    "forensic-oriented": {
+      "canonical_manifest": "P7",
+      "certification_version": "tcop.frozen-strategy-certification/0.1",
+      "expected_decision_digest": "52a44ac8aa7b6c2ed9af92247163738628e87ae0b0aa56dc478e70430b8353dc",
+      "expected_outcome_digest": "9500f7e6fc34c0525935ba155a7703e6b8ed9ba7821fe5db5ec0bc1c27de03e0",
+      "fixed_runtime_compatibility_configuration": {
+        "configuration_kind": "runtime_distinct_not_overlay",
+        "confirmation": "full_v0_4",
+        "reliability": "full_v0_3"
+      },
+      "fixture_corpus": [
+        "B-001..B-070 \u00d7 [42,101,211,503,997]"
+      ],
+      "fixture_record_count": 350,
+      "fixture_semantics": "frozen v0.5 native digest corpus; federation inputs cannot override profile parameters",
+      "manifest_digest": "e30ded1303d08c6067a5030d9e1741183bf30af96d218c2143bc1e21db237d96",
+      "required_feature_closure": [
+        "ACCUSATION_CYCLE_REPORTING",
+        "ACTIVE_PATROL",
+        "CAMPAIGN_GROUPING",
+        "CAPABILITY_SPECIFIC_RESPONSE",
+        "COMPROMISE_WINDOW_REWEIGHT",
+        "CONTROL_GROUP_INDEPENDENCE",
+        "CONTROL_GROUP_WEIGHT_CAP",
+        "DIRECT_LOCAL_EMERGENCY_PATH",
+        "FRESHNESS_TTL",
+        "IMMUTABLE_PROVENANCE",
+        "INTERACTION_RECEIPTS",
+        "INVESTIGATION_BUDGETS",
+        "LOCAL_RESOLUTION",
+        "PASSIVE_LOCAL_WITNESS",
+        "PROBATION_HYSTERESIS",
+        "PROVISIONAL_CONTAINMENT",
+        "RELAY_NON_INFLATION",
+        "RELIABILITY_CONFIDENCE_DECAY",
+        "RELIABILITY_SCOPE_SEPARATION",
+        "RELIABILITY_WEIGHTING",
+        "REPLAY_PROTECTION",
+        "RESERVED_HIGH_RISK_CAPACITY",
+        "SCOPE_AUTHORITY",
+        "SEVERITY_WEIGHTED_RESPONSE",
+        "SIGNED_CONTEXT",
+        "SOURCE_NOVEL_CONFIRMATION",
+        "TIP_ONLY_INVESTIGATION"
+      ],
+      "required_feature_closure_digest": "f8548fecbcb019dd46f8cf5f8042e93da9f3301a1be17ef52c2467a36c6a0f32",
+      "resolver_entrypoint": "tcop.confirmation.ConfirmationResolver",
+      "strategy_id": "forensic-oriented",
+      "validator_entrypoint": "tcop.witness.WitnessValidator"
+    },
+    "utility-preserving": {
+      "canonical_manifest": "F-10110000",
+      "certification_version": "tcop.frozen-strategy-certification/0.1",
+      "expected_decision_digest": "ee18c33d75c7cd1ba89f5d77c6b42b0674aa2555b31305611de1dc92b81080cd",
+      "expected_outcome_digest": "43220a2f88a6b570ed7e1bdcd71454a62b05c3c0ce0e44943e7305ab31e8e069",
+      "fixed_runtime_compatibility_configuration": {
+        "confirmation": "provisional_no_campaign_grouping",
+        "reliability": "frozen-v0.5-utility-no-decay-or-hysteresis"
+      },
+      "fixture_corpus": [
+        "B-001..B-070 \u00d7 [42,101,211,503,997]"
+      ],
+      "fixture_record_count": 350,
+      "fixture_semantics": "frozen v0.5 native digest corpus; federation inputs cannot override profile parameters",
+      "manifest_digest": "7cf402995d0b4c0e6473aaad4cca7b420abcccf35b7844b65935d07ee9db8940",
+      "required_feature_closure": [
+        "CAPABILITY_SPECIFIC_RESPONSE",
+        "CONTROL_GROUP_INDEPENDENCE",
+        "CONTROL_GROUP_WEIGHT_CAP",
+        "FRESHNESS_TTL",
+        "IMMUTABLE_PROVENANCE",
+        "INTERACTION_RECEIPTS",
+        "LOCAL_RESOLUTION",
+        "PASSIVE_LOCAL_WITNESS",
+        "PROVISIONAL_CONTAINMENT",
+        "RELAY_NON_INFLATION",
+        "RELIABILITY_SCOPE_SEPARATION",
+        "RELIABILITY_WEIGHTING",
+        "REPLAY_PROTECTION",
+        "SCOPE_AUTHORITY",
+        "SIGNED_CONTEXT",
+        "SOURCE_NOVEL_CONFIRMATION"
+      ],
+      "required_feature_closure_digest": "4eac9edbbabe6875557dc8cbcd7f7cefcb30eba1832d1e718052b36acca84460",
+      "resolver_entrypoint": "tcop.confirmation.ConfirmationResolver",
+      "strategy_id": "utility-preserving",
+      "validator_entrypoint": "tcop.witness.WitnessValidator"
+    }
+  },
+  "upstream_frozen_digests": {
+    "v0.1": "34e5a45bc6561a61b8001ce24206b481c2d01ae344fb81c311274824e2995cfa",
+    "v0.2": "a9c5926fa97d3f19dad206aa1557957eca0385de3d771ccdf5ddfc0b63a3e2f0",
+    "v0.3": "d0b23f5c54167d7b6d01c0bfeb6621f43e6113e6dc2d05dea9363ce700b0da94",
+    "v0.4": "16849be9aca4405849f2a87e9e1ab2d5f726125e6a72e5440265f82ab424a127"
+  },
+  "upstream_regressions": {
+    "v0.1": {
+      "baselines": 7,
+      "expected_suite_digest": "34e5a45bc6561a61b8001ce24206b481c2d01ae344fb81c311274824e2995cfa",
+      "passed": true,
+      "scenarios": 10,
+      "seed": 42,
+      "suite_digest": "34e5a45bc6561a61b8001ce24206b481c2d01ae344fb81c311274824e2995cfa",
+      "version": "v0.1"
+    },
+    "v0.2": {
+      "expected_suite_digest": "a9c5926fa97d3f19dad206aa1557957eca0385de3d771ccdf5ddfc0b63a3e2f0",
+      "passed": true,
+      "seed": 42,
+      "suite_digest": "a9c5926fa97d3f19dad206aa1557957eca0385de3d771ccdf5ddfc0b63a3e2f0",
+      "version": "v0.2"
+    },
+    "v0.3": {
+      "expected_suite_digest": "d0b23f5c54167d7b6d01c0bfeb6621f43e6113e6dc2d05dea9363ce700b0da94",
+      "passed": true,
+      "seed": 42,
+      "suite_digest": "d0b23f5c54167d7b6d01c0bfeb6621f43e6113e6dc2d05dea9363ce700b0da94",
+      "version": "v0.3"
+    },
+    "v0.4": {
+      "expected_suite_digest": "16849be9aca4405849f2a87e9e1ab2d5f726125e6a72e5440265f82ab424a127",
+      "passed": true,
+      "seed": 42,
+      "suite_digest": "16849be9aca4405849f2a87e9e1ab2d5f726125e6a72e5440265f82ab424a127",
+      "version": "v0.4"
+    }
+  },
+  "verification_version": "tcop.v0.6-frozen-inputs/0.1"
+}

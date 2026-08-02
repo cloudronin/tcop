@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "check": "signed_fact_crosses_boundary",
+      "passed": true
+    },
+    {
+      "check": "a1_a2_identical_authored_and_local_observations",
+      "passed": true
+    },
+    {
+      "check": "a1_a2_tick_equivalent_before_first_import",
+      "passed": true
+    },
+    {
+      "check": "a2_has_no_remote_enforcement",
+      "passed": true
+    },
+    {
+      "check": "a3_receives_exact_a2_exportable_fact_set",
+      "passed": true
+    },
+    {
+      "check": "a4_alone_receives_broader_telemetry",
+      "passed": true
+    },
+    {
+      "check": "a4_does_not_access_truth",
+      "passed": true
+    },
+    {
+      "check": "a5_alone_accesses_truth",
+      "passed": true
+    },
+    {
+      "check": "s12_delivery_deferred_by_partition",
+      "passed": true
+    },
+    {
+      "check": "s18_context_rejected",
+      "passed": true
+    },
+    {
+      "check": "s18_replay_detected",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "validation_version": "tcop.federation-harness-conformance/0.1"
+}

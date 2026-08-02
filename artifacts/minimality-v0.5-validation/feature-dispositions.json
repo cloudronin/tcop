@@ -1,0 +1,620 @@
+[
+  {
+    "activation_count": 90,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "SIGNED_CONTEXT",
+    "forensic_assurance_disposition": "core",
+    "mean_security_delta_when_removed": 420,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 90,
+    "preventive_disposition": "core",
+    "scenario_families": [
+      "S1",
+      "S3"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 90,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "SCOPE_AUTHORITY",
+    "forensic_assurance_disposition": "core",
+    "mean_security_delta_when_removed": 420,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 90,
+    "preventive_disposition": "core",
+    "scenario_families": [
+      "S1",
+      "S3"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 60,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "FRESHNESS_TTL",
+    "forensic_assurance_disposition": "core",
+    "mean_security_delta_when_removed": 420,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 60,
+    "preventive_disposition": "core",
+    "scenario_families": [
+      "S1",
+      "S2"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 60,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "REPLAY_PROTECTION",
+    "forensic_assurance_disposition": "core",
+    "mean_security_delta_when_removed": 420,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 60,
+    "preventive_disposition": "core",
+    "scenario_families": [
+      "S1",
+      "S2"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 90,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "IMMUTABLE_PROVENANCE",
+    "forensic_assurance_disposition": "high_assurance",
+    "mean_security_delta_when_removed": 420,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 90,
+    "preventive_disposition": "core",
+    "scenario_families": [
+      "S1",
+      "S3"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 60,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "LOCAL_RESOLUTION",
+    "forensic_assurance_disposition": "core",
+    "mean_security_delta_when_removed": 420,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 60,
+    "preventive_disposition": "core",
+    "scenario_families": [
+      "S1",
+      "S2"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 200,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "CONTROL_GROUP_INDEPENDENCE",
+    "forensic_assurance_disposition": "core",
+    "mean_security_delta_when_removed": 420,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 200,
+    "preventive_disposition": "core",
+    "scenario_families": [
+      "S3",
+      "S4",
+      "S6"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 120,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "RELAY_NON_INFLATION",
+    "forensic_assurance_disposition": "core",
+    "mean_security_delta_when_removed": 420,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 120,
+    "preventive_disposition": "core",
+    "scenario_families": [
+      "S2",
+      "S3"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 100,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "CAPABILITY_SPECIFIC_RESPONSE",
+    "forensic_assurance_disposition": "core",
+    "mean_security_delta_when_removed": 420,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 100,
+    "preventive_disposition": "core",
+    "scenario_families": [
+      "S1",
+      "S6",
+      "S7"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 120,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "INTERACTION_RECEIPTS",
+    "forensic_assurance_disposition": "high_assurance",
+    "mean_security_delta_when_removed": 75.714,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "forensic_only",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 35,
+    "preventive_disposition": "high_assurance",
+    "scenario_families": [
+      "S3",
+      "S5"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "receipt-causal-report.json"
+    ]
+  },
+  {
+    "activation_count": 120,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "PASSIVE_LOCAL_WITNESS",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": -28.571,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 0,
+    "preventive_disposition": "neutral",
+    "scenario_families": [
+      "S2",
+      "S3"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 170,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "ACTIVE_PATROL",
+    "forensic_assurance_disposition": "high_assurance",
+    "mean_security_delta_when_removed": 0,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "forensic_only",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 25,
+    "preventive_disposition": "high_assurance",
+    "scenario_families": [
+      "S3",
+      "S5",
+      "S6"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 125,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "RELIABILITY_WEIGHTING",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": -28.571,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 40,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S4",
+      "S6"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 75,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "RELIABILITY_SCOPE_SEPARATION",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": -28.571,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 40,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S4"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 200,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "CONTROL_GROUP_WEIGHT_CAP",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": -28.571,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 40,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S3",
+      "S4",
+      "S6"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 110,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "RELIABILITY_CONFIDENCE_DECAY",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": -28.571,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 40,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S4",
+      "S7"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 160,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "PROBATION_HYSTERESIS",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": -28.571,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 40,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S4",
+      "S6",
+      "S7"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 75,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "COMPROMISE_WINDOW_REWEIGHT",
+    "forensic_assurance_disposition": "high_assurance",
+    "mean_security_delta_when_removed": -28.571,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 40,
+    "preventive_disposition": "high_assurance",
+    "scenario_families": [
+      "S4"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 75,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "ACCUSATION_CYCLE_REPORTING",
+    "forensic_assurance_disposition": "high_assurance",
+    "mean_security_delta_when_removed": -28.571,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 40,
+    "preventive_disposition": "high_assurance",
+    "scenario_families": [
+      "S4"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 95,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "TIP_ONLY_INVESTIGATION",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": 75.714,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 35,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S5",
+      "S6"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 45,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "INVESTIGATION_BUDGETS",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": 75.714,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 35,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S5"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 45,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "RESERVED_HIGH_RISK_CAPACITY",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": 75.714,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 35,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S5"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 130,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "PROVISIONAL_CONTAINMENT",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": -51.429,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "outcome_changing",
+      "state_change_no_response_change"
+    ],
+    "outcome_change_count": 95,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S5",
+      "S6",
+      "S7"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 95,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "SOURCE_NOVEL_CONFIRMATION",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": -51.429,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 85,
+    "preventive_disposition": "standard",
+    "scenario_families": [
+      "S5",
+      "S6"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 95,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "CAMPAIGN_GROUPING",
+    "forensic_assurance_disposition": "high_assurance",
+    "mean_security_delta_when_removed": -51.429,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "forensic_only",
+      "outcome_changing"
+    ],
+    "outcome_change_count": 85,
+    "preventive_disposition": "high_assurance",
+    "scenario_families": [
+      "S5",
+      "S6"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 50,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "DIRECT_LOCAL_EMERGENCY_PATH",
+    "forensic_assurance_disposition": "high_assurance",
+    "mean_security_delta_when_removed": 0,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "forensic_only"
+    ],
+    "outcome_change_count": 0,
+    "preventive_disposition": "insufficiently_exercised",
+    "scenario_families": [
+      "S6"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  },
+  {
+    "activation_count": 130,
+    "disposition_version": "tcop.feature-disposition/0.2-validation",
+    "feature_id": "SEVERITY_WEIGHTED_RESPONSE",
+    "forensic_assurance_disposition": "optional",
+    "mean_security_delta_when_removed": 0,
+    "observed_attribution_statuses": [
+      "enabled_unexercised",
+      "exercised_no_state_change"
+    ],
+    "outcome_change_count": 0,
+    "preventive_disposition": "insufficiently_exercised",
+    "scenario_families": [
+      "S5",
+      "S6",
+      "S7"
+    ],
+    "supporting_artifacts": [
+      "activation-audit.json",
+      "decision-change-attribution.jsonl",
+      "feature-dispositions.json"
+    ]
+  }
+]

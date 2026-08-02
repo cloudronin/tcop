@@ -1,0 +1,74 @@
+{
+  "a2_export_digests": [
+    "a7ac0124d87d56a68474522955b40ba2405a29979800092a501635e100cee5a3",
+    "a55c36759e0c68a5a2ad376eef02100abbdfb389021e0aede5fc8ea1ebaf9e81"
+  ],
+  "a3_input_digests": [],
+  "cell": {
+    "architecture_id": "A2",
+    "cell_id": "T2-S06-O1-N0-A2-utility-preserving-42",
+    "classification": "negative_control",
+    "disposition": "scheduled",
+    "network_id": "N0",
+    "observer_id": "O1",
+    "reason": "",
+    "scenario_id": "S06",
+    "seed": 42,
+    "strategy_id": "utility-preserving",
+    "topology_id": "T2"
+  },
+  "metrics": {
+    "attack_success": false,
+    "blast_radius_domains": 0,
+    "containment_latency": -5,
+    "early_warning_lead_time": -5,
+    "false_containment": false,
+    "first_import_at": 6,
+    "first_protection_at": 0,
+    "forensic_records": 48,
+    "harmful_actions": 0,
+    "prevented_actions": 2,
+    "protocol_observations": 2,
+    "rejected_observations": 1,
+    "utility_restriction_ticks": 0,
+    "validated_observations": 4
+  },
+  "result": "pass",
+  "run_version": "tcop.federated-domain/0.6",
+  "scenario": {
+    "central_outage": false,
+    "colluders": 1,
+    "crosses_domain": true,
+    "disclosure": "hashes-only",
+    "extra_receiver": false,
+    "false_warning": false,
+    "family": "negative_control",
+    "harmful_at": [
+      4,
+      6
+    ],
+    "malicious": true,
+    "observed": true,
+    "origin_index": 0,
+    "origin_observation_at": 5,
+    "receiver_capability": "tool:data.export",
+    "receiver_index": 1,
+    "receiver_observation_at": 1,
+    "replay": false,
+    "scenario_id": "S06",
+    "sender_unavailable": false,
+    "severity": "critical",
+    "tampered": false,
+    "title": "Receiver detects first"
+  },
+  "stream_digest": "14df12c6311adbfe31879f991466850e291e434f23b620eda1f2123a3e68bfea",
+  "topology": {
+    "domains": [
+      "provider",
+      "platform",
+      "downstream"
+    ],
+    "topology_id": "T2",
+    "trust_model": "partner_federation"
+  }
+}
