@@ -1,0 +1,24 @@
+{
+  "artifact_root": "artifacts/adaptive-agent-authorization-v1",
+  "live_episode_count": 12,
+  "patterns": [
+    "capability_substitution",
+    "session_substitution",
+    "delegation",
+    "benign_fallback"
+  ],
+  "policies": [
+    "C0",
+    "C1",
+    "C2",
+    "C2E",
+    "C3"
+  ],
+  "runtime": "tcop-bounded-reference-agent/1",
+  "source_roots": {
+    "federated_evidence": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+    "validation_value_v2": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d"
+  },
+  "strict_trace_count": 20,
+  "study": "Adaptive Agent Authorization and Escalation Study v1"
+}

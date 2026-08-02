@@ -1,0 +1,8 @@
+{
+  "forbidden": [
+    "benchmark labels",
+    "future outcomes"
+  ],
+  "partial": "monitor-only",
+  "strong": "session lineage or declared delegation edge"
+}

@@ -1,0 +1,7 @@
+{
+  "external_input_bundle": {
+    "digest": "ea872812e64f1a843a30997b90ff418855ad7ab52462a20e9a6e3c00a144f397",
+    "lock_digest": "a5abbf611255b8f60afe218592c63d5a3633967a65dad8efdaa9d105825302dc",
+    "path": "artifacts/external-warning-adaptive-crosshost-v1-inputs-hf-approved"
+  }
+}

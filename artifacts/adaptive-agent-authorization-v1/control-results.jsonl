@@ -1,0 +1,9 @@
+{"control":"invalid_signature","passed":true,"restriction_created":false}
+{"control":"unauthorized_issuer","passed":true,"restriction_created":false}
+{"control":"expiry","passed":true,"restriction_created":false}
+{"control":"replay","passed":true,"restriction_created":false}
+{"control":"unresolved_receipt","passed":true,"restriction_created":false}
+{"control":"no_strong_campaign","passed":true,"restriction_created":false}
+{"control":"unrelated_session","passed":true,"restriction_created":false}
+{"control":"unrelated_delegation","passed":true,"restriction_created":false}
+{"control":"remote_enforcement_ignored","passed":true,"restriction_created":false}

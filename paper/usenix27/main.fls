@@ -317,11 +317,14 @@ INPUT ./tables/generated/tab-replay-timing.tex
 INPUT ./tables/generated/tab-replay-timing.tex
 INPUT ./tables/generated/tab-replay-timing.tex
 INPUT tables/generated/tab-replay-timing.tex
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
 INPUT ./sections/08-security-availability.tex
 INPUT ./sections/08-security-availability.tex
 INPUT ./sections/08-security-availability.tex
 INPUT ./sections/08-security-availability.tex
 INPUT sections/08-security-availability.tex
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./figures/pdf/security-availability.pdf
 INPUT ./figures/pdf/security-availability.pdf
 INPUT ./figures/pdf/security-availability.pdf

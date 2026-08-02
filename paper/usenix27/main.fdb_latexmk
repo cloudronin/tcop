@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1785639665.16145 "main.aux" "main.bbl" "main" 1785639666.17756 0
+["bibtex main"] 1785650641.1424 "main.aux" "main.bbl" "main" 1785650642.22941 0
   "./references.bib" 1785615414.55577 248 d4af899a3cc6419a74ab17e38af9342b ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1785639665.86602 10146 460a2387d78dc81e2935c907da0facbb "pdflatex"
+  "main.aux" 1785650641.9161 10378 913e65d70550d41058b1cde5e6dcf9b1 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1785639665.28212 "main.tex" "main.pdf" "main" 1785639666.17773 0
+["pdflatex"] 1785650641.27156 "main.tex" "main.pdf" "main" 1785650642.22957 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -116,9 +116,9 @@
   "figures/pdf/physical-timing.pdf" 1785616977.75104 16091 9765aabab59548b8a2d21cbf582341b4 ""
   "figures/pdf/security-availability.pdf" 1785616978.09748 12354 52111b776e939816eef48c80ed3afd0b ""
   "generated/results-macros.tex" 1785616976.5835 887 a210bf9729587be377f6a42eb6456540 ""
-  "main.aux" 1785639665.86602 10146 460a2387d78dc81e2935c907da0facbb "pdflatex"
-  "main.bbl" 1785639665.27849 278 97e5d069447a5ac9688c786b87071991 "bibtex main"
-  "main.out" 1785639665.86668 3067 a6f4637d5a7a52afc0f1218d221985af "pdflatex"
+  "main.aux" 1785650641.9161 10378 913e65d70550d41058b1cde5e6dcf9b1 "pdflatex"
+  "main.bbl" 1785650641.26822 278 97e5d069447a5ac9688c786b87071991 "bibtex main"
+  "main.out" 1785650641.91685 3067 a6f4637d5a7a52afc0f1218d221985af "pdflatex"
   "main.tex" 1785615414.45581 2781 57c65a33b5a8f267aed662741a006816 ""
   "sections/01-introduction.tex" 1785615449.06783 2042 b3ed8b68d4ae45570ca825384e5e9ef2 ""
   "sections/02-problem-threat-model.tex" 1785615449.16732 1201 433f5d6dfd9b25dc44cabc58fd9b34f5 ""
@@ -126,8 +126,8 @@
   "sections/04-local-resolution-enforcement.tex" 1785616373.56192 998 c6b080cd3c6fc9239b4b8da97a47b85f ""
   "sections/05-containment-window.tex" 1785615449.46627 1136 1378e4848a7cfc4bed1ba3858a3a84d4 ""
   "sections/06-deterministic-evaluation.tex" 1785639643.04977 3042 54ed58b1a78f53d38bc2cf389c3e43ea ""
-  "sections/07-agent-gateway-evaluation.tex" 1785616373.65479 1950 075434e13dab30f86809e2e16556129d ""
-  "sections/08-security-availability.tex" 1785616373.74812 1308 d5b3713116f70e1f7e5b2d486f9de522 ""
+  "sections/07-agent-gateway-evaluation.tex" 1785650622.94858 2664 4a828a0d491f2286178e81e476f67e55 ""
+  "sections/08-security-availability.tex" 1785650623.06407 1866 945f28ae82e6e21e6df8ec17927c7dc6 ""
   "sections/09-related-work.tex" 1785616373.842 1099 f7b30cf2532e77d3a08d57156b6d7246 ""
   "sections/10-limitations-conclusion.tex" 1785615481.39908 1397 fb290c0b05466ad36384ac2d1f486105 ""
   "tables/generated/tab-amendment-history.tex" 1785616978.4811 1457 4bbbf7805cc34413537ad4f7af422297 ""

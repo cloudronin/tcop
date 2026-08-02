@@ -1,0 +1,5 @@
+{
+  "sensitive-write": [
+    "repository.write"
+  ]
+}

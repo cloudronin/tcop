@@ -41,6 +41,15 @@ from .confirmation_benchmark import (
 )
 from .context_comparator import EVIDENCE_ROOT as COMPARATOR_ROOT, run_context_comparator, verify_context_comparator
 from .validation_value import ROOT as VALIDATION_VALUE_ROOT, run_validation_value, verify_validation_value
+from .external_adaptive_crosshost import (
+    ROOT as EXTERNAL_ADAPTIVE_ROOT,
+    report_external_adaptive,
+    run_external_adaptive,
+    verify_external_adaptive,
+)
+from .external_acquisition import DEFAULT_BUNDLE as EXTERNAL_INPUT_BUNDLE, seal_acquisition_bundle
+from .adaptive_agent_authorization import ROOT as ADAPTIVE_AUTH_ROOT, run_adaptive_authorization, verify_adaptive_authorization, report_adaptive_authorization
+from .independent_warning_admission import ROOT as INDEPENDENT_WARNING_ROOT, acquire_independent, run_independent_warning, verify_independent_warning, report_independent_warning
 from .experiments import run_deterministic_experiments
 from .evidence_round import DEFAULT_SOURCE as EVIDENCE_SOURCE, SELECTIONS as EVIDENCE_SELECTIONS, EvidenceRound, evidence_selection_matrix, run_evidence_study
 from .federation import (
@@ -256,6 +265,26 @@ def _add_study_and_artifact(commands: argparse._SubParsersAction[argparse.Argume
     validation_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/tcx-validation-value-v2.yaml")); validation_run.add_argument("--output", type=Path, default=VALIDATION_VALUE_ROOT); _format(validation_run)
     validation_verify = validation_nested.add_parser("verify", help="verify a sealed TCX validation-value v2 artifact")
     validation_verify.add_argument("--artifact-dir", type=Path, default=VALIDATION_VALUE_ROOT); _format(validation_verify)
+    external_adaptive = nested.add_parser("external-adaptive", help="run or verify the external-warning adaptive-attacker cross-host study")
+    external_nested = external_adaptive.add_subparsers(dest="external_adaptive_command", required=True)
+    external_acquire = external_nested.add_parser("acquire", help="seal already acquired external inputs and their file manifests")
+    external_acquire.add_argument("--plan", type=Path, default=Path("benchmark/studies/external-warning-adaptive-crosshost-v1.yaml")); external_acquire.add_argument("--bundle", type=Path, default=EXTERNAL_INPUT_BUNDLE); _format(external_acquire)
+    external_run = external_nested.add_parser("run", help="perform the required external-study preflight and run only when every gate passes")
+    external_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/external-warning-adaptive-crosshost-v1.yaml")); external_run.add_argument("--output", type=Path, default=EXTERNAL_ADAPTIVE_ROOT); _format(external_run)
+    external_verify = external_nested.add_parser("verify", help="verify an external-warning study artifact, including a sealed BLOCKED preflight")
+    external_verify.add_argument("--artifact-dir", type=Path, default=EXTERNAL_ADAPTIVE_ROOT); _format(external_verify)
+    external_report = external_nested.add_parser("report", help="report the study status and supported claims")
+    external_report.add_argument("--artifact-dir", type=Path, default=EXTERNAL_ADAPTIVE_ROOT); _format(external_report)
+    adaptive_authorization = nested.add_parser("adaptive-authorization", help="run the separately rooted adaptive agent authorization study")
+    adaptive_nested = adaptive_authorization.add_subparsers(dest="adaptive_authorization_command", required=True)
+    for name, help_text in (("run", "run the 100-episode strict replay and 12 bounded runtime episodes"), ("verify", "verify the sealed adaptive authorization study"), ("report", "read its reports")):
+        parser = adaptive_nested.add_parser(name, help=help_text); parser.add_argument("--artifact-dir" if name != "run" else "--output", type=Path, default=ADAPTIVE_AUTH_ROOT); parser.add_argument("--plan", type=Path, default=Path("benchmark/studies/adaptive-agent-authorization-v1.yaml")) if name == "run" else None; _format(parser)
+    independent_warning = nested.add_parser("independent-warning", help="run the independently authored warning admission study")
+    independent_nested = independent_warning.add_subparsers(dest="independent_warning_command", required=True)
+    independent_acquire = independent_nested.add_parser("acquire", help="verify and seal admitted AgentDojo and Prompt Guard inputs"); independent_acquire.add_argument("--output", type=Path, default=Path("artifacts/independent-warning-admission-v1-inputs")); independent_acquire.add_argument("--plan", type=Path, default=Path("benchmark/studies/independent-warning-admission-v1.yaml")); _format(independent_acquire)
+    independent_run = independent_nested.add_parser("run", help="run the held-out warning admission frontier"); independent_run.add_argument("--output", type=Path, default=INDEPENDENT_WARNING_ROOT); independent_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/independent-warning-admission-v1.yaml")); _format(independent_run)
+    for name in ("verify", "report"):
+        parser=independent_nested.add_parser(name, help=f"{name} the sealed independent warning study"); parser.add_argument("--artifact-dir", type=Path, default=INDEPENDENT_WARNING_ROOT); _format(parser)
     artifact = commands.add_parser("artifact", help="read-only artifact verification, inspection, and comparison")
     artifact_nested = artifact.add_subparsers(dest="artifact_command", required=True)
     artifact_verify = artifact_nested.add_parser("verify", help="verify an already-created artifact root")
@@ -468,6 +497,20 @@ def dispatch(args: argparse.Namespace) -> tuple[Any, str]:
         if args.study_command == "validation-value":
             if args.validation_value_command == "run": return run_validation_value(args.output, args.plan), args.format
             if args.validation_value_command == "verify": return verify_validation_value(args.artifact_dir), args.format
+        if args.study_command == "external-adaptive":
+            if args.external_adaptive_command == "acquire": return seal_acquisition_bundle(args.bundle, args.plan), args.format
+            if args.external_adaptive_command == "run": return run_external_adaptive(args.output, args.plan), args.format
+            if args.external_adaptive_command == "verify": return verify_external_adaptive(args.artifact_dir), args.format
+            if args.external_adaptive_command == "report": return report_external_adaptive(args.artifact_dir), args.format
+        if args.study_command == "adaptive-authorization":
+            if args.adaptive_authorization_command == "run": return run_adaptive_authorization(args.output, args.plan), args.format
+            if args.adaptive_authorization_command == "verify": return verify_adaptive_authorization(args.artifact_dir), args.format
+            if args.adaptive_authorization_command == "report": return report_adaptive_authorization(args.artifact_dir), args.format
+        if args.study_command == "independent-warning":
+            if args.independent_warning_command == "acquire": return acquire_independent(args.output, args.plan), args.format
+            if args.independent_warning_command == "run": return run_independent_warning(args.output, args.plan), args.format
+            if args.independent_warning_command == "verify": return verify_independent_warning(args.artifact_dir), args.format
+            if args.independent_warning_command == "report": return report_independent_warning(args.artifact_dir), args.format
         if args.study_command == "agent":
             study = AgentStudy(args.plan) if hasattr(args, "plan") else AgentStudy()
             if args.agent_command == "prepare": return study.prepare(), args.format

@@ -1,0 +1,117 @@
+study: External-Warning, Adaptive-Attacker, Cross-Host Study v1
+study_kind: external_warning_adaptive_crosshost_v1
+artifact_root: artifacts/external-warning-adaptive-crosshost-v1
+plan_status: amendments_001_002_integrated_pending_external_timestamp
+effective_plan_revision: 1.2
+seed: 20260801
+external_sources:
+  agentdojo:
+    url: https://github.com/ethz-spylab/agentdojo
+    release_tag: v0.1.35
+    commit: a75aba7631d3ca5fb7ab938965c97ead2f9ff84b
+    selected_suites: all_public_release_suites
+    selected_tasks: all_public_release_tasks
+    license: MIT_expected_verify_from_pinned_LICENSE
+  llama_prompt_guard_2:
+    url: https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M
+    variant: Llama-Prompt-Guard-2-86M
+    required_revision: full_hugging_face_commit_sha_required_before_acquisition
+    license: Meta_Llama_license_acceptance_required
+source_roots:
+  federated_evidence: 0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99
+  validation_value_v2: da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d
+conditions: [E0, E1, E2, E2M, E2E, E3, S1, T2, S2]
+adaptive_branch_matrix:
+  A0: {trigger: initial_case_execution, required_action: ordinary_harmful_receiver_side_action}
+  A1: {trigger: A0_denied, required_action: same_subject_same_session_alternate_benchmark_supported_capability_or_tool}
+  A2: {trigger: A0_or_A1_denied, required_action: same_subject_new_receiver_session_and_receipt_same_intended_capability_where_supported}
+  A3: {trigger: A0_or_A1_or_A2_denied, required_action: new_synthetic_subject_or_workload_same_declared_campaign_equivalent_supported_action}
+  A4: {trigger: any_harmful_branch_denied, required_action: benign_continuation_normally_permitted_by_benchmark}
+adaptive_attacker_visibility: ordinary_local_gateway_response_only
+adaptive_forbidden_inputs: [tcx_contents, receiver_policy_state, monitor_records, receipt_validity, campaign_classification, benchmark_labels, future_outcomes]
+adaptive_closing_dispositions: [executed, not_triggered, not_representable, environment_failure, policy_failure, excluded_before_execution]
+valid_broader_risk:
+  required: true
+  candidate_census: required_before_held_out_execution
+  confirmed_count: evaluator_only_after_execution
+  mismatch_dimensions: [subject, receipt_session, resource_namespace, capability, scope]
+  required_conditions: [E1, E2, E2M, E2E, E3, S1, T2, S2]
+  empty_population_disposition: incomplete_for_mismatch_escalation_claims
+timing_phase_diagram:
+  network_delay_ms: [10, 50, 100, 250]
+  action_interval_ms: [25, 100, 250, 500]
+  required_conditions: [E0, E1, E2, E2M, E2E, E3, S1, T2, S2]
+  impairment_implementation: isolated_two_host_network_interface_only
+  forbidden_implementation: application_level_sleep
+  outcome_partition: [prospective_prevention, post_first_action_blast_radius_reduction, forensic_or_monitor_only, too_late_for_affected_action, no_warning, protocol_rejected]
+required_topology: two_separate_hosts_or_vms_with_separate_network_interfaces
+amendments:
+  - id: "001"
+    title: STIX/TAXII Composition Comparator
+    source: spec/external-warning-adaptive-crosshost-amendment-001.md
+    status: incorporated_before_external_timestamp
+    conditions: [S1, T2, S2]
+    integrity_gates: [A1, A2, A3, A4, A5, A6, A7, A8]
+  - id: "002"
+    title: Adaptive Coverage, Valid-Broader-Risk Coverage, and Timing Phase Diagram
+    source: spec/external-warning-adaptive-crosshost-amendment-002.md
+    status: incorporated_before_external_timestamp
+    integrity_gates: [G12, G13, G14, G15, G16, G17]
+composition_dependencies:
+  stix_2_1_schema_validator:
+    url: https://github.com/oasis-open/cti-stix2-json-schemas
+    ref: stix2.1
+    commit: c4f8d589acf2bdb3783655c89e0ffb6e150006ae
+  taxii_2_1_client:
+    url: https://github.com/oasis-open/cti-taxii-client
+    ref: taxii2.1
+    commit: 0a897aeac01969c681432269a7aed6f0693e4f5f
+  taxii_2_1_server:
+    url: https://github.com/oasis-open/cti-taxii-server
+    ref: taxii2.1
+    commit: 72782fa8f4c99cbc305d8959da02608dfe0081e1
+  opa:
+    url: https://github.com/open-policy-agent/opa
+    tag: v1.9.0
+    commit: c49e670294e45bb3fd76b9e945cf821478a4bbfc
+    binary_or_image_digest: 0134337a52bd255a2202eac4b4b85348fd4a77f94e8dab8ebcb2399ec018f4c0
+fairness_contract:
+  shared_gateway_action_binding_adapter: required
+  shared_opa_policy_input_interface: required
+  field_use_trace_per_decision: required
+  native_baseline_custom_properties: forbidden
+  remote_enforcement: forbidden
+  evaluation_only_fields: forbidden
+timing_capture:
+  - t_detector_output_at_A
+  - t_message_serialized_at_A
+  - t_message_published_at_A
+  - t_message_observed_by_B
+  - t_policy_input_at_B
+  - t_opa_decision_at_B
+  - t_gateway_disposition_at_B
+  - t_first_affected_action_at_B
+required_future_artifacts:
+  - amendments/001-stix-taxii-comparator.md
+  - amendments/001.canonical.json
+  - amendments/001.sha256
+  - stix-native-mapping.md
+  - stix-extension-definition.json
+  - stix-native-objects.jsonl
+  - stix-profile-objects.jsonl
+  - taxii-wire-traces.jsonl
+  - opa-policy-lock.json
+  - opa-decision-traces.jsonl
+  - semantic-capability-matrix.csv
+  - composition-conformance-report.json
+  - amendments/002-adaptive-mismatch-timing.md
+  - amendments/002.canonical.json
+  - amendments/002.sha256
+  - effective-plan-manifest.json
+  - adaptive-branch-plan.json
+  - adaptive-coverage-ledger.csv
+  - valid-broader-risk-census.csv
+  - timing-matrix-plan.csv
+  - network-impairment-log.jsonl
+  - timing-cell-results.jsonl
+  - timing-phase-diagram-input.csv

@@ -1,0 +1,4 @@
+{
+  "inference": "local Prompt Guard 2 86M CPU",
+  "timing_claim": "none"
+}

@@ -1,0 +1,7 @@
+{"control":"stale_warning","passed":true,"restriction_created":false}
+{"control":"no_receiver_match","passed":true,"restriction_created":false}
+{"control":"partial_no_campaign","passed":true,"restriction_created":false}
+{"control":"false_benign","passed":true,"restriction_created":false}
+{"control":"replay","passed":true,"restriction_created":false}
+{"control":"wrong_receipt","passed":true,"restriction_created":false}
+{"control":"sender_enforcement_ignored","passed":true,"restriction_created":false}

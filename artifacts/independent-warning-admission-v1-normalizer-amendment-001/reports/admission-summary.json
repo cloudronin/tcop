@@ -1,0 +1,8 @@
+{
+  "admitted_items": 1,
+  "normalizer_kind": "declared_model_config",
+  "raw_label_counts": {
+    "LABEL_0": 29,
+    "LABEL_1": 1
+  }
+}

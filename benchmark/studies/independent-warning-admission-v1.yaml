@@ -1,0 +1,12 @@
+study: Independent Warning Admission and Policy Frontier Study v1
+artifact_root: artifacts/independent-warning-admission-v1
+policies: [C0, C1, C2, C2E, C3]
+heldout_partition: sha256_case_id_ranked_first_30
+target_warning_count: [30, 100]
+agentdojo:
+  bundle: artifacts/external-warning-adaptive-crosshost-v1-inputs-hf-approved
+  commit: a75aba7631d3ca5fb7ab938965c97ead2f9ff84b
+prompt_guard:
+  bundle: artifacts/external-warning-adaptive-crosshost-v1-inputs-hf-approved
+  revision: a8ded8e697ce7c355e395a0df51f94adb4a2fd27
+  variant: Llama-Prompt-Guard-2-86M

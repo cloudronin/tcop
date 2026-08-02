@@ -1,0 +1,10 @@
+[
+  {
+    "claim": "deployment prevalence or universal containment",
+    "status": "unsupported"
+  },
+  {
+    "claim": "strict policy-conditioned branch behavior",
+    "status": "supported"
+  }
+]

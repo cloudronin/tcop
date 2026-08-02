@@ -1,0 +1,7 @@
+{
+  "sensitive-write": [
+    "repository.write",
+    "dataset.export",
+    "credential.use"
+  ]
+}

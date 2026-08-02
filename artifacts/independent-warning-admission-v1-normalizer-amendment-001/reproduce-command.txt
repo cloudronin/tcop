@@ -1,0 +1,1 @@
+tcop study independent-warning run --plan benchmark/studies/independent-warning-admission-v1-normalizer-amendment-001.yaml --output artifacts/independent-warning-admission-v1-normalizer-amendment-001

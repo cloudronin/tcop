@@ -1,0 +1,122 @@
+[
+  {
+    "case_id": "v1/banking/injection_tasks.py:InjectionTask8",
+    "input_digest": "1dea1fd7888797a8b0e6ac1bdf0cececd34c9246978bb3ea2ea577a861b2adab"
+  },
+  {
+    "case_id": "v1/workspace/injection_tasks.py:InjectionTask5",
+    "input_digest": "5bd47905dc3a3fe34b4d0f35166b79b549adf70b3ed18a5c8de98fdd6fdfc78d"
+  },
+  {
+    "case_id": "v1/travel/injection_tasks.py:InjectionTask2",
+    "input_digest": "e36e8f97fb49e897c2ed57b3264e82b9a10ff6845b5080cf086a035e79b06a50"
+  },
+  {
+    "case_id": "v1/slack/injection_tasks.py:InjectionTask2",
+    "input_digest": "9720e83a52a034721658c9693d252b8375e0a3bf4f55575b4beb92ee1d0bbdd2"
+  },
+  {
+    "case_id": "v1/banking/injection_tasks.py:InjectionTask1",
+    "input_digest": "b113d37c49ec40013c6933fdae7f57b572cb29c9bc76990e9873ef4e1084d001"
+  },
+  {
+    "case_id": "v1_2/workspace/injection_tasks.py:InjectionTask11",
+    "input_digest": "b20a1dc8f64fdcd3ec1d709c746ff39cf55651254c6642c689d0ef5bcac8d650"
+  },
+  {
+    "case_id": "v1_2/workspace/injection_tasks.py:InjectionTask13",
+    "input_digest": "344fae22cfb823b886e05d8504c8769dcc99c08f3485c69d130a9d90b337ed6e"
+  },
+  {
+    "case_id": "v1_2_1/workspace/injection_tasks.py:InjectionTask11",
+    "input_digest": "b20a1dc8f64fdcd3ec1d709c746ff39cf55651254c6642c689d0ef5bcac8d650"
+  },
+  {
+    "case_id": "v1/travel/injection_tasks.py:InjectionTask0",
+    "input_digest": "51faf3d80c89d233bf9a0a7e95a2c4023413b5937a5fc2b7b5ee12d9e50db316"
+  },
+  {
+    "case_id": "v1_2/banking/injection_tasks.py:InjectionTask0",
+    "input_digest": "eb759b0ba48eb1dcae92d2d12b0d78b037ca45b2b860c7e286c047efbcb79fa5"
+  },
+  {
+    "case_id": "v1/travel/injection_tasks.py:InjectionTask5",
+    "input_digest": "88bf353f59100a6998269cd5aa7ab046f733c232d5be6410123c3721bb6fa5be"
+  },
+  {
+    "case_id": "v1_2_1/workspace/injection_tasks.py:InjectionTask12",
+    "input_digest": "037dc1993552f15f3e393fcb9702ad174eb8dac6ab856b1fb003f663d1a16c25"
+  },
+  {
+    "case_id": "v1_2/banking/injection_tasks.py:InjectionTask4",
+    "input_digest": "e604a22665b6d1ae84a14fd75c778ef342b6e8206b423adca5e87936cd0607bc"
+  },
+  {
+    "case_id": "v1_2/workspace/injection_tasks.py:InjectionTask12",
+    "input_digest": "037dc1993552f15f3e393fcb9702ad174eb8dac6ab856b1fb003f663d1a16c25"
+  },
+  {
+    "case_id": "v1_1_1/travel/injection_tasks.py:InjectionTask5",
+    "input_digest": "aa4312ef95dd71071ae3cc45a0330b891a2e80f5963f1b1ad03188274437484f"
+  },
+  {
+    "case_id": "v1_2/workspace/injection_tasks.py:InjectionTask7",
+    "input_digest": "e83a9b901400272c688785b59d8b745ca9ca753d899f58ea0a699abd4a9ce50d"
+  },
+  {
+    "case_id": "v1/travel/injection_tasks.py:InjectionTask6",
+    "input_digest": "1682aa9f6fcb7f34956bb85cbe8e689ff202f57c7d4b0412c40391b0742009d3"
+  },
+  {
+    "case_id": "v1/workspace/injection_tasks.py:InjectionTask3",
+    "input_digest": "eb419f052712057d9e4f68232f725ac36f4a2060ab019324b70d2eb51ed3961b"
+  },
+  {
+    "case_id": "v1_2/banking/injection_tasks.py:InjectionTask1",
+    "input_digest": "889f6dbed3d3d014889a7ebd3585c1903ed9b361087969a6d41484f68d98f072"
+  },
+  {
+    "case_id": "v1_1_2/travel/injection_tasks.py:InjectionTask3",
+    "input_digest": "898b956d588a4b3a3ee0f329b8d4ab86d27c12cd740193c983a83a634121a204"
+  },
+  {
+    "case_id": "v1_2/banking/injection_tasks.py:InjectionTask3",
+    "input_digest": "7aeceb74a18c298ab30e9b49b508f80dddd329c58e2ad1784c6daab47535511c"
+  },
+  {
+    "case_id": "v1/workspace/injection_tasks.py:InjectionTask2",
+    "input_digest": "a5a598f7f5dfe5e7ac523d58886c1bfab815552cd32446f76fd72eedc3fdc9dc"
+  },
+  {
+    "case_id": "v1/banking/injection_tasks.py:InjectionTask0",
+    "input_digest": "9743a7689d9d11d6bc51125b943cb498a638c3ea83da582c8ddb5c9a8556bd4e"
+  },
+  {
+    "case_id": "v1_2/workspace/injection_tasks.py:InjectionTask6",
+    "input_digest": "ecdae365d3269f901897c36bfe27ba49ffbfec807d2dd95905d31ebbb5382a73"
+  },
+  {
+    "case_id": "v1_1_2/workspace/injection_tasks.py:InjectionTask4",
+    "input_digest": "b570393af14093ed4fba6cf850dfb9f3594802a60d8b6994dd72c3da636e7a12"
+  },
+  {
+    "case_id": "v1/workspace/injection_tasks.py:InjectionTask0",
+    "input_digest": "d388cc95ec8044dc36b125cfff099aa71738cc4caa43584feab207bcfa43ada1"
+  },
+  {
+    "case_id": "v1_2/workspace/injection_tasks.py:InjectionTask9",
+    "input_digest": "59344f0c8881743600100c85e97fc90c073cd0d7db1eb6d618e2ef5ba20dc2c4"
+  },
+  {
+    "case_id": "v1_1_2/travel/injection_tasks.py:InjectionTask5",
+    "input_digest": "aa4312ef95dd71071ae3cc45a0330b891a2e80f5963f1b1ad03188274437484f"
+  },
+  {
+    "case_id": "v1_1_2/workspace/injection_tasks.py:InjectionTask3",
+    "input_digest": "eb419f052712057d9e4f68232f725ac36f4a2060ab019324b70d2eb51ed3961b"
+  },
+  {
+    "case_id": "v1_2/banking/injection_tasks.py:InjectionTask2",
+    "input_digest": "047ff2e7ebeab8786a055210f8e689421e8c3527b04cec38e2ab10134a8001f8"
+  }
+]
