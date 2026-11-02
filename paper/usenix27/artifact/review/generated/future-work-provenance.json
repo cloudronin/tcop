@@ -1,0 +1,22 @@
+{
+  "macros": {
+    "FutureApprovalDelay": "3000",
+    "FutureBareArm": "E0",
+    "FutureDefaultPoll": "10",
+    "FutureExtendedArm": "E2-extended",
+    "FutureMinimumPoll": "1",
+    "FutureNativeArm": "E2-native",
+    "FutureSandboxArm": "E1",
+    "FutureTCOPArm": "E2"
+  },
+  "sources": [
+    {
+      "path": "spec/external-warning-adaptive-crosshost-amendment-004.md",
+      "sha256": "9546e30627eab69924f47d595fa536da22acee8edd818d1b268eee8ba02b0706"
+    },
+    {
+      "path": "spec/external-warning-adaptive-crosshost-amendment-005.md",
+      "sha256": "3b45fef22a9b00cff1a3e001db07404a10a396445620d7c8298459e672cdd22b"
+    }
+  ]
+}

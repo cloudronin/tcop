@@ -54,7 +54,7 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-deterministic-summary.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "ff651513e82ac1e1eaa458e4ccff6dda41d2cba71511a66ac1b6933af9712420"
+    "sha256": "4cd90fde2aac8aa9731cd18ebfdf1bd69f9a0306f7e7e2ab30ce041f628e0c49"
   },
   {
     "claims": [
@@ -153,7 +153,7 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-tcx-protocol-assurance.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "eb72e3a8078473b043046465231e80c3bff0490df32bd4caa99481ed29dd4666"
+    "sha256": "54755a490cb50058b7a2be7f6184aec0dabeee16c56d0953bbb0c8c76a050dd1"
   },
   {
     "claims": [
@@ -248,11 +248,13 @@
     "function": "generate_tables",
     "id": "tab-negative-controls",
     "input_files": [
-      "data/generated/failure-controls.csv"
+      "data/generated/failure-controls.csv",
+      "artifacts/tcx-validation-value-v2/property-test-report.json",
+      "docs/KNOWN_ISSUES.md"
     ],
     "output": "paper/usenix27/tables/generated/tab-negative-controls.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "9ce0a1ee7f74e011ddad79dc23a1d33abc73100d5732762594e441968543b202"
+    "sha256": "d43a0f5db4c43a9076d11ccea5ff4dde8bae6f7e4f6e065af14868e7c6787761"
   },
   {
     "claims": [
@@ -265,7 +267,7 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-performance.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "584a454b997db8258da4d7a088db9a88974e053edfb6cac9d465f7c38b283d95"
+    "sha256": "ee113f355eb195b52d291d8bb4213938af711257266499c0142e35e2d0e6d6c1"
   },
   {
     "claims": [
@@ -310,6 +312,6 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-limitations.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "752e0509bea93756fc1d2a71a210ec60a14a53359d719816430532a42c1956ac"
+    "sha256": "9657eb795774b28fbb3871a33c900bf9955c50b713dcdededcb5a43334f5e386"
   }
 ]

@@ -42,6 +42,100 @@ INDEPENDENT_WARNING_FULL = Path("artifacts/independent-warning-admission-v3-full
 C2E_FRONTIER = Path("artifacts/c2e-frontier-v1")
 STRATEGY_INDEX = Path("artifacts/minimality-v0.5-validation/frozen-v0.6-profile-manifests.json")
 
+MUTATION_SOURCE = Path("artifacts/tcx-validation-value-v2/property-test-report.json")
+
+# Paper evidence classification, independent of the sealed live `passed` flags.
+# Each entry is (record, condition, expected behavior, observation, invariant,
+# evidence class, mutation key). NC-01--04/07/10/11/12/14/16 executed in
+# src/tcop/agent_eval/runner.py:261-267,581-582,584,586.
+# The other six live flags did NOT execute the named condition:
+# NC-05 runner.py:579 and NC-06 runner.py:580 are literal True;
+# NC-08 runner.py:266 reads authorization.py:246's literal zero;
+# NC-09 runner.py:268 checks rows containing no remote action;
+# NC-13 runner.py:583 never restarts a gateway and reads that literal zero;
+# NC-15 runner.py:585 is literal True. All runner.py references here are under
+# src/tcop/agent_eval/, as is authorization.py.
+# NC-05/09 instead use executed accept_imported_context mutations from
+# src/tcop/validation_value.py:118-141, recorded in MUTATION_SOURCE.
+CONTROL_EVIDENCE = {
+    "invalid_signature": ("NC-01", "Invalid signature", "Reject before restriction", "Rejected; no restriction", "Signed input", "live-executed", None),
+    "wrong_receipt": ("NC-02", "Wrong receipt", "Reject before restriction", "Rejected; no restriction", "Receipt correlation", "live-executed", None),
+    "expired_context": ("NC-03", "Expired context", "Reject before restriction", "Rejected; no restriction", "Bounded freshness", "live-executed", None),
+    "replayed_context": ("NC-04", "Replayed context", "Reject before restriction", "Rejected; no restriction", "Replay protection", "live-executed", None),
+    "unknown_peer": ("NC-05", "Unknown peer", "Reject before restriction", None, "Authorized peer", "signed-envelope-mutation", "issuer"),
+    "disallowed_import_type": ("NC-06", "Disallowed import type", "Reject before restriction", "Not executed; design property", "Context class", "not-executed", None),
+    "local_policy_monitor_only": ("NC-07", "Monitor-only policy", "Do not preempt first call", "First call not blocked", "Local detection timing", "live-executed", None),
+    "no_remote_enforcement": ("NC-08", "No remote enforcement", "Never accept remote enforcement", "Not executed; design property", "Receiver authority", "not-executed", None),
+    "remote_tcx_action_not_interpreted": ("NC-09", "Remote TCX action", "Never interpret remote action", None, "Receiver authority", "signed-envelope-mutation", "action_semantic"),
+    "gateway_cache_disabled": ("NC-10", "Gateway cache disabled", "Evaluate each authorization", "Cache disabled", "Replay correctness", "live-executed", None),
+    "tcopd_b_unavailable": ("NC-11", "tcopd B unavailable", "Use B-local disposition", "Local fail-closed policy", "Receiver authority", "live-executed", None),
+    "authorization_timeout": ("NC-12", "Authorization timeout", "Use B-local disposition", "Sender does not choose timeout", "Receiver authority", "live-executed", None),
+    "gateway_restart": ("NC-13", "Gateway restart", "Recompute local state", "Not executed; design property", "Receiver authority", "not-executed", None),
+    "stale_decision": ("NC-14", "Stale decision", "Recompute local state", "Fresh decision used", "Receiver authority", "live-executed", None),
+    "session_termination_before_context_arrival": ("NC-15", "Session termination before arrival", "Do not cross sessions", "Not executed; design property", "Session binding", "not-executed", None),
+    "context_arrival_after_local_containment": ("NC-16", "Arrival after local containment", "No reversal of completed action", "Non-preventive late context", "Containment window", "live-executed", None),
+}
+
+
+def failure_control_rows() -> list[dict[str, Any]]:
+    """Keep recorded flags, but derive paper passes only from executed evidence."""
+    live_source = LIVE / "reports" / "negative-controls.json"
+    records = read_json(root_path(live_source))["controls"]
+    controls = {row["control"]: row for row in records}
+    if len(records) != len(CONTROL_EVIDENCE) or set(controls) != set(CONTROL_EVIDENCE):
+        fail("sealed negative-control set differs from the evidence map")
+    if not all(row["passed"] is True for row in records):
+        fail("sealed negative-control recorded flags changed")
+    mutations = read_json(root_path(MUTATION_SOURCE))["mutations"]
+    mutation_digest = read_json(root_path(MUTATION_SOURCE.parent / "artifact-root-digest.json"))["artifact_root_digest"]
+    rows = []
+    for key, (record, condition, expected, observed, invariant, evidence, mutation) in CONTROL_EVIDENCE.items():
+        source, event, passed = live_source, key, None
+        if evidence == "live-executed":
+            passed = controls[key]["passed"]
+        elif evidence == "signed-envelope-mutation":
+            source, event = MUTATION_SOURCE, "mutations." + mutation
+            result = mutations[mutation]
+            required = ({"code": "identity_unknown", "restriction_created": False, "passed": True}
+                        if mutation == "issuer" else
+                        {"code": "accepted_independent_peer", "remote_action_fields_ignored": ["action", "enforcement"], "passed": True})
+            if any(result.get(field) != value for field, value in required.items()):
+                fail("signed-envelope mutation evidence changed: " + mutation)
+            passed = result["passed"]
+            observed = ("identity_unknown; no restriction" if mutation == "issuer" else
+                        "Remote fields action and enforcement ignored")
+        rows.append(provenance(
+            source, event, treatment="negative-control", scenario="agent-gateway",
+            architecture="A2", strategy="containment-first", eligibility=evidence,
+            control=key, source_record=record, condition=condition, expected_behavior=expected,
+            observed_behavior=observed, invariant=invariant, evidence_class=evidence,
+            mutation=mutation, passed=passed, pass_label="Not tested" if passed is None else "Yes",
+            live_recorded_passed=controls[key]["passed"],
+            live_source_relative_path=live_source.as_posix(),
+            source_record_detail=controls[key].get("detail", "") if mutation is None else mutations[mutation],
+            source_artifact_digest=mutation_digest if mutation else source_digest_for(source),
+            source_file_sha256=sha256_file(root_path(source)),
+        ))
+    if Counter(row["evidence_class"] for row in rows) != {
+        "live-executed": 10, "signed-envelope-mutation": 2, "not-executed": 4,
+    }:
+        fail("negative-control evidence counts differ from 10/2/4")
+    return rows
+
+
+def negative_control_expectations(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    return {
+        "negative_controls": {
+            row["control"]: {
+                "passed": row["passed"], "status": row["pass_label"],
+                "evidence_class": row["evidence_class"],
+                "source": row["source_relative_path"], "record": row["source_row_event_identifier"],
+                "live_recorded_passed": row["live_recorded_passed"],
+            } for row in rows
+        },
+        "negative_control_evidence_counts": dict(Counter(row["evidence_class"] for row in rows)),
+    }
+
 SOURCE_SPECS = (
     {
         "artifact_id": "live-agent-validation-final",
@@ -149,7 +243,7 @@ AMENDMENT_CHAIN = (
     ("003", "artifacts/v0.6-agent-validation-live-amendment-003", "artifacts/v0.6-agent-validation-live-amendment-002", "RA-03 eligibility alignment"),
     ("004", "artifacts/v0.6-agent-validation-live-final", "artifacts/v0.6-agent-validation-live-amendment-003", "completion-gate ordering"),
     ("005", "artifacts/v0.6-agent-validation-live-certified", "artifacts/v0.6-agent-validation-live-final", "derived RA-03 utility reconciliation"),
-    ("006", "artifacts/v0.6-agent-validation-live-origin-certified", "artifacts/v0.6-agent-validation-live-certified", "physical tcopd-a relay replay"),
+    ("006", "artifacts/v0.6-agent-validation-live-origin-certified", "artifacts/v0.6-agent-validation-live-certified", "single-environment reference-path tcopd-a relay replay"),
 )
 
 
@@ -624,19 +718,7 @@ def extract_results() -> dict[str, Any]:
                 ))
     write_csv(DATA / "performance-results.csv", performance_rows)
 
-    control_source = LIVE / "reports" / "negative-controls.json"
-    controls = read_json(live_root / "reports" / "negative-controls.json")["controls"]
-    if not controls or not all(row["passed"] for row in controls):
-        fail("a negative or failure control did not pass")
-    control_rows = [
-        provenance(
-            control_source, row["control"], treatment="negative-control", scenario="agent-gateway",
-            architecture="A2", strategy="containment-first", eligibility="control",
-            injected_condition=row["control"], expected_behavior=row.get("detail", "reject or preserve local authority"),
-            observed_behavior=row.get("detail", "passed"), invariant="receiver-local authority", passed=row["passed"],
-        )
-        for row in controls
-    ]
+    control_rows = failure_control_rows()
     write_csv(DATA / "failure-controls.csv", control_rows)
 
     amendment_rows = [
@@ -706,7 +788,7 @@ def extract_results() -> dict[str, Any]:
     write_csv(DATA / "tcx-hostile-peer.csv", [
         provenance(hostile_source, row["policy"] + ":" + row["warnings_received"], treatment=row["policy"],
                    scenario="valid-hostile-peer", architecture="receiver-local", strategy="containment-first",
-                   eligibility="synthetic-rate-sweep", **row)
+                   eligibility="formula-computed-not-measured", **row)
         for row in hostile_rows
     ])
 
@@ -719,7 +801,7 @@ def extract_results() -> dict[str, Any]:
     write_csv(DATA / "tcx-correlation.csv", [
         provenance(correlation_source, str(row["concurrency"]) + ":" + row["variant"], treatment="correlation",
                    scenario=row["variant"], architecture="receiver-local", strategy="validation-value",
-                   eligibility="ambiguity-sweep", **row)
+                   eligibility="formula-computed-typed-in-zeros", **row)
         for row in correlation_rows
     ])
 
@@ -1035,7 +1117,7 @@ def extract_results() -> dict[str, Any]:
             "live-replay-pairs.csv": {"source": pairs_source.as_posix(), "rows": len(pair_rows)},
             "physical-arms.csv": {"source": physical_source.as_posix(), "rows": len(physical_rows)},
             "utility-results.csv": {"source": utility_source.as_posix(), "rows": len(utility_rows)},
-            "failure-controls.csv": {"source": control_source.as_posix(), "rows": len(control_rows)},
+            "failure-controls.csv": {"sources": sorted({row["source_relative_path"] for row in control_rows}), "rows": len(control_rows)},
             "tcx-validation-value.csv": {"source": validation_source.as_posix(), "rows": len(validation_rows)},
             "tcx-hostile-peer.csv": {"source": hostile_source.as_posix(), "rows": len(hostile_rows)},
             "tcx-correlation.csv": {"source": correlation_source.as_posix(), "rows": len(correlation_rows)},
@@ -1059,7 +1141,7 @@ def extract_results() -> dict[str, Any]:
         "deterministic": {
             "strict_pairs": 54, "improved": 30, "unchanged": 24, "worsened": 0,
             "baseline_harmful_calls": baseline_harmful_calls, "treatment_harmful_calls": treatment_harmful_calls,
-            "harmful_actions_prevented": 36, "excluded_unmatched_pairs": 123,
+            "harmful_actions_prevented": prevented, "excluded_unmatched_pairs": 123,
             "central_fact_equivalent_cells": 54, "central_regressions": 6,
             "central_authority_regressions": central["root_causes"]["authority-placement effect"],
             "central_outage_regressions": central["root_causes"]["central outage"],
@@ -1082,6 +1164,8 @@ def extract_results() -> dict[str, Any]:
             "conditions": by_condition,
             "matching": matching,
             "hostile_burst": burst_observed,
+            "hostile_burst_evidence": "formula-computed; no executed burst study",
+            "correlation_evidence": "formula-computed with typed-in zeros; no measured session-isolation study",
             "correlation": {"rows": len(correlation_rows), "concurrency": [1, 2, 8], "misbindings": 0, "cross_session_restrictions": 0},
             "validator_mutation_cases": property_results["corpus_cases"],
         },
@@ -1116,7 +1200,7 @@ def extract_results() -> dict[str, Any]:
             "before": {"attempts": before_eligibility["attempts"], "eligible": before_eligibility["eligible"], "ineligible": before_eligibility["ineligible"]},
             "after": {"attempts": after_eligibility["attempts"], "eligible": after_eligibility["eligible"], "ineligible": after_eligibility["ineligible"]},
         },
-        "negative_controls": {row["control"]: row["passed"] for row in controls},
+        **negative_control_expectations(control_rows),
         "frozen_strategy_digests": {row["strategy"]: row["computed_digest"] for row in strategies},
         "amendment_chain_integrity": True,
     }
@@ -1319,8 +1403,65 @@ def macro_values() -> dict[str, str]:
     }
 
 
+AMENDMENT_SEALS = {
+    "004": "9546e30627eab69924f47d595fa536da22acee8edd818d1b268eee8ba02b0706",
+    "005": "3b45fef22a9b00cff1a3e001db07404a10a396445620d7c8298459e672cdd22b",
+}
+
+
+def future_work_macros() -> dict[str, str]:
+    texts = {}
+    sources = []
+    for number, digest in AMENDMENT_SEALS.items():
+        path = ROOT / "spec" / f"external-warning-adaptive-crosshost-amendment-{number}.md"
+        if sha256_file(path) != digest:
+            fail("sealed Future Work amendment hash mismatch: " + number)
+        texts[number] = path.read_text(encoding="utf-8")
+        sources.append({"path": relative(path), "sha256": digest})
+    text = texts["004"]
+    patterns = {
+        "FutureBareArm": r"(E0) is the bare agent",
+        "FutureSandboxArm": r"(E1) is the same agent",
+        "FutureTCOPArm": r"(E2) sits on E1",
+        "FutureNativeArm": r"\*\*(E2-native)\*\* uses only",
+        "FutureExtendedArm": r"\*\*(E2-extended)\*\*",
+        "FutureDefaultPoll": r"Its (\d+) s poll, 1 s poll and instant cut",
+        "FutureMinimumPoll": r"Its 10 s poll, (\d+) s poll and instant cut",
+        "FutureApprovalDelay": r"D = (\d+) ms",
+    }
+    values = {}
+    for name, pattern in patterns.items():
+        match = re.search(pattern, text)
+        if match is None:
+            fail("sealed amendment lacks Future Work value: " + name)
+        values[name] = match.group(1)
+    # The grid placement and trace-validation claims consume amendment 005,
+    # whose bytes are checked above even though they need no numeric macros.
+    write_json(GENERATED / "future-work-provenance.json", {"sources": sources, "macros": values})
+    return values
+
+
+def performance_macros() -> dict[str, str]:
+    rows = list(csv.DictReader((DATA / "performance-results.csv").open(encoding="utf-8")))
+    values = {}
+    for selection, prefix in (("disabled", "PerfDisabled"), ("enabled_fixed_ttl_5s", "PerfCached")):
+        selected = {row["component"]: row for row in rows if row["selection"] == selection
+                    and row["source_relative_path"].endswith("gateway-latency.json")}
+        counts = {int(selected[key]["sample_count"]) for key in ("authorization_api", "gateway_enforcement", "warning_to_enforcement")}
+        if len(counts) != 1:
+            fail("performance component sample counts differ")
+        values[prefix + "Samples"] = str(counts.pop())
+        for component, suffix in (("authorization_api", "Authorization"), ("gateway_enforcement", "Gateway"), ("warning_to_enforcement", "Warning")):
+            values[prefix + suffix] = format(float(selected[component]["p95_ms"]) * 1000, ".6f").rstrip("0").rstrip(".")
+        values[prefix + "HitRate"] = selected["authorization_api"]["cache_hit_rate"]
+    report = read_json(root_path(LIVE / "reports" / "gateway-latency.json"))
+    cached = next(row for row in report["selections"] if row["selection"] == "enabled_fixed_ttl_5s")
+    values["PerfCacheTTL"] = str(cached["cache_ttl_seconds"])
+    return values
+
+
 def generate_macros() -> None:
-    values = macro_values()
+    values = {**macro_values(), **future_work_macros(), **performance_macros()}
     write_text(GENERATED / "results-macros.tex", "\n".join("\\newcommand{\\%s}{%s}" % (name, value) for name, value in values.items()))
     write_json(GENERATED / "paper-metadata.json", {
         "title": "TCOP: Receiver-Bound Runtime Evidence for Cross-Domain Agent Authorization",
@@ -1353,15 +1494,27 @@ def table(name: str, text: str, claims: list[str], inputs: list[str]) -> dict[st
 
 
 def generate_tables() -> None:
-    control_rows = {row["injected_condition"]: row for row in csv.DictReader((DATA / "failure-controls.csv").open(encoding="utf-8"))}
-    required_controls = {
-        "invalid_signature", "wrong_receipt", "expired_context", "replayed_context", "local_policy_monitor_only",
-        "no_remote_enforcement", "gateway_cache_disabled", "remote_tcx_action_not_interpreted", "unknown_peer",
-        "disallowed_import_type", "tcopd_b_unavailable", "authorization_timeout", "gateway_restart", "stale_decision",
-        "session_termination_before_context_arrival", "context_arrival_after_local_containment",
-    }
-    if set(control_rows) != required_controls or not all(row["passed"] == "True" for row in control_rows.values()):
-        fail("generated failure-control table is not backed by the complete passing control set")
+    with (DATA / "failure-controls.csv").open(encoding="utf-8") as source:
+        control_rows = list(csv.DictReader(source))
+    # Check every normalized field against sealed evidence, including the four
+    # empty pass values, so stale all-Yes derivatives cannot build a table.
+    expected_rows = [{key: "" if value is None else str(value) for key, value in row.items()}
+                     for row in failure_control_rows()]
+    if control_rows != expected_rows:
+        fail("generated failure-control data differs from the evidence map and source records")
+    def control_tex(value: str) -> str:
+        return value.replace("_", r"\_{}").replace("&", r"\&")
+    control_body = []
+    for row in control_rows:
+        evidence = {
+            "live-executed": "live executed",
+            "signed-envelope-mutation": "mutation: " + control_tex(row["mutation"]),
+            "not-executed": "not executed",
+        }[row["evidence_class"]]
+        cells = [control_tex(row[field]) for field in
+                 ("condition", "expected_behavior", "observed_behavior", "invariant", "pass_label")]
+        cells.append(row["source_record"] + "; " + evidence)
+        control_body.append(" & ".join(cells) + r" \\")
     rows = [
         table("tab-design-requirements.tex", r"""\begin{table}[t]
 \centering\footnotesize
@@ -1408,7 +1561,7 @@ Metric & Value \\ \midrule
 Strict input-equivalent pairs & \DeterministicPairs \\
 Improved / unchanged / worsened & \DeterministicImproved / \DeterministicUnchanged / \DeterministicWorsened \\
 Baseline / treatment harmful calls & \DeterministicBaselineHarmfulCalls / \DeterministicTreatmentHarmfulCalls \\
-Harmful calls prevented & \DeterministicActionsPrevented/\DeterministicBaselineHarmfulCalls \\
+\shortstack[l]{Harmful actions changed to blocked\\under matched replay} & \DeterministicActionsPrevented/\DeterministicBaselineHarmfulCalls \\
 Unmatched-policy exclusions & \DeterministicExcludedPairs \\ \bottomrule
 \end{tabular}\label{tab:deterministic}\end{table}""", ["C-DETERMINISTIC-01"], ["data/generated/deterministic-pairs.csv"]),
         table("tab-central-comparator.tex", r"""\begin{table}[t]\centering\small
@@ -1466,11 +1619,11 @@ Exact Binding (C2) & \CTwoHarmfulBlocked/\ValidationEpisodes & \CTwoBenignConstr
 Standing Guard (C3) & \CThreeHarmfulBlocked/\ValidationEpisodes & \CThreeBenignConstrained/\ValidationEpisodes \\ \bottomrule
 \end{tabular}\label{tab:validation-value}\end{table}""", ["C-VALIDATION-01"], ["data/generated/tcx-validation-value.csv"]),
         table("tab-tcx-protocol-assurance.tex", r"""\begin{table}[t]\centering\scriptsize
-\caption{Receiver-side assurance checks in the validation-value study.}
+\caption{Validation-value evidence: executed receiver mutations and formula-computed illustrations.}
 \begin{tabular}{@{}p{0.34\columnwidth}@{\hspace{0.4em}}p{0.57\columnwidth}@{}}\toprule
 Check & Result \\ \midrule
-Valid hostile peer, \HostileBurstWarnings-warning burst & Current policy accepts and constrains \HostileCurrentAccepted{}; idempotence constrains \HostileIdempotentConstrained{} and deduplicates \HostileIdempotentDeduplicated{}; quota-plus-monitor constrains \HostileQuotaConstrained{} and monitors \HostileQuotaMonitored{}. \\
-Receipt correlation ambiguity & \CorrelationCases{} cases at \CorrelationConcurrencyLevels{} sessions: \CorrelationMisbindings{} misbindings and \CorrelationCrossSessionRestrictions{} cross-session restrictions. \\
+Valid hostile-peer burst & Formula-computed illustration; no executed burst evidence. \\
+Receipt correlation ambiguity & Formula-computed illustration with typed-in zeros; no measured correlation result. \\
 Receiver-validator mutations & \ValidatorMutationCases{} mutations cover signature, issuer, version, receipt, expiry, and replay faults; action-like remote fields are retained as evidence and ignored for enforcement. \\ \bottomrule
 \end{tabular}\label{tab:protocol-assurance}\end{table}""", ["C-VALIDATION-02", "C-CORRELATION-01", "C-VALIDATOR-01"], ["data/generated/tcx-hostile-peer.csv", "data/generated/tcx-correlation.csv", "artifacts/tcx-validation-value-v2/property-test-report.json"]),
         table("tab-adaptive-authorization.tex", r"""\begin{table}[t]\centering\scriptsize
@@ -1539,32 +1692,17 @@ Harmful substitution, no B-local relation & Campaign Correlation: \ExternalWarni
 Harmful substitution, B-local relation & Campaign Correlation: \ExternalWarningVTwoWithRelationCTwoEBlocked/\ExternalWarningVTwoSelectedPositive{} blocked \\ \bottomrule
 \end{tabular}\label{tab:independent-warning-v2-controls}\end{table}""", ["C-INDEPENDENT-V2-01"], ["data/generated/independent-warning-v2.csv", "artifacts/independent-warning-admission-v2-external-stratified/reports/derived-control-dispositions.csv", "artifacts/independent-warning-admission-v2-external-stratified/reports/substitution-summary.json"]),
         table("tab-negative-controls.tex", r"""\begin{table*}[t]\centering\scriptsize
-\caption{Negative and failure controls. All listed conditions passed in the sealed live artifact.}
-\begin{tabular}{@{}p{0.15\textwidth}@{\hspace{0.2em}}p{0.23\textwidth}@{\hspace{0.2em}}p{0.20\textwidth}@{\hspace{0.2em}}p{0.14\textwidth}@{\hspace{0.2em}}c@{\hspace{0.2em}}p{0.08\textwidth}@{}}\toprule
-Injected condition & Expected behavior & Observed behavior & Invariant & Pass & Source record \\ \midrule
-Invalid signature & Reject before restriction & Rejected; no restriction & Signed input & Yes & NC-01 \\
-Wrong receipt & Reject before restriction & Rejected; no restriction & Receipt correlation & Yes & NC-02 \\
-Expired context & Reject before restriction & Rejected; no restriction & Bounded freshness & Yes & NC-03 \\
-Replayed context & Reject before restriction & Rejected; no restriction & Replay protection & Yes & NC-04 \\
-Unknown peer & Reject before restriction & Rejected; no restriction & Authorized peer & Yes & NC-05 \\
-Disallowed import type & Reject before restriction & Rejected; no restriction & Context class & Yes & NC-06 \\
-Monitor-only policy & Do not preempt first call & First call not blocked & Local detection timing & Yes & NC-07 \\
-No remote enforcement & Never accept remote enforcement & No remote action used & Receiver authority & Yes & NC-08 \\
-Remote TCX action & Never interpret remote action & No remote action used & Receiver authority & Yes & NC-09 \\
-Gateway cache disabled & Evaluate each authorization & Cache disabled & Replay correctness & Yes & NC-10 \\
-tcopd B unavailable & Use B-local disposition & Local fail-closed policy & Receiver authority & Yes & NC-11 \\
-Authorization timeout & Use B-local disposition & Sender does not choose timeout & Receiver authority & Yes & NC-12 \\
-Gateway restart & Recompute local state & Fresh decision used & Receiver authority & Yes & NC-13 \\
-Stale decision & Recompute local state & Fresh decision used & Receiver authority & Yes & NC-14 \\
-Session termination before arrival & Do not cross sessions & Context has no new session effect & Session binding & Yes & NC-15 \\
-Arrival after local containment & No reversal of completed action & Non-preventive late context & Containment window & Yes & NC-16 \\ \bottomrule
-\end{tabular}\label{tab:controls}\end{table*}""", ["C-FAILURE-01"], ["data/generated/failure-controls.csv"]),
+\caption{Negative and failure controls. Ten controls (NC-01--04, NC-07, NC-10--12, NC-14, NC-16) were executed and passed in the sealed live artifact. NC-05 and NC-09 are covered by executed signed-envelope mutations in \protect\path{artifacts/tcx-validation-value-v2/property-test-report.json} (\texttt{issuer} and \texttt{action\_semantic}, respectively), not by live injections. Four rows (NC-06, NC-08, NC-13, NC-15) were recorded as passed in the sealed live artifact without executing the condition; they are untested design properties, not results. See the artifact's known-issues file, \protect\path{docs/KNOWN_ISSUES.md}.}
+\begin{tabular}{@{}p{0.15\textwidth}@{\hspace{0.7em}}p{0.20\textwidth}@{\hspace{0.7em}}p{0.20\textwidth}@{\hspace{0.7em}}p{0.12\textwidth}@{\hspace{0.7em}}p{0.08\textwidth}@{\hspace{0.7em}}p{0.18\textwidth}@{}}\toprule
+Condition & Expected behavior & Observed behavior & Invariant & Pass & Source / evidence \\ \midrule
+""" + "\n".join(control_body) + r""" \bottomrule
+\end{tabular}\label{tab:controls}\end{table*}""", ["C-FAILURE-01"], ["data/generated/failure-controls.csv", MUTATION_SOURCE.as_posix(), "docs/KNOWN_ISSUES.md"]),
         table("tab-performance.tex", r"""\begin{table*}[t]\centering\small
-\caption{Local harness performance. These deterministic local measurements characterize implementation overhead in the test harness and are not production inter-domain latency estimates.}
-\begin{tabular}{lrrrr}\toprule
-Selection & Authorization p95 (ms) & Gateway p95 (ms) & Warning-to-enforcement p95 (ms) & Cache hit rate \\ \midrule
-Disabled & 0.020 & 0.025 & 0.33 & 0.00 \\
-Enabled, fixed 5s TTL & 0.00067 & 0.027 & 0.33 & 0.95 \\ \bottomrule
+\caption{Local harness performance in microseconds, with \PerfDisabledSamples{} samples per selection and component. Authorization uses \texttt{perf\_counter\_ns()} around a Python dictionary cache lookup on hits, or request construction and \texttt{evaluator.authorize()} on misses; it does not time an RPC. The enabled selection is labeled fixed \PerfCacheTTL{}\,s TTL in the artifact, but the timed loop does not exercise expiry. Gateway timing wraps adapter construction and invocation; warning-to-enforcement sums context acceptance and gateway durations. With \PerfDisabledSamples{} samples, p95 and p99 are near the top order statistics. These local harness measurements are not production inter-domain latency estimates.}
+\begin{tabular}{lrrrrr}\toprule
+Selection & Samples & Authorization p95 ($\mu$s) & Gateway p95 ($\mu$s) & Warning-to-enforcement p95 ($\mu$s) & Hit rate \\ \midrule
+Disabled & \PerfDisabledSamples & \PerfDisabledAuthorization & \PerfDisabledGateway & \PerfDisabledWarning & \PerfDisabledHitRate \\
+Enabled, fixed \PerfCacheTTL{}\,s TTL & \PerfCachedSamples & \PerfCachedAuthorization & \PerfCachedGateway & \PerfCachedWarning & \PerfCachedHitRate \\ \bottomrule
 \end{tabular}\label{tab:performance}\end{table*}""", ["C-PERF-01"], ["data/generated/performance-results.csv"]),
         table("tab-amendment-history.tex", r"""\begin{table*}[t]\centering\scriptsize
 \caption{Live runtime amendment history. Digest prefixes identify the immutable predecessor and successor roots; full digests are retained in the normalized amendment-chain data and source-verification report. The first two predecessor artifacts are retained provider-failure negatives.}
@@ -1592,7 +1730,7 @@ Deterministic matched pairs & Causal comparison under matched frozen local polic
 Executable replay & Exact captured action-sequence comparison without model credentials \\
 Live trace generation & A bounded credentialed cohort generated action attempts \\
 Single-environment reference-path deployment & A signed tcopd-A-to-tcopd-B path and receiver-local gateway decisions in one reference environment \\
-Validation-value and assurance cohort & Semantic binding, hostile-peer handling, receipt correlation, and receiver-validator behavior in a credential-free synthetic cohort \\
+Validation-value and assurance cohort & Semantic binding and executed receiver-validator mutations; hostile-peer and correlation tables are formula-computed illustrations \\
 Post-denial substitution replay & Policy-conditioned post-denial branches in a bounded reference runtime, not deployment prevalence \\
 Campaign Correlation frontier & Deterministic receiver-local Campaign Correlation selectivity, not a general escalation policy or deployment-effectiveness estimate \\
 Full external-warning ledger & All 168 sealed external source cases: 25 accepted exact bindings, 47 attack-bearing no-warning cases, and 96 benign no-warning cases; authorization coverage, not detector-quality evidence \\
@@ -1708,10 +1846,11 @@ def generate_figures() -> None:
             ax.text(index, was_forwarded / 2, str(was_forwarded), ha="center", va="center", color="white", weight="bold", fontsize=7)
         if was_blocked:
             ax.text(index, was_forwarded + was_blocked / 2, str(was_blocked), ha="center", va="center", color="white", weight="bold", fontsize=7)
-    ax.set_ylabel("Harmful calls"); ax.set_ylim(0, 34)
+    fig.suptitle("Single-environment reference path", y=.98, fontsize=9)
+    ax.set_ylabel("Harmful gateway calls"); ax.set_ylim(0, 34)
     ax.legend(frameon=False, fontsize=7, loc="lower center", bbox_to_anchor=(.5, 1.02), ncol=2)
-    fig.subplots_adjust(top=.78)
-    manifest.append(save_figure(fig, "physical-timing", ["C-TIMING-01"], ["data/generated/physical-arms.csv"], ["The late arm separates completed calls from subsequently prevented calls."]))
+    fig.subplots_adjust(top=.70)
+    manifest.append(save_figure(fig, "physical-timing", ["C-TIMING-01"], ["data/generated/physical-arms.csv"], ["Single-environment reference path; the late arm separates completed calls from subsequent blocked calls."]))
     plt.close(fig)
 
     timing = list(csv.DictReader((DATA / "live-timing-summary.csv").open(encoding="utf-8")))
@@ -1796,10 +1935,10 @@ def claim_ledger() -> list[dict[str, Any]]:
         ("C-ARCH-01", "TCOP exchanges signed, bounded context that the receiver treats as evidence rather than an enforcement command.", "architecture", "artifacts/tcx-validation-value-v2", ["canonical-tcx-example.json", "property-test-report.json"], "Action and enforcement metadata are ignored by the receiver evaluator.", [], "03-architecture-protocol.tex", "fig-tcx-acceptance", "supported"),
         ("C-AUTH-01", "Every gateway block in the evaluated end-to-end reference-deployment arms references a Domain-B-local policy and decision.", "authority", "artifacts/v0.6-agent-validation-live-origin-certified", ["reports/authorization-audit.json", "reports/end-to-end-live-results.json"], "Every reference-deployment gateway block references a Domain-B policy and decision.", [], "04-local-resolution-enforcement.tex", "tab-physical-end-to-end", "supported"),
         ("C-AUTH-02", "Remote action metadata was ignored in the tested receiver path.", "authority", "artifacts/tcx-validation-value-v2", ["property-test-report.json"], "The accepted action-semantic mutation ignores remote action and enforcement fields.", [], "04-local-resolution-enforcement.tex", "tab-protocol-assurance", "supported"),
-        ("C-DETERMINISTIC-01", "Across 54 strict deterministic pairs, containment-first reduced 39 baseline harmful calls to 3, preventing 36 calls; it changed 30 outcomes and left 24 unchanged.", "deterministic evaluation", "artifacts/federated-domain-v0.6-evidence", ["pairs/paired-results.jsonl", "reports/paired-causal-comparison.json"], "54 pairs; 39 baseline calls; 3 treatment calls; 36 prevented.", ["123 unmatched balanced or utility comparisons; zero worsened follows containment-first monotonicity for this metric."], "06-deterministic-evaluation.tex", "fig-deterministic-outcomes", "supported"),
+        ("C-DETERMINISTIC-01", "Across 54 strict deterministic pairs, containment-first reduced 39 baseline harmful calls to 3; 36 harmful actions forwarded without context changed to blocked with matched context under strict replay; it changed 30 outcomes and left 24 unchanged.", "deterministic evaluation", "artifacts/federated-domain-v0.6-evidence", ["pairs/paired-results.jsonl", "reports/paired-causal-comparison.json"], "54 pairs; 39 baseline calls; 3 treatment calls; 36 changed from forwarded to blocked under matched replay.", ["123 unmatched balanced or utility comparisons; zero worsened follows containment-first monotonicity for this metric."], "06-deterministic-evaluation.tex", "fig-deterministic-outcomes", "supported"),
         ("C-VALIDATION-01", "In the sealed-plan v2 mixed-action cohort, C1-class blocked 7 of 12 harmful actions and constrained 7 benign actions; C2 blocked 3 of 12 and constrained none. In the accepted binding-matched subset, both blocked 3 of 3 harmful actions.", "validation value", "artifacts/tcx-validation-value-v2", ["reports/condition-summary.json", "reports/matching-harmful-summary.json", "reports/gates.json"], "Full cohort C1-class/C2 harmful blocks 7/3; benign constraints 7/0; matching subset 3/3 each.", ["Synthetic credential-free cohort only; C2 rejects mismatched-warning controls rather than applying a broad class guard."], "06-deterministic-evaluation.tex", "tab-validation-value", "supported with qualification"),
-        ("C-VALIDATION-02", "At a twelve-warning valid-hostile-peer burst, idempotence constrained one benign action and deduplicated eleven warnings; quota-plus-monitor constrained three and monitored nine.", "hostile peer", "artifacts/tcx-validation-value-v2", ["hostile-peer-results.csv", "reports/gates.json"], "Current 12 constraints; idempotent 1 constraint and 11 deduplications; quota-plus-monitor 3 constraints and 9 monitored.", ["Synthetic rate sweep; no operational-rate inference."], "08-security-availability.tex", "tab-protocol-assurance", "supported with qualification"),
-        ("C-CORRELATION-01", "Across 24 correlation-ambiguity cases at one, two, and eight sessions, the receiver recorded zero misbindings and zero cross-session restrictions.", "correlation", "artifacts/tcx-validation-value-v2", ["correlation-results.csv", "reports/gates.json"], "24 cases; 0 misbindings; 0 cross-session restrictions.", ["Synthetic concurrent-session sweep."], "06-deterministic-evaluation.tex", "tab-protocol-assurance", "supported with qualification"),
+        ("C-VALIDATION-02", "The hostile-peer burst table is formula-computed, not an executed or measured study.", "hostile peer", "artifacts/tcx-validation-value-v2", ["hostile-peer-results.csv", "reports/gates.json"], "Declared formulas only; no executed burst evidence.", ["Not empirical evidence; see docs/KNOWN_ISSUES.md."], "08-security-availability.tex", "tab-protocol-assurance", "supported with qualification"),
+        ("C-CORRELATION-01", "The correlation table is formula-computed with typed-in zero misbindings and cross-session restrictions, not a measured study.", "correlation", "artifacts/tcx-validation-value-v2", ["correlation-results.csv", "reports/gates.json"], "Declared formulas and typed-in zeros only.", ["Not empirical evidence; see docs/KNOWN_ISSUES.md."], "06-deterministic-evaluation.tex", "tab-protocol-assurance", "supported with qualification"),
         ("C-VALIDATOR-01", "Eleven deterministic receiver-validator mutations produced no restriction for signature, issuer, version, receipt, expiry, or replay faults; accepted action-like metadata did not select enforcement.", "receiver validator", "artifacts/tcx-validation-value-v2", ["property-test-report.json"], "11 mutation cases; action and enforcement fields ignored.", ["Mutation corpus, not a formal proof."], "04-local-resolution-enforcement.tex", "tab-protocol-assurance", "supported with qualification"),
         ("C-ADAPTIVE-01", "Across 100 strict policy-conditioned replay episodes, Exact Binding permits 15 of 15 eligible harmful post-denial substitutions; the evaluated Campaign Correlation strategy permits none. Each imported-evidence strategy forwards all 5 of 5 exercised predeclared safe fallback actions.", "adaptive authorization", "artifacts/adaptive-agent-authorization-v1", ["normalized-results.jsonl", "reports/summary.json", "campaign-correlation-contract.json"], "Exact Binding: 15/15 post-denial harmful completions; Campaign Correlation: 0/15; every imported-evidence strategy: 5/5 exercised safe fallbacks forwarded.", ["Bounded reference runtime and predeclared branches; the safe-fallback result does not measure unrelated same-risk actions, deployment prevalence, or universal containment."], "07-agent-gateway-evaluation.tex", "tab-adaptive-authorization", "supported with qualification"),
         ("C-C2E-FRONTIER-01", "In the sealed 150-episode C2E frontier, the receiver-local campaign strategy blocks 10 of 10 harmful actions, including 5 campaign-linked non-exact substitutions, while constraining 0 of 20 benign actions. C1 and C3 block the same 10 harmful actions while constraining 10 benign actions each.", "receiver strategy frontier", "artifacts/c2e-frontier-v1", ["normalized-results.jsonl", "reports/frontier-summary.json", "control-results.jsonl", "escalation-lifecycle.jsonl"], "C2E: 10/10 harmful blocked and 0/20 benign constrained; campaign-linked non-exact harmful: 5/5 blocked; outside-campaign benign: 5/5 forwarded; C1/C3: 10/20 benign constrained; 0 unrelated restrictions.", ["Deterministic receiver-local reference strategy only; not deployment prevalence, detector quality, universal containment, or a generally optimal escalation policy."], "07-agent-gateway-evaluation.tex", "tab-c2e-frontier", "supported with qualification"),
@@ -1809,11 +1948,12 @@ def claim_ledger() -> list[dict[str, Any]]:
         ("C-LIVE-01", "The certified cohort contains 44 live traces and 220 strict paired comparisons.", "live trace cohort", "artifacts/v0.6-agent-validation-live-origin-certified", ["reports/trace-generation-summary.json", "reports/paired-enforcement-results.json"], "44 eligible traces; 220 pairs.", [], "07-agent-gateway-evaluation.tex", "tab-live-cohort", "supported"),
         ("C-UTILITY-01", "Across six RA-03 replay treatments, 360 benign calls were attempted, 320 forwarded, and 40 constrained.", "availability", "artifacts/v0.6-agent-validation-live-origin-certified", ["reports/benign-workload-impact.json"], "360 / 320 / 40.", ["Synthetic false-warning treatments and capability restriction"], "08-security-availability.tex", "fig-security-availability", "supported with qualification"),
         ("C-UTILITY-02", "In inside-window early and boundary false-warning treatments, 40 of 120 benign calls were constrained and 0 of 40 affected workflows completed; outside those treatments, 240 of 240 benign calls were forwarded and 80 of 80 workflows completed.", "availability", "artifacts/v0.6-agent-validation-live-origin-certified", ["reports/benign-workload-impact.json"], "Inside-window: 120 / 80 / 40 calls and 0/40 workflows; remaining treatments: 240 / 240 / 0 calls and 80/80 workflows.", ["Synthetic workload only"], "08-security-availability.tex", "tab-utility", "supported with qualification"),
-        ("C-FAILURE-01", "Invalid, expired, replayed, unknown-peer, wrong-receipt, stale-decision, restart, timeout, and late-context controls passed.", "failure controls", "artifacts/v0.6-agent-validation-live-origin-certified", ["reports/negative-controls.json"], "16 passed controls.", [], "08-security-availability.tex", "tab-negative-controls", "supported"),
-        ("C-PERF-01", "Measured sub-millisecond values are deterministic local harness measurements, not production or inter-organizational latency estimates.", "performance", "artifacts/v0.6-agent-validation-live-origin-certified", ["reports/gateway-latency.json", "reports/federation-latency.json"], "Performance-only selections with 20 samples each.", ["No production latency inference"], "07-agent-gateway-evaluation.tex", "tab-performance", "supported with qualification"),
+        ("C-FAILURE-01", "Ten executed live controls passed: invalid signature, wrong receipt, expired context, replayed context, monitor-only policy, gateway cache disabled, tcopd B unavailable, authorization timeout, stale decision, and arrival after local containment. Unknown peer and remote TCX action are covered by two executed signed-envelope mutations. Disallowed import type, no remote enforcement, gateway restart, and session termination before arrival were not executed and remain untested design properties.", "failure controls", "artifacts/v0.6-agent-validation-live-origin-certified; artifacts/tcx-validation-value-v2", ["artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json", MUTATION_SOURCE.as_posix(), "docs/KNOWN_ISSUES.md"], "10 executed live controls passed; 2 covered by executed signed-envelope mutations; 4 not executed. issuer: identity_unknown, restriction_created=false; action_semantic: action and enforcement ignored.", ["Six live flags recorded passes without executing the named condition; only NC-05 and NC-09 have separate executed mutation evidence."], "08-security-availability.tex", "tab-negative-controls", "supported with qualification"),
+        ("C-PERF-01", "Measured sub-millisecond values are deterministic local harness measurements, not production or inter-organizational latency estimates.", "performance", "artifacts/v0.6-agent-validation-live-origin-certified", ["reports/gateway-latency.json", "reports/federation-latency.json"], "Performance-only selections with 20 samples each; perf_counter_ns wraps dictionary hit lookup or request construction plus evaluator.authorize on misses; p95/p99 are near top order statistics. The TTL-labeled loop does not exercise expiry.", ["No production latency inference"], "07-agent-gateway-evaluation.tex", "tab-performance", "supported with qualification"),
         ("C-CENTRAL-01", "Across 54 fact-equivalent audited cells, the central comparator records six regressions: three associated with authority placement and three with central outage.", "central comparator", "artifacts/federated-domain-v0.6-evidence", ["reports/central-comparator-audit.json"], "54 fact-equivalent cells; three authority-placement and three outage regressions.", [], "06-deterministic-evaluation.tex", "tab-central-comparator", "supported with qualification"),
         ("C-CENTRAL-02", "The evaluation does not establish universal superiority over centralized defense.", "limitation", "artifacts/federated-domain-v0.6-evidence", ["reports/central-comparator-audit.json"], "Bounded comparator scope.", [], "10-limitations-conclusion.tex", "tab-limitations", "supported"),
         ("C-LIMIT-01", "TCOP does not create detections and cannot prevent an origin compromise that no participating observer detects in time.", "limitation", "architecture", ["benchmark/studies/v0.6-agent-validation.yaml", "reports/containment-window-agent-results.json"], "Context is actionable only before consequential actions.", [], "10-limitations-conclusion.tex", "fig-containment-window", "supported with qualification"),
+        ("C-FUTURE-01", "The pre-registered cross-host study compares bare-agent, sandbox, and runtime-bound TCOP arms; native and harness results remain separate, with lag-calibrated grid finalization, pre-live sealed simulator predictions, and formal trace validation.", "future study design", "spec", ["spec/external-warning-adaptive-crosshost-amendment-003.md", "spec/external-warning-adaptive-crosshost-amendment-004.md", "spec/external-warning-adaptive-crosshost-amendment-005.md", "paper/usenix27/generated/future-work-provenance.json"], "E0/E1/E2; E2-native versus E2-extended; 10 s and 1 s same-action native polling contrasts; 3000 ms simulated operator latency; amendments 004 and 005 checked against their exact SHA-256 seals by future_work_macros.", ["Pre-registered future work, not an executed cross-host result; no runtime-security or incident-prevention claim."], "10-limitations-conclusion.tex", "none", "supported with qualification"),
         ("C-LIMIT-02", "The Docker MCP Gateway is a reference enforcement point, not a reconstruction of a public incident architecture.", "limitation", "integrations/mcp-gateway", ["GATEWAY_SELECTION.md"], "Reference-only gateway role.", [], "07-agent-gateway-evaluation.tex", "tab-limitations", "supported"),
     ]
     prohibited = [
@@ -2043,6 +2183,8 @@ def export_anonymous() -> dict[str, Any]:
             for row in candidates
         ])
         write_text(subset / "ANONYMIZED_REVIEW_SUBSET.md", "This credential-free successor evaluates every sealed v2 preflight source case. It reports pipeline coverage and receiver authorization outcomes without rerunning the detector. Raw external corpus content, source URLs, and identifiers remain in the anonymous source archive.")
+    (review / "docs").mkdir(exist_ok=True)
+    shutil.copy2(ROOT / "docs" / "KNOWN_ISSUES.md", review / "docs" / "KNOWN_ISSUES.md")
     manifest = {
         "package": "TCOP anonymous reviewer artifact",
         "generated_at": STAMP,
@@ -2053,18 +2195,27 @@ def export_anonymous() -> dict[str, Any]:
     return manifest
 
 
+# Third-party URLs are permitted citations; author-owned repositories and
+# profiles (including GitHub Pages and raw-content URLs) still identify authors.
+ANONYMITY_RULES = [
+    (r"/(?:Users|workspace|home|private)/", "absolute filesystem path"),
+    (r"\b(?:vishnu|vettrivel)\b", "personal name"),
+    (r"Dropbox", "cloud path"),
+    (r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", "email address"),
+    (r"https?://(?:(?:www\.)?github\.com|raw\.githubusercontent\.com)/cloudronin(?:[/\s#?}]|$)|https?://cloudronin\.github\.io(?:[/\s#?}]|$)", "author-identifying repository URL"),
+    (r"sk-[A-Za-z0-9]{20,}", "provider token"),
+    (r"OPENAI_API_KEY\s*=\s*[^$\s]", "provider credential"),
+]
+
+
+def anonymity_findings(text: str) -> list[str]:
+    return [kind for pattern, kind in ANONYMITY_RULES if re.search(pattern, text, re.I)]
+
+
 def anonymity_audit() -> dict[str, Any]:
     export_anonymous()
     review = ARTIFACT / "review"
-    rules = [
-        (r"/(?:Users|workspace|home|private)/", "absolute filesystem path"),
-        (r"\bvishnu\b", "personal name"),
-        (r"Dropbox", "cloud path"),
-        (r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", "email address"),
-        (r"https?://github\.com/", "repository URL"),
-        (r"sk-[A-Za-z0-9]{20,}", "provider token"),
-        (r"OPENAI_API_KEY\s*=\s*[^$\s]", "provider credential"),
-    ]
+    rules = ANONYMITY_RULES
     findings = []
     for path in sorted(item for item in review.rglob("*") if item.is_file()):
         if path.suffix.lower() in {".pdf", ".png"}:
@@ -2096,7 +2247,7 @@ def anonymity_audit() -> dict[str, Any]:
         "pass": not findings,
     }
     write_json(EVIDENCE / "anonymity-audit.json", result)
-    lines = ["# Anonymity Audit", "", "Pass: " + str(result["pass"]), "", "The audit scans the exported reviewer package and PDF metadata for local paths, the configured personal name, email addresses, repository URLs, and credential patterns."]
+    lines = ["# Anonymity Audit", "", "Pass: " + str(result["pass"]), "", "The audit scans the exported reviewer package and PDF metadata for local paths, the configured personal name, email addresses, author-identifying repository URLs, and credential patterns. Third-party URLs are permitted citations."]
     if findings:
         lines += ["", "## Findings", ""] + ["- {0}: {1}".format(row["file"], row["kind"]) for row in findings]
     write_text(EVIDENCE / "anonymity-audit.md", "\n".join(lines))

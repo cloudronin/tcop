@@ -753,23 +753,140 @@
     "remote_enforcement_successes": 0,
     "replay_treatment_rows": 264
   },
+  "negative_control_evidence_counts": {
+    "live-executed": 10,
+    "not-executed": 4,
+    "signed-envelope-mutation": 2
+  },
   "negative_controls": {
-    "authorization_timeout": true,
-    "context_arrival_after_local_containment": true,
-    "disallowed_import_type": true,
-    "expired_context": true,
-    "gateway_cache_disabled": true,
-    "gateway_restart": true,
-    "invalid_signature": true,
-    "local_policy_monitor_only": true,
-    "no_remote_enforcement": true,
-    "remote_tcx_action_not_interpreted": true,
-    "replayed_context": true,
-    "session_termination_before_context_arrival": true,
-    "stale_decision": true,
-    "tcopd_b_unavailable": true,
-    "unknown_peer": true,
-    "wrong_receipt": true
+    "authorization_timeout": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "authorization_timeout",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    },
+    "context_arrival_after_local_containment": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "context_arrival_after_local_containment",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    },
+    "disallowed_import_type": {
+      "evidence_class": "not-executed",
+      "live_recorded_passed": true,
+      "passed": null,
+      "record": "disallowed_import_type",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Not tested"
+    },
+    "expired_context": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "expired_context",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    },
+    "gateway_cache_disabled": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "gateway_cache_disabled",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    },
+    "gateway_restart": {
+      "evidence_class": "not-executed",
+      "live_recorded_passed": true,
+      "passed": null,
+      "record": "gateway_restart",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Not tested"
+    },
+    "invalid_signature": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "invalid_signature",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    },
+    "local_policy_monitor_only": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "local_policy_monitor_only",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    },
+    "no_remote_enforcement": {
+      "evidence_class": "not-executed",
+      "live_recorded_passed": true,
+      "passed": null,
+      "record": "no_remote_enforcement",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Not tested"
+    },
+    "remote_tcx_action_not_interpreted": {
+      "evidence_class": "signed-envelope-mutation",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "mutations.action_semantic",
+      "source": "artifacts/tcx-validation-value-v2/property-test-report.json",
+      "status": "Yes"
+    },
+    "replayed_context": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "replayed_context",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    },
+    "session_termination_before_context_arrival": {
+      "evidence_class": "not-executed",
+      "live_recorded_passed": true,
+      "passed": null,
+      "record": "session_termination_before_context_arrival",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Not tested"
+    },
+    "stale_decision": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "stale_decision",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    },
+    "tcopd_b_unavailable": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "tcopd_b_unavailable",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    },
+    "unknown_peer": {
+      "evidence_class": "signed-envelope-mutation",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "mutations.issuer",
+      "source": "artifacts/tcx-validation-value-v2/property-test-report.json",
+      "status": "Yes"
+    },
+    "wrong_receipt": {
+      "evidence_class": "live-executed",
+      "live_recorded_passed": true,
+      "passed": true,
+      "record": "wrong_receipt",
+      "source": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+      "status": "Yes"
+    }
   },
   "ra03_eligibility": {
     "after": {
@@ -880,6 +997,7 @@
       "misbindings": 0,
       "rows": 24
     },
+    "correlation_evidence": "formula-computed with typed-in zeros; no measured session-isolation study",
     "episodes": 12,
     "hostile_burst": {
       "current_containment_first": [
@@ -901,6 +1019,7 @@
         9
       ]
     },
+    "hostile_burst_evidence": "formula-computed; no executed burst study",
     "matching": {
       "C1-class": {
         "attempted": 3,

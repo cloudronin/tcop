@@ -2,15 +2,11 @@
 
 \subsection{Failure controls and receiver validation}
 
-The evaluation injects invalid signature, wrong receipt, expiry, replay, unknown peer, disallowed import type, monitor-only policy, receiver unavailability, authorization timeout, restart, stale decision, session termination, and late-context conditions. In every tested condition, the receiver either rejects the context or applies its own disposition. Appendix~\ref{app:extended-results} reports the full source-control matrix; Table~\ref{tab:protocol-assurance} adds the validation-value mutation corpus.
-
-The controls establish the boundary conditions for the result. A malformed or stale context does not create a restriction in the exercised path. A correlated but late context can be retained without being counted as prevention. A timeout or receiver outage resolves through Domain B's policy.
+Ten live controls were executed and passed. Unknown peer and remote TCX action were not injected live; executed signed-envelope mutations cover them separately. Disallowed import type, no remote enforcement, gateway restart, and session termination before arrival remain untested design properties despite recorded passes. Appendix~\ref{app:extended-results} preserves every row and its evidence classification. Exercised malformed or stale contexts create no restriction; late context receives no prevention credit, and timeout or outage resolves through Domain B's policy.
 
 \subsection{Valid hostile peers}
 
-Signature validation authenticates the issuer; it does not establish that the issuer's observation is true. The hostile-peer study therefore sends syntactically valid warnings from an authorized peer at increasing synthetic burst sizes. At the \HostileBurstWarnings-warning burst, the current containment-first policy accepts and constrains \HostileCurrentConstrained{} warnings. Idempotence accepts and constrains \HostileIdempotentConstrained{} warning while deduplicating \HostileIdempotentDeduplicated{}. The quota-plus-monitor response constrains \HostileQuotaConstrained{} warnings and monitors \HostileQuotaMonitored{}.
-
-This result makes the receiver's policy choice explicit. A broad arrival-triggered guard can be used to impose availability cost, even when the peer is syntactically valid. Idempotence reduces repeated collateral restriction for a single warning. Quota-plus-monitor provides a measured overload posture in the tested burst: a receiver limits automatic restriction and retains excess warnings for local monitoring. The sweep is synthetic and does not estimate an operational warning rate.
+Signature validation authenticates the issuer; it does not establish that the issuer's observation is true. The sealed hostile-peer burst table is computed from declared formulas, not from executed warning bursts. Its idempotence and quota-plus-monitor entries illustrate candidate receiver policies but establish no measured overload behavior. Hostile-peer behavior remains to be tested.
 
 \subsection{Security-availability trade-off}
 

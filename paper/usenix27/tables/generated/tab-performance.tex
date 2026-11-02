@@ -1,7 +1,7 @@
 \begin{table*}[t]\centering\small
-\caption{Local harness performance. These deterministic local measurements characterize implementation overhead in the test harness and are not production inter-domain latency estimates.}
-\begin{tabular}{lrrrr}\toprule
-Selection & Authorization p95 (ms) & Gateway p95 (ms) & Warning-to-enforcement p95 (ms) & Cache hit rate \\ \midrule
-Disabled & 0.020 & 0.025 & 0.33 & 0.00 \\
-Enabled, fixed 5s TTL & 0.00067 & 0.027 & 0.33 & 0.95 \\ \bottomrule
+\caption{Local harness performance in microseconds, with \PerfDisabledSamples{} samples per selection and component. Authorization uses \texttt{perf\_counter\_ns()} around a Python dictionary cache lookup on hits, or request construction and \texttt{evaluator.authorize()} on misses; it does not time an RPC. The enabled selection is labeled fixed \PerfCacheTTL{}\,s TTL in the artifact, but the timed loop does not exercise expiry. Gateway timing wraps adapter construction and invocation; warning-to-enforcement sums context acceptance and gateway durations. With \PerfDisabledSamples{} samples, p95 and p99 are near the top order statistics. These local harness measurements are not production inter-domain latency estimates.}
+\begin{tabular}{lrrrrr}\toprule
+Selection & Samples & Authorization p95 ($\mu$s) & Gateway p95 ($\mu$s) & Warning-to-enforcement p95 ($\mu$s) & Hit rate \\ \midrule
+Disabled & \PerfDisabledSamples & \PerfDisabledAuthorization & \PerfDisabledGateway & \PerfDisabledWarning & \PerfDisabledHitRate \\
+Enabled, fixed \PerfCacheTTL{}\,s TTL & \PerfCachedSamples & \PerfCachedAuthorization & \PerfCachedGateway & \PerfCachedWarning & \PerfCachedHitRate \\ \bottomrule
 \end{tabular}\label{tab:performance}\end{table*}

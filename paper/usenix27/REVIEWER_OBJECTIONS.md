@@ -2,7 +2,7 @@
 
 | Skeptical question | Paper location | Artifact evidence | Remaining limitation | Avoid |
 |---|---|---|---|---|
-| Is TCOP a remote kill switch? | Architecture and local resolution | Authority audit; zero remote enforcement successes | Receiver policy may still be restrictive | Calling context an enforcement command |
+| Is TCOP a remote kill switch? | Architecture and local resolution | Local-decision provenance and executed action-semantic mutation; literal-zero counter is not evidence | Receiver policy may still be restrictive | Calling context an enforcement command |
 | Is this only threat intelligence plus a policy engine? | Architecture and related work | Signed runtime context, receipt correlation, action-relative timing | Citation matrix remains draft TODO | Claiming no prior work |
 | Does TCOP create detections? | Threat model and limitations | Matched-input design | It depends on an observer detecting a useful fact | Claiming it detects compromise itself |
 | Are scenarios synthetic? | Threat model and ethics | Scenario definitions and ethics appendix | No production incident deployment | Suggesting incident reconstruction |
@@ -20,5 +20,5 @@
 | Can a gateway be bypassed? | Threat model | Reference gateway scope | Only evaluated choke point is covered | Claiming all tool paths are covered |
 | Does it generalize beyond MCP? | Limitations | Generic evaluator interface | Only one reference gateway tested | Claiming broad deployment validation |
 | Could it have prevented a public incident? | Introduction and limitations | None; no incident experiment | Counterfactual only | Any prevention claim about a real incident |
-| Are results sufficient for a systems contribution? | Evaluation | Matched, replay, physical, and control evidence | Scope remains bounded | Inflated production claims |
+| Are results sufficient for a systems contribution? | Evaluation | Matched, replay, single-environment reference-path, and executed control evidence | Scope remains bounded | Inflated production claims |
 | Can reviewers reproduce without credentials? | Open science | Tier 0 and Tier 2 scripts | Tier 3 is optional | Requiring paid provider access |

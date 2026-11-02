@@ -41,9 +41,7 @@ The separately sealed frontier evaluates \FrontierEpisodes{} deterministic polic
 
 \subsection{Single-environment reference-path deployment}
 
-This experiment exercises the complete software path from \texttt{tcopd}-A through signed exchange, \texttt{tcopd}-B, the receiver-local evaluator, and the MCP gateway in one reference environment; it does not evaluate physical or administrative network separation. The \PhysicalFederationExchanges{} signed evidence exchanges traverse \texttt{tcopd}-A to \texttt{tcopd}-B, followed by the evaluator and Docker MCP Gateway. Figure~\ref{fig:physical} shows a prospective arm, a no-evidence arm, and a late arm; the late arm separates completed calls from later authorization opportunities.
-
-An arm is one complete execution. The table reports harmful gateway-call attempts separately from complete arms and signed exchanges, so these accounting units are not conflated. In every tested reference-deployment block, the recorded authorization cites a Domain-B-local policy and decision. The result establishes executable composition of the signed relay, evaluator, and gateway adapter. The evaluated processes run in one reference environment; this result does not claim a multi-host deployment.
+The single-environment reference path runs \texttt{tcopd}-A, signed exchange, \texttt{tcopd}-B, the evaluator, and MCP gateway as separate processes on one host. It evaluates neither multi-host nor administrative separation. The \PhysicalFederationExchanges{} signed exchanges traverse both endpoints. Figure~\ref{fig:physical} separates prospective blocking from completed calls and later blocked opportunities. Each arm is one complete execution; harmful call attempts and signed exchanges are separate accounting units. Every gateway block cites Domain-B-local policy and decision provenance, establishing composition of this reference path.
 
 \begin{figure}[t]
 \centering

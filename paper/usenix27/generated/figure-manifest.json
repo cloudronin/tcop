@@ -16,7 +16,7 @@
     "output": "paper/usenix27/figures/pdf/architecture.pdf",
     "preview": "paper/usenix27/figures/png-preview/architecture.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "0c05aecfbeb8ec6804f531584aeb50240e240df217f8cac45ce0654b2755a5fd",
+    "sha256": "61aa3e17a73103ce82c27c0434e3d229db5a5730fcb93085ef1aab9c94f3a75e",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -103,7 +103,7 @@
     "output": "paper/usenix27/figures/pdf/containment-window.pdf",
     "preview": "paper/usenix27/figures/png-preview/containment-window.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "577bbabaa69600a6ce34d6e0cda88a681ebdbc93bab1e57d42b0be22b9b4b63c",
+    "sha256": "fd6ce33391589b59fbde6d19728b5491a5496c0e8c21e0b3d04c6e99dc1520e8",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -189,7 +189,7 @@
     "output": "paper/usenix27/figures/pdf/deterministic-outcomes.pdf",
     "preview": "paper/usenix27/figures/png-preview/deterministic-outcomes.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "9e71c380a182959b516b54ccd2504bdc1fa1a54f352fd7e89912a2ec296ead3c",
+    "sha256": "7aed40b7d514dc05c6be8a0ef853b699318c74e4b7e96d2a41e1820df6827e29",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -262,7 +262,7 @@
   },
   {
     "caption_caveats": [
-      "The late arm separates completed calls from subsequently prevented calls."
+      "Single-environment reference path; the late arm separates completed calls from subsequent blocked calls."
     ],
     "claims": [
       "C-TIMING-01"
@@ -275,7 +275,7 @@
     "output": "paper/usenix27/figures/pdf/physical-timing.pdf",
     "preview": "paper/usenix27/figures/png-preview/physical-timing.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "0199e8cc5bfab44d52a2b0206bfdd50792c8b472e5a895cca8598e4bfc279ae1",
+    "sha256": "0ce25edf15868ec447e5d77e51495ab717a7a08965b89c5664437c20c34955f2",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -362,7 +362,7 @@
     "output": "paper/usenix27/figures/pdf/live-replay-treatments.pdf",
     "preview": "paper/usenix27/figures/png-preview/live-replay-treatments.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "9fe05fe94e88653c62c25c46636ce96453166eb3b23900a42cb195b52d7ea710",
+    "sha256": "97fa4ff291899518dcd492a1de0f0c0f4acf7f1cc35b7d31076ad6f7b3f030c9",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -449,7 +449,7 @@
     "output": "paper/usenix27/figures/pdf/security-availability.pdf",
     "preview": "paper/usenix27/figures/png-preview/security-availability.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "29b4275b2b7f1001e22dc4ba510279eee29bc7001cbe20b29e9233c9d37a70e1",
+    "sha256": "002e4a82def37445d34858b51ebfc64f9bdf81d47580ff7f4a5a438607323c90",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -535,7 +535,7 @@
     "output": "paper/usenix27/figures/pdf/c2e-policy-frontier.pdf",
     "preview": "paper/usenix27/figures/png-preview/c2e-policy-frontier.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "4804a8f94115f709332598de8f376eb9586e09cc50f413764fe2790d474a2d8d",
+    "sha256": "4912b588b7f37fa50dbf7b5918913b276b81fab2a8f95f8589cded82ae3093bb",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -621,7 +621,7 @@
     "output": "paper/usenix27/figures/pdf/artifact-lineage.pdf",
     "preview": "paper/usenix27/figures/png-preview/artifact-lineage.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "e76063d6d7925ccd426b1f4bda54e40cbb73039e8ad123cf54c050377034c9b2",
+    "sha256": "fc3eeb6e528649cdb35ae87cc1e1ecacd432c98d1c6c4ce118f76619145633bd",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",

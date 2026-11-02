@@ -18,6 +18,6 @@ The protocol goal is not to make a remote observation self-executing. TCOP evalu
 
 \input{tables/security-goals}
 
-The tested receiver path checks these properties before an agent-action gateway disposition. Replayed, expired, unauthorized, or uncorrelated evidence was rejected in every tested control condition. The validation-value cohort adds valid-but-hostile warnings, subject and resource mismatches, concurrent receipt ambiguity, and action-like metadata smuggling. It tests a reference implementation rather than proving the properties for all protocol implementations.
+The tested receiver path checks these properties before an agent-action gateway disposition. Replayed, expired, unauthorized, or uncorrelated evidence was rejected in every tested control condition. The validation-value cohort adds executed subject and resource mismatch checks and action-like metadata mutations. Its hostile-peer and concurrent-session tables are formula-computed illustrations, not executed tests. It tests a reference implementation rather than proving the properties for all protocol implementations.
 
 Table~\ref{tab:limitations} concentrates the claim boundary. The paper evaluates synthetic tools and scenarios, receipt-based correlation, one reference gateway, local-harness performance, and a frozen model/runtime selection. It does not establish detection quality, observation truth, production-scale federation, global consensus, key-lifecycle operation, or rollback of completed actions.

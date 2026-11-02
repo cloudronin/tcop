@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
-python3 scripts/paperlib.py build "$@"
+"${PYTHON:-python3}" scripts/paperlib.py build "$@"

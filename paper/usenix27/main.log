@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  1 NOV 2026 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  1 NOV 2026 20:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -394,37 +394,37 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 14.
 LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line
- 13.
+ 14.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 \big@size=\dimen172
-LaTeX Info: Redefining \microtypecontext on input line 13.
-Package microtype Info: Applying patch `item' on input line 13.
-Package microtype Info: Applying patch `toc' on input line 13.
-Package microtype Info: Applying patch `eqnum' on input line 13.
-Package microtype Info: Applying patch `footnote' on input line 13.
-Package microtype Info: Applying patch `verbatim' on input line 13.
-LaTeX Info: Redefining \microtypesetup on input line 13.
+LaTeX Info: Redefining \microtypecontext on input line 14.
+Package microtype Info: Applying patch `item' on input line 14.
+Package microtype Info: Applying patch `toc' on input line 14.
+Package microtype Info: Applying patch `eqnum' on input line 14.
+Package microtype Info: Applying patch `footnote' on input line 14.
+Package microtype Info: Applying patch `verbatim' on input line 14.
+LaTeX Info: Redefining \microtypesetup on input line 14.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -469,14 +469,14 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 13.
+Package hyperref Info: Link coloring ON on input line 14.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
- 14.
+ 15.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
@@ -486,23 +486,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line
- 14.
+ 15.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+psycm on input line
- 14.
+ 15.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
 
 (./sections/01-introduction.tex
 <figures/pdf/architecture.pdf, id=210, 412.11966pt x 164.70332pt>
@@ -520,7 +520,8 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 
 ])
-(./sections/02-problem-threat-model.tex (./tables/security-goals.tex
+(./sections/02-problem-threat-model.tex [2 <./figures/pdf/architecture.pdf>]
+(./tables/security-goals.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 
@@ -548,8 +549,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\T1/ptm/m/n/7 (+20) Evaluation
  []
 
-) [2 <./figures/pdf/architecture.pdf>])
-(./sections/03-architecture-protocol.tex
+)) (./sections/03-architecture-protocol.tex
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -578,11 +578,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\T1/ptm/m/n/8 (+20) Explicit avail-abil-ity
  []
 
-)
-Underfull \vbox (badness 4660) has occurred while \output is active []
-
- [3]
-(./tables/generated/tab-architecture-comparison.tex
+[3]) (./tables/generated/tab-architecture-comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--5
 []|\T1/ptm/m/n/7 (+20) Sender se-lects re-
  []
@@ -596,8 +592,8 @@ Package pdftex.def Info: figures/pdf/containment-window.pdf  used on input line
  9.
 (pdftex.def)             Requested size: 241.02039pt x 74.35663pt.
 )
-(./sections/06-deterministic-evaluation.tex
-(./tables/generated/tab-units-of-analysis.tex
+(./sections/06-deterministic-evaluation.tex [5 <./figures/pdf/containment-windo
+w.pdf>] (./tables/generated/tab-units-of-analysis.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\T1/ptm/m/n/7 (+20) Single-environment
  []
@@ -608,59 +604,68 @@ Underfull \hbox (badness 1259) in paragraph at lines 10--10
 1/ptm/m/n/7 (+20) -A to
  []
 
-[5 <./figures/pdf/containment-window.pdf>])
+)
 <figures/pdf/deterministic-outcomes.pdf, id=289, 285.85481pt x 166.43997pt>
 File: figures/pdf/deterministic-outcomes.pdf Graphic file (type pdf)
 <use figures/pdf/deterministic-outcomes.pdf>
 Package pdftex.def Info: figures/pdf/deterministic-outcomes.pdf  used on input 
 line 19.
 (pdftex.def)             Requested size: 241.02039pt x 140.3394pt.
+ (./tables/generated/tab-deterministic-summary.tex)
+Underfull \vbox (badness 7704) has occurred while \output is active []
 
-(./tables/generated/tab-deterministic-summary.tex)
+
 (./tables/generated/tab-tcx-validation-value.tex)
 (./tables/generated/tab-tcx-protocol-assurance.tex))
 (./sections/07-agent-gateway-evaluation.tex [6 <./figures/pdf/deterministic-out
 comes.pdf>]
-<figures/pdf/live-replay-treatments.pdf, id=315, 419.01294pt x 188.89502pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+<figures/pdf/live-replay-treatments.pdf, id=322, 419.01294pt x 188.89502pt>
 File: figures/pdf/live-replay-treatments.pdf Graphic file (type pdf)
 <use figures/pdf/live-replay-treatments.pdf>
 Package pdftex.def Info: figures/pdf/live-replay-treatments.pdf  used on input 
 line 17.
 (pdftex.def)             Requested size: 505.89pt x 228.06502pt.
- [7] (./tables/generated/tab-c2e-frontier.tex)
+
+(./tables/generated/tab-c2e-frontier.tex)
 (./tables/generated/tab-c2e-frontier-composition.tex)
-<figures/pdf/c2e-policy-frontier.pdf, id=325, 243.3751pt x 163.2561pt>
+<figures/pdf/c2e-policy-frontier.pdf, id=324, 243.3751pt x 163.2561pt>
 File: figures/pdf/c2e-policy-frontier.pdf Graphic file (type pdf)
 <use figures/pdf/c2e-policy-frontier.pdf>
 Package pdftex.def Info: figures/pdf/c2e-policy-frontier.pdf  used on input lin
 e 37.
 (pdftex.def)             Requested size: 226.55974pt x 151.98352pt.
- [8 <./figures/pdf/live-replay-treatments.pdf>]
-<figures/pdf/physical-timing.pdf, id=349, 357.40276pt x 165.57227pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<figures/pdf/physical-timing.pdf, id=326, 357.40276pt x 179.08015pt>
 File: figures/pdf/physical-timing.pdf Graphic file (type pdf)
 <use figures/pdf/physical-timing.pdf>
-Package pdftex.def Info: figures/pdf/physical-timing.pdf  used on input line 50
+Package pdftex.def Info: figures/pdf/physical-timing.pdf  used on input line 48
 .
-(pdftex.def)             Requested size: 241.02039pt x 111.6579pt.
- (./tables/generated/tab-physical-end-to-end.tex))
-(./sections/08-security-availability.tex [9 <./figures/pdf/c2e-policy-frontier.
-pdf> <./figures/pdf/physical-timing.pdf>]
-<figures/pdf/security-availability.pdf, id=396, 420.68982pt x 192.0646pt>
+(pdftex.def)             Requested size: 241.02039pt x 120.7673pt.
+
+(./tables/generated/tab-physical-end-to-end.tex))
+(./sections/08-security-availability.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9 <./figures/pdf/live-replay-treatments.pdf> <./figures/pdf/c2e-policy-frontie
+r.pdf> <./figures/pdf/physical-timing.pdf>]
+<figures/pdf/security-availability.pdf, id=394, 420.68982pt x 192.0646pt>
 File: figures/pdf/security-availability.pdf Graphic file (type pdf)
 <use figures/pdf/security-availability.pdf>
 Package pdftex.def Info: figures/pdf/security-availability.pdf  used on input l
-ine 21.
+ine 17.
 (pdftex.def)             Requested size: 241.02039pt x 110.03477pt.
  (./tables/generated/tab-utility.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
  []
 
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./tables/generated/tab-independent-warning-full-pipeline.tex)
+) (./tables/generated/tab-independent-warning-full-pipeline.tex)
 (./tables/generated/tab-independent-warning-full-outcomes.tex)
 (./tables/generated/tab-independent-warning-v2-controls.tex
 Underfull \hbox (badness 3838) in paragraph at lines 10--10
@@ -668,15 +673,32 @@ Underfull \hbox (badness 3838) in paragraph at lines 10--10
  []
 
 )) (./sections/09-related-work.tex [10 <./figures/pdf/security-availability.pdf
->]
-Underfull \vbox (badness 1107) has occurred while \output is active []
+>]) (./sections/10-limitations-conclusion.tex [11]) (./main.bbl [12]
+Underfull \hbox (badness 2662) in paragraph at lines 103--108
+[]\T1/ptm/m/n/10 (+20) METR.  In-ves-ti-ga-tion of the Ope-nAI Hug-ging
+ []
 
-)
-(./sections/10-limitations-conclusion.tex [11]) (./main.bbl [12])
-(./appendices/open-science.tex
+
+Underfull \hbox (badness 4144) in paragraph at lines 103--108
+\T1/ptm/m/n/10 (+20) Face in-ci-dent.  [][]$\T1/pcr/m/n/10 https : / / metr . o
+rg / blog / 2026 -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--108
+\T1/pcr/m/n/10 08 -[] 26 -[] openai -[] hugging -[] face -[] incident -[]
+ []
+
+
+Underfull \hbox (badness 1527) in paragraph at lines 121--126
+\T1/ptm/m/n/10 (+20) Shell sand-boxes.  [][]$\T1/pcr/m/n/10 https : / / github 
+. com / NVIDIA /
+ []
+
+) (./appendices/open-science.tex
 Underfull \hbox (badness 1728) in paragraph at lines 3--4
-[][]$\T1/pcr/m/n/10 https : / / anonymous . 4open . science / r / tcop-[]B5A5/$
-[][]\T1/ptm/m/n/10 (+20) . It
+[][]$\T1/pcr/m/n/10 https : / / anonymous . 4open . science / r / tcop -[] B5A5
+/$[][]\T1/ptm/m/n/10 (+20) . It
  []
 
 [13]) (./appendices/ethics.tex) (./appendices/strategy-details.tex
@@ -721,18 +743,19 @@ Underfull \hbox (badness 3375) in paragraph at lines 6--6
  []
 
 )
-<figures/pdf/artifact-lineage.pdf, id=487, 424.77332pt x 145.22658pt>
+<figures/pdf/artifact-lineage.pdf, id=500, 424.77332pt x 145.22658pt>
 File: figures/pdf/artifact-lineage.pdf Graphic file (type pdf)
 <use figures/pdf/artifact-lineage.pdf>
 Package pdftex.def Info: figures/pdf/artifact-lineage.pdf  used on input line 1
 5.
 (pdftex.def)             Requested size: 505.89pt x 172.968pt.
-) (./appendices/extended-results.tex (./tables/generated/tab-limitations.tex)
+) (./appendices/extended-results.tex (./tables/generated/tab-limitations.tex
+[14])
 Underfull \hbox (badness 2005) in paragraph at lines 6--7
 \T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
  []
 
-[14] (./tables/generated/tab-replay-timing.tex
+(./tables/generated/tab-replay-timing.tex
 Underfull \hbox (badness 1810) in paragraph at lines 4--4
 []|\T1/ptm/m/n/9 (+20) Action-relative place-
  []
@@ -742,12 +765,14 @@ Underfull \hbox (badness 1789) in paragraph at lines 6--6
 []|\T1/ptm/m/n/9 (+20) At first-action au-tho-
  []
 
-) (./tables/generated/tab-negative-controls.tex)
-(./tables/generated/tab-performance.tex)) (./appendices/failure-controls.tex)
-(./appendices/reproducibility-details.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+) (./tables/generated/tab-negative-controls.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+[]|\T1/ptm/m/n/7 (+20) NC-09; mu-ta-tion: ac-
+ []
 
- [15 <./figures/pdf/artifact-lineage.pdf>]) [16
+) (./tables/generated/tab-performance.tex)) (./appendices/failure-controls.tex)
+(./appendices/reproducibility-details.tex [15 <./figures/pdf/artifact-lineage.p
+df>]) [16
 
 ] [17] (./main.aux)
  ***********
@@ -758,22 +783,22 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7C9F2EBBE03B95A9496954F17A4544A4;9892.
  ) 
 Here is how much of TeX's memory you used:
- 13300 strings out of 467525
- 221035 string characters out of 5418983
- 673508 words of memory out of 5000000
- 41401 multiletter control sequences out of 15000+600000
- 703569 words of font info for 364 fonts, out of 8000000 for 9000
+ 13332 strings out of 467525
+ 221520 string characters out of 5418983
+ 678759 words of memory out of 5000000
+ 41423 multiletter control sequences out of 15000+600000
+ 705524 words of font info for 369 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,12n,93p,1621b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,93p,2152b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/l
 ocal/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texli
 ve/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (17 pages, 276550 bytes).
+Output written on main.pdf (17 pages, 281882 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 487 compressed objects within 5 object streams
- 125 named destinations out of 1000 (max. 500000)
+ 594 PDF objects out of 1000 (max. 8388607)
+ 503 compressed objects within 6 object streams
+ 129 named destinations out of 1000 (max. 500000)
  89529 words of extra memory for PDF output out of 106986 (max. 10000000)
 

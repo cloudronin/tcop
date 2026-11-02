@@ -1,21 +1,21 @@
 \begin{table*}[t]\centering\scriptsize
-\caption{Negative and failure controls. All listed conditions passed in the sealed live artifact.}
-\begin{tabular}{@{}p{0.15\textwidth}@{\hspace{0.2em}}p{0.23\textwidth}@{\hspace{0.2em}}p{0.20\textwidth}@{\hspace{0.2em}}p{0.14\textwidth}@{\hspace{0.2em}}c@{\hspace{0.2em}}p{0.08\textwidth}@{}}\toprule
-Injected condition & Expected behavior & Observed behavior & Invariant & Pass & Source record \\ \midrule
-Invalid signature & Reject before restriction & Rejected; no restriction & Signed input & Yes & NC-01 \\
-Wrong receipt & Reject before restriction & Rejected; no restriction & Receipt correlation & Yes & NC-02 \\
-Expired context & Reject before restriction & Rejected; no restriction & Bounded freshness & Yes & NC-03 \\
-Replayed context & Reject before restriction & Rejected; no restriction & Replay protection & Yes & NC-04 \\
-Unknown peer & Reject before restriction & Rejected; no restriction & Authorized peer & Yes & NC-05 \\
-Disallowed import type & Reject before restriction & Rejected; no restriction & Context class & Yes & NC-06 \\
-Monitor-only policy & Do not preempt first call & First call not blocked & Local detection timing & Yes & NC-07 \\
-No remote enforcement & Never accept remote enforcement & No remote action used & Receiver authority & Yes & NC-08 \\
-Remote TCX action & Never interpret remote action & No remote action used & Receiver authority & Yes & NC-09 \\
-Gateway cache disabled & Evaluate each authorization & Cache disabled & Replay correctness & Yes & NC-10 \\
-tcopd B unavailable & Use B-local disposition & Local fail-closed policy & Receiver authority & Yes & NC-11 \\
-Authorization timeout & Use B-local disposition & Sender does not choose timeout & Receiver authority & Yes & NC-12 \\
-Gateway restart & Recompute local state & Fresh decision used & Receiver authority & Yes & NC-13 \\
-Stale decision & Recompute local state & Fresh decision used & Receiver authority & Yes & NC-14 \\
-Session termination before arrival & Do not cross sessions & Context has no new session effect & Session binding & Yes & NC-15 \\
-Arrival after local containment & No reversal of completed action & Non-preventive late context & Containment window & Yes & NC-16 \\ \bottomrule
+\caption{Negative and failure controls. Ten controls (NC-01--04, NC-07, NC-10--12, NC-14, NC-16) were executed and passed in the sealed live artifact. NC-05 and NC-09 are covered by executed signed-envelope mutations in \protect\path{artifacts/tcx-validation-value-v2/property-test-report.json} (\texttt{issuer} and \texttt{action\_semantic}, respectively), not by live injections. Four rows (NC-06, NC-08, NC-13, NC-15) were recorded as passed in the sealed live artifact without executing the condition; they are untested design properties, not results. See the artifact's known-issues file, \protect\path{docs/KNOWN_ISSUES.md}.}
+\begin{tabular}{@{}p{0.15\textwidth}@{\hspace{0.7em}}p{0.20\textwidth}@{\hspace{0.7em}}p{0.20\textwidth}@{\hspace{0.7em}}p{0.12\textwidth}@{\hspace{0.7em}}p{0.08\textwidth}@{\hspace{0.7em}}p{0.18\textwidth}@{}}\toprule
+Condition & Expected behavior & Observed behavior & Invariant & Pass & Source / evidence \\ \midrule
+Invalid signature & Reject before restriction & Rejected; no restriction & Signed input & Yes & NC-01; live executed \\
+Wrong receipt & Reject before restriction & Rejected; no restriction & Receipt correlation & Yes & NC-02; live executed \\
+Expired context & Reject before restriction & Rejected; no restriction & Bounded freshness & Yes & NC-03; live executed \\
+Replayed context & Reject before restriction & Rejected; no restriction & Replay protection & Yes & NC-04; live executed \\
+Unknown peer & Reject before restriction & identity\_{}unknown; no restriction & Authorized peer & Yes & NC-05; mutation: issuer \\
+Disallowed import type & Reject before restriction & Not executed; design property & Context class & Not tested & NC-06; not executed \\
+Monitor-only policy & Do not preempt first call & First call not blocked & Local detection timing & Yes & NC-07; live executed \\
+No remote enforcement & Never accept remote enforcement & Not executed; design property & Receiver authority & Not tested & NC-08; not executed \\
+Remote TCX action & Never interpret remote action & Remote fields action and enforcement ignored & Receiver authority & Yes & NC-09; mutation: action\_{}semantic \\
+Gateway cache disabled & Evaluate each authorization & Cache disabled & Replay correctness & Yes & NC-10; live executed \\
+tcopd B unavailable & Use B-local disposition & Local fail-closed policy & Receiver authority & Yes & NC-11; live executed \\
+Authorization timeout & Use B-local disposition & Sender does not choose timeout & Receiver authority & Yes & NC-12; live executed \\
+Gateway restart & Recompute local state & Not executed; design property & Receiver authority & Not tested & NC-13; not executed \\
+Stale decision & Recompute local state & Fresh decision used & Receiver authority & Yes & NC-14; live executed \\
+Session termination before arrival & Do not cross sessions & Not executed; design property & Session binding & Not tested & NC-15; not executed \\
+Arrival after local containment & No reversal of completed action & Non-preventive late context & Containment window & Yes & NC-16; live executed \\ \bottomrule
 \end{tabular}\label{tab:controls}\end{table*}

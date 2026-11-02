@@ -25,3 +25,5 @@ The top-level Make targets provide the same workflow: paper-verify-sources, pape
 Tier 0 verifies source roots and regenerates paper derivatives without credentials. Tier 1 reruns the deterministic causal core without credentials. Tier 2 strictly replays frozen agent traces without credentials. Tier 3, live trace regeneration, is optional and credentialed; it is not necessary to validate the paper's causal claims.
 
 The current official USENIX template files are copied under template/ with checksums in generated/paper-metadata.json. A Security 2027-specific kit was not available when this draft was assembled; replace only the template files if and when an official kit is released, then rerun all paper checks.
+
+Negative-control correction: ten live conditions were executed and passed; two are covered only by executed signed-envelope mutations; four remain **Not tested**. Hostile-peer burst and concurrent-session tables are formula-computed illustrations, not measurements. See `docs/KNOWN_ISSUES.md` in the reviewer artifact.

@@ -78,6 +78,12 @@ Vincent~C. Hu, David~F. Ferraiolo, Rick Kuhn, Adam Schnitzer, Kenneth Sandlin,
 \newblock Hugging Face technical timeline, July 27, 2026, 2026.
 \newblock Accessed August 2, 2026.
 
+\bibitem{hf-timeline-2026}
+{Hugging Face}.
+\newblock Technical timeline of the {July} 2026 agent intrusion.
+\newblock \url{https://huggingface.co/blog/agent-intrusion-technical-timeline},
+  2026.
+
 \bibitem{cacao20}
 Bret Jordan, Allan Thomson, Vasileios Mavroeidis, and Mateusz Zych.
 \newblock {CACAO} security playbooks version 2.0.
@@ -93,6 +99,13 @@ Yupei Liu, Yuqi Jia, Runpeng Geng, Jinyuan Jia, and Neil~Zhenqiang Gong.
 \newblock Llama prompt guard 2 86m model card.
 \newblock Hugging Face model card, 2025.
 
+\bibitem{metr-hf-2026}
+{METR}.
+\newblock Investigation of the {OpenAI} {Hugging Face} incident.
+\newblock
+  \url{https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/},
+  August 2026.
+
 \bibitem{mcpAuthorization}
 {Model Context Protocol}.
 \newblock Authorization.
@@ -103,6 +116,13 @@ Yupei Liu, Yuqi Jia, Runpeng Geng, Jinyuan Jia, and Neil~Zhenqiang Gong.
 Kathleen Moriarty.
 \newblock Real-time inter-network defense ({RID}).
 \newblock RFC 6545, Internet Engineering Task Force, 2012.
+
+\bibitem{nemoclaw-2026}
+{NVIDIA Corporation}.
+\newblock {NemoClaw}: An open source reference stack for running {AI} agents
+  inside {OpenShell} sandboxes.
+\newblock \url{https://github.com/NVIDIA/NemoClaw}, 2026.
+\newblock Announced at GTC, March 16, 2026. Alpha software.
 
 \bibitem{stix21}
 {OASIS Cyber Threat Intelligence Technical Committee}.

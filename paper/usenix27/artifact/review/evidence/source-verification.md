@@ -37,4 +37,4 @@ The missing cd26169 source is explicitly documented as superseded by the source-
 | 003 | cebc669a7a3cb8566d512d3be5c48d759c1676b461950ff9fbb0a10b2a967e96 | True | RA-03 eligibility alignment |
 | 004 | 24a20e9c48a2061874503ed56b54f68d1de92bc6a6800a42fb5398170fbd17bd | True | completion-gate ordering |
 | 005 | 2b1f92ff4481f6f3cb9a591c4ae77a3325757c4063d7c42439782e0474845f64 | True | derived RA-03 utility reconciliation |
-| 006 | 546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b | True | physical tcopd-a relay replay |
+| 006 | 546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b | True | single-environment reference-path tcopd-a relay replay |
