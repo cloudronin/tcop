@@ -23,7 +23,7 @@ separate from all v0.1 through v0.6 and validation-value artifacts. A blocked
 artifact is evidence of an unmet precondition, not an experimental result and
 does not authorize a manuscript update.
 
-Amendments 001 and 002 are incorporated in the source plan before external timestamping.
+Amendments 001, 002, and 003 are incorporated in the source plan before external timestamping.
 It adds a falsification comparator: S1 (standard STIX 2.1 and TAXII 2.1 with
 Domain-B-local OPA), T2 (direct TCOP with that identical OPA interface), and
 S2 (TCOP carried in a declared STIX extension over that same TAXII path). The
@@ -37,3 +37,10 @@ branches, makes valid-broader-risk a required gated population, and requires a
 predeclared 4 by 4 two-host network-interface timing surface. Its census,
 branch-coverage, timing, and outcome-partition artifacts must be complete
 before any external result is reported.
+
+Amendment 003 admits an independently maintained out-of-process sandbox
+runtime (first: NVIDIA OpenShell as packaged in NemoClaw) as a second Domain-B
+enforcement point beside the reference gateway, restricts TCOP's interface to
+it to policy tightening only, and adds a live two-agent role-play population
+on the two hosts with three sealed scenario families drawn from the July 2026
+Hugging Face intrusion. The reference gateway remains the control arm.
