@@ -1,5 +1,25 @@
 \begin{thebibliography}{1}
 
+\bibitem{hf-timeline-2026}
+{Hugging Face}.
+\newblock Technical timeline of the {July} 2026 agent intrusion.
+\newblock \url{https://huggingface.co/blog/agent-intrusion-technical-timeline},
+  2026.
+
+\bibitem{metr-hf-2026}
+{METR}.
+\newblock Investigation of the {OpenAI} {Hugging Face} incident.
+\newblock
+  \url{https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/},
+  August 2026.
+
+\bibitem{nemoclaw-2026}
+{NVIDIA Corporation}.
+\newblock {NemoClaw}: An open source reference stack for running {AI} agents
+  inside {OpenShell} sandboxes.
+\newblock \url{https://github.com/NVIDIA/NemoClaw}, 2026.
+\newblock Announced at GTC, March 16, 2026. Alpha software.
+
 \bibitem{usenixTemplate}
 {USENIX Association}.
 \newblock Templates for conference papers.
