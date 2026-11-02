@@ -1,0 +1,302 @@
+[
+  {
+    "agent_id": "agent-1",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-1",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "capability_substitution",
+    "receipt_id": "receipt-capability_substitution-1",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-1",
+    "trace_id": "capability_substitution-01"
+  },
+  {
+    "agent_id": "agent-2",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-2",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "capability_substitution",
+    "receipt_id": "receipt-capability_substitution-2",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-2",
+    "trace_id": "capability_substitution-02"
+  },
+  {
+    "agent_id": "agent-3",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-3",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "capability_substitution",
+    "receipt_id": "receipt-capability_substitution-3",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-3",
+    "trace_id": "capability_substitution-03"
+  },
+  {
+    "agent_id": "agent-4",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-4",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "capability_substitution",
+    "receipt_id": "receipt-capability_substitution-4",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-4",
+    "trace_id": "capability_substitution-04"
+  },
+  {
+    "agent_id": "agent-5",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-5",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "capability_substitution",
+    "receipt_id": "receipt-capability_substitution-5",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-5",
+    "trace_id": "capability_substitution-05"
+  },
+  {
+    "agent_id": "agent-1",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-1",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "session_substitution",
+    "receipt_id": "receipt-session_substitution-1",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-1",
+    "trace_id": "session_substitution-01"
+  },
+  {
+    "agent_id": "agent-2",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-2",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "session_substitution",
+    "receipt_id": "receipt-session_substitution-2",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-2",
+    "trace_id": "session_substitution-02"
+  },
+  {
+    "agent_id": "agent-3",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-3",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "session_substitution",
+    "receipt_id": "receipt-session_substitution-3",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-3",
+    "trace_id": "session_substitution-03"
+  },
+  {
+    "agent_id": "agent-4",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-4",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "session_substitution",
+    "receipt_id": "receipt-session_substitution-4",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-4",
+    "trace_id": "session_substitution-04"
+  },
+  {
+    "agent_id": "agent-5",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-5",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "session_substitution",
+    "receipt_id": "receipt-session_substitution-5",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-5",
+    "trace_id": "session_substitution-05"
+  },
+  {
+    "agent_id": "agent-1",
+    "campaign_relation": "delegation_edge",
+    "delegated_id": "delegate-1",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "delegation",
+    "receipt_id": "receipt-delegation-1",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-1",
+    "trace_id": "delegation-01"
+  },
+  {
+    "agent_id": "agent-2",
+    "campaign_relation": "delegation_edge",
+    "delegated_id": "delegate-2",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "delegation",
+    "receipt_id": "receipt-delegation-2",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-2",
+    "trace_id": "delegation-02"
+  },
+  {
+    "agent_id": "agent-3",
+    "campaign_relation": "delegation_edge",
+    "delegated_id": "delegate-3",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "delegation",
+    "receipt_id": "receipt-delegation-3",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-3",
+    "trace_id": "delegation-03"
+  },
+  {
+    "agent_id": "agent-4",
+    "campaign_relation": "delegation_edge",
+    "delegated_id": "delegate-4",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "delegation",
+    "receipt_id": "receipt-delegation-4",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-4",
+    "trace_id": "delegation-04"
+  },
+  {
+    "agent_id": "agent-5",
+    "campaign_relation": "delegation_edge",
+    "delegated_id": "delegate-5",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": true,
+      "initial_harmful": true
+    },
+    "pattern": "delegation",
+    "receipt_id": "receipt-delegation-5",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-5",
+    "trace_id": "delegation-05"
+  },
+  {
+    "agent_id": "agent-1",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-1",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": false,
+      "initial_harmful": true
+    },
+    "pattern": "benign_fallback",
+    "receipt_id": "receipt-benign_fallback-1",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-1",
+    "trace_id": "benign_fallback-01"
+  },
+  {
+    "agent_id": "agent-2",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-2",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": false,
+      "initial_harmful": true
+    },
+    "pattern": "benign_fallback",
+    "receipt_id": "receipt-benign_fallback-2",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-2",
+    "trace_id": "benign_fallback-02"
+  },
+  {
+    "agent_id": "agent-3",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-3",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": false,
+      "initial_harmful": true
+    },
+    "pattern": "benign_fallback",
+    "receipt_id": "receipt-benign_fallback-3",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-3",
+    "trace_id": "benign_fallback-03"
+  },
+  {
+    "agent_id": "agent-4",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-4",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": false,
+      "initial_harmful": true
+    },
+    "pattern": "benign_fallback",
+    "receipt_id": "receipt-benign_fallback-4",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-4",
+    "trace_id": "benign_fallback-04"
+  },
+  {
+    "agent_id": "agent-5",
+    "campaign_relation": "session_lineage",
+    "delegated_id": "delegate-5",
+    "initial_action": "repository.write",
+    "labels": {
+      "branch_harmful": false,
+      "initial_harmful": true
+    },
+    "pattern": "benign_fallback",
+    "receipt_id": "receipt-benign_fallback-5",
+    "risk_family": "sensitive-write",
+    "session_id": "S1-5",
+    "trace_id": "benign_fallback-05"
+  }
+]

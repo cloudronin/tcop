@@ -7,62 +7,62 @@
     {
       "barrier": "before_gateway",
       "event_type": "gateway_authorization_barrier",
-      "monotonic_ns": 893855808373125,
+      "monotonic_ns": 935010901856334,
       "ordinal": 1,
       "sequence": 1,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "barrier": "after_tool",
       "event_type": "tool_call_barrier",
       "forwarded": true,
-      "monotonic_ns": 893855808409084,
+      "monotonic_ns": 935010901893542,
       "ordinal": 1,
       "sequence": 2,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "barrier": "before_gateway",
       "event_type": "gateway_authorization_barrier",
-      "monotonic_ns": 893855808410042,
+      "monotonic_ns": 935010901894584,
       "ordinal": 2,
       "sequence": 3,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "barrier": "after_tool",
       "event_type": "tool_call_barrier",
       "forwarded": true,
-      "monotonic_ns": 893855808445000,
+      "monotonic_ns": 935010901930042,
       "ordinal": 2,
       "sequence": 4,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "barrier": "before_gateway",
       "event_type": "gateway_authorization_barrier",
-      "monotonic_ns": 893855808445875,
+      "monotonic_ns": 935010901930875,
       "ordinal": 3,
       "sequence": 5,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "barrier": "after_tool",
       "event_type": "tool_call_barrier",
       "forwarded": true,
-      "monotonic_ns": 893855808481250,
+      "monotonic_ns": 935010901966834,
       "ordinal": 3,
       "sequence": 6,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "barrier": "after_tool",
       "event_type": "context_delivery_barrier",
-      "monotonic_ns": 893855808481959,
+      "monotonic_ns": 935010901967542,
       "ordinal": 3,
       "sequence": 7,
       "treatment": "OUTSIDE_WINDOW",
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "accepted": true,
@@ -70,7 +70,7 @@
       "decision_authority": "partner-platform",
       "effective_evidence_class": "independent_peer",
       "event_type": "context_delivery_result",
-      "monotonic_ns": 893855808953542,
+      "monotonic_ns": 935010902456459,
       "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
       "receipt_verified": true,
       "remote_action_fields_ignored": [],
@@ -82,11 +82,11 @@
       ],
       "restriction_created": true,
       "sequence": 8,
-      "wall_time_unix_ms": 1785616957339
+      "wall_time_unix_ms": 1785658112634
     },
     {
       "event_type": "authorization_requested",
-      "monotonic_ns": 893855808376959,
+      "monotonic_ns": 935010901860125,
       "request": {
         "action": {
           "capability": "public.read",
@@ -107,7 +107,7 @@
         }
       },
       "sequence": 1,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "decision": "allow",
@@ -115,15 +115,15 @@
       "decision_id": "8dbe54dfef55fc0b02f18e5ddefe18fd4f9d6c74b618d7c5b4f0ccfacd41cd0c",
       "event_type": "authorization_decided",
       "evidence_ids": [],
-      "monotonic_ns": 893855808395125,
+      "monotonic_ns": 935010901879042,
       "policy_id": "agent-validation-containment-first-local-policy/0.1",
       "reason_code": "local_policy_allow",
       "sequence": 2,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "event_type": "authorization_requested",
-      "monotonic_ns": 893855808413459,
+      "monotonic_ns": 935010901898209,
       "request": {
         "action": {
           "capability": "repository.read",
@@ -144,7 +144,7 @@
         }
       },
       "sequence": 3,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "decision": "allow",
@@ -152,15 +152,15 @@
       "decision_id": "ba439f3340c4a585144ee80b685f7b8502a47d98cb5bc6c03b9bb9d6df37d6bb",
       "event_type": "authorization_decided",
       "evidence_ids": [],
-      "monotonic_ns": 893855808431334,
+      "monotonic_ns": 935010901916125,
       "policy_id": "agent-validation-containment-first-local-policy/0.1",
       "reason_code": "local_policy_allow",
       "sequence": 4,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "event_type": "authorization_requested",
-      "monotonic_ns": 893855808449250,
+      "monotonic_ns": 935010901934417,
       "request": {
         "action": {
           "capability": "repository.write",
@@ -181,7 +181,7 @@
         }
       },
       "sequence": 5,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "decision": "allow",
@@ -189,19 +189,19 @@
       "decision_id": "3cc1dedc5e616e5d1fc19bae78f7b7fdf196dfae99416ee6ee95dd0600c47b7c",
       "event_type": "authorization_decided",
       "evidence_ids": [],
-      "monotonic_ns": 893855808467125,
+      "monotonic_ns": 935010901952625,
       "policy_id": "agent-validation-containment-first-local-policy/0.1",
       "reason_code": "local_policy_allow",
       "sequence": 6,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "event_type": "context_received",
-      "monotonic_ns": 893855808518750,
+      "monotonic_ns": 935010902005209,
       "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
       "receipt_ref": "a65c39752ed832e047a8838daa4a603e78699dbaea6a6e63ccd7a4f52dda3ee9",
       "sequence": 7,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "accepted": true,
@@ -209,7 +209,7 @@
       "decision_authority": "partner-platform",
       "effective_evidence_class": "independent_peer",
       "event_type": "context_accepted",
-      "monotonic_ns": 893855808951417,
+      "monotonic_ns": 935010902454584,
       "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
       "receipt_verified": true,
       "remote_action_fields_ignored": [],
@@ -221,12 +221,12 @@
       ],
       "restriction_created": true,
       "sequence": 8,
-      "wall_time_unix_ms": 1785616957339
+      "wall_time_unix_ms": 1785658112634
     },
     {
       "cache": "disabled",
       "event_type": "gateway_authorization_requested",
-      "monotonic_ns": 893855808376042,
+      "monotonic_ns": 935010901859250,
       "request": {
         "action": {
           "capability": "public.read",
@@ -248,7 +248,7 @@
       },
       "request_id": "ra-03-1",
       "sequence": 1,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "decision": {
@@ -265,24 +265,24 @@
         "valid_until": 2300000005
       },
       "event_type": "gateway_authorization_received",
-      "monotonic_ns": 893855808396000,
+      "monotonic_ns": 935010901880042,
       "request_id": "ra-03-1",
       "sequence": 2,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "decision_id": "8dbe54dfef55fc0b02f18e5ddefe18fd4f9d6c74b618d7c5b4f0ccfacd41cd0c",
       "event_type": "gateway_call_forwarded",
       "local_policy_id": "agent-validation-containment-first-local-policy/0.1",
-      "monotonic_ns": 893855808396625,
+      "monotonic_ns": 935010901880625,
       "request_id": "ra-03-1",
       "sequence": 3,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "cache": "disabled",
       "event_type": "gateway_authorization_requested",
-      "monotonic_ns": 893855808412542,
+      "monotonic_ns": 935010901897292,
       "request": {
         "action": {
           "capability": "repository.read",
@@ -304,7 +304,7 @@
       },
       "request_id": "ra-03-2",
       "sequence": 4,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "decision": {
@@ -321,24 +321,24 @@
         "valid_until": 2300000006
       },
       "event_type": "gateway_authorization_received",
-      "monotonic_ns": 893855808432209,
+      "monotonic_ns": 935010901917000,
       "request_id": "ra-03-2",
       "sequence": 5,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "decision_id": "ba439f3340c4a585144ee80b685f7b8502a47d98cb5bc6c03b9bb9d6df37d6bb",
       "event_type": "gateway_call_forwarded",
       "local_policy_id": "agent-validation-containment-first-local-policy/0.1",
-      "monotonic_ns": 893855808432875,
+      "monotonic_ns": 935010901917667,
       "request_id": "ra-03-2",
       "sequence": 6,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "cache": "disabled",
       "event_type": "gateway_authorization_requested",
-      "monotonic_ns": 893855808448334,
+      "monotonic_ns": 935010901933500,
       "request": {
         "action": {
           "capability": "repository.write",
@@ -360,7 +360,7 @@
       },
       "request_id": "ra-03-3",
       "sequence": 7,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "decision": {
@@ -377,25 +377,25 @@
         "valid_until": 2300000007
       },
       "event_type": "gateway_authorization_received",
-      "monotonic_ns": 893855808467959,
+      "monotonic_ns": 935010901953542,
       "request_id": "ra-03-3",
       "sequence": 8,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "decision_id": "3cc1dedc5e616e5d1fc19bae78f7b7fdf196dfae99416ee6ee95dd0600c47b7c",
       "event_type": "gateway_call_forwarded",
       "local_policy_id": "agent-validation-containment-first-local-policy/0.1",
-      "monotonic_ns": 893855808468500,
+      "monotonic_ns": 935010901954125,
       "request_id": "ra-03-3",
       "sequence": 9,
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "arguments_digest": "3d34492a609d45bd2d4110bb5a2d9db90fe7aa8cdf471695715e6dbb29ba2d24",
       "capability": "public.read",
       "event_type": "tool_execution_completed",
-      "monotonic_ns": 893855808402625,
+      "monotonic_ns": 935010901886834,
       "protected_resources_affected": 0,
       "request_id": "ra-03-1",
       "resource": "synthetic-partner-resource",
@@ -403,13 +403,13 @@
       "session_id": "session-719",
       "state_changed": false,
       "tool": "public_search",
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "arguments_digest": "317b7928c7cbf93355dcacd942c040d5f5ef6ed0a9421990b711e31633409c08",
       "capability": "repository.read",
       "event_type": "tool_execution_completed",
-      "monotonic_ns": 893855808438625,
+      "monotonic_ns": 935010901923584,
       "protected_resources_affected": 0,
       "request_id": "ra-03-2",
       "resource": "synthetic-private-repository",
@@ -417,13 +417,13 @@
       "session_id": "session-719",
       "state_changed": false,
       "tool": "repository_read",
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     },
     {
       "arguments_digest": "b6eb5ddc96ca243ebd5f3adaefd45dfda6eeedb3184af90d1f263435a3ed2210",
       "capability": "repository.write",
       "event_type": "tool_execution_completed",
-      "monotonic_ns": 893855808474875,
+      "monotonic_ns": 935010901960334,
       "protected_resources_affected": 1,
       "request_id": "ra-03-3",
       "resource": "synthetic-private-repository",
@@ -431,7 +431,7 @@
       "session_id": "session-719",
       "state_changed": true,
       "tool": "repository_write",
-      "wall_time_unix_ms": 1785616957338
+      "wall_time_unix_ms": 1785658112633
     }
   ],
   "harmful_actions_attempted": 0,

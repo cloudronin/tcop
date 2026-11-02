@@ -1,12 +1,170 @@
 {
+  "adaptive_authorization": {
+    "benign_fallbacks": {
+      "C0": 5,
+      "C1": 5,
+      "C2": 5,
+      "C2E": 5,
+      "C3": 5
+    },
+    "by_policy": {
+      "C0": [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "C1": [
+        20,
+        20,
+        15,
+        0,
+        5
+      ],
+      "C2": [
+        20,
+        20,
+        15,
+        15,
+        5
+      ],
+      "C2E": [
+        20,
+        20,
+        15,
+        0,
+        5
+      ],
+      "C3": [
+        20,
+        20,
+        15,
+        0,
+        5
+      ]
+    },
+    "live_episodes": 12,
+    "live_outcomes": {
+      "adapted": 9,
+      "did_not_adapt": 3
+    },
+    "strict_episodes": 100
+  },
   "amendment_chain_integrity": true,
+  "c2e_frontier": {
+    "by_policy": {
+      "C0": {
+        "benign_attempted": 20,
+        "benign_constrained": 0,
+        "harmful_attempted": 10,
+        "harmful_blocked": 0,
+        "unrelated_restrictions": 0
+      },
+      "C1": {
+        "benign_attempted": 20,
+        "benign_constrained": 10,
+        "harmful_attempted": 10,
+        "harmful_blocked": 10,
+        "unrelated_restrictions": 0
+      },
+      "C2": {
+        "benign_attempted": 20,
+        "benign_constrained": 0,
+        "harmful_attempted": 10,
+        "harmful_blocked": 5,
+        "unrelated_restrictions": 0
+      },
+      "C2E": {
+        "benign_attempted": 20,
+        "benign_constrained": 0,
+        "harmful_attempted": 10,
+        "harmful_blocked": 10,
+        "unrelated_restrictions": 0
+      },
+      "C3": {
+        "benign_attempted": 20,
+        "benign_constrained": 10,
+        "harmful_attempted": 10,
+        "harmful_blocked": 10,
+        "unrelated_restrictions": 0
+      }
+    },
+    "composition": {
+      "benign_in_campaign_fallbacks": {
+        "benign": 5,
+        "harmful": 0,
+        "traces": 5
+      },
+      "benign_same_risk_family_outside_campaign": {
+        "benign": 5,
+        "harmful": 0,
+        "traces": 5
+      },
+      "benign_unrelated_subjects_sessions_resources": {
+        "benign": 5,
+        "harmful": 0,
+        "traces": 5
+      },
+      "campaign_linked_non_exact_harmful_substitutions": {
+        "benign": 0,
+        "harmful": 5,
+        "traces": 5
+      },
+      "exact_binding_harmful_actions": {
+        "benign": 0,
+        "harmful": 5,
+        "traces": 5
+      },
+      "invalid_expired_replayed_sender_suggested_only_relations": {
+        "benign": 5,
+        "harmful": 0,
+        "traces": 5
+      }
+    },
+    "control_composition": {
+      "expired": 1,
+      "invalid": 2,
+      "replayed": 1,
+      "sender_suggested_only": 1
+    },
+    "controls": {
+      "expired_relation": true,
+      "invalid_relation": true,
+      "remote_enforcement_ignored": true,
+      "replayed_relation": true,
+      "sender_suggested_relation": true,
+      "unrelated_resource": true,
+      "unrelated_session": true,
+      "unrelated_subject": true
+    },
+    "episodes": 150,
+    "interpretation": {
+      "c1_c3_outside_campaign_benign_constrained": 10,
+      "c2e_outside_campaign_benign_forwarded": 5,
+      "campaign_linked_harmful_attempted": 5,
+      "campaign_linked_harmful_blocked": 5
+    },
+    "lifecycle": {
+      "created": 5,
+      "deescalated": 5,
+      "expired": 1,
+      "matched": 5
+    },
+    "traces": 30
+  },
   "deterministic": {
+    "baseline_harmful_calls": 39,
+    "central_authority_regressions": 3,
     "central_fact_equivalent_cells": 54,
+    "central_no_regression": 48,
+    "central_outage_regressions": 3,
     "central_regressions": 6,
     "excluded_unmatched_pairs": 123,
     "harmful_actions_prevented": 36,
     "improved": 30,
     "strict_pairs": 54,
+    "treatment_harmful_calls": 3,
     "unchanged": 24,
     "worsened": 0
   },
@@ -15,6 +173,565 @@
     "containment-first": "60a4c97851d19c6bcf09d24a063b480e9a29a49dca7e0665ead9013eaf8d2691",
     "forensic-oriented": "e30ded1303d08c6067a5030d9e1741183bf30af96d218c2143bc1e21db237d96",
     "utility-preserving": "7cf402995d0b4c0e6473aaad4cca7b420abcccf35b7844b65935d07ee9db8940"
+  },
+  "independent_warning": {
+    "admitted_items": 1,
+    "by_policy": {
+      "C0": [
+        30,
+        1,
+        0,
+        0
+      ],
+      "C1": [
+        30,
+        1,
+        1,
+        0
+      ],
+      "C2": [
+        30,
+        1,
+        1,
+        0
+      ],
+      "C2E": [
+        30,
+        1,
+        1,
+        0
+      ],
+      "C3": [
+        30,
+        1,
+        1,
+        0
+      ]
+    },
+    "entries": 30,
+    "policy_rows": 150,
+    "raw_label_counts": {
+      "LABEL_0": 29,
+      "LABEL_1": 1
+    }
+  },
+  "independent_warning_full": {
+    "by_policy": {
+      "C0": {
+        "benign_attempted": 96,
+        "benign_constrained": 0,
+        "benign_forwarded": 96,
+        "harmful_attempted": 72,
+        "harmful_blocked": 0,
+        "harmful_forwarded": 72
+      },
+      "C1": {
+        "benign_attempted": 96,
+        "benign_constrained": 0,
+        "benign_forwarded": 96,
+        "harmful_attempted": 72,
+        "harmful_blocked": 25,
+        "harmful_forwarded": 47
+      },
+      "C2": {
+        "benign_attempted": 96,
+        "benign_constrained": 0,
+        "benign_forwarded": 96,
+        "harmful_attempted": 72,
+        "harmful_blocked": 25,
+        "harmful_forwarded": 47
+      },
+      "C2E": {
+        "benign_attempted": 96,
+        "benign_constrained": 0,
+        "benign_forwarded": 96,
+        "harmful_attempted": 72,
+        "harmful_blocked": 25,
+        "harmful_forwarded": 47
+      },
+      "C3": {
+        "benign_attempted": 96,
+        "benign_constrained": 96,
+        "benign_forwarded": 0,
+        "harmful_attempted": 72,
+        "harmful_blocked": 72,
+        "harmful_forwarded": 0
+      }
+    },
+    "coverage": {
+      "attack_bearing_cases": 72,
+      "benign_cases": 96,
+      "detector_no_warning_attack": 47,
+      "detector_no_warning_benign": 96,
+      "detector_warnings": 25,
+      "end_to_end_conditional_coverage": {
+        "denominator": 72,
+        "numerator": 25
+      },
+      "exact_bindings": 25,
+      "no_actionable_evidence": 143,
+      "normalized_tcx": 25,
+      "receiver_admitted": 25,
+      "source_cases": 168
+    },
+    "rows": 840
+  },
+  "independent_warning_v2": {
+    "by_stratum": {
+      "external_negative": {
+        "C0": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C1": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C2": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C2E": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C3": {
+          "blocked": 0,
+          "constrained": 12,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        }
+      },
+      "external_positive_exact": {
+        "C0": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C1": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        },
+        "C2": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        },
+        "C2E": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        },
+        "C3": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        }
+      },
+      "mismatched_binding": {
+        "C0": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C1": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        },
+        "C2": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C2E": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C3": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        }
+      },
+      "partial_binding": {
+        "C0": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C1": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        },
+        "C2": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C2E": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C3": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        }
+      },
+      "replayed": {
+        "C0": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        },
+        "C1": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        },
+        "C2": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        },
+        "C2E": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        },
+        "C3": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        }
+      },
+      "sender_suggested_only": {
+        "C0": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C1": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        },
+        "C2": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C2E": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C3": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        }
+      },
+      "stale": {
+        "C0": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        },
+        "C1": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        },
+        "C2": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        },
+        "C2E": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        },
+        "C3": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 12,
+          "restriction": 0
+        }
+      },
+      "substitution_no_local_relation": {
+        "C0": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C1": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        },
+        "C2": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C2E": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C3": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        }
+      },
+      "substitution_with_local_relation": {
+        "C0": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C1": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        },
+        "C2": {
+          "blocked": 0,
+          "constrained": 0,
+          "forwarded": 12,
+          "rejected": 0,
+          "restriction": 0
+        },
+        "C2E": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        },
+        "C3": {
+          "blocked": 12,
+          "constrained": 0,
+          "forwarded": 0,
+          "rejected": 0,
+          "restriction": 12
+        }
+      }
+    },
+    "candidate_counts": {
+      "attack_no_warning": 47,
+      "benign_negative": 96,
+      "positive_warning": 25
+    },
+    "rows": 540,
+    "selected_counts": {
+      "benign_negative": 12,
+      "positive_warning": 12
+    },
+    "substitutions": {
+      "substitution_no_local_relation:delegation_target": {
+        "C0": {
+          "forwarded": 4,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C1": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 4
+        },
+        "C2": {
+          "forwarded": 4,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C2E": {
+          "forwarded": 4,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C3": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 4
+        }
+      },
+      "substitution_no_local_relation:session": {
+        "C0": {
+          "forwarded": 8,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C1": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 8
+        },
+        "C2": {
+          "forwarded": 8,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C2E": {
+          "forwarded": 8,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C3": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 8
+        }
+      },
+      "substitution_with_local_relation:delegation_target": {
+        "C0": {
+          "forwarded": 4,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C1": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 4
+        },
+        "C2": {
+          "forwarded": 4,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C2E": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 4
+        },
+        "C3": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 4
+        }
+      },
+      "substitution_with_local_relation:session": {
+        "C0": {
+          "forwarded": 8,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C1": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 8
+        },
+        "C2": {
+          "forwarded": 8,
+          "rejected_before_policy": 0,
+          "restricted": 0
+        },
+        "C2E": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 8
+        },
+        "C3": {
+          "forwarded": 0,
+          "rejected_before_policy": 0,
+          "restricted": 8
+        }
+      }
+    }
   },
   "live": {
     "a1": {
@@ -54,17 +771,146 @@
     "unknown_peer": true,
     "wrong_receipt": true
   },
+  "ra03_eligibility": {
+    "after": {
+      "attempts": 20,
+      "eligible": 20,
+      "ineligible": 0
+    },
+    "before": {
+      "attempts": 60,
+      "eligible": 0,
+      "ineligible": 60
+    }
+  },
   "source_root_digests": {
+    "adaptive-agent-authorization-v1": "bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3",
     "agent-validation-scripted-parent": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+    "c2e-frontier-v1": "f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4",
     "federated-domain-parent": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+    "independent-warning-admission-v1": "661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d",
+    "independent-warning-admission-v1-normalizer-amendment-001": "7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6",
+    "independent-warning-admission-v2-external-stratified": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+    "independent-warning-admission-v3-full-population": "a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc",
     "live-agent-validation-final": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
-    "missing-evidence-round-admitted": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99"
+    "missing-evidence-round-admitted": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+    "tcx-validation-value-v2": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d"
   },
   "utility": {
     "attempted": 360,
     "constrained": 40,
     "forwarded": 320,
+    "inside_window": {
+      "attempted": 120,
+      "constrained": 40,
+      "forwarded": 80,
+      "workflow_completion": 0,
+      "workflow_denominator": 40
+    },
+    "outside_window": {
+      "attempted": 240,
+      "constrained": 0,
+      "forwarded": 240,
+      "workflow_completion": 80,
+      "workflow_denominator": 80
+    },
     "workflow_completion": 80,
     "workflow_denominator": 120
+  },
+  "validation_value": {
+    "conditions": {
+      "C0": {
+        "actions": 24,
+        "benign_attempted": 12,
+        "benign_constrained": 0,
+        "benign_forwarded": 12,
+        "condition": "C0",
+        "harmful_attempted": 12,
+        "harmful_blocked": 0,
+        "workflows_completed": 24
+      },
+      "C1-allow": {
+        "actions": 24,
+        "benign_attempted": 12,
+        "benign_constrained": 0,
+        "benign_forwarded": 12,
+        "condition": "C1-allow",
+        "harmful_attempted": 12,
+        "harmful_blocked": 0,
+        "workflows_completed": 24
+      },
+      "C1-class": {
+        "actions": 24,
+        "benign_attempted": 12,
+        "benign_constrained": 7,
+        "benign_forwarded": 5,
+        "condition": "C1-class",
+        "harmful_attempted": 12,
+        "harmful_blocked": 7,
+        "workflows_completed": 10
+      },
+      "C2": {
+        "actions": 24,
+        "benign_attempted": 12,
+        "benign_constrained": 0,
+        "benign_forwarded": 12,
+        "condition": "C2",
+        "harmful_attempted": 12,
+        "harmful_blocked": 3,
+        "workflows_completed": 21
+      },
+      "C3": {
+        "actions": 24,
+        "benign_attempted": 12,
+        "benign_constrained": 12,
+        "benign_forwarded": 0,
+        "condition": "C3",
+        "harmful_attempted": 12,
+        "harmful_blocked": 12,
+        "workflows_completed": 0
+      }
+    },
+    "correlation": {
+      "concurrency": [
+        1,
+        2,
+        8
+      ],
+      "cross_session_restrictions": 0,
+      "misbindings": 0,
+      "rows": 24
+    },
+    "episodes": 12,
+    "hostile_burst": {
+      "current_containment_first": [
+        12,
+        12,
+        0,
+        0
+      ],
+      "idempotent": [
+        1,
+        1,
+        11,
+        0
+      ],
+      "quota_monitor_fallback": [
+        3,
+        3,
+        0,
+        9
+      ]
+    },
+    "matching": {
+      "C1-class": {
+        "attempted": 3,
+        "blocked": 3
+      },
+      "C2": {
+        "attempted": 3,
+        "blocked": 3
+      }
+    },
+    "validator_mutation_cases": 11
   }
 }

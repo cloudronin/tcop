@@ -8,6 +8,13 @@ All source roots were independently recomputed with the TCOP canonical root-dige
 | agent-validation-scripted-parent | cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f | cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f | False | True | True |
 | missing-evidence-round-admitted | 0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99 | 0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99 | True | True | True |
 | federated-domain-parent | 194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50 | 194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50 | True | True | True |
+| tcx-validation-value-v2 | da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d | da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d | True | True | True |
+| adaptive-agent-authorization-v1 | bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3 | bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3 | True | True | True |
+| independent-warning-admission-v1 | 661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d | 661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d | True | True | True |
+| independent-warning-admission-v1-normalizer-amendment-001 | 7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6 | 7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6 | True | True | True |
+| independent-warning-admission-v2-external-stratified | 4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907 | 4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907 | True | True | True |
+| independent-warning-admission-v3-full-population | a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc | a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc | True | True | True |
+| c2e-frontier-v1 | f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4 | f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4 | True | True | True |
 
 The missing cd26169 source is explicitly documented as superseded by the source-artifact amendment; no silent substitution occurred.
 

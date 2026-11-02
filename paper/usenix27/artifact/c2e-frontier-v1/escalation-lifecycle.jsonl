@@ -1,0 +1,16 @@
+{"campaign_id":"campaign-01","event":"created","receiver_local":true,"tick":1,"trace_id":"exact_binding_harmful_actions-01"}
+{"campaign_id":"campaign-02","event":"created","receiver_local":true,"tick":1,"trace_id":"exact_binding_harmful_actions-02"}
+{"campaign_id":"campaign-03","event":"created","receiver_local":true,"tick":1,"trace_id":"exact_binding_harmful_actions-03"}
+{"campaign_id":"campaign-04","event":"created","receiver_local":true,"tick":1,"trace_id":"exact_binding_harmful_actions-04"}
+{"campaign_id":"campaign-05","event":"created","receiver_local":true,"tick":1,"trace_id":"exact_binding_harmful_actions-05"}
+{"campaign_id":"campaign-01","event":"matched","receiver_local":true,"tick":2,"trace_id":"campaign_linked_non_exact_harmful_substitutions-01"}
+{"campaign_id":"campaign-02","event":"matched","receiver_local":true,"tick":2,"trace_id":"campaign_linked_non_exact_harmful_substitutions-02"}
+{"campaign_id":"campaign-03","event":"matched","receiver_local":true,"tick":2,"trace_id":"campaign_linked_non_exact_harmful_substitutions-03"}
+{"campaign_id":"campaign-04","event":"matched","receiver_local":true,"tick":2,"trace_id":"campaign_linked_non_exact_harmful_substitutions-04"}
+{"campaign_id":"campaign-05","event":"matched","receiver_local":true,"tick":2,"trace_id":"campaign_linked_non_exact_harmful_substitutions-05"}
+{"campaign_id":"campaign-01","event":"deescalated","receiver_local":true,"tick":3,"trace_id":"benign_in_campaign_fallbacks-01"}
+{"campaign_id":"campaign-02","event":"deescalated","receiver_local":true,"tick":3,"trace_id":"benign_in_campaign_fallbacks-02"}
+{"campaign_id":"campaign-03","event":"deescalated","receiver_local":true,"tick":3,"trace_id":"benign_in_campaign_fallbacks-03"}
+{"campaign_id":"campaign-04","event":"deescalated","receiver_local":true,"tick":3,"trace_id":"benign_in_campaign_fallbacks-04"}
+{"campaign_id":"campaign-05","event":"deescalated","receiver_local":true,"tick":3,"trace_id":"benign_in_campaign_fallbacks-05"}
+{"campaign_id":"historical-expired-relation","event":"expired","receiver_local":true,"tick":5,"trace_id":"invalid_expired_replayed_sender_suggested_only_relations-02"}

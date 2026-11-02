@@ -1,0 +1,10 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Hash-selected external-base outcomes in Independent Warning Admission v2. Each column contains 12 AgentDojo base cases. This is a sealed integration cohort, not detector-quality or deployment-effectiveness evidence.}
+\begin{tabular}{@{}p{0.34\columnwidth}cc@{}}\toprule
+Policy & \shortstack{Exact-warning harmful\\blocked} & \shortstack{No-warning benign\\constrained} \\ \midrule
+Local Only (C0) & \ExternalWarningVTwoCZeroPositiveBlocked/\ExternalWarningVTwoSelectedPositive & \ExternalWarningVTwoCZeroNegativeConstrained/\ExternalWarningVTwoSelectedNegative \\
+Arrival Guard (C1) & \ExternalWarningVTwoCOnePositiveBlocked/\ExternalWarningVTwoSelectedPositive & \ExternalWarningVTwoCOneNegativeConstrained/\ExternalWarningVTwoSelectedNegative \\
+Exact Binding (C2) & \ExternalWarningVTwoCTwoPositiveBlocked/\ExternalWarningVTwoSelectedPositive & \ExternalWarningVTwoCTwoNegativeConstrained/\ExternalWarningVTwoSelectedNegative \\
+Campaign Correlation (C2E) & \ExternalWarningVTwoCTwoEPositiveBlocked/\ExternalWarningVTwoSelectedPositive & \ExternalWarningVTwoCTwoENegativeConstrained/\ExternalWarningVTwoSelectedNegative \\
+Standing Guard (C3) & \ExternalWarningVTwoCThreePositiveBlocked/\ExternalWarningVTwoSelectedPositive & \ExternalWarningVTwoCThreeNegativeConstrained/\ExternalWarningVTwoSelectedNegative \\ \bottomrule
+\end{tabular}\label{tab:independent-warning-v2-base}\end{table}

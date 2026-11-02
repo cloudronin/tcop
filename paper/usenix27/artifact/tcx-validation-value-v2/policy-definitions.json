@@ -1,0 +1,7 @@
+{
+  "C0": "local-only",
+  "C1-allow": "valid arrival and TTL only; forward by default",
+  "C1-class": "valid arrival and TTL only; restrict guarded class",
+  "C2": "validated issuer/signature/freshness/receipt/subject/resource/capability/scope plus B-local authorization",
+  "C3": "standing guarded-class restriction; no TCX input"
+}

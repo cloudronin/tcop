@@ -1,22 +1,50 @@
-\section{Deterministic Evaluation}
+\section{Matched Causal and Conformance Evaluation}
 
-The deterministic evaluation compares isolated capable local observers (A1) against the same receiver configuration with valid imported context (A2). It holds local facts, local policy, strategy, and action inputs fixed before treatment effects. TCOP transports observations but creates no detections. Exact replay and frozen strategies make the paired result auditable.
+\subsection{Evaluation questions and evidence hierarchy}
 
-For containment-first, the study includes \DeterministicPairs{} strict input-equivalent pairs. It improves \DeterministicImproved{}, leaves \DeterministicUnchanged{} unchanged, worsens \DeterministicWorsened{}, and prevents \DeterministicActionsPrevented{} harmful actions. Figure~\ref{fig:deterministic} exposes the unchanged cases rather than presenting only improved cells.
+The evaluation asks whether accepted runtime evidence can change receiver-local authorization before a harmful agent action, whether the single-environment reference path preserves receiver authority, whether timing changes the effect of evidence, and whether validation provides selective value beyond an arrival-triggered guard. The evidence hierarchy separates trace generation from enforcement causality. The deterministic study supplies the primary matched causal comparison. Credentialed live execution supplies a bounded cohort of agent-action traces. Strict replay fixes those traces while varying delivery. Single-environment reference-path arms exercise federation and gateway composition. The validation-value study, governed by a sealed pre-analysis plan, tests binding, receiver validation, hostile-peer pressure, and correlation ambiguity without live-model sampling. Separately rooted post-denial substitution and independent-warning studies then test frozen branches and an externally authored warning population. Table~\ref{tab:units} defines the accounting units used below.
+
+\input{tables/generated/tab-units-of-analysis}
+
+\subsection{Deterministic matched design}
+
+The deterministic evaluation compares isolated capable local observers (A1) against the same receiver configuration with accepted imported runtime evidence (A2). It holds local facts, local policy, frozen strategy, agent-action inputs, and action schedule fixed. The causal change is whether accepted evidence becomes available to Domain B. The synthetic scenarios and receiver strategy are constructed to test whether accepted evidence changes authorization under this matrix; the result is a causal conformance result, not an operational prevention estimate. For each pair, the evaluation records input equivalence, action-relative warning margin, local decision change, harmful-agent-action difference, and outcome direction.
+
+For containment-first, the study includes \DeterministicPairs{} strict input-equivalent pairs. Imported context changes \DeterministicImproved{} outcomes and leaves \DeterministicUnchanged{} unchanged. In matched synthetic conditions, the containment-first receiver strategy consuming validated TCOP evidence reduces \DeterministicBaselineHarmfulCalls{} baseline harmful calls to \DeterministicTreatmentHarmfulCalls{}, preventing \DeterministicActionsPrevented{} of \DeterministicBaselineHarmfulCalls{} calls. Because containment-first can only add a restriction to the reported harmful-action measure, \DeterministicWorsened{} worsened pairs is a monotonicity check, not a surprising comparative result. Figure~\ref{fig:deterministic} shows the unchanged population rather than presenting only improved pairs.
+
+The three residual harmful calls are the three strict resilience rows with no imported context or later harmful opportunity recorded. They are unchanged rather than late-warning failures, so the study does not attribute them to TCOP.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{deterministic-outcomes}
-\caption{Deterministic strict-pair outcomes. The full matched population includes improved and unchanged pairs; no pair worsened.}
+\caption{Deterministic strict-pair outcomes. The full matched population includes improved and unchanged pairs. The zero worsened count follows from the containment-first monotonicity of the reported harmful-action measure.}
 \label{fig:deterministic}
 \end{figure}
 
 \input{tables/generated/tab-deterministic-summary}
 
-The study deliberately excludes \DeterministicExcludedPairs{} candidate balanced and utility comparisons from causal A1/A2 inference because their receiver-local policies do not match. A fact-equivalent central audit includes \CentralAuditCells{} cells and finds \CentralRegressions{} regressions associated with authority placement or central outage. This bounded comparison does not establish universal superiority to centralized defense; it demonstrates that a receiver-local decision path avoids those specific evaluated dependencies.
+\subsection{Admission rules and central control}
 
-\subsection{Context versus blanket restriction}
+The study excludes \DeterministicExcludedPairs{} candidate balanced and utility comparisons from A1/A2 causal inference because their receiver-local policies differ. The exclusion ledger retains their inputs and the mismatch reason. This admission rule protects the question of whether imported context changed an outcome under the same local policy.
 
-The separately rooted validation-value study holds receiver enforcement, action order, local facts, and warning arrival fixed across local-only (C0), arrival-only default-allow (C1-allow), arrival-only class guard (C1-class), validated matching (C2), and standing class restriction (C3). C1 policies receive only a valid-arrival token and TTL. C2 additionally evaluates issuer, signature, freshness, receipt, subject, resource namespace, capability class, scope, and receiver-local authorization state.
+A fact-equivalent central audit holds exportable facts fixed while placing decision authority or an outage dependency in a central path. Across \CentralAuditCells{} audited cells, it records \CentralRegressions{} regressions: \CentralAuthorityRegressions{} associated with authority placement and \CentralOutageRegressions{} with central outage; \CentralNoRegression{} cells show no regression. It identifies dependencies of this construction, rather than serving as a general benchmark of centralized defense.
 
-The preregistered credential-free cohort has twelve mixed-action episodes. On the three accepted matching harmful actions, C1-class and C2 each block all three. Across the full cohort, C1-class constrains seven benign actions while C2 constrains none; C3 blocks all twelve harmful and constrains all twelve benign actions. C1-allow forwards all actions. Deliberately wrong-subject, wrong-resource, wrong-receipt, expired, replayed, and semantic-smuggling warnings remain separately reported controls, not denominator contamination for the matching-action comparison. The same artifact records a valid-but-hostile peer burst study, correlation ambiguity at one, two, and eight concurrent sessions with zero cross-session restrictions, and signed-envelope mutation results. A valid signature authenticates the issuer, not the truth of its observation.
+\subsection{Validation value beyond arrival}\label{sec:context-blanket}
+
+The validation-value study holds receiver enforcement, action order, local facts, and warning arrival fixed across Local Only (C0), Arrival Default Allow (C1-allow), Arrival Guard (C1-class), Exact Binding (C2), and Standing Guard (C3). The study follows a sealed pre-analysis plan. The arrival conditions receive a valid-arrival token and a time-to-live. Exact Binding additionally evaluates issuer, signature, version, freshness, receipt, subject, resource namespace, capability class, scope, and receiver-local authorization state.
+
+Table~\ref{tab:validation-value} reports the entire \ValidationEpisodes{}-episode mixed-action cohort. Arrival Default Allow forwards every action, showing that arrival by itself is not a containment policy. Standing Guard establishes the standing-restriction endpoint. Its complete harmful blocking comes with complete benign constraint.
+
+Across the full cohort, Arrival Guard blocks \COneClassHarmfulBlocked{} of \ValidationEpisodes{} harmful actions and constrains \COneClassBenignConstrained{} of \ValidationEpisodes{} benign actions. Exact Binding blocks \CTwoHarmfulBlocked{} of \ValidationEpisodes{} harmful actions and constrains \CTwoBenignConstrained{} of \ValidationEpisodes{} benign actions. Within the accepted, binding-matched harmful subset, Arrival Guard and Exact Binding each block \COneClassMatchingBlocked{} of \MatchingHarmfulActions{} matching harmful actions. The additional Arrival Guard blocks occur under wrong-subject, wrong-resource, wrong-receipt, expired, replayed, and semantic-smuggling warning controls, which Exact Binding rejects. This is the measured selectivity result, not evidence that Exact Binding is a broader class guard.
+
+\input{tables/generated/tab-tcx-validation-value}
+
+\subsection{Correlation under ambiguity}
+
+Receipt binding is a protocol precondition rather than a trusted oracle. The validation-value cohort varies receipt order, subject, resource, capability namespace, duplicate receipts, terminated sessions, and simultaneous distinct sessions. Across \CorrelationCases{} ambiguity cases at \CorrelationConcurrencyLevels{} concurrent sessions, the receiver records \CorrelationMisbindings{} misbindings and \CorrelationCrossSessionRestrictions{} cross-session restrictions. The result is a deterministic concurrent-session sweep, not a production correlation-rate estimate.
+
+\input{tables/generated/tab-tcx-protocol-assurance}
+
+\subsection{Result interpretation}
+
+An improved pair means that accepted runtime evidence changed a receiver-local outcome for the evaluated harmful-agent-action measure. An unchanged pair is an observed result: it includes actions that had already completed, evidence that was not actionable for a particular opportunity, and cells where the matched baseline produced the same local outcome. Availability is evaluated separately, so a harmful-action aggregate is not read as an unqualified benefit claim. In particular, this matched design establishes a receiver-path causal and conformance result, not an estimate of post-denial behavior prevalence or deployment effectiveness.

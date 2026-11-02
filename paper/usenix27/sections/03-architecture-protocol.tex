@@ -1,14 +1,64 @@
 \section{Architecture and Protocol Boundary}
 
-Each domain runs one \texttt{tcopd} instance near its local observation and enforcement boundaries. Local telemetry reaches the local \texttt{tcopd}; a signed \texttt{tcopd}-to-\texttt{tcopd} exchange carries TCX context across domains; and the receiving \texttt{tcopd} invokes a local authorization interface. Only the middle boundary is cross-domain TCOP. The gateway receives a Domain-B-local decision, not the TCX context.
+Each domain runs a \texttt{tcopd} instance near its local observation and agent-action enforcement boundaries. Local telemetry reaches the local daemon; a signed \texttt{tcopd}-to-\texttt{tcopd} exchange carries TCX runtime evidence across domains; and the receiving daemon invokes a local authorization interface. Only the evidence exchange crosses domains. TCOP specifies that exchange and receiver acceptance; Domain B selects its strategy and policy. The gateway receives a Domain-B-local decision rather than the TCX object.
+
+\subsection{TCX context and receiver acceptance}
+
+We call the signed evidence record a TCX context: a versioned, scoped, time-bounded runtime-evidence object exchanged between domains. Figure~\ref{fig:tcx-acceptance} uses the canonical v0.2 record from the validation-value artifact. Before cross-domain delivery, Domain B registers an opaque receipt against its own bilateral interaction state. On receipt, the receiver parses and validates the record, checks freshness and replay state, resolves that receipt, and only then exposes a binding classification to local policy. The receipt is a Domain-B-minted correlation handle, not an authorization token.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{architecture}
-\caption{TCOP architecture and authority boundary. The cross-domain object is signed bounded context. Domain A cannot invoke Domain B enforcement; the gateway consumes a Domain-B-local policy and decision.}
-\label{fig:architecture}
+\begin{minipage}[t]{0.49\textwidth}
+\centering\footnotesize\textbf{Illustrative redacted TCX v0.2 artifact example}\par\vspace{0.2em}
+\fbox{\parbox{0.95\linewidth}{\scriptsize\ttfamily
+\{ protocol\_version: "0.2",\\
+issuer: "origin-monitor.example",\\
+observation\_id: "demo-observation-42",\\
+receipt\_reference: "sha256:demo-receipt",\\
+subject: "agent-demo-17",\\
+resource\_namespace: "demo-target",\\
+capability\_class: "repository.write",\\
+scope: "guarded-capability",\\
+issued\_at: "2030-06-01T12:00:00Z",\\
+expires\_at: "2030-06-01T12:01:00Z",\\
+signature: "ed25519:example" \}
+}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.46\textwidth}
+\centering\footnotesize\textbf{Receiver acceptance and decision}\par\vspace{0.2em}
+\fbox{\parbox{0.92\linewidth}{\scriptsize
+\texttt{for c in contexts(receipt):}\\[-0.15em]
+\quad \texttt{if !valid(c): reject(c); continue}\\[-0.15em]
+\quad \texttt{if exact\_binding(c, action): exact += c}\\[-0.15em]
+\quad \texttt{else: partial += c}\\[0.1em]
+\texttt{return local\_policy(action, local\_state, exact, partial)}\\[0.2em]
+\textbf{Branches:} invalid or unresolved evidence $\rightarrow$ rejection; exact binding $\rightarrow$ a local authorization input; partial binding $\rightarrow$ a receiver-local monitor or escalation choice. No sender field selects the disposition.
+}}
+\end{minipage}
+\par\vspace{0.35em}
+\fbox{\parbox{0.97\linewidth}{\scriptsize
+\textbf{Receiver audit state.} \texttt{receipt registered} $\rightarrow$ \texttt{received} $\rightarrow$ \texttt{parsed} $\rightarrow$ \texttt{signature checked} $\rightarrow$ \texttt{issuer authorized} $\rightarrow$ \texttt{freshness checked} $\rightarrow$ \texttt{replay checked} $\rightarrow$ \texttt{receipt resolved} $\rightarrow$ \texttt{binding matched} $\rightarrow$ \texttt{B-local policy} $\rightarrow$ \texttt{B-local decision} $\rightarrow$ \texttt{gateway disposition}. Any failed transition emits a rejection audit record and creates no restriction. A repeated verified context is rejected by the receiver replay check before receipt resolution. For Campaign Correlation only, receiver-created relation state follows \texttt{created} $\rightarrow$ \texttt{matched} $\rightarrow$ (\texttt{deescalated} or \texttt{expired}); sender-suggested relations are monitor-only.
+}}
+\caption{Illustrative redacted TCX artifact example and receiver acceptance and decision path. The receiver validates an object before classifying its binding to the pending action. Partial evidence is not a remote command: a receiver-local strategy and policy may ignore, monitor, or respond to it.}
+\label{fig:tcx-acceptance}
 \end{figure*}
 
-An interaction receipt is an opaque Domain-B-minted correlation handle. It is not an authorization token and does not grant enforcement authority. A receiver accepts a context only after validating signature, scope, expiry, authorized peer identity, replay state, and receipt correlation. It then combines the accepted context with locally held facts. This makes the trust boundary explicit: imported evidence can influence a local policy calculation, but no remote field maps directly to an enforcement action.
+The acceptance path makes the claimed mechanism reviewable. A valid signature alone is insufficient: Domain B checks the authorized issuer, version, issued and expiry time, replay state, receipt, and binding fields before evaluating its policy. The receiver compares subject, resource namespace, capability class, and scope with the pending agent action and its local authorization state. Exact binding is a local authorization input. A validated but non-exact object is not an input to the exact-binding strategy; a receiver may instead retain a monitor record or use a separately configured local strategy. Neither choice is prescribed by TCOP.
+
+Exact Binding intentionally fails open for actions outside an accepted binding. If a detector emits no warning or the receiver cannot establish an applicable binding, Exact Binding has no TCOP-derived basis to restrict that action. A receiver can combine it with a separate local guard, but the guard's availability cost is a receiver-policy choice and is reported separately.
+
+\noindent\textbf{Campaign Correlation (artifact identifier C2E):} Campaign Correlation is one receiver-local strategy, not a TCOP requirement. Invalid, expired, or replayed context is rejected before a restriction. Valid but unrelated or sender-suggested-only campaign information creates no restriction or only a monitor record. Only receiver-established session lineage or a receiver-recorded delegation edge can activate Campaign Correlation; the sender neither supplies the relation nor selects its scope or disposition. The frontier exercises five created, matched, and de-escalated relations plus one expiry. These controls characterize the declared strategy, not a protocol-mandated lifetime.
+
+\subsection{Authority separation and lifecycle}
+
+After accepting evidence, Domain B combines it with locally held facts, selects a locally configured strategy, evaluates a local policy, and creates a local decision record for the pending agent action. The gateway consumes that decision through a local authorization-evaluator interface. Imported fields remain evidence fields; Domain B selects the response scope and failure disposition.
+
+The evaluated cryptographic profile uses Ed25519 signatures and protocol version v0.2. Peer authorization and the effective verification keys are receiver-local configuration. Key rotation, revocation dissemination, and inter-domain key-distribution operation are specified deployment concerns but are outside the evaluated evidence. The paper therefore treats the protocol as a concrete reference boundary, not a complete federation lifecycle standard.
+
+\input{tables/generated/tab-design-requirements}
+
+\subsection{Partition behavior and disclosure}
+
+Federation failure suppresses new imported evidence. Domain B retains its local observer, policy, and enforcement path, and its local policy determines the failure disposition. The design exports enough evidence to verify provenance, scope, freshness, and correlation without exporting the origin's full monitor state, policy, or a gateway command. Attribute disclosure, retention, peer authorization, and response duration remain federation-policy choices.
 
 \input{tables/generated/tab-architecture-comparison}

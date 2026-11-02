@@ -1,0 +1,8 @@
+{"control":"invalid_relation","passed":true,"restriction_created":false}
+{"control":"expired_relation","passed":true,"restriction_created":false}
+{"control":"replayed_relation","passed":true,"restriction_created":false}
+{"control":"sender_suggested_relation","passed":true,"restriction_created":false}
+{"control":"unrelated_subject","passed":true,"restriction_created":false}
+{"control":"unrelated_session","passed":true,"restriction_created":false}
+{"control":"unrelated_resource","passed":true,"restriction_created":false}
+{"control":"remote_enforcement_ignored","passed":true,"restriction_created":false}

@@ -1,7 +1,21 @@
 \section{Related Work}
 
-TCOP intersects several bodies of work but has a distinct authority boundary. Threat-intelligence exchange systems, including STIX/TAXII and MISP, distribute indicators and reports; TCOP distributes signed bounded runtime context intended for a receiver-local action-time correlation. Zero-trust, workload-identity, remote-attestation, and policy decision/enforcement systems provide relevant identity and local-control mechanisms. Distributed and cooperative intrusion-response systems address coordination but can differ in exchanged object, decision location, and enforcement authority. Agent sandbox runtimes that enforce filesystem, process, and egress policy outside the agent process, such as NVIDIA OpenShell in NemoClaw~\cite{nemoclaw-2026}, supply a receiver-local boundary of the kind TCOP assumes; they decide what an agent may reach but carry no cross-domain evidence about what it has been observed doing, which is the gap TCOP addresses.
+\subsection{Threat-intelligence exchange}
 
-Agent security and prompt-injection defenses motivate the synthetic action traces and reference gateway. They do not by themselves establish a cross-domain authority model. A complete related-work matrix, with verified citations and concrete distinctions in trust model, exchanged object, policy location, enforcement location, timing, and provenance, remains a draft-mode TODO. This draft makes no first-system or no-prior-work claim.
+STIX/TAXII, MISP, and DShield distribute threat information \cite{stix21,taxii21,mispCore,dshieldFeeds}. TCOP may ingest evidence derived from them; it addresses the later agent-runtime question of whether a receiver should authorize one pending tool or capability action after receipt-, session-, and action-specific validation. These systems do not specify that action-time receiver-local authorization contract.
 
-\input{tables/generated/tab-amendment-history}
+\subsection{Response orchestration}
+
+RID, DOTS, and OpenC2 exchange incident reports, mitigation signals, and defense commands \cite{rid12,dots21,openc2v1}. CACAO and SOAR coordinate playbooks and response workflows \cite{cacao20,bridges23}. Either can implement a response after TCX acceptance. TCOP instead bounds the preceding decision input: whether signed runtime evidence applies to one pending receiver-side agent action. Course of action, workflow execution, and enforcement remain receiver-local.
+
+\subsection{Trust, identity, and local policy}
+
+KeyNote and macaroons support delegated authorization \cite{keynote99,birgisson2014macaroons}; TCX instead carries behavioral runtime evidence into a locally created decision. This avoids imported evidence becoming ambient enforcement authority, related to the confused-deputy concern \cite{hardy88}. Zero trust separates policy decision from enforcement \cite{nistZta}; SPIFFE federation authenticates foreign workloads \cite{spiffeFederation}; and RATS separates evidence, appraisal, verifier, and relying party \cite{rats}. TCOP applies those separations to cross-domain agent actions: it combines authenticated peer identity with receiver-local correlation and appraisal. Collaborative intrusion detection identifies relevant coordination and adversarial-participant questions \cite{bye2010}; the central audit here is only a bounded fact-equivalent control.
+
+\subsection{Agent interoperability and tool protocols}
+
+MCP standardizes client access to server tools and resources \cite{mcpAuthorization}; its gateway is the reference tool-call enforcement point here. A2A standardizes independent-agent discovery and collaboration \cite{a2aSpec}, and ANP addresses agent-network communication and discovery \cite{anpSpec}. They can supply transport or session context. Table~\ref{tab:protocol-comparison} summarizes the contract-level distinction: TCOP adds receipt-bound validation of signed runtime evidence against a pending receiver-side agent action, while leaving response selection and enforcement with the receiver.
+
+\subsection{Agent and tool security}
+
+Prompt injection and tool-integrated agents motivate the synthetic scenarios. Liu et al. benchmark prompt-injection attacks and defenses, while InjecAgent evaluates indirect injection against tool-integrated agents \cite{liu2024prompt,zhan2024injecagent}. TCOP does not compete with those detectors. It evaluates whether externally observed runtime evidence can affect a locally governed pending action in time.

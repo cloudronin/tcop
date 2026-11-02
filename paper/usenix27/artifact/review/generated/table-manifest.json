@@ -15,8 +15,7 @@
   },
   {
     "claims": [
-      "C-CENTRAL-01",
-      "C-CENTRAL-02"
+      "C-ARCH-01"
     ],
     "function": "generate_tables",
     "id": "tab-architecture-comparison",
@@ -25,7 +24,24 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-architecture-comparison.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "a27df4605a2d944a1632a596964457f41d997acc329094000b9a1b0dc5485aac"
+    "sha256": "8c00a86ec58723466e891f2f02eadedd6eaeef76befae349f0cebde0fed6560d"
+  },
+  {
+    "claims": [
+      "C-DETERMINISTIC-01",
+      "C-LIVE-01",
+      "C-VALIDATION-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-units-of-analysis",
+    "input_files": [
+      "data/generated/deterministic-pairs.csv",
+      "data/generated/live-trace-cohort.csv",
+      "data/generated/tcx-validation-value.csv"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-units-of-analysis.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "9c8f09e8d312977b022bc7445b6592dede5b8b94877be85dec8c7e6c6282880d"
   },
   {
     "claims": [
@@ -38,7 +54,21 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-deterministic-summary.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "0a0791b2a6c3209eec7703c20f7f5baa23b2be58786761cd2c6dff521d145dd5"
+    "sha256": "ff651513e82ac1e1eaa458e4ccff6dda41d2cba71511a66ac1b6933af9712420"
+  },
+  {
+    "claims": [
+      "C-CENTRAL-01",
+      "C-CENTRAL-02"
+    ],
+    "function": "generate_tables",
+    "id": "tab-central-comparator",
+    "input_files": [
+      "data/generated/deterministic-central-audit.csv"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-central-comparator.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "15c9bd5fcbe9e6a3ce7c273807883edb328afb0ed039778bdfe50fc7f39f8a11"
   },
   {
     "claims": [
@@ -66,7 +96,7 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-physical-end-to-end.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "c6a15cf16c3c744fbe10113f8b0d93f75857f530b4f99480da1dbf8e0277dc72"
+    "sha256": "37ec4cbc896d09a071cc7744012e54d138dda665083b7ac72eb2ac5c79c22459"
   },
   {
     "claims": [
@@ -79,7 +109,7 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-replay-timing.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "b71c1c4d7519160fcde79d846c86d24517cbf9a7d7970cc4d1618ba6b08c90cb"
+    "sha256": "fcc4042766f527d395e1b6bef2d5f55697382dbd71dba16b21bb3deda284e85b"
   },
   {
     "claims": [
@@ -93,7 +123,123 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-utility.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "6546d970cecec7b597c9a39aafd48c82b07b7f1d202b18858ebdbb4193a15fa5"
+    "sha256": "9acc1551680f2b634b95990e05182f9d9c212792cbcf243b971858a3be2b2471"
+  },
+  {
+    "claims": [
+      "C-VALIDATION-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-tcx-validation-value",
+    "input_files": [
+      "data/generated/tcx-validation-value.csv"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-tcx-validation-value.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "637bb7e9f85b722fce8cbeed3dec8fa6fd5de14b592688e7ff4928d194d208c2"
+  },
+  {
+    "claims": [
+      "C-VALIDATION-02",
+      "C-CORRELATION-01",
+      "C-VALIDATOR-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-tcx-protocol-assurance",
+    "input_files": [
+      "data/generated/tcx-hostile-peer.csv",
+      "data/generated/tcx-correlation.csv",
+      "artifacts/tcx-validation-value-v2/property-test-report.json"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-tcx-protocol-assurance.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "eb72e3a8078473b043046465231e80c3bff0490df32bd4caa99481ed29dd4666"
+  },
+  {
+    "claims": [
+      "C-ADAPTIVE-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-adaptive-authorization",
+    "input_files": [
+      "data/generated/adaptive-authorization.csv",
+      "artifacts/adaptive-agent-authorization-v1/reports/summary.json"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-adaptive-authorization.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "2e76a4305076df70f04a30fcfa7309ddd0ea4bfd1ee9c01d35229586c6f6e782"
+  },
+  {
+    "claims": [
+      "C-C2E-FRONTIER-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-c2e-frontier",
+    "input_files": [
+      "data/generated/c2e-frontier.csv",
+      "artifacts/c2e-frontier-v1/reports/frontier-summary.json"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-c2e-frontier.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "35cc0c568d98c7947d323674cb0f6148106f546eea515de1649a1087ed6f979a"
+  },
+  {
+    "claims": [
+      "C-C2E-FRONTIER-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-c2e-frontier-composition",
+    "input_files": [
+      "data/generated/c2e-frontier-composition.csv",
+      "data/generated/c2e-frontier-control-composition.csv",
+      "artifacts/c2e-frontier-v1/study-plan.yaml"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-c2e-frontier-composition.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "b10d4d3480b0cdb0c5a759d994237a7e5b20caa7d1869292293118b9ce4b9aae"
+  },
+  {
+    "claims": [
+      "C-INDEPENDENT-FULL-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-independent-warning-full-pipeline",
+    "input_files": [
+      "data/generated/independent-warning-full.csv",
+      "artifacts/independent-warning-admission-v3-full-population/reports/pipeline-coverage.json"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-independent-warning-full-pipeline.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "2a00de32dac410ab917d552fb3aa5a556d926084b6dcd55549f2e3568e631533"
+  },
+  {
+    "claims": [
+      "C-INDEPENDENT-FULL-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-independent-warning-full-outcomes",
+    "input_files": [
+      "data/generated/independent-warning-full.csv",
+      "artifacts/independent-warning-admission-v3-full-population/reports/authorization-outcomes.json"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-independent-warning-full-outcomes.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "46913a6654f0cf3b1e057ae93b1265e9eee08cf7e0bf828f769d689eaf5c69e4"
+  },
+  {
+    "claims": [
+      "C-INDEPENDENT-V2-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-independent-warning-v2-controls",
+    "input_files": [
+      "data/generated/independent-warning-v2.csv",
+      "artifacts/independent-warning-admission-v2-external-stratified/reports/derived-control-dispositions.csv",
+      "artifacts/independent-warning-admission-v2-external-stratified/reports/substitution-summary.json"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-independent-warning-v2-controls.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "dd6a697f881ce80835b5421721c1c4c496d95350eac1f910c5c3f90df20a33de"
   },
   {
     "claims": [
@@ -119,7 +265,7 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-performance.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "5ed9a9be30e94d4fc2d9deebb9a4ed3eb34eef6bf143050f509e3a6a5afc85d1"
+    "sha256": "584a454b997db8258da4d7a088db9a88974e053edfb6cac9d465f7c38b283d95"
   },
   {
     "claims": [
@@ -133,13 +279,29 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-amendment-history.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "d6de0a475c6976489ecc926a4da3c421aee9b1963df15f478c57715b15b8cd37"
+    "sha256": "2ec2a2c8559695f5476cfecd438e32e4385498c0def4db46616e7d63d76cb5b7"
+  },
+  {
+    "claims": [
+      "C-AMENDMENT-01"
+    ],
+    "function": "generate_tables",
+    "id": "tab-ra03-eligibility-sensitivity",
+    "input_files": [
+      "data/generated/ra03-eligibility-sensitivity.csv"
+    ],
+    "output": "paper/usenix27/tables/generated/tab-ra03-eligibility-sensitivity.tex",
+    "script": "scripts/generate_tables.py",
+    "sha256": "295296d7638970cbd4d9061a1d1b8357fa1baefd1a6b5e4b8e1701d0c53aab93"
   },
   {
     "claims": [
       "C-CENTRAL-02",
       "C-LIMIT-01",
-      "C-LIMIT-02"
+      "C-LIMIT-02",
+      "C-ADAPTIVE-01",
+      "C-C2E-FRONTIER-01",
+      "C-INDEPENDENT-01"
     ],
     "function": "generate_tables",
     "id": "tab-limitations",
@@ -148,6 +310,6 @@
     ],
     "output": "paper/usenix27/tables/generated/tab-limitations.tex",
     "script": "scripts/generate_tables.py",
-    "sha256": "b36ad55836d1d38fc7d7de2410035e75f829c0b74745401f2d381883dc683b85"
+    "sha256": "752e0509bea93756fc1d2a71a210ec60a14a53359d719816430532a42c1956ac"
   }
 ]

@@ -1,0 +1,11 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Independent Warning Admission v2 derived controls. Each row contains \ExternalWarningVTwoSelectedPositive{} derived cases. The substitution rows contain \ExternalWarningVTwoSessionNoRelationForwarded{} session-lineage and \ExternalWarningVTwoDelegationNoRelationForwarded{} delegation variants.}
+\begin{tabular}{@{}p{0.51\columnwidth}p{0.38\columnwidth}@{}}\toprule
+Control & Receiver result \\ \midrule
+Partial binding & Exact Binding/Campaign Correlation: \ExternalWarningVTwoPartialCTwoERestricted/\ExternalWarningVTwoSelectedPositive{} restrictions \\
+Mismatched binding & Exact Binding/Campaign Correlation: \ExternalWarningVTwoMismatchCTwoERestricted/\ExternalWarningVTwoSelectedPositive{} restrictions \\
+Stale or replayed context & Campaign Correlation: \ExternalWarningVTwoStaleCTwoERejected/\ExternalWarningVTwoSelectedPositive{} rejected before policy \\
+Sender-suggested-only relation & Campaign Correlation: \ExternalWarningVTwoSenderSuggestedCTwoERestricted/\ExternalWarningVTwoSelectedPositive{} restrictions \\
+Harmful substitution, no B-local relation & Campaign Correlation: \ExternalWarningVTwoNoRelationCTwoEForwarded/\ExternalWarningVTwoSelectedPositive{} forwarded \\
+Harmful substitution, B-local relation & Campaign Correlation: \ExternalWarningVTwoWithRelationCTwoEBlocked/\ExternalWarningVTwoSelectedPositive{} blocked \\ \bottomrule
+\end{tabular}\label{tab:independent-warning-v2-controls}\end{table}

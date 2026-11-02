@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{p{0.20\columnwidth}p{0.67\columnwidth}}
+\toprule
+Protocol property or evaluation rule & Receiver mechanism and scope \\
+\midrule
+Authenticated provenance & Signature and authorized-issuer checks; mutation controls cover invalid signatures and unknown peers. \\
+Freshness and replay resistance & Issued/expiry time and receiver replay state; expired and replayed controls create no restriction. \\
+Correlation and scope integrity & Receiver-minted receipt plus subject, resource, capability, and scope comparison; concurrent-session and mismatch controls exercise the reference path. \\
+Receiver sovereignty & Domain B creates the policy decision and gateway disposition; gateway blocks cite Domain-B-local decision records. \\
+Failure ownership & Timeout, outage, monitoring, and restrictive behavior are receiver-policy outputs, not sender commands. \\
+\midrule
+Evaluation accounting: non-retroactivity & Action-relative accounting never credits a late context with reversing a completed action; it is an outcome-accounting rule, not a cryptographic property. \\
+\bottomrule
+\end{tabular}
+\caption{Protocol properties and evaluation rules. The final row bounds outcome accounting rather than protocol security.}
+\label{tab:security-goals}
+\end{table}

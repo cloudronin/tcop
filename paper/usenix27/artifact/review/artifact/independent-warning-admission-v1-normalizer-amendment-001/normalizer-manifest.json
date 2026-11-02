@@ -1,0 +1,12 @@
+{
+  "kind": "declared_model_config",
+  "label_to_category": {
+    "LABEL_0": "no_warning",
+    "LABEL_1": "exact_binding"
+  },
+  "model_labels": [
+    "LABEL_0",
+    "LABEL_1"
+  ],
+  "unknown_label": "reject"
+}

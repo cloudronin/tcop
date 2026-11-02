@@ -1,12 +1,16 @@
-\section{Containment Window}
+\section{Containment Windows and Outcome Accounting}
 
-The containment window is action-relative. It is the interval in which imported context can change a receiver-local decision before a specified harmful action completes. Consequently, outside-window is incomplete unless it names the relevant action. A delivery after an initial harmful call can be outside the window for that call but inside the window for later calls.
+A warning changes an outcome only if it becomes actionable before the receiver-local authorization boundary of an affected agent action. We call this interval a \emph{containment window}. It is action-relative: a warning can arrive too late for one completed operation and still affect a later agent action in the same workflow.
 
-\begin{figure*}[t]
+Figure~\ref{fig:containment-window} shows the three accounting regimes. Before the first affected authorization, imported runtime evidence can support prospective blocking. After an initial harmful agent action but before later opportunities, it can reduce subsequent blast radius. After all relevant opportunities complete, it can remain useful for forensic or coordination work but is not credited as prevention.
+
+\begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{containment-window}
-\caption{Containment-window model. Early context supports prospective prevention. Context after an initial action can reduce later blast radius. Context after all relevant actions has forensic or coordination value only.}
-\label{fig:window}
-\end{figure*}
+\includegraphics[width=\columnwidth]{containment-window}
+\caption{Action-relative containment-window regimes. A warning can be too late for one action and still be actionable for a later one.}
+\label{fig:containment-window}
+\end{figure}
 
-This model prevents a misleading interpretation of late warnings. TCOP does not reverse completed harm. It can still enable a receiver to restrict subsequent opportunities if local correlation and policy make the context actionable before those opportunities. The evaluated timing labels therefore use causal action boundaries rather than a conversion from deterministic ticks to milliseconds.
+The evaluation therefore does not label an evidence receipt, policy change, or alert as a success by itself. A causal improvement requires accepted runtime evidence, a bound local subject, a local policy evaluation, a local decision, and a changed gateway disposition for the same agent-action opportunity. Late evidence is recorded separately from changed outcomes.
+
+This timing model serves two purposes. It prevents a late warning from being counted as a reversal of completed harm, and it exposes the timing precondition that any cross-domain early-warning system must satisfy. The single-environment reference-path deployment and replay studies vary delivery placement around these boundaries while holding the underlying synthetic action sequence fixed.

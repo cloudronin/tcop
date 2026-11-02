@@ -1,0 +1,12 @@
+\begin{table*}[t]\centering\scriptsize
+\caption{Units of analysis and accounting. Counts are not interchangeable across rows.}
+\begin{tabular}{@{}p{0.16\textwidth}@{\hspace{0.35em}}p{0.28\textwidth}@{\hspace{0.35em}}p{0.46\textwidth}@{}}\toprule
+Unit & Definition & Use in this paper \\ \midrule
+Strict pair & One input-equivalent A1/A2 comparison with the same frozen local policy and action schedule & Primary deterministic causal comparison \\
+Trace & One captured model-generated action sequence & Live cohort and frozen replay input \\
+Replay treatment & One frozen trace evaluated at one action-relative context-delivery placement & Timing and availability accounting \\
+Single-environment reference-path arm & One complete source-relay-evaluator-gateway execution in one reference environment & Gateway composition and authority provenance \\
+Gateway call & One authorization request for an action opportunity & Harmful and benign forwarded or blocked outcomes \\
+Signed exchange & One signed context transfer from \texttt{tcopd}-A to \texttt{tcopd}-B & Relay composition accounting \\
+Validation episode & One credential-free mixed-action test case per condition & C0--C3 validation-value cohort \\ \bottomrule
+\end{tabular}\label{tab:units}\end{table*}

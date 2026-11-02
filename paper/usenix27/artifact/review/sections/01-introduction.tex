@@ -1,17 +1,25 @@
 \section{Introduction}
 
-Independently governed domains increasingly interact through autonomous software, delegated workflows, and tool-using agents. A compromise may be observed in one domain before a downstream domain can recognize the resulting requests locally. Existing local controls do not automatically transport timely runtime evidence across that governance boundary. Conversely, a global enforcement service can be infeasible: it can centralize sensitive telemetry, create a high-value outage dependency, or be institutionally unacceptable.
+Tool-using agents cross independently governed authorization boundaries. An agent can consume content or obtain a credential in one domain, then request a consequential tool or capability action in another. Prompt-injection research documents that untrusted content can steer tool-integrated agents toward direct harm or data exfiltration \cite{liu2024prompt,zhan2024injecagent}. The domain that first observes useful evidence may have no authority over the receiver's pending agent action.
 
-TCOP addresses this coordination problem without transferring enforcement authority. An origin domain exports signed and bounded TCX context. The receiving domain validates it, correlates it to its own local state, selects a receiver-local strategy and policy, and records a receiver-local decision. The imported context is evidence for a local decision, not an instruction to allow, deny, quarantine, revoke, suspend, or select a restriction duration.
+\textbf{Motivating pattern.} Public accounts of a July 2026 incident involving OpenAI and Hugging Face illustrate the pattern: activity observed during one domain's evaluation later affected another organization's infrastructure, where the receiver detected and contained it \cite{openaiHfIncident,hfAgentIntrusion}. Those accounts do not establish whether origin evidence could have reached the receiver before its first harmful action, and this paper makes no incident-specific prevention claim.
 
-The key question is timing. Imported context is useful only while it arrives within the containment window of a consequential action. It may prospectively prevent an early action, reduce blast radius after an initial action, or become forensic and coordination evidence after all relevant actions have completed. This paper evaluates that timing dependence together with authority preservation, failure behavior, and availability cost.
+\textbf{The protocol question.} The question is not whether an organization can publish or consume threat intelligence. It is whether signed evidence observed elsewhere should affect authorization of one pending agent action at a receiver. That requires a per-event contract: the receiver must check freshness, receipt correlation, subject, resource namespace, capability class, scope, and provenance against its own session and authorization state before its policy can use the evidence. TCOP, used here as a protocol name rather than an acronym, supplies this evidence-to-authorization contract and an action-relative timing model. It specifies evidence exchange and receiver acceptance, not the response strategy. Course of action, target selection, policy, and gateway enforcement remain with the receiving domain.
 
-This paper makes four contributions:
+Figure~\ref{fig:architecture} positions TCOP at the agent-action authorization boundary. An origin can send bounded runtime evidence to Domain B, but it cannot invoke Domain B's gateway or select a restriction. The receiver independently chooses a strategy, such as exact binding, monitoring, campaign correlation, or a broader guard, before its policy decides the pending action.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{architecture}
+\caption{TCOP architecture. TCOP transports signed runtime evidence to a receiver-local authorization boundary; Domain A cannot invoke Domain B's gateway.}
+\label{fig:architecture}
+\end{figure*}
+
+Timing determines whether imported evidence can affect a consequential agent action. A receiver can prospectively block an early action, reduce blast radius after an initial action, or retain late evidence for coordination after relevant actions have completed. This paper evaluates that timing dependence together with authority preservation, failure behavior, protocol validation, and availability cost.
+
+The contributions are:
 \begin{itemize}
-\item a receiver-sovereign architecture and signed-context protocol boundary for cross-domain early warning;
-\item a containment-window model that distinguishes prospective prevention from subsequent blast-radius reduction;
-\item deterministic matched evaluation with frozen strategies and explicit exclusions for unmatched local policies; and
-\item live-agent trace capture, strict replay, physical federation, and reference-gateway validation with no remote enforcement success.
+\item a versioned runtime-evidence-to-authorization boundary for cross-domain agent actions, with receipt-bound, scoped, freshness-checked receiver acceptance, receiver-only decisions, and a separation between protocol acceptance and receiver strategy;
+\item a containment-window model and matched causal accounting that distinguish prospective blocking from subsequent blast-radius reduction; and
+\item an evidence package spanning deterministic pairs, frozen replay, a single-environment reference-path deployment with a gateway, a mixed-action validation cohort, post-denial substitution replay, external-warning coverage and admission, hostile-peer pressure, correlation ambiguity, and receiver-validator mutations.
 \end{itemize}
-
-\input{tables/generated/tab-design-requirements}

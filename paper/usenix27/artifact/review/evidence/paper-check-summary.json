@@ -1,5 +1,5 @@
 {
-  "body_pages": 5,
+  "body_pages": 13,
   "checks": {
     "anonymity": true,
     "claims": true,
@@ -10,5 +10,5 @@
   },
   "missing": [],
   "paper_check": "pass",
-  "total_pages": 8
+  "total_pages": 17
 }

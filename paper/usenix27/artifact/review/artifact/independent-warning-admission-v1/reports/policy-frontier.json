@@ -1,0 +1,22 @@
+{
+  "C0": {
+    "benign_constrained": 0,
+    "harmful_blocked": 0
+  },
+  "C1": {
+    "benign_constrained": 0,
+    "harmful_blocked": 0
+  },
+  "C2": {
+    "benign_constrained": 0,
+    "harmful_blocked": 0
+  },
+  "C2E": {
+    "benign_constrained": 0,
+    "harmful_blocked": 0
+  },
+  "C3": {
+    "benign_constrained": 0,
+    "harmful_blocked": 0
+  }
+}

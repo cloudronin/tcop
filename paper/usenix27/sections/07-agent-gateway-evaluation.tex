@@ -1,20 +1,16 @@
 \section{Agent, Replay, and Gateway Evaluation}
-\label{sec:agent-gateway}
 
-We separate live trace generation from causal evaluation. A credentialed model runtime generated action attempts in a bounded synthetic environment. The model did not judge security outcomes. The certified cohort contains \LiveTraces{} eligible traces with no model error or refusal recorded in the cohort. We freeze these action traces and compare treatments through strict replay, avoiding model nondeterminism in the paired evidence.
+\subsection{Live trace generation and admission}
 
-\input{tables/generated/tab-live-cohort}
+We separate live trace generation from enforcement causality. A credentialed model runtime generated action attempts in a bounded synthetic environment. The certified cohort contains \LiveTraces{} eligible traces with no model error or refusal recorded in the cohort. We freeze the resulting action traces and compare treatments through strict replay, avoiding model nondeterminism in the paired evidence.
 
-\input{tables/generated/tab-physical-end-to-end}
+The cohort covers synthetic prompt-injection propagation, synthetic credential and tool misuse, and a frozen benign metadata-write workflow. Eligibility is established from the captured action opportunity rather than from a model refusal or safe early termination.
 
-The strict replay matrix contains \LiveReplayPairs{} paired comparisons. In the physical reference path, \PhysicalFederationExchanges{} signed exchanges traverse \texttt{tcopd}-A to \texttt{tcopd}-B, followed by a receiver-local evaluator and Docker MCP Gateway. Figure~\ref{fig:physical} shows a prospective arm, a no-context arm, and a late arm. The latter still blocks later opportunities but never claims to undo completed calls.
+\subsection{Strict replay and timing}
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{physical-timing}
-\caption{Physical end-to-end timing result. The late arm separates already forwarded harmful calls from subsequent calls blocked by a Domain-B-local decision.}
-\label{fig:physical}
-\end{figure}
+Each strict replay presents the same captured agent-action sequence, local policy, strategy, gateway configuration, and receiver-local monitor conditions to local-only and TCOP treatments. The controlled difference is whether and when accepted signed runtime evidence is available. A replay records evidence receipt, local correlation, local decision change, gateway outcome, and the affected agent-action opportunity.
+
+The strict replay matrix contains \LiveReplayPairs{} paired comparisons. Figure~\ref{fig:replay-timing} reports action-relative placements. Early and boundary placements represent the tested preauthorization region; later placements can affect only later opportunities. The complete treatment table and normalized timing summary retain their denominators in Appendix~\ref{app:extended-results}.
 
 \begin{figure*}[t]
 \centering
@@ -23,12 +19,41 @@ The strict replay matrix contains \LiveReplayPairs{} paired comparisons. In the 
 \label{fig:replay-timing}
 \end{figure*}
 
-\input{tables/generated/tab-replay-timing}
+\subsection{Post-denial substitution replay}
 
-The reported sub-millisecond values are local deterministic harness measurements. They characterize implementation overhead within the test harness and do not estimate production or inter-organizational latency. The Docker MCP Gateway is a reference enforcement point, not a literal reproduction of a public defensive architecture.
+The separately rooted post-denial substitution study compares receiver-local strategies through the same TCOP acceptance boundary. It holds \AdaptiveStrictEpisodes{} policy-conditioned replay episodes fixed across \AdaptiveInitialBlocked{} frozen traces per policy. Every imported-evidence policy blocks the initial exact-bound action; \AdaptiveEligibleHarmfulBranches{} traces then have an eligible harmful capability, session, or delegation substitution. Exact Binding (C2) permits all \AdaptiveCTwoPostDenialCompleted{} substitutions, whereas Arrival Guard (C1), Campaign Correlation (C2E), and Standing Guard (C3) block them. Campaign Correlation uses a predeclared receiver-local relation, not a sender-provided enforcement field. Each imported-evidence strategy forwards all \AdaptiveBenignFallbacks{} of \AdaptiveBenignFallbacks{} exercised predeclared safe fallback actions. These safe fallbacks are a distinct in-campaign benign-continuation branch that the frozen policies explicitly forward after the initial denial. They are not the same-risk outside-campaign benign population on which the frontier measures Arrival Guard and Standing Guard collateral restriction.
 
-\paragraph{Adaptive authorization boundary.}
-The separately sealed adaptive-authorization study evaluates 20 frozen traces under five receiver policies, yielding 100 strict replay episodes. Every imported-evidence policy denies the initial exact-bound action. Exact matching alone permits 15 eligible post-denial harmful substitutions across capability, session, and delegation branches; the predeclared receiver-local campaign relation in C2E closes those branches in this reference model. Twelve bounded runtime episodes exercise the same declared branch graph and are reported separately from strict replay. These are policy-conditioned conformance results, not an estimate of adaptive behavior in deployment.
+The study also retains \AdaptiveLiveEpisodes{} bounded reference-runtime episodes. The runtime follows a predeclared harmful substitution branch after denial in \AdaptiveLiveAdapted{} episodes and a safe fallback in \AdaptiveLiveDidNotAdapt{} episodes. These runtime observations establish branch representability in the evaluated environment. The strict replay supplies the policy-conditioned conformance result; neither component estimates behavior prevalence in deployment.
 
-\paragraph{C2E selectivity frontier.}
-The separately sealed C2E-frontier study evaluates 30 predeclared logical actions under the same five policies, yielding 150 deterministic episodes. C2E blocks all ten harmful actions, including all five campaign-linked non-exact substitutions, while constraining none of the 20 benign actions. C1 and C3 block the same ten harmful actions but constrain ten benign same-risk actions; C2 constrains none but blocks only the five exact-bound harmful actions. In particular, C2E forwards all five benign same-risk actions outside the campaign that C1 and C3 constrain. Under the predeclared decision rule, this is a central policy-frontier result for the receiver-local reference model, not a claim about deployment prevalence or universal containment.
+\paragraph{Campaign Correlation strategy frontier:}
+The separately sealed frontier evaluates \FrontierEpisodes{} deterministic policy episodes over \FrontierHarmfulAttempted{} harmful and \FrontierBenignAttempted{} benign logical actions. Its composition is fixed before policy execution (Table~\ref{tab:c2e-frontier-composition}): exact-bound and non-exact harmful actions share the \texttt{sensitive-write} risk family; the latter carry a receiver-established session-lineage relation. The same-risk benign actions outside a campaign retain that risk family but have a receiver-local campaign miss. Arrival Guard and Standing Guard block the same harmful population but constrain \FrontierCOneBenignConstrained{} and \FrontierCThreeBenignConstrained{} benign actions; Exact Binding blocks only \FrontierCTwoHarmfulBlocked{} harmful actions. Campaign Correlation blocks all \FrontierCampaignHarmfulBlocked{} campaign-linked non-exact harmful substitutions and forwards all \FrontierOutsideCampaignBenignForwarded{} benign same-risk actions outside the campaign. The receiver policy contract permits a declared delegation edge, but this frontier exercises session lineage only. Invalid, expired, and replayed context is rejected. Valid sender-suggested-only context is monitor-only, and the study records \FrontierUnrelatedRestrictions{} unrelated restrictions.
+
+\input{tables/generated/tab-c2e-frontier}
+
+\input{tables/generated/tab-c2e-frontier-composition}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.94\columnwidth]{c2e-policy-frontier}
+\caption{Receiver-local policy frontier in the sealed deterministic Campaign Correlation study. Arrival Guard and Standing Guard overlap at 10 benign actions constrained and 10 harmful actions blocked. The plotted points characterize configurable receiver strategies, not a mandatory TCOP response.}
+\label{fig:c2e-policy-frontier}
+\end{figure}
+
+\subsection{Single-environment reference-path deployment}
+
+This experiment exercises the complete software path from \texttt{tcopd}-A through signed exchange, \texttt{tcopd}-B, the receiver-local evaluator, and the MCP gateway in one reference environment; it does not evaluate physical or administrative network separation. The \PhysicalFederationExchanges{} signed evidence exchanges traverse \texttt{tcopd}-A to \texttt{tcopd}-B, followed by the evaluator and Docker MCP Gateway. Figure~\ref{fig:physical} shows a prospective arm, a no-evidence arm, and a late arm; the late arm separates completed calls from later authorization opportunities.
+
+An arm is one complete execution. The table reports harmful gateway-call attempts separately from complete arms and signed exchanges, so these accounting units are not conflated. In every tested reference-deployment block, the recorded authorization cites a Domain-B-local policy and decision. The result establishes executable composition of the signed relay, evaluator, and gateway adapter. The evaluated processes run in one reference environment; this result does not claim a multi-host deployment.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{physical-timing}
+\caption{Single-environment reference-path timing result. The late arm separates already forwarded harmful calls from subsequent calls blocked by a Domain-B-local decision.}
+\label{fig:physical}
+\end{figure}
+
+\input{tables/generated/tab-physical-end-to-end}
+
+\subsection{Measured scope}
+
+The reported sub-millisecond values characterize the local deterministic harness. The single-environment reference-path deployment establishes that the tested relay, evaluator, and gateway adapter compose; strict replay supplies the controlled counterfactual. The timing treatments vary delivery relative to a receiver-local authorization boundary in synthetic action sequences. They do not reconstruct or draw measurements from a public incident.

@@ -1,3 +1,3 @@
 # Citation Audit
 
-Draft status: related-work categories are mapped, but verified bibliographic citations remain TODOs. The draft makes no novelty-priority claim and uses no unverified factual literature assertion. Before submission, add and verify citations for STIX/TAXII, MISP, zero trust, RATS, SPIFFE/SPIRE, distributed and cooperative intrusion response, policy decision/enforcement, agent prompt-injection defenses, and MCP gateway authorization.
+The manuscript cites primary standards or authoritative sources for STIX/TAXII, MISP, RID, DOTS, OpenC2, CACAO, zero trust, RATS, SPIFFE federation, MCP authorization, A2A, ANP, and the motivating incident. It also cites peer-reviewed work on SOAR use, macaroons, collaborative intrusion detection, and agent prompt injection. Related work is framed as a design comparison, not as a first-system claim.

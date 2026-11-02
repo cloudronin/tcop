@@ -1,30 +1,162 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{hf-timeline-2026}
+\bibitem{a2aSpec}
+{A2A Project}.
+\newblock Agent2agent (a2a) protocol specification.
+\newblock A2A Protocol v1.0, 2026.
+\newblock Version 1.0.1 current at access; accessed August 2, 2026.
+
+\bibitem{anpSpec}
+{Agent Network Protocol}.
+\newblock Agent network protocol.
+\newblock Protocol overview, 2026.
+\newblock Overview page; accessed August 2, 2026.
+
+\bibitem{birgisson2014macaroons}
+Arnar Birgisson, Joe~Gibbs Politz, {\'U}lfar Erlingsson, Ankur Taly, Michael
+  Vrable, and Mark Lentczner.
+\newblock Macaroons: Cookies with contextual caveats for decentralized
+  authorization in the cloud.
+\newblock In {\em Network and Distributed System Security Symposium}. Internet
+  Society, 2014.
+
+\bibitem{rats}
+Henk Birkholz, Dave Thaler, Michael Richardson, Ned Smith, and Wei Pan.
+\newblock Remote {AT}testation procedure{S} ({RATS}) architecture.
+\newblock RFC 9334, Internet Engineering Task Force, 2023.
+
+\bibitem{keynote99}
+Matt Blaze, Joan Feigenbaum, John Ioannidis, and Angelos~D. Keromytis.
+\newblock The {KeyNote} trust-management system version 2.
+\newblock RFC 2704, Internet Engineering Task Force, 1999.
+
+\bibitem{bridges23}
+Robert~A. Bridges, Ashley~E. Rice, Timothy~S. Oesch, Jeffrey~A. Nichols,
+  Cory~L. Watson, Kevin~D. Spakes, Savannah~A. Norem, Michael~R. Huettel,
+  Brian~C. Jewell, Brian Weber, Connor~M. Gannon, Olivia~M. Bizovi, Samuel~C.
+  Hollifield, and Samantha~H. Erwin.
+\newblock Testing {SOAR} tools in use.
+\newblock {\em Computers \& Security}, 129:103201, 2023.
+
+\bibitem{bye2010}
+Rainer Bye, Seyit~Ahmet Camtepe, and Sahin Albayrak.
+\newblock Collaborative intrusion detection framework: Characteristics,
+  adversarial opportunities and countermeasures.
+\newblock In {\em Workshop on Collaborative Methods for Security and Privacy}.
+  USENIX Association, 2010.
+
+\bibitem{agentDojo}
+Edoardo Debenedetti, Jie Zhang, Mislav Balunovi{\'c}, Luca Beurer-Kellner, Marc
+  Fischer, and Florian Tram{\`e}r.
+\newblock Agentdojo: A dynamic environment to evaluate prompt injection attacks
+  and defenses for {LLM} agents.
+\newblock In {\em Advances in Neural Information Processing Systems}, 2024.
+
+\bibitem{mispCore}
+Alexandre Dulaunoy and Andras Iklody.
+\newblock {MISP} core format.
+\newblock Internet-Draft, draft-20, November 2025.
+\newblock Work in progress; accessed August 2, 2026.
+
+\bibitem{hardy88}
+Norman Hardy.
+\newblock The confused deputy: Or why capabilities might have been invented.
+\newblock {\em ACM SIGOPS Operating Systems Review}, 22(4):36--38, 1988.
+
+\bibitem{nistAbac}
+Vincent~C. Hu, David~F. Ferraiolo, Rick Kuhn, Adam Schnitzer, Kenneth Sandlin,
+  Robert Miller, and Karen Scarfone.
+\newblock Guide to attribute based access control ({ABAC}) definition and
+  considerations.
+\newblock Special Publication 800-162, National Institute of Standards and
+  Technology, 2014.
+
+\bibitem{hfAgentIntrusion}
 {Hugging Face}.
-\newblock Technical timeline of the {July} 2026 agent intrusion.
-\newblock \url{https://huggingface.co/blog/agent-intrusion-technical-timeline},
-  2026.
+\newblock Anatomy of a frontier lab agent intrusion: A technical timeline of
+  the july 2026 incident.
+\newblock Hugging Face technical timeline, July 27, 2026, 2026.
+\newblock Accessed August 2, 2026.
 
-\bibitem{metr-hf-2026}
-{METR}.
-\newblock Investigation of the {OpenAI} {Hugging Face} incident.
-\newblock
-  \url{https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/},
-  August 2026.
+\bibitem{cacao20}
+Bret Jordan, Allan Thomson, Vasileios Mavroeidis, and Mateusz Zych.
+\newblock {CACAO} security playbooks version 2.0.
+\newblock OASIS Committee Specification 01, 2023.
 
-\bibitem{nemoclaw-2026}
-{NVIDIA Corporation}.
-\newblock {NemoClaw}: An open source reference stack for running {AI} agents
-  inside {OpenShell} sandboxes.
-\newblock \url{https://github.com/NVIDIA/NemoClaw}, 2026.
-\newblock Announced at GTC, March 16, 2026. Alpha software.
+\bibitem{liu2024prompt}
+Yupei Liu, Yuqi Jia, Runpeng Geng, Jinyuan Jia, and Neil~Zhenqiang Gong.
+\newblock Formalizing and benchmarking prompt injection attacks and defenses.
+\newblock In {\em 33rd USENIX Security Symposium}. USENIX Association, 2024.
 
-\bibitem{usenixTemplate}
-{USENIX Association}.
-\newblock Templates for conference papers.
-\newblock
-  \url{https://www.usenix.org/conferences/author-resources/paper-templates}.
-\newblock Accessed for the anonymous draft build.
+\bibitem{promptGuardTwo}
+{Meta Llama}.
+\newblock Llama prompt guard 2 86m model card.
+\newblock Hugging Face model card, 2025.
+
+\bibitem{mcpAuthorization}
+{Model Context Protocol}.
+\newblock Authorization.
+\newblock Model Context Protocol Specification, 2025-06-18, 2025.
+\newblock Versioned specification URL; accessed August 2, 2026.
+
+\bibitem{rid12}
+Kathleen Moriarty.
+\newblock Real-time inter-network defense ({RID}).
+\newblock RFC 6545, Internet Engineering Task Force, 2012.
+
+\bibitem{stix21}
+{OASIS Cyber Threat Intelligence Technical Committee}.
+\newblock {STIX} version 2.1.
+\newblock OASIS Standard, 2021.
+
+\bibitem{taxii21}
+{OASIS Cyber Threat Intelligence Technical Committee}.
+\newblock {TAXII} version 2.1.
+\newblock OASIS Standard, 2021.
+
+\bibitem{openaiHfIncident}
+{OpenAI}.
+\newblock {OpenAI} and {Hugging Face} partner to address security incident
+  during model evaluation.
+\newblock OpenAI public incident update, July 21, 2026, 2026.
+\newblock Accessed August 2, 2026.
+
+\bibitem{dots21}
+Tirumaleswar Reddy, Dan Wing, Mohamed Boucadair, and Jan Medved.
+\newblock Distributed denial-of-service open threat signaling ({DOTS}) signal
+  channel specification.
+\newblock RFC 9132, Internet Engineering Task Force, 2021.
+
+\bibitem{openc2v1}
+Jason Romano and Duncan Sparrell.
+\newblock Open command and control ({OpenC2}) language specification version
+  1.0.
+\newblock OASIS Committee Specification Draft, 2018.
+
+\bibitem{nistZta}
+Scott Rose, Oliver Borchert, Stu Mitchell, and Sean Connelly.
+\newblock Zero trust architecture.
+\newblock Special Publication 800-207, National Institute of Standards and
+  Technology, 2020.
+
+\bibitem{dshieldFeeds}
+{SANS Internet Storm Center}.
+\newblock Using {DShield}'s data feeds.
+\newblock SANS Internet Storm Center documentation, 2026.
+\newblock Accessed August 2, 2026.
+
+\bibitem{spiffeFederation}
+{SPIFFE Community}.
+\newblock {SPIFFE} federation.
+\newblock SPIFFE Standard, 2026.
+\newblock Versioned specification URL; accessed August 2, 2026.
+
+\bibitem{zhan2024injecagent}
+Qiusi Zhan, Zhixiang Liang, Zifan Ying, and Daniel Kang.
+\newblock {InjecAgent}: Benchmarking indirect prompt injections in
+  tool-integrated large language model agents.
+\newblock In {\em Findings of the Association for Computational Linguistics:
+  ACL 2024}, pages 10471--10506. Association for Computational Linguistics,
+  2024.
 
 \end{thebibliography}

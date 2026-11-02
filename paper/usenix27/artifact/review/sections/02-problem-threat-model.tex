@@ -1,7 +1,23 @@
-\section{Problem and Threat Model}
+\section{Problem, Goals, and Threat Model}
 
-We consider independently governed trust domains that run agents or automation with local observers and enforceable local choke points. Agents, observers, and peer domains can be honest, compromised, or faulty. Adversaries can relay, replay, delay, or suppress cross-domain messages; a peer can be malicious; and a network can partition. The receiving enforcement boundary is trusted only insofar as the receiver controls its policy and authorization adapter.
+\subsection{System model and design goal}
 
-TCOP assumes that at least one participating domain detects a useful fact, that the receiver has an enforceable choke point, and that public-key identity and peer authorization exist. The receiver's policy is outside remote control. TCOP does not guarantee that any observation is true, and a cross-domain context cannot directly invoke enforcement.
+We consider independently governed authorization boundaries that run agents or automation with local observers and enforceable local choke points. Domain A observes an event involving its own agent, workload, or telemetry. Domain B owns a downstream tool, resource, or gateway for a pending agent action. Domains may authenticate one another, but they do not share a policy engine or an enforcement API. Identity federation establishes who signed evidence; it does not confer authority to act in another domain.
 
-Out of scope are preventing an undetected origin compromise, global consensus, replacing endpoint, identity, or monitoring systems, real-world actor attribution, production-scale Internet federation, and rollback of completed harmful actions. The implementation evaluates a bounded synthetic reference deployment rather than an uninstrumented incident.
+TCOP permits runtime evidence observed in Domain A to influence a timely, scoped, and auditable Domain-B authorization decision for that pending action. The receiver can reject evidence, record a monitor-only disposition, restrict a narrow capability, or apply its own failure policy. The boundary follows the familiar policy-decision and policy-enforcement separation in zero-trust architectures while adding cross-domain runtime evidence \cite{nistZta,nistAbac}.
+
+\subsection{Adversary and trust assumptions}
+
+Agents, observers, and peer domains can be honest, compromised, or faulty. An adversary can relay, replay, delay, suppress, or reorder messages. An authorized peer can emit a syntactically valid but incorrect observation. A compromised client can present a valid receipt outside its intended session, and a stale local decision can survive a gateway restart unless the receiver checks current state. Domain B's enforcement boundary is trusted only to the extent that Domain B controls its policy and authorization adapter.
+
+TCOP assumes a participating domain detects a useful fact, the receiver has an enforceable local agent-action choke point, and peer authorization plus public-key identity exist. The receiver binds accepted evidence to local state through a receipt or another locally governed mechanism. A signature authenticates a sender and protects the exchanged object; it does not establish observation truth or determine a response. This separation parallels remote-attestation architectures, which distinguish evidence from appraisal \cite{rats}.
+
+\subsection{Evaluated properties and scope}
+
+The protocol goal is not to make a remote observation self-executing. TCOP evaluates five receiver-side protocol properties: authenticated provenance; freshness and replay resistance; correlation and scope integrity; receiver sovereignty; and failure ownership. It evaluates these together with the non-retroactivity accounting rule. Table~\ref{tab:security-goals} maps each property and rule to the receiver mechanism and the evidence that supports its current claim boundary.
+
+\input{tables/security-goals}
+
+The tested receiver path checks these properties before an agent-action gateway disposition. Replayed, expired, unauthorized, or uncorrelated evidence was rejected in every tested control condition. The validation-value cohort adds valid-but-hostile warnings, subject and resource mismatches, concurrent receipt ambiguity, and action-like metadata smuggling. It tests a reference implementation rather than proving the properties for all protocol implementations.
+
+Table~\ref{tab:limitations} concentrates the claim boundary. The paper evaluates synthetic tools and scenarios, receipt-based correlation, one reference gateway, local-harness performance, and a frozen model/runtime selection. It does not establish detection quality, observation truth, production-scale federation, global consensus, key-lifecycle operation, or rollback of completed actions.

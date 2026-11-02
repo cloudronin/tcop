@@ -1,0 +1,10 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Receiver-local strategy frontier. The same 10 harmful and 20 benign logical actions are evaluated per policy; this is a deterministic reference-policy result.}
+\begin{tabular}{@{}p{0.48\columnwidth}cc@{}}\toprule
+Strategy & \shortstack{Harmful\\blocked} & \shortstack{Benign\\constrained} \\ \midrule
+Local Only (C0) & \FrontierCZeroHarmfulBlocked/\FrontierHarmfulAttempted & \FrontierCZeroBenignConstrained/\FrontierBenignAttempted \\
+Arrival Guard (C1) & \FrontierCOneHarmfulBlocked/\FrontierHarmfulAttempted & \FrontierCOneBenignConstrained/\FrontierBenignAttempted \\
+Exact Binding (C2) & \FrontierCTwoHarmfulBlocked/\FrontierHarmfulAttempted & \FrontierCTwoBenignConstrained/\FrontierBenignAttempted \\
+Campaign Correlation (C2E) & \FrontierCTwoEHarmfulBlocked/\FrontierHarmfulAttempted & \FrontierCTwoEBenignConstrained/\FrontierBenignAttempted \\
+Standing Guard (C3) & \FrontierCThreeHarmfulBlocked/\FrontierHarmfulAttempted & \FrontierCThreeBenignConstrained/\FrontierBenignAttempted \\ \bottomrule
+\end{tabular}\label{tab:c2e-frontier}\end{table}

@@ -1,0 +1,10 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Mixed-action validation-value cohort governed by a sealed pre-analysis plan. Full-cohort harmful counts include mismatched-warning controls; the accepted binding-matched subset is reported separately in the text.}
+\begin{tabular}{@{}p{0.43\columnwidth}rr@{}}\toprule
+Condition & \shortstack{Harmful\\blocked} & \shortstack{Benign\\constrained} \\ \midrule
+Local Only (C0) & \CZeroHarmfulBlocked/\ValidationEpisodes & \CZeroBenignConstrained/\ValidationEpisodes \\
+Arrival Default Allow (C1-allow) & \COneAllowHarmfulBlocked/\ValidationEpisodes & \COneAllowBenignConstrained/\ValidationEpisodes \\
+Arrival Guard (C1-class) & \COneClassHarmfulBlocked/\ValidationEpisodes & \COneClassBenignConstrained/\ValidationEpisodes \\
+Exact Binding (C2) & \CTwoHarmfulBlocked/\ValidationEpisodes & \CTwoBenignConstrained/\ValidationEpisodes \\
+Standing Guard (C3) & \CThreeHarmfulBlocked/\ValidationEpisodes & \CThreeBenignConstrained/\ValidationEpisodes \\ \bottomrule
+\end{tabular}\label{tab:validation-value}\end{table}

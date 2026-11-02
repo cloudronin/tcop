@@ -1,0 +1,11 @@
+{
+  "candidate_counts": {
+    "attack_bearing:no_warning": 47,
+    "attack_bearing:tcx.prompt_attack": 25,
+    "benign:no_warning": 96
+  },
+  "selected_counts": {
+    "attack_bearing:tcx.prompt_attack": 12,
+    "benign:no_warning": 12
+  }
+}

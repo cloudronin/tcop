@@ -1,0 +1,10 @@
+[
+  {
+    "claim": "frozen-cohort receiver admission dispositions",
+    "status": "supported"
+  },
+  {
+    "claim": "detector quality, field prevalence, deployment effectiveness",
+    "status": "unsupported"
+  }
+]

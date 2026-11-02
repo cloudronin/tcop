@@ -1,5 +1,21 @@
 \section{Receiver-Local Resolution and Enforcement}
 
-The receiving pipeline is context validation, local correlation, receiver-local strategy selection, receiver-local policy evaluation, receiver-local decision creation, and gateway enforcement. A gateway patch is intentionally generic: it calls a local authorization-evaluator interface and does not embed TCOP resolver or strategy logic. Authorization caching is disabled for correctness and counterfactual replay; a separately predeclared performance selection evaluates caching without changing the correctness path.
+The receiving pipeline is runtime-evidence validation, local correlation, receiver-local strategy selection, policy evaluation, decision creation, and gateway enforcement for a pending agent action. The ordering matters. Evidence that cannot be correlated to a current local subject cannot affect an unrelated session, and accepted evidence has no direct mapping to an enforcement action.
 
-The evaluated authority invariant is strong: every gateway block must cite a Domain-B-local policy and decision, and remotely supplied TCX fields must never be interpreted as an enforcement action. The physical evaluation contains \PhysicalArms{} gateway arms and records \RemoteEnforcementSuccesses{} remote enforcement successes. Its authorization audit and all physical blocks satisfy the Domain-B provenance requirement.
+\subsection{Local decision path}
+
+The receiver evaluates the chain: accepted imported evidence $\rightarrow$ local correlation $\rightarrow$ policy evaluation $\rightarrow$ local decision $\rightarrow$ gateway authorization. The implementation records the receipt reference, accepted evidence, policy identity, decision identity, and enforcement result. This makes a changed agent-action authorization traceable to the receiver's own decision path rather than to the arrival of a remote message alone.
+
+The gateway adapter calls a local authorization-evaluator interface and does not embed TCX resolver or strategy logic. This mirrors the policy-decision and policy-enforcement split in zero-trust architecture \cite{nistZta}. The reference enforcement point is a Docker MCP Gateway tool-call boundary; MCP's own authorization flow remains responsible for client access \cite{mcpAuthorization}.
+
+\subsection{Validation and failure handling}
+
+The validation-value study exercises receiver checks through \ValidatorMutationCases{} deterministic mutations. Signature, issuer, version, receipt, expiry, and replay faults created no restriction in every case exercised. A valid message that contained action-like \texttt{action} or \texttt{enforcement} metadata was accepted only as evidence; those remote fields were ignored when the receiver created its local decision. Table~\ref{tab:protocol-assurance} reports this along with the correlation and hostile-peer checks.
+
+Authorization caching is disabled for correctness and counterfactual replay. Each authorization checks current receiver-local state, preventing an old decision from being reused after a context change. A separate fixed-time-to-live cache selection measures local overhead without changing the correctness path.
+
+The receiver also owns failure behavior. If \texttt{tcopd-B} is unavailable or the authorization interface times out, the sender does not choose fail-open or fail-closed semantics. Domain B applies the disposition in its local policy. A gateway restart recomputes local state, and a stale decision is rejected rather than treated as a remote instruction.
+
+\subsection{Authority evidence}
+
+The single-environment reference-path deployment checks an authority invariant: every observed gateway block cites a Domain-B-local policy and decision. The \PhysicalArms{} reference-path arms exercise signed federation, local validation, a receiver evaluator, and the gateway adapter. They verify the reference path's provenance behavior; they are not an adversarial attempt to compel remote enforcement. The receiver-validator mutation that carries remote action metadata supplies the direct misuse control for that behavior.

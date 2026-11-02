@@ -1,0 +1,14 @@
+{
+  "forbidden_inputs": [
+    "benchmark_truth",
+    "future_outcomes",
+    "remote_enforcement"
+  ],
+  "receiver_local_only": true,
+  "sender_suggested_relation": "monitor_only",
+  "strong_relations": [
+    "session_lineage",
+    "declared_delegation_edge"
+  ],
+  "ttl_ticks": 3
+}

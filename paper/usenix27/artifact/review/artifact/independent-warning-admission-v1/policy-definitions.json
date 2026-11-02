@@ -1,0 +1,7 @@
+{
+  "C0": "local-only",
+  "C1": "arrival guard",
+  "C2": "exact binding",
+  "C2E": "exact plus bounded local escalation",
+  "C3": "standing guard"
+}

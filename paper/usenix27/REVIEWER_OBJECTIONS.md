@@ -9,7 +9,7 @@
 | Does receipt correlation require cooperation? | Architecture | Opaque Domain-B receipt records | Yes, evaluated path assumes prior inter-domain cooperation | Calling receipt universally deployable |
 | Can false warnings be weaponized? | Security and availability | RA-03 utility rows and restriction records | Synthetic false-warning treatments only | Claiming zero benign cost |
 | Why not one global monitor? | Deterministic evaluation | Fact-equivalent central audit | No universal central comparison | Claiming universal superiority |
-| Are timing labels misleading? | Containment window | Causal replay barriers and physical arms | Discrete schedule only | Using outside-window without the action |
+| Are timing labels misleading? | Containment window | Causal replay barriers and end-to-end reference-deployment arms | Discrete schedule only | Using outside-window without the action |
 | Does late context contradict the model? | Containment window | Late arm separates completed and later calls | No reversal of completed harm | Saying late context undoes harm |
 | Why exclude balanced and utility pairs? | Deterministic evaluation | Exclusion ledger | Matched policies were unavailable | Presenting unmatched causal comparison |
 | Is workflow completion too disruptive? | Availability analysis | Utility report and figure | Measured only in selected synthetic treatments | Treating it as a universal rate |
