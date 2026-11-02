@@ -1,0 +1,8 @@
+{
+  "exclusion_reason": "no frozen episode has both a matching harmful action and a nonmatching benign action in the same guarded capability class",
+  "frozen_benign_calls": 360,
+  "frozen_live_replay_pairs": 220,
+  "frozen_live_traces": 44,
+  "frozen_strict_pairs": 54,
+  "selectivity_cohort": "controlled policy-selectivity fixture"
+}

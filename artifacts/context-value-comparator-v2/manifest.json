@@ -1,0 +1,23 @@
+{
+  "artifact_type": "context-value-comparator",
+  "complete": true,
+  "controls_executed": true,
+  "controls_passed": true,
+  "normalized_row_count": 3824,
+  "replayable": true,
+  "result_digest": "6d8f6583897b4c5737fc1d6c3ce86df13473d167e867d6707ed00d63a120662f",
+  "root_digest_excludes": [
+    ".DS_Store",
+    "artifact-root-digest.json",
+    "environment.sidecar.json"
+  ],
+  "source_dependencies_unmodified": true,
+  "supersedes": {
+    "artifact": "artifacts/context-value-comparator-v1",
+    "artifact_root_digest": "2a7c267f69aa736122de7366359983e838ba29316e142957c7e8049d63cbf421",
+    "change": "v1 controls were asserted without execution; v2 executes each control through the receiver intake and computes passed from the observed outcome",
+    "normalized_rows_identical": true,
+    "result_digest": "6d8f6583897b4c5737fc1d6c3ce86df13473d167e867d6707ed00d63a120662f"
+  },
+  "version": "tcop.context-value-comparator/2.0"
+}

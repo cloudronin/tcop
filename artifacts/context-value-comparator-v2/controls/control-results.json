@@ -1,0 +1,731 @@
+[
+  {
+    "condition": "C0",
+    "control": "invalid_signature",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "intake_restriction_created": false,
+      "policy_reason": "frozen_local_only",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C1",
+    "control": "invalid_signature",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "intake_restriction_created": false,
+      "policy_reason": "arrival_only_allow",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C2",
+    "control": "invalid_signature",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "intake_restriction_created": false,
+      "policy_reason": "context_not_active",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C3",
+    "control": "invalid_signature",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "signature_invalid",
+      "intake_restriction_created": false,
+      "policy_reason": "always_guarded_capability",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C0",
+    "control": "unknown_receipt",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "intake_restriction_created": false,
+      "policy_reason": "frozen_local_only",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C1",
+    "control": "unknown_receipt",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "intake_restriction_created": false,
+      "policy_reason": "arrival_only_allow",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C2",
+    "control": "unknown_receipt",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "intake_restriction_created": false,
+      "policy_reason": "context_not_active",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C3",
+    "control": "unknown_receipt",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "receipt_unknown",
+      "intake_restriction_created": false,
+      "policy_reason": "always_guarded_capability",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C0",
+    "control": "expired_context",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "expired",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "expired",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "expired",
+      "intake_restriction_created": false,
+      "policy_reason": "frozen_local_only",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C1",
+    "control": "expired_context",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "expired",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "expired",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "expired",
+      "intake_restriction_created": false,
+      "policy_reason": "arrival_only_allow",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C2",
+    "control": "expired_context",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "expired",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "expired",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "expired",
+      "intake_restriction_created": false,
+      "policy_reason": "context_not_active",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C3",
+    "control": "expired_context",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "expired",
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": false,
+      "code": "expired",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "expired",
+      "intake_restriction_created": false,
+      "policy_reason": "always_guarded_capability",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C0",
+    "control": "replayed_context",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "context_replayed",
+      "first_submission_accepted": true,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "decision_authority": "partner-platform",
+      "effective_evidence_class": "independent_peer",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "receipt_verified": true,
+      "remote_action_fields_ignored": [],
+      "restricted_capabilities": [
+        "credential.use",
+        "dataset.export",
+        "repository.write",
+        "workload.spawn"
+      ],
+      "restriction_created": true
+    },
+    "intake": {
+      "accepted": false,
+      "code": "context_replayed",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "context_replayed",
+      "first_submission_accepted": true,
+      "intake_restriction_created": false,
+      "policy_reason": "frozen_local_only",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C1",
+    "control": "replayed_context",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "context_replayed",
+      "first_submission_accepted": true,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "decision_authority": "partner-platform",
+      "effective_evidence_class": "independent_peer",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "receipt_verified": true,
+      "remote_action_fields_ignored": [],
+      "restricted_capabilities": [
+        "credential.use",
+        "dataset.export",
+        "repository.write",
+        "workload.spawn"
+      ],
+      "restriction_created": true
+    },
+    "intake": {
+      "accepted": false,
+      "code": "context_replayed",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "context_replayed",
+      "first_submission_accepted": true,
+      "intake_restriction_created": false,
+      "policy_reason": "arrival_only_allow",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C2",
+    "control": "replayed_context",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "context_replayed",
+      "first_submission_accepted": true,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "decision_authority": "partner-platform",
+      "effective_evidence_class": "independent_peer",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "receipt_verified": true,
+      "remote_action_fields_ignored": [],
+      "restricted_capabilities": [
+        "credential.use",
+        "dataset.export",
+        "repository.write",
+        "workload.spawn"
+      ],
+      "restriction_created": true
+    },
+    "intake": {
+      "accepted": false,
+      "code": "context_replayed",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "context_replayed",
+      "first_submission_accepted": true,
+      "intake_restriction_created": false,
+      "policy_reason": "context_not_active",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C3",
+    "control": "replayed_context",
+    "executed": true,
+    "expected": {
+      "accepted": false,
+      "code": "context_replayed",
+      "first_submission_accepted": true,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "first_submission": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "decision_authority": "partner-platform",
+      "effective_evidence_class": "independent_peer",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "receipt_verified": true,
+      "remote_action_fields_ignored": [],
+      "restricted_capabilities": [
+        "credential.use",
+        "dataset.export",
+        "repository.write",
+        "workload.spawn"
+      ],
+      "restriction_created": true
+    },
+    "intake": {
+      "accepted": false,
+      "code": "context_replayed",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "restriction_created": false
+    },
+    "observed": {
+      "accepted": false,
+      "code": "context_replayed",
+      "first_submission_accepted": true,
+      "intake_restriction_created": false,
+      "policy_reason": "always_guarded_capability",
+      "policy_restriction_created": false,
+      "restriction_created": false,
+      "token_dispatched": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C0",
+    "control": "accepted_context",
+    "executed": true,
+    "expected": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "intake_restriction_created": true,
+      "policy_restriction_created": false,
+      "token_dispatched": true
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "decision_authority": "partner-platform",
+      "effective_evidence_class": "independent_peer",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "receipt_verified": true,
+      "remote_action_fields_ignored": [],
+      "restricted_capabilities": [
+        "credential.use",
+        "dataset.export",
+        "repository.write",
+        "workload.spawn"
+      ],
+      "restriction_created": true
+    },
+    "observed": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "intake_restriction_created": true,
+      "policy_reason": "frozen_local_only",
+      "policy_restriction_created": false,
+      "restriction_created": true,
+      "token_dispatched": true
+    },
+    "passed": true
+  },
+  {
+    "condition": "C1",
+    "control": "accepted_context",
+    "executed": true,
+    "expected": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "intake_restriction_created": true,
+      "policy_restriction_created": true,
+      "token_dispatched": true
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "decision_authority": "partner-platform",
+      "effective_evidence_class": "independent_peer",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "receipt_verified": true,
+      "remote_action_fields_ignored": [],
+      "restricted_capabilities": [
+        "credential.use",
+        "dataset.export",
+        "repository.write",
+        "workload.spawn"
+      ],
+      "restriction_created": true
+    },
+    "observed": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "intake_restriction_created": true,
+      "policy_reason": "arrival_only_blanket",
+      "policy_restriction_created": true,
+      "restriction_created": true,
+      "token_dispatched": true
+    },
+    "passed": true
+  },
+  {
+    "condition": "C2",
+    "control": "accepted_context",
+    "executed": true,
+    "expected": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "intake_restriction_created": true,
+      "policy_restriction_created": true,
+      "token_dispatched": true
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "decision_authority": "partner-platform",
+      "effective_evidence_class": "independent_peer",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "receipt_verified": true,
+      "remote_action_fields_ignored": [],
+      "restricted_capabilities": [
+        "credential.use",
+        "dataset.export",
+        "repository.write",
+        "workload.spawn"
+      ],
+      "restriction_created": true
+    },
+    "observed": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "intake_restriction_created": true,
+      "policy_reason": "context_binding_match",
+      "policy_restriction_created": true,
+      "restriction_created": true,
+      "token_dispatched": true
+    },
+    "passed": true
+  },
+  {
+    "condition": "C3",
+    "control": "accepted_context",
+    "executed": true,
+    "expected": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "intake_restriction_created": true,
+      "policy_restriction_created": false,
+      "token_dispatched": true
+    },
+    "first_submission": null,
+    "intake": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "decision_authority": "partner-platform",
+      "effective_evidence_class": "independent_peer",
+      "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+      "receipt_verified": true,
+      "remote_action_fields_ignored": [],
+      "restricted_capabilities": [
+        "credential.use",
+        "dataset.export",
+        "repository.write",
+        "workload.spawn"
+      ],
+      "restriction_created": true
+    },
+    "observed": {
+      "accepted": true,
+      "code": "accepted_independent_peer",
+      "intake_restriction_created": true,
+      "policy_reason": "always_guarded_capability",
+      "policy_restriction_created": false,
+      "restriction_created": true,
+      "token_dispatched": true
+    },
+    "passed": true
+  },
+  {
+    "condition": "C2",
+    "control": "context_target_mismatch",
+    "executed": true,
+    "expected": {
+      "policy_reason": "context_binding_mismatch",
+      "restriction_created": false
+    },
+    "observed": {
+      "policy_reason": "context_binding_mismatch",
+      "restriction_created": false
+    },
+    "passed": true
+  },
+  {
+    "condition": "C1",
+    "control": "context_target_mismatch",
+    "executed": true,
+    "expected": {
+      "policy_reason": "arrival_only_blanket",
+      "restriction_created": true
+    },
+    "observed": {
+      "policy_reason": "arrival_only_blanket",
+      "restriction_created": true
+    },
+    "passed": true
+  },
+  {
+    "condition": "C1",
+    "control": "C1_opaque_interface",
+    "executed": true,
+    "expected": {
+      "context_field_access_refused": true,
+      "fields_outside_arrival_or_local": []
+    },
+    "observed": {
+      "context_field_access_refused": true,
+      "fields_outside_arrival_or_local": []
+    },
+    "passed": true
+  },
+  {
+    "condition": "C3",
+    "control": "C3_no_tcop_message",
+    "executed": true,
+    "expected": {
+      "context_changed_decision": false,
+      "tcop_fields_used": []
+    },
+    "observed": {
+      "context_changed_decision": false,
+      "policy_reason": "always_guarded_capability",
+      "tcop_fields_used": []
+    },
+    "passed": true
+  }
+]
