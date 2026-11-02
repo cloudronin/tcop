@@ -1,0 +1,121 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 0 and seed 6560990270975595850 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 23055] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryAcceptOnlyValid.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryBounds.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Sequences.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TCOPReceiver
+Semantic processing of module CanaryBounds
+Semantic processing of module CanaryAcceptOnlyValid
+Starting... (2026-11-01 19:20:16)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-01 19:20:16.
+Error: Invariant AcceptOnlyValid is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {}
+/\ effectAt = (1 :> 0 @@ 4 :> 0)
+/\ accepted = {}
+/\ now = 0
+/\ submitAt = (1 :> 0 @@ 4 :> 0)
+/\ choice = (1 :> <<"none", "none">> @@ 4 :> <<"none", "none">>)
+/\ seenIds = {}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ status = (1 :> "unreceived" @@ 4 :> "unreceived")
+/\ Executed = <<>>
+/\ seenNonces = {}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 2: <Receive line 83, col 5 to line 96, col 64 of module TCOPReceiver>
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1}
+/\ effectAt = (1 :> 0 @@ 4 :> 0)
+/\ accepted = { [ id |-> 1,
+    nonce |-> 1,
+    message |-> 1,
+    at |-> 0,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = (1 :> 0 @@ 4 :> 0)
+/\ choice = (1 :> <<"deny_egress", d0>> @@ 4 :> <<"none", "none">>)
+/\ seenIds = {1}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ status = (1 :> "approval" @@ 4 :> "unreceived")
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 3: <Receive line 83, col 5 to line 96, col 64 of module TCOPReceiver>
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1, 4}
+/\ effectAt = (1 :> 0 @@ 4 :> 0)
+/\ accepted = { [ id |-> 1,
+    nonce |-> 1,
+    message |-> 1,
+    at |-> 0,
+    priorIds |-> {},
+    priorNonces |-> {} ],
+  [ id |-> 4,
+    nonce |-> 1,
+    message |-> 4,
+    at |-> 0,
+    priorIds |-> {1},
+    priorNonces |-> {1} ] }
+/\ now = 0
+/\ submitAt = (1 :> 0 @@ 4 :> 0)
+/\ choice = (1 :> <<"deny_egress", d0>> @@ 4 :> <<"deny_egress", d0>>)
+/\ seenIds = {1, 4}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ status = (1 :> "approval" @@ 4 :> "approval")
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+17 states generated, 16 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 8.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 3 and the 95th percentile is 3).
+Finished in 00s at (2026-11-01 19:20:16)

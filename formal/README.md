@@ -452,3 +452,114 @@ Trace checking will test the recorded behavior of that intake on every
 frozen trace. It does not prove signature checks, logging completeness,
 or truthful harm labels from the JSON alone. Amendment 004 is sealed at
 `619cb4e` and was not edited.
+
+
+## Safety-property canaries
+
+These are deliberate isolated faults, not findings in the real receiver.
+The real `TCOPReceiver.tla`, its properties, and the real configurations are
+unchanged. Its SHA-256 remains
+`8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42`.
+Each module under [tla/canaries/](tla/canaries/) extends the real model
+through `CanaryBounds`, changes one mechanism, and checks the original
+property by its original name. No property is overridden or copied.
+
+| Canary module | Named fault | Unchanged property checked |
+| --- | --- | --- |
+| `CanaryNoWidening` | `FaultReattach` adds a removed A0 capability back to `Authority` after a binding effect. | `NoWidening` |
+| `CanaryAcceptOnlyValid` | Config overrides only `Valid` with `FaultValidWithoutNonce`, omitting nonce consumption while preserving every other validity guard and the real acceptance audit. | `AcceptOnlyValid` |
+| `CanaryEffectHolds` | Config overrides only `HarmfulAttempt` with `FaultHarmfulAuthorization`, permitting a covered action through an installed deny while leaving `Authority` narrowed. | `EffectHolds` |
+| `CanaryLyingPeer` | A valid false observation gains a `command` field and `FaultReceiveCommand` executes that field during receiver intake. Other wire attributes of message 2 and normal intake logic are preserved. | `LyingPeerOnlyCostsAvailability` |
+
+Bounds: two destinations, two credentials, the independent benign-work
+capability, interval 1, approval delay 0, and exact lag 0. The egress
+selection is fixed to the primary destination. NoWidening and EffectHolds
+start with the ordinary valid message ready at zero, then must submit and
+install its restriction before the fault is enabled or exercised. The
+nonce canary starts from ordinary empty replay state and admits only
+messages 1 and 4 (different IDs, the same nonce); the lying-peer canary
+starts from ordinary empty replay state and admits only message 2. All
+are normal bounded model specializations, with `TypeOK` also checked.
+
+The four results below are local DFID runs. Counterexample length counts
+printed states, including the initial state and the violating state;
+transitions are one fewer. Counts include DFID's repeated generation across
+iterations. No canary unexpectedly passed.
+
+| Canary / violated property | Expected | Actual | Counterexample states / transitions | Generated / distinct | DFID level | Seconds |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| [NoWidening](results/dfid-CanaryNoWidening.log) | violated | violated | 4 / 3 | 8 / 5 | 4 | 0.244 |
+| [AcceptOnlyValid](results/dfid-CanaryAcceptOnlyValid.log) | violated | violated | 3 / 2 | 11 / 8 | 3 | 0.260 |
+| [EffectHolds](results/dfid-CanaryEffectHolds.log) | violated | violated | 5 / 4 | 11 / 5 | 5 | 0.223 |
+| [LyingPeerOnlyCostsAvailability](results/dfid-CanaryLyingPeer.log) | violated | violated | 2 / 1 | 2 / 2 | 2 | 0.215 |
+
+Plain-language counterexamples:
+
+- **NoWidening:** valid evidence is ready; submission and the effect remove
+  the primary egress capability; `FaultReattach` puts it back. Authority
+  grows on the final transition.
+- **AcceptOnlyValid:** message 4 is accepted with nonce 1; message 1 is then
+  accepted with a fresh ID but that already consumed nonce. Its unchanged
+  audit contains `nonce = 1` and `priorNonces = {1}`.
+- **EffectHolds:** submission and the effect remove primary egress at tick
+  0; the clock reaches tick 1; faulty per-attempt authorization executes A0
+  against that covered destination. Authority remains narrowed throughout.
+- **LyingPeerOnlyCostsAvailability:** at tick 0 a valid, signed, fresh,
+  correlated false observation executes its `command` as a receiver step.
+  The sandbox execution log grows while harmful `attempt = 0` and A4 is
+  still waiting. This is a command path, not an actor attempt.
+
+TLC decomposes temporal conjunctions. For `EffectHolds` it reports the
+violating action clause at `TCOPReceiver.tla:172-173`; for the lying-peer
+property it first reports the execution-origin clause at lines 177-178.
+Those spans lie wholly inside the original checked properties. The runner
+preserves the exact TLC label and resolves it to the enclosing property,
+with the original spec hash recorded. It does not rename a property or
+substitute a weaker assertion. The command-path counterexample also changes
+`Executed` during the overridden receiver intake; both that fact and the
+receiver origin are visible in the saved trace.
+
+Run the canaries alone or the full suite:
+
+```sh
+python3.11 -B formal/run_checks.py --canaries-only
+python3.11 -B formal/run_checks.py
+```
+
+Outside the sandbox, append `--bfs` for auto-worker breadth-first runs.
+Individual canaries can be selected with `--config CanaryNoWidening`,
+`--config CanaryAcceptOnlyValid`, `--config CanaryEffectHolds`, or
+`--config CanaryLyingPeer`. The runner supplies the absolute `TLA-Library`
+path so sibling canary modules import the unchanged parent model.
+
+The default suite now runs the four canaries first, expecting `violated`,
+then all thirteen real configurations, expecting `satisfied`. A canary
+that completes successfully is an unexpected property-detection failure
+and is printed first before the runner exits nonzero. An unrelated
+violation, missing counterexample, parse error, deadlock, or checker failure
+cannot satisfy a canary. Expected rejection requires TLC's invariant/action
+violation exit status, a diagnostic naming the checked property (or a
+source span inside it), and a contiguous printed counterexample of at
+least two states. All other mismatches fail immediately.
+
+[results/canaries-dfid.json](results/canaries-dfid.json) records expected
+and actual outcomes, fault, property, counterexample state/transition counts,
+state counts, mode/depth/time, exact command, module/config/shared-bounds
+hashes, raw-log hash, and the pinned-tools record hash. The complete
+counterexamples are in `results/dfid-Canary*.log`. The full-suite record is
+`results/summary-dfid.json`; `passed: true` for a canary means its expected
+violation occurred, not that the safety property held in the broken model.
+
+Every canary result embeds pinned-tools record SHA-256
+`9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e`.
+Runner classification checks, including rejection of a wrong-property
+counterexample and a checker failure, are recorded separately in
+`results/canary-runner-selfcheck.json` as synthetic-output checks.
+
+
+The final combined local DFID run completed with all 17 expectations met:
+four canaries violated their intended properties, and all thirteen real
+configurations satisfied their checks. The real TLA+ modules and real
+configurations were also compared against the preceding artifact hashes;
+none changed. The combined JSON-lines runner output is retained in
+`results/canary-and-real-checks.log`.

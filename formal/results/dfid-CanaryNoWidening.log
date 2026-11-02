@@ -1,0 +1,150 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running depth-first search Model-Checking with fp 0 and seed 7748871109250296444 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 19072] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryNoWidening.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryBounds.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Sequences.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TCOPReceiver
+Semantic processing of module CanaryBounds
+Semantic processing of module CanaryNoWidening
+Starting... (2026-11-01 19:16:43)
+Finished computing initial states: 1 states generated, with 1 of them distinct.
+Starting level 2: 1 states generated, 1 distinct states found.
+Starting level 3: 2 states generated, 2 distinct states found.
+Starting level 4: 4 states generated, 3 distinct states found.
+Error: Action property NoWidening is violated.
+Error: The behavior up to this point is:
+State 1:
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1}
+/\ effectAt = <<0>>
+/\ accepted = { [ id |-> 1,
+    nonce |-> 1,
+    message |-> 1,
+    at |-> 0,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0>>
+/\ choice = <<<<"deny_egress", d0>>>>
+/\ seenIds = {1}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ status = <<"approval">>
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 2:
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1}
+/\ effectAt = <<0>>
+/\ accepted = { [ id |-> 1,
+    nonce |-> 1,
+    message |-> 1,
+    at |-> 0,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0>>
+/\ choice = <<<<"deny_egress", d0>>>>
+/\ seenIds = {1}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ status = <<"pending">>
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 3:
+/\ Authority = { <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1}
+/\ effectAt = <<0>>
+/\ accepted = { [ id |-> 1,
+    nonce |-> 1,
+    message |-> 1,
+    at |-> 0,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0>>
+/\ choice = <<<<"deny_egress", d0>>>>
+/\ seenIds = {1}
+/\ effective = {1}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {<<"egress", d0>>}
+/\ status = <<"effective">>
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 4:
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1}
+/\ effectAt = <<0>>
+/\ accepted = { [ id |-> 1,
+    nonce |-> 1,
+    message |-> 1,
+    at |-> 0,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0>>
+/\ choice = <<<<"deny_egress", d0>>>>
+/\ seenIds = {1}
+/\ effective = {1}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {<<"egress", d0>>}
+/\ status = <<"effective">>
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+8 states generated, 5 distinct states found.
+Finished in 00s at (2026-11-01 19:16:43)

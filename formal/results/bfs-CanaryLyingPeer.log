@@ -1,0 +1,83 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 0 and seed -1945184927287367076 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 23088] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryLyingPeer.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryBounds.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Sequences.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TCOPReceiver
+Semantic processing of module CanaryBounds
+Semantic processing of module CanaryLyingPeer
+Starting... (2026-11-01 19:20:17)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-01 19:20:17.
+Error: Invariant line 177, col 8 to line 178, col 68 of module TCOPReceiver is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {}
+/\ effectAt = (2 :> 0)
+/\ accepted = {}
+/\ now = 0
+/\ submitAt = (2 :> 0)
+/\ choice = (2 :> <<"none", "none">>)
+/\ seenIds = {}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ status = (2 :> "unreceived")
+/\ Executed = <<>>
+/\ seenNonces = {}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 2: <FaultReceiveCommand line 11, col 5 to line 26, col 54 of module CanaryLyingPeer>
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {2}
+/\ effectAt = (2 :> 0)
+/\ accepted = { [ id |-> 2,
+    nonce |-> 2,
+    at |-> 0,
+    message |-> 2,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = (2 :> 0)
+/\ choice = (2 :> <<"deny_egress", d0>>)
+/\ seenIds = {2}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ status = (2 :> "approval")
+/\ Executed = <<[cap |-> <<"work", "benign">>, at |-> 0, origin |-> "receiver_command"]>>
+/\ seenNonces = {2}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+2 states generated, 2 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 2.
+Finished in 00s at (2026-11-01 19:20:17)
