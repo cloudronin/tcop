@@ -18,8 +18,8 @@ HOST_FIELDS = {'identity', 'hardware_id_sha256', 'os_admin_account', 'administra
 
 def validate_admission(record: dict[str, Any]) -> None:
     r = obj(record, 'admission')
-    require(r.get('schema') == 'tcop.external-enforcement-admission/1.0', 'unknown admission schema')
-    require(set(r) <= {'schema', 'synthetic_fixture', 'pins', 'hosts', 'clock_offset', 'policy', 'arms', 'sandbox'}, 'unknown admission field')
+    require(r.get('schema') in {'tcop.external-enforcement-admission/1.0','tcop.external-enforcement-admission/1.1'}, 'unknown admission schema')
+    require(set(r) <= {'schema', 'synthetic_fixture', 'pins', 'hosts', 'clock_offset', 'policy', 'arms', 'sandbox', 'validation_records'}, 'unknown admission field')
     require(obj(r.get('pins'), 'pins') == PINS, 'missing or mismatched immutable pin')
     hosts = obj(r.get('hosts'), 'hosts')
     require(set(hosts) == {'runner', 'host_a', 'host_b'}, 'three machine identities required')
@@ -62,11 +62,26 @@ def validate_admission(record: dict[str, Any]) -> None:
         text(sandbox[key], f'sandbox.{key}')
     require(sandbox['host_identity'] == hosts['host_b']['identity'], 'bound sandbox must be on Domain B')
     digest(r)
+    if r['schema'] == 'tcop.external-enforcement-admission/1.1':
+        from .external_enforcement_validation import validate_enforcement_records
+        records = obj(r.get('validation_records'), '1.4 validation records')
+        validate_enforcement_records(records, purpose='admission')
+        require(records['admission'] == base_admission(r), 'validation records bind another admission')
+    else:
+        require('validation_records' not in r, 'legacy admission cannot carry unvalidated gate records')
+
+
+def base_admission(record: dict[str, Any]) -> dict[str, Any]:
+    # Avoid a hash cycle: the gate bundle embeds this base; the full admission
+    # seal commits both base and bundle. Legacy hashes remain identical.
+    return {**{k:v for k,v in record.items() if k not in {'schema','validation_records'}},
+            'schema':'tcop.external-enforcement-admission/1.0'}
 
 
 def seal_admission(record: dict[str, Any], output: Path) -> dict[str, Any]:
     validate_admission(record)
-    return {**write_seal(output, 'admission', {'record.json': record}), 'record_sha256': digest(record)}
+    return {**write_seal(output, 'admission', {'record.json': record}), 'record_sha256': digest(record),
+            'base_record_sha256': digest(base_admission(record))}
 
 
 def verify_admission(root: Path, *, host_a: str | None = None, host_b: str | None = None,
@@ -78,5 +93,5 @@ def verify_admission(root: Path, *, host_a: str | None = None, host_b: str | Non
     for role, expected in (('host_a', host_a), ('host_b', host_b), ('runner', runner)):
         if expected is not None:
             require(record['hosts'][role]['identity'] == expected, f'{role} identity differs from execution environment')
-    return {'valid': True, 'record': record, 'record_sha256': digest(record),
+    return {'valid': True, 'record': record, 'record_sha256': digest(record), 'base_record_sha256': digest(base_admission(record)),
             'artifact_root_digest': sealed['artifact_root_digest']}

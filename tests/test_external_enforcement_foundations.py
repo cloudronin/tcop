@@ -28,15 +28,15 @@ class PlanAndSealTests(unittest.TestCase):
     def setUp(self):
         self.plan=load_config(PLAN)
 
-    def test_plan_13_and_legacy_lists(self):
-        self.assertEqual(str(self.plan['effective_plan_revision']),'1.3')
+    def test_plan_14_and_legacy_lists(self):
+        self.assertEqual(str(self.plan['effective_plan_revision']),'1.4')
         self.assertTrue(_effective_plan_contract(self.plan)['amendment_003'])
         self.assertEqual(self.plan['conditions'],['E0','E1','E2','E2M','E2E','E3','S1','T2','S2'])
-        self.assertEqual(self.plan['adaptive_branch_matrix']['A4']['trigger'],'any_harmful_branch_denied')
+        self.assertEqual(self.plan['adaptive_branch_matrix']['A4']['trigger'],'harmful_attempts_stop_by_denial_success_or_exhaustion')
 
     def test_plan_each_ladder_gate(self):
         mutations=[lambda p:p.pop('enforcement_ladder'),
-                   lambda p:p['amendments'].pop(),
+                   lambda p:p.__setitem__('amendments',[a for a in p['amendments'] if a['id']!='003']),
                    lambda p:p['enforcement_ladder']['arms'].pop('E2'),
                    lambda p:p['enforcement_ladder'].__setitem__('pool_e2_modes',True),
                    lambda p:p['enforcement_ladder']['families'].pop('S-C')]
@@ -56,18 +56,18 @@ class PlanAndSealTests(unittest.TestCase):
         with patch.dict('os.environ',{},clear=True): report=_preflight(p)
         blockers='\n'.join(report['blockers'])
         for name in ('AM003_EFFECTIVE_PLAN','AM003_ADMISSION','AM003_ROLE_CENSUS','AM003_EXPECTED_PATTERN',
-                     'AM003_OPEN_ISSUE_7','AM003_OPEN_ISSUE_8','AM003_OPEN_ISSUE_10'):
+                     'AM004_EFFECTIVE_PLAN','AM004_VALIDATION_RECORDS','AM004_RUNNER_NOT_IMPLEMENTED'):
             with self.subTest(name=name): self.assertIn(name,blockers)
 
-    def test_13_amendment_sidecars_and_manifest(self):
+    def test_14_amendment_sidecars_and_manifest(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d)/'study'; run_external_adaptive(root)
             manifest=json.loads((root/'manifest.json').read_text())
-            self.assertEqual(manifest['version'],'1.3')
-            self.assertEqual(set(manifest['amendment_hashes']),{'001','002','003'})
+            self.assertEqual(manifest['version'],'1.4')
+            self.assertEqual(set(manifest['amendment_hashes']),{'001','002','003','004'})
             for suffix in ('canonical.json','sha256'): self.assertTrue((root/f'amendments/003.{suffix}').is_file())
             effective=json.loads((root/'effective-plan-manifest.json').read_text())
-            self.assertEqual(set(effective['amendment_hashes']),{'001','002','003'})
+            self.assertEqual(set(effective['amendment_hashes']),{'001','002','003','004'})
             self.assertIn('expected_pattern_sha256',manifest)
             self.assertTrue(verify_external_adaptive(root)['valid'])
 

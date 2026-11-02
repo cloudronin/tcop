@@ -9,6 +9,10 @@ from .external_role_scripts import FAMILIES
 
 def validate_expected_pattern(record: dict[str, Any]) -> None:
     r = obj(record, 'expected pattern')
+    if r.get('schema') == 'tcop.external-expected-pattern/1.1':
+        from .external_enforcement_validation import validate_expected_pattern_v14
+        validate_expected_pattern_v14(r)
+        return
     require(r.get('schema') == 'tcop.external-expected-pattern/1.0', 'unknown expected-pattern schema')
     require(r.get('status') == 'preregistered' and r.get('open_owner_issues') == [],
             'expected pattern is unsealed-pending-owner; issues must be resolved before sealing')
