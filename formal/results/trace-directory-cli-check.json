@@ -1,0 +1,18 @@
+{
+  "test": "directory CLI with frozen-trace rejection finding",
+  "input_kind": "fixture copies only",
+  "expected_exit": 1,
+  "actual_exit": 1,
+  "expected_outcomes": [
+    "accepted",
+    "accepted",
+    "rejected"
+  ],
+  "actual_outcomes": [
+    "accepted",
+    "accepted",
+    "rejected"
+  ],
+  "all_inputs_checked": true,
+  "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+}

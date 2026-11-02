@@ -1,0 +1,461 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcop.example/formal/trace-v1.schema.json",
+  "title": "TCOP complete receiver episode trace v1",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "tcop.trace/1"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+    },
+    "sandbox_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+    },
+    "sandbox_generation": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+    },
+    "clock": {
+      "type": "object",
+      "properties": {
+        "origin": {
+          "const": "evidence_emitted"
+        },
+        "tick_duration_ns": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "origin",
+        "tick_duration_ns"
+      ],
+      "additionalProperties": false
+    },
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "destinations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+          },
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "credentials": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+          },
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "primary_destination": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+        },
+        "primary_credential": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+        },
+        "a0_kind": {
+          "enum": [
+            "egress",
+            "credential"
+          ]
+        },
+        "baseline_denies_a0": {
+          "type": "boolean"
+        },
+        "action_interval": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "approval_delay": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "min_lag": {
+          "type": "object",
+          "properties": {
+            "deny_egress": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "revoke_credential": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "freeze": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "deny_egress",
+            "revoke_credential",
+            "freeze"
+          ],
+          "additionalProperties": false
+        },
+        "max_lag": {
+          "type": "object",
+          "properties": {
+            "deny_egress": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "revoke_credential": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "freeze": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "deny_egress",
+            "revoke_credential",
+            "freeze"
+          ],
+          "additionalProperties": false
+        },
+        "receive_until": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "destinations",
+        "credentials",
+        "primary_destination",
+        "primary_credential",
+        "a0_kind",
+        "baseline_denies_a0",
+        "action_interval",
+        "approval_delay",
+        "min_lag",
+        "max_lag",
+        "receive_until"
+      ],
+      "additionalProperties": false
+    },
+    "initial_authority": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/pair"
+      },
+      "uniqueItems": true
+    },
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "receive"
+              },
+              "t": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "authority": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pair"
+                },
+                "uniqueItems": true
+              },
+              "message": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+              },
+              "observation_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+              },
+              "nonce": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+              },
+              "signature_valid": {
+                "type": "boolean"
+              },
+              "peer_authorized": {
+                "type": "boolean"
+              },
+              "expires_at": {
+                "type": "integer"
+              },
+              "interaction_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "receipt_interaction_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "receipt_verified": {
+                "type": "boolean"
+              },
+              "receipt_receiver_local": {
+                "type": "boolean"
+              },
+              "decision": {
+                "enum": [
+                  "accepted",
+                  "rejected"
+                ]
+              },
+              "selected": {
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/pair"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "type",
+              "t",
+              "authority",
+              "message",
+              "observation_id",
+              "nonce",
+              "signature_valid",
+              "peer_authorized",
+              "expires_at",
+              "interaction_id",
+              "receipt_interaction_id",
+              "receipt_verified",
+              "receipt_receiver_local",
+              "decision",
+              "selected"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "submit"
+              },
+              "t": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "authority": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pair"
+                },
+                "uniqueItems": true
+              },
+              "message": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+              }
+            },
+            "required": [
+              "type",
+              "t",
+              "authority",
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "effect"
+              },
+              "t": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "authority": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pair"
+                },
+                "uniqueItems": true
+              },
+              "message": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+              }
+            },
+            "required": [
+              "type",
+              "t",
+              "authority",
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "attempt"
+              },
+              "t": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "authority": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pair"
+                },
+                "uniqueItems": true
+              },
+              "action": {
+                "enum": [
+                  "A0",
+                  "A1",
+                  "A2",
+                  "A3",
+                  "A4"
+                ]
+              },
+              "capability": {
+                "$ref": "#/$defs/pair"
+              },
+              "authorized": {
+                "type": "boolean"
+              },
+              "denied": {
+                "type": "boolean"
+              },
+              "executed": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "type",
+              "t",
+              "authority",
+              "action",
+              "capability",
+              "authorized",
+              "denied",
+              "executed"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "authority"
+              },
+              "t": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "authority": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pair"
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "type",
+              "t",
+              "authority"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "end"
+              },
+              "t": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "authority": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pair"
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "type",
+              "t",
+              "authority"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "trace_id",
+    "sandbox_id",
+    "sandbox_generation",
+    "clock",
+    "parameters",
+    "initial_authority",
+    "events"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "pair": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+        },
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.:/-]{1,128}$"
+        }
+      ],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

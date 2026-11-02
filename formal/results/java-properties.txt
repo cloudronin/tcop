@@ -1,0 +1,58 @@
+Property settings:
+    file.encoding = UTF-8
+    file.separator = /
+    java.class.path = 
+    java.class.version = 71.0
+    java.home = /opt/homebrew/Cellar/openjdk/27.0.1.0.3/libexec/openjdk.jdk/Contents/Home
+    java.io.tmpdir = /var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/
+    java.library.path = /Users/vishnu/Library/Java/Extensions
+        /Library/Java/Extensions
+        /Network/Library/Java/Extensions
+        /System/Library/Java/Extensions
+        /usr/lib/java
+        .
+    java.runtime.name = OpenJDK Runtime Environment
+    java.runtime.version = 27.0.1.0.3
+    java.specification.name = Java Platform API Specification
+    java.specification.vendor = Oracle Corporation
+    java.specification.version = 27
+    java.vendor = Homebrew
+    java.vendor.url = https://github.com/Homebrew/homebrew-core/issues
+    java.vendor.url.bug = https://github.com/Homebrew/homebrew-core/issues
+    java.vendor.version = Homebrew
+    java.version = 27.0.1.0.3
+    java.version.date = 2026-10-24
+    java.vm.compressedOopsMode = Non-zero disjoint base
+    java.vm.info = mixed mode, sharing
+    java.vm.name = OpenJDK 64-Bit Server VM
+    java.vm.specification.name = Java Virtual Machine Specification
+    java.vm.specification.vendor = Oracle Corporation
+    java.vm.specification.version = 27
+    java.vm.vendor = Homebrew
+    java.vm.version = 27.0.1.0.3
+    jdk.debug = release
+    line.separator = \n 
+    native.encoding = UTF-8
+    os.arch = aarch64
+    os.name = Mac OS X
+    os.version = 27.0.1
+    path.separator = :
+    stderr.encoding = UTF-8
+    stdin.encoding = UTF-8
+    stdout.encoding = UTF-8
+    sun.arch.data.model = 64
+    sun.boot.library.path = /opt/homebrew/Cellar/openjdk/27.0.1.0.3/libexec/openjdk.jdk/Contents/Home/lib
+    sun.cpu.endian = little
+    sun.io.unicode.encoding = UnicodeBig
+    sun.java.launcher = SUN_STANDARD
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.country = US
+    user.dir = /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b
+    user.home = /Users/vishnu
+    user.language = en
+    user.name = vishnu
+
+openjdk version "27.0.1.0.3" 2026-10-24
+OpenJDK Runtime Environment Homebrew (build 27.0.1.0.3)
+OpenJDK 64-Bit Server VM Homebrew (build 27.0.1.0.3, mixed mode, sharing)

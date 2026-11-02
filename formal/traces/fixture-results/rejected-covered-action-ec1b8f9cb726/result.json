@@ -1,0 +1,76 @@
+{
+  "schema_version": "tcop.trace-result/1",
+  "input_kind": "fixture",
+  "trace_file": "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixtures/rejected-covered-action.json",
+  "trace_sha256": "ec1b8f9cb7269a640ff155dc09936930730cda382c923cffd92475ce113bccff",
+  "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
+  "trace_spec_sha256": "4c1bdfc0aa2882088f13a75d355361ec8c2a6b23f579616206ab3595e92aa5be",
+  "converter_sha256": "90627b1188df4b637ae50bb1bd4cc167112a71a1d014a55d7325c8a2cd100dda",
+  "trace_schema_sha256": "d2dd5942cc077c6a7300b5736d59f7bac909c2d5a2f0ff7d7f8b22893ef99915",
+  "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
+  "mode": "dfid",
+  "first_rejected_step_index": 3,
+  "first_rejected_record": {
+    "type": "attempt",
+    "t": 2,
+    "authority": [
+      [
+        "egress",
+        "d1"
+      ],
+      [
+        "credential",
+        "c0"
+      ],
+      [
+        "credential",
+        "c1"
+      ],
+      [
+        "work",
+        "benign"
+      ]
+    ],
+    "action": "A0",
+    "capability": [
+      "egress",
+      "d0"
+    ],
+    "authorized": true,
+    "denied": false,
+    "executed": true
+  },
+  "tlc_stats": {
+    "generated": 51,
+    "distinct": 7,
+    "queue_remaining": null,
+    "depth": 7,
+    "depth_kind": "dfid_search_level"
+  },
+  "generated_module_sha256": "82f907d0988fe4b93582a8d5282ee6b61e5edeaca0d4e86c715e36450fa277cf",
+  "generated_config_sha256": "430fa7d7f4af6d2814982d68fea138be48b2fd056e4ad5adcc0df3f251371b69",
+  "command": [
+    "/opt/homebrew/opt/openjdk/bin/java",
+    "-XX:+UseParallelGC",
+    "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+    "-cp",
+    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tools/tla2tools.jar",
+    "tlc2.TLC",
+    "-workers",
+    "1",
+    "-fp",
+    "0",
+    "-dfid",
+    "21",
+    "-metadir",
+    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-covered-action-ec1b8f9cb726/states",
+    "-config",
+    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-covered-action-ec1b8f9cb726/FrozenTrace.cfg",
+    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-covered-action-ec1b8f9cb726/FrozenTrace.tla"
+  ],
+  "seconds": 0.227,
+  "exit_code": 0,
+  "outcome": "rejected",
+  "reached_events": 3,
+  "reason": "No TCOPReceiver behavior extends this prefix through the next record"
+}

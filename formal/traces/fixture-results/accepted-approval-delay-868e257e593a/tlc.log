@@ -1,0 +1,52 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running depth-first search Model-Checking with fp 0 and seed -2837293969650172503 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 6978] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/accepted-approval-delay-868e257e593a/FrozenTrace.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrace.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Sequences.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TCOPReceiver
+Semantic processing of module TCOPTrace
+Semantic processing of module FrozenTrace
+Starting... (2026-11-01 19:02:34)
+<<"TCOP_TRACE_REACHED", 0>>
+Finished computing initial states: 1 states generated, with 1 of them distinct.
+Starting level 2: 1 states generated, 1 distinct states found.
+<<"TCOP_TRACE_REACHED", 1>>
+Starting level 3: 3 states generated, 2 distinct states found.
+<<"TCOP_TRACE_REACHED", 1>>
+Starting level 4: 7 states generated, 3 distinct states found.
+<<"TCOP_TRACE_REACHED", 2>>
+<<"TCOP_TRACE_REACHED", 2>>
+Starting level 5: 14 states generated, 5 distinct states found.
+<<"TCOP_TRACE_REACHED", 3>>
+Starting level 6: 24 states generated, 6 distinct states found.
+<<"TCOP_TRACE_REACHED", 3>>
+Starting level 7: 36 states generated, 7 distinct states found.
+<<"TCOP_TRACE_REACHED", 4>>
+Starting level 8: 50 states generated, 8 distinct states found.
+<<"TCOP_TRACE_REACHED", 4>>
+Starting level 9: 66 states generated, 9 distinct states found.
+<<"TCOP_TRACE_REACHED", 4>>
+Starting level 10: 84 states generated, 10 distinct states found.
+<<"TCOP_TRACE_REACHED", 5>>
+Starting level 11: 104 states generated, 11 distinct states found.
+<<"TCOP_TRACE_REACHED", 6>>
+Starting level 12: 126 states generated, 12 distinct states found.
+<<"TCOP_TRACE_REACHED", 7>>
+Starting level 13: 150 states generated, 13 distinct states found.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 1.1E-16
+  based on the actual fingerprints:  val = 1.6E-7
+175 states generated, 13 distinct states found.
+Finished in 00s at (2026-11-01 19:02:34)
