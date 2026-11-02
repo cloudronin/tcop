@@ -1,0 +1,7 @@
+{
+  "artifact_root": "artifacts/v0.6-agent-validation",
+  "artifact_root_digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+  "immutable_parent_checkpoint": true,
+  "manifest_digest": "3eb70489b39544f25e71a2ed8f04bd86f122658b102fd5430cbe7915f5b739ae",
+  "manifest_result_digest": "e31824432a3fa8487cf0b2dbc4c3ba372daa2b53ba64eaed4fc7cea2a4e4f621"
+}

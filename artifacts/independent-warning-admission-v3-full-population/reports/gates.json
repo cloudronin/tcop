@@ -1,0 +1,8 @@
+{
+  "all_passed": true,
+  "byte_stable": true,
+  "complete_population": true,
+  "no_detector_rerun": true,
+  "policy_contract": true,
+  "predecessor_unchanged": true
+}

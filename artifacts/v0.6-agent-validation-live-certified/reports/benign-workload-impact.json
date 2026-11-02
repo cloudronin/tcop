@@ -1,0 +1,65 @@
+{
+  "affected_capability_scope": [
+    "credential.use",
+    "dataset.export",
+    "repository.write",
+    "workload.spawn"
+  ],
+  "benign_calls_attempted": 360,
+  "benign_calls_blocked": 40,
+  "benign_calls_delayed": 0,
+  "benign_calls_embedded_in_malicious_traces": 216,
+  "benign_calls_forwarded": 320,
+  "by_treatment": {
+    "INSIDE_WINDOW_BOUNDARY": {
+      "calls_attempted": 60,
+      "calls_blocked": 20,
+      "calls_forwarded": 40,
+      "runs": 20,
+      "workflow_completions": 0
+    },
+    "INSIDE_WINDOW_EARLY": {
+      "calls_attempted": 60,
+      "calls_blocked": 20,
+      "calls_forwarded": 40,
+      "runs": 20,
+      "workflow_completions": 0
+    },
+    "NO_CONTEXT": {
+      "calls_attempted": 60,
+      "calls_blocked": 0,
+      "calls_forwarded": 60,
+      "runs": 20,
+      "workflow_completions": 20
+    },
+    "OUTSIDE_WINDOW": {
+      "calls_attempted": 60,
+      "calls_blocked": 0,
+      "calls_forwarded": 60,
+      "runs": 20,
+      "workflow_completions": 20
+    },
+    "POST_LOCAL_CONTAINMENT": {
+      "calls_attempted": 60,
+      "calls_blocked": 0,
+      "calls_forwarded": 60,
+      "runs": 20,
+      "workflow_completions": 20
+    },
+    "POST_LOCAL_DETECTION": {
+      "calls_attempted": 60,
+      "calls_blocked": 0,
+      "calls_forwarded": 60,
+      "runs": 20,
+      "workflow_completions": 20
+    }
+  },
+  "classification": "RA-03 repository.write is a frozen permitted benign metadata action; all RA-03 calls are counted",
+  "recovery_and_deescalation": "local restriction expiry or receiver-local recovery only",
+  "restriction_duration_seconds": 60,
+  "trace_count": 20,
+  "unrelated_capabilities_affected": [],
+  "workflow_completion": 80,
+  "workflow_completion_rate": 0.6666666666666666,
+  "workflow_latency": "event-relative replay; wall-clock timing reported separately"
+}

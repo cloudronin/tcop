@@ -1,0 +1,10 @@
+{
+  "baseline_forwarded": true,
+  "block_references_local_policy_and_decision": true,
+  "context_accepted": true,
+  "gateway_session_established": true,
+  "passed": true,
+  "post_context_blocked": true,
+  "remote_action_fields_ignored": true,
+  "remote_enforcement_successes": 0
+}

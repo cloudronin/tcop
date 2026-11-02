@@ -1,0 +1,32 @@
+{
+  "blocking_issues": [
+    "minimum_eligible_trace_counts",
+    "live_end_to_end_minimums"
+  ],
+  "external_validity_claim_ready": false,
+  "gates": {
+    "frozen_strategies_unchanged": true,
+    "invariants": true,
+    "live_end_to_end_minimums": false,
+    "local_decision_references": true,
+    "minimum_eligible_trace_counts": false,
+    "scripted_parent_unchanged": true,
+    "source_unchanged": true,
+    "strict_replay_matrix": true
+  },
+  "inside_window_prevention": {
+    "improved_pairs": 0,
+    "supported": false,
+    "unchanged_pairs": 0,
+    "worsened_pairs": 0
+  },
+  "outside_window_result": {
+    "forensic_only_value_observed": false,
+    "preventive_value_observed": false
+  },
+  "real_gateway_integration_verified": false,
+  "receipt_correlation_verified": true,
+  "remote_enforcement_successes": 0,
+  "signed_federation_exchange_verified": false,
+  "strict_trace_replay_pairs": 0
+}

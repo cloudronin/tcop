@@ -1,0 +1,6 @@
+{
+  "authorization_cache": "disabled_for_correctness",
+  "external_model_egress": "provider_endpoint_only",
+  "remote_enforcement_api": "absent",
+  "tool_and_tcop_network": "isolated-compose-network"
+}

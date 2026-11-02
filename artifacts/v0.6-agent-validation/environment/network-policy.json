@@ -1,0 +1,5 @@
+{
+  "external_model_egress": "disabled_for_scripted_replay",
+  "remote_enforcement_api": "absent",
+  "tool_and_tcop_network": "internal_only"
+}

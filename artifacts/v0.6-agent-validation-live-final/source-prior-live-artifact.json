@@ -1,0 +1,7 @@
+{
+  "artifact_root": "artifacts/v0.6-agent-validation-live-amendment-003",
+  "artifact_root_digest": "cebc669a7a3cb8566d512d3be5c48d759c1676b461950ff9fbb0a10b2a967e96",
+  "complete_field_before_finalization": false,
+  "reason": "runtime amendment 004 corrects findings-file gate ordering without rerunning traces",
+  "result_digest": "ba4153ce0fe90218c1923485303bcad10058a55275d0a80ec843ed55a1f73e28"
+}

@@ -1,0 +1,55 @@
+{
+  "architectures": {
+    "A1": "local-only; same Domain-B strategy, gateway adapter, monitor, and local policy; origin context withheld",
+    "A2": "same Domain-B configuration; valid signed origin context accepted through a receipt-correlated local decision"
+  },
+  "artifact_root": "artifacts/v0.6-agent-validation",
+  "authorization": {
+    "cache_correctness": "disabled",
+    "cache_performance": "separate-predeclared-selection",
+    "local_policy_owner": "partner-platform",
+    "remote_enforcement": "forbidden"
+  },
+  "frozen_strategy_digests": {
+    "balanced": "4b2dfb385d71ee4ef3e8c598cf7cac4da80fdb62ed8d22d7ad241918c9e69890",
+    "containment-first": "60a4c97851d19c6bcf09d24a063b480e9a29a49dca7e0665ead9013eaf8d2691",
+    "forensic-oriented": "e30ded1303d08c6067a5030d9e1741183bf30af96d218c2143bc1e21db237d96",
+    "utility-preserving": "7cf402995d0b4c0e6473aaad4cca7b420abcccf35b7844b65935d07ee9db8940"
+  },
+  "gateway": {
+    "authorization_cache": "disabled",
+    "authorization_hook": "local-authorization-evaluator",
+    "enforcement_role": "reference-only",
+    "selection_manifest": "integrations/mcp-gateway/gateway-selection-manifest.json"
+  },
+  "scenarios": [
+    "RA-01",
+    "RA-02",
+    "RA-03"
+  ],
+  "source_artifact_amendment": "spec/v0.6-agent-validation-source-artifact-amendment.md",
+  "source_evidence": {
+    "artifact_root": "artifacts/federated-domain-v0.6-evidence",
+    "artifact_root_digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+    "superseded_digest": "cd26169c8b9d9620b3c62b08e3c1702c992a1461d603b08b7cd61c797b21a5f3"
+  },
+  "source_federation": {
+    "artifact_root": "artifacts/federated-domain-v0.6",
+    "artifact_root_digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50"
+  },
+  "study": "TCOP v0.6 agent-based external validation",
+  "study_kind": "agent_validation",
+  "timing": {
+    "interpretation": "Delivery is scheduled at named causal replay barriers around a declared harmful tool call; deterministic ticks are never converted to milliseconds.",
+    "source": "artifacts/federated-domain-v0.6-evidence/reports/strategy-timing-thresholds.json",
+    "strategy": "containment-first",
+    "treatments": [
+      "NO_CONTEXT",
+      "INSIDE_WINDOW_EARLY",
+      "INSIDE_WINDOW_BOUNDARY",
+      "OUTSIDE_WINDOW",
+      "POST_LOCAL_DETECTION",
+      "POST_LOCAL_CONTAINMENT"
+    ]
+  }
+}

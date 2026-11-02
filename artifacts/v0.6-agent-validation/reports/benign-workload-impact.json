@@ -1,0 +1,8 @@
+{
+  "benign_calls_blocked": 2,
+  "false_positive_treatments": 5,
+  "harmful_action_metric_delta": 0,
+  "measured": true,
+  "status": "scripted_only",
+  "workflow_completion_change": -0.4
+}

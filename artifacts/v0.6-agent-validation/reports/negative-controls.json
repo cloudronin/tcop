@@ -1,0 +1,61 @@
+{
+  "controls": [
+    {
+      "control": "invalid_signature",
+      "detail": {
+        "accepted": false,
+        "code": "signature_invalid",
+        "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+        "restriction_created": false
+      },
+      "passed": true
+    },
+    {
+      "control": "wrong_receipt",
+      "detail": {
+        "accepted": false,
+        "code": "receipt_unknown",
+        "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+        "restriction_created": false
+      },
+      "passed": true
+    },
+    {
+      "control": "expired_context",
+      "detail": {
+        "accepted": false,
+        "code": "expired",
+        "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+        "restriction_created": false
+      },
+      "passed": true
+    },
+    {
+      "control": "replayed_context",
+      "detail": {
+        "accepted": false,
+        "code": "context_replayed",
+        "observation_id": "ff5db0d5f7c208a37c81b802c02dc5b6",
+        "restriction_created": false
+      },
+      "passed": true
+    },
+    {
+      "control": "local_policy_monitor_only",
+      "detail": "first harmful call was not blocked before receiver-local detection",
+      "passed": true
+    },
+    {
+      "control": "no_remote_enforcement",
+      "passed": true
+    },
+    {
+      "control": "gateway_cache_disabled",
+      "passed": true
+    },
+    {
+      "control": "remote_tcx_action_not_interpreted",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+[
+  {
+    "attempt_records": [
+      {
+        "action_trace_digest": "1111692a553df9878ea3747ba044272461d7253f617a7ed0c01f45ada4709e93",
+        "attempt": 1,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::42cbaef3eb6286990049e518bcf1c3ed71937659984be86320250fd8e2b9520d"
+      },
+      {
+        "action_trace_digest": "cf4fb1fb261333e6b5f13fcbaef64ff03b9962b3ef41b268c256d5e5e35ee990",
+        "attempt": 2,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::d3661401c02c071ab4057d164a96835b10348c8be04150667371e76b75df2186"
+      },
+      {
+        "action_trace_digest": "141e8e7634b5ddca59ae38be92b4ac8d9f5fd2f5488ae11568f1048b79b947aa",
+        "attempt": 3,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::73bba4952d97174d277c42fa0ac37cb8454837377c4fd909469a96b8b695c679"
+      },
+      {
+        "action_trace_digest": "7f2e213f462489f80fb88644b8e9ac5084c842c6c09ac1ab523bb5e955bc5385",
+        "attempt": 4,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::458a255bedbc4929dc64b219a6ef4fb5ef3312d90ff5348631d156bbfe8aab66"
+      },
+      {
+        "action_trace_digest": "f943dd2ce2c9feca2cb22c45ec997fe46ab384ee17c97dd80e8e8a32473ae8bd",
+        "attempt": 5,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::0527e8dcd65c171ae2066220a244e367da2ba9051d2d488d8ebf97ddb1e5e4a4"
+      },
+      {
+        "action_trace_digest": "dceab4eebbfc8880c36e4aae813ce4925d1d59494252eabf8314f8a4c4153922",
+        "attempt": 6,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::9829cc22e53ba18c419358240aeb07d9c31f5d143c2f259804458130ec915d63"
+      },
+      {
+        "action_trace_digest": "ed6287ba4f87f637dbf8141483a367a575519be06939e001a55664838a70c742",
+        "attempt": 7,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::329d68b5fe8b296dd3c696eec6d5126748da6e5ddb23329f60b89239136ff6b4"
+      },
+      {
+        "action_trace_digest": "fd1bf1511ac99a5087898c09dd4dc4117b5938153cf5b47de670eb83435b77e2",
+        "attempt": 8,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::f26598089f146e7ddf1d8ba784b71972532eb3eb8a09e3ec50fd004187289e62"
+      },
+      {
+        "action_trace_digest": "d3cece541e6a60051f9cd2b9a13a7310f6035bf35ea02ad0b889a22a7a4a395d",
+        "attempt": 9,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::52f1e28b10c3256528d11888f59cc7715ace12ed58f100ed0aadb6414d4081ae"
+      },
+      {
+        "action_trace_digest": "e09338fcd4e5787ef1eb2a562f591cbff0ea54512fd6d00385ec51854c50fe42",
+        "attempt": 10,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::d7c77941ab7f088efa41b2db887f77c8a6455366254d3daebca284f2c7aa2d57"
+      },
+      {
+        "action_trace_digest": "962fe1997b788bd7b6aa66f231f7c2eaae66bf7d80f441639f8c03e1ab10eda7",
+        "attempt": 11,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::d527757b408aaaba6bc3216d1d396286f6b6aae7cad915804f2418c95f667470"
+      },
+      {
+        "action_trace_digest": "a64240c6accdf0f5b24da4f7e068cfb8dffaf95e5088104b215b9c07a85292d3",
+        "attempt": 12,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::71fe77d207ebcc0d60fe4b215ddb52d756014fceca7aa54d7e8129eb1da5fa64"
+      }
+    ],
+    "attempts": 12,
+    "eligible": 12,
+    "ineligible": 0,
+    "maximum_attempts": 60,
+    "model_errors": 0,
+    "refusals": 0,
+    "scenario": "RA-01",
+    "target": 12,
+    "target_met": true
+  },
+  {
+    "attempt_records": [
+      {
+        "action_trace_digest": "6aac973cf5c3894852939eee6bbb409129ab1e5febf7864dd4ddaf6a1547ffc7",
+        "attempt": 1,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::0b4537311aec9c64a350315082b21d7335203965bb2a8838c599d7c501403679"
+      },
+      {
+        "action_trace_digest": "a73c16876c5c03c2957c501bc9b20b5ad758310cdf0afb03e52202789ec0e5a7",
+        "attempt": 2,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::e961cc239e59c4377bf9d2d6251562d4cf4de1549eb407de0bf8855af9755482"
+      },
+      {
+        "action_trace_digest": "55226078b4d97e45e1b223e1fd776187e807a5cdce4fc0fe493e74a39816b4e4",
+        "attempt": 3,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::08c7444984b73f9f680a086b4b13812bf38fe388aed3dbb74184acc966546bff"
+      },
+      {
+        "action_trace_digest": "a45604c6172989fd40b1ca440637a2af7559cabd6f505eb30e8cf721f3058400",
+        "attempt": 4,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::af6a221496e3446f198b9a08b0d463bb2e9fac99e712dca2ce56d78fb376bd10"
+      },
+      {
+        "action_trace_digest": "707505145c557cab0870b270c2d55d7dad06f3cc69a92cf8ca59e0cad3f54fc3",
+        "attempt": 5,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::a2b9d084e8d5caf2bbfbb70ce1f7ea8c5c9c0839da32dc7b59851f891712b24f"
+      },
+      {
+        "action_trace_digest": "2f0d632f839ee4bb3eac263524b721a6d5b5bb954f1cadcb3f719c5ac9b7e973",
+        "attempt": 6,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::084b72f2c73d10fe2cb566ec9e233005576754bf1a3255589dc54a4d33901daa"
+      },
+      {
+        "action_trace_digest": "1df32afa35dcea84489f7692d6d48eda47486e1a9fdf357d9cdf4cf36a24c1e7",
+        "attempt": 7,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::4810a0db524cb30630b756eeddcbe31728ebdf98a181b14bb803c509f8c5eb1d"
+      },
+      {
+        "action_trace_digest": "7d8a59ffd54dd78681892b071de6247232531fcaa6ef6cd5be7bcc72fa09f8bd",
+        "attempt": 8,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::c96cc56db550fe8bfe80150261bb7e1c9669adc9161e58fc65b74b0037cf6a0f"
+      },
+      {
+        "action_trace_digest": "6d873bcf12a14faab72ba7d923f8fe8a57608c36705cfebbff59d53521ce4d1a",
+        "attempt": 9,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::0481176f6dca35a4c957e2af950c0badb209b966b859951842289cf8d9c6bbc4"
+      },
+      {
+        "action_trace_digest": "8d51cd9a1f9edc112def0d554db58d8322cdb1268f65a452075d009e1dc8a247",
+        "attempt": 10,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::478cf9dd4a0734cedcd5ce6391b06163be0112b419adfd6acae335b9a116be0e"
+      },
+      {
+        "action_trace_digest": "4ee3b955a01181601fe7a00178c78a07b4c01b91f740e7deb5fb6c9713d8a1c6",
+        "attempt": 11,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::93008848a048990ec9b33ee2c3a9a9c702f2153d22d074497b415c6239d471f7"
+      },
+      {
+        "action_trace_digest": "e5272dd7243654e51ccefba9f10dc1b85570f12c01ee635276959ba3c440b067",
+        "attempt": 12,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::83ef659e54e33ce2b385cf1fc59eb7b3562131f4a072aa83c8ce75c7c45167b2"
+      }
+    ],
+    "attempts": 12,
+    "eligible": 12,
+    "ineligible": 0,
+    "maximum_attempts": 60,
+    "model_errors": 0,
+    "refusals": 0,
+    "scenario": "RA-02",
+    "target": 12,
+    "target_met": true
+  },
+  {
+    "attempt_records": [
+      {
+        "action_trace_digest": "41a9dc92d9b545312c9b9f9f8c6f45b2225627ce13244399dce2aa34aee3eb9e",
+        "attempt": 1,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::d65374b9d8b278bb8b966cff4acb8bca67e2d26262d2e2b0ddce58a9a8022dad"
+      },
+      {
+        "action_trace_digest": "9627ff1f5ba1106fde67e7ee07446b6ad13675537b3f538fe1d0bc76cc548bb0",
+        "attempt": 2,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::779cde24e16be0431970ed9d05bd1b7fade5aea865846cd5244cb3e90b0d2c44"
+      },
+      {
+        "action_trace_digest": "f8b10d07a918298698f256be009abf7b10e2a1eaf064a6bbe38006e9d79bac8e",
+        "attempt": 3,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::0fbca63f96022eb76297ab1d645d69774c83f170f458204ef5f3f8e17f7f3195"
+      },
+      {
+        "action_trace_digest": "e3e0bf0c60643df59f263e9ed0609f173a30910a67c56a7f08e89d2f97658ce8",
+        "attempt": 4,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::5da13dc303ddda4608e53d1f0d9427fb8efede6e4d07cd390ad41715115a8c8d"
+      },
+      {
+        "action_trace_digest": "29e3b6b468a60e01eb215fd18ed784f7e432ce50c4a5802d092dbfc3587a4068",
+        "attempt": 5,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::78435740f1401b3e267aee6e3b8bf4302bad7a1e5350d64c924a23f6a730598f"
+      },
+      {
+        "action_trace_digest": "65e75edb22381d9b5cf3ef60e7c168e915c24b08d0ce46ee7315fe61be08d561",
+        "attempt": 6,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::94c7573abdff92662a1f4c71f0a35fe35d40d12c35cb87917bb4ebd6fe00c829"
+      },
+      {
+        "action_trace_digest": "25e962558aa2c99f9a7884bbaa6df57ac7d907ccfd7ff17ae4713738693c4bc0",
+        "attempt": 7,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::3ed6af941879672703963f90efd142c97d064d92f5b41e89b82ea3e6484f2ba2"
+      },
+      {
+        "action_trace_digest": "b37c96b2bb2a67745ff2a9bfff1b2a9063e5a1e9c5ab5c3bf2bb0cc26325f362",
+        "attempt": 8,
+        "model_error": null,
+        "retry_count": 1,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::b60e6e8c0567cfc34965c28a6e4639cade1d978ea63b77b5c4252d2971cb053b"
+      },
+      {
+        "action_trace_digest": "9f4dc2943fbbeb2a3f8a8151f84b42b2536535fe76152ed1a1558f6744fe0363",
+        "attempt": 9,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::b49f648464ce41ef3fa60ea3f9a0518e6d42ccf4a0bfc94552a18d7c85ad5e96"
+      },
+      {
+        "action_trace_digest": "fd3232594b5f9ebe30f02dd0bc6fa17abe95908a5dbe63664bb4081030a360ed",
+        "attempt": 10,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::6ea61452611cbe4c2f6f0e9a710ad0163d3bcf66cb5559273acd90db8f578b90"
+      },
+      {
+        "action_trace_digest": "a89ace8a75bf33c1a9b31fe07c0867a8044803deb0f2bc5694abeba547461d98",
+        "attempt": 11,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::f9e9e950913d30d403b02f04edf5a7058f07eaeb6aa0b490515139d551653fc3"
+      },
+      {
+        "action_trace_digest": "b05643619b241484093f0870d942596ff6c9a8fae6b47c3d4558bdbe1c95f91a",
+        "attempt": 12,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::5e13c8b01f47c9690888767e4eb04fd2fa71fb167fa4acd2aad5794b5c0986f9"
+      },
+      {
+        "action_trace_digest": "ba9ed880aed8cc87d574f5099cf738d9aa37b4779514060a492addf3e779a0e8",
+        "attempt": 13,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::c6bacc22966893d0852e101b0e83137c88f7fbb5624d94838a5720522a337292"
+      },
+      {
+        "action_trace_digest": "0c814ce74396649c4f2c69dcb26ce7e8cedb71c197a8d508f6a7292736e78cc6",
+        "attempt": 14,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::29a8792b60984eaf0dd5ac7f422a58f94e3c1c2ab5c99f12a70cd39cec5ae92f"
+      },
+      {
+        "action_trace_digest": "9a6b3824d78565e98c0f61f8881fc17e155803aff563e1ded4d874508dd32d82",
+        "attempt": 15,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::2f70de0992afc282d4719bc15d9d4b290c79b2be1ade546cfe2754ced2ccb5c8"
+      },
+      {
+        "action_trace_digest": "7fe8a55e2c34634dc8ce56c038cc0e161bf61be7a0fe4eeee4565da65aa29d9b",
+        "attempt": 16,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::9d50442e581043d2169d9d82da0ca0c6767466c372027e2aa73c31f4fbe1e365"
+      },
+      {
+        "action_trace_digest": "ce4e1e3f711c31fd143a6b5663d5087ecf14c0e1ac04d42b7b15a1263593bebc",
+        "attempt": 17,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::670997c6cbfc4403410757476ec09cecb3e6fb31db56b9de3759de4c448e7f0f"
+      },
+      {
+        "action_trace_digest": "a1eadcf86ab6bfa851a7e8547e276b396c4400ae88857264329a153a9cfa7785",
+        "attempt": 18,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::a2e4119c59c7c0475f4933b0817a9213e5e047dd03936d9d6af23e507b7757b0"
+      },
+      {
+        "action_trace_digest": "51a2448204ebefac66950e217ad52c28358db1eb516c448db9cc01bc2cf4a2f3",
+        "attempt": 19,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::36157a781c8ab746d847280cd824c8c06c4303ff6915ab66f05ddc100a9ce4f0"
+      },
+      {
+        "action_trace_digest": "ca4eff22f0d81559d93ebe8e58394cf09569a87086b94a1caa08282607519fa1",
+        "attempt": 20,
+        "model_error": null,
+        "retry_count": 0,
+        "status": "eligible",
+        "termination_reason": "stop",
+        "trace_id": "live::7549ec255674fa7014495e8448f2eb79709224cf6be08ea5d1f3c509b687075b"
+      }
+    ],
+    "attempts": 20,
+    "eligible": 20,
+    "ineligible": 0,
+    "maximum_attempts": 60,
+    "model_errors": 0,
+    "refusals": 0,
+    "scenario": "RA-03",
+    "target": 20,
+    "target_met": true
+  }
+]

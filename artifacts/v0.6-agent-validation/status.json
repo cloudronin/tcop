@@ -1,0 +1,6 @@
+{
+  "artifact_root": "artifacts/v0.6-agent-validation",
+  "passed": true,
+  "stage": "full",
+  "study": "TCOP v0.6 agent-based external validation"
+}

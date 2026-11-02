@@ -1,0 +1,1 @@
+This credential-free successor evaluates every sealed v2 preflight source case. It consumes preserved detector outputs and does not run Prompt Guard. TCOP cannot alter cases for which the detector emitted no warning; C3 is separately reported as a standing receiver guard.

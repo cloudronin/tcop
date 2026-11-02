@@ -1,0 +1,14 @@
+{
+  "gates": {
+    "all_passed": true,
+    "byte_stable": true,
+    "complete_population": true,
+    "no_detector_rerun": true,
+    "policy_contract": true,
+    "predecessor_unchanged": true
+  },
+  "policy_execution": true,
+  "rows": 840,
+  "source_cases": 168,
+  "status": "COMPLETE"
+}

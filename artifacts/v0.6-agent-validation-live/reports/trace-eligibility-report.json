@@ -1,0 +1,1661 @@
+[
+  {
+    "attempt_records": [
+      {
+        "action_trace_digest": null,
+        "attempt": 1,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 2,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 3,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 4,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 5,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 6,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 7,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 8,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 9,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 10,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 11,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 12,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 13,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 14,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 15,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 16,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 17,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 18,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 19,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 20,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 21,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 22,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 23,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 24,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 25,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 26,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 27,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 28,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 29,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 30,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 31,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 32,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 33,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 34,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 35,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 36,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 37,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 38,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 39,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 40,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 41,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 42,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 43,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 44,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 45,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 46,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 47,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 48,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 49,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 50,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 51,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 52,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 53,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 54,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 55,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 56,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 57,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 58,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 59,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 60,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      }
+    ],
+    "attempts": 60,
+    "eligible": 0,
+    "ineligible": 0,
+    "maximum_attempts": 60,
+    "model_errors": 60,
+    "refusals": 0,
+    "scenario": "RA-01",
+    "target": 12,
+    "target_met": false
+  },
+  {
+    "attempt_records": [
+      {
+        "action_trace_digest": null,
+        "attempt": 1,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 2,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 3,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 4,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 5,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 6,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 7,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 8,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 9,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 10,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 11,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 12,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 13,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 14,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 15,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 16,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 17,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 18,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 19,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 20,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 21,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 22,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 23,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 24,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 25,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 26,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 27,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 28,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 29,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 30,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 31,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 32,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 33,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 34,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 35,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 36,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 37,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 38,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 39,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 40,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 41,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 42,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 43,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 44,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 45,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 46,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 47,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 48,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 49,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 50,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 51,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 52,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 53,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 54,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 55,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 56,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 57,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 58,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 59,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 60,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      }
+    ],
+    "attempts": 60,
+    "eligible": 0,
+    "ineligible": 0,
+    "maximum_attempts": 60,
+    "model_errors": 60,
+    "refusals": 0,
+    "scenario": "RA-02",
+    "target": 12,
+    "target_met": false
+  },
+  {
+    "attempt_records": [
+      {
+        "action_trace_digest": null,
+        "attempt": 1,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 2,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 3,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 4,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 5,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 6,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 7,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 8,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 9,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 10,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 11,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 12,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 13,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 14,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 15,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 16,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 17,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 18,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 19,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 20,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 21,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 22,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 23,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 24,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 25,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 26,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 27,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 28,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 29,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 30,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 31,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 32,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 33,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 34,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 35,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 36,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 37,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 38,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 39,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 40,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 41,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 42,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 43,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 44,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 45,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 46,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 47,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 48,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 49,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 50,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 51,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 52,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 53,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 54,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 55,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 56,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 57,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 58,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 59,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      },
+      {
+        "action_trace_digest": null,
+        "attempt": 60,
+        "model_error": "live provider request failed: HTTPError",
+        "retry_count": null,
+        "status": "model_error",
+        "termination_reason": "model_error",
+        "trace_id": null
+      }
+    ],
+    "attempts": 60,
+    "eligible": 0,
+    "ineligible": 0,
+    "maximum_attempts": 60,
+    "model_errors": 60,
+    "refusals": 0,
+    "scenario": "RA-03",
+    "target": 20,
+    "target_met": false
+  }
+]

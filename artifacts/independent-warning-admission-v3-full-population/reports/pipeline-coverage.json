@@ -1,0 +1,16 @@
+{
+  "attack_bearing_cases": 72,
+  "benign_cases": 96,
+  "detector_no_warning_attack": 47,
+  "detector_no_warning_benign": 96,
+  "detector_warnings": 25,
+  "end_to_end_conditional_coverage": {
+    "denominator": 72,
+    "numerator": 25
+  },
+  "exact_bindings": 25,
+  "no_actionable_evidence": 143,
+  "normalized_tcx": 25,
+  "receiver_admitted": 25,
+  "source_cases": 168
+}

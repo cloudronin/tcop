@@ -1,0 +1,121 @@
+{
+  "performance_only": true,
+  "selections": [
+    {
+      "cache_hit_rate": 0.0,
+      "cache_invalidation_latency_ms": null,
+      "cache_ttl_seconds": null,
+      "correctness_run": false,
+      "latencies": {
+        "authorization_api": {
+          "p50_ms": 0.013417,
+          "p95_ms": 0.02075,
+          "p99_ms": 0.022667,
+          "sample_count": 20
+        },
+        "context_signing": {
+          "p50_ms": 0.263834,
+          "p95_ms": 0.307708,
+          "p99_ms": 0.312125,
+          "sample_count": 20
+        },
+        "federation": {
+          "p50_ms": 0.263834,
+          "p95_ms": 0.307708,
+          "p99_ms": 0.312125,
+          "sample_count": 20
+        },
+        "gateway_enforcement": {
+          "p50_ms": 0.019834,
+          "p95_ms": 0.026208,
+          "p99_ms": 0.033375,
+          "sample_count": 20
+        },
+        "observation_ingestion": {
+          "p50_ms": 0.157458,
+          "p95_ms": 0.283333,
+          "p99_ms": 0.290916,
+          "sample_count": 20
+        },
+        "resolver": {
+          "p50_ms": 0.013417,
+          "p95_ms": 0.02075,
+          "p99_ms": 0.022667,
+          "sample_count": 20
+        },
+        "validation": {
+          "p50_ms": 0.263834,
+          "p95_ms": 0.307708,
+          "p99_ms": 0.312125,
+          "sample_count": 20
+        },
+        "warning_to_enforcement": {
+          "p50_ms": 0.283417,
+          "p95_ms": 0.329666,
+          "p99_ms": 0.338333,
+          "sample_count": 20
+        }
+      },
+      "selection": "disabled",
+      "throughput_operations_per_second": 3444.097
+    },
+    {
+      "cache_hit_rate": 0.95,
+      "cache_invalidation_latency_ms": 0.0,
+      "cache_ttl_seconds": 5,
+      "correctness_run": false,
+      "latencies": {
+        "authorization_api": {
+          "p50_ms": 0.00025,
+          "p95_ms": 0.000542,
+          "p99_ms": 0.014083,
+          "sample_count": 20
+        },
+        "context_signing": {
+          "p50_ms": 0.272458,
+          "p95_ms": 0.285458,
+          "p99_ms": 0.364291,
+          "sample_count": 20
+        },
+        "federation": {
+          "p50_ms": 0.272458,
+          "p95_ms": 0.285458,
+          "p99_ms": 0.364291,
+          "sample_count": 20
+        },
+        "gateway_enforcement": {
+          "p50_ms": 0.02025,
+          "p95_ms": 0.025416,
+          "p99_ms": 0.032625,
+          "sample_count": 20
+        },
+        "observation_ingestion": {
+          "p50_ms": 0.159416,
+          "p95_ms": 0.1825,
+          "p99_ms": 0.193,
+          "sample_count": 20
+        },
+        "resolver": {
+          "p50_ms": 0.00025,
+          "p95_ms": 0.000542,
+          "p99_ms": 0.014083,
+          "sample_count": 20
+        },
+        "validation": {
+          "p50_ms": 0.272458,
+          "p95_ms": 0.285458,
+          "p99_ms": 0.364291,
+          "sample_count": 20
+        },
+        "warning_to_enforcement": {
+          "p50_ms": 0.293417,
+          "p95_ms": 0.3055,
+          "p99_ms": 0.396916,
+          "sample_count": 20
+        }
+      },
+      "selection": "enabled_fixed_ttl_5s",
+      "throughput_operations_per_second": 3349.688
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "artifact_root": "artifacts/v0.6-agent-validation-live-final",
+  "artifact_root_digest": "24a20e9c48a2061874503ed56b54f68d1de92bc6a6800a42fb5398170fbd17bd",
+  "reason": "runtime amendment 005 corrects only the RA-03 derived utility counter from immutable replay rows"
+}

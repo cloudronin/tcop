@@ -1,0 +1,9 @@
+{
+  "action_trace_digest": null,
+  "attempt": 56,
+  "model_error": "live provider request failed: HTTPError",
+  "retry_count": null,
+  "status": "model_error",
+  "termination_reason": "model_error",
+  "trace_id": null
+}

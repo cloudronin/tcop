@@ -1,0 +1,19 @@
+{
+  "affected_capability_scope": [
+    "credential.use",
+    "dataset.export",
+    "repository.write",
+    "workload.spawn"
+  ],
+  "benign_calls_attempted": 240,
+  "benign_calls_blocked": 0,
+  "benign_calls_delayed": 0,
+  "benign_calls_forwarded": 240,
+  "recovery_and_deescalation": "local restriction expiry or receiver-local recovery only",
+  "restriction_duration_seconds": 60,
+  "trace_count": 20,
+  "unrelated_capabilities_affected": [],
+  "workflow_completion": 80,
+  "workflow_completion_rate": 0.6666666666666666,
+  "workflow_latency": "event-relative replay; wall-clock timing reported separately"
+}

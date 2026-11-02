@@ -1,0 +1,6 @@
+{
+  "every_denial_has_local_decision": true,
+  "every_gateway_block_references_domain_b_policy_and_decision": true,
+  "gateway_decisions": 72,
+  "remote_enforcement_successes": 0
+}

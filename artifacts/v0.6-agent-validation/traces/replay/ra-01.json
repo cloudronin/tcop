@@ -1,0 +1,31 @@
+{
+  "calls": [
+    {
+      "capability": "public.read",
+      "ordinal": 1,
+      "request_digest": "495b100212ae0d0c2d74dc45531ff20af4814e68452e8ffe0673aa956c07dbf4",
+      "tool": "public_search"
+    },
+    {
+      "capability": "repository.read",
+      "ordinal": 2,
+      "request_digest": "ebf11253b66efa62f21b19fa0510eb0ca3cd3f320a7f95784baf655007667ff1",
+      "tool": "repository_read"
+    },
+    {
+      "capability": "repository.write",
+      "ordinal": 3,
+      "request_digest": "b48866f4ac62715997b718906d6bf3918f031d8bc1e57ec33ad28462b75bef20",
+      "tool": "repository_write"
+    },
+    {
+      "capability": "dataset.export",
+      "ordinal": 4,
+      "request_digest": "3545096badfb90dc18d94bdf537f26e5eb39e6d4953aa589e366ed3742f8bf5d",
+      "tool": "dataset_export"
+    }
+  ],
+  "canonical_action_digest": "60303be70f30171c67c698c8e020fd5c8b0e47c23744fafd6ec5784fe0a39bfd",
+  "scenario": "RA-01",
+  "trace_id": "60303be70f30171c67c698c8e020fd5c8b0e47c23744fafd6ec5784fe0a39bfd"
+}

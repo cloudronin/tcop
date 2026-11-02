@@ -1,0 +1,6 @@
+{
+  "authorization_cache": "disabled",
+  "authorization_hook": "local-authorization-evaluator",
+  "enforcement_role": "reference-only",
+  "selection_manifest": "integrations/mcp-gateway/gateway-selection-manifest.json"
+}
