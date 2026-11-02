@@ -1,9 +1,9 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running breadth-first search Model-Checking with fp 1 and seed 2016268460830093496 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90618] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryReceiptBound.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrust.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running breadth-first search Model-Checking with fp 1 and seed -4686669104801150161 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94192] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryReceiptBound.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TrustMC.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPTrust.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -18,9 +18,9 @@ Semantic processing of module TCOPReceiver
 Semantic processing of module TCOPTrust
 Semantic processing of module TrustMC
 Semantic processing of module CanaryReceiptBound
-Starting... (2026-11-01 21:11:32)
+Starting... (2026-11-01 22:04:09)
 Computing initial states...
-Finished computing initial states: 1 distinct state generated at 2026-11-01 21:11:33.
+Finished computing initial states: 1 distinct state generated at 2026-11-01 22:04:09.
 Error: Invariant ReceiptBoundRestrictions is violated.
 Error: The behavior up to this point is:
 State 1: <Initial predicate>
@@ -230,7 +230,7 @@ State 5: <TrustTakeEffect line 88, col 5 to line 90, col 92 of module TCOPTrust>
 /\ attempt = 0
 /\ a4 = "waiting"
 
-882 states generated, 541 distinct states found, 420 states left on queue.
+433 states generated, 318 distinct states found, 258 states left on queue.
 The depth of the complete state graph search is 5.
-The average outdegree of the complete state graph is 5 (minimum is 1, the maximum 11 and the 95th percentile is 9).
-Finished in 00s at (2026-11-01 21:11:33)
+The average outdegree of the complete state graph is 6 (minimum is 1, the maximum 12 and the 95th percentile is 8).
+Finished in 00s at (2026-11-01 22:04:09)

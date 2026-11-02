@@ -1,7 +1,7 @@
 {
   "schema_version": "tcop.trace-result/1",
   "input_kind": "fixture",
-  "trace_file": "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixtures/rejected-a1-without-denial.json",
+  "trace_file": "/private/tmp/tcop-main/formal/traces/fixtures/rejected-a1-without-denial.json",
   "trace_sha256": "5d8854b60d773a83f1ff00752f739a6e4e55ae89bcfdc4f6504976698f47d9f8",
   "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
   "trace_spec_sha256": "4c1bdfc0aa2882088f13a75d355361ec8c2a6b23f579616206ab3595e92aa5be",
@@ -56,9 +56,9 @@
   "command": [
     "/opt/homebrew/opt/openjdk/bin/java",
     "-XX:+UseParallelGC",
-    "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+    "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
     "-cp",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tools/tla2tools.jar",
+    "/private/tmp/tcop-main/formal/tools/tla2tools.jar",
     "tlc2.TLC",
     "-workers",
     "1",
@@ -67,12 +67,12 @@
     "-dfid",
     "18",
     "-metadir",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/states",
+    "/private/tmp/tcop-main/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/states",
     "-config",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/FrozenTrace.cfg",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/FrozenTrace.tla"
+    "/private/tmp/tcop-main/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/FrozenTrace.cfg",
+    "/private/tmp/tcop-main/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/FrozenTrace.tla"
   ],
-  "seconds": 0.258,
+  "seconds": 0.222,
   "exit_code": 0,
   "outcome": "rejected",
   "reached_events": 2,

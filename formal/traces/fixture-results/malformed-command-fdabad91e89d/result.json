@@ -1,7 +1,7 @@
 {
   "schema_version": "tcop.trace-result/1",
   "input_kind": "fixture",
-  "trace_file": "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixtures/malformed-command.json",
+  "trace_file": "/private/tmp/tcop-main/formal/traces/fixtures/malformed-command.json",
   "trace_sha256": "fdabad91e89d548e342660381c2c16f64f16ac7ce02ea29f1811ff3dbafe8c83",
   "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
   "trace_spec_sha256": "4c1bdfc0aa2882088f13a75d355361ec8c2a6b23f579616206ab3595e92aa5be",

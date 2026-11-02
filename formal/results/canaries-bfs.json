@@ -22,11 +22,11 @@
     "generated": 21,
     "distinct": 20,
     "dfid_level": null,
-    "seconds": 0.683,
+    "seconds": 0.658,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -37,8 +37,8 @@
       "-metadir",
       "formal/states/bfs-CanaryNoWidening",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryNoWidening.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryNoWidening.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryNoWidening.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryNoWidening.tla"
     ],
     "violated_properties": [
       "NoWidening"
@@ -48,7 +48,7 @@
     ],
     "counterexample_length": 4,
     "counterexample_transitions": 3,
-    "log_sha256": "ec09495f116c9b7d7d5890d29ea249209c93b2cecf0dd57e4c37136a47b2e745",
+    "log_sha256": "62902a79eb02f8f1be921ea4eca3ed1b0abf074f21b3b933e9ba820c73020b1b",
     "property": "NoWidening",
     "fault": "FaultReattach: adapter re-adds removed A0 authority",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -76,11 +76,11 @@
     "generated": 17,
     "distinct": 16,
     "dfid_level": null,
-    "seconds": 0.652,
+    "seconds": 0.613,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -91,8 +91,8 @@
       "-metadir",
       "formal/states/bfs-CanaryAcceptOnlyValid",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryAcceptOnlyValid.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryAcceptOnlyValid.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryAcceptOnlyValid.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryAcceptOnlyValid.tla"
     ],
     "violated_properties": [
       "AcceptOnlyValid"
@@ -102,7 +102,7 @@
     ],
     "counterexample_length": 3,
     "counterexample_transitions": 2,
-    "log_sha256": "c5db58b2e50a80988963f771eb27fc171ccd367ecc8247d0177a0133faff1e3a",
+    "log_sha256": "d0f9c551e8a3df855682740e66b9ee6a5b79b4dc999c220c8e582fbd5f689277",
     "property": "AcceptOnlyValid",
     "fault": "FaultValidWithoutNonce: drop only consumed-nonce validation",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -130,11 +130,11 @@
     "generated": 5,
     "distinct": 5,
     "dfid_level": null,
-    "seconds": 0.659,
+    "seconds": 0.628,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -145,8 +145,8 @@
       "-metadir",
       "formal/states/bfs-CanaryEffectHolds",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryEffectHolds.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryEffectHolds.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryEffectHolds.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryEffectHolds.tla"
     ],
     "violated_properties": [
       "EffectHolds"
@@ -156,7 +156,7 @@
     ],
     "counterexample_length": 5,
     "counterexample_transitions": 4,
-    "log_sha256": "f39613c0e4347d1364b3bcee8d60b62b5cc9063129b1a3663c950b75fe3d6872",
+    "log_sha256": "da2fd4f240c61eee8520bb507e06f464a89e83ed61014aa77e65a886bd4b2abf",
     "property": "EffectHolds",
     "fault": "FaultHarmfulAuthorization: execute a covered action through an installed deny",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -184,11 +184,11 @@
     "generated": 2,
     "distinct": 2,
     "dfid_level": null,
-    "seconds": 0.652,
+    "seconds": 0.62,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -199,8 +199,8 @@
       "-metadir",
       "formal/states/bfs-CanaryLyingPeer",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryLyingPeer.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryLyingPeer.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryLyingPeer.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryLyingPeer.tla"
     ],
     "violated_properties": [
       "LyingPeerOnlyCostsAvailability"
@@ -210,7 +210,7 @@
     ],
     "counterexample_length": 2,
     "counterexample_transitions": 1,
-    "log_sha256": "fee46084c847c37da723efe8ca2dc00805552dff55593f03fccd42d30242fa5f",
+    "log_sha256": "48de4319b4592a90fd5e65189e51ce06a99cb20a07f0dfc8597f7bc015a5ba75",
     "property": "LyingPeerOnlyCostsAvailability",
     "fault": "FaultReceiveCommand: execute the command field of a valid false observation",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -229,20 +229,20 @@
     "checked_module_sha256": "e10933b6246ab15c99b9650c6bcede078d8d301d214e80f2072846a4e6e05523",
     "config_sha256": "2f7bb407451fb316de00bab1a5ce7e138291aaa78d11be48113f2d9940fbe24a",
     "tlc_stats": {
-      "generated": 882,
-      "distinct": 541,
-      "queue_remaining": 420,
+      "generated": 433,
+      "distinct": 318,
+      "queue_remaining": 258,
       "depth": 5,
       "depth_kind": "bfs_graph_depth"
     },
-    "generated": 882,
-    "distinct": 541,
+    "generated": 433,
+    "distinct": 318,
     "dfid_level": null,
-    "seconds": 0.743,
+    "seconds": 0.65,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -253,8 +253,8 @@
       "-metadir",
       "formal/states/bfs-CanaryReceiptBound",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryReceiptBound.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryReceiptBound.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryReceiptBound.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryReceiptBound.tla"
     ],
     "violated_properties": [
       "ReceiptBoundRestrictions"
@@ -264,7 +264,7 @@
     ],
     "counterexample_length": 5,
     "counterexample_transitions": 4,
-    "log_sha256": "71a39fa110f78f445f5b97d205e184676c959b9feffc23b44945fe01a52b191f",
+    "log_sha256": "5abcbf6e1a7759bed856be568b290d3dacb2545e45d6b83ceb6606105b3e2c19",
     "property": "ReceiptBoundRestrictions",
     "fault": "FaultNoSessionReceipt: bypass exact issuer/session/destination receipt gate",
     "canary_bounds_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
@@ -284,20 +284,20 @@
     "checked_module_sha256": "974ea5b61dd5e1c94ad9da7dd74270709d486cd183b663bc36384efaca9de661",
     "config_sha256": "41ffddc492201bd49eae8abc429a118bef2773631be779d33c8e499dc9b7cbf6",
     "tlc_stats": {
-      "generated": 22901,
-      "distinct": 7233,
-      "queue_remaining": 2342,
+      "generated": 20273,
+      "distinct": 6355,
+      "queue_remaining": 2174,
       "depth": 11,
       "depth_kind": "bfs_graph_depth"
     },
-    "generated": 22901,
-    "distinct": 7233,
+    "generated": 20273,
+    "distinct": 6355,
     "dfid_level": null,
-    "seconds": 1.176,
+    "seconds": 1.031,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -308,8 +308,8 @@
       "-metadir",
       "formal/states/bfs-CanaryQuarantinedIssuer",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryQuarantinedIssuer.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryQuarantinedIssuer.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryQuarantinedIssuer.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryQuarantinedIssuer.tla"
     ],
     "violated_properties": [
       "QuarantinedIssuerNoEffect"
@@ -319,7 +319,7 @@
     ],
     "counterexample_length": 8,
     "counterexample_transitions": 7,
-    "log_sha256": "dcaa712d2248fab5d54a4f2a2ef11373834b250a0a677707ad12452e4da55cb6",
+    "log_sha256": "d11e59864c89421ba74cfd4fd6f6013fc193fa70eb7e37f6568777f63ac61df7",
     "property": "QuarantinedIssuerNoEffect",
     "fault": "FaultQuarantineBypass: let a quarantined issuer reach the binding effect",
     "canary_bounds_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
@@ -339,20 +339,20 @@
     "checked_module_sha256": "1be4e8a420701fb88206e44d4a37d75fa984988ad8760595068bb46c12684fbc",
     "config_sha256": "eea5fe8f458633bba417230ae2132cbcbf0e5ddaa522a0ba0d108fdeeaa4dbfc",
     "tlc_stats": {
-      "generated": 15195,
-      "distinct": 4917,
-      "queue_remaining": 1953,
+      "generated": 14878,
+      "distinct": 4823,
+      "queue_remaining": 1933,
       "depth": 10,
       "depth_kind": "bfs_graph_depth"
     },
-    "generated": 15195,
-    "distinct": 4917,
+    "generated": 14878,
+    "distinct": 4823,
     "dfid_level": null,
-    "seconds": 1.006,
+    "seconds": 0.987,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -363,8 +363,8 @@
       "-metadir",
       "formal/states/bfs-CanaryZeroTrust",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryZeroTrust.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryZeroTrust.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryZeroTrust.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryZeroTrust.tla"
     ],
     "violated_properties": [
       "ZeroTrustOwnDestinationsOnly"
@@ -374,7 +374,7 @@
     ],
     "counterexample_length": 7,
     "counterexample_transitions": 6,
-    "log_sha256": "cf8e31c503dd2f8881486e364bb11d8b61f009da2663f057050de42b3a730e29",
+    "log_sha256": "4a42391a5de4f4a3334e20d90b93683a8decfb14e6312398d4ecd1ca059dc53a",
     "property": "ZeroTrustOwnDestinationsOnly",
     "fault": "FaultUntrustedBroadAction: allow freeze/revocation/non-owned egress without local trust",
     "canary_bounds_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",

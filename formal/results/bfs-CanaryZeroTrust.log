@@ -1,9 +1,9 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running breadth-first search Model-Checking with fp 1 and seed 4602708372767330821 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90620] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryZeroTrust.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrust.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running breadth-first search Model-Checking with fp 1 and seed -9196504143889877045 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94194] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryZeroTrust.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TrustMC.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPTrust.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -18,9 +18,9 @@ Semantic processing of module TCOPReceiver
 Semantic processing of module TCOPTrust
 Semantic processing of module TrustMC
 Semantic processing of module CanaryZeroTrust
-Starting... (2026-11-01 21:11:34)
+Starting... (2026-11-01 22:04:11)
 Computing initial states...
-Finished computing initial states: 1 distinct state generated at 2026-11-01 21:11:34.
+Finished computing initial states: 1 distinct state generated at 2026-11-01 22:04:11.
 Error: Invariant ZeroTrustOwnDestinationsOnly is violated.
 Error: The behavior up to this point is:
 State 1: <Initial predicate>
@@ -185,7 +185,7 @@ State 5: <TrustReceive line 65, col 5 to line 69, col 95 of module TCOPTrust>
 /\ now = 0
 /\ submitAt = <<0, 0>>
 /\ effectAudit = {}
-/\ choice = <<<<"deny_egress", d1>>, <<"none", "none">>>>
+/\ choice = <<<<"freeze", "sandbox">>, <<"none", "none">>>>
 /\ examined = {1}
 /\ seenIds = {1}
 /\ effective = {}
@@ -225,7 +225,7 @@ State 6: <TrustSubmit line 78, col 19 to line 78, col 70 of module TCOPTrust>
 /\ now = 0
 /\ submitAt = <<0, 0>>
 /\ effectAudit = {}
-/\ choice = <<<<"deny_egress", d1>>, <<"none", "none">>>>
+/\ choice = <<<<"freeze", "sandbox">>, <<"none", "none">>>>
 /\ examined = {1}
 /\ seenIds = {1}
 /\ effective = {}
@@ -249,10 +249,7 @@ State 7: <TrustTakeEffect line 88, col 5 to line 90, col 92 of module TCOPTrust>
 /\ blocked = {}
 /\ traffic = {<<p0, s0, d0>>}
 /\ minted = {<<p0, s0, d0>>}
-/\ Authority = { <<"egress", d0>>,
-  <<"credential", c0>>,
-  <<"credential", c1>>,
-  <<"work", "benign">> }
+/\ Authority = {}
 /\ delivered = {1}
 /\ effectAt = <<0, 0>>
 /\ accepted = { [ message |-> 1,
@@ -267,7 +264,7 @@ State 7: <TrustTakeEffect line 88, col 5 to line 90, col 92 of module TCOPTrust>
     session |-> s0,
     destination |-> d0,
     trusted |-> FALSE,
-    action |-> <<"deny_egress", d1>>,
+    action |-> <<"freeze", "sandbox">>,
     quarantined |-> FALSE,
     traffic |-> {<<p0, s0, d0>>},
     minted |-> {<<p0, s0, d0>>},
@@ -275,8 +272,13 @@ State 7: <TrustTakeEffect line 88, col 5 to line 90, col 92 of module TCOPTrust>
     message |-> 1,
     at |-> 0,
     warningSession |-> s0,
-    removed |-> {<<"egress", d1>>} ] }
-/\ choice = <<<<"deny_egress", d1>>, <<"none", "none">>>>
+    removed |->
+        { <<"egress", d0>>,
+          <<"egress", d1>>,
+          <<"credential", c0>>,
+          <<"credential", c1>>,
+          <<"work", "benign">> } ] }
+/\ choice = <<<<"freeze", "sandbox">>, <<"none", "none">>>>
 /\ examined = {1}
 /\ seenIds = {1}
 /\ effective = {1}
@@ -285,7 +287,11 @@ State 7: <TrustTakeEffect line 88, col 5 to line 90, col 92 of module TCOPTrust>
   1 :> "unattempted" @@
   2 :> "unattempted" @@
   3 :> "unattempted" )
-/\ Covered = {<<"egress", d1>>}
+/\ Covered = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
 /\ trusted = {}
 /\ status = <<"effective", "unreceived">>
 /\ held = {<<p0, s0, d0>>}
@@ -294,7 +300,7 @@ State 7: <TrustTakeEffect line 88, col 5 to line 90, col 92 of module TCOPTrust>
 /\ attempt = 0
 /\ a4 = "waiting"
 
-15195 states generated, 4917 distinct states found, 1953 states left on queue.
+14878 states generated, 4823 distinct states found, 1933 states left on queue.
 The depth of the complete state graph search is 10.
 The average outdegree of the complete state graph is 2 (minimum is 0, the maximum 11 and the 95th percentile is 3).
-Finished in 00s at (2026-11-01 21:11:35)
+Finished in 00s at (2026-11-01 22:04:11)

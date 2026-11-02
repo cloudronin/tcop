@@ -22,11 +22,11 @@
     "generated": 8,
     "distinct": 5,
     "dfid_level": 4,
-    "seconds": 0.297,
+    "seconds": 0.229,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -39,8 +39,8 @@
       "-metadir",
       "formal/states/dfid-CanaryNoWidening",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryNoWidening.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryNoWidening.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryNoWidening.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryNoWidening.tla"
     ],
     "violated_properties": [
       "NoWidening"
@@ -50,7 +50,7 @@
     ],
     "counterexample_length": 4,
     "counterexample_transitions": 3,
-    "log_sha256": "95a62cb062e65747ee11de9520751d273085f5cb76a663001e2d986dd225fbec",
+    "log_sha256": "d209a988b817ee7de267530db33efc44a9730f2f00f6ecd2e66a2e34d9bc0af0",
     "property": "NoWidening",
     "fault": "FaultReattach: adapter re-adds removed A0 authority",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -78,11 +78,11 @@
     "generated": 11,
     "distinct": 8,
     "dfid_level": 3,
-    "seconds": 0.24,
+    "seconds": 0.238,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -95,8 +95,8 @@
       "-metadir",
       "formal/states/dfid-CanaryAcceptOnlyValid",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryAcceptOnlyValid.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryAcceptOnlyValid.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryAcceptOnlyValid.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryAcceptOnlyValid.tla"
     ],
     "violated_properties": [
       "AcceptOnlyValid"
@@ -106,7 +106,7 @@
     ],
     "counterexample_length": 3,
     "counterexample_transitions": 2,
-    "log_sha256": "4adf38730b2abed70c6a49ac700c50ef380da1b3ce56dd77bd8650ca693696f9",
+    "log_sha256": "ee152a1b19c36fec29b88cf938816a476df35d92db091bff417cf4de56a041a8",
     "property": "AcceptOnlyValid",
     "fault": "FaultValidWithoutNonce: drop only consumed-nonce validation",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -134,11 +134,11 @@
     "generated": 11,
     "distinct": 5,
     "dfid_level": 5,
-    "seconds": 0.232,
+    "seconds": 0.237,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -151,8 +151,8 @@
       "-metadir",
       "formal/states/dfid-CanaryEffectHolds",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryEffectHolds.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryEffectHolds.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryEffectHolds.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryEffectHolds.tla"
     ],
     "violated_properties": [
       "EffectHolds"
@@ -162,7 +162,7 @@
     ],
     "counterexample_length": 5,
     "counterexample_transitions": 4,
-    "log_sha256": "9ead5a61b80be438f79541c705bd40694fe544205cbe3e6ca7fe78742d7be627",
+    "log_sha256": "804cf87ff95efe8cfa352516aed793ee40353e9b9f535654e3e98e5eabfd2b6b",
     "property": "EffectHolds",
     "fault": "FaultHarmfulAuthorization: execute a covered action through an installed deny",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -190,11 +190,11 @@
     "generated": 2,
     "distinct": 2,
     "dfid_level": 2,
-    "seconds": 0.287,
+    "seconds": 0.209,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -207,8 +207,8 @@
       "-metadir",
       "formal/states/dfid-CanaryLyingPeer",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryLyingPeer.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryLyingPeer.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryLyingPeer.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryLyingPeer.tla"
     ],
     "violated_properties": [
       "LyingPeerOnlyCostsAvailability"
@@ -218,7 +218,7 @@
     ],
     "counterexample_length": 2,
     "counterexample_transitions": 1,
-    "log_sha256": "7e3b455f8ea9dfa65b7f665914fe1a100c5b64309f6725040e4cd696b560c4e4",
+    "log_sha256": "8bb6997dd290227a3a29ccb8877400342253e1db4a7a324da48f5893a4bc9194",
     "property": "LyingPeerOnlyCostsAvailability",
     "fault": "FaultReceiveCommand: execute the command field of a valid false observation",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -246,11 +246,11 @@
     "generated": 3197,
     "distinct": 1193,
     "dfid_level": 5,
-    "seconds": 0.407,
+    "seconds": 0.381,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -263,8 +263,8 @@
       "-metadir",
       "formal/states/dfid-CanaryReceiptBound",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryReceiptBound.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryReceiptBound.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryReceiptBound.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryReceiptBound.tla"
     ],
     "violated_properties": [
       "ReceiptBoundRestrictions"
@@ -274,7 +274,7 @@
     ],
     "counterexample_length": 5,
     "counterexample_transitions": 4,
-    "log_sha256": "dac2f6e2595f677b6c22fe5345ebe1c6e4c2a2068eb3948aaefeca288d65ef6a",
+    "log_sha256": "63c393d3a71eeb27efa0e7a0f907c2f81397f08eac6d0922295ab916985a3e43",
     "property": "ReceiptBoundRestrictions",
     "fault": "FaultNoSessionReceipt: bypass exact issuer/session/destination receipt gate",
     "canary_bounds_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
@@ -303,11 +303,11 @@
     "generated": 31191,
     "distinct": 4891,
     "dfid_level": 8,
-    "seconds": 0.691,
+    "seconds": 0.726,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -320,8 +320,8 @@
       "-metadir",
       "formal/states/dfid-CanaryQuarantinedIssuer",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryQuarantinedIssuer.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryQuarantinedIssuer.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryQuarantinedIssuer.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryQuarantinedIssuer.tla"
     ],
     "violated_properties": [
       "QuarantinedIssuerNoEffect"
@@ -331,7 +331,7 @@
     ],
     "counterexample_length": 8,
     "counterexample_transitions": 7,
-    "log_sha256": "dc2a92ddff2f8698331e31e41da7b1568328f2fda1668115b7847ab92b3d8ab6",
+    "log_sha256": "d256b195f10a0510701e9b4bafbfd5c0a684b5c022864580acf860dcdb626755",
     "property": "QuarantinedIssuerNoEffect",
     "fault": "FaultQuarantineBypass: let a quarantined issuer reach the binding effect",
     "canary_bounds_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
@@ -360,11 +360,11 @@
     "generated": 16036,
     "distinct": 3034,
     "dfid_level": 7,
-    "seconds": 0.534,
+    "seconds": 0.536,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -377,8 +377,8 @@
       "-metadir",
       "formal/states/dfid-CanaryZeroTrust",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryZeroTrust.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryZeroTrust.tla"
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryZeroTrust.cfg",
+      "/private/tmp/tcop-main/formal/tla/canaries/CanaryZeroTrust.tla"
     ],
     "violated_properties": [
       "ZeroTrustOwnDestinationsOnly"
@@ -388,7 +388,7 @@
     ],
     "counterexample_length": 7,
     "counterexample_transitions": 6,
-    "log_sha256": "5eadced1189d40cc4b5d5047563a7b07da21e96bc330e0663921465f0f2ff499",
+    "log_sha256": "bfd39eba94e3032d44c29e4f691906c54756cab7a60bb6c6ffa9b7f9f0ccdec4",
     "property": "ZeroTrustOwnDestinationsOnly",
     "fault": "FaultUntrustedBroadAction: allow freeze/revocation/non-owned egress without local trust",
     "canary_bounds_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
@@ -417,11 +417,11 @@
     "generated": 1053524,
     "distinct": 61566,
     "dfid_level": 20,
-    "seconds": 20.597,
+    "seconds": 20.475,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -434,14 +434,14 @@
       "-metadir",
       "formal/states/dfid-NoWidening",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/NoWidening.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/NoWidening.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "13e583515d0517f2d57d97f060ef14f3ad016c77b05baf237cdaeb56b89acfb8"
+    "log_sha256": "d3d54d63cabc2cf4b94a716b4cf2caa9b50f6f7f042aa675b3f1043362cf1301"
   },
   {
     "config": "AcceptOnlyValid",
@@ -466,11 +466,11 @@
     "generated": 1053524,
     "distinct": 61566,
     "dfid_level": 20,
-    "seconds": 21.666,
+    "seconds": 20.055,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -483,14 +483,14 @@
       "-metadir",
       "formal/states/dfid-AcceptOnlyValid",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/AcceptOnlyValid.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/AcceptOnlyValid.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "c2d4496bbf3ac851b7a32ae25fcc1c7b622a32c8d49d1e933d55263936a23c16"
+    "log_sha256": "5dc28f1a02988bd7760762740f1c1ab3a7c4de5553bdc11e9b02bf7584099316"
   },
   {
     "config": "EffectHolds",
@@ -515,11 +515,11 @@
     "generated": 1053524,
     "distinct": 61566,
     "dfid_level": 20,
-    "seconds": 21.727,
+    "seconds": 20.311,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -532,14 +532,14 @@
       "-metadir",
       "formal/states/dfid-EffectHolds",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/EffectHolds.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/EffectHolds.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "12e718c6369ef7e01424346cabaaacbd31750b154d4aa5540e2bd60e01209ceb"
+    "log_sha256": "0967597da448658497d6b670ccbbbe186346ea27d73985970ee2788d6d5d07f7"
   },
   {
     "config": "LyingPeer",
@@ -564,11 +564,11 @@
     "generated": 1053524,
     "distinct": 61566,
     "dfid_level": 20,
-    "seconds": 22.413,
+    "seconds": 22.612,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -581,14 +581,14 @@
       "-metadir",
       "formal/states/dfid-LyingPeer",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/LyingPeer.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/LyingPeer.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "4158a772bebf2b5b8e57c3d6b8faad6c221172bcfa547b28b2a1ab2e39f8c3aa"
+    "log_sha256": "219152a1c12ffcd0089dcdd14cf826d00d90f196c26a932b2bbaad5009adee84"
   },
   {
     "config": "MC",
@@ -613,11 +613,11 @@
     "generated": 1053524,
     "distinct": 61566,
     "dfid_level": 20,
-    "seconds": 22.58,
+    "seconds": 22.947,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -630,14 +630,14 @@
       "-metadir",
       "formal/states/dfid-MC",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/MC.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "071941774cf163419d5f71c206fa00796706309fe164dc453c4f0d2a2b3c44b8"
+    "log_sha256": "4f66afc252d3dc1e84906922752bcb3e76457d09f82388ff5b38fe5e71006346"
   },
   {
     "config": "TimingSlow",
@@ -662,11 +662,11 @@
     "generated": 422,
     "distinct": 54,
     "dfid_level": 15,
-    "seconds": 0.279,
+    "seconds": 0.295,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -679,14 +679,14 @@
       "-metadir",
       "formal/states/dfid-TimingSlow",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TimingSlow.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/TimingSlow.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "e4429d163bbaaf7cfcca8e24cc21890eb92ed1c5b15aacbdf72c05c5110d2f1a"
+    "log_sha256": "771a4f3405d3372718cccc9b04e27a422c4b2aefe66f8287332248dc1f2d0507"
   },
   {
     "config": "TimingSlowApproval",
@@ -711,11 +711,11 @@
     "generated": 606,
     "distinct": 60,
     "dfid_level": 16,
-    "seconds": 0.266,
+    "seconds": 0.3,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -728,14 +728,14 @@
       "-metadir",
       "formal/states/dfid-TimingSlowApproval",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TimingSlowApproval.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/TimingSlowApproval.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "4ba520d5218bd9b20b5bdf6ee63eca80dab23b3e4118ad10d146c6f2b84049f9"
+    "log_sha256": "9a16c841a23d04c2f431396c57d21f6f7c9090d6c2ce8ef59ab3b3feabc2fad0"
   },
   {
     "config": "TimingFast",
@@ -760,11 +760,11 @@
     "generated": 1148,
     "distinct": 88,
     "dfid_level": 25,
-    "seconds": 0.283,
+    "seconds": 0.31,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -777,14 +777,14 @@
       "-metadir",
       "formal/states/dfid-TimingFast",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TimingFast.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/TimingFast.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "849d81f9337ed25216629dc86c83e133ad3aa599e38b5a67a9255b062c130e7e"
+    "log_sha256": "a6dae0af5c2a83e318fef58254d94ccc53b38cc01fcde2699b5f9f6dd0acf66f"
   },
   {
     "config": "TimingFastCredential",
@@ -809,11 +809,11 @@
     "generated": 762,
     "distinct": 74,
     "dfid_level": 20,
-    "seconds": 0.272,
+    "seconds": 0.274,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -826,14 +826,14 @@
       "-metadir",
       "formal/states/dfid-TimingFastCredential",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TimingFastCredential.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/TimingFastCredential.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "7e10d312d416d3d2420b07760b961699102544203dff215fbb33b71b5e3af053"
+    "log_sha256": "b527e65f432dd2e47b43865e0417b43c7a3673fbb7d516f0597da1a88dfd6410"
   },
   {
     "config": "BaselineDenial",
@@ -858,11 +858,11 @@
     "generated": 526,
     "distinct": 56,
     "dfid_level": 16,
-    "seconds": 0.264,
+    "seconds": 0.27,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -875,14 +875,14 @@
       "-metadir",
       "formal/states/dfid-BaselineDenial",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/BaselineDenial.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/BaselineDenial.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "5fd845a9aa695addc02b7cb406b07a5c41928b40940979dad67ed552535ea8c3"
+    "log_sha256": "b606798de820878f58408f1878a5303154caa7b890297dd9cb69ef5582738137"
   },
   {
     "config": "Sanity",
@@ -907,11 +907,11 @@
     "generated": 463,
     "distinct": 41,
     "dfid_level": 22,
-    "seconds": 0.247,
+    "seconds": 0.251,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -924,14 +924,14 @@
       "-metadir",
       "formal/states/dfid-Sanity",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/Sanity.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/Sanity.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "279f05e75a98d89527eeb060288dc73abae11e1ad252d2bddc12465fc6b794a2"
+    "log_sha256": "2db47899954076b47410c6d29c52d7a0739dcd97eaabe26aa1e2a5f9f7b85579"
   },
   {
     "config": "SanityLying",
@@ -956,11 +956,11 @@
     "generated": 1843,
     "distinct": 204,
     "dfid_level": 16,
-    "seconds": 0.344,
+    "seconds": 0.356,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -973,14 +973,14 @@
       "-metadir",
       "formal/states/dfid-SanityLying",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/SanityLying.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/SanityLying.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "78f9a48f9667ce0b6538044499844358ef712681d9a05b6ccbd2b56281041e3f"
+    "log_sha256": "fec69056617ff81dc4f81dd971ddd26486302e182d55812eada96fe900fdf271"
   },
   {
     "config": "MCApprovalBaseline",
@@ -1005,11 +1005,11 @@
     "generated": 880913,
     "distinct": 54198,
     "dfid_level": 21,
-    "seconds": 17.556,
+    "seconds": 18.651,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -1022,14 +1022,14 @@
       "-metadir",
       "formal/states/dfid-MCApprovalBaseline",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MCApprovalBaseline.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla"
+      "/private/tmp/tcop-main/formal/tla/MCApprovalBaseline.cfg",
+      "/private/tmp/tcop-main/formal/tla/MC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "bdb0a61699646c533d73f08cf4687449f33641502c2a444466b4945b2c7a7d0e"
+    "log_sha256": "48f927a76911112689a2cc18ad95aa028f754188593e627e6104ddd0e6952c21"
   },
   {
     "config": "ReceiptBoundRestrictions",
@@ -1054,11 +1054,11 @@
     "generated": 1759601,
     "distinct": 65136,
     "dfid_level": 26,
-    "seconds": 27.508,
+    "seconds": 27.779,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -1071,14 +1071,14 @@
       "-metadir",
       "formal/states/dfid-ReceiptBoundRestrictions",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/ReceiptBoundRestrictions.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+      "/private/tmp/tcop-main/formal/tla/ReceiptBoundRestrictions.cfg",
+      "/private/tmp/tcop-main/formal/tla/TrustMC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "7dbcf28640234f342b351c9a31f205e95c8019448d6cbc720109378882d0e96e",
+    "log_sha256": "dfcdc54fbec9fdb5ef7096701f5a87ad24ab71cedfb5f5a6ae1bd5042ff02520",
     "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
   },
   {
@@ -1104,11 +1104,11 @@
     "generated": 1759601,
     "distinct": 65136,
     "dfid_level": 26,
-    "seconds": 27.902,
+    "seconds": 27.706,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -1121,14 +1121,14 @@
       "-metadir",
       "formal/states/dfid-QuarantinedIssuerNoEffect",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/QuarantinedIssuerNoEffect.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+      "/private/tmp/tcop-main/formal/tla/QuarantinedIssuerNoEffect.cfg",
+      "/private/tmp/tcop-main/formal/tla/TrustMC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "f05667f85b43f1b4399cbaca245d766e9bd1855e89ff2dfe6dff278b3714323d",
+    "log_sha256": "080461f876bd2066d2f06a7a793dd22ba400581cbb295fc24919c34d9c656041",
     "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
   },
   {
@@ -1154,11 +1154,11 @@
     "generated": 1759601,
     "distinct": 65136,
     "dfid_level": 26,
-    "seconds": 27.804,
+    "seconds": 27.459,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -1171,14 +1171,14 @@
       "-metadir",
       "formal/states/dfid-ZeroTrustOwnDestinationsOnly",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/ZeroTrustOwnDestinationsOnly.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+      "/private/tmp/tcop-main/formal/tla/ZeroTrustOwnDestinationsOnly.cfg",
+      "/private/tmp/tcop-main/formal/tla/TrustMC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "4a3b904f800fc548daea9918e3a3d5e46ce548ed42afa57381a7a4c5166a9a06",
+    "log_sha256": "58abddd837398734b74d2eab54f384e21935a87b6e47156b464c8e6bfb45c6f0",
     "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
   },
   {
@@ -1204,11 +1204,11 @@
     "generated": 1759601,
     "distinct": 65136,
     "dfid_level": 26,
-    "seconds": 29.437,
+    "seconds": 29.346,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -1221,14 +1221,14 @@
       "-metadir",
       "formal/states/dfid-TrustMC",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+      "/private/tmp/tcop-main/formal/tla/TrustMC.cfg",
+      "/private/tmp/tcop-main/formal/tla/TrustMC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "498913743a2235045109d4be035186025ae005fde562035434e9d7880584dfeb",
+    "log_sha256": "444f15d32aad3a388ca598dff0c9a4669eb0d01dd5a9e35d8f5d9c180b7081b6",
     "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
   },
   {
@@ -1254,11 +1254,11 @@
     "generated": 24194,
     "distinct": 1478,
     "dfid_level": 21,
-    "seconds": 0.654,
+    "seconds": 0.6,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
-      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
       "-cp",
       "formal/tools/tla2tools.jar",
       "tlc2.TLC",
@@ -1271,14 +1271,14 @@
       "-metadir",
       "formal/states/dfid-TrustSanity",
       "-config",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustSanity.cfg",
-      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+      "/private/tmp/tcop-main/formal/tla/TrustSanity.cfg",
+      "/private/tmp/tcop-main/formal/tla/TrustMC.tla"
     ],
     "violated_properties": [],
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "9b1a7f453827ecf0464c953d496427c6e6eaaf89a95b63a8c6033e49759c8aa7",
+    "log_sha256": "03607f9fa54814c2ea0296a566111165e19c953bac4990498f629407372bf4cf",
     "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6",
     "reachability_witnesses": {
       "untrustedRestriction": true,

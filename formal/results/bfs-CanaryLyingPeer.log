@@ -1,8 +1,8 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running breadth-first search Model-Checking with fp 0 and seed -133986924870935578 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90617] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryLyingPeer.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryBounds.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running breadth-first search Model-Checking with fp 0 and seed 8142203182431378298 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94191] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryLyingPeer.tla
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryBounds.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -16,9 +16,9 @@ Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module CanaryBounds
 Semantic processing of module CanaryLyingPeer
-Starting... (2026-11-01 21:11:32)
+Starting... (2026-11-01 22:04:08)
 Computing initial states...
-Finished computing initial states: 1 distinct state generated at 2026-11-01 21:11:32.
+Finished computing initial states: 1 distinct state generated at 2026-11-01 22:04:09.
 Error: Invariant line 177, col 8 to line 178, col 68 of module TCOPReceiver is violated.
 Error: The behavior up to this point is:
 State 1: <Initial predicate>
@@ -80,4 +80,4 @@ State 2: <FaultReceiveCommand line 11, col 5 to line 26, col 54 of module Canary
 
 2 states generated, 2 distinct states found, 0 states left on queue.
 The depth of the complete state graph search is 2.
-Finished in 00s at (2026-11-01 21:11:32)
+Finished in 00s at (2026-11-01 22:04:09)

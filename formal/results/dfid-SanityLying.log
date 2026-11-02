@@ -1,7 +1,7 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running depth-first search Model-Checking with fp 0 and seed 2947757123428549505 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90433] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running depth-first search Model-Checking with fp 0 and seed 7176163545269202864 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94334] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /private/tmp/tcop-main/formal/tla/MC.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -14,7 +14,7 @@ Semantic processing of module FiniteSets
 Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module MC
-Starting... (2026-11-01 21:08:17)
+Starting... (2026-11-01 22:06:23)
 Finished computing initial states: 1 states generated, with 1 of them distinct.
 Starting level 2: 1 states generated, 1 distinct states found.
 Starting level 3: 9 states generated, 9 distinct states found.
@@ -75,25 +75,6 @@ Starting level 12: 816 states generated, 164 distinct states found.
   reachable |-> "terminal",
   tick |-> 6,
   a0 |-> "executed",
-  effectiveMessages |-> {4},
-  lieRemovedAuthority |-> FALSE,
-  executed |->
-      << [at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"],
-         [ at |-> 1,
-           cap |-> <<"work", "benign">>,
-           origin |-> "benign_actor" ] >> ]
-[ a4 |-> "denied",
-  reachable |-> "terminal",
-  tick |-> 6,
-  a0 |-> "executed",
-  effectiveMessages |-> {4},
-  lieRemovedAuthority |-> FALSE,
-  executed |->
-      <<[at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"]>> ]
-[ a4 |-> "executed",
-  reachable |-> "terminal",
-  tick |-> 6,
-  a0 |-> "executed",
   effectiveMessages |-> {1},
   lieRemovedAuthority |-> FALSE,
   executed |->
@@ -109,6 +90,14 @@ Starting level 12: 816 states generated, 164 distinct states found.
   lieRemovedAuthority |-> FALSE,
   executed |->
       <<[at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"]>> ]
+[ a4 |-> "denied",
+  reachable |-> "terminal",
+  tick |-> 6,
+  a0 |-> "executed",
+  effectiveMessages |-> {3},
+  lieRemovedAuthority |-> FALSE,
+  executed |->
+      <<[at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"]>> ]
 [ a4 |-> "executed",
   reachable |-> "terminal",
   tick |-> 6,
@@ -120,28 +109,39 @@ Starting level 12: 816 states generated, 164 distinct states found.
          [ at |-> 1,
            cap |-> <<"work", "benign">>,
            origin |-> "benign_actor" ] >> ]
-[ a4 |-> "denied",
-  reachable |-> "terminal",
-  tick |-> 6,
-  a0 |-> "executed",
-  effectiveMessages |-> {3},
-  lieRemovedAuthority |-> FALSE,
-  executed |->
-      <<[at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"]>> ]
-[ a4 |-> "denied",
-  reachable |-> "terminal",
-  tick |-> 6,
-  a0 |-> "executed",
-  effectiveMessages |-> {2},
-  lieRemovedAuthority |-> TRUE,
-  executed |->
-      <<[at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"]>> ]
 [ a4 |-> "executed",
   reachable |-> "terminal",
   tick |-> 6,
   a0 |-> "executed",
   effectiveMessages |-> {2},
   lieRemovedAuthority |-> TRUE,
+  executed |->
+      << [at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"],
+         [ at |-> 1,
+           cap |-> <<"work", "benign">>,
+           origin |-> "benign_actor" ] >> ]
+[ a4 |-> "denied",
+  reachable |-> "terminal",
+  tick |-> 6,
+  a0 |-> "executed",
+  effectiveMessages |-> {2},
+  lieRemovedAuthority |-> TRUE,
+  executed |->
+      <<[at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"]>> ]
+[ a4 |-> "denied",
+  reachable |-> "terminal",
+  tick |-> 6,
+  a0 |-> "executed",
+  effectiveMessages |-> {4},
+  lieRemovedAuthority |-> FALSE,
+  executed |->
+      <<[at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"]>> ]
+[ a4 |-> "executed",
+  reachable |-> "terminal",
+  tick |-> 6,
+  a0 |-> "executed",
+  effectiveMessages |-> {4},
+  lieRemovedAuthority |-> FALSE,
   executed |->
       << [at |-> 1, cap |-> <<"egress", d0>>, origin |-> "harmful_actor"],
          [ at |-> 1,
@@ -154,6 +154,20 @@ Starting level 15: 1405 states generated, 196 distinct states found.
   reachable |-> "terminal",
   tick |-> 6,
   a0 |-> "denied",
+  effectiveMessages |-> {3},
+  lieRemovedAuthority |-> FALSE,
+  executed |-> <<>> ]
+[ a4 |-> "denied",
+  reachable |-> "terminal",
+  tick |-> 6,
+  a0 |-> "denied",
+  effectiveMessages |-> {3},
+  lieRemovedAuthority |-> FALSE,
+  executed |-> <<>> ]
+[ a4 |-> "denied",
+  reachable |-> "terminal",
+  tick |-> 6,
+  a0 |-> "denied",
   effectiveMessages |-> {2},
   lieRemovedAuthority |-> TRUE,
   executed |-> <<>> ]
@@ -176,20 +190,6 @@ Starting level 15: 1405 states generated, 196 distinct states found.
   tick |-> 6,
   a0 |-> "denied",
   effectiveMessages |-> {4},
-  lieRemovedAuthority |-> FALSE,
-  executed |-> <<>> ]
-[ a4 |-> "denied",
-  reachable |-> "terminal",
-  tick |-> 6,
-  a0 |-> "denied",
-  effectiveMessages |-> {3},
-  lieRemovedAuthority |-> FALSE,
-  executed |-> <<>> ]
-[ a4 |-> "denied",
-  reachable |-> "terminal",
-  tick |-> 6,
-  a0 |-> "denied",
-  effectiveMessages |-> {3},
   lieRemovedAuthority |-> FALSE,
   executed |-> <<>> ]
 [ a4 |-> "denied",
@@ -213,4 +213,4 @@ Model checking completed. No error has been found.
   calculated (optimistic):  val = 1.8E-14
   based on the actual fingerprints:  val = 8.2E-6
 1843 states generated, 204 distinct states found.
-Finished in 00s at (2026-11-01 21:08:17)
+Finished in 00s at (2026-11-01 22:06:24)

@@ -3,7 +3,7 @@
 Phase 0, 2026-11-01. Research only. No runtime was installed or executed in this phase. Third-party files were read as data. Their local instructions were not followed.
 
 Source citation prefixes below are relative to:
-`/private/tmp/claude-501/-Users-vishnu-Library-CloudStorage-Dropbox-Praxis-TCOP--claude-worktrees-tcop-repo-sync-b4874b/d4768b5d-d6fc-4f39-aa4f-8044a74a2d1e/scratchpad/third_party`.
+`<scratch>/third_party`.
 `openshell/` and `nemoclaw/` mean those pinned checkouts. TCOP paths are relative to this repository. Source findings establish API capability, not successful deployment.
 
 ## Pins and provenance

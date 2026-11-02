@@ -1,8 +1,8 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running breadth-first search Model-Checking with fp 0 and seed -5217165211554359869 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90616] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryEffectHolds.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryBounds.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running breadth-first search Model-Checking with fp 0 and seed 630006576922313237 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94190] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryEffectHolds.tla
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryBounds.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -16,9 +16,9 @@ Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module CanaryBounds
 Semantic processing of module CanaryEffectHolds
-Starting... (2026-11-01 21:11:31)
+Starting... (2026-11-01 22:04:08)
 Computing initial states...
-Finished computing initial states: 1 distinct state generated at 2026-11-01 21:11:31.
+Finished computing initial states: 1 distinct state generated at 2026-11-01 22:04:08.
 Error: Action property line 172, col 19 to line 173, col 61 of module TCOPReceiver is violated.
 Error: The behavior up to this point is:
 State 1: <Initial predicate>
@@ -176,4 +176,4 @@ State 5: <FaultHarmfulAuthorization line 6, col 5 to line 16, col 86 of module C
 5 states generated, 5 distinct states found, 0 states left on queue.
 The depth of the complete state graph search is 5.
 The average outdegree of the complete state graph is 1 (minimum is 1, the maximum 1 and the 95th percentile is 1).
-Finished in 00s at (2026-11-01 21:11:31)
+Finished in 00s at (2026-11-01 22:04:08)

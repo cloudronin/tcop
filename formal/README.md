@@ -1,5 +1,13 @@
 # TCOP receiver and tightening bindings
 
+> **Result files (2026-11-01).** Every configuration and canary was rerun from a
+> neutral checkout path; current results are `results/bfs-*.log`,
+> `results/dfid-*.log`, `results/summary-bfs.json`, and
+> `results/summary-dfid.json`. Earlier development-run logs were removed
+> because they recorded local filesystem paths. The state counts in the
+> historical table below are from the first run, before the trust
+> extension; the summaries hold the current counts.
+
 This is a finite abstract model of the requested receiver contract and
 amendment 004's one-sandbox, tightening-only adapter. It is not a refinement
 proof of the Python implementation or evidence of runtime conformance.
@@ -229,19 +237,19 @@ all four general receiver safety groups together.
 
 | Configuration | Result | Generated / distinct | DFID level | Wall time (s) |
 | --- | --- | ---: | ---: | ---: |
-| [NoWidening](results/NoWidening.log) | pass | 1,053,524 / 61,566 | 20 | 19.432 |
-| [AcceptOnlyValid](results/AcceptOnlyValid.log) | pass | 1,053,524 / 61,566 | 20 | 20.183 |
-| [EffectHolds](results/EffectHolds.log) | pass | 1,053,524 / 61,566 | 20 | 20.082 |
-| [LyingPeer](results/LyingPeer.log) | pass | 1,053,524 / 61,566 | 20 | 23.116 |
-| [MC](results/MC.log) | pass | 1,053,524 / 61,566 | 20 | 24.999 |
-| [TimingSlow](results/TimingSlow.log) | pass | 422 / 54 | 15 | 0.307 |
-| [TimingSlowApproval](results/TimingSlowApproval.log) | pass | 606 / 60 | 16 | 0.295 |
-| [TimingFast](results/TimingFast.log) | pass | 1,148 / 88 | 25 | 0.315 |
-| [TimingFastCredential](results/TimingFastCredential.log) | pass | 762 / 74 | 20 | 0.329 |
-| [BaselineDenial](results/BaselineDenial.log) | pass | 526 / 56 | 16 | 0.315 |
-| [Sanity](results/Sanity.log) | pass | 463 / 41 | 22 | 0.242 |
-| [SanityLying](results/SanityLying.log) | pass | 1,843 / 204 | 16 | 0.351 |
-| [MCApprovalBaseline](results/MCApprovalBaseline.log) | pass | 880,913 / 54,198 | 21 | 17.777 |
+| [NoWidening](results/dfid-NoWidening.log) | pass | 1,053,524 / 61,566 | 20 | 19.432 |
+| [AcceptOnlyValid](results/dfid-AcceptOnlyValid.log) | pass | 1,053,524 / 61,566 | 20 | 20.183 |
+| [EffectHolds](results/dfid-EffectHolds.log) | pass | 1,053,524 / 61,566 | 20 | 20.082 |
+| [LyingPeer](results/dfid-LyingPeer.log) | pass | 1,053,524 / 61,566 | 20 | 23.116 |
+| [MC](results/dfid-MC.log) | pass | 1,053,524 / 61,566 | 20 | 24.999 |
+| [TimingSlow](results/dfid-TimingSlow.log) | pass | 422 / 54 | 15 | 0.307 |
+| [TimingSlowApproval](results/dfid-TimingSlowApproval.log) | pass | 606 / 60 | 16 | 0.295 |
+| [TimingFast](results/dfid-TimingFast.log) | pass | 1,148 / 88 | 25 | 0.315 |
+| [TimingFastCredential](results/dfid-TimingFastCredential.log) | pass | 762 / 74 | 20 | 0.329 |
+| [BaselineDenial](results/dfid-BaselineDenial.log) | pass | 526 / 56 | 16 | 0.315 |
+| [Sanity](results/dfid-Sanity.log) | pass | 463 / 41 | 22 | 0.242 |
+| [SanityLying](results/dfid-SanityLying.log) | pass | 1,843 / 204 | 16 | 0.351 |
+| [MCApprovalBaseline](results/dfid-MCApprovalBaseline.log) | pass | 880,913 / 54,198 | 21 | 17.777 |
 
 Times are measured per Java process with Python's monotonic clock; TLC's
 own rounded elapsed time, timestamps, worker count, and fingerprint
@@ -562,7 +570,7 @@ four canaries violated their intended properties, and all thirteen real
 configurations satisfied their checks. The real TLA+ modules and real
 configurations were also compared against the preceding artifact hashes;
 none changed. The combined JSON-lines runner output is retained in
-`results/canary-and-real-checks.log`.
+`results/summary-dfid.json` and `results/summary-bfs.json`.
 
 ## Victim-observer trust extension
 
@@ -701,7 +709,7 @@ The new trust cases pin fingerprint polynomial **1**. Polynomial 0 reached
 65,136 distinct states but hit the pinned TLC version's known final-report
 `ArithmeticException: Division by zero`; that result is preserved as a
 **tool error**, not a property pass, in
-`results/trust-fp0-reporting-failure.json` and its log. Changing the fingerprint
+the development run recorded at the time (its log was later removed from the public tree). Changing the fingerprint
 polynomial changes only fingerprinting/reporting, not the specification,
 properties, states, or bounds. Polynomial 1 completed with the same state
 counts. The original thirteen checks and four canaries retain polynomial 0.
@@ -709,7 +717,7 @@ Every new result records which polynomial actually ran.
 
 `results/summary-dfid.json` holds the full suite;
 `results/canaries-dfid.json` holds all expected failures. The trust subset
-is also retained in `results/trust-results-dfid.json`. Records include
+is also retained in `results/summary-dfid.json`. Records include
 expected/actual outcome, state counts, search depth, run time, counterexample
 length for canaries, original receiver hash, trust-spec hash, checked-module
 and config hashes, exact command, and raw-log hash. Every record embeds the

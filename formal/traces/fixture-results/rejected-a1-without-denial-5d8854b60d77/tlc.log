@@ -1,8 +1,8 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running depth-first search Model-Checking with fp 0 and seed -1904560251119241319 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90232] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/FrozenTrace.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrace.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running depth-first search Model-Checking with fp 0 and seed -2737114859883906115 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94445] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /private/tmp/tcop-main/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/FrozenTrace.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPTrace.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -16,7 +16,7 @@ Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module TCOPTrace
 Semantic processing of module FrozenTrace
-Starting... (2026-11-01 21:07:18)
+Starting... (2026-11-01 22:08:37)
 <<"TCOP_TRACE_REACHED", 0>>
 Finished computing initial states: 1 states generated, with 1 of them distinct.
 Starting level 2: 1 states generated, 1 distinct states found.
@@ -34,4 +34,4 @@ Model checking completed. No error has been found.
   calculated (optimistic):  val = 7.2E-18
   based on the actual fingerprints:  val = 8.7E-8
 28 states generated, 6 distinct states found.
-Finished in 00s at (2026-11-01 21:07:18)
+Finished in 00s at (2026-11-01 22:08:37)

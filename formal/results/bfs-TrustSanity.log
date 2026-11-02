@@ -1,8 +1,8 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running breadth-first search Model-Checking with fp 1 and seed 4310167009671266588 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90649] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrust.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running breadth-first search Model-Checking with fp 1 and seed 2548094339429194462 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94235] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /private/tmp/tcop-main/formal/tla/TrustMC.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPTrust.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -16,49 +16,9 @@ Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module TCOPTrust
 Semantic processing of module TrustMC
-Starting... (2026-11-01 21:11:56)
+Starting... (2026-11-01 22:04:32)
 Computing initial states...
-Finished computing initial states: 1 distinct state generated at 2026-11-01 21:11:56.
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
+Finished computing initial states: 1 distinct state generated at 2026-11-01 22:04:32.
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
@@ -207,6 +167,36 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> TRUE,
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
@@ -247,16 +237,6 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> TRUE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> TRUE,
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
@@ -287,6 +267,16 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> TRUE,
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
@@ -297,6 +287,11 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> TRUE,
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
@@ -321,12 +316,22 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
-  trustedFreeze |-> TRUE,
-  quarantinedWarningBlocked |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
-  trustedFreeze |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
@@ -346,11 +351,6 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   pendingWarningCancelled |-> TRUE ]
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
-  trustedFreeze |-> TRUE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> FALSE ]
@@ -359,31 +359,6 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> TRUE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
@@ -405,6 +380,11 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> TRUE ]
 [ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
@@ -421,126 +401,6 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
-  trustedFreeze |-> TRUE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> TRUE ]
@@ -560,112 +420,7 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> TRUE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> FALSE ]
@@ -685,22 +440,12 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
+  untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
+  pendingWarningCancelled |-> TRUE ]
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
-  trustedFreeze |-> TRUE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> FALSE ]
@@ -715,7 +460,17 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> TRUE ]
 [ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
   untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> FALSE ]
@@ -728,32 +483,12 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
+  pendingWarningCancelled |-> TRUE ]
 [ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
+  untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
   quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> TRUE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> TRUE,
-  trustedFreeze |-> FALSE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> TRUE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
-[ trustTerminal |-> TRUE,
-  untrustedRestriction |-> FALSE,
-  trustedFreeze |-> TRUE,
-  quarantinedWarningBlocked |-> FALSE,
-  pendingWarningCancelled |-> FALSE ]
+  pendingWarningCancelled |-> TRUE ]
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> TRUE,
@@ -771,12 +506,277 @@ Finished computing initial states: 1 distinct state generated at 2026-11-01 21:1
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
   trustedFreeze |-> TRUE,
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> FALSE ]
 [ trustTerminal |-> TRUE,
   untrustedRestriction |-> FALSE,
   trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
   quarantinedWarningBlocked |-> FALSE,
   pendingWarningCancelled |-> FALSE ]
 Model checking completed. No error has been found.
@@ -786,4 +786,4 @@ Model checking completed. No error has been found.
 2116 states generated, 1478 distinct states found, 0 states left on queue.
 The depth of the complete state graph search is 20.
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 6 and the 95th percentile is 2).
-Finished in 00s at (2026-11-01 21:11:56)
+Finished in 00s at (2026-11-01 22:04:32)

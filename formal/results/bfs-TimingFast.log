@@ -1,7 +1,7 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running breadth-first search Model-Checking with fp 0 and seed -2999259141189157716 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90636] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running breadth-first search Model-Checking with fp 0 and seed -5021385922037182902 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94212] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /private/tmp/tcop-main/formal/tla/MC.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -14,9 +14,9 @@ Semantic processing of module FiniteSets
 Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module MC
-Starting... (2026-11-01 21:11:44)
+Starting... (2026-11-01 22:04:21)
 Computing initial states...
-Finished computing initial states: 2 distinct states generated at 2026-11-01 21:11:44.
+Finished computing initial states: 2 distinct states generated at 2026-11-01 22:04:21.
 Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
@@ -24,4 +24,4 @@ Model checking completed. No error has been found.
 92 states generated, 88 distinct states found, 0 states left on queue.
 The depth of the complete state graph search is 24.
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 1).
-Finished in 00s at (2026-11-01 21:11:44)
+Finished in 00s at (2026-11-01 22:04:21)

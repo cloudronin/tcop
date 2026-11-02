@@ -1,7 +1,7 @@
 {
   "schema_version": "tcop.trace-result/1",
   "input_kind": "fixture",
-  "trace_file": "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixtures/accepted-credential.json",
+  "trace_file": "/private/tmp/tcop-main/formal/traces/fixtures/accepted-credential.json",
   "trace_sha256": "987a8ecb97e74d952ea3c626af98337e88d676f1aa7b1e8b8f3a191d567fb8e7",
   "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
   "trace_spec_sha256": "4c1bdfc0aa2882088f13a75d355361ec8c2a6b23f579616206ab3595e92aa5be",
@@ -23,9 +23,9 @@
   "command": [
     "/opt/homebrew/opt/openjdk/bin/java",
     "-XX:+UseParallelGC",
-    "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+    "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
     "-cp",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tools/tla2tools.jar",
+    "/private/tmp/tcop-main/formal/tools/tla2tools.jar",
     "tlc2.TLC",
     "-workers",
     "1",
@@ -34,12 +34,12 @@
     "-dfid",
     "19",
     "-metadir",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/accepted-credential-987a8ecb97e7/states",
+    "/private/tmp/tcop-main/formal/traces/fixture-results/accepted-credential-987a8ecb97e7/states",
     "-config",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/accepted-credential-987a8ecb97e7/FrozenTrace.cfg",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/accepted-credential-987a8ecb97e7/FrozenTrace.tla"
+    "/private/tmp/tcop-main/formal/traces/fixture-results/accepted-credential-987a8ecb97e7/FrozenTrace.cfg",
+    "/private/tmp/tcop-main/formal/traces/fixture-results/accepted-credential-987a8ecb97e7/FrozenTrace.tla"
   ],
-  "seconds": 0.3,
+  "seconds": 0.248,
   "exit_code": 0,
   "outcome": "accepted",
   "reached_events": 9

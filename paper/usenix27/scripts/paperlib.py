@@ -270,7 +270,7 @@ def relative(value: Path) -> str:
 def anonymous_reference(value: Any) -> Any:
     """Normalize machine-local path prefixes when copying provenance into review data."""
     if isinstance(value, str):
-        return value.replace("/workspace/", "").replace("/Users/vishnu/", "")
+        return re.sub(r"/(?:Users|home)/[^/]+/", "", value.replace("/workspace/", ""))
     if isinstance(value, list):
         return [anonymous_reference(item) for item in value]
     if isinstance(value, dict):

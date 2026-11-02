@@ -4,7 +4,7 @@ Research notes, 2026-11-01. No runtime experiment was performed. No code,
 policy, sealed amendment, or third-party file was changed.
 
 `third_party/` below means
-`/private/tmp/claude-501/-Users-vishnu-Library-CloudStorage-Dropbox-Praxis-TCOP--claude-worktrees-tcop-repo-sync-b4874b/d4768b5d-d6fc-4f39-aa4f-8044a74a2d1e/scratchpad/third_party/`.
+`<scratch>/third_party/`.
 Read-only `git rev-parse HEAD` confirmed OpenShell v0.0.116 at
 `d1155aa70042d3e2ee49dbfa15346b108b7c1d92` and NemoClaw v0.0.140 at
 `88fe14f3fb9a0bf72997cce19ec88b5b2ee08391`.

@@ -1,8 +1,8 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running breadth-first search Model-Checking with fp 0 and seed -7043639119737047102 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90614] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryNoWidening.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryBounds.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running breadth-first search Model-Checking with fp 0 and seed -6858876171726610145 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94188] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryNoWidening.tla
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryBounds.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -16,9 +16,9 @@ Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module CanaryBounds
 Semantic processing of module CanaryNoWidening
-Starting... (2026-11-01 21:11:30)
+Starting... (2026-11-01 22:04:07)
 Computing initial states...
-Finished computing initial states: 1 distinct state generated at 2026-11-01 21:11:30.
+Finished computing initial states: 1 distinct state generated at 2026-11-01 22:04:07.
 Error: Action property NoWidening is violated.
 Error: The behavior up to this point is:
 State 1: <Initial predicate>
@@ -147,4 +147,4 @@ State 4: <FaultReattach line 5, col 5 to line 9, col 64 of module CanaryNoWideni
 21 states generated, 20 distinct states found, 0 states left on queue.
 The depth of the complete state graph search is 12.
 The average outdegree of the complete state graph is 1 (minimum is 1, the maximum 1 and the 95th percentile is 1).
-Finished in 00s at (2026-11-01 21:11:30)
+Finished in 00s at (2026-11-01 22:04:07)

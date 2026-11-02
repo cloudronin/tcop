@@ -1,7 +1,7 @@
 {
   "schema_version": "tcop.trace-result/1",
   "input_kind": "fixture",
-  "trace_file": "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixtures/rejected-missing-a4.json",
+  "trace_file": "/private/tmp/tcop-main/formal/traces/fixtures/rejected-missing-a4.json",
   "trace_sha256": "3f075d0a1c3c70385adaad729aec20cb1a591be166ec235d5bfd4236ed870baa",
   "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
   "trace_spec_sha256": "4c1bdfc0aa2882088f13a75d355361ec8c2a6b23f579616206ab3595e92aa5be",
@@ -45,9 +45,9 @@
   "command": [
     "/opt/homebrew/opt/openjdk/bin/java",
     "-XX:+UseParallelGC",
-    "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+    "-DTLA-Library=/private/tmp/tcop-main/formal/tla",
     "-cp",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tools/tla2tools.jar",
+    "/private/tmp/tcop-main/formal/tools/tla2tools.jar",
     "tlc2.TLC",
     "-workers",
     "1",
@@ -56,12 +56,12 @@
     "-dfid",
     "17",
     "-metadir",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-missing-a4-3f075d0a1c3c/states",
+    "/private/tmp/tcop-main/formal/traces/fixture-results/rejected-missing-a4-3f075d0a1c3c/states",
     "-config",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-missing-a4-3f075d0a1c3c/FrozenTrace.cfg",
-    "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-missing-a4-3f075d0a1c3c/FrozenTrace.tla"
+    "/private/tmp/tcop-main/formal/traces/fixture-results/rejected-missing-a4-3f075d0a1c3c/FrozenTrace.cfg",
+    "/private/tmp/tcop-main/formal/traces/fixture-results/rejected-missing-a4-3f075d0a1c3c/FrozenTrace.tla"
   ],
-  "seconds": 0.405,
+  "seconds": 0.22,
   "exit_code": 0,
   "outcome": "rejected",
   "reached_events": 3,

@@ -1,7 +1,7 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running depth-first search Model-Checking with fp 0 and seed -4629080014527890827 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90432] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running depth-first search Model-Checking with fp 0 and seed -4142108817836234415 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94333] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /private/tmp/tcop-main/formal/tla/MC.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -14,7 +14,7 @@ Semantic processing of module FiniteSets
 Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module MC
-Starting... (2026-11-01 21:08:16)
+Starting... (2026-11-01 22:06:23)
 Finished computing initial states: 1 states generated, with 1 of them distinct.
 Starting level 2: 1 states generated, 1 distinct states found.
 Starting level 3: 3 states generated, 3 distinct states found.
@@ -65,4 +65,4 @@ Model checking completed. No error has been found.
   calculated (optimistic):  val = 9.4E-16
   based on the actual fingerprints:  val = 2.5E-7
 463 states generated, 41 distinct states found.
-Finished in 00s at (2026-11-01 21:08:16)
+Finished in 00s at (2026-11-01 22:06:23)

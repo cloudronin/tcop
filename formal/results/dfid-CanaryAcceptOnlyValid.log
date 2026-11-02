@@ -1,8 +1,8 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running depth-first search Model-Checking with fp 0 and seed -3292824561463842685 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 89919] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryAcceptOnlyValid.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryBounds.tla
-Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Running depth-first search Model-Checking with fp 0 and seed -6267230433732736953 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 94239] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryAcceptOnlyValid.tla
+Parsing file /private/tmp/tcop-main/formal/tla/canaries/CanaryBounds.tla
+Parsing file /private/tmp/tcop-main/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
@@ -16,7 +16,7 @@ Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module CanaryBounds
 Semantic processing of module CanaryAcceptOnlyValid
-Starting... (2026-11-01 21:06:24)
+Starting... (2026-11-01 22:04:33)
 Finished computing initial states: 1 states generated, with 1 of them distinct.
 Starting level 2: 1 states generated, 1 distinct states found.
 Starting level 3: 4 states generated, 4 distinct states found.
@@ -117,4 +117,4 @@ State 3:
 /\ a4 = "waiting"
 
 11 states generated, 8 distinct states found.
-Finished in 00s at (2026-11-01 21:06:24)
+Finished in 00s at (2026-11-01 22:04:33)
