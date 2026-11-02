@@ -1,0 +1,10 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Post-denial substitution strict replay of receiver-local strategies. Each policy evaluates the same 20 frozen traces: 15 have an eligible harmful substitution and 5 exercise a predeclared safe fallback after initial denial. Local Only does not trigger a post-denial branch.}
+\begin{tabular}{@{}p{0.28\columnwidth}@{\hspace{0.1em}}ccc@{}}\toprule
+Policy & \shortstack{Initial\\blocked} & \shortstack{Harmful\\completed} & \shortstack{Safe fallback\\forwarded} \\ \midrule
+Local Only (C0) & 0/\AdaptiveInitialBlocked & n/a & n/a \\
+Arrival Guard (C1) & \AdaptiveInitialBlocked/\AdaptiveInitialBlocked & \AdaptiveCOnePostDenialCompleted/\AdaptiveEligibleHarmfulBranches & \AdaptiveCOneBenignFallbackForwarded/\AdaptiveBenignFallbacks \\
+Exact Binding (C2) & \AdaptiveInitialBlocked/\AdaptiveInitialBlocked & \AdaptiveCTwoPostDenialCompleted/\AdaptiveEligibleHarmfulBranches & \AdaptiveCTwoBenignFallbackForwarded/\AdaptiveBenignFallbacks \\
+Campaign Correlation (C2E) & \AdaptiveInitialBlocked/\AdaptiveInitialBlocked & \AdaptiveCTwoEPostDenialCompleted/\AdaptiveEligibleHarmfulBranches & \AdaptiveCTwoEBenignFallbackForwarded/\AdaptiveBenignFallbacks \\
+Standing Guard (C3) & \AdaptiveInitialBlocked/\AdaptiveInitialBlocked & \AdaptiveCThreePostDenialCompleted/\AdaptiveEligibleHarmfulBranches & \AdaptiveCThreeBenignFallbackForwarded/\AdaptiveBenignFallbacks \\ \bottomrule
+\end{tabular}\label{tab:adaptive-authorization}\end{table}

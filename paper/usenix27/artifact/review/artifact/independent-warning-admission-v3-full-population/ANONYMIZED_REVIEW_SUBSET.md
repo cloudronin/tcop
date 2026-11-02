@@ -1,0 +1,1 @@
+This credential-free successor evaluates every sealed v2 preflight source case. It reports pipeline coverage and receiver authorization outcomes without rerunning the detector. Raw external corpus content, source URLs, and identifiers remain in the anonymous source archive.

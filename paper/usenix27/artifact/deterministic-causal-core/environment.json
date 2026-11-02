@@ -1,7 +1,7 @@
 {
   "dependency_lock_digest": "7476cef8625ebf344ce7d3ca4dbe0ca82dbe697822e3cbf5b9b6127acebe9eae",
   "dependency_lock_note": "no lockfile; pyproject dependency declaration digest",
-  "git_commit": "d135da06f499cd34f64088fd9e19d1c20c1418ef",
+  "git_commit": "unavailable",
   "python": "3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 21:00:12) [Clang 16.0.6 ]",
   "python_implementation": "CPython",
   "schema_digests": {

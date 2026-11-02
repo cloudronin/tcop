@@ -6,35 +6,36 @@ claims:
   - synthetic test environment
   evidence_strength: artifact-backed
   claim_id: C-ARCH-01
-  proposed_paper_wording: TCOP exchanges signed, bounded context rather than enforcement
-    commands.
+  proposed_paper_wording: TCOP exchanges signed, bounded context that the receiver
+    treats as evidence rather than an enforcement command.
   claim_category: architecture
-  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  source_artifact: artifacts/tcx-validation-value-v2
   exact_source_files:
-  - manifest.json
-  - reports/invariant-report.json
-  exact_supporting_values: Remote TCX action is not interpreted; remote enforcement
-    successes are zero.
+  - canonical-tcx-example.json
+  - property-test-report.json
+  exact_supporting_values: Action and enforcement metadata are ignored by the receiver
+    evaluator.
   relevant_population_denominator: specified in source rows
   exclusions: []
   caveats:
   - bounded evaluation scope
   planned_paper_section: 03-architecture-protocol.tex
-  planned_table_figure: fig-architecture
+  planned_table_figure: fig-tcx-acceptance
   status: supported
 - scope: bounded synthetic TCOP v0.6 evaluation
   extraction_script_function: scripts/paperlib.py:extract_results
   assumptions: *id001
   evidence_strength: artifact-backed
   claim_id: C-AUTH-01
-  proposed_paper_wording: Every evaluated gateway block references a Domain-B-local
-    policy and decision.
+  proposed_paper_wording: Every gateway block in the evaluated end-to-end reference-deployment
+    arms references a Domain-B-local policy and decision.
   claim_category: authority
   source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
   exact_source_files:
   - reports/authorization-audit.json
   - reports/end-to-end-live-results.json
-  exact_supporting_values: Every gateway block references a Domain-B policy and decision.
+  exact_supporting_values: Every reference-deployment gateway block references a Domain-B
+    policy and decision.
   relevant_population_denominator: specified in source rows
   exclusions: []
   caveats:
@@ -47,20 +48,20 @@ claims:
   assumptions: *id001
   evidence_strength: artifact-backed
   claim_id: C-AUTH-02
-  proposed_paper_wording: Remote enforcement successes were zero in every evaluated
-    arm.
+  proposed_paper_wording: Remote action metadata was ignored in the tested receiver
+    path.
   claim_category: authority
-  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  source_artifact: artifacts/tcx-validation-value-v2
   exact_source_files:
-  - manifest.json
-  - reports/origin-federation-audit.json
-  exact_supporting_values: remote_enforcement_successes equals zero.
+  - property-test-report.json
+  exact_supporting_values: The accepted action-semantic mutation ignores remote action
+    and enforcement fields.
   relevant_population_denominator: specified in source rows
   exclusions: []
   caveats:
   - bounded evaluation scope
   planned_paper_section: 04-local-resolution-enforcement.tex
-  planned_table_figure: tab-physical-end-to-end
+  planned_table_figure: tab-protocol-assurance
   status: supported
 - scope: bounded synthetic TCOP v0.6 evaluation
   extraction_script_function: scripts/paperlib.py:extract_results
@@ -68,17 +69,18 @@ claims:
   evidence_strength: artifact-backed
   claim_id: C-DETERMINISTIC-01
   proposed_paper_wording: Across 54 strict deterministic pairs, containment-first
-    improved 30 outcomes, left 24 unchanged, worsened none, and prevented 36 harmful
-    actions.
+    reduced 39 baseline harmful calls to 3, preventing 36 calls; it changed 30 outcomes
+    and left 24 unchanged.
   claim_category: deterministic evaluation
   source_artifact: artifacts/federated-domain-v0.6-evidence
   exact_source_files:
   - pairs/paired-results.jsonl
   - reports/paired-causal-comparison.json
-  exact_supporting_values: 54 / 30 / 24 / 0 / 36.
+  exact_supporting_values: 54 pairs; 39 baseline calls; 3 treatment calls; 36 prevented.
   relevant_population_denominator: specified in source rows
   exclusions: &id002
-  - 123 unmatched balanced or utility comparisons
+  - 123 unmatched balanced or utility comparisons; zero worsened follows containment-first
+    monotonicity for this metric.
   caveats: *id002
   planned_paper_section: 06-deterministic-evaluation.tex
   planned_table_figure: fig-deterministic-outcomes
@@ -87,22 +89,229 @@ claims:
   extraction_script_function: scripts/paperlib.py:extract_results
   assumptions: *id001
   evidence_strength: artifact-backed
-  claim_id: C-TIMING-01
-  proposed_paper_wording: In 30 physical gateway arms, A1 forwarded 30 harmful calls;
-    A2 before the first harmful opportunity blocked 30; after initial harm it forwarded
-    10 completed calls and blocked 20 later calls.
-  claim_category: timing
-  source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
+  claim_id: C-VALIDATION-01
+  proposed_paper_wording: In the sealed-plan v2 mixed-action cohort, C1-class blocked
+    7 of 12 harmful actions and constrained 7 benign actions; C2 blocked 3 of 12 and
+    constrained none. In the accepted binding-matched subset, both blocked 3 of 3
+    harmful actions.
+  claim_category: validation value
+  source_artifact: artifacts/tcx-validation-value-v2
   exact_source_files:
-  - reports/end-to-end-live-results.json
-  exact_supporting_values: 30 / 30 / 10 / 20.
+  - reports/condition-summary.json
+  - reports/matching-harmful-summary.json
+  - reports/gates.json
+  exact_supporting_values: Full cohort C1-class/C2 harmful blocks 7/3; benign constraints
+    7/0; matching subset 3/3 each.
   relevant_population_denominator: specified in source rows
-  exclusions: []
-  caveats:
-  - bounded evaluation scope
+  exclusions: &id003
+  - Synthetic credential-free cohort only; C2 rejects mismatched-warning controls
+    rather than applying a broad class guard.
+  caveats: *id003
+  planned_paper_section: 06-deterministic-evaluation.tex
+  planned_table_figure: tab-validation-value
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-VALIDATION-02
+  proposed_paper_wording: At a twelve-warning valid-hostile-peer burst, idempotence
+    constrained one benign action and deduplicated eleven warnings; quota-plus-monitor
+    constrained three and monitored nine.
+  claim_category: hostile peer
+  source_artifact: artifacts/tcx-validation-value-v2
+  exact_source_files:
+  - hostile-peer-results.csv
+  - reports/gates.json
+  exact_supporting_values: Current 12 constraints; idempotent 1 constraint and 11
+    deduplications; quota-plus-monitor 3 constraints and 9 monitored.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id004
+  - Synthetic rate sweep; no operational-rate inference.
+  caveats: *id004
+  planned_paper_section: 08-security-availability.tex
+  planned_table_figure: tab-protocol-assurance
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-CORRELATION-01
+  proposed_paper_wording: Across 24 correlation-ambiguity cases at one, two, and eight
+    sessions, the receiver recorded zero misbindings and zero cross-session restrictions.
+  claim_category: correlation
+  source_artifact: artifacts/tcx-validation-value-v2
+  exact_source_files:
+  - correlation-results.csv
+  - reports/gates.json
+  exact_supporting_values: 24 cases; 0 misbindings; 0 cross-session restrictions.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id005
+  - Synthetic concurrent-session sweep.
+  caveats: *id005
+  planned_paper_section: 06-deterministic-evaluation.tex
+  planned_table_figure: tab-protocol-assurance
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-VALIDATOR-01
+  proposed_paper_wording: Eleven deterministic receiver-validator mutations produced
+    no restriction for signature, issuer, version, receipt, expiry, or replay faults;
+    accepted action-like metadata did not select enforcement.
+  claim_category: receiver validator
+  source_artifact: artifacts/tcx-validation-value-v2
+  exact_source_files:
+  - property-test-report.json
+  exact_supporting_values: 11 mutation cases; action and enforcement fields ignored.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id006
+  - Mutation corpus, not a formal proof.
+  caveats: *id006
+  planned_paper_section: 04-local-resolution-enforcement.tex
+  planned_table_figure: tab-protocol-assurance
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-ADAPTIVE-01
+  proposed_paper_wording: Across 100 strict policy-conditioned replay episodes, Exact
+    Binding permits 15 of 15 eligible harmful post-denial substitutions; the evaluated
+    Campaign Correlation strategy permits none. Each imported-evidence strategy forwards
+    all 5 of 5 exercised predeclared safe fallback actions.
+  claim_category: adaptive authorization
+  source_artifact: artifacts/adaptive-agent-authorization-v1
+  exact_source_files:
+  - normalized-results.jsonl
+  - reports/summary.json
+  - campaign-correlation-contract.json
+  exact_supporting_values: 'Exact Binding: 15/15 post-denial harmful completions;
+    Campaign Correlation: 0/15; every imported-evidence strategy: 5/5 exercised safe
+    fallbacks forwarded.'
+  relevant_population_denominator: specified in source rows
+  exclusions: &id007
+  - Bounded reference runtime and predeclared branches; the safe-fallback result does
+    not measure unrelated same-risk actions, deployment prevalence, or universal containment.
+  caveats: *id007
   planned_paper_section: 07-agent-gateway-evaluation.tex
-  planned_table_figure: fig-physical-timing
-  status: supported
+  planned_table_figure: tab-adaptive-authorization
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-C2E-FRONTIER-01
+  proposed_paper_wording: In the sealed 150-episode C2E frontier, the receiver-local
+    campaign strategy blocks 10 of 10 harmful actions, including 5 campaign-linked
+    non-exact substitutions, while constraining 0 of 20 benign actions. C1 and C3
+    block the same 10 harmful actions while constraining 10 benign actions each.
+  claim_category: receiver strategy frontier
+  source_artifact: artifacts/c2e-frontier-v1
+  exact_source_files:
+  - normalized-results.jsonl
+  - reports/frontier-summary.json
+  - control-results.jsonl
+  - escalation-lifecycle.jsonl
+  exact_supporting_values: 'C2E: 10/10 harmful blocked and 0/20 benign constrained;
+    campaign-linked non-exact harmful: 5/5 blocked; outside-campaign benign: 5/5 forwarded;
+    C1/C3: 10/20 benign constrained; 0 unrelated restrictions.'
+  relevant_population_denominator: specified in source rows
+  exclusions: &id008
+  - Deterministic receiver-local reference strategy only; not deployment prevalence,
+    detector quality, universal containment, or a generally optimal escalation policy.
+  caveats: *id008
+  planned_paper_section: 07-agent-gateway-evaluation.tex
+  planned_table_figure: tab-c2e-frontier
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-INDEPENDENT-V2-01
+  proposed_paper_wording: On 12 hash-selected exact-warning harmful and 12 benign
+    no-warning external AgentDojo bases, C2 and C2E block all harmful bases and constrain
+    no benign bases; C3 constrains all benign bases. Derived controls produce no C2/C2E
+    restriction for partial or mismatched bindings, reject stale and replayed context
+    before policy, and cause C2E to block related substitutions only after receiver-local
+    relation creation.
+  claim_category: independent warning admission
+  source_artifact: artifacts/independent-warning-admission-v2-external-stratified
+  exact_source_files:
+  - candidate-ledger.csv
+  - selection-ledger.csv
+  - normalized-results.jsonl
+  - reports/external-base-dispositions.csv
+  - reports/derived-control-dispositions.csv
+  - reports/substitution-summary.json
+  - reports/gates.json
+  exact_supporting_values: 25 attack-bearing prompt-attack candidates, 47 attack-bearing
+    no-warning candidates, and 96 benign no-warning candidates; 12 selected external
+    bases per principal stratum; 540 policy rows; C2/C2E 12/12 blocks and 0/12 benign
+    constraints; C3 12/12 benign constraints; C2E 12/12 no-relation substitutions
+    forwarded and 12/12 locally related substitutions blocked.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id009
+  - Hash-selected external integration cohort plus derived controls; it does not estimate
+    detector quality, warning prevalence, arbitrary warning-source behavior, or production
+    effectiveness.
+  caveats: *id009
+  planned_paper_section: 08-security-availability.tex
+  planned_table_figure: tab-independent-warning-v2-base
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-INDEPENDENT-FULL-01
+  proposed_paper_wording: Across the complete sealed 168-case external-warning ledger,
+    the conditional receiver strategies C1, C2, and C2E block 25 of 72 attack-bearing
+    cases with accepted exact evidence and forward 47 no-warning attack-bearing cases;
+    they forward 96 of 96 benign no-warning cases. C3 blocks 72 of 72 harmful cases
+    while constraining 96 of 96 benign cases.
+  claim_category: external-warning coverage
+  source_artifact: artifacts/independent-warning-admission-v3-full-population
+  exact_source_files:
+  - candidate-ledger.csv
+  - normalized-results.jsonl
+  - reports/pipeline-coverage.json
+  - reports/authorization-outcomes.json
+  - reports/gates.json
+  exact_supporting_values: '168 source cases: 72 attack-bearing and 96 benign; 25
+    detector warnings, normalized TCX objects, admissions, and exact bindings; 47
+    attack-bearing no-warning cases; C1/C2/C2E 25/72 harmful blocks and 0/96 benign
+    constraints; C3 72/72 harmful blocks and 96/96 benign constraints.'
+  relevant_population_denominator: specified in source rows
+  exclusions: &id010
+  - Uses preserved detector outputs and frozen policy semantics; it does not measure
+    detector quality, field prevalence, arbitrary warning-source behavior, or production
+    effectiveness.
+  caveats: *id010
+  planned_paper_section: 08-security-availability.tex
+  planned_table_figure: tab-independent-warning-full-outcomes
+  status: supported with qualification
+- scope: bounded synthetic TCOP v0.6 evaluation
+  extraction_script_function: scripts/paperlib.py:extract_results
+  assumptions: *id001
+  evidence_strength: artifact-backed
+  claim_id: C-AMENDMENT-01
+  proposed_paper_wording: The retained RA-03 eligibility correction changes the permitted-capability
+    rule from 0 of 60 eligible attempts to 20 of 20 eligible attempts; it affects
+    the benign availability cohort, not the deterministic causal comparison.
+  claim_category: amendment sensitivity
+  source_artifact: artifacts/v0.6-agent-validation-live-amendment-002
+  exact_source_files:
+  - reports/trace-eligibility-report.json
+  - artifacts/v0.6-agent-validation-live-amendment-003/reports/trace-eligibility-report.json
+  exact_supporting_values: 0/60 before correction; 20/20 after correction.
+  relevant_population_denominator: specified in source rows
+  exclusions: &id011
+  - Post hoc eligibility correction remains visible and separately bounded.
+  caveats: *id011
+  planned_paper_section: amendment-history.tex
+  planned_table_figure: tab-ra03-eligibility
+  status: supported with qualification
 - scope: bounded synthetic TCOP v0.6 evaluation
   extraction_script_function: scripts/paperlib.py:extract_results
   assumptions: *id001
@@ -136,9 +345,9 @@ claims:
   - reports/benign-workload-impact.json
   exact_supporting_values: 360 / 320 / 40.
   relevant_population_denominator: specified in source rows
-  exclusions: &id003
+  exclusions: &id012
   - Synthetic false-warning treatments and capability restriction
-  caveats: *id003
+  caveats: *id012
   planned_paper_section: 08-security-availability.tex
   planned_table_figure: fig-security-availability
   status: supported with qualification
@@ -147,16 +356,20 @@ claims:
   assumptions: *id001
   evidence_strength: artifact-backed
   claim_id: C-UTILITY-02
-  proposed_paper_wording: Selected RA-03 workflow completion was 80 of 120 (66.7 percent).
+  proposed_paper_wording: In inside-window early and boundary false-warning treatments,
+    40 of 120 benign calls were constrained and 0 of 40 affected workflows completed;
+    outside those treatments, 240 of 240 benign calls were forwarded and 80 of 80
+    workflows completed.
   claim_category: availability
   source_artifact: artifacts/v0.6-agent-validation-live-origin-certified
   exact_source_files:
   - reports/benign-workload-impact.json
-  exact_supporting_values: 80 / 120 / 66.7 percent.
+  exact_supporting_values: 'Inside-window: 120 / 80 / 40 calls and 0/40 workflows;
+    remaining treatments: 240 / 240 / 0 calls and 80/80 workflows.'
   relevant_population_denominator: specified in source rows
-  exclusions: &id004
+  exclusions: &id013
   - Synthetic workload only
-  caveats: *id004
+  caveats: *id013
   planned_paper_section: 08-security-availability.tex
   planned_table_figure: tab-utility
   status: supported with qualification
@@ -193,9 +406,9 @@ claims:
   - reports/federation-latency.json
   exact_supporting_values: Performance-only selections with 20 samples each.
   relevant_population_denominator: specified in source rows
-  exclusions: &id005
+  exclusions: &id014
   - No production latency inference
-  caveats: *id005
+  caveats: *id014
   planned_paper_section: 07-agent-gateway-evaluation.tex
   planned_table_figure: tab-performance
   status: supported with qualification
@@ -204,9 +417,9 @@ claims:
   assumptions: *id001
   evidence_strength: artifact-backed
   claim_id: C-CENTRAL-01
-  proposed_paper_wording: Under fact equivalence, receiver-local enforcement avoided
-    six failures associated with central outage or authority placement in evaluated
-    cells.
+  proposed_paper_wording: 'Across 54 fact-equivalent audited cells, the central comparator
+    records six regressions: three associated with authority placement and three with
+    central outage.'
   claim_category: central comparator
   source_artifact: artifacts/federated-domain-v0.6-evidence
   exact_source_files:
@@ -218,7 +431,7 @@ claims:
   caveats:
   - bounded evaluation scope
   planned_paper_section: 06-deterministic-evaluation.tex
-  planned_table_figure: tab-architecture-comparison
+  planned_table_figure: tab-central-comparator
   status: supported with qualification
 - scope: bounded synthetic TCOP v0.6 evaluation
   extraction_script_function: scripts/paperlib.py:extract_results

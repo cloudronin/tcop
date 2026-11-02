@@ -1,0 +1,8 @@
+{
+  "no_detector_inference": true,
+  "policy_execution_population": "all sealed v2 preflight rows",
+  "predecessor_digest": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+  "predecessor_root": "artifacts/independent-warning-admission-v2-external-stratified",
+  "preflight_digest": "fbb9e0519dcbc291ae4972c1fe4da73046790a2e6e9464a5919924324f95a36c",
+  "preflight_root": "artifacts/independent-warning-admission-v2-external-stratified-preflight"
+}

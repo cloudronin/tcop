@@ -1,0 +1,1 @@
+"PYTHONPATH=src python3 -m tcop.cli study validation-value run --output artifacts/tcx-validation-value-v2\n"

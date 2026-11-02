@@ -16,7 +16,7 @@
     "output": "paper/usenix27/figures/pdf/architecture.pdf",
     "preview": "paper/usenix27/figures/png-preview/architecture.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "a4e7f04980a3059cf965105b85b4293ea0a99c429b9e4a2c51db4ec293f4d9a4",
+    "sha256": "9a5f1e627ba7e8eac2c4c1a571bb8859ea018d4ce413a26a639811007f8234fc",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -40,6 +40,48 @@
         "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
         "paths": [
           "artifacts/federated-domain-v0.6"
+        ]
+      },
+      {
+        "digest": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d",
+        "paths": [
+          "artifacts/tcx-validation-value-v2"
+        ]
+      },
+      {
+        "digest": "bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3",
+        "paths": [
+          "artifacts/adaptive-agent-authorization-v1"
+        ]
+      },
+      {
+        "digest": "661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d",
+        "paths": [
+          "artifacts/independent-warning-admission-v1"
+        ]
+      },
+      {
+        "digest": "7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6",
+        "paths": [
+          "artifacts/independent-warning-admission-v1-normalizer-amendment-001"
+        ]
+      },
+      {
+        "digest": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+        "paths": [
+          "artifacts/independent-warning-admission-v2-external-stratified"
+        ]
+      },
+      {
+        "digest": "a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc",
+        "paths": [
+          "artifacts/independent-warning-admission-v3-full-population"
+        ]
+      },
+      {
+        "digest": "f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4",
+        "paths": [
+          "artifacts/c2e-frontier-v1"
         ]
       }
     ],
@@ -61,7 +103,7 @@
     "output": "paper/usenix27/figures/pdf/containment-window.pdf",
     "preview": "paper/usenix27/figures/png-preview/containment-window.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "ecb8edd2ded613032ecf12dbec250f1169abe823a89f2174679a8ff583fc1ce1",
+    "sha256": "11886287e1dcabd77ba7cef851e7004a7bc62e7a928ae6eb684e677cc5001345",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -85,6 +127,48 @@
         "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
         "paths": [
           "artifacts/federated-domain-v0.6"
+        ]
+      },
+      {
+        "digest": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d",
+        "paths": [
+          "artifacts/tcx-validation-value-v2"
+        ]
+      },
+      {
+        "digest": "bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3",
+        "paths": [
+          "artifacts/adaptive-agent-authorization-v1"
+        ]
+      },
+      {
+        "digest": "661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d",
+        "paths": [
+          "artifacts/independent-warning-admission-v1"
+        ]
+      },
+      {
+        "digest": "7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6",
+        "paths": [
+          "artifacts/independent-warning-admission-v1-normalizer-amendment-001"
+        ]
+      },
+      {
+        "digest": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+        "paths": [
+          "artifacts/independent-warning-admission-v2-external-stratified"
+        ]
+      },
+      {
+        "digest": "a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc",
+        "paths": [
+          "artifacts/independent-warning-admission-v3-full-population"
+        ]
+      },
+      {
+        "digest": "f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4",
+        "paths": [
+          "artifacts/c2e-frontier-v1"
         ]
       }
     ],
@@ -105,7 +189,7 @@
     "output": "paper/usenix27/figures/pdf/deterministic-outcomes.pdf",
     "preview": "paper/usenix27/figures/png-preview/deterministic-outcomes.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "a8b02ecbd29ad76f7db4e9cce92f33246618d67458b08024645b477d8b08f86d",
+    "sha256": "1c6de267ee781248a14182b39a8892dcf60b9dee929211d6d7b03788b2fba3da",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -130,13 +214,55 @@
         "paths": [
           "artifacts/federated-domain-v0.6"
         ]
+      },
+      {
+        "digest": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d",
+        "paths": [
+          "artifacts/tcx-validation-value-v2"
+        ]
+      },
+      {
+        "digest": "bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3",
+        "paths": [
+          "artifacts/adaptive-agent-authorization-v1"
+        ]
+      },
+      {
+        "digest": "661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d",
+        "paths": [
+          "artifacts/independent-warning-admission-v1"
+        ]
+      },
+      {
+        "digest": "7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6",
+        "paths": [
+          "artifacts/independent-warning-admission-v1-normalizer-amendment-001"
+        ]
+      },
+      {
+        "digest": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+        "paths": [
+          "artifacts/independent-warning-admission-v2-external-stratified"
+        ]
+      },
+      {
+        "digest": "a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc",
+        "paths": [
+          "artifacts/independent-warning-admission-v3-full-population"
+        ]
+      },
+      {
+        "digest": "f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4",
+        "paths": [
+          "artifacts/c2e-frontier-v1"
+        ]
       }
     ],
     "svg": "paper/usenix27/figures/svg/deterministic-outcomes.svg"
   },
   {
     "caption_caveats": [
-      "The late arm separates completed calls from subsequently prevented calls."
+      "Single-environment reference path; the late arm separates completed calls from subsequent blocked calls."
     ],
     "claims": [
       "C-TIMING-01"
@@ -149,7 +275,7 @@
     "output": "paper/usenix27/figures/pdf/physical-timing.pdf",
     "preview": "paper/usenix27/figures/png-preview/physical-timing.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "d5356d079f83f05189c5e15967ba1254b9364d8ac009006464d0989f6ecc0cd5",
+    "sha256": "9e18ebaf4b1a3adacf9270ace6fab7f194d121112e5feeb64947f1377be41bab",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -173,6 +299,48 @@
         "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
         "paths": [
           "artifacts/federated-domain-v0.6"
+        ]
+      },
+      {
+        "digest": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d",
+        "paths": [
+          "artifacts/tcx-validation-value-v2"
+        ]
+      },
+      {
+        "digest": "bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3",
+        "paths": [
+          "artifacts/adaptive-agent-authorization-v1"
+        ]
+      },
+      {
+        "digest": "661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d",
+        "paths": [
+          "artifacts/independent-warning-admission-v1"
+        ]
+      },
+      {
+        "digest": "7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6",
+        "paths": [
+          "artifacts/independent-warning-admission-v1-normalizer-amendment-001"
+        ]
+      },
+      {
+        "digest": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+        "paths": [
+          "artifacts/independent-warning-admission-v2-external-stratified"
+        ]
+      },
+      {
+        "digest": "a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc",
+        "paths": [
+          "artifacts/independent-warning-admission-v3-full-population"
+        ]
+      },
+      {
+        "digest": "f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4",
+        "paths": [
+          "artifacts/c2e-frontier-v1"
         ]
       }
     ],
@@ -194,7 +362,7 @@
     "output": "paper/usenix27/figures/pdf/live-replay-treatments.pdf",
     "preview": "paper/usenix27/figures/png-preview/live-replay-treatments.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "c9e2a8f9a8f3b97d04f57d7a8209b1a4581f133267fa12aea201070fe0ee9e5c",
+    "sha256": "c50b56e51d6944c4d208437d31933b07258422177f5d36f228b86089b651df56",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -218,6 +386,48 @@
         "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
         "paths": [
           "artifacts/federated-domain-v0.6"
+        ]
+      },
+      {
+        "digest": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d",
+        "paths": [
+          "artifacts/tcx-validation-value-v2"
+        ]
+      },
+      {
+        "digest": "bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3",
+        "paths": [
+          "artifacts/adaptive-agent-authorization-v1"
+        ]
+      },
+      {
+        "digest": "661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d",
+        "paths": [
+          "artifacts/independent-warning-admission-v1"
+        ]
+      },
+      {
+        "digest": "7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6",
+        "paths": [
+          "artifacts/independent-warning-admission-v1-normalizer-amendment-001"
+        ]
+      },
+      {
+        "digest": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+        "paths": [
+          "artifacts/independent-warning-admission-v2-external-stratified"
+        ]
+      },
+      {
+        "digest": "a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc",
+        "paths": [
+          "artifacts/independent-warning-admission-v3-full-population"
+        ]
+      },
+      {
+        "digest": "f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4",
+        "paths": [
+          "artifacts/c2e-frontier-v1"
         ]
       }
     ],
@@ -239,7 +449,7 @@
     "output": "paper/usenix27/figures/pdf/security-availability.pdf",
     "preview": "paper/usenix27/figures/png-preview/security-availability.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "52ed1555a309b9399c5a89ee80168132360dad509059b4f3c3d7a8cc973cd694",
+    "sha256": "ee07997b36f4325dc04e5574a4d1e21c0cf6d59e224d2cf70fcd9c99fcd0fe10",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -264,9 +474,137 @@
         "paths": [
           "artifacts/federated-domain-v0.6"
         ]
+      },
+      {
+        "digest": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d",
+        "paths": [
+          "artifacts/tcx-validation-value-v2"
+        ]
+      },
+      {
+        "digest": "bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3",
+        "paths": [
+          "artifacts/adaptive-agent-authorization-v1"
+        ]
+      },
+      {
+        "digest": "661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d",
+        "paths": [
+          "artifacts/independent-warning-admission-v1"
+        ]
+      },
+      {
+        "digest": "7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6",
+        "paths": [
+          "artifacts/independent-warning-admission-v1-normalizer-amendment-001"
+        ]
+      },
+      {
+        "digest": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+        "paths": [
+          "artifacts/independent-warning-admission-v2-external-stratified"
+        ]
+      },
+      {
+        "digest": "a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc",
+        "paths": [
+          "artifacts/independent-warning-admission-v3-full-population"
+        ]
+      },
+      {
+        "digest": "f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4",
+        "paths": [
+          "artifacts/c2e-frontier-v1"
+        ]
       }
     ],
     "svg": "paper/usenix27/figures/svg/security-availability.svg"
+  },
+  {
+    "caption_caveats": [
+      "Deterministic receiver-local policy frontier; not a deployment-effectiveness result."
+    ],
+    "claims": [
+      "C-C2E-FRONTIER-01"
+    ],
+    "function": "generate_c2e_policy_frontier",
+    "id": "fig-c2e-policy-frontier",
+    "input_files": [
+      "data/generated/c2e-frontier.csv"
+    ],
+    "output": "paper/usenix27/figures/pdf/c2e-policy-frontier.pdf",
+    "preview": "paper/usenix27/figures/png-preview/c2e-policy-frontier.png",
+    "script": "scripts/generate_figures.py",
+    "sha256": "6b091cf548124e58873794fde2eaa6b167c348bc8722aa0edf30cac9a883823a",
+    "source_artifacts": [
+      {
+        "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+        "paths": [
+          "artifacts/v0.6-agent-validation-live-origin-certified"
+        ]
+      },
+      {
+        "digest": "cfc5396a651d062699a7e4374b9813380e3677abc593e2a8a4d46848406eb11f",
+        "paths": [
+          "artifacts/v0.6-agent-validation"
+        ]
+      },
+      {
+        "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+        "paths": [
+          "artifacts/federated-domain-v0.6-evidence"
+        ]
+      },
+      {
+        "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
+        "paths": [
+          "artifacts/federated-domain-v0.6"
+        ]
+      },
+      {
+        "digest": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d",
+        "paths": [
+          "artifacts/tcx-validation-value-v2"
+        ]
+      },
+      {
+        "digest": "bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3",
+        "paths": [
+          "artifacts/adaptive-agent-authorization-v1"
+        ]
+      },
+      {
+        "digest": "661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d",
+        "paths": [
+          "artifacts/independent-warning-admission-v1"
+        ]
+      },
+      {
+        "digest": "7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6",
+        "paths": [
+          "artifacts/independent-warning-admission-v1-normalizer-amendment-001"
+        ]
+      },
+      {
+        "digest": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+        "paths": [
+          "artifacts/independent-warning-admission-v2-external-stratified"
+        ]
+      },
+      {
+        "digest": "a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc",
+        "paths": [
+          "artifacts/independent-warning-admission-v3-full-population"
+        ]
+      },
+      {
+        "digest": "f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4",
+        "paths": [
+          "artifacts/c2e-frontier-v1"
+        ]
+      }
+    ],
+    "svg": "paper/usenix27/figures/svg/c2e-policy-frontier.svg"
   },
   {
     "caption_caveats": [
@@ -283,7 +621,7 @@
     "output": "paper/usenix27/figures/pdf/artifact-lineage.pdf",
     "preview": "paper/usenix27/figures/png-preview/artifact-lineage.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "c4045e55c22b4e56a9c924563cfbd3e55f40297ef3af9d56a1f2c9d6de3a786b",
+    "sha256": "c9dc6498b8468a8325e0e77cab31640e475172701c16f8d860b347b9faac2f30",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -307,6 +645,48 @@
         "digest": "194e46000494eeda6f3966ecf1d74c22e532a40d685014b57d8fc5986b324a50",
         "paths": [
           "artifacts/federated-domain-v0.6"
+        ]
+      },
+      {
+        "digest": "da59b13917eac22bb329199886100861c1a9f91c33e69a7f6ad5db55ec3e731d",
+        "paths": [
+          "artifacts/tcx-validation-value-v2"
+        ]
+      },
+      {
+        "digest": "bd294481fb0224fc64a2d82326cea80a6b5d719f9452ef62a4e2a687d0e865b3",
+        "paths": [
+          "artifacts/adaptive-agent-authorization-v1"
+        ]
+      },
+      {
+        "digest": "661aa9a40f893adf7926a554d4070490cb8044d7d4ddff29b0b058b1c9fdd49d",
+        "paths": [
+          "artifacts/independent-warning-admission-v1"
+        ]
+      },
+      {
+        "digest": "7832cc56811984d1724315553e688b389c3e46dc1551d0540997718859c12ac6",
+        "paths": [
+          "artifacts/independent-warning-admission-v1-normalizer-amendment-001"
+        ]
+      },
+      {
+        "digest": "4436596501469dba1b97a77fed42a607731b802a27cc580c143c5f09afe8b907",
+        "paths": [
+          "artifacts/independent-warning-admission-v2-external-stratified"
+        ]
+      },
+      {
+        "digest": "a16c61a3e75f34dbd1f4dbbd23cf163da1c6e4b388c806c389333cda4f7487fc",
+        "paths": [
+          "artifacts/independent-warning-admission-v3-full-population"
+        ]
+      },
+      {
+        "digest": "f7c13dcef6396aec9b2b4511f4ba4b4f20e5d445749d4bd0df2f73880323eae4",
+        "paths": [
+          "artifacts/c2e-frontier-v1"
         ]
       }
     ],

@@ -1,18 +1,40 @@
-\section{Security and Availability Analysis}
+\section{Security and Availability}
 
-The evaluation injects invalid signature, wrong receipt, expiry, replay, unknown peer, disallowed import type, monitor-only policy, receiver unavailability, authorization timeout, restart, stale decision, session termination, and late-context conditions. The expected behavior is rejection or a receiver-local disposition, never an origin-selected enforcement command.
+\subsection{Failure controls and receiver validation}
 
-Containment-first has a material availability cost in the selected synthetic false-warning treatments. Across the RA-03 replay treatments, \BenignForwarded{} of \BenignAttempted{} benign calls are forwarded and \BenignConstrained{} are constrained. Workflow completion is \WorkflowCompleted{} of \WorkflowTotal{} (\WorkflowCompletionRate). These values are not a universal false-positive rate; they quantify the chosen capability restriction and synthetic workload.
+Ten live controls were executed and passed. Unknown peer and remote TCX action were not injected live; executed signed-envelope mutations cover them separately. Disallowed import type, no remote enforcement, gateway restart, and session termination before arrival remain untested design properties despite recorded passes. Appendix~\ref{app:extended-results} preserves every row and its evidence classification. Exercised malformed or stale contexts create no restriction; late context receives no prevention credit, and timeout or outage resolves through Domain B's policy.
+
+\subsection{Valid hostile peers}
+
+Signature validation authenticates the issuer; it does not establish that the issuer's observation is true. The sealed hostile-peer burst table is computed from declared formulas, not from executed warning bursts. Its idempotence and quota-plus-monitor entries illustrate candidate receiver policies but establish no measured overload behavior. Hostile-peer behavior remains to be tested.
+
+\subsection{Security-availability trade-off}
+
+Containment-first has a material availability cost in the selected synthetic false-warning treatments. In the inside-window early and boundary treatments, \InsideWindowBenignConstrained{} of \InsideWindowBenignAttempted{} benign agent calls are constrained and \InsideWindowWorkflowCompleted{} of \InsideWindowWorkflowTotal{} affected workflows complete. The remaining no-evidence and late treatments forward \OutsideWindowBenignForwarded{} of \OutsideWindowBenignAttempted{} benign agent calls and complete \OutsideWindowWorkflowCompleted{} of \OutsideWindowWorkflowTotal{} workflows. The aggregate \WorkflowCompleted{} of \WorkflowTotal{} result is reported for accounting, but does not blend away the treatment-specific false-warning cost.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{security-availability}
-\caption{Measured RA-03 security--availability trade-off. The constrained calls and incomplete workflows are availability costs under the selected synthetic treatments.}
+\caption{Measured availability cost in the selected RA-03 synthetic workload.}
 \label{fig:availability}
 \end{figure}
 
 \input{tables/generated/tab-utility}
 
-\input{tables/generated/tab-negative-controls}
+The receiver-strategy frontier separates no restriction, continuous Standing Guard, arrival-triggered class restriction, Exact Binding, and Campaign Correlation. The latter covers declared related substitutions that Exact Binding permits; its evaluated scope remains bounded.
 
-\input{tables/generated/tab-performance}
+\subsection{External-warning coverage and admission}
+
+A credential-free successor evaluates the complete sealed external ledger from the pinned AgentDojo commit \cite{agentDojo} and pinned Prompt Guard 2 86M output configuration \cite{promptGuardTwo}; it consumes preserved detector outputs rather than rerunning the detector. Its declared normalizer maps \texttt{LABEL\_0} to no warning and \texttt{LABEL\_1} to a TCX prompt-attack category. Table~\ref{tab:independent-warning-full-pipeline} separates source coverage, detector output, normalization, receiver admission, and exact binding. Of \ExternalWarningFullAttackCases{} attack-bearing source cases, \ExternalWarningFullWarnings{} produce a warning and an admitted exact binding; \ExternalWarningFullAttackNoWarning{} produce no warning and therefore no actionable TCOP evidence. TCOP cannot compensate for a detector no-warning result.
+
+Table~\ref{tab:independent-warning-full-outcomes} reports every policy over all \ExternalWarningFullSourceCases{} external source cases. Arrival Guard, Exact Binding, and Campaign Correlation block \ExternalWarningFullCTwoBlocked{} of \ExternalWarningFullAttackCases{} harmful actions, the \ExternalWarningFullConditionalNumerator{} for which accepted exact evidence exists, and forward the remaining \ExternalWarningFullCTwoForwarded{} no-warning harmful actions. They forward all \ExternalWarningFullBenignCases{} benign no-warning actions. Standing Guard blocks \ExternalWarningFullCThreeBlocked{} of \ExternalWarningFullAttackCases{} harmful actions but constrains all \ExternalWarningFullCThreeBenignConstrained{} of \ExternalWarningFullBenignCases{} benign actions because it is a standing receiver guard. This is an integration and authorization-coverage result, not an estimate of detector quality, warning prevalence, or deployment effectiveness.
+
+Table~\ref{tab:independent-warning-v2-controls} adds deliberately derived protocol controls to the selected external bases. Exact Binding and Campaign Correlation apply no restriction to partial or mismatched bindings. Stale and replayed context are rejected before policy. Sender-suggested-only relation information remains nonrestrictive under Campaign Correlation. Campaign Correlation forwards all \ExternalWarningVTwoNoRelationCTwoEForwarded{} harmful substitutions without a receiver-created relation, including \ExternalWarningVTwoSessionNoRelationForwarded{} session-lineage and \ExternalWarningVTwoDelegationNoRelationForwarded{} delegation variants; it blocks all \ExternalWarningVTwoWithRelationCTwoEBlocked{} paired substitutions when the receiver has created the corresponding local relation. These controls demonstrate the declared receiver logic, not a general claim about correlation quality.
+
+\input{tables/generated/tab-independent-warning-full-pipeline}
+\input{tables/generated/tab-independent-warning-full-outcomes}
+\input{tables/generated/tab-independent-warning-v2-controls}
+
+\subsection{Local overhead}
+
+Appendix~\ref{app:extended-results} separates local authorization, gateway, and warning-to-enforcement overhead for disabled and fixed-TTL caches. Correctness and causal replay disable caching.

@@ -1,5 +1,815 @@
 [
   {
+    "artifact_id": "e34fa8d8ef388895",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/markdown",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/README.md",
+    "role": "source artifact",
+    "sha256": "6795bb5ae7dd6d2f1b2961a32b43a8e89b0cdfea8fa3bcfc40b1eb78113216c7"
+  },
+  {
+    "artifact_id": "56cf4d6ba325e674",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/artifact-root-digest.json",
+    "role": "integrity manifest",
+    "sha256": "adfd891260e4c8394762af084c4edff4926a36b5d8816ebdc56b8203ccb895ca"
+  },
+  {
+    "artifact_id": "5db739548e6f2998",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/byte-stability-report.json",
+    "role": "source artifact",
+    "sha256": "95822d4671404fa26643bee7cd4631dc5413a744b01c720a9ccea4fff5648711"
+  },
+  {
+    "artifact_id": "7ef5776accd6eba9",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/campaign-correlation-contract.json",
+    "role": "source artifact",
+    "sha256": "c3d4057261b609a068817a88da25d875974f2b9016176aa7d257a38f48105bc7"
+  },
+  {
+    "artifact_id": "b21c07e78b168fc2",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/canonical-plan.json",
+    "role": "source artifact",
+    "sha256": "ff1e93311e9c52f7dc8f1af31634ea837bce1b4a7258066ccf905fc8f1553216"
+  },
+  {
+    "artifact_id": "bb728a5103ed1428",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/claim-ledger.json",
+    "role": "source artifact",
+    "sha256": "bd894e6a406617dc2b6a8e794af1f82dafea1171754ce312b99c569e1a8919e1"
+  },
+  {
+    "artifact_id": "8db4fa62f18de016",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/control-results.jsonl",
+    "role": "source artifact",
+    "sha256": "22631696fe4ecc81fa7a9765ae7a883d263a5b5b03c2a53f58eb4ceb5443b03c"
+  },
+  {
+    "artifact_id": "5a3e48856bf4a2de",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/decision-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "a91e051e802c6fccaeffe754849191c12d240f49b3f054638cf567c0bc9a979d"
+  },
+  {
+    "artifact_id": "f108c4b6c90d8cf8",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/dependency-lock.json",
+    "role": "source artifact",
+    "sha256": "0337b23a0281f770da526926acc79cfc9f1fdbdf578316c5a0ea49de48547845"
+  },
+  {
+    "artifact_id": "a1dd8a146479c21e",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/effective-plan-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "7b07479ea5611e6c47187241e4f010fb9bad5648cf6b1621fbeed65c333dc6ae"
+  },
+  {
+    "artifact_id": "8a86c9c89dc00bd0",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/eligibility-and-exclusion-ledger.csv",
+    "role": "source artifact",
+    "sha256": "3737e1ed648ba6556acf545d9bb13523d18537f88e75c4bbd7af0dcae3a4a31d"
+  },
+  {
+    "artifact_id": "b7c14ba5a1e0dbf1",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/environment.json",
+    "role": "source artifact",
+    "sha256": "b4cae6033e633ac4ffd12c80768373f3bf1fbc950184e986b5f6f9d5016b0964"
+  },
+  {
+    "artifact_id": "58844a1b19335047",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/expected-results.json",
+    "role": "source artifact",
+    "sha256": "2b8b16418cbbb859541784e0102eeb21ce4b8a43c03e39f75ff982b126ed0210"
+  },
+  {
+    "artifact_id": "1f10f8cdd0be9153",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/field-use-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "a91e051e802c6fccaeffe754849191c12d240f49b3f054638cf567c0bc9a979d"
+  },
+  {
+    "artifact_id": "bbbe6c4cde391bf1",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/input-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "81576749571e0d3a7ad3caaf8c9194894de83394da760b31d4f9156d56cf4de3"
+  },
+  {
+    "artifact_id": "cb7172a1471adba6",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/manifest.json",
+    "role": "integrity manifest",
+    "sha256": "1cd45fc9b8d92b243957497122097b6e4279e3d64a0e92b3e6b0b0a65e2bca9f"
+  },
+  {
+    "artifact_id": "eb839079bca4c164",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/markdown",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/metric-definitions.md",
+    "role": "source artifact",
+    "sha256": "1b2c4f64cb56f53317c2453b3d213d50ccf32acd47ec597b81bc58697ec67929"
+  },
+  {
+    "artifact_id": "619a1f1d45d0a2c4",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/normalized-results.jsonl",
+    "role": "source artifact",
+    "sha256": "47e99c303814167f935d312ebaf56a89394dfc2f086ae04e04e3410c2e3d5624"
+  },
+  {
+    "artifact_id": "c64d1c2feb01a281",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/plan.sha256",
+    "role": "source artifact",
+    "sha256": "6fcdb34d4f47d0154b5667fcdbd6b663e862c2dcd459edc11e8ed0c92284728e"
+  },
+  {
+    "artifact_id": "e54bbfbd4bd587be",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/policy-definitions.json",
+    "role": "source artifact",
+    "sha256": "d81128313baddba9faa2a77cb768169ad301fc05b7235db8e39bdf0593f17016"
+  },
+  {
+    "artifact_id": "e46779c7c6450d7f",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/raw-detector-outputs/index.jsonl",
+    "role": "source artifact",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "artifact_id": "a15af40fe3ab3d06",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/raw-inputs/traces.jsonl",
+    "role": "source artifact",
+    "sha256": "6275d16b1f6c256eb61d7d685277b8c35bca304d990bcde0d2f448e71041c4c9"
+  },
+  {
+    "artifact_id": "15c6009a6e4eb431",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/reports/summary.json",
+    "role": "sealed report",
+    "sha256": "c3fd7fb7f932e88e4dddf71adb2ab2f8be46c215f6621971c116e9e92864e5bf"
+  },
+  {
+    "artifact_id": "6efdab05ad32dad2",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/reproduce-command.txt",
+    "role": "source artifact",
+    "sha256": "5de8cc04be03ebd835b377702577305dc4ac248701aff8df52f63caed2f152b1"
+  },
+  {
+    "artifact_id": "90dcd10bf025b804",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/risk-family-definitions.json",
+    "role": "source artifact",
+    "sha256": "1ed6c18f9619a557eea81b2c4fecada97ba59a02d4208062d56ddf298841c508"
+  },
+  {
+    "artifact_id": "ffc4355b867b7c2c",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/source-roots.json",
+    "role": "source artifact",
+    "sha256": "755f49267334fce5668518e3542c2444b73c9cb412e34642e072f6291dae3e27"
+  },
+  {
+    "artifact_id": "30fd26ad939252d2",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/yaml",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/study-plan.yaml",
+    "role": "source artifact",
+    "sha256": "ff1e93311e9c52f7dc8f1af31634ea837bce1b4a7258066ccf905fc8f1553216"
+  },
+  {
+    "artifact_id": "a9b5d02182c7a853",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/trace-or-corpus-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "8355c651526436268a4b46c6a39baefa97cf0423b2a7f2fdd7ac1882d50270b3"
+  },
+  {
+    "artifact_id": "6b1e0c161b7bed09",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/adaptive-agent-authorization-v1/verify-command.txt",
+    "role": "source artifact",
+    "sha256": "a06d2c0bf49c4016acb2f4652c72f347ed9e37bf10620c879f3a39c35fc0ebc9"
+  },
+  {
+    "artifact_id": "2ff1bcfdb84c0d1d",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/markdown",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/README.md",
+    "role": "source artifact",
+    "sha256": "5804242a55fe258a89ed89b18a9352323a43e461535c7071d9f7781c69608dfd"
+  },
+  {
+    "artifact_id": "3f7a7943a4e27d17",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/artifact-root-digest.json",
+    "role": "integrity manifest",
+    "sha256": "7dc58e6b822caa71fb70b1d1d15b0920451695c88f4d203be3b80b21f9ae2e89"
+  },
+  {
+    "artifact_id": "38b2782513788d20",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/byte-stability-report.json",
+    "role": "source artifact",
+    "sha256": "f1fba5349867b00cbb228e9fbb0c51402d37828d9156bbba4ef1d589430ab7e9"
+  },
+  {
+    "artifact_id": "7e099da3b48680ec",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/c2e-field-use-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "99563403378006dc07f33a6a582ab54f072ed5fe584a23b813a0fb9ec4eae884"
+  },
+  {
+    "artifact_id": "efca2205d0830270",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/campaign-correlation-contract.json",
+    "role": "source artifact",
+    "sha256": "ecb930d43ec2d07fdc3878a52175d23ff3597eff94d4019a4ed2737316ed26bc"
+  },
+  {
+    "artifact_id": "fbb54f621e95e552",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/canonical-plan.json",
+    "role": "source artifact",
+    "sha256": "51b651a93eaf88cd3f6fcd879f3a8d9d8043b40334bbc1feaac8f7fce13845fa"
+  },
+  {
+    "artifact_id": "499e6582707adb32",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/claim-ledger.json",
+    "role": "source artifact",
+    "sha256": "7a3f21ed4876513a731bc6b0f9cf52c8a841f6797a5335aa8faeeaeb8ef9b366"
+  },
+  {
+    "artifact_id": "af410e300ae8052c",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/control-results.jsonl",
+    "role": "source artifact",
+    "sha256": "2fdb6ba43173906e94f628ada7ca17963994da19bf408db2a099002d327808fc"
+  },
+  {
+    "artifact_id": "262f5ea89f91b518",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/decision-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "867c3183ed99b333245ab382c3883b1ded3f091c1aac05fd43d7afee99de12b0"
+  },
+  {
+    "artifact_id": "a7656c7c188281ca",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/effective-plan-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "7ff463c0d81406c610e9d6011d15e12a3993a2249ed2d3813bd0f117109ada31"
+  },
+  {
+    "artifact_id": "0ed990aac5715dbd",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/eligibility-and-exclusion-ledger.csv",
+    "role": "source artifact",
+    "sha256": "fd11d44a9c7fe7e3b7f273774a2d8c47fdefff7762dffee33b0c159ea3d11884"
+  },
+  {
+    "artifact_id": "cf495e72f9a3813a",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/environment.json",
+    "role": "source artifact",
+    "sha256": "7951e9ab602e4f94ae18e007750a4199c1dce1ff2a4af475bd27852b2c03be60"
+  },
+  {
+    "artifact_id": "b0f3ac4b0163423c",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/escalation-lifecycle.jsonl",
+    "role": "source artifact",
+    "sha256": "2746cf8b320213a51125bf62b2182d04f28becc9c675b6b3f23bc4a33caed123"
+  },
+  {
+    "artifact_id": "8ffc48bfc7806ac4",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/input-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "df46bbcb7abd75b37db3aef872d582d9ee3340d4827c622e4dd2eb0d07bd6624"
+  },
+  {
+    "artifact_id": "9e661dc6eb24aebe",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/manifest.json",
+    "role": "integrity manifest",
+    "sha256": "fc1cde11e9275ecf43fe78a849d4d10b379436efa0150436d9e9c2b58b545ea1"
+  },
+  {
+    "artifact_id": "db79034705b71448",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/normalized-results.jsonl",
+    "role": "source artifact",
+    "sha256": "d7da8788d6360d8923d9d5ca6078c52bcdbddde2dec1568c28178c5a75934667"
+  },
+  {
+    "artifact_id": "03d781cfb1efdf76",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/plan.sha256",
+    "role": "source artifact",
+    "sha256": "f06c3d4332a805e50388d917d3070ad23009f9999c900c5d779f6dd34fa8e706"
+  },
+  {
+    "artifact_id": "cef783566e53f442",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/policy-definitions.json",
+    "role": "source artifact",
+    "sha256": "c74418eac22cb23b71be9a3b21663a3b20d1bdb956213d6597ad45cd0b791fce"
+  },
+  {
+    "artifact_id": "4a1c1fbe6bf05d25",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/raw-inputs/frontier-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "02b0950e0c7b96bbc9140618a34e3c26c8acd740b1ca69c092945a45176190d4"
+  },
+  {
+    "artifact_id": "6efb198bbf3f8849",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/reports/frontier-summary.json",
+    "role": "sealed report",
+    "sha256": "c81a4fc53acc230749133086a5d4c293b5198d52e0318b8b97be6cfa88d5ce15"
+  },
+  {
+    "artifact_id": "956e76009bcd825e",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/reproduce-command.txt",
+    "role": "source artifact",
+    "sha256": "d541aab97012e5cfd3b14edece7e015fc263340b9c020b7e6d0658d3f98dcf5f"
+  },
+  {
+    "artifact_id": "0bebe33846919753",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/source-roots.json",
+    "role": "source artifact",
+    "sha256": "bfb4e7a8e79ceb7262203f41c1c2dd477a4f493fe4f9d89312b88131dc0f8b66"
+  },
+  {
+    "artifact_id": "2846dcdc2ed17c46",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/yaml",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/study-plan.yaml",
+    "role": "source artifact",
+    "sha256": "51b651a93eaf88cd3f6fcd879f3a8d9d8043b40334bbc1feaac8f7fce13845fa"
+  },
+  {
+    "artifact_id": "807a314db943658d",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/trace-or-corpus-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "2318c7396ea421426458d170658accc449305c994f9c089a3e42cb9dc5ba6a16"
+  },
+  {
+    "artifact_id": "cc344c8ef31e5dc9",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/c2e-frontier-v1/verify-command.txt",
+    "role": "source artifact",
+    "sha256": "86c957c374ee783b263988d2dad76f175133298e577fde0988e4e74d8ba55be7"
+  },
+  {
     "artifact_id": "62582194b87a7c7e",
     "contains_identity_risk": false,
     "contains_secret_risk": false,
@@ -66555,6 +67365,1671 @@
     "sha256": "931e2f8ad18c6c5b33bdd1222f6d6aedff275e8f8ccc474158d4c249805ddb57"
   },
   {
+    "artifact_id": "4650a1c6e5dc98a1",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/markdown",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/README.md",
+    "role": "source artifact",
+    "sha256": "dddf38fcb2557bbef054bd1e50a2b39a8b808477cc4f113aaf4b0926db846f62"
+  },
+  {
+    "artifact_id": "1378d44de71353e5",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/artifact-root-digest.json",
+    "role": "integrity manifest",
+    "sha256": "b85adf19b92781c503691cdea1658efc24cd44d0cbd278f2388cb1c7c38ee605"
+  },
+  {
+    "artifact_id": "52ca9a716d4647a0",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/byte-stability-report.json",
+    "role": "source artifact",
+    "sha256": "95822d4671404fa26643bee7cd4631dc5413a744b01c720a9ccea4fff5648711"
+  },
+  {
+    "artifact_id": "be7f5fe8cf195524",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/campaign-correlation-contract.json",
+    "role": "source artifact",
+    "sha256": "ca3518777bdfbb1ea019ed9ba5c85eb7090b53555596ae81be024add9150ae00"
+  },
+  {
+    "artifact_id": "dd88af1b9b2fcc9e",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/canonical-plan.json",
+    "role": "source artifact",
+    "sha256": "986850effe3aa35a328d9a4bec4d1691cd65df893c1a298cd18e8b26076b21aa"
+  },
+  {
+    "artifact_id": "93a2079375fc6ff8",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/claim-ledger.json",
+    "role": "source artifact",
+    "sha256": "3f6fc35ff927a0d9ce95b97e895e82c4cc759003e8f9b1eca5185d7333ea529b"
+  },
+  {
+    "artifact_id": "c648a4a09af410b2",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/control-results.jsonl",
+    "role": "source artifact",
+    "sha256": "b9412f8384fdc712c0d9d082a4a79b6ade81848d84b6ec74356aa2b9dedb5e13"
+  },
+  {
+    "artifact_id": "ace3bbef7c6f076c",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/decision-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "5beb0bef3fcfccf5bb8cdb9424a37de4f902ed2016b13c7fa1d0b618b71bfc88"
+  },
+  {
+    "artifact_id": "35ae62a3fc4d4123",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/dependency-lock.json",
+    "role": "source artifact",
+    "sha256": "27285c71efe63718dd10d6d146fe7ab6b20ef6e2bf308e9b129014b7ad19afcd"
+  },
+  {
+    "artifact_id": "2585c619aee9baea",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/effective-plan-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "3f185f8577678348682a157d23661ed1df3daf0d118f2723af8fa9f5bd76a910"
+  },
+  {
+    "artifact_id": "4ff13be27c61b269",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/eligibility-and-exclusion-ledger.csv",
+    "role": "source artifact",
+    "sha256": "e6e286406fa2609889627e3dcb5719b677604f509753eace9d997f4e304e720c"
+  },
+  {
+    "artifact_id": "e82df7d5838b2caf",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/environment.json",
+    "role": "source artifact",
+    "sha256": "3d903b8298e8e376a21f50d886726b113b23eb21fc396ef19c7e4a87eccb5406"
+  },
+  {
+    "artifact_id": "a3eeb95f382c4215",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/expected-results.json",
+    "role": "source artifact",
+    "sha256": "33ff05949bd5d65757f240e87097632f5a9c05e34a6d77cb58d444c0db0f485b"
+  },
+  {
+    "artifact_id": "21e4003aa0af27b6",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/field-use-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "5beb0bef3fcfccf5bb8cdb9424a37de4f902ed2016b13c7fa1d0b618b71bfc88"
+  },
+  {
+    "artifact_id": "9ab34226b3d99332",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/input-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "94a7eb1eaecbe3012fa2abf3b215d4155fe7e2162c99c48f580688ff31b53c8e"
+  },
+  {
+    "artifact_id": "04eb888a2c461069",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/manifest.json",
+    "role": "integrity manifest",
+    "sha256": "f16681047a072de12c6031b692cab4905513aa6824a50c4193c694116a51cb1e"
+  },
+  {
+    "artifact_id": "406f312dc1f7f2ff",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/markdown",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/metric-definitions.md",
+    "role": "source artifact",
+    "sha256": "8e31aaa55182022851e50a42cb397761743fb6f70c9d2cfbfe3dbad766b71158"
+  },
+  {
+    "artifact_id": "49c6061ba6499f66",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/normalized-results.jsonl",
+    "role": "source artifact",
+    "sha256": "f8f7131933f72d4aea50b36b39cae7faa8e450a73d6fa7cd52592f5940e16dda"
+  },
+  {
+    "artifact_id": "f83044c42d7dc3c5",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/plan.sha256",
+    "role": "source artifact",
+    "sha256": "1ab7e4b2e7c273ea75e069280e337aab92cde0a9289c47eda29de53706eb584f"
+  },
+  {
+    "artifact_id": "aa9c64707bc5daf2",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/policy-definitions.json",
+    "role": "source artifact",
+    "sha256": "eb633c54a2e6e8664334490a4ea5ca66b440788d89ef253f7947d0af23ae5c72"
+  },
+  {
+    "artifact_id": "7e7101df3287fe92",
+    "contains_identity_risk": true,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/raw-detector-outputs/prompt-guard.jsonl",
+    "role": "source artifact",
+    "sha256": "069e9851905a086a98992e8c6c67bdf3840c2ad59616b74db2677866dc462794"
+  },
+  {
+    "artifact_id": "dbca71c28963d61e",
+    "contains_identity_risk": true,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/raw-inputs/agentdojo-heldout.jsonl",
+    "role": "source artifact",
+    "sha256": "885fa79777e1ec9e813bf0c258f65d0edb51fff863814761d7a1df4a9d96f314"
+  },
+  {
+    "artifact_id": "905725eeee667a79",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/reports/policy-frontier.json",
+    "role": "sealed report",
+    "sha256": "894e1a46208b19ad04361856d3b81c5e42f2a7846ef63c84aa08fe6e614f52b8"
+  },
+  {
+    "artifact_id": "bdec0aa2ccab6bb6",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/reproduce-command.txt",
+    "role": "source artifact",
+    "sha256": "359d9aa21b4c38b71bb41a75dfe50582a16b546344ed7b1d51c8a1f4dec53437"
+  },
+  {
+    "artifact_id": "d40a974762090a3e",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/risk-family-definitions.json",
+    "role": "source artifact",
+    "sha256": "94381a6253f9e3a05e9ac19350e84cd5c3d95f9175c6696a43584d4994b01359"
+  },
+  {
+    "artifact_id": "eff7e9a232be227b",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/source-roots.json",
+    "role": "source artifact",
+    "sha256": "90e96c3364bc96b0851d110385ea9dcb5bf6184675f9ed6b90827526624ffb0e"
+  },
+  {
+    "artifact_id": "3cc7c0c475f5be1f",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/yaml",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/study-plan.yaml",
+    "role": "source artifact",
+    "sha256": "986850effe3aa35a328d9a4bec4d1691cd65df893c1a298cd18e8b26076b21aa"
+  },
+  {
+    "artifact_id": "b9e73346268d9f64",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/trace-or-corpus-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "26883308d36216d792bdf3deaa5395559b0de97dbe810257909cc62fe413a6e4"
+  },
+  {
+    "artifact_id": "292abecda6a4ac44",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1/verify-command.txt",
+    "role": "source artifact",
+    "sha256": "38e49fa4fe7c9e3f0329d4a68a848e04c07e71f867153affc29849443061893b"
+  },
+  {
+    "artifact_id": "882ed039bdd96ff1",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/markdown",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/README.md",
+    "role": "source artifact",
+    "sha256": "dddf38fcb2557bbef054bd1e50a2b39a8b808477cc4f113aaf4b0926db846f62"
+  },
+  {
+    "artifact_id": "ac2ee78061542c22",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/artifact-root-digest.json",
+    "role": "integrity manifest",
+    "sha256": "ddd09b30cf88d58376f8673aae2abe892dbca71fefc451b690b8989bef515b18"
+  },
+  {
+    "artifact_id": "985f752e841570e3",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/byte-stability-report.json",
+    "role": "source artifact",
+    "sha256": "95822d4671404fa26643bee7cd4631dc5413a744b01c720a9ccea4fff5648711"
+  },
+  {
+    "artifact_id": "2e00157dd22caa7b",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/campaign-correlation-contract.json",
+    "role": "source artifact",
+    "sha256": "ca3518777bdfbb1ea019ed9ba5c85eb7090b53555596ae81be024add9150ae00"
+  },
+  {
+    "artifact_id": "14c79a34fe7322fb",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/canonical-plan.json",
+    "role": "source artifact",
+    "sha256": "2ed85a77395d2d61d37b1c1031c915d5467599f68aa819d721df13dc8a2714cb"
+  },
+  {
+    "artifact_id": "78fe6c91bcbd1fcc",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/claim-ledger.json",
+    "role": "source artifact",
+    "sha256": "3f6fc35ff927a0d9ce95b97e895e82c4cc759003e8f9b1eca5185d7333ea529b"
+  },
+  {
+    "artifact_id": "49d1af2717df7de2",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/control-results.jsonl",
+    "role": "source artifact",
+    "sha256": "b9412f8384fdc712c0d9d082a4a79b6ade81848d84b6ec74356aa2b9dedb5e13"
+  },
+  {
+    "artifact_id": "ae101cae5fa7b3ad",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/decision-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "5beb0bef3fcfccf5bb8cdb9424a37de4f902ed2016b13c7fa1d0b618b71bfc88"
+  },
+  {
+    "artifact_id": "f3a97e0086763f86",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/dependency-lock.json",
+    "role": "source artifact",
+    "sha256": "27285c71efe63718dd10d6d146fe7ab6b20ef6e2bf308e9b129014b7ad19afcd"
+  },
+  {
+    "artifact_id": "d8148e89f2948912",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/effective-plan-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "1fe382e63104060bcc8e44b5228feebd95461a4906449232af3dcbfea0225dfe"
+  },
+  {
+    "artifact_id": "021820cd56fabe47",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/eligibility-and-exclusion-ledger.csv",
+    "role": "source artifact",
+    "sha256": "e6e286406fa2609889627e3dcb5719b677604f509753eace9d997f4e304e720c"
+  },
+  {
+    "artifact_id": "12cad53d6669e3c8",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/environment.json",
+    "role": "source artifact",
+    "sha256": "3d903b8298e8e376a21f50d886726b113b23eb21fc396ef19c7e4a87eccb5406"
+  },
+  {
+    "artifact_id": "c25d314c07562013",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/expected-results.json",
+    "role": "source artifact",
+    "sha256": "33ff05949bd5d65757f240e87097632f5a9c05e34a6d77cb58d444c0db0f485b"
+  },
+  {
+    "artifact_id": "3198c32661143767",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/field-use-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "5beb0bef3fcfccf5bb8cdb9424a37de4f902ed2016b13c7fa1d0b618b71bfc88"
+  },
+  {
+    "artifact_id": "e720132bacbe6d12",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/input-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "94a7eb1eaecbe3012fa2abf3b215d4155fe7e2162c99c48f580688ff31b53c8e"
+  },
+  {
+    "artifact_id": "f9f9de80795096f2",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/manifest.json",
+    "role": "integrity manifest",
+    "sha256": "88295480c24fef3b6fca33c1cfb0f05227688cdf1cc76b33299bf51bd36bbe7d"
+  },
+  {
+    "artifact_id": "45310c04d2e788b8",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/markdown",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/metric-definitions.md",
+    "role": "source artifact",
+    "sha256": "8e31aaa55182022851e50a42cb397761743fb6f70c9d2cfbfe3dbad766b71158"
+  },
+  {
+    "artifact_id": "a505f32d10fd35fe",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/normalized-results.jsonl",
+    "role": "source artifact",
+    "sha256": "07a437c34a2cb5ff25160c9e49be0a375c270855749ac6a24da69f22aa6b2502"
+  },
+  {
+    "artifact_id": "35a78c0aaa5c1608",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/normalizer-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "c3fad5810b88b92d65ae0af1f9a223b646d8ea5ba25815070e542ba6c7a032ed"
+  },
+  {
+    "artifact_id": "6a35bddb8b7d3d18",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/plan.sha256",
+    "role": "source artifact",
+    "sha256": "28925aec25273d8e35e541149752c0469efc9e68f0cd2816876d8433fc26ce9c"
+  },
+  {
+    "artifact_id": "315fa5bd327c75dc",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/policy-definitions.json",
+    "role": "source artifact",
+    "sha256": "eb633c54a2e6e8664334490a4ea5ca66b440788d89ef253f7947d0af23ae5c72"
+  },
+  {
+    "artifact_id": "df8e05fbafd162ed",
+    "contains_identity_risk": true,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/raw-detector-outputs/prompt-guard.jsonl",
+    "role": "source artifact",
+    "sha256": "069e9851905a086a98992e8c6c67bdf3840c2ad59616b74db2677866dc462794"
+  },
+  {
+    "artifact_id": "b390b35e4a4b6ee7",
+    "contains_identity_risk": true,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/raw-inputs/agentdojo-heldout.jsonl",
+    "role": "source artifact",
+    "sha256": "885fa79777e1ec9e813bf0c258f65d0edb51fff863814761d7a1df4a9d96f314"
+  },
+  {
+    "artifact_id": "4be291b34a577eaa",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/reports/admission-summary.json",
+    "role": "sealed report",
+    "sha256": "1a2b559e5bca3d9d18af0e4dce76a81a97e78251902e2899e58a1d53e32fff44"
+  },
+  {
+    "artifact_id": "2ecc346e77976493",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/reports/policy-frontier.json",
+    "role": "sealed report",
+    "sha256": "3b9849e364b315b987ca78def4cf5a05ce6e44a21d99cc474d9068a27c590be1"
+  },
+  {
+    "artifact_id": "76abdc549ce2d3ef",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/reproduce-command.txt",
+    "role": "source artifact",
+    "sha256": "cb81b3cba5aef8d44b9d91970e1e8b2dd8afb2723713abb3792129fe6e41e498"
+  },
+  {
+    "artifact_id": "28fc3fa10209d13b",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/risk-family-definitions.json",
+    "role": "source artifact",
+    "sha256": "94381a6253f9e3a05e9ac19350e84cd5c3d95f9175c6696a43584d4994b01359"
+  },
+  {
+    "artifact_id": "59b665ac40c5c58c",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/source-roots.json",
+    "role": "source artifact",
+    "sha256": "90e96c3364bc96b0851d110385ea9dcb5bf6184675f9ed6b90827526624ffb0e"
+  },
+  {
+    "artifact_id": "eaa9a8e2681d60d1",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/yaml",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/study-plan.yaml",
+    "role": "source artifact",
+    "sha256": "2ed85a77395d2d61d37b1c1031c915d5467599f68aa819d721df13dc8a2714cb"
+  },
+  {
+    "artifact_id": "5962dc8dba21f602",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/trace-or-corpus-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "26883308d36216d792bdf3deaa5395559b0de97dbe810257909cc62fe413a6e4"
+  },
+  {
+    "artifact_id": "fa528ac4d79d3c29",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v1-normalizer-amendment-001/verify-command.txt",
+    "role": "source artifact",
+    "sha256": "9583c0371fe6eb664ee3e4d038b135ccd012680b879259f5e2cb3dd202d21749"
+  },
+  {
+    "artifact_id": "c48a9a257c5bbeef",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/markdown",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/README.md",
+    "role": "source artifact",
+    "sha256": "8deb13d50b7c1afd90b84ddacfec916658e01d09560eaae6e3235183953bd082"
+  },
+  {
+    "artifact_id": "c74abce415302c64",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/artifact-root-digest.json",
+    "role": "integrity manifest",
+    "sha256": "794bf14f057bceaf6eb08d0760ab5eaad11e1dbacd5619a975b53eb8f6a64c5d"
+  },
+  {
+    "artifact_id": "290d91aeed48c89d",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/candidate-ledger.csv",
+    "role": "source artifact",
+    "sha256": "1bf04123878f9e53fddd71582a21a7ab9b2761f97996705ddbeb75415e71b041"
+  },
+  {
+    "artifact_id": "156ffc0c46de20ba",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/canonical-signing-inputs.jsonl",
+    "role": "source artifact",
+    "sha256": "1f9bc52aad6719fa975d1930848434a2caceb989e96e4fa3af08b4e7bc37ec7b"
+  },
+  {
+    "artifact_id": "1a77e026002d32f4",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/claim-ledger.json",
+    "role": "source artifact",
+    "sha256": "5d99c9d0dcede0ef37956bc6a05c9abca91fbc91e85d3d55ef8d40ba1a187078"
+  },
+  {
+    "artifact_id": "2451f371472ed961",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/control-results.jsonl",
+    "role": "source artifact",
+    "sha256": "1dfd8a9b2629ef7025391d341f4ca412f411785d2cfd9e5e9a1f71b75226713d"
+  },
+  {
+    "artifact_id": "2efe70f569081302",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/decision-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "3f3c2a026134d402031fe2e1887b1b53e26f3e8abc57bcda48636e7f2ead5d03"
+  },
+  {
+    "artifact_id": "56c518d29b2a99ac",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/expected-results.json",
+    "role": "source artifact",
+    "sha256": "ea510f2fb393646e1491fbf5299f0527674b69d7ae32f6d6ab23b656d2b97f49"
+  },
+  {
+    "artifact_id": "a09f2e82c8190a7b",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/manifest.json",
+    "role": "integrity manifest",
+    "sha256": "4756d9447b1f090b6fd9e10832978612e03d25056749c3bdde1f0fc7a71b9a4f"
+  },
+  {
+    "artifact_id": "942ca903efe2b20b",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/normalized-results.jsonl",
+    "role": "source artifact",
+    "sha256": "9102d9f57f28cb4cffd75eba80a80f2b2aa77e4e18ff26c347ab2a76652bb60e"
+  },
+  {
+    "artifact_id": "8323809d3eaf6177",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/normalizer-config-digest.json",
+    "role": "integrity manifest",
+    "sha256": "071a80adc8903d05f88550f6088072b97ac888b1b8a562c68aaef43f33ac454a"
+  },
+  {
+    "artifact_id": "74a15c3230c2eee8",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/normalizer-spec.json",
+    "role": "source artifact",
+    "sha256": "03a75890e4caf3f8d28952d6a99548e7960cce11d3bf7929f8a06f6d8870a3e3"
+  },
+  {
+    "artifact_id": "9822ccc40539a048",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/policy-digests.json",
+    "role": "integrity manifest",
+    "sha256": "81eeae112bd2e21c30b2ed0b877d7c8eaec51f688a71c03d9adb720ed7952583"
+  },
+  {
+    "artifact_id": "2badb997c908d12d",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/preanalysis-plan.json",
+    "role": "source artifact",
+    "sha256": "61246741a8c453d30ee6a748aa320eac2764e133cc5be6ed956d1f312749b9af"
+  },
+  {
+    "artifact_id": "405fb00a996abdf8",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/raw-detector-outputs.jsonl",
+    "role": "source artifact",
+    "sha256": "ba39a42cba850c7f9bf6ce58f5778777b5f8dced133fa1ebbf0f682a6830c864"
+  },
+  {
+    "artifact_id": "6eac01bebc92e1f2",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/receiver-action-state.jsonl",
+    "role": "source artifact",
+    "sha256": "4b79fa96d314c31bfaf7b2f42e8a3bc7c6b070021680b14db90dce1a629538d2"
+  },
+  {
+    "artifact_id": "58e72bf793865891",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/relation-lifecycle.jsonl",
+    "role": "source artifact",
+    "sha256": "a6015f0f3ed5bdfb91fa75d2bbefebe4a1531d181e9128e0433d664fd2f6cb9f"
+  },
+  {
+    "artifact_id": "bceb911c4066b63b",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/reports/byte-stability-report.json",
+    "role": "sealed report",
+    "sha256": "43a91a3a201c9561af06a29cdb3e3f7cd580a1976d42dd5adfcbe24cc57e7085"
+  },
+  {
+    "artifact_id": "32a398416ba9975d",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/reports/cohort-summary.json",
+    "role": "sealed report",
+    "sha256": "5e4d22aed1c957a300cc3f3cd8eb0ae1efebe740f159c5434242db67290d2098"
+  },
+  {
+    "artifact_id": "995124db7ad304e0",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/reports/derived-control-dispositions.csv",
+    "role": "sealed report",
+    "sha256": "a0d3e574f38cde38e471585cd16c2c7c2ab545be7175d0b5188277c1d5b44519"
+  },
+  {
+    "artifact_id": "217367f2766d0946",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/reports/external-base-dispositions.csv",
+    "role": "sealed report",
+    "sha256": "c000c9ef6a67ee98e0f6e21716c95821c52c9fe2704725d12707a07a8b78356a"
+  },
+  {
+    "artifact_id": "c723da279199416f",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/reports/gates.json",
+    "role": "sealed report",
+    "sha256": "3169487e3a1dc17c6c965d96955e3494e7732b13ddb98ea0e92c1a952be056be"
+  },
+  {
+    "artifact_id": "eb0078f77b10c798",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/reports/receiver-relation-summary.json",
+    "role": "sealed report",
+    "sha256": "ddd690ac373ab0c64ab35ba1cbf7ccaff7379acb3ab78a14af9d386f26d8417d"
+  },
+  {
+    "artifact_id": "7efb1d175ca8f516",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/reports/substitution-summary.json",
+    "role": "sealed report",
+    "sha256": "17d71d6c4e6fff04f299952b8a1393a084ad94a8151481c8a7aed673a0bb4348"
+  },
+  {
+    "artifact_id": "ec30690bfcb0935b",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/reproduce-command.txt",
+    "role": "source artifact",
+    "sha256": "89fcc3c2554c1e9c95f12f6be9314d581dbc5ac1a27c37b36f263a1df05464b7"
+  },
+  {
+    "artifact_id": "dd664b3ab326bd09",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/selection-ledger.csv",
+    "role": "source artifact",
+    "sha256": "1bf04123878f9e53fddd71582a21a7ab9b2761f97996705ddbeb75415e71b041"
+  },
+  {
+    "artifact_id": "0362371717727616",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/source-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "a1f33880c7242faabc9383a52b68ba268e1279f137c3e797198116f71372675a"
+  },
+  {
+    "artifact_id": "b495eee3c6cb2323",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/yaml",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/study-plan.yaml",
+    "role": "source artifact",
+    "sha256": "1d4d3973a9fc110e61b5e2e9296b268c4718909caf74e7183384adf579ca3b72"
+  },
+  {
+    "artifact_id": "0db791a8be8f2bd8",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/tcx-candidates.jsonl",
+    "role": "source artifact",
+    "sha256": "0aa069e561dfc6f4af724c4478fd1387a63797e7af0f3473f3f88ef2f924ad45"
+  },
+  {
+    "artifact_id": "ff27d34dd1b62e44",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v2-external-stratified/verify-command.txt",
+    "role": "source artifact",
+    "sha256": "6a9d93aa9d9fd8f8a537dc315f7103d4aeb1431db337a510781f4cd846017773"
+  },
+  {
+    "artifact_id": "ccc30b2cd2b0d5d0",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/markdown",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/README.md",
+    "role": "source artifact",
+    "sha256": "1c3f5bf7544252da1bb98740a9ec19002dae224ac0e1963112cab158207eaebe"
+  },
+  {
+    "artifact_id": "4b5a84726adc6056",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/artifact-root-digest.json",
+    "role": "integrity manifest",
+    "sha256": "72163e5fbc49ba5e2bbba121e2bf2e21fa24ccfe704ecf75e70568d6cd168cf8"
+  },
+  {
+    "artifact_id": "2936884c7aa74d45",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/candidate-ledger.csv",
+    "role": "source artifact",
+    "sha256": "5ff364ce87e04a6ccf2b4b8e51b345faaa7cad9825215328a893a7748fdfbbf9"
+  },
+  {
+    "artifact_id": "d08fff84b3ae6cea",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/canonical-signing-inputs.jsonl",
+    "role": "source artifact",
+    "sha256": "c0dfbfc4b51ac03690b93378f9f9278b73180b8506ed2ed4e557c5ead76f54b4"
+  },
+  {
+    "artifact_id": "11f9c747cdb08944",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/claim-ledger.json",
+    "role": "source artifact",
+    "sha256": "2d255e3a58db26e5508dc479641e12dc716a60b12bc22c4391219cace91df733"
+  },
+  {
+    "artifact_id": "24fa1ba2bc4c17ad",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/decision-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "afee649dd01e2e33bda07633576af171e9546c339ae1c300f571a32e6986e3c0"
+  },
+  {
+    "artifact_id": "93aad72647f02ceb",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/expected-results.json",
+    "role": "source artifact",
+    "sha256": "405338b3fea60fd1da1db6ab3c79c2b8a61a60800c1bae12c6db8e75331c706a"
+  },
+  {
+    "artifact_id": "6ef625881a691eae",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/manifest.json",
+    "role": "integrity manifest",
+    "sha256": "fdc496ed131942d93cabe5f21f64a5f6b15da29a4b76cfd28037949fd4162194"
+  },
+  {
+    "artifact_id": "e894535847147a3f",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/normalized-results.jsonl",
+    "role": "source artifact",
+    "sha256": "a101c481926abc9a1d7522b618ac82995c985b10818dfc7f8c05f31bc2124c49"
+  },
+  {
+    "artifact_id": "2969d3fa26565509",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/normalizer-spec.json",
+    "role": "source artifact",
+    "sha256": "03a75890e4caf3f8d28952d6a99548e7960cce11d3bf7929f8a06f6d8870a3e3"
+  },
+  {
+    "artifact_id": "b5360cdd982fbc66",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/preanalysis-plan.json",
+    "role": "source artifact",
+    "sha256": "11a0ba1ed41d8a669eb724b26455894a43b3b6cc7e783261a19d0ba2749db9f0"
+  },
+  {
+    "artifact_id": "42f5e60ee9fae601",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/raw-detector-outputs.jsonl",
+    "role": "source artifact",
+    "sha256": "ba39a42cba850c7f9bf6ce58f5778777b5f8dced133fa1ebbf0f682a6830c864"
+  },
+  {
+    "artifact_id": "30f7b8e2372b3787",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/reports/authorization-outcomes.json",
+    "role": "sealed report",
+    "sha256": "714ed784fabb8554392845cf8c79e85058ef8b133aa6901f0b5b568e89eeb77d"
+  },
+  {
+    "artifact_id": "8600dab9a669c27a",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/reports/byte-stability-report.json",
+    "role": "sealed report",
+    "sha256": "43a91a3a201c9561af06a29cdb3e3f7cd580a1976d42dd5adfcbe24cc57e7085"
+  },
+  {
+    "artifact_id": "e0d6842821f8b9f6",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/reports/gates.json",
+    "role": "sealed report",
+    "sha256": "b505408c1e17ca65f7993c8e63c901006bae4873411abac1f56fdfd8131959f5"
+  },
+  {
+    "artifact_id": "114d406267ab00c5",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/reports/pipeline-coverage.json",
+    "role": "sealed report",
+    "sha256": "8c07df67f47f08b82e63877eff5157d64195de635dc278a0a3e59cc28c87c3fa"
+  },
+  {
+    "artifact_id": "e986045527f805f7",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/reproduce-command.txt",
+    "role": "source artifact",
+    "sha256": "d2b1ff7a32be7a032d550372378efac2c2e8de1b5ec8aac90e5bb347fa057568"
+  },
+  {
+    "artifact_id": "947145d128bb2d56",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/source-manifest.json",
+    "role": "integrity manifest",
+    "sha256": "e8f85f876660e32a3bc8268a10701650efaffc8dfcbfb2849031fb09ce9024f5"
+  },
+  {
+    "artifact_id": "858a1b7ab0ea23b8",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/yaml",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/study-plan.yaml",
+    "role": "source artifact",
+    "sha256": "5609f03c5532249662fa15b4351b3b6ec932490f21d8204f09db066da28a1e02"
+  },
+  {
+    "artifact_id": "23593df5e7a699ef",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/tcx-candidates.jsonl",
+    "role": "source artifact",
+    "sha256": "2a2e43ddfa9ee94716c66f74cf8a037f0991611fb2cb04185c2d744809f4b010"
+  },
+  {
+    "artifact_id": "07679c118ebb1117",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/independent-warning-admission-v3-full-population/verify-command.txt",
+    "role": "source artifact",
+    "sha256": "1fcb31baba6118f3c6366ee71da99eff2a64a6119bb59102430eee400daf4f06"
+  },
+  {
     "artifact_id": "fbfeed6770eb1852",
     "contains_identity_risk": false,
     "contains_secret_risk": false,
@@ -66568,6 +69043,396 @@
     "relative_path": "artifacts/minimality-v0.5-validation/frozen-v0.6-profile-manifests.json",
     "role": "integrity manifest",
     "sha256": "3a84843e85a7e90055d0aaf10403d374939722067417d0769bc614b1d8666115"
+  },
+  {
+    "artifact_id": "839c2e2578d09938",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/artifact-root-digest.json",
+    "role": "integrity manifest",
+    "sha256": "0bdce389e46fd81dab3a98d2bf12378ca8685769666d3ae528ba208bbfb3c49a"
+  },
+  {
+    "artifact_id": "d05cf909ba423e32",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/byte-stability-report.json",
+    "role": "source artifact",
+    "sha256": "38928cf69496865372398d7737e5502ed1210a2601c019214c71062c5b6a7874"
+  },
+  {
+    "artifact_id": "2e097f98d46efec4",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/canonical-tcx-example.json",
+    "role": "source artifact",
+    "sha256": "30a59dab1738dae7d11ad26ae07cd67e320f397a273c32d20398561a6d62e588"
+  },
+  {
+    "artifact_id": "513ce81f8709c0fd",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/claim-ledger.json",
+    "role": "source artifact",
+    "sha256": "e405f2ec283ebda09c90bb09531a413e776706085eab447753da42a357e36846"
+  },
+  {
+    "artifact_id": "9e2a2deb4b4510db",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/correlation-results.csv",
+    "role": "source artifact",
+    "sha256": "bb746b24ef3605fb1079ebe8e674d8251ae9514dfc3c31228f3788b1d313105b"
+  },
+  {
+    "artifact_id": "d4a41a3f28e2f652",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/decision-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "17fd86166f0e12b2e59dc7c87b38092add380eea56d5909f01d1b5600e4badab"
+  },
+  {
+    "artifact_id": "62a1b422e588160a",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/environment.json",
+    "role": "source artifact",
+    "sha256": "92d30d3747ddb078617dc15bc7e63f1ae6f9797d2ea55bf4d353a1359e5b6be7"
+  },
+  {
+    "artifact_id": "fc29eec26f63d755",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/episode-matrix.csv",
+    "role": "source artifact",
+    "sha256": "f4980960331ed723f0002ee4a26131fef0f309a6f486b339357d01db80c3383f"
+  },
+  {
+    "artifact_id": "6787e8dceebc9567",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/exclusion-ledger.json",
+    "role": "source artifact",
+    "sha256": "347a1b79d7313595485e444899f8b6d300246c266ae327b57a54dfa6edfb8681"
+  },
+  {
+    "artifact_id": "426225acce8b307d",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/expected-results.json",
+    "role": "source artifact",
+    "sha256": "84e72b307872368e1b77e8c41aafa9fa8b450c47d15e4753b79a1d52f4554c21"
+  },
+  {
+    "artifact_id": "86f3c7462907c72a",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/field-table.json",
+    "role": "source artifact",
+    "sha256": "8a16d09b6ef6799859b45056aef01b283731418f049b24870ce1c67e9c5f8ea6"
+  },
+  {
+    "artifact_id": "8f4e331d34d08d0c",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "text/csv",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/hostile-peer-results.csv",
+    "role": "source artifact",
+    "sha256": "c171ac0268b04f9714699d6f6b5140e1b73c929f4335db4e8c2bd39b723c820f"
+  },
+  {
+    "artifact_id": "23fc5457f094c82b",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/manifest.json",
+    "role": "integrity manifest",
+    "sha256": "57d24e688b98e661f4d2b5991dada2d372a651bad56ab8e2a1c6260cd3f9c152"
+  },
+  {
+    "artifact_id": "d2c5d21b5d83d030",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/normalized-results.jsonl",
+    "role": "source artifact",
+    "sha256": "9b0b1accd96181c05213c241a6e886d34f3a99b9561e509fccab544edc472afc"
+  },
+  {
+    "artifact_id": "7c65a3c74633fbe5",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/policy-definitions.json",
+    "role": "source artifact",
+    "sha256": "b5f52d13419ec34134e5f3312e13444949ecdde248b6b54b83d5268f1cead7ca"
+  },
+  {
+    "artifact_id": "358d7afa112a3e00",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/property-test-report.json",
+    "role": "source artifact",
+    "sha256": "bbc472a2e68095a8720cb51538131c7822f6cfe88efa91e4d4c763893144cd2d"
+  },
+  {
+    "artifact_id": "3179fd4a742902db",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/protocol-state-machine.dot",
+    "role": "source artifact",
+    "sha256": "ac29cd9da7ef4f2e05b701124072892f36f7daac97fdcaf1915466bc58cd9e28"
+  },
+  {
+    "artifact_id": "ae4c915aaf13005d",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "image/svg+xml",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/protocol-state-machine.svg",
+    "role": "source artifact",
+    "sha256": "6a16a910d7a74aac45fd04386fd7d1a6205babc068a38235249359f86c5b4437"
+  },
+  {
+    "artifact_id": "c71c6f3198eeb2bd",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/reports/condition-summary.json",
+    "role": "sealed report",
+    "sha256": "6ae3723a017f6a239b5b6452c6285fbc4cf44b9cb642ea141bee7a219416db64"
+  },
+  {
+    "artifact_id": "3ce7b7753773417a",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/reports/gates.json",
+    "role": "sealed report",
+    "sha256": "d4b42419215cc89310ecf0e9bc580b9520188dc58d0453117cfd04503350979c"
+  },
+  {
+    "artifact_id": "3d69c157de2addb7",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/reports/matching-harmful-summary.json",
+    "role": "sealed report",
+    "sha256": "18de2eca61b2b5400bd9186004c8606dec0152e6739173cf498cbeb342ea942e"
+  },
+  {
+    "artifact_id": "e07c43532aedc7f5",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/reproduce-command.txt",
+    "role": "source artifact",
+    "sha256": "9d43c5ab065cc71f64fd77dde227df5054f01412d7afdec6f0c15c078de92a9e"
+  },
+  {
+    "artifact_id": "cc3242858d035893",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/json",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/source-roots.json",
+    "role": "source artifact",
+    "sha256": "3b32b926e6c6e754232cd08f06963a542ac48912fd5bacc9b6ebf78b333093cf"
+  },
+  {
+    "artifact_id": "06712b13093f0b9d",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/yaml",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/study-plan.yaml",
+    "role": "source artifact",
+    "sha256": "3622d47811def38b968c85dd3602b864acc1f09ff1b718c96fb6da57892511c2"
+  },
+  {
+    "artifact_id": "ab75d682dbdf7ad4",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/octet-stream",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/verify-command.txt",
+    "role": "source artifact",
+    "sha256": "9b9ca0d2fed4d1f0155946aa19ecda13dc1076ca295e6906f1eb57e84fb6a3fb"
+  },
+  {
+    "artifact_id": "0a4a4a98812d93c6",
+    "contains_identity_risk": false,
+    "contains_secret_risk": false,
+    "generated_or_source": "source",
+    "immutable": true,
+    "media_type": "application/x-ndjson",
+    "paper_relevance": [
+      "provenance",
+      "reproducibility"
+    ],
+    "relative_path": "artifacts/tcx-validation-value-v2/warning-traces.jsonl",
+    "role": "source artifact",
+    "sha256": "fb494ec0e4f3d41574f500136261a15b2f2efefa0f8f0faf5f147e308a6ab9e1"
   },
   {
     "artifact_id": "f524752d3dc71611",

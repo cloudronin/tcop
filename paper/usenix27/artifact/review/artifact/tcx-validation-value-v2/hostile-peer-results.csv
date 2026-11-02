@@ -1,0 +1,13 @@
+benign_actions_constrained,cross_session_or_class_wide_collateral,harmful_actions_blocked,policy,recovery_time,synthetic_warning_rate,unnecessary_restriction_duration,warnings_accepted,warnings_deduplicated,warnings_monitored,warnings_rate_limited,warnings_received
+1,False,0,current_containment_first,1,1,1,1,0,0,0,1
+1,False,0,idempotent,1,1,1,1,0,0,0,1
+1,False,0,quota_monitor_fallback,1,1,1,1,0,0,0,1
+3,False,0,current_containment_first,1,3,3,3,0,0,0,3
+1,False,0,idempotent,1,3,1,1,2,0,0,3
+3,False,0,quota_monitor_fallback,1,3,3,3,0,0,0,3
+6,False,0,current_containment_first,1,6,6,6,0,0,0,6
+1,False,0,idempotent,1,6,1,1,5,0,0,6
+3,False,0,quota_monitor_fallback,1,6,3,3,0,3,3,6
+12,False,0,current_containment_first,1,12,12,12,0,0,0,12
+1,False,0,idempotent,1,12,1,1,11,0,0,12
+3,False,0,quota_monitor_fallback,1,12,3,3,0,9,9,12

@@ -1,0 +1,245 @@
+{
+  "displayed_repository_paths": [
+    "artifacts/tcx-validation-value-v2/property-test-report.json",
+    "docs/KNOWN_ISSUES.md",
+    "spec/external-warning-adaptive-crosshost-amendment-003.md",
+    "spec/external-warning-adaptive-crosshost-amendment-004.md",
+    "spec/external-warning-adaptive-crosshost-amendment-005.md"
+  ],
+  "findings": [],
+  "head": "f9bca3e6854c946c5232b6e0bef9a52ad2605d30",
+  "pass": true,
+  "tag": "preprint-v1",
+  "urls": [
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://datatracker.ietf.org/doc/draft-fane-opena2a-aap/02/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/00/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://datatracker.ietf.org/doc/draft-liu-ai-agent-authorization-integration/00/",
+      "valid": true
+    },
+    {
+      "object_type": "blob",
+      "pinned_to_tag": true,
+      "ref": "preprint-v1",
+      "repository": true,
+      "repository_path": "artifacts/tcx-validation-value-v2/property-test-report.json",
+      "tracked_at_head": true,
+      "url": "https://github.com/cloudronin/tcop/blob/preprint-v1/artifacts/tcx-validation-value-v2/property-test-report.json",
+      "valid": true
+    },
+    {
+      "object_type": "blob",
+      "pinned_to_tag": true,
+      "ref": "preprint-v1",
+      "repository": true,
+      "repository_path": "docs/KNOWN_ISSUES.md",
+      "tracked_at_head": true,
+      "url": "https://github.com/cloudronin/tcop/blob/preprint-v1/docs/KNOWN_ISSUES.md",
+      "valid": true
+    },
+    {
+      "object_type": "blob",
+      "pinned_to_tag": true,
+      "ref": "preprint-v1",
+      "repository": true,
+      "repository_path": "spec/external-warning-adaptive-crosshost-amendment-003.md",
+      "tracked_at_head": true,
+      "url": "https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-003.md",
+      "valid": true
+    },
+    {
+      "object_type": "blob",
+      "pinned_to_tag": true,
+      "ref": "preprint-v1",
+      "repository": true,
+      "repository_path": "spec/external-warning-adaptive-crosshost-amendment-004.md",
+      "tracked_at_head": true,
+      "url": "https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-004.md",
+      "valid": true
+    },
+    {
+      "object_type": "blob",
+      "pinned_to_tag": true,
+      "ref": "preprint-v1",
+      "repository": true,
+      "repository_path": "spec/external-warning-adaptive-crosshost-amendment-005.md",
+      "tracked_at_head": true,
+      "url": "https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-005.md",
+      "valid": true
+    },
+    {
+      "object_type": "tree",
+      "pinned_to_tag": true,
+      "ref": "preprint-v1",
+      "repository": true,
+      "repository_path": "",
+      "tracked_at_head": true,
+      "url": "https://github.com/cloudronin/tcop/tree/preprint-v1",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://openid.net/specs/openid-caep-1_0-final.html",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://openid.net/specs/openid-risc-1_0-final.html",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://www.pm.gov.au/media/press-conference-new-york",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://www.rfc-editor.org/rfc/rfc8417",
+      "valid": true
+    }
+  ]
+}

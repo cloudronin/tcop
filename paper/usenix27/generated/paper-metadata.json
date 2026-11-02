@@ -10,5 +10,5 @@
     "note": "A USENIX Security 2027-specific kit was not published when this draft was built. The current official template is copied unchanged and checksummed.",
     "official_source": "https://www.usenix.org/conferences/author-resources/paper-templates"
   },
-  "title": "Receiver-Sovereign Federated Early Warning for Cross-Domain Agent Tool Use"
+  "title": "TCOP: An Agentic Early Warning and Response Protocol"
 }

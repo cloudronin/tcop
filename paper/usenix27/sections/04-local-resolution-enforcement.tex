@@ -1,5 +1,19 @@
 \section{Receiver-Local Resolution and Enforcement}
 
-The receiving pipeline is context validation, local correlation, receiver-local strategy selection, receiver-local policy evaluation, receiver-local decision creation, and gateway enforcement. A gateway patch is intentionally generic: it calls a local authorization-evaluator interface and does not embed TCOP resolver or strategy logic. Authorization caching is disabled for correctness and counterfactual replay; a separately predeclared performance selection evaluates caching without changing the correctness path.
+The receiver validates evidence, correlates local state, selects a strategy, evaluates policy, creates a decision, and authorizes the pending action. Accepted evidence does not itself select enforcement.
 
-The evaluated authority invariant is strong: every gateway block must cite a Domain-B-local policy and decision, and remotely supplied TCX fields must never be interpreted as an enforcement action. The physical evaluation contains \PhysicalArms{} gateway arms and records \RemoteEnforcementSuccesses{} remote enforcement successes. Its authorization audit and all physical blocks satisfy the Domain-B provenance requirement.
+\subsection{Local decision path}
+
+Records link the receipt, evidence, policy, decision, and gateway outcome. The gateway calls a local evaluator without embedding TCX strategy logic, following the policy-decision/enforcement split~\cite{nistZta}. The reference Docker MCP Gateway boundary supplements MCP's client-access authorization~\cite{mcpAuthorization}.
+
+\subsection{Validation and failure handling}
+
+The \ValidatorMutationCases{} executed mutations create no restriction for signature, issuer, version, receipt, expiry, or replay faults. Accepted remote \texttt{action} and \texttt{enforcement} fields are ignored. Table~\ref{tab:protocol-assurance} separates these tests from formula-computed correlation and hostile-peer illustrations.
+
+Correctness and counterfactual replay disable caching so each authorization checks current local state. The separate fixed-TTL performance selection does not change that path.
+
+Receiver outage and authorization timeout resolve through Domain B's policy. Gateway-restart recomputation remains an untested design requirement; the executed stale-decision control checks recomputation.
+
+\subsection{Authority evidence}
+
+The \PhysicalArms{} single-environment reference-path arms exercise signed federation, validation, evaluation, and gateway composition. Every gateway block cites Domain-B-local policy and decision provenance. This is not an adversarial remote-enforcement test; the executed action-metadata mutation supplies that misuse control.

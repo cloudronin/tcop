@@ -1,0 +1,50 @@
+{
+  "artifact_root": "artifacts/tcx-validation-value-v2",
+  "concurrency_levels": [
+    1,
+    2,
+    8
+  ],
+  "conditions": [
+    "C0",
+    "C1-allow",
+    "C1-class",
+    "C2",
+    "C3"
+  ],
+  "determinism": "two_clean_reruns_byte_identical_normalized_results",
+  "hostile_warning_rates": [
+    1,
+    3,
+    6,
+    12
+  ],
+  "mixed_action_episodes": 12,
+  "seed": 42,
+  "source_roots": {
+    "comparator_v1": {
+      "digest": "2a7c267f69aa736122de7366359983e838ba29316e142957c7e8049d63cbf421",
+      "path": "artifacts/context-value-comparator-v1"
+    },
+    "federated_evidence": {
+      "digest": "0ab19a9878f3853ab20558c9a4a94c697c0e30e17a97edf0f20756f0c5eb8e99",
+      "path": "artifacts/federated-domain-v0.6-evidence"
+    },
+    "live_replay": {
+      "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
+      "path": "artifacts/v0.6-agent-validation-live-origin-certified"
+    }
+  },
+  "study": "TCOP Validation-Value Study v2",
+  "study_kind": "tcx_validation_value_v2",
+  "warning_cases": [
+    "valid_matching",
+    "wrong_subject",
+    "wrong_resource",
+    "wrong_receipt",
+    "expired",
+    "replay",
+    "scope_smuggling",
+    "matching_plus_benign"
+  ]
+}

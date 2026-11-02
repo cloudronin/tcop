@@ -1,4 +1,4 @@
-# TCOP: Receiver-Bound Runtime Evidence for Cross-Domain Agent Authorization
+# TCOP: An Agentic Early Warning and Response Protocol
 
 TCOP is a protocol for carrying signed, scoped, time-bounded runtime evidence
 from an observing domain to the local authorization boundary of a receiving
@@ -8,8 +8,7 @@ resource namespace, capability, and scope against its own state. The receiver
 then creates the authorization decision under its own policy.
 
 This repository is the reference implementation and sealed evidence package
-for the final USENIX Security 2027 paper, *TCOP: Receiver-Bound Runtime
-Evidence for Cross-Domain Agent Authorization*. It is organized so reviewers
+for the final USENIX Security 2027 paper, *TCOP: An Agentic Early Warning and Response Protocol*. It is organized so reviewers
 can inspect the evidence-to-authorization boundary, reproduce the
 credential-free results, and distinguish protocol behavior from the receiver
 strategies evaluated on top of it.
@@ -39,17 +38,20 @@ remote enforcement instruction.
 
 | Evidence | Result | What it supports |
 | --- | --- | --- |
-| Matched synthetic containment | Across 54 strict input-equivalent pairs, the containment-first receiver improved 30, left 24 unchanged, and worsened none. Harmful calls fell from 39 to 3, preventing 36 of 39 baseline calls. | A causal comparison under matched frozen policy and synthetic scenarios, not deployment effectiveness. |
-| TCX Validation-Value v2 | Across 12 mixed actions, Exact Binding (C2) blocks 3 harmful actions and constrains none of 12 benign actions. The broad Arrival Guard (C1-class) blocks 7 harmful actions and constrains 7 benign actions; both block the 3 accepted binding-matched harmful actions. | Receiver-side semantic binding, validation, hostile-peer handling, and correlation behavior. |
+| Matched synthetic containment | Across 54 strict input-equivalent pairs, the containment-first receiver improved 30, left 24 unchanged, and worsened none. Harmful calls fell from 39 to 3, with 36 harmful actions changing from forwarded without context to blocked with matched context under strict replay. | A causal comparison under matched frozen policy and synthetic scenarios, not deployment effectiveness. |
+| TCX Validation-Value v2 | Across 12 mixed actions, Exact Binding (C2) blocks 3 harmful actions and constrains none of 12 benign actions. The broad Arrival Guard (C1-class) blocks 7 harmful actions and constrains 7 benign actions; both block the 3 accepted binding-matched harmful actions. | Receiver-side semantic binding and executed signed-envelope validation. Hostile-peer burst and correlation tables are computed from declared formulas, not measured evidence. |
 | Post-denial substitution replay | Exact Binding forwards all 15 eligible substitutions. The evaluated receiver-local Campaign Correlation strategy blocks those substitutions and forwards the tested outside-campaign same-risk benign actions. | A bounded strategy tradeoff, not mandatory TCOP behavior or a general escalation policy. |
 | Campaign Correlation frontier (C2E artifact identifier) | Across the predeclared 150-episode population, Campaign Correlation blocks campaign-linked harmful substitutions without restricting the tested outside-campaign benign actions. | Deterministic strategy selectivity under declared receiver-local relations. |
 | Full external-warning ledger | The sealed 168-case population contains 72 attack-bearing and 96 benign source cases: 25 receiver-actionable exact bindings, 47 attack-bearing no-warning cases, and 96 benign no-warning cases. C1, C2, and Campaign Correlation block the 25 exact bindings; Standing Guard (C3) blocks all 72 attack-bearing cases and constrains all 96 benign cases. | Conditional receiver authorization outcomes, not detector quality, warning prevalence, or deployment rates. |
 
-The protocol controls separately show that invalid signatures, wrong receipts,
-expired or replayed contexts, unauthorized peers, and action-like remote
-metadata create no receiver restriction. The single-environment reference path
-also records Domain-B-local policy and decision provenance for every gateway
-block.
+Ten executed live controls passed. Executed signed-envelope mutations separately
+show unknown-peer rejection (`issuer`: `identity_unknown`, no restriction) and
+ignored remote `action` and `enforcement` fields (`action_semantic`). Disallowed
+import type, no remote enforcement, gateway restart, and session termination
+before arrival were recorded as passed without execution and remain untested
+design properties. The single-environment reference path also records
+Domain-B-local policy and decision provenance for every gateway block. See
+[Known issues](docs/KNOWN_ISSUES.md) for the sealed-record correction.
 
 These counts have different units of analysis, including strict pairs,
 validation episodes, replay treatments, and gateway calls. They are reported

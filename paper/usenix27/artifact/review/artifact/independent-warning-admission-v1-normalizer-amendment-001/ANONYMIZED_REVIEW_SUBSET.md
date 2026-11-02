@@ -1,0 +1,1 @@
+This successor subset preserves the sealed config-derived normalizer, plan, root digest, result manifest, policy frontier, and claim ledger. The raw public benchmark entries, raw detector outputs, and machine-local acquisition metadata remain in the separately sealed root but are omitted here because they contain unredacted corpus content or identifying collection provenance.

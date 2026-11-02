@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="410.58pt" height="144.684pt" viewBox="0 0 410.58 144.684" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="423.191341pt" height="144.684pt" viewBox="0 0 423.191341 144.684" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-08-01T13:42:58.299424</dc:date>
+    <dc:date>2026-11-01T21:06:58.206869</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -22,8 +22,8 @@
  <g id="figure_1">
   <g id="patch_1">
    <path d="M 0 144.684 
-L 410.58 144.684 
-L 410.58 0 
+L 423.191341 144.684 
+L 423.191341 0 
 L 0 0 
 z
 " style="fill: #ffffff"/>
@@ -40,7 +40,7 @@ Q 17.82922 35.555929 17.82922 37.855059
 L 17.82922 80.005765 
 Q 17.82922 82.304894 19.278659 82.304894 
 z
-" clip-path="url(#p766aa0b4ce)" style="fill: #d9ead3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#pc391e54a85)" style="fill: #d9ead3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 84.503415 82.304894 
@@ -53,7 +53,7 @@ Q 83.053976 35.555929 83.053976 37.855059
 L 83.053976 80.005765 
 Q 83.053976 82.304894 84.503415 82.304894 
 z
-" clip-path="url(#p766aa0b4ce)" style="fill: #d9ead3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#pc391e54a85)" style="fill: #d9ead3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 149.728171 82.304894 
@@ -66,7 +66,7 @@ Q 148.278732 35.555929 148.278732 37.855059
 L 148.278732 80.005765 
 Q 148.278732 82.304894 149.728171 82.304894 
 z
-" clip-path="url(#p766aa0b4ce)" style="fill: #f4cccc; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#pc391e54a85)" style="fill: #f4cccc; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 214.952927 82.304894 
@@ -79,7 +79,7 @@ Q 213.503488 35.555929 213.503488 37.855059
 L 213.503488 80.005765 
 Q 213.503488 82.304894 214.952927 82.304894 
 z
-" clip-path="url(#p766aa0b4ce)" style="fill: #fff2cc; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#pc391e54a85)" style="fill: #fff2cc; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 280.177683 82.304894 
@@ -92,7 +92,7 @@ Q 278.728244 35.555929 278.728244 37.855059
 L 278.728244 80.005765 
 Q 278.728244 82.304894 280.177683 82.304894 
 z
-" clip-path="url(#p766aa0b4ce)" style="fill: #fff2cc; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#pc391e54a85)" style="fill: #fff2cc; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 345.402439 82.304894 
@@ -105,31 +105,31 @@ Q 343.953 35.555929 343.953 37.855059
 L 343.953 80.005765 
 Q 343.953 82.304894 345.402439 82.304894 
 z
-" clip-path="url(#p766aa0b4ce)" style="fill: #cfe2f3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#pc391e54a85)" style="fill: #cfe2f3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(21.896779 56.999531)">Deterministic</text>
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(31.828498 64.614043)">0ab19a</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(21.896779 56.616154)">Deterministic</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(31.828498 64.778013)">0ab19a</text>
    </g>
    <g id="text_2">
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(83.532941 56.999531)">Scripted parent</text>
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(98.443004 64.614043)">cfc539</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(83.531348 56.616154)">Scripted parent</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(98.443004 64.778013)">cfc539</text>
    </g>
    <g id="text_3">
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(149.348447 56.999531)">Provider-failure</text>
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(152.517885 64.614043)">predecessors</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(149.345791 56.616154)">Provider-failure</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(152.516291 64.778013)">predecessors</text>
    </g>
    <g id="text_4">
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(226.111954 56.999531)">001-003</text>
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(217.449391 64.614043)">trace capture</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(226.111954 56.616154)">001-003</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(217.447797 64.777482)">trace capture</text>
    </g>
    <g id="text_5">
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(291.33671 56.999531)">004-005</text>
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(285.299053 64.614043)">certification</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(291.33671 56.615888)">004-005</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(285.299053 64.777748)">certification</text>
    </g>
    <g id="text_6">
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(340.448122 56.999531)">006 physical path</text>
-    <text style="font: 6.8px 'DejaVu Sans'" transform="translate(356.591216 64.614043)">546f354</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(325.543903 56.616154)">006 reference deployment</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(356.591216 64.778013)">546f354</text>
    </g>
    <g id="patch_8">
     <path d="M 72.008373 58.930412 
@@ -177,12 +177,12 @@ L 339.309903 60.530412
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
    </g>
    <g id="text_7">
-    <text style="font: 7px 'DejaVu Sans'; text-anchor: middle" x="210.121463" y="118.324588" transform="rotate(-0 210.121463 118.324588)">All amendments retain source traces and document predecessor roots.</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle" x="210.121463" y="118.324588" transform="rotate(-0 210.121463 118.324588)">All amendments retain source traces and document predecessor roots.</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p766aa0b4ce">
+  <clipPath id="pc391e54a85">
    <rect x="7.2" y="7.2" width="396.18" height="130.284"/>
   </clipPath>
  </defs>

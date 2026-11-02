@@ -1,7 +1,8 @@
 {
-  "body_pages": 5,
+  "body_pages": 13,
   "checks": {
     "anonymity": true,
+    "bibliography": true,
     "claims": true,
     "latex": true,
     "numbers": true,
@@ -10,5 +11,5 @@
   },
   "missing": [],
   "paper_check": "pass",
-  "total_pages": 8
+  "total_pages": 17
 }

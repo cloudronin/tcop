@@ -1,0 +1,10 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Full external-warning pipeline coverage. All \ExternalWarningFullSourceCases{} cases in the sealed detector-output ledger are evaluated; a warning is not a detector-quality estimate.}
+\begin{tabular}{@{}p{0.62\columnwidth}r@{}}\toprule
+Stage or source category & Cases \\ \midrule
+Attack-bearing source cases & \ExternalWarningFullAttackCases \\
+\quad Detector warning $\rightarrow$ normalized TCX $\rightarrow$ admitted exact binding & \ExternalWarningFullWarnings/\ExternalWarningFullNormalized/\ExternalWarningFullAdmitted \\
+\quad Detector no-warning $\rightarrow$ no actionable TCOP evidence & \ExternalWarningFullAttackNoWarning \\
+Benign source cases, all detector no-warning & \ExternalWarningFullBenignCases \\
+Total no actionable evidence & \ExternalWarningFullNoActionable \\ \bottomrule
+\end{tabular}\label{tab:independent-warning-full-pipeline}\end{table}

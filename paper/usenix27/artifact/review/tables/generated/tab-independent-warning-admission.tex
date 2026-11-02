@@ -1,0 +1,10 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Authorization outcomes after the same normalized and correlated exact binding. No benign action is present in this case-study slice.}
+\begin{tabular}{@{}p{0.42\columnwidth}cc@{}}\toprule
+Policy & \shortstack{Matched harmful\\action blocked} & \shortstack{Benign actions\\constrained} \\ \midrule
+Local Only (C0) & \IndependentWarningCZeroBlocked/\IndependentWarningAdmitted & 0/0 \\
+Arrival Guard (C1) & \IndependentWarningCOneBlocked/\IndependentWarningAdmitted & 0/0 \\
+Exact Binding (C2) & \IndependentWarningCTwoBlocked/\IndependentWarningAdmitted & 0/0 \\
+Campaign Correlation (C2E) & \IndependentWarningCTwoEBlocked/\IndependentWarningAdmitted & 0/0 \\
+Standing Guard (C3) & \IndependentWarningCThreeBlocked/\IndependentWarningAdmitted & 0/0 \\ \bottomrule
+\end{tabular}\label{tab:independent-warning}\end{table}

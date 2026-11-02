@@ -1,0 +1,14 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Campaign Correlation frontier input composition (artifact identifier C2E). The fixed population contains five traces in each principal scenario; session lineage is the only strong relation exercised in this frontier.}
+\begin{tabular}{@{}p{0.52\columnwidth}rr@{}}\toprule
+Fixed trace class & Harmful & Benign \\ \midrule
+Exact-bound action & \FrontierExactBindingHarmful & 0 \\
+Non-exact action with receiver session lineage & \FrontierLineageHarmful & 0 \\
+Predeclared safe fallback after relation & 0 & \FrontierSafeFallbackBenign \\
+Same-risk action outside campaign & 0 & \FrontierOutsideCampaignBenign \\
+Unrelated subject, session, or resource & 0 & \FrontierUnrelatedBenign \\
+Invalid relation & 0 & \FrontierInvalidRelationControls \\
+Expired relation & 0 & \FrontierExpiredRelationControls \\
+Replayed relation & 0 & \FrontierReplayedRelationControls \\
+Sender-suggested-only relation & 0 & \FrontierSenderSuggestedRelationControls \\ \bottomrule
+\end{tabular}\label{tab:c2e-frontier-composition}\end{table}

@@ -6,11 +6,11 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-08-01T13:42:57.216756</dc:date>
+    <dc:date>2026-11-01T21:06:57.276387</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -40,7 +40,7 @@ Q 13.803 47.884431 13.803 49.419692
 L 13.803 83.963077 
 Q 13.803 85.498338 14.536667 85.498338 
 z
-" clip-path="url(#pcd71193566)" style="fill: #e8eef6; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#p5fdc9b62af)" style="fill: #e8eef6; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 69.561667 85.498338 
@@ -53,7 +53,7 @@ Q 68.828 47.884431 68.828 49.419692
 L 68.828 83.963077 
 Q 68.828 85.498338 69.561667 85.498338 
 z
-" clip-path="url(#pcd71193566)" style="fill: #e8eef6; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#p5fdc9b62af)" style="fill: #e8eef6; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 124.586667 85.498338 
@@ -66,7 +66,7 @@ Q 123.853 47.884431 123.853 49.419692
 L 123.853 83.963077 
 Q 123.853 85.498338 124.586667 85.498338 
 z
-" clip-path="url(#pcd71193566)" style="fill: #d9ead3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#p5fdc9b62af)" style="fill: #d9ead3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 186.948333 85.498338 
@@ -79,7 +79,7 @@ Q 186.214667 47.884431 186.214667 49.419692
 L 186.214667 83.963077 
 Q 186.214667 85.498338 186.948333 85.498338 
 z
-" clip-path="url(#pcd71193566)" style="fill: #d9ead3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#p5fdc9b62af)" style="fill: #d9ead3; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 241.973333 85.498338 
@@ -92,7 +92,7 @@ Q 241.239667 47.884431 241.239667 49.419692
 L 241.239667 83.963077 
 Q 241.239667 85.498338 241.973333 85.498338 
 z
-" clip-path="url(#pcd71193566)" style="fill: #e8eef6; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#p5fdc9b62af)" style="fill: #e8eef6; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 296.998333 85.498338 
@@ -105,7 +105,7 @@ Q 296.264667 47.884431 296.264667 49.419692
 L 296.264667 83.963077 
 Q 296.264667 85.498338 296.998333 85.498338 
 z
-" clip-path="url(#pcd71193566)" style="fill: #fce5cd; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#p5fdc9b62af)" style="fill: #fce5cd; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
     <path d="M 352.023333 85.498338 
@@ -118,39 +118,39 @@ Q 351.289667 47.884431 351.289667 49.419692
 L 351.289667 83.963077 
 Q 351.289667 85.498338 352.023333 85.498338 
 z
-" clip-path="url(#pcd71193566)" style="fill: #fce5cd; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#p5fdc9b62af)" style="fill: #fce5cd; stroke: #243746; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
-    <text style="font: 700 8px 'DejaVu Sans'; text-anchor: middle" x="40.215" y="26.390769" transform="rotate(-0 40.215 26.390769)">Domain A</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="40.215" y="26.390769" transform="rotate(-0 40.215 26.390769)">Domain A</text>
    </g>
    <g id="text_2">
-    <text style="font: 700 8px 'DejaVu Sans'; text-anchor: middle" x="227.3" y="26.390769" transform="rotate(-0 227.3 26.390769)">Domain B</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="227.3" y="26.390769" transform="rotate(-0 227.3 26.390769)">Domain B</text>
    </g>
    <g id="text_3">
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(23.89526 64.703713)">Agent /</text>
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(20.59651 72.542181)">workload</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(23.89526 64.308787)">Agent /</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(20.59651 72.710701)">workload</text>
    </g>
    <g id="text_4">
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(82.499557 64.703713)">Local</text>
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(76.128464 72.542181)">observer</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(82.499557 64.30906)">Local</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(76.128464 72.710974)">observer</text>
    </g>
    <g id="text_5">
-    <text style="font: 7px 'DejaVu Sans'; text-anchor: middle" x="146.596667" y="68.622947" transform="rotate(-0 146.596667 68.622947)">tcopd A</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle" x="146.596667" y="68.510017" transform="rotate(-0 146.596667 68.510017)">tcopd A</text>
    </g>
    <g id="text_6">
-    <text style="font: 7px 'DejaVu Sans'; text-anchor: middle" x="208.958333" y="68.622947" transform="rotate(-0 208.958333 68.622947)">tcopd B</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle" x="208.958333" y="68.510017" transform="rotate(-0 208.958333 68.510017)">tcopd B</text>
    </g>
    <g id="text_7">
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(245.833099 64.703713)">Validate +</text>
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(248.383177 72.542181)">correlate</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(245.833646 64.30906)">Validate +</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(248.381536 72.710974)">correlate</text>
    </g>
    <g id="text_8">
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(301.145208 64.703713)">B policy +</text>
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(304.580677 72.542181)">decision</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(301.145208 64.30906)">B policy +</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(304.580677 72.710974)">decision</text>
    </g>
    <g id="text_9">
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(356.280677 64.703713)">Gateway /</text>
-    <text style="font: 7px 'DejaVu Sans'" transform="translate(359.276458 72.542181)">actuator</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(356.280677 64.30906)">Gateway /</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(359.276458 72.710428)">actuator</text>
    </g>
    <g id="patch_9">
     <path d="M 60.558309 66.307569 
@@ -180,7 +180,7 @@ L 180.855285 67.907569
 " style="fill: none; stroke: #243746; stroke-width: 0.8; stroke-linecap: round"/>
    </g>
    <g id="text_10">
-    <text style="font: 6.5px 'DejaVu Sans'; text-anchor: middle" x="177.7775" y="59.398892" transform="rotate(-0 177.7775 59.398892)">signed bounded context</text>
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="177.7775" y="59.398892" transform="rotate(-0 177.7775 59.398892)">signed bounded context</text>
    </g>
    <g id="patch_12">
     <path d="M 232.969975 66.307569 
@@ -210,19 +210,19 @@ L 345.928648 67.907569
 " style="fill: none; stroke: #243746; stroke-width: 0.8; stroke-linecap: round"/>
    </g>
    <g id="text_11">
-    <text style="font: 6.5px 'DejaVu Sans'; text-anchor: middle" x="346.520833" y="59.398892" transform="rotate(-0 346.520833 59.398892)">B-local decision</text>
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="346.520833" y="59.398892" transform="rotate(-0 346.520833 59.398892)">B-local decision</text>
    </g>
    <g id="text_12">
-    <text style="fill: #8a1c1c; font: 700 6.8px 'DejaVu Sans'; text-anchor: middle" x="117.25" y="140.000123" transform="rotate(-0 117.25 140.000123)">No cross-domain enforcement call</text>
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8a1c1c" x="117.25" y="140.000123" transform="rotate(-0 117.25 140.000123)">No cross-domain enforcement call</text>
    </g>
    <g id="text_13">
-    <text style="fill: #8a1c1c; font: 700 6.6px 'DejaVu Sans'" transform="translate(272.375635 132.558004)">Gateway consumes only</text>
-    <text style="fill: #8a1c1c; font: 700 6.6px 'DejaVu Sans'" transform="translate(252.270385 140.000123)">Domain-B-local policy and decision</text>
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'DejaVu Sans'; fill: #8a1c1c" transform="translate(272.374089 132.078318)">Gateway consumes only</text>
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'DejaVu Sans'; fill: #8a1c1c" transform="translate(252.270385 140.000123)">Domain-B-local policy and decision</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pcd71193566">
+  <clipPath id="p5fdc9b62af">
    <rect x="7.2" y="7.2" width="396.18" height="149.688"/>
   </clipPath>
  </defs>

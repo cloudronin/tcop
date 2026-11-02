@@ -1,7 +1,7 @@
 {
   "algorithm": "sha256-canonical-json",
   "artifact_digest_version": "tcop.artifact-root-digest/0.1",
-  "artifact_root_digest": "48ddbdc983a40685d6c603f66f6f108aafe405563980fd592616bc8e66952aa7",
+  "artifact_root_digest": "6f902dd7e8961710a698a0ba5f6a277d6437c89dbac0a17ba6fc774147a53a23",
   "file_count": 240,
   "files": {
     "central-audit/a3-fact-equivalence.json": "32673602118e6eb4df029b421906a150ab7e3ad62b6be21241cdc89137a94af7",
@@ -204,7 +204,7 @@
     "cohort/cohort-map.json": "f949953d6406e0fb5b318c516532b48b4a850d8001acc9a3f2da4637fb9ec80d",
     "cohort/cohort-membership.jsonl": "d88e33914b6a831cbbf71b628cfbaacb50553fdcd0ac6dfe71a3b5271d39125d",
     "cohort/cohort-overlap-report.json": "2acc1b43563044832706f1d9bc1e39907439ab790c688ff50926644c16159335",
-    "environment.json": "503ab7077e026afc343dea6b80b7ac851166100f370e0559a66182f601e0946f",
+    "environment.json": "32a9cfaa94cb7d68f41e97b1d2e0c913f52e5e1086e1e83a87eaa0a78e78a876",
     "findings/v0.6-missing-evidence-findings.md": "1ba654c260a5f140f03d2e445f48173aedb14c67b7ff69ef475d5804468508a7",
     "manifest.json": "966a5a050e057310521665543c7a10ec2752b447860e28fa3480fa57308dd10c",
     "pairs/input-equivalence-report.json": "0f82e074cd81cf19c9ff760fcd02654faef0cf5bf8eb8833113d1d03db5a5849",

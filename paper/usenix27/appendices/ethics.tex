@@ -1,5 +1,9 @@
 \section{Ethics Appendix}
 
-All evaluated tools and target systems are synthetic. No production credentials, real repositories, customer systems, datasets, or workloads were attacked. Prompts and tool calls are restricted to a test environment, and no autonomous production enforcement occurred. The credentialed model activity was bounded by synthetic tool interfaces. No human subjects were involved.
+All evaluated tools and target systems are synthetic. No production credentials, real repositories, customer systems, datasets, or workloads were attacked. Prompts and tool calls are restricted to a test environment, and no autonomous production enforcement occurred. The credentialed model activity was bounded by synthetic tool interfaces. No human subjects were involved, and the study does not collect or release personal data.
 
-Any public-incident discussion is a counterfactual motivation, not an attribution or empirical reconstruction. Release risk is reduced by synthetic examples and bounded configuration. Human authors remain responsible for all AI-assisted text, code, data interpretation, and citations.
+The work concerns defensive handling of potentially harmful tool calls. An executable gateway and replay environment could be misused if presented as a way to control another domain. The artifact reduces this risk through synthetic inputs, omitted target infrastructure and credentials, and a receiver-local authorization boundary. The evaluated protocol does not export a remote enforcement interface or a production attack path.
+
+False or malicious warnings are the principal ethical and operational risk. The paper reports the measured benign-workflow disruption caused by containment-first restriction. The formula-computed hostile-peer burst table supplies no measured evidence of overload behavior. A receiver decides whether to restrict, monitor, deduplicate, or rate-limit a warning. This cost and responsibility remain part of the design result.
+
+The public incident is a motivation for the cross-domain failure pattern, not an attribution or empirical reconstruction.

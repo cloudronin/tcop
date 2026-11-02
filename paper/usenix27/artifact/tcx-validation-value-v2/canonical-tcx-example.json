@@ -1,0 +1,13 @@
+{
+  "capability_class": "repository.write",
+  "expires_at": "2042-01-01T00:01:00Z",
+  "issued_at": "2042-01-01T00:00:00Z",
+  "issuer": "origin-monitor-redacted",
+  "observation_id": "synthetic-observation",
+  "protocol_version": "0.2",
+  "receipt_reference": "sha256:synthetic",
+  "resource_namespace": "synthetic-target",
+  "scope": "guarded-capability",
+  "signature": "ed25519:redacted",
+  "subject": "agent-redacted"
+}

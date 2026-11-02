@@ -1,3 +1,4 @@
+\PassOptionsToPackage{hyphens}{url}
 \documentclass[letterpaper,twocolumn,10pt]{article}
 \usepackage{template/usenix-2020-09}
 \usepackage{graphicx}
@@ -5,15 +6,23 @@
 \usepackage{multirow}
 \usepackage{array}
 \graphicspath{{figures/pdf/}}
-\hypersetup{pdftitle={Receiver-Sovereign Federated Early Warning for Cross-Domain Agent Tool Use},pdfauthor={}}
+\providecommand{\TCOPArtifactURL}{https://anonymous.4open.science/r/tcop-B5A5/}
+\newcommand{\TCOPArtifactLink}{\expandafter\url\expandafter{\TCOPArtifactURL}}
+\hypersetup{pdftitle={TCOP: An Agentic Early Warning and Response Protocol},pdfauthor={}}
 \input{generated/results-macros}
 \date{}
-\title{\Large \bf Receiver-Sovereign Federated Early Warning for Cross-Domain Agent Tool Use}
+\title{\Large \bf TCOP: An Agentic Early Warning and Response Protocol}
+\ifdefined\TCOPPreprint
+\author{\TCOPPreprintAuthor}
+\hypersetup{pdfauthor={\TCOPPreprintName}}
+\else
 \author{Anonymous Submission}
+\fi
+\ifdefined\TCOPPreprintSetup\TCOPPreprintSetup\fi
 \begin{document}
 \maketitle
 \begin{abstract}
-Autonomous software increasingly crosses administrative boundaries while invoking consequential tools. A domain that first observes compromise may be unable to control a downstream domain, while a global enforcement service may be unacceptable for sovereignty, privacy, or outage reasons. TCOP is a receiver-sovereign federated early-warning architecture: domains exchange signed, scoped, time-bounded context, but the receiver alone performs correlation, applies policy, and issues any enforcement decision. We evaluate timing, authority, and availability consequences in deterministic matched experiments, frozen action-trace replay, and a physical reference gateway path. In the matched deterministic comparison, imported context improved \DeterministicImproved{} of \DeterministicPairs{} strict pairs and prevented \DeterministicActionsPrevented{} harmful actions, with no worsened pair. The live evaluation uses \LiveTraces{} captured traces and \LiveReplayPairs{} strict paired replays. Physical gateway arms show that context arriving before the first harmful opportunity can change local authorization, whereas later context can reduce subsequent blast radius without reversing completed actions. The same containment-first response constrains \BenignConstrained{} of \BenignAttempted{} selected benign calls, making availability cost a first-class result. TCOP is not a remote kill switch, does not create detections, and is not evaluated as an Internet-scale deployment.
+An agent can consume untrusted content or obtain a credential in one domain and later request a consequential tool action in another. The observing domain may have useful signed evidence but no authority to enforce at the receiver. We present TCOP, an early warning and response protocol for AI agents, where the receiving domain decides what to do. TCOP carries signed, scoped, time-bounded runtime evidence to the receiver's local authorization boundary for a pending agent action. The receiver validates provenance, freshness, replay state, receipt correlation, subject, resource, capability, and scope before its own policy creates an authorization decision. TCOP specifies this evidence-to-authorization boundary, not a containment strategy. Under strict matched replay, \DeterministicActionsPrevented{} harmful actions forwarded without context changed to blocked with matched TCOP context, reducing harmful calls from \DeterministicBaselineHarmfulCalls{} to \DeterministicTreatmentHarmfulCalls{}. A single-environment reference path exercises the signed relay, receiver evaluator, and gateway as separate processes on one host. A mixed-action study shows that exact binding avoids the benign restrictions of a broad arrival guard but does not cover actions outside the accepted binding. In \AdaptiveStrictEpisodes{} policy-conditioned post-denial substitution episodes, Exact Binding permits all \AdaptiveCTwoPostDenialCompleted{} eligible substitutions, whereas an evaluated receiver-local Campaign Correlation strategy blocks them and forwards the tested outside-campaign benign actions. A complete external-warning ledger separately reports detector coverage, receiver-actionable evidence, and harmful actions that proceed when no warning exists. These outcomes characterize configurable receiver strategies rather than mandatory TCOP behavior.
 \end{abstract}
 \input{sections/01-introduction}
 \input{sections/02-problem-threat-model}
@@ -25,7 +34,6 @@ Autonomous software increasingly crosses administrative boundaries while invokin
 \input{sections/08-security-availability}
 \input{sections/09-related-work}
 \input{sections/10-limitations-conclusion}
-\nocite{usenixTemplate}
 \bibliographystyle{plain}
 \bibliography{references}
 \appendix
