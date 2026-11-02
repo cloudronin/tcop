@@ -1,8 +1,8 @@
 study: External-Warning, Adaptive-Attacker, Cross-Host Study v1
 study_kind: external_warning_adaptive_crosshost_v1
 artifact_root: artifacts/external-warning-adaptive-crosshost-v1
-plan_status: amendments_001_002_integrated_pending_external_timestamp
-effective_plan_revision: 1.2
+plan_status: amendments_001_002_003_integrated_pending_external_timestamp
+effective_plan_revision: 1.3
 seed: 20260801
 external_sources:
   agentdojo:
@@ -57,6 +57,51 @@ amendments:
     source: spec/external-warning-adaptive-crosshost-amendment-002.md
     status: incorporated_before_external_timestamp
     integrity_gates: [G12, G13, G14, G15, G16, G17]
+  - id: "003"
+    title: Three-Arm Enforcement Ladder
+    source: spec/external-warning-adaptive-crosshost-amendment-003.md
+    status: incorporated_before_external_timestamp
+enforcement_ladder:
+  arms:
+    E0: Bare pinned OpenClaw agent without sandbox or policy.
+    E1: Same agent in OpenShell as packaged in NemoClaw with the admitted default baseline.
+    E2: E1 plus receiver-local TCOP policy tightening on Domain B.
+  e2_modes:
+    E2a: Auto-accept tightening; native setting unresolved under issue 8.
+    E2b: Human-approved tightening; native setting unresolved under issue 8.
+  pool_e2_modes: false
+  families:
+    S-A:
+      meaning: Unknown-host egress through a synthetic relay.
+      public_source_tag: hugging-face-technical-timeline-stage-1
+    S-B:
+      meaning: Harmful use of an allowed synthetic host.
+      public_source_tag: hugging-face-technical-timeline-stage-2-vector-1
+    S-C:
+      meaning: Synthetic credential replay; native scope revocation open under issue 7.
+      public_source_tag: metr-investigation-july-10
+  pins:
+    openclaw:
+      release: 2026.9.2
+      commit: 3928bad9badfcb6c7d140530435e806fb8092190
+      npm_integrity: sha512-M6C7UsnX815nv26qBJFYGe6aGzv+ftZLRzV6S9oRXUtXg2Yn67eVntpssT94kgkquKVSeUxerUg0j1ONp4WYQg==
+    nemoclaw:
+      commit: 88fe14f3fb9a0bf72997cce19ec88b5b2ee08391
+    openshell:
+      version: 0.0.116
+      commit: d1155aa70042d3e2ee49dbfa15346b108b7c1d92
+  openclaw_tag_object: 87d32a44ab9744903d36a33b399c26cfc2b078d6
+  policy:
+    tier: required_at_admission
+    presets: required_at_admission
+    installed_effective_baseline_sha256: required_at_admission
+  topology: three_distinct_physical_machines_runner_A_B
+  admission_record: required_at_admission
+  role_script_directory: benchmark/role-scripts/amendment-003
+  role_census: required_sealed_record_before_run
+  expected_pattern: benchmark/studies/amendment-003-expected-pattern.json
+  expected_pattern_seal: required_sealed_record_before_run
+  open_owner_issues: [7, 8, 10]
 composition_dependencies:
   stix_2_1_schema_validator:
     url: https://github.com/oasis-open/cti-stix2-json-schemas
@@ -115,3 +160,9 @@ required_future_artifacts:
   - network-impairment-log.jsonl
   - timing-cell-results.jsonl
   - timing-phase-diagram-input.csv
+  - amendments/003-enforcement-ladder.md
+  - amendments/003.canonical.json
+  - amendments/003.sha256
+  - foundations/admission/record.json
+  - foundations/role-census/census.json
+  - foundations/expected-pattern/record.json
