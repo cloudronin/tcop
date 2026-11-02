@@ -46,11 +46,24 @@ def validate_script(record: dict[str, Any], *, non_smoke: bool = False) -> None:
         require(isinstance(b.get('disposition'), str) and b['disposition'] in DISPOSITIONS, f'{name} must have a closing disposition')
         require(b['representable'] or b['disposition'] == 'not_representable', f'{name} not-representable disposition required')
         text(b.get('action'), f'{name} action'); text(b.get('reason'), f'{name} reason')
+    a4 = branches['A4']
+    # Unrepresentable legacy drafts may remain undeclared. Every representable
+    # A4 must declare independence; even a draft cannot explicitly deny it.
+    if a4['representable'] or 'independent_of_harmful_side_effects' in a4:
+        require(a4.get('independent_of_harmful_side_effects') is True,
+                'A4 independence from harmful side effects must be declared true')
     require(isinstance(r.get('status'), str) and r['status'] in {'draft-pending-mapping', 'mapped'}, 'role status required')
     if family == 'S-C':
-        capability = obj(r.get('runtime_capability'), 'scope revocation capability')
-        require(capability.get('native_path') == 'none' and capability.get('open_issue') == 7,
-                'issue 7 remains open: scope revocation has no pinned native path')
+        origin = obj(r.get('replay_origin'), 'S-C replay origin')
+        require(origin == {'domain': 'B', 'boundary': 'bound_domain_b_sandbox',
+                           'actor': 'domain_b_agent', 'egress': 'domain_b_proxy'},
+                'S-C replay must originate inside the bound Domain-B sandbox through its proxy')
+        capability = obj(r.get('runtime_capability'), 'provider detach capability')
+        require(capability.get('action') == 'detach_one_named_provider'
+                and capability.get('native_path') == 'DetachSandboxProvider'
+                and capability.get('credential_unit') == 'whole_provider'
+                and capability.get('openshell_version') == '0.0.116',
+                'S-C native action is whole-provider detach at the pinned OpenShell')
     if non_smoke:
         require(r['status'] != 'draft-pending-mapping', 'draft role scripts cannot be admitted for non-smoke execution')
         mapping = obj(r.get('source_mapping'), 'public-source mapping')

@@ -59,10 +59,12 @@ class RoleScriptTests(unittest.TestCase):
         r=json.loads((SCRIPTS/'S-A.json').read_text()); r['targets']=['https://example.com']
         with self.assertRaises(TCOPCommandError): validate_script(r)
 
-    def test_scope_path_remains_open(self):
+    def test_native_provider_detach_remains_a_draft_mapping(self):
         r=json.loads((SCRIPTS/'S-C.json').read_text())
-        self.assertEqual(r['runtime_capability']['native_path'],'none')
-        self.assertEqual(r['runtime_capability']['open_issue'],7)
+        self.assertEqual(r['runtime_capability']['native_path'],'DetachSandboxProvider')
+        self.assertEqual(r['runtime_capability']['credential_unit'],'whole_provider')
+        self.assertEqual(r['runtime_capability']['amendment_status'],'draft_pending_owner_seal')
+        self.assertEqual(r['status'],'draft-pending-mapping')
 
     def test_mapping_required_even_if_status_changed(self):
         r=json.loads((SCRIPTS/'S-A.json').read_text()); r['status']='mapped'
@@ -84,3 +86,37 @@ class RoleScriptTests(unittest.TestCase):
             root=Path(d)/'roles'; seal_roles(source,root)
             p=source/'S-A.json'; p.write_bytes(p.read_bytes()+b'\n')
             with self.assertRaises(TCOPCommandError): verify_roles(root,scripts_dir=source)
+
+    def test_representable_a4_requires_independence_declaration(self):
+        r=json.loads((SCRIPTS/'S-A.json').read_text())
+        r['branches']['A4']['representable']=True
+        r['branches']['A4']['disposition']='excluded_before_execution'
+        with self.assertRaisesRegex(TCOPCommandError,'independen'):
+            validate_script(r)
+
+    def test_a4_independence_must_be_boolean_true(self):
+        for value in (False,1,'true',None):
+            with self.subTest(value=value):
+                r=json.loads((SCRIPTS/'S-A.json').read_text())
+                r['branches']['A4']['independent_of_harmful_side_effects']=value
+                with self.assertRaisesRegex(TCOPCommandError,'independen'):
+                    validate_script(r)
+
+    def test_independent_representable_a4_is_valid(self):
+        r=json.loads((SCRIPTS/'S-A.json').read_text())
+        r['branches']['A4'].update(representable=True,disposition='excluded_before_execution',
+                                 independent_of_harmful_side_effects=True)
+        validate_script(r)
+
+    def test_sc_requires_bound_b_replay_origin(self):
+        import copy
+        base=json.loads((SCRIPTS/'S-C.json').read_text())
+        base.pop('replay_origin',None)
+        with self.assertRaisesRegex(TCOPCommandError,'replay'):
+            validate_script(base)
+        valid={'domain':'B','boundary':'bound_domain_b_sandbox','actor':'domain_b_agent','egress':'domain_b_proxy'}
+        for key in valid:
+            with self.subTest(key=key):
+                r=copy.deepcopy(base); r['replay_origin']=dict(valid);r['replay_origin'][key]='outside_b_sandbox'
+                with self.assertRaisesRegex(TCOPCommandError,'replay'):
+                    validate_script(r)
