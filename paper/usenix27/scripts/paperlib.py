@@ -15,6 +15,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any, Iterable
+from urllib.parse import quote, unquote, urlsplit
 
 import yaml
 
@@ -2272,6 +2273,7 @@ def paper_check_summary(preprint: bool = False) -> dict[str, Any]:
     if preprint:
         del required["anonymity"]
         required["preprint_identity_and_links"] = output_dir / "preprint-audit.json"
+        required["repository_links"] = output_dir / "repository-link-audit.json"
     checks = {name: bool(read_json(path).get("pass")) for name, path in required.items() if path.is_file()}
     missing = sorted(set(required) - set(checks))
     budget = read_json(output_dir / "page-budget.json") if (output_dir / "page-budget.json").is_file() else {}
@@ -2363,7 +2365,101 @@ def build_paper(submission: bool = False, preprint: bool = False) -> None:
 PREPRINT_NAME = "Vishnu Vettrivel"
 PREPRINT_AFFILIATION = "Independent Researcher"
 PREPRINT_EMAIL = "vishnu@uofa.net"
-PREPRINT_ARTIFACT_URL = "https://github.com/cloudronin/tcop"
+PREPRINT_TAG = "preprint-v1"
+PREPRINT_REPOSITORY = "https://github.com/cloudronin/tcop"
+
+
+def repository_object_type(path: str) -> str | None:
+    """Read HEAD only; ignored working-tree copies never establish tracking."""
+    if path and (path.startswith("/") or ".." in Path(path).parts):
+        return None
+    result = subprocess.run(["git", "cat-file", "-t", "HEAD:" + path.rstrip("/")],
+                            cwd=ROOT, text=True, capture_output=True, check=False)
+    return result.stdout.strip() if result.returncode == 0 else None
+
+
+def preprint_repository_url(path: str = "") -> str:
+    path = path.rstrip("/")
+    kind = "tree" if repository_object_type(path) == "tree" else "blob"
+    suffix = "/" + quote(path, safe="/") if path else ""
+    return PREPRINT_REPOSITORY + "/" + kind + "/" + PREPRINT_TAG + suffix
+
+
+PREPRINT_ARTIFACT_URL = preprint_repository_url()
+
+
+def manuscript_repository_paths() -> list[str]:
+    # These are the shared TeX inputs that can print reader-facing paths.
+    # TeX input/graphics paths are implementation details, not printed labels.
+    sources = [PAPER / "main.tex", GENERATED / "results-macros.tex",
+               *(PAPER / "sections").glob("*.tex"), *(PAPER / "appendices").glob("*.tex"),
+               *TABLES.glob("*.tex")]
+    return sorted({match.group(1) for source in sources if source.is_file()
+                   for match in re.finditer(r"\\path\{([^{}]+)\}", source.read_text(encoding="utf-8"))})
+
+
+def preprint_path_definitions() -> str:
+    definitions = []
+    for path in manuscript_repository_paths():
+        url = preprint_repository_url(path)
+        definitions.append(r"\expandafter\def\csname TCOPRepoURL@" + path
+                           + r"\endcsname{" + url + "}")
+    # Hyperref is loaded by main.tex before this hook runs. Preserve the original
+    # path renderer inside each link, including its underscore and line breaks.
+    definitions.append(r"\def\TCOPPreprintSetup{\let\TCOPPlainPath\path"
+                       r"\DeclareRobustCommand{\path}[1]{"
+                       r"\href{\csname TCOPRepoURL@##1\endcsname}{\TCOPPlainPath{##1}}}}")
+    return "\n".join(definitions) + "\n"
+
+
+def repository_link_row(url: str) -> dict[str, Any]:
+    parsed = urlsplit(url)
+    target = urlsplit(PREPRINT_REPOSITORY)
+    is_repository = (parsed.netloc.lower().removeprefix("www.") == target.netloc.lower()
+                     and (parsed.path.rstrip("/").lower() == target.path.lower()
+                          or parsed.path.lower().startswith(target.path.lower() + "/")))
+    row = {"url": url, "repository": is_repository, "repository_path": None,
+           "tracked_at_head": None, "object_type": None, "ref": None,
+           "pinned_to_tag": None, "valid": True}
+    if not is_repository:
+        return row
+    relative_url = parsed.path[len(target.path):].lstrip("/")
+    parts = relative_url.split("/", 2)
+    if len(parts) < 2 or parts[0] not in {"blob", "tree"}:
+        row.update({"pinned_to_tag": False, "tracked_at_head": False, "valid": False})
+        return row
+    kind, ref = parts[:2]
+    path = unquote(parts[2]) if len(parts) == 3 else ""
+    object_type = repository_object_type(path)
+    row.update({"repository_path": path, "object_type": object_type, "ref": ref,
+                "tracked_at_head": object_type is not None,
+                "pinned_to_tag": ref == PREPRINT_TAG})
+    expected_kind = "tree" if object_type == "tree" else "blob"
+    row["valid"] = (row["tracked_at_head"] and row["pinned_to_tag"]
+                    and kind == expected_kind and parsed.scheme == "https"
+                    and not parsed.query and not parsed.fragment)
+    return row
+
+
+def audit_preprint_links(urls: list[str], output_dir: Path) -> dict[str, Any]:
+    rows = [repository_link_row(url) for url in sorted(set(urls))]
+    findings = ["invalid repository link: " + row["url"] for row in rows if not row["valid"]]
+    # Every displayed source path must actually have a link annotation in the
+    # PDF. A valid root URL alone cannot conceal a missing or untracked path.
+    expected_paths = manuscript_repository_paths()
+    linked_paths = {row["repository_path"] for row in rows if row["repository"]}
+    for path in expected_paths:
+        if path.rstrip("/") not in linked_paths:
+            findings.append("reader-facing repository path has no PDF hyperlink: " + path)
+    manifest = {"tag": PREPRINT_TAG, "head": subprocess.check_output(
+        ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
+        "urls": rows, "displayed_repository_paths": expected_paths,
+        "findings": findings, "pass": not findings}
+    write_json(PAPER / "preprint" / "link-manifest.json", manifest)
+    write_json(output_dir / "repository-link-audit.json", manifest)
+    if findings:
+        fail("preprint repository-link audit failed: " + "; ".join(findings))
+    return manifest
 
 
 def preprint_wrapper() -> str:
@@ -2374,6 +2470,7 @@ def preprint_wrapper() -> str:
             + r"\def\TCOPPreprintAuthor{" + PREPRINT_NAME + r"\\"
             + PREPRINT_AFFILIATION + r"\\\texttt{" + PREPRINT_EMAIL + "}}\n"
             + r"\def\TCOPArtifactURL{" + PREPRINT_ARTIFACT_URL + "}\n"
+            + preprint_path_definitions()
             + r"\input{main.tex}" + "\n")
 
 
@@ -2435,6 +2532,7 @@ def audit_preprint(pdf: Path, output_dir: Path) -> dict[str, Any]:
         findings.append("anonymous artifact link in PDF metadata")
     result = {"pdf": relative(pdf), "author": str(metadata.get("/Author", "")),
               "urls": urls, "findings": findings, "pass": not findings}
+    audit_preprint_links(urls, output_dir)
     write_json(output_dir / "preprint-audit.json", result)
     if findings:
         fail("preprint identity/link audit failed: " + "; ".join(findings))
@@ -2456,7 +2554,7 @@ def build_preprint_checked(submission: bool = False) -> dict[str, Any]:
     metadata = read_json(GENERATED / "paper-metadata.json")
     metadata.update({"anonymous": False, "build_mode": "preprint", "author": PREPRINT_NAME,
                      "affiliation": PREPRINT_AFFILIATION, "email": PREPRINT_EMAIL,
-                     "artifact_url": PREPRINT_ARTIFACT_URL})
+                     "artifact_url": PREPRINT_ARTIFACT_URL, "repository_tag": PREPRINT_TAG})
     write_json(output / "paper-metadata.json", metadata)
     return paper_check_summary(preprint=True)
 

@@ -1,5 +1,11 @@
 \def\TCOPPreprint{1}
 \def\TCOPPreprintName{Vishnu Vettrivel}
 \def\TCOPPreprintAuthor{Vishnu Vettrivel\\Independent Researcher\\\texttt{vishnu@uofa.net}}
-\def\TCOPArtifactURL{https://github.com/cloudronin/tcop}
+\def\TCOPArtifactURL{https://github.com/cloudronin/tcop/tree/preprint-v1}
+\expandafter\def\csname TCOPRepoURL@artifacts/tcx-validation-value-v2/property-test-report.json\endcsname{https://github.com/cloudronin/tcop/blob/preprint-v1/artifacts/tcx-validation-value-v2/property-test-report.json}
+\expandafter\def\csname TCOPRepoURL@docs/KNOWN_ISSUES.md\endcsname{https://github.com/cloudronin/tcop/blob/preprint-v1/docs/KNOWN_ISSUES.md}
+\expandafter\def\csname TCOPRepoURL@spec/external-warning-adaptive-crosshost-amendment-003.md\endcsname{https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-003.md}
+\expandafter\def\csname TCOPRepoURL@spec/external-warning-adaptive-crosshost-amendment-004.md\endcsname{https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-004.md}
+\expandafter\def\csname TCOPRepoURL@spec/external-warning-adaptive-crosshost-amendment-005.md\endcsname{https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-005.md}
+\def\TCOPPreprintSetup{\let\TCOPPlainPath\path\DeclareRobustCommand{\path}[1]{\href{\csname TCOPRepoURL@##1\endcsname}{\TCOPPlainPath{##1}}}}
 \input{main.tex}

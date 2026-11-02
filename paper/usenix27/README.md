@@ -40,3 +40,10 @@ checks; only anonymity is omitted. Reports are separate under
 `preprint/evidence/`. The preprint build verifies that `main.pdf` is unchanged.
 After generating shared data, figures, tables, and macros, the direct entry
 point is `python3 paper/usenix27/scripts/paperlib.py build --preprint`.
+
+Preprint repository links use the single `PREPRINT_TAG` setting in
+`scripts/paperlib.py`. The build maps reader-facing paths to file or directory
+URLs at that tag, leaving anonymous path text unchanged. Its
+`preprint/link-manifest.json` lists every PDF URL; repository targets are
+checked against git HEAD, and missing paths or other refs fail the build.
+External URLs have no repository path or git-tracking claim.

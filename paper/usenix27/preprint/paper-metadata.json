@@ -1,10 +1,11 @@
 {
   "affiliation": "Independent Researcher",
   "anonymous": false,
-  "artifact_url": "https://github.com/cloudronin/tcop",
+  "artifact_url": "https://github.com/cloudronin/tcop/tree/preprint-v1",
   "author": "Vishnu Vettrivel",
   "build_mode": "preprint",
   "email": "vishnu@uofa.net",
+  "repository_tag": "preprint-v1",
   "source_artifact_amendment": "spec/v0.6-agent-validation-source-artifact-amendment.md",
   "template": {
     "files": {

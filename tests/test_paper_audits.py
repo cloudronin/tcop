@@ -50,7 +50,7 @@ class PaperEvidenceTests(unittest.TestCase):
 class PaperBuildModeTests(unittest.TestCase):
     def test_preprint_requires_identity_and_public_link(self):
         text = "Vishnu Vettrivel Independent Researcher vishnu@uofa.net"
-        urls = ["https://github.com/cloudronin/tcop"]
+        urls = [paperlib.PREPRINT_ARTIFACT_URL]
         self.assertEqual([], paperlib.preprint_findings(text, urls, "Vishnu Vettrivel"))
         self.assertEqual([], paperlib.preprint_findings(
             text.replace("Vettrivel", "V ettrivel"), urls, "Vishnu Vettrivel"))
@@ -59,7 +59,7 @@ class PaperBuildModeTests(unittest.TestCase):
 
     def test_preprint_rejects_anonymous_links_even_with_author(self):
         text = "Vishnu Vettrivel Independent Researcher vishnu@uofa.net"
-        urls = ["https://github.com/cloudronin/tcop",
+        urls = [paperlib.PREPRINT_ARTIFACT_URL,
                 "https://anonymous.4open.science/r/tcop-B5A5/"]
         self.assertIn("anonymous artifact link in preprint",
                       paperlib.preprint_findings(text, urls, "Vishnu Vettrivel"))
@@ -69,6 +69,34 @@ class PaperBuildModeTests(unittest.TestCase):
         self.assertEqual([], paperlib.bibliography_findings("July 27, 2026.", url))
         self.assertTrue(paperlib.bibliography_findings("2026,\n2026", url))
         self.assertTrue(paperlib.bibliography_findings("2026", url + "\n" + url))
+
+
+class PreprintRepositoryLinkTests(unittest.TestCase):
+    def test_file_and_directory_links_use_the_tag(self):
+        for path, kind in (("docs/KNOWN_ISSUES.md", "blob"), ("docs", "tree"), ("", "tree")):
+            with self.subTest(path=path):
+                url = paperlib.preprint_repository_url(path)
+                row = paperlib.repository_link_row(url)
+                self.assertTrue(row["tracked_at_head"])
+                self.assertTrue(row["valid"])
+                self.assertEqual(paperlib.PREPRINT_TAG, row["ref"])
+                self.assertIn("/" + kind + "/", url)
+
+    def test_untracked_path_and_wrong_refs_fail(self):
+        path = "docs/KNOWN_ISSUES.md"
+        url = paperlib.preprint_repository_url(path)
+        for invalid in (url.replace("/" + paperlib.PREPRINT_TAG + "/", "/main/"),
+                        paperlib.preprint_repository_url("docs/nonexistent-link-fixture.md"),
+                        paperlib.PREPRINT_REPOSITORY,
+                        url.replace("/blob/", "/tree/")):
+            with self.subTest(url=invalid):
+                self.assertFalse(paperlib.repository_link_row(invalid)["valid"])
+
+    def test_external_urls_have_no_git_tracking_claim(self):
+        row = paperlib.repository_link_row("https://openid.net/specs/example.html")
+        self.assertTrue(row["valid"])
+        self.assertFalse(row["repository"])
+        self.assertIsNone(row["tracked_at_head"])
 
 
 if __name__ == "__main__":

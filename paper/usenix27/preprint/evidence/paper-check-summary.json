@@ -7,6 +7,7 @@
     "numbers": true,
     "page_budget": true,
     "preprint_identity_and_links": true,
+    "repository_links": true,
     "source": true
   },
   "missing": [],

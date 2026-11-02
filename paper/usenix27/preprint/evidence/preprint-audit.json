@@ -4,6 +4,12 @@
   "pass": true,
   "pdf": "paper/usenix27/preprint/main-preprint.pdf",
   "urls": [
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-003.md",
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-003.md",
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-004.md",
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-004.md",
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-005.md",
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/spec/external-warning-adaptive-crosshost-amendment-005.md",
     "https://openid.net/specs/openid-caep-1_0-final.html",
     "https://openid.net/specs/openid-caep-1_0-final.html",
     "https://datatracker.ietf.org/doc/draft-fane-opena2a-aap/02/",
@@ -18,7 +24,11 @@
     "https://openid.net/specs/openid-risc-1_0-final.html",
     "https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html",
     "https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html",
-    "https://github.com/cloudronin/tcop",
-    "https://github.com/cloudronin/tcop"
+    "https://github.com/cloudronin/tcop/tree/preprint-v1",
+    "https://github.com/cloudronin/tcop/tree/preprint-v1",
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/docs/KNOWN_ISSUES.md",
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/artifacts/tcx-validation-value-v2/property-test-report.json",
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/artifacts/tcx-validation-value-v2/property-test-report.json",
+    "https://github.com/cloudronin/tcop/blob/preprint-v1/docs/KNOWN_ISSUES.md"
   ]
 }
