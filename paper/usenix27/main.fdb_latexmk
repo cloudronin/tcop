@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1793577666.44461 "main.aux" "main.bbl" "main" 1793577667.06234 0
+["bibtex main"] 1793577998.52141 "main.aux" "main.bbl" "main" 1793577999.15991 0
   "./references.bib" 1793577610.68086 1027 cecc7c92c187ebe94afc25400ff60018 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1793577666.96887 10955 9bbefb0fe6ceb702fe08e5253ae172c5 "pdflatex"
+  "main.aux" 1793577999.06889 10710 19fde993488bc9828e9ecfa630cd6198 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1793577666.46478 "main.tex" "main.pdf" "main" 1793577667.0626 0
+["pdflatex"] 1793577998.54319 "main.tex" "main.pdf" "main" 1793577999.16016 0
   "/etc/texmf/web2c/texmf.cnf" 1793225143 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -120,9 +120,9 @@
   "figures/pdf/physical-timing.pdf" 1793577542.70776 16091 9765aabab59548b8a2d21cbf582341b4 ""
   "figures/pdf/security-availability.pdf" 1793577542.70776 12354 52111b776e939816eef48c80ed3afd0b ""
   "generated/results-macros.tex" 1793577542.71199 887 a210bf9729587be377f6a42eb6456540 ""
-  "main.aux" 1793577666.96887 10955 9bbefb0fe6ceb702fe08e5253ae172c5 "pdflatex"
-  "main.bbl" 1793577666.4612 957 f0e8c0eb228a030c31dffa2f7667f610 "bibtex main"
-  "main.out" 1793577666.96887 3067 a6f4637d5a7a52afc0f1218d221985af "pdflatex"
+  "main.aux" 1793577999.06889 10710 19fde993488bc9828e9ecfa630cd6198 "pdflatex"
+  "main.bbl" 1793577998.53689 957 f0e8c0eb228a030c31dffa2f7667f610 "bibtex main"
+  "main.out" 1793577999.06889 3067 a6f4637d5a7a52afc0f1218d221985af "pdflatex"
   "main.tex" 1793577542.71199 2781 57c65a33b5a8f267aed662741a006816 ""
   "sections/01-introduction.tex" 1793577542.71446 2042 b3ed8b68d4ae45570ca825384e5e9ef2 ""
   "sections/02-problem-threat-model.tex" 1793577542.71557 1201 433f5d6dfd9b25dc44cabc58fd9b34f5 ""
@@ -133,12 +133,11 @@
   "sections/07-agent-gateway-evaluation.tex" 1793577600.44886 3479 c32f6e5f5a0b3702009ed935b2490613 ""
   "sections/08-security-availability.tex" 1793577542.71557 2898 f6304bd214bf227a4578e41290f05163 ""
   "sections/09-related-work.tex" 1793577605.17286 1462 704270b63c6f6304112bd1ce74ffda32 ""
-  "sections/10-limitations-conclusion.tex" 1793577593.07286 3521 7dda8b6d36d62979e856513edd6f0b8f ""
+  "sections/10-limitations-conclusion.tex" 1793577997.74913 4029 c30c0f9e89070e733dae8ad97af2d626 ""
   "tables/generated/tab-amendment-history.tex" 1793577542.71601 1457 4bbbf7805cc34413537ad4f7af422297 ""
   "tables/generated/tab-architecture-comparison.tex" 1793577542.71606 1181 a2fd6ab940073e073b6b9c871437a900 ""
   "tables/generated/tab-design-requirements.tex" 1793577542.71606 1031 7891f418a0c281fe7e0edc2765d0221b ""
   "tables/generated/tab-deterministic-summary.tex" 1793577542.71606 580 f0e7c31ff4459fda655f4ea7e674bd9e ""
-  "tables/generated/tab-limitations.tex" 1793577542.71606 794 45d551fbe2abce0bf78dd915c4e7c52a ""
   "tables/generated/tab-live-cohort.tex" 1793577542.71606 723 7a6f1f5b6f1a912183ee261a6c95313b ""
   "tables/generated/tab-negative-controls.tex" 1793577542.71606 2295 de373b1a31fc2eb15d44ca1681a1c71f ""
   "tables/generated/tab-performance.tex" 1793577542.71606 548 9c8a523dd30a30d11cff53efb69a5f23 ""

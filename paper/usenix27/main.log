@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.28)  1 NOV 2026 16:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.28)  1 NOV 2026 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,7 +668,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--10
  []
 
 )) (./sections/10-limitations-conclusion.tex [6 <./figures/pdf/security-availab
-ility.pdf>] (./tables/generated/tab-limitations.tex)) (./main.bbl
+ility.pdf>]) (./main.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -680,9 +683,6 @@ gface . co / blog /
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
 Underfull \hbox (badness 10000) in paragraph at lines 10--15
 []\T1/ptm/m/n/10 (+20) METR.  In-ves-ti-ga-tion of the Ope-nAI Hug-
  []
@@ -744,21 +744,21 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A6F4637D5A7A52AFC0F1218D221985AF;3067.
  ) 
 Here is how much of TeX's memory you used:
- 12687 strings out of 476106
- 206912 string characters out of 5793932
- 1964975 words of memory out of 5000000
- 34079 multiletter control sequences out of 15000+600000
- 617930 words of font info for 288 fonts, out of 8000000 for 9000
+ 12667 strings out of 476106
+ 206495 string characters out of 5793932
+ 1962975 words of memory out of 5000000
+ 34073 multiletter control sequences out of 15000+600000
+ 617480 words of font info for 281 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 90i,10n,93p,2122b,572s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,10n,93p,2682b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 185448 bytes).
+Output written on main.pdf (10 pages, 185618 bytes).
 PDF statistics:
  284 PDF objects out of 1000 (max. 8388607)
  224 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 55 named destinations out of 1000 (max. 500000)
  76468 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -38,9 +38,14 @@ predeclared 4 by 4 two-host network-interface timing surface. Its census,
 branch-coverage, timing, and outcome-partition artifacts must be complete
 before any external result is reported.
 
-Amendment 003 admits an independently maintained out-of-process sandbox
-runtime (first: NVIDIA OpenShell as packaged in NemoClaw) as a second Domain-B
-enforcement point beside the reference gateway, restricts TCOP's interface to
-it to policy tightening only, and adds a live two-agent role-play population
-on the two hosts with three sealed scenario families drawn from the July 2026
-Hugging Face intrusion. The reference gateway remains the control arm.
+Amendment 003 adds a three-arm enforcement ladder on Domain B, each arm a
+real deployment choice adding exactly one thing: bare agent (E0, first:
+OpenClaw), independently maintained out-of-process sandbox runtime (E1, first:
+NVIDIA OpenShell as packaged in NemoClaw), and that runtime with TCOP
+tightening its policy (E2). The reference gateway moves to an appendix
+control. It adds a live two-agent role-play population on the two hosts with
+three sealed scenario families drawn from the July 2026 Hugging Face
+intrusion, and reports per family a frontier of useful work completed against
+damage prevented, with time to detect and time to block per episode. The
+expected pattern per family is pre-registered. TCOP's interface to the
+runtime is policy tightening only.
