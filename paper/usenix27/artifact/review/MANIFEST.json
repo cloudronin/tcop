@@ -570,7 +570,7 @@
     },
     {
       "path": "evidence/anonymity-audit.json",
-      "sha256": "7a1f7978181ac35ec29420979adc4ca512e1cbd4b6cebacf25175b21b38105d0"
+      "sha256": "522bc7bd545bb66eb4eb015e5f3b8531d1ec73b36b8f93d96cad7e739c30bfb9"
     },
     {
       "path": "evidence/anonymity-audit.md",
@@ -630,7 +630,7 @@
     },
     {
       "path": "evidence/source-verification.json",
-      "sha256": "b82312923b37ff8ca0def6ab2f70fb32de3843336b292840cec2f1eda3ef97d5"
+      "sha256": "4bb3b709f3b70b23aca294429288c87087a4e5655f27ca03a165d951d22af864"
     },
     {
       "path": "evidence/source-verification.md",
@@ -646,67 +646,67 @@
     },
     {
       "path": "figures/pdf/architecture.pdf",
-      "sha256": "ce0ef4330ce19ebdc4f378ae8e0228ed8436a5bde83544e300bbda3cb6697e79"
+      "sha256": "9a5f1e627ba7e8eac2c4c1a571bb8859ea018d4ce413a26a639811007f8234fc"
     },
     {
       "path": "figures/pdf/artifact-lineage.pdf",
-      "sha256": "6443ff9b94dbd01bb4478eb76756c3a594572629bfe739507d0dc226485db644"
+      "sha256": "c9dc6498b8468a8325e0e77cab31640e475172701c16f8d860b347b9faac2f30"
     },
     {
       "path": "figures/pdf/c2e-policy-frontier.pdf",
-      "sha256": "5a7b3745e76e48cf472f6aefc6dca8128cd2b5937a5ddc47dab6186d69a68376"
+      "sha256": "6b091cf548124e58873794fde2eaa6b167c348bc8722aa0edf30cac9a883823a"
     },
     {
       "path": "figures/pdf/containment-window.pdf",
-      "sha256": "117c3693176859ad52c3a021f4b19c860025124a6238d2314156d68794c85c02"
+      "sha256": "11886287e1dcabd77ba7cef851e7004a7bc62e7a928ae6eb684e677cc5001345"
     },
     {
       "path": "figures/pdf/deterministic-outcomes.pdf",
-      "sha256": "47ad0804553f02fecbbdb4ea3d57543b8255e677b483029a065bfedf938d7f40"
+      "sha256": "1c6de267ee781248a14182b39a8892dcf60b9dee929211d6d7b03788b2fba3da"
     },
     {
       "path": "figures/pdf/live-replay-treatments.pdf",
-      "sha256": "44bad153082a41f75d5590fdefcdb3ee96ddc6bf59d77c571faff6062e7de607"
+      "sha256": "c50b56e51d6944c4d208437d31933b07258422177f5d36f228b86089b651df56"
     },
     {
       "path": "figures/pdf/physical-timing.pdf",
-      "sha256": "68c3675416aebd6301abd897f88d546f3f939f89fb34142140aa041637239878"
+      "sha256": "9e18ebaf4b1a3adacf9270ace6fab7f194d121112e5feeb64947f1377be41bab"
     },
     {
       "path": "figures/pdf/security-availability.pdf",
-      "sha256": "2c5bc78124918f761b5b9f8048d15cef1b16bd1cf51cc66254ee0917d137d9d6"
+      "sha256": "ee07997b36f4325dc04e5574a4d1e21c0cf6d59e224d2cf70fcd9c99fcd0fe10"
     },
     {
       "path": "figures/svg/architecture.svg",
-      "sha256": "3154792dd24b2ce319b2b0008df91270e1b3da0c18e545b9cbd10228c71c5d0e"
+      "sha256": "11f682159423694f06f86e6b29f4a075475f60761e38d143845395a93379d878"
     },
     {
       "path": "figures/svg/artifact-lineage.svg",
-      "sha256": "14702fc877d4d57c483ddbbfe1c49153a718313aeec40c195cb3af10e9db584e"
+      "sha256": "9e106a01e0f0ca5b8632189a4b5ff77a758bfd4a02c4a53914e12d8bbdd580b5"
     },
     {
       "path": "figures/svg/c2e-policy-frontier.svg",
-      "sha256": "5fbd85a8f9b0892620ce35ef4d75c77750d7cee57ce9c77043e235a1d5aaba1d"
+      "sha256": "826ed1509526df00ab20d20a292f9777063b1824c82a849f652c6110e3b12346"
     },
     {
       "path": "figures/svg/containment-window.svg",
-      "sha256": "37f9ff275412996e6ef556ab258fa63c0dbdfdd790795cd25debd0770aadd5fd"
+      "sha256": "f977a0613d91e40233eecb4c6dfc4058e1e211f058986f89a0506b6bdd0242ef"
     },
     {
       "path": "figures/svg/deterministic-outcomes.svg",
-      "sha256": "34c443864861971f12085adb80b714e16860613991289c6d72ea6fe23c93b892"
+      "sha256": "1abce8a2537c03a7c5666655a2a6f5c317177caccefa2bf41090057fff50fc75"
     },
     {
       "path": "figures/svg/live-replay-treatments.svg",
-      "sha256": "991411cd3f0418087ff3f2dc73eedf81a52662333b381e080366972a8eb8e2a9"
+      "sha256": "6e3a74ca42a3637b6ae89d4d3460a6c81880a070aa6ff9877048b7503a1832ef"
     },
     {
       "path": "figures/svg/physical-timing.svg",
-      "sha256": "f85db387869bcc4d7667aa55d4edec5a6982f67ad5f96b49d39e325302889900"
+      "sha256": "77459a3d9cf42588500cb9659c04ef433749fa107606fd134ad78d36ef4ba995"
     },
     {
       "path": "figures/svg/security-availability.svg",
-      "sha256": "93b4566d9fa39d1661bd6f389088f7a4ca13688600b61ad17d20b1b233209c20"
+      "sha256": "3c6857e56c840b39c81e892ad2c799738bd4e67f45b0643794930b82400d5ecd"
     },
     {
       "path": "generated/case-motivation-provenance.json",
@@ -714,7 +714,7 @@
     },
     {
       "path": "generated/figure-manifest.json",
-      "sha256": "7fbfc333f151f19512f0c426b58ecf1f695ea23681937d71e874e233020287c3"
+      "sha256": "cec0c29f5048b98ef717218e6190d2d8f3579ceb5bb31b1d5e92d80c2ee535e6"
     },
     {
       "path": "generated/future-work-provenance.json",

@@ -16,7 +16,7 @@
     "output": "paper/usenix27/figures/pdf/architecture.pdf",
     "preview": "paper/usenix27/figures/png-preview/architecture.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "ce0ef4330ce19ebdc4f378ae8e0228ed8436a5bde83544e300bbda3cb6697e79",
+    "sha256": "9a5f1e627ba7e8eac2c4c1a571bb8859ea018d4ce413a26a639811007f8234fc",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -103,7 +103,7 @@
     "output": "paper/usenix27/figures/pdf/containment-window.pdf",
     "preview": "paper/usenix27/figures/png-preview/containment-window.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "117c3693176859ad52c3a021f4b19c860025124a6238d2314156d68794c85c02",
+    "sha256": "11886287e1dcabd77ba7cef851e7004a7bc62e7a928ae6eb684e677cc5001345",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -189,7 +189,7 @@
     "output": "paper/usenix27/figures/pdf/deterministic-outcomes.pdf",
     "preview": "paper/usenix27/figures/png-preview/deterministic-outcomes.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "47ad0804553f02fecbbdb4ea3d57543b8255e677b483029a065bfedf938d7f40",
+    "sha256": "1c6de267ee781248a14182b39a8892dcf60b9dee929211d6d7b03788b2fba3da",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -275,7 +275,7 @@
     "output": "paper/usenix27/figures/pdf/physical-timing.pdf",
     "preview": "paper/usenix27/figures/png-preview/physical-timing.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "68c3675416aebd6301abd897f88d546f3f939f89fb34142140aa041637239878",
+    "sha256": "9e18ebaf4b1a3adacf9270ace6fab7f194d121112e5feeb64947f1377be41bab",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -362,7 +362,7 @@
     "output": "paper/usenix27/figures/pdf/live-replay-treatments.pdf",
     "preview": "paper/usenix27/figures/png-preview/live-replay-treatments.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "44bad153082a41f75d5590fdefcdb3ee96ddc6bf59d77c571faff6062e7de607",
+    "sha256": "c50b56e51d6944c4d208437d31933b07258422177f5d36f228b86089b651df56",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -449,7 +449,7 @@
     "output": "paper/usenix27/figures/pdf/security-availability.pdf",
     "preview": "paper/usenix27/figures/png-preview/security-availability.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "2c5bc78124918f761b5b9f8048d15cef1b16bd1cf51cc66254ee0917d137d9d6",
+    "sha256": "ee07997b36f4325dc04e5574a4d1e21c0cf6d59e224d2cf70fcd9c99fcd0fe10",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -535,7 +535,7 @@
     "output": "paper/usenix27/figures/pdf/c2e-policy-frontier.pdf",
     "preview": "paper/usenix27/figures/png-preview/c2e-policy-frontier.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "5a7b3745e76e48cf472f6aefc6dca8128cd2b5937a5ddc47dab6186d69a68376",
+    "sha256": "6b091cf548124e58873794fde2eaa6b167c348bc8722aa0edf30cac9a883823a",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
@@ -621,7 +621,7 @@
     "output": "paper/usenix27/figures/pdf/artifact-lineage.pdf",
     "preview": "paper/usenix27/figures/png-preview/artifact-lineage.png",
     "script": "scripts/generate_figures.py",
-    "sha256": "6443ff9b94dbd01bb4478eb76756c3a594572629bfe739507d0dc226485db644",
+    "sha256": "c9dc6498b8468a8325e0e77cab31640e475172701c16f8d860b347b9faac2f30",
     "source_artifacts": [
       {
         "digest": "546f3547b727d08d452e7687191589e35839888285c622e8e639bdc6843d1b6b",
