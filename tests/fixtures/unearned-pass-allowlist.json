@@ -623,40 +623,6 @@
     },
     {
       "file": "src/tcop/context_comparator.py",
-      "function": "run_context_comparator",
-      "field": "source_dependencies_unmodified",
-      "fingerprint": "65539fcc45032f716d3b556e2be55c6e4ccf05acb9028161a78bc5d794ad877c",
-      "line": 261,
-      "class": "A",
-      "reason": "source_dependencies_unmodified is asserted after generation without a post-run source digest comparison.",
-      "source": "{'artifact_type': 'context-value-comparator', 'version': VERSION, 'complete': True, 'replayable': True, 'source_dependencies_unmodified': True, 'normalized_row_count': len(rows), 'result_digest': _digest(rows), 'controls_passed': all((row['passed'] for row in controls))}",
-      "tracking": {
-        "issue": "docs/KNOWN_ISSUES.md",
-        "finding": "docs/unearned-pass-issues.md#uep-019",
-        "sealed_artifact": "artifacts/context-value-comparator-v1/manifest.json",
-        "sealed_artifact_present": true,
-        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
-      }
-    },
-    {
-      "file": "src/tcop/context_comparator.py",
-      "function": "run_context_comparator",
-      "field": "controls_passed",
-      "fingerprint": "bc9f0fc35492dec6aa5fae71f148b57d18743a34d2f32e76af8631b70606e44c",
-      "line": 263,
-      "class": "A",
-      "reason": "controls_passed in the returned summary is unconditional rather than aggregated from the control outcomes. The manifest uses all(), but inherits the fabricated controls.",
-      "source": "{'artifact_dir': str(output), 'rows': len(rows), 'controls_passed': True, 'artifact_root_digest': _root_digest(output), 'summary': summary}",
-      "tracking": {
-        "issue": "docs/KNOWN_ISSUES.md",
-        "finding": "docs/unearned-pass-issues.md#uep-020",
-        "sealed_artifact": "artifacts/context-value-comparator-v1/controls/control-results.json",
-        "sealed_artifact_present": true,
-        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
-      }
-    },
-    {
-      "file": "src/tcop/context_comparator.py",
       "function": "verify_context_comparator",
       "field": "valid",
       "fingerprint": "32b8479a849de18f85327fb885af58455db9f17d977c226321c83aa4d3482adc",
@@ -1362,6 +1328,86 @@
       "class": "C",
       "reason": "Authored accepted receive-event fixture for a replay-rejection test; not a reported check result.",
       "source": "signature_valid=True"
+    },
+    {
+      "file": "paper/usenix27/scripts/paperlib.py",
+      "function": "failure_control_rows",
+      "field": "passed",
+      "fingerprint": "c5c273141b249ce332b16f82da0b0d5197eb9d74c8cd47803ae7ccd91b4b3564",
+      "line": 101,
+      "class": "C",
+      "reason": "Expected-record pattern: the build fails unless the sealed signed-envelope mutation record matches it exactly; the reported pass is read from that sealed record."
+    },
+    {
+      "file": "paper/usenix27/scripts/paperlib.py",
+      "function": "failure_control_rows",
+      "field": "passed",
+      "fingerprint": "cdb6ce3723d5fb04aed3a9ce6f4bd1f0fda640d8b654c6228c7c651433ed0a62",
+      "line": 103,
+      "class": "C",
+      "reason": "Expected-record pattern: the build fails unless the sealed signed-envelope mutation record matches it exactly; the reported pass is read from that sealed record."
+    },
+    {
+      "file": "paper/usenix27/scripts/paperlib.py",
+      "function": "extract_results",
+      "field": "all_passed",
+      "fingerprint": "59e9f5dc6445af5c4aef3e1d096d743332af8f1fdb2397e375638cd327e0373e",
+      "line": 917,
+      "class": "C",
+      "reason": "Expected-manifest pattern: extraction fails unless the sealed independent-warning v2 manifest gates equal it."
+    },
+    {
+      "file": "paper/usenix27/scripts/paperlib.py",
+      "function": "extract_results",
+      "field": "stable",
+      "fingerprint": "59e9f5dc6445af5c4aef3e1d096d743332af8f1fdb2397e375638cd327e0373e",
+      "line": 918,
+      "class": "C",
+      "reason": "Expected-manifest pattern: extraction fails unless the sealed independent-warning v2 manifest gates equal it."
+    },
+    {
+      "file": "paper/usenix27/scripts/paperlib.py",
+      "function": "repository_link_row",
+      "field": "valid",
+      "fingerprint": "5627f79ed6e41580cdf54547dd4ba927dfa07ab187adcb9ab5de652ff4d5a31b",
+      "line": 2477,
+      "class": "B",
+      "reason": "Default for external links outside the repository check; repository links recompute valid from tracked_at_head and pinned_to_tag, and any invalid row fails the preprint gate."
+    },
+    {
+      "file": "src/tcop/context_comparator.py",
+      "function": "_seal",
+      "field": "source_dependencies_unmodified",
+      "fingerprint": "832a8f7faa1662acc00d4c4a550c756f08042c51cf71ceb3fc2526040a34576b",
+      "line": 289,
+      "class": "A",
+      "reason": "source_dependencies_unmodified is asserted after generation without a post-run source digest comparison.",
+      "source": "{'artifact_type': 'context-value-comparator', 'version': VERSION, 'complete': True, 'replayable': True, 'source_dependencies_unmodified': True, 'normalized_row_count': len(rows), 'result_digest': _digest(rows), 'controls_passed': all((row['passed'] for row in controls))}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-019",
+        "sealed_artifact": "artifacts/context-value-comparator-v1/manifest.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/context_comparator_v2.py",
+      "function": "run_context_comparator_v2",
+      "field": "normalized_rows_identical",
+      "fingerprint": "61844fa9535383badc12ad7b608f6ba872d67b6573a01955e8639f692e8e6d75",
+      "line": 214,
+      "class": "B",
+      "reason": "Guarded by _seal's expected_result_digest check (context_comparator.py:269), which raises if v2's normalized rows differ from v1's result digest."
+    },
+    {
+      "file": "src/tcop/context_comparator_v2.py",
+      "function": "verify_context_comparator_v2",
+      "field": "valid",
+      "fingerprint": "7a9b66885e88c755e260f90b1b6aee0e11b3508cd7acb6b4a6fbd99c8359f2a4",
+      "line": 234,
+      "class": "B",
+      "reason": "Returned only after digest, completeness, earned-pass, and replay checks that raise on failure."
     }
   ]
 }
