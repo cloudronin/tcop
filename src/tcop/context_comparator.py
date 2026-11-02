@@ -14,7 +14,7 @@ import tempfile
 from dataclasses import dataclass
 from hashlib import sha256
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
 
 from .canonical import canonical_bytes
 from .cli_support import EXIT_FROZEN_INPUT, EXIT_INVARIANT, TCOPCommandError
@@ -202,6 +202,9 @@ def _fixture_actions() -> list[tuple[str, str, dict[str, Any], ArrivalToken, Val
 
 def _controls() -> list[dict[str, Any]]:
     # The dispatcher never creates a token from a failed receiver validation.
+    # These v1 rows assert that property without executing it; they are kept
+    # unchanged so the sealed v1 artifact still rebuilds. context_comparator_v2
+    # executes every control and computes ``passed`` from the outcome.
     rejected = ("invalid_signature", "unknown_receipt", "expired_context", "replayed_context")
     return [{"control": name, "condition": condition, "restriction_created": False, "passed": True, "reason": "receiver_validation_rejected_before_policy_dispatch"} for name in rejected for condition in CONDITIONS] + [{"control": "context_target_mismatch", "condition": "C2", "restriction_created": False, "passed": True, "reason": "context_binding_mismatch"}, {"control": "context_target_mismatch", "condition": "C1", "restriction_created": True, "passed": True, "reason": "arrival_only_blanket"}, {"control": "C1_opaque_interface", "condition": "C1", "restriction_created": False, "passed": True, "reason": "ArrivalToken exposes validity_time_ttl_only"}, {"control": "C3_no_tcop_message", "condition": "C3", "restriction_created": False, "passed": True, "reason": "always_policy_has_no_context_parameter"}]
 
@@ -223,13 +226,7 @@ def _svg(summary: dict[str, Any]) -> str:
     return '<svg xmlns="http://www.w3.org/2000/svg" width="620" height="240" viewBox="0 0 620 240"><rect width="100%" height="100%" fill="white"/><text x="30" y="28" font-size="16">Context comparator: prevented harmful actions / constrained benign actions</text><line x1="55" y1="170" x2="590" y2="170" stroke="black"/>' + labels + '</svg>\n'
 
 
-def run_context_comparator(output: Path = EVIDENCE_ROOT, *, federated_root: Path = FEDERATED_ROOT, live_root: Path = LIVE_ROOT) -> dict[str, Any]:
-    """Execute and seal the comparator in a new independently rooted artifact."""
-    if output.exists() and any(output.iterdir()):
-        raise TCOPCommandError(f"comparator output already exists and is non-empty: {output}")
-    if artifact_root_digest(federated_root)["artifact_root_digest"] != FEDERATED_DIGEST or _root_digest(live_root) != LIVE_DIGEST:
-        raise TCOPCommandError("frozen comparator input digest mismatch", EXIT_FROZEN_INPUT)
-    output.mkdir(parents=True, exist_ok=True)
+def _comparator_rows(federated_root: Path, live_root: Path) -> list[dict[str, Any]]:
     deterministic = _deterministic_actions(federated_root)
     live = _live_actions(live_root)
     fixture = _fixture_actions()
@@ -241,7 +238,37 @@ def run_context_comparator(output: Path = EVIDENCE_ROOT, *, federated_root: Path
     for pair, timing, action, token, context, baseline in fixture:
         for condition in CONDITIONS: rows.append(_row("policy-selectivity-fixture", pair, timing, action, condition, token, context, baseline, "controlled deterministic fixture"))
     rows.sort(key=lambda row: (row["source_cohort"], row["pair_key"], row["action_id"]))
-    summary, controls = _summary(rows), _controls()
+    return rows
+
+
+def run_context_comparator(output: Path = EVIDENCE_ROOT, *, federated_root: Path = FEDERATED_ROOT, live_root: Path = LIVE_ROOT) -> dict[str, Any]:
+    """Execute and seal the comparator in a new independently rooted artifact."""
+    return _seal(output, federated_root=federated_root, live_root=live_root, version=VERSION, controls=_controls, command="tcop study comparator run")
+
+
+def _seal(
+    output: Path,
+    *,
+    federated_root: Path,
+    live_root: Path,
+    version: str,
+    controls: Callable[[], list[dict[str, Any]]],
+    command: str,
+    expected_result_digest: str | None = None,
+    manifest_extra: dict[str, Any] | None = None,
+    digest_root: Callable[[Path], str] = _root_digest,
+    environment_file: str = "environment.json",
+) -> dict[str, Any]:
+    """Write one comparator artifact; later versions change only controls and manifest metadata."""
+    if output.exists() and any(output.iterdir()):
+        raise TCOPCommandError(f"comparator output already exists and is non-empty: {output}")
+    if artifact_root_digest(federated_root)["artifact_root_digest"] != FEDERATED_DIGEST or _root_digest(live_root) != LIVE_DIGEST:
+        raise TCOPCommandError("frozen comparator input digest mismatch", EXIT_FROZEN_INPUT)
+    output.mkdir(parents=True, exist_ok=True)
+    rows = _comparator_rows(federated_root, live_root)
+    if expected_result_digest is not None and _digest(rows) != expected_result_digest:
+        raise TCOPCommandError("comparator rows differ from the superseded version", EXIT_INVARIANT)
+    summary, controls = _summary(rows), controls()
     census = {"frozen_strict_pairs": 54, "frozen_live_traces": 44, "frozen_live_replay_pairs": 220, "frozen_benign_calls": 360, "selectivity_cohort": "controlled policy-selectivity fixture", "exclusion_reason": "no frozen episode has both a matching harmful action and a nonmatching benign action in the same guarded capability class"}
     policy = {"policy_id": "context-value-comparator-v1", "C1": {"allowed_input": ["validity", "arrival_time", "ttl"], "rule": "restrict guarded capability class during TTL"}, "C2": {"allowed_input": ["issuer", "signature_result", "observation_id", "receipt_ref", "capability_class", "subject", "resource_namespace", "scope", "issue_expiry", "receiver_local_authorization"], "rule": "restrict only locally matching bindings during TTL", "forbidden": ["scenario", "harm", "treatment", "oracle"]}, "C3": {"tcop_message_access": "none", "rule": "restrict guarded capability class for episode"}}
     _write(output / "policy" / "context-value-comparator-v1.json", policy)
@@ -257,10 +284,11 @@ def run_context_comparator(output: Path = EVIDENCE_ROOT, *, federated_root: Path
     _write(output / "tables" / "paired-outcomes.json", summary["by_condition"])
     (output / "figures").mkdir(parents=True, exist_ok=True); (output / "figures" / "security-availability.svg").write_text(_svg(summary), encoding="utf-8")
     _write(output / "claims" / "claim-ledger.json", [{"claim": "With identical arrival timing, C2 preserved matching harmful containment and constrained fewer benign fixture actions than C1.", "status": "supported", "scope": "controlled policy-selectivity fixture and deterministic replay only"}, {"claim": "TCOP universally dominates always-on containment.", "status": "not_claimed"}])
-    _write(output / "environment.json", {"python": sys.version.split()[0], "execution": "deterministic replay only", "command": "tcop study comparator run"})
-    _write(output / "manifest.json", {"artifact_type": "context-value-comparator", "version": VERSION, "complete": True, "replayable": True, "source_dependencies_unmodified": True, "normalized_row_count": len(rows), "result_digest": _digest(rows), "controls_passed": all(row["passed"] for row in controls)})
-    _write(output / "artifact-root-digest.json", {"algorithm": "sha256-canonical-json", "artifact_root_digest": _root_digest(output)})
-    return {"artifact_dir": str(output), "rows": len(rows), "controls_passed": True, "artifact_root_digest": _root_digest(output), "summary": summary}
+    _write(output / environment_file, {"python": sys.version.split()[0], "execution": "deterministic replay only", "command": command})
+    controls_passed = all(row["passed"] for row in controls)
+    _write(output / "manifest.json", {"artifact_type": "context-value-comparator", "version": version, "complete": True, "replayable": True, "source_dependencies_unmodified": True, "normalized_row_count": len(rows), "result_digest": _digest(rows), "controls_passed": controls_passed, **(manifest_extra or {})})
+    _write(output / "artifact-root-digest.json", {"algorithm": "sha256-canonical-json", "artifact_root_digest": digest_root(output)})
+    return {"artifact_dir": str(output), "rows": len(rows), "controls_passed": controls_passed, "artifact_root_digest": digest_root(output), "summary": summary}
 
 
 def verify_context_comparator(root: Path) -> dict[str, Any]:

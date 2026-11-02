@@ -40,6 +40,7 @@ from .confirmation_benchmark import (
     run_confirmation_suite,
 )
 from .context_comparator import EVIDENCE_ROOT as COMPARATOR_ROOT, run_context_comparator, verify_context_comparator
+from .context_comparator_v2 import EVIDENCE_ROOT as COMPARATOR_V2_ROOT, run_context_comparator_v2, verify_context_comparator_v2
 from .validation_value import ROOT as VALIDATION_VALUE_ROOT, run_validation_value, verify_validation_value
 from .external_adaptive_crosshost import (
     ROOT as EXTERNAL_ADAPTIVE_ROOT,
@@ -266,6 +267,12 @@ def _add_study_and_artifact(commands: argparse._SubParsersAction[argparse.Argume
     comparator_run.add_argument("--output", type=Path, default=COMPARATOR_ROOT); _format(comparator_run)
     comparator_verify = comparator_nested.add_parser("verify", help="verify a sealed context-value comparator artifact")
     comparator_verify.add_argument("--artifact-dir", type=Path, default=COMPARATOR_ROOT); _format(comparator_verify)
+    comparator_v2 = nested.add_parser("comparator-v2", help="run or verify context-value comparator v2, whose controls are executed rather than asserted")
+    comparator_v2_nested = comparator_v2.add_subparsers(dest="comparator_v2_command", required=True)
+    comparator_v2_run = comparator_v2_nested.add_parser("run", help="rebuild the v1 comparator rows and execute every control through the receiver intake")
+    comparator_v2_run.add_argument("--output", type=Path, default=COMPARATOR_V2_ROOT); _format(comparator_v2_run)
+    comparator_v2_verify = comparator_v2_nested.add_parser("verify", help="verify a sealed comparator v2 artifact and re-execute its controls")
+    comparator_v2_verify.add_argument("--artifact-dir", type=Path, default=COMPARATOR_V2_ROOT); _format(comparator_v2_verify)
     validation_value = nested.add_parser("validation-value", help="run or verify the separately rooted TCX validation-value v2 study")
     validation_nested = validation_value.add_subparsers(dest="validation_value_command", required=True)
     validation_run = validation_nested.add_parser("run", help="run the deterministic v2 mixed-action, hostile-peer, correlation, and protocol-assurance workstreams")
@@ -555,6 +562,9 @@ def dispatch(args: argparse.Namespace) -> tuple[Any, str]:
         if args.study_command == "comparator":
             if args.comparator_command == "run": return run_context_comparator(args.output), args.format
             if args.comparator_command == "verify": return verify_context_comparator(args.artifact_dir), args.format
+        if args.study_command == "comparator-v2":
+            if args.comparator_v2_command == "run": return run_context_comparator_v2(args.output), args.format
+            if args.comparator_v2_command == "verify": return verify_context_comparator_v2(args.artifact_dir), args.format
         if args.study_command == "validation-value":
             if args.validation_value_command == "run": return run_validation_value(args.output, args.plan), args.format
             if args.validation_value_command == "verify": return verify_validation_value(args.artifact_dir), args.format

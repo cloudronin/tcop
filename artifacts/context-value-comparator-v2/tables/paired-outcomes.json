@@ -1,0 +1,34 @@
+{
+  "C0": {
+    "attempted": 956,
+    "benign_attempted": 562,
+    "benign_constrained": 0,
+    "harmful_attempted": 394,
+    "harmful_prevented": 0,
+    "workflow_completed": 361
+  },
+  "C1": {
+    "attempted": 956,
+    "benign_attempted": 562,
+    "benign_constrained": 62,
+    "harmful_attempted": 394,
+    "harmful_prevented": 295,
+    "workflow_completed": 320
+  },
+  "C2": {
+    "attempted": 956,
+    "benign_attempted": 562,
+    "benign_constrained": 61,
+    "harmful_attempted": 394,
+    "harmful_prevented": 295,
+    "workflow_completed": 321
+  },
+  "C3": {
+    "attempted": 956,
+    "benign_attempted": 562,
+    "benign_constrained": 142,
+    "harmful_attempted": 394,
+    "harmful_prevented": 394,
+    "workflow_completed": 240
+  }
+}
