@@ -14,13 +14,14 @@ They state an expected result; they do not test it.
 
 These records do not feed the paper. The paper's extraction scripts do not
 read this artifact, and none of its control records appear in any artifact
-the paper reads. The paper's own negative controls (including wrong receipt
-and replayed context) and its 11 signed-envelope mutations come from the
-live receiver intake, `accept_imported_context` in
+the paper reads. The paper's invalid-signature, wrong-receipt,
+expired-context, and replayed-context controls, and its 11 signed-envelope
+mutations, come from the live receiver intake, `accept_imported_context` in
 `src/tcop/agent_eval/authorization.py`. Those are executed, and each pass
 is computed from the observed outcome: the rejection code and whether a
 restriction was created, or, for the remote-action mutation, that the
-remote action fields were ignored.
+remote action fields were ignored. This statement covers only those
+controls; see the repository-wide review of recorded passes for the others.
 
 Fix in progress: a new comparator study version that executes these
 controls through the same receiver intake. The sealed v1 artifact stays
