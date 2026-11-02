@@ -278,7 +278,7 @@ def simulate_episode(calibration: dict[str, Any], profile: dict[str, Any], *, se
             if item["representable"]:
                 push(at + profile["a4_after_stop_ms"] + item["offset_ms"], 1, "a4_start", item)
 
-    push(action_interval_ms, 1, "harmful", 0)
+    push(action_interval_ms, -1, "harmful", 0)
     while queue:
         at, _, _, kind, payload = heapq.heappop(queue)
         event = {"at_ms": at, "event": kind}
@@ -290,7 +290,7 @@ def simulate_episode(calibration: dict[str, Any], profile: dict[str, Any], *, se
             result = harmful[index]
             if not action["representable"]:
                 if index > 0 and index < 3:
-                    push(at + profile["retry_intervals_ms"][index], 1, "harmful", index + 1)
+                    push(at + profile["retry_intervals_ms"][index], -1, "harmful", index + 1)
                 else:
                     stop(at)
             else:
@@ -301,7 +301,7 @@ def simulate_episode(calibration: dict[str, Any], profile: dict[str, Any], *, se
                 if reason and first_block is None:
                     first_block = at
                 if reason and index < 3:
-                    push(at + profile["retry_intervals_ms"][index], 1, "harmful", index + 1)
+                    push(at + profile["retry_intervals_ms"][index], -1, "harmful", index + 1)
                 else:
                     stop(at)
         elif kind == "a4_start":

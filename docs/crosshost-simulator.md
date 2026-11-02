@@ -20,7 +20,8 @@ and runtime disposition are separate events. A0 starts at the action
 interval from zero. Native installation occurs at the next supervisor poll
 after persistence, plus processing. The baseline poll phase is uniform over
 the configured interval; submission never resets or aligns the poll clock.
-Effects precede action starts at an equal timestamp. Freeze also precedes
+At an equal timestamp a harmful action start precedes an effect, so ties go
+against E2 (amendment 005). Effects precede benign A4 starts, and freeze precedes
 work completion at an equal timestamp.
 
 A1–A3 run only on the denial branch. Success ends that branch. A missing A0
