@@ -34,6 +34,7 @@ def generate_prediction(calibration: dict[str, Any], profiles: Iterable[dict[str
     validate_calibration(calibration)
     require(not sealed_eligible or calibration["status"] == "calibrated",
             "provisional calibration cannot produce a sealed-eligible prediction")
+    require(not sealed_eligible or transition_samples == 1024, "005 sealed grid requires 1024 seeded samples")
     profiles = list(profiles)
     placement = place_grid(calibration, profiles, seed=seed, samples=transition_samples)
     simulation = simulate_grid(calibration, profiles, seed=seed,

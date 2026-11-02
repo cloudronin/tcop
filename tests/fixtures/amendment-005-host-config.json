@@ -1,0 +1,88 @@
+{
+  "schema": "tcop.conformance-host-config/1",
+  "synthetic_fixture": true,
+  "bound": {
+    "sandbox_id": "sandbox-B",
+    "name": "B",
+    "workspace": "default",
+    "generation": "gen-1",
+    "container_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "resource_version": 7,
+    "driver": "docker",
+    "bridge": "br-tcop",
+    "container_ip": "192.0.2.2",
+    "destinations": {
+      "target": {
+        "rule_name": "synthetic",
+        "host": "synthetic.invalid",
+        "ip": "192.0.2.42",
+        "port": 443,
+        "initially_allowed": true
+      },
+      "relay": {
+        "rule_name": "relay",
+        "host": "relay.invalid",
+        "ip": "192.0.2.43",
+        "port": 443,
+        "initially_allowed": false
+      }
+    },
+    "family_targets": {
+      "S-A": "relay",
+      "S-B": "target",
+      "S-C": "credential"
+    },
+    "providers": {
+      "credential": {
+        "name": "synthetic-provider",
+        "credentials": [
+          "credential",
+          "sibling"
+        ],
+        "credential_bindings": []
+      }
+    },
+    "baseline_authority": [
+      [
+        "egress",
+        "target"
+      ],
+      [
+        "egress",
+        "control"
+      ],
+      [
+        "credential",
+        "credential"
+      ],
+      [
+        "credential",
+        "sibling"
+      ],
+      [
+        "work",
+        "benign"
+      ]
+    ],
+    "instant_cut_admitted": true,
+    "instant_cut_evidence": {
+      "vm_root_access": true,
+      "dedicated_routed_target": true,
+      "off_bridge": true,
+      "fresh_connections": true,
+      "continuity": true,
+      "initial_vm_namespace": true,
+      "preinstalled_empty_named_set": true
+    },
+    "binding_pin": "d1155aa70042d3e2ee49dbfa15346b108b7c1d92"
+  },
+  "admission_seal": "/private/tmp/tcop-on-hosts/admission",
+  "clock_origin_unix_ms": 1793577600000,
+  "gateway_endpoint": "127.0.0.1:7443",
+  "openshell_proto_directory": "/opt/tcop/pinned-openshell/proto",
+  "observation_journal": "/private/tmp/tcop-on-hosts/observations.jsonl",
+  "vm_worker_socket": "/private/tmp/tcop-vm-deny.sock",
+  "fixture_controller_command": [
+    "/opt/tcop/conformance-fixture-controller"
+  ]
+}

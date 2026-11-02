@@ -22,7 +22,13 @@ class ManifestVersionTests(unittest.TestCase):
 from copy import deepcopy
 from unittest.mock import patch
 from tcop.cli_support import load_config
-from tcop.external_adaptive_crosshost import PLAN, _effective_plan_contract, _preflight, run_external_adaptive
+from tcop.external_adaptive_crosshost import PLAN, _effective_plan_contract, _preflight, run_external_adaptive as _run_external_adaptive
+
+# Frozen 1.4 plan keeps the legacy artifact regressions independent of the
+# current default plan. Current plan/manifest checks live in v15 tests.
+PLAN = Path('tests/fixtures/amendment-004-plan-1.4.json')
+def run_external_adaptive(output, plan_path=PLAN, **kwargs):
+    return _run_external_adaptive(output, plan_path, **kwargs)
 
 class PlanAndSealTests(unittest.TestCase):
     def setUp(self):

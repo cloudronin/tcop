@@ -27,11 +27,14 @@ from .external_foundation_seals import read_json, require, ensure_unsealed_outpu
 from .external_enforcement_validation import (AM004_SHA256, PROVISIONAL_INTERVALS,
     validate_plan_v14, validate_enforcement_records)
 
+from .external_trace_validation import AM005_SHA256, validate_plan_v15, plan_v14_projection
+
 AMENDMENT_TARGETS = {
     "001": "001-stix-taxii-comparator.md",
     "002": "002-adaptive-mismatch-timing.md",
     "003": "003-enforcement-ladder.md",
     "004": "004-runtime-bindings.md",
+    "005": "005-trace-intake-conventions.md",
 }
 LEGACY_CONDITIONS = ["E0", "E1", "E2", "E2M", "E2E", "E3", "S1", "T2", "S2"]
 OWNER_BLOCKERS = [
@@ -69,8 +72,8 @@ def _ladder_contract(plan: dict[str, Any], amendments: dict[str, Any]) -> bool:
     policy = ladder.get("policy")
     amendment = amendments.get("003", {})
     return bool(
-        str(plan.get("effective_plan_revision")) in {"1.3", "1.4"}
-        and plan.get("plan_status") == ("amendments_001_002_003_004_integrated_pending_external_timestamp" if str(plan.get("effective_plan_revision")) == "1.4" else "amendments_001_002_003_integrated_pending_external_timestamp")
+        str(plan.get("effective_plan_revision")) in {"1.3", "1.4", "1.5"}
+        and plan.get("plan_status") == ("amendments_001_002_003_004_005_integrated_pending_external_timestamp" if str(plan.get("effective_plan_revision")) == "1.5" else "amendments_001_002_003_004_integrated_pending_external_timestamp" if str(plan.get("effective_plan_revision")) == "1.4" else "amendments_001_002_003_integrated_pending_external_timestamp")
         and amendment.get("source") == "spec/external-warning-adaptive-crosshost-amendment-003.md"
         and amendment.get("status") == "incorporated_before_external_timestamp"
         and text_values(arms, {"E0", "E1", "E2"}) and text_values(modes, {"E2a", "E2b"})
@@ -78,7 +81,7 @@ def _ladder_contract(plan: dict[str, Any], amendments: dict[str, Any]) -> bool:
         and policy == {"tier": "required_at_admission", "presets": "required_at_admission",
                        "installed_effective_baseline_sha256": "required_at_admission"}
         and ladder.get("topology") == "three_distinct_physical_machines_runner_A_B"
-        and ("open_owner_issues" not in ladder if str(plan.get("effective_plan_revision")) == "1.4" else ladder.get("open_owner_issues") == [7, 8, 10])
+        and ("open_owner_issues" not in ladder if str(plan.get("effective_plan_revision")) in {"1.4", "1.5"} else ladder.get("open_owner_issues") == [7, 8, 10])
         and all(isinstance(ladder.get(key), str) and ladder[key].strip() for key in
                 ("admission_record", "role_script_directory", "role_census", "expected_pattern", "expected_pattern_seal"))
         and plan.get("conditions") == LEGACY_CONDITIONS
@@ -97,14 +100,21 @@ def _effective_plan_contract(plan: dict[str, Any]) -> dict[str, Any]:
     adaptive_ok = isinstance(branch_matrix, dict) and set(branch_matrix) == {"A0", "A1", "A2", "A3", "A4"} and "adaptive_retry_ladder" not in plan
     broader = plan.get("valid_broader_risk", {})
     broader_ok = isinstance(broader, dict) and broader.get("candidate_census") == "required_before_held_out_execution" and broader.get("empty_population_disposition") == "incomplete_for_mismatch_escalation_claims"
-    timing_ok = isinstance(timing, dict) and timing.get("network_delay_ms") == [10, 50, 100, 250] and timing.get("action_interval_ms") == (PROVISIONAL_INTERVALS if str(plan.get("effective_plan_revision")) == "1.4" else [25, 100, 250, 500]) and timing.get("impairment_implementation") == "isolated_two_host_network_interface_only" and timing.get("forbidden_implementation") == "application_level_sleep"
+    timing_ok = isinstance(timing, dict) and timing.get("network_delay_ms") == [10, 50, 100, 250] and timing.get("action_interval_ms") == (PROVISIONAL_INTERVALS if str(plan.get("effective_plan_revision")) in {"1.4", "1.5"} else [25, 100, 250, 500]) and timing.get("impairment_implementation") == "isolated_two_host_network_interface_only" and timing.get("forbidden_implementation") == "application_level_sleep"
     amendment_004 = False
+    amendment_005 = False
     try:
-        validate_plan_v14(plan)
+        validate_plan_v14(plan_v14_projection(plan) if str(plan.get("effective_plan_revision")) == "1.5" else plan)
         amendment_004 = unique_amendments and _ladder_contract(plan, amendments)
     except (TCOPCommandError, KeyError, TypeError, ValueError, IndexError, StopIteration):
         pass
-    return {"amendment_004": amendment_004, "amendment_001": "001" in amendments, "amendment_002": "002" in amendments, "amendment_003": unique_amendments and _ladder_contract(plan, amendments), "composition_conditions": composition_ok, "adaptive_branch_matrix": adaptive_ok, "valid_broader_risk": broader_ok, "timing_phase_diagram": timing_ok, "amendments": amendments}
+    if str(plan.get("effective_plan_revision")) == "1.5":
+        try:
+            validate_plan_v15(plan)
+            amendment_005 = unique_amendments and _ladder_contract(plan, amendments)
+        except (TCOPCommandError, KeyError, TypeError, ValueError, AttributeError, IndexError, StopIteration):
+            pass
+    return {"amendment_005": amendment_005, "amendment_004": amendment_004, "amendment_001": "001" in amendments, "amendment_002": "002" in amendments, "amendment_003": unique_amendments and _ladder_contract(plan, amendments), "composition_conditions": composition_ok, "adaptive_branch_matrix": adaptive_ok, "valid_broader_risk": broader_ok, "timing_phase_diagram": timing_ok, "amendments": amendments}
 
 def _preflight(plan: dict[str, Any], *, admission: Path | None = None,
                census: Path | None = None, expected_pattern: Path | None = None) -> dict[str, Any]:
@@ -166,13 +176,17 @@ def _preflight(plan: dict[str, Any], *, admission: Path | None = None,
         blockers.append("AM003_EXPECTED_PATTERN: " + str(exc))
     if not contract["amendment_003"]:
         blockers.append("AM003_EFFECTIVE_PLAN: amendment 003 ladder contract is missing or malformed")
-    if str(plan.get("effective_plan_revision")) == "1.4":
+    if str(plan.get("effective_plan_revision")) in {"1.4", "1.5"}:
+        if str(plan.get("effective_plan_revision")) == "1.5" and not contract["amendment_005"]:
+            blockers.append("AM005_EFFECTIVE_PLAN: sealed trace/intake/timing contract is missing or malformed")
         if not contract["amendment_004"]:
             blockers.append("AM004_EFFECTIVE_PLAN: amendment 004 sealed binding/grid contract is missing or malformed")
         try:
             require(admission_value is not None and census_value is not None and prediction_value is not None,
                     "verified admission, census and prediction foundations required")
             records = admission_value["record"].get("validation_records")
+            if str(plan.get("effective_plan_revision")) == "1.5":
+                require(isinstance(records, dict) and records.get("schema") == "tcop.external-enforcement-validation/1.1", "AM005_VALIDATION_RECORDS: 005 gate records required")
             checked = validate_enforcement_records(records, purpose="admission")
             _bind_validation_foundations(records, plan, admission_value, census_value, prediction_value,
                                          Path(foundation_paths["role-census"]))
@@ -201,8 +215,9 @@ def run_external_adaptive(output: Path = ROOT, plan_path: Path = PLAN, *, admiss
     amendment_hashes: dict[str, str] = {}
     _write(output / "study-plan.yaml", plan); _write(output / "plan.canonical.json", json.loads(canonical)); (output / "plan.sha256").write_text(plan_hash + "\n", encoding="utf-8")
     (output / "amendments").mkdir(parents=True, exist_ok=True)
-    version = "1.3" if str(plan.get("effective_plan_revision")) == "1.3" else "1.4"
-    targets = {k:v for k,v in AMENDMENT_TARGETS.items() if version == "1.4" or k != "004"}
+    version = str(plan.get("effective_plan_revision"))
+    require(version in {"1.3", "1.4", "1.5"}, "unsupported effective plan revision")
+    targets = {k:v for k,v in AMENDMENT_TARGETS.items() if int(k) <= int(version[-1])}
     for amendment_id, target in targets.items():
         source = Path(str(amendments.get(amendment_id, {}).get("source", f"spec/external-warning-adaptive-crosshost-amendment-{amendment_id}.md"))); content_hash = sha256(source.read_bytes()).hexdigest(); amendment_hashes[amendment_id] = content_hash
         shutil.copyfile(source, output / "amendments" / target)
@@ -251,7 +266,7 @@ def _bind_validation_foundations(records: dict[str, Any], plan: dict[str, Any], 
 
 
 def _verify_13(root: Path, manifest: dict[str, Any], *, version: str = "1.3") -> None:
-    is_14 = version == "1.4"
+    is_14 = version in {"1.4", "1.5"}
     blocked = manifest.get("status") == "BLOCKED"
     require(manifest.get("artifact_type") == "external-warning-adaptive-crosshost"
             and (manifest.get("complete") is False if blocked else is_14 and manifest.get("complete") is True),
@@ -266,7 +281,7 @@ def _verify_13(root: Path, manifest: dict[str, Any], *, version: str = "1.3") ->
             "external-study effective plan mismatch")
     require(effective.get("amendment_hashes") == manifest.get("amendment_hashes"), "effective amendment hashes differ")
     amendments = _effective_plan_contract(plan)["amendments"]
-    for key in (AMENDMENT_TARGETS if is_14 else ("001", "002", "003")):
+    for key in (k for k in AMENDMENT_TARGETS if int(k) <= int(version[-1])):
         metadata = read_json(root / "amendments" / f"{key}.canonical.json")
         expected = manifest["amendment_hashes"][key]
         require(metadata == {"id": key, "path": amendments.get(key, {}).get("source", f"spec/external-warning-adaptive-crosshost-amendment-{key}.md"), "sha256": expected}, "amendment canonical sidecar mismatch")
@@ -307,10 +322,13 @@ def _verify_13(root: Path, manifest: dict[str, Any], *, version: str = "1.3") ->
             actual = predicted["record_sha256"]
         require(actual == hashes[kind], f"{kind} manifest hash mismatch")
     if is_14:
-        require(str(plan.get("effective_plan_revision")) == "1.4", "manifest/plan version mismatch")
+        require(str(plan.get("effective_plan_revision")) == version, "manifest/plan version mismatch")
         pin = amendments.get("004", {}).get("sha256")
         require(pin == AM004_SHA256 == manifest["amendment_hashes"]["004"], "amendment 004 differs from the plan's pinned seal hash")
         contract = _effective_plan_contract(plan)
+        if version == "1.5":
+            require(amendments.get("005", {}).get("sha256") == AM005_SHA256 == manifest["amendment_hashes"]["005"], "amendment 005 differs from the plan pinned seal hash")
+            require(contract["amendment_005"] or (blocked and any(b.startswith("AM005_EFFECTIVE_PLAN:") for b in blockers)), "malformed 005 contract lacks named blocker")
         if not contract["amendment_004"]:
             require(blocked and any(b.startswith("AM004_EFFECTIVE_PLAN:") for b in blockers), "malformed 004 contract lacks its blocker")
         reference = manifest.get("validation_records_sha256")
@@ -321,6 +339,8 @@ def _verify_13(root: Path, manifest: dict[str, Any], *, version: str = "1.3") ->
         else:
             records = read_json(path)
             require(_digest(records) == reference, "validation record content hash differs")
+            if version == "1.5":
+                require(records.get("schema") == "tcop.external-enforcement-validation/1.1", "005 records required")
             validate_enforcement_records(records, purpose="verify")
             require(admitted is not None and censused is not None and predicted is not None, "gate records require all foundation seals")
             _bind_validation_foundations(records, plan, admitted, censused, predicted, root / "foundations/role-census")
@@ -334,11 +354,11 @@ def verify_external_adaptive(root: Path) -> dict[str, Any]:
     try:
         manifest = read_json(root / "manifest.json")
         version = manifest.get("version")
-        require(version in {"1.1", "1.2", "1.3", "1.4"}, "unknown external-study manifest version")
+        require(version in {"1.1", "1.2", "1.3", "1.4", "1.5"}, "unknown external-study manifest version")
         expected = read_json(root / "artifact-root-digest.json")["artifact_root_digest"]
         actual = _root_digest(root)
         require(actual == expected, "external-study artifact root changed")
-        if version == "1.4":
+        if version in {"1.4", "1.5"}:
             status = manifest.get("status")
             require(status in {"BLOCKED", "COMPLETE", "SMOKE_INVALID_FOR_RESULTS"}, "unknown 1.4 status")
             if status == "BLOCKED":
@@ -358,23 +378,25 @@ def verify_external_adaptive(root: Path) -> dict[str, Any]:
             amendment = root / "amendments" / AMENDMENT_TARGETS["001"]
             require(amendment.is_file() and sha256(amendment.read_bytes()).hexdigest() == manifest.get("amendment_hash"), "external-study amendment artifact is invalid")
         else:
-            targets = {k: AMENDMENT_TARGETS[k] for k in (("001", "002", "003", "004") if version == "1.4" else ("001", "002", "003") if version == "1.3" else ("001", "002"))}
+            targets = {k: AMENDMENT_TARGETS[k] for k in (("001", "002", "003", "004", "005") if version == "1.5" else ("001", "002", "003", "004") if version == "1.4" else ("001", "002", "003") if version == "1.3" else ("001", "002"))}
             hashes = manifest.get("amendment_hashes")
             require(isinstance(hashes, dict) and set(hashes) == set(targets), "external-study amendment hashes are invalid")
             for key, target in targets.items():
                 amendment = root / "amendments" / target
                 require(amendment.is_file() and sha256(amendment.read_bytes()).hexdigest() == hashes[key], "external-study amendment artifact is invalid")
-            if version in {"1.3", "1.4"}:
+            if version in {"1.3", "1.4", "1.5"}:
                 _verify_13(root, manifest, version=version)
-        return {"valid": True, "version": version, "status": manifest["status"], "valid_for_results": version == "1.4" and manifest.get("valid_for_results") is True, "artifact_root_digest": actual, "blockers": manifest["blockers"]}
+        return {"valid": True, "version": version, "status": manifest["status"], "valid_for_results": version in {"1.4", "1.5"} and manifest.get("valid_for_results") is True, "artifact_root_digest": actual, "blockers": manifest["blockers"]}
     except (OSError, ValueError, KeyError, TypeError) as exc:
         raise TCOPCommandError("external-study artifact is malformed") from exc
 
 
 def report_external_adaptive(root: Path) -> dict[str, Any]:
     value = verify_external_adaptive(root)
-    if value.get("version") == "1.4":
+    if value.get("version") in {"1.4", "1.5"}:
         require(value.get("valid_for_results") is True and value["status"] == "COMPLETE", "result report refuses blocked or smoke artifacts")
-        validate_enforcement_records(read_json(root / "enforcement-validation.json"), purpose="report")
+        summary = validate_enforcement_records(read_json(root / "enforcement-validation.json"), purpose="report")
+        if value.get("version") == "1.5":
+            value["trace_validation_counts"] = summary["trace_counts"]
     value["preflight"] = read_json(root / "preflight-report.json")
     return value

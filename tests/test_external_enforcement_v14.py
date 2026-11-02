@@ -9,10 +9,16 @@ from unittest.mock import patch
 
 from tcop.cli_support import TCOPCommandError, load_config
 from tcop.context_comparator import _root_digest
-from tcop.external_adaptive_crosshost import PLAN, _effective_plan_contract, _preflight, run_external_adaptive, verify_external_adaptive, report_external_adaptive
+from tcop.external_adaptive_crosshost import PLAN, _effective_plan_contract, _preflight, run_external_adaptive as _run_external_adaptive, verify_external_adaptive, report_external_adaptive
 from tcop.external_enforcement_admission import validate_admission, seal_admission, verify_admission
 from tcop.external_foundation_seals import digest, write_seal
 from test_external_enforcement_validation import fixture, ep, refresh_hashes
+
+# Frozen 1.4 plan keeps the legacy artifact regressions independent of the
+# current default plan. Current plan/manifest checks live in v15 tests.
+PLAN = Path('tests/fixtures/amendment-004-plan-1.4.json')
+def run_external_adaptive(output, plan_path=PLAN, **kwargs):
+    return _run_external_adaptive(output, plan_path, **kwargs)
 
 SEAL='9546e30627eab69924f47d595fa536da22acee8edd818d1b268eee8ba02b0706'
 
@@ -181,6 +187,7 @@ class Manifest14Tests(unittest.TestCase):
                 prediction=work/'prediction';seal_expected_pattern(bundle['expected_pattern']['body'],prediction)
                 prospective=deepcopy(bundle);prospective.update(stage='admission',status='ADMISSION',valid_for_results=False)
                 prospective['episodes']=[];prospective['frontier']=[]
+                if 'trace_validations' in prospective:prospective['trace_validations']=[]
                 for extension in prospective['extensions']:extension['contrasts']=[]
                 admitted=deepcopy(bundle['admission']);admitted['schema']='tcop.external-enforcement-admission/1.1';admitted['validation_records']=prospective
                 admission=work/'admission';clock.now.return_value=datetime(2026,11,2,0,4,tzinfo=timezone.utc)

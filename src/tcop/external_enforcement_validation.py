@@ -613,7 +613,13 @@ def _validate_records(r: dict, purpose: str) -> dict:
 def validate_enforcement_records(record: dict[str, Any], *, purpose: str = 'verify') -> dict[str, Any]:
     """Validate record semantics without touching a runtime or mutable source."""
     try:
-        return _validate_records(obj(record,'enforcement records'),purpose)
+        r = obj(record,'enforcement records')
+        if r.get('schema') == 'tcop.external-enforcement-validation/1.1':
+            from .external_trace_validation import validate_amendment005_records
+            # Preserve the complete 1.4 checker unchanged for old artifacts.
+            value = _validate_records({**r, 'schema':'tcop.external-enforcement-validation/1.0'},purpose)
+            return {**value, **validate_amendment005_records(r,purpose)}
+        return _validate_records(r,purpose)
     except (KeyError,TypeError,ValueError,IndexError,StopIteration,OverflowError) as exc:
         raise TCOPCommandError('AM004_SCHEMA: malformed enforcement record') from exc
 

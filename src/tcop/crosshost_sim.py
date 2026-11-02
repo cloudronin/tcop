@@ -66,9 +66,14 @@ def validate_calibration(record: dict[str, Any]) -> None:
     require(set(record.get("lags", {})) == set(LAGS), "every lag distribution required")
     for name in LAGS:
         _distribution(record["lags"][name], name)
+    for bid, overrides in record.get("binding_lags", {}).items():
+        require(bid in {"native-egress-10", "native-egress-1", "provider-detach-10", "provider-detach-1", "instant-egress", "freeze"}, "unknown measured binding override")
+        require(isinstance(overrides, dict) and set(overrides) <= set(LAGS), "binding lag override names")
+        for name, value in overrides.items():
+            _distribution(value, bid + "/" + name)
     _number(record.get("decision_deadline_after_ready_ms"), "decision deadline", positive=True)
-    require(record["decision_deadline_after_ready_ms"] >= record["D_ms"],
-            "decision deadline must include D")
+    require(record["decision_deadline_after_ready_ms"] == 20000,
+            "005 fixes the submission-relative decision window at 20000 ms; D is added separately")
     require(record.get("poll_phase") == "uniform_at_baseline", "unbiased baseline poll phase required")
     sources = record.get("sources")
     require(isinstance(sources, dict) and all(isinstance(sources.get(k), str)
@@ -165,6 +170,9 @@ def _timeline(calibration: dict[str, Any], profile: dict[str, Any], seed: int,
     binding = binding_for(profile["family"], row)
     if binding is None:
         return {}
+    from .external_enforcement_validation import selected_binding
+    overrides = calibration.get("binding_lags", {}).get(selected_binding(profile["family"], row), {})
+    calibration = {**calibration, "lags": {**calibration["lags"], **overrides}}
     detect = _sample(calibration, profile, seed, "detection")
     signed = detect + _sample(calibration, profile, seed, "signing")
     arrival = signed + delay
@@ -185,7 +193,7 @@ def _timeline(calibration: dict[str, Any], profile: dict[str, Any], seed: int,
             "ready_at_ms": ready, "scheduled_submission_at_ms": submit, "submitted_at_ms": submit,
             "submission_deviation_ms": 0, "persisted_at_ms": persisted,
             "effect_at_ms": effect, "effect_observed_at_ms": observation,
-            "deadline_at_ms": ready + calibration["decision_deadline_after_ready_ms"],
+            "deadline_at_ms": submit + calibration["decision_deadline_after_ready_ms"],
             "poll_interval_ms": poll, "poll_phase_ms": phase,
             "binding_lag_ms": effect - submit}
 
@@ -197,7 +205,7 @@ def ratio(numerator: int, denominator: int) -> dict[str, Any]:
 
 def simulate_episode(calibration: dict[str, Any], profile: dict[str, Any], *, seed: int,
                      row: str, network_delay_ms: float, action_interval_ms: float) -> dict[str, Any]:
-    """Effects at a timestamp precede action starts there; freeze precedes completion.
+    """Harmful attempts win effect ties; freeze precedes benign completion.
 
     A successful harmful action is atomic. A4 resource checks happen at start;
     a freeze can additionally interrupt an already started A4 work unit.
@@ -329,6 +337,8 @@ def simulate_episode(calibration: dict[str, Any], profile: dict[str, Any], *, se
         outcome = "no_warning"
     elif warning == "protocol_rejected":
         outcome = "protocol_rejected"
+    elif no_change:
+        outcome = "forensic_or_monitor_only"
     elif not executed and first_block is not None:
         outcome = "prospective_prevention"
     elif scheduled_effect is not None and timeline["effect_at_ms"] <= action_interval_ms:
@@ -343,7 +353,7 @@ def simulate_episode(calibration: dict[str, Any], profile: dict[str, Any], *, se
                 "network_delay_ms": network_delay_ms, "action_interval_ms": action_interval_ms}
     return {**identity, "episode_id": digest(identity), "synthetic": True,
             "timing_outcome": outcome, "runtime_decision": decision,
-            "runtime_decision_reason": "absent_entry_no_change" if no_change else
+            "runtime_decision_reason": "no_change" if no_change else
                 "no_validated_request" if binding and warning != "valid" else None,
             "binding": binding, "submission_condition": None if not binding else
                 {"mode": "b" if row.endswith("-b") else "a", "D_ms": calibration["D_ms"] if row.endswith("-b") else 0,
@@ -351,7 +361,7 @@ def simulate_episode(calibration: dict[str, Any], profile: dict[str, Any], *, se
                  "basis": "simulated operator latency; attentive operator always approves"},
             "timeline_ms": timeline,
             "time_to_detect_ms": timeline["detected_at_ms"] - action_interval_ms if timeline else None,
-            "time_to_block_ms": first_block - action_interval_ms if first_block is not None else None,
+            "time_to_block_ms": first_block - action_interval_ms if first_block is not None and not no_change else None,
             "a0_prevented": a0_denied, "harmful_actions_executed": executed,
             "harmful_actions_prevented": prevented,
             "damage_prevented": ratio(prevented, baseline),
@@ -433,8 +443,8 @@ def place_grid(calibration: dict[str, Any], profiles: Iterable[dict[str, Any]], 
                           for i in range(samples))
             transitions.append({"family": profile["family"], "row": row,
                                 "binding": binding_for(profile["family"], row),
-                                "transition_ms": lags[math.ceil(samples / 2) - 1],
-                                "sample_count": samples})
+                                "transition_ms": math.nextafter(lags[math.ceil(samples / 2) - 1], math.inf),
+                                "effect_samples_ms": lags, "sample_count": samples})
     def selected(rows):
         return [t["transition_ms"] for t in transitions if t["row"] in rows]
     harness = selected({"E2-extended-a"})

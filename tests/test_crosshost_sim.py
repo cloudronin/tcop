@@ -39,7 +39,7 @@ def calibrated():
 
 
 def eligible_prediction():
-    return generate_prediction(calibrated(), profiles(), seed=42, sealed_eligible=True, transition_samples=32,
+    return generate_prediction(calibrated(), profiles(), seed=42, sealed_eligible=True, transition_samples=1024,
                                bindings={k + '_sha256': digest(['synthetic', k]) for k in ('plan', 'census', 'admission')},
                                gate_hashes={k + '_sha256': digest(['synthetic', k])
                                             for k in ('amendment_004', 'grid_finalization')})
@@ -205,14 +205,13 @@ class CrosshostSimulatorTests(unittest.TestCase):
     def test_sa_preserves_no_change_not_fresh_acceptance(self):
         e = episode(profile=profiles()[0])
         self.assertEqual(e['runtime_decision'], 'rejected')
-        self.assertEqual(e['runtime_decision_reason'], 'absent_entry_no_change')
+        self.assertEqual(e['runtime_decision_reason'], 'no_change')
         self.assertIsNone(e['timeline_ms']['effect_at_ms'])
 
     def test_timeout_late_installation_not_promoted_to_acceptance(self):
         cal = calibration()
-        cal['decision_deadline_after_ready_ms'] = 3000
-        fixed(cal, 'native_egress_processing', 4000)
-        e = episode(cal, row='E2-native-a', interval=20000)
+        fixed(cal, 'native_egress_processing', 25000)
+        e = episode(cal, row='E2-native-a', interval=40000)
         self.assertEqual(e['runtime_decision'], 'timed_out')
         self.assertTrue(e['a0_prevented'])
         self.assertLess(e['timeline_ms']['deadline_at_ms'], e['timeline_ms']['effect_at_ms'])
@@ -360,3 +359,38 @@ class CrosshostSimulatorTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class Amendment005SimulatorTests(unittest.TestCase):
+    def test_exact_effect_a0_tie_does_not_credit_e2(self):
+        cal=calibration()
+        for name in LAGS:fixed(cal,name,0)
+        fixed(cal,'harness_cut',20)
+        e=episode(cal,row='E2-extended-a',delay=10,interval=30)
+        self.assertEqual(e['timeline_ms']['effect_at_ms'],30)
+        self.assertFalse(e['a0_prevented'])
+        self.assertEqual(e['damage_prevented']['numerator'],0)
+        self.assertNotEqual(e['timing_outcome'],'prospective_prevention')
+    def test_b_deadline_includes_fixed_approval_delay(self):
+        e=episode(row='E2-native-b')
+        self.assertEqual(e['timeline_ms']['deadline_at_ms'],e['timeline_ms']['ready_at_ms']+3000+20000)
+    def test_transition_at_half_does_not_credit_ties(self):
+        cal=calibrated();p=place_grid(cal,profiles(),seed=42,samples=1024)
+        for t in p['transitions']:
+            self.assertGreaterEqual(sum(v<t['transition_ms'] for v in t['effect_samples_ms']),512)
+
+    def test_sa005_reason_is_no_change(self):
+        self.assertEqual(episode(profile=profiles()[0])['runtime_decision_reason'],'no_change')
+    def test_calibration_deadline_cannot_override005(self):
+        cal=calibration();cal['decision_deadline_after_ready_ms']=3000
+        with self.assertRaises(TCOPCommandError):validate_calibration(cal)
+    def test_sealed_grid_prediction_requires1024_samples(self):
+        with self.assertRaises(TCOPCommandError):
+            generate_prediction(calibrated(),profiles(),seed=42,sealed_eligible=True,transition_samples=32,
+                bindings={k+'_sha256':digest(k) for k in ('plan','census','admission')},
+                gate_hashes={k+'_sha256':digest(k) for k in ('amendment_004','grid_finalization')})
+
+    def test_sa_no_change_does_not_get_timing_or_block_credit(self):
+        e=episode(profile=profiles()[0])
+        self.assertNotEqual(e['timing_outcome'],'prospective_prevention')
+        self.assertIsNone(e['time_to_block_ms'])
