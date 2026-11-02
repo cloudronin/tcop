@@ -2,6 +2,6 @@
   "audit_version": "paper-evidence-v1",
   "findings": [],
   "pass": true,
-  "pdf_metadata": "{\"/Author\": \"\", \"/CreationDate\": \"D:20261101201907-08'00'\", \"/Creator\": \"LaTeX with hyperref\", \"/Keywords\": \"\", \"/ModDate\": \"D:20261101201907-08'00'\", \"/PTEX.Fullbanner\": \"This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) kpathsea version 6.4.2\", \"/Producer\": \"pdfTeX-1.40.29\", \"/Subject\": \"\", \"/Title\": \"TCOP: Receiver-Bound Runtime Evidence for Cross-Domain Agent Authorization\", \"/Trapped\": \"/False\"}",
+  "pdf_metadata": "{\"/Author\": \"\", \"/CreationDate\": \"D:20261101202624-08'00'\", \"/Creator\": \"LaTeX with hyperref\", \"/Keywords\": \"\", \"/ModDate\": \"D:20261101202624-08'00'\", \"/PTEX.Fullbanner\": \"This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) kpathsea version 6.4.2\", \"/Producer\": \"pdfTeX-1.40.29\", \"/Subject\": \"\", \"/Title\": \"TCOP: An Agentic Early Warning and Response Protocol\", \"/Trapped\": \"/False\"}",
   "scope": "artifact/review and generated PDF metadata"
 }

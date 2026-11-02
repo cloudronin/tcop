@@ -1464,7 +1464,7 @@ def generate_macros() -> None:
     values = {**macro_values(), **future_work_macros(), **performance_macros()}
     write_text(GENERATED / "results-macros.tex", "\n".join("\\newcommand{\\%s}{%s}" % (name, value) for name, value in values.items()))
     write_json(GENERATED / "paper-metadata.json", {
-        "title": "TCOP: Receiver-Bound Runtime Evidence for Cross-Domain Agent Authorization",
+        "title": "TCOP: An Agentic Early Warning and Response Protocol",
         "anonymous": True,
         "template": {
             "official_source": "https://www.usenix.org/conferences/author-resources/paper-templates",

@@ -1,4 +1,4 @@
-# TCOP: Receiver-Bound Runtime Evidence for Cross-Domain Agent Authorization
+# TCOP: An Agentic Early Warning and Response Protocol
 
 TCOP is a protocol for carrying signed, scoped, time-bounded runtime evidence
 from an observing domain to the local authorization boundary of a receiving
@@ -8,8 +8,7 @@ resource namespace, capability, and scope against its own state. The receiver
 then creates the authorization decision under its own policy.
 
 This repository is the reference implementation and sealed evidence package
-for the final USENIX Security 2027 paper, *TCOP: Receiver-Bound Runtime
-Evidence for Cross-Domain Agent Authorization*. It is organized so reviewers
+for the final USENIX Security 2027 paper, *TCOP: An Agentic Early Warning and Response Protocol*. It is organized so reviewers
 can inspect the evidence-to-authorization boundary, reproduce the
 credential-free results, and distinguish protocol behavior from the receiver
 strategies evaluated on top of it.

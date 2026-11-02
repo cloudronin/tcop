@@ -160,6 +160,8 @@ LaTeX Warning: Reference `tab:limitations' on page 3 undefined on input line 23
 LaTeX Warning: Reference `fig:tcx-acceptance' on page 3 undefined on input line
  7.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active [3]
 (./tables/generated/tab-design-requirements.tex
 Underfull \hbox (badness 2205) in paragraph at lines 7--7
 []|\T1/ptm/m/n/8 (+20) Bounded scope and
@@ -169,7 +171,7 @@ Underfull \hbox (badness 2932) in paragraph at lines 10--10
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\T1/ptm/m/n/8 (+20) Explicit avail-abil-ity
-[3]) (./tables/generated/tab-architecture-comparison.tex
+) (./tables/generated/tab-architecture-comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--5
 []|\T1/ptm/m/n/7 (+20) Sender se-lects re-
 )) (./sections/04-local-resolution-enforcement.tex
@@ -193,6 +195,7 @@ line 5.
 
 LaTeX Warning: Reference `tab:units' on page 5 undefined on input line 5.
 
+[5 <./figures/pdf/containment-window.pdf>]
 (./tables/generated/tab-units-of-analysis.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\T1/ptm/m/n/7 (+20) Single-environment
@@ -200,21 +203,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--8
 Underfull \hbox (badness 1259) in paragraph at lines 10--10
 []|\T1/ptm/m/n/7 (+20) One signed con-text trans-fer from \T1/pcr/m/n/7 tcopd\T
 1/ptm/m/n/7 (+20) -A to
-) [5 <./figures/pdf/containment-window.pdf>]
+)
 
 LaTeX Warning: Reference `fig:deterministic' on page 6 undefined on input line 
 13.
 
-(./tables/generated/tab-deterministic-summary.tex) [6 <./figures/pdf/determinis
-tic-outcomes.pdf>]
+(./tables/generated/tab-deterministic-summary.tex)
 
-LaTeX Warning: Reference `tab:validation-value' on page 7 undefined on input li
+LaTeX Warning: Reference `tab:validation-value' on page 6 undefined on input li
 ne 36.
 
 (./tables/generated/tab-tcx-validation-value.tex)
 (./tables/generated/tab-tcx-protocol-assurance.tex))
-(./sections/07-agent-gateway-evaluation.tex
-Underfull \vbox (badness 1584) has occurred while \output is active
+(./sections/07-agent-gateway-evaluation.tex [6 <./figures/pdf/deterministic-out
+comes.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active
 
 LaTeX Warning: Reference `fig:replay-timing' on page 7 undefined on input line 
 13.
@@ -233,17 +236,19 @@ input line 29.
 
 LaTeX Warning: Reference `fig:physical' on page 8 undefined on input line 44.
 
-[8 <./figures/pdf/live-replay-treatments.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active
 (./tables/generated/tab-physical-end-to-end.tex))
 (./sections/08-security-availability.tex
 
-LaTeX Warning: Reference `app:extended-results' on page 9 undefined on input li
+LaTeX Warning: Reference `app:extended-results' on page 8 undefined on input li
 ne 5.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active [9 <./figu
-res/pdf/c2e-policy-frontier.pdf> <./figures/pdf/physical-timing.pdf>]
-(./tables/generated/tab-utility.tex
+Underfull \vbox (badness 10000) has occurred while \output is active [8]
+[9 <./figures/pdf/live-replay-treatments.pdf> <./figures/pdf/c2e-policy-frontie
+r.pdf> <./figures/pdf/physical-timing.pdf>] (./tables/generated/tab-utility.tex
+
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\T1/ptm/m/n/7 (+20) No con-text, out-side win-dow, post-
 )
@@ -304,30 +309,30 @@ LaTeX Warning: Citation `cacao20' on page 10 undefined on input line 9.
 
 LaTeX Warning: Citation `bridges23' on page 10 undefined on input line 9.
 
+[10 <./figures/pdf/security-availability.pdf>]
 
-LaTeX Warning: Citation `keynote99' on page 10 undefined on input line 13.
+LaTeX Warning: Citation `keynote99' on page 11 undefined on input line 13.
 
 
-LaTeX Warning: Citation `birgisson2014macaroons' on page 10 undefined on input 
+LaTeX Warning: Citation `birgisson2014macaroons' on page 11 undefined on input 
 line 13.
 
 
-LaTeX Warning: Citation `hardy88' on page 10 undefined on input line 13.
+LaTeX Warning: Citation `hardy88' on page 11 undefined on input line 13.
 
 
-LaTeX Warning: Citation `nistZta' on page 10 undefined on input line 13.
+LaTeX Warning: Citation `nistZta' on page 11 undefined on input line 13.
 
 
-LaTeX Warning: Citation `spiffeFederation' on page 10 undefined on input line 1
+LaTeX Warning: Citation `spiffeFederation' on page 11 undefined on input line 1
 3.
 
 
-LaTeX Warning: Citation `rats' on page 10 undefined on input line 13.
+LaTeX Warning: Citation `rats' on page 11 undefined on input line 13.
 
 
-LaTeX Warning: Citation `bye2010' on page 10 undefined on input line 13.
+LaTeX Warning: Citation `bye2010' on page 11 undefined on input line 13.
 
-[10 <./figures/pdf/security-availability.pdf>]
 
 LaTeX Warning: Citation `mcpAuthorization' on page 11 undefined on input line 1
 7.
@@ -358,8 +363,6 @@ LaTeX Warning: Reference `tab:limitations' on page 11 undefined on input line 5
 LaTeX Warning: Reference `tab:ra03-eligibility' on page 11 undefined on input l
 ine 5.
 
-
-Underfull \vbox (badness 4886) has occurred while \output is active
 
 LaTeX Warning: Citation `nemoclaw-2026' on page 11 undefined on input line 8.
 
@@ -418,10 +421,11 @@ ine 9.
 (./tables/generated/tab-ra03-eligibility-sensitivity.tex
 Underfull \hbox (badness 3375) in paragraph at lines 6--6
 []|\T1/ptm/m/n/7 (+20) Amendment 003 permitted-capability
-)) (./appendices/extended-results.tex (./tables/generated/tab-limitations.tex)
+)) (./appendices/extended-results.tex (./tables/generated/tab-limitations.tex
+[14])
 Underfull \hbox (badness 2005) in paragraph at lines 6--7
 \T1/ptm/m/n/10 (+20) The nor-mal-ized data pre-serves the full strict-pair and
-[14] (./tables/generated/tab-replay-timing.tex
+(./tables/generated/tab-replay-timing.tex
 Underfull \hbox (badness 1810) in paragraph at lines 4--4
 []|\T1/ptm/m/n/9 (+20) Action-relative place-
 
@@ -459,7 +463,7 @@ mf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (17 pages, 276216 bytes).
+Output written on main.pdf (17 pages, 276018 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
@@ -606,6 +610,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\T1/ptm/m/n/7 (+20) Evaluation
 )) (./sections/03-architecture-protocol.tex
+Underfull \vbox (badness 10000) has occurred while \output is active [3]
 (./tables/generated/tab-design-requirements.tex
 Underfull \hbox (badness 2205) in paragraph at lines 7--7
 []|\T1/ptm/m/n/8 (+20) Bounded scope and
@@ -615,7 +620,7 @@ Underfull \hbox (badness 2932) in paragraph at lines 10--10
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\T1/ptm/m/n/8 (+20) Explicit avail-abil-ity
-[3]) (./tables/generated/tab-architecture-comparison.tex
+) (./tables/generated/tab-architecture-comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--5
 []|\T1/ptm/m/n/7 (+20) Sender se-lects re-
 )) (./sections/04-local-resolution-enforcement.tex [4])
@@ -629,7 +634,6 @@ Underfull \hbox (badness 1259) in paragraph at lines 10--10
 []|\T1/ptm/m/n/7 (+20) One signed con-text trans-fer from \T1/pcr/m/n/7 tcopd\T
 1/ptm/m/n/7 (+20) -A to
 ) (./tables/generated/tab-deterministic-summary.tex)
-Underfull \vbox (badness 7704) has occurred while \output is active
 (./tables/generated/tab-tcx-validation-value.tex)
 (./tables/generated/tab-tcx-protocol-assurance.tex))
 (./sections/07-agent-gateway-evaluation.tex [6 <./figures/pdf/deterministic-out
@@ -710,25 +714,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 []|\T1/ptm/m/n/7 (+20) NC-09; mu-ta-tion: ac-
 ) (./tables/generated/tab-performance.tex)) (./appendices/failure-controls.tex)
 (./appendices/reproducibility-details.tex [15 <./figures/pdf/artifact-lineage.p
-df>]) [16] [17] (./main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
+df>]) [16] [17] (./main.aux) )
 (see the transcript file for additional information)</usr/local/texlive/2026/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/tex
 mf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (17 pages, 281882 bytes).
+Output written on main.pdf (17 pages, 281863 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
 Latexmk: Examining 'main.log'
 Latexmk: Found input bbl file 'main.bbl'
 Latexmk: Found input bbl file 'main.bbl'
-Latexmk: References changed.
 Latexmk: Log file says output to 'main.pdf'
   ===Source file 'main.bbl' for 'pdflatex'
 Latexmk: Found bibliography file(s):
@@ -865,6 +864,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\T1/ptm/m/n/7 (+20) Evaluation
 )) (./sections/03-architecture-protocol.tex
+Underfull \vbox (badness 10000) has occurred while \output is active [3]
 (./tables/generated/tab-design-requirements.tex
 Underfull \hbox (badness 2205) in paragraph at lines 7--7
 []|\T1/ptm/m/n/8 (+20) Bounded scope and
@@ -874,7 +874,7 @@ Underfull \hbox (badness 2932) in paragraph at lines 10--10
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\T1/ptm/m/n/8 (+20) Explicit avail-abil-ity
-[3]) (./tables/generated/tab-architecture-comparison.tex
+) (./tables/generated/tab-architecture-comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--5
 []|\T1/ptm/m/n/7 (+20) Sender se-lects re-
 )) (./sections/04-local-resolution-enforcement.tex [4])
@@ -888,7 +888,6 @@ Underfull \hbox (badness 1259) in paragraph at lines 10--10
 []|\T1/ptm/m/n/7 (+20) One signed con-text trans-fer from \T1/pcr/m/n/7 tcopd\T
 1/ptm/m/n/7 (+20) -A to
 ) (./tables/generated/tab-deterministic-summary.tex)
-Underfull \vbox (badness 7704) has occurred while \output is active
 (./tables/generated/tab-tcx-validation-value.tex)
 (./tables/generated/tab-tcx-protocol-assurance.tex))
 (./sections/07-agent-gateway-evaluation.tex [6 <./figures/pdf/deterministic-out
@@ -976,7 +975,7 @@ mf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (17 pages, 281882 bytes).
+Output written on main.pdf (17 pages, 281863 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
