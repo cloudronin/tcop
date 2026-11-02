@@ -463,9 +463,23 @@ LaTeX Warning: Citation `openid-ssf-1.0' on page 11 undefined on input line 14.
 
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 14--15
-\T1/ptm/m/n/10 (+20) i-tory amend-ments $\T1/pcr/m/n/10 spec / external -[] war
-ning -[] adaptive -[]
+Underfull \hbox (badness 3229) in paragraph at lines 14--15
+\T1/ptm/m/n/10 (+20) run-time, sep-a-rat-ing na-tive and harness-built prim-i-t
+ives
+
+Underfull \hbox (badness 1521) in paragraph at lines 14--15
+\T1/ptm/m/n/10 (+20) with-out pool-ing re-sults. It will com-pare a bare agent
+
+Underfull \hbox (badness 1558) in paragraph at lines 14--15
+\T1/ptm/m/n/10 (+20) (E0), the same agent in a sand-box run-time (E1), and
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+\T1/pcr/m/n/10 warning -[] adaptive -[] crosshost -[] amendment -[] 003 . md$\T
+1/ptm/m/n/10 (+20) )
+
+Underfull \hbox (badness 6708) in paragraph at lines 14--15
+\T1/ptm/m/n/10 (+20) through CH-005 ($\T1/pcr/m/n/10 spec / external -[] warnin
+g -[] adaptive -[]
 
 Underfull \vbox (badness 3838) has occurred while \output is active)
 (./main.bbl
@@ -475,7 +489,7 @@ Underfull \hbox (badness 5288) in paragraph at lines 16--21
 Underfull \hbox (badness 10000) in paragraph at lines 16--21
 \T1/ptm/m/n/10 (+20) York.  [][]$\T1/pcr/m/n/10 https : / / www . pm . gov . au
  / media / press -[]
-
+[11]
 Underfull \hbox (badness 3930) in paragraph at lines 23--30
 []\T1/ptm/m/n/10 (+20) Anthropic.  In-ves-ti-gat-ing three real-world in-ci-
 
@@ -489,7 +503,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--30
 Underfull \hbox (badness 10000) in paragraph at lines 23--30
 \T1/pcr/m/n/10 incidents -[] cybersecurity -[] evals$[][]\T1/ptm/m/n/10 (+20) ,
  July 2026.
-[11]
+
 Underfull \hbox (badness 3108) in paragraph at lines 32--39
 []\T1/ptm/m/n/10 (+20) Anthropic Align-ment.  In-ves-ti-gat-ing un-in-tended
 
@@ -659,8 +673,10 @@ ine 3.
 LaTeX Warning: Reference `tab:protocol-assurance' on page 15 undefined on input
  line 3.
 
-) (./appendices/reproducibility-details.tex [15 <./figures/pdf/artifact-lineage
-.pdf>]) [16] [17] (./main.aux)
+) (./appendices/reproducibility-details.tex
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [15 <./fig
+ures/pdf/artifact-lineage.pdf>]) [16] [17] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -679,7 +695,7 @@ mf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (17 pages, 277610 bytes).
+Output written on main.pdf (17 pages, 277963 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
@@ -871,9 +887,23 @@ Underfull \hbox (badness 1117) in paragraph at lines 40--1
 te-way, and
 [9 <./figures/pdf/security-availability.pdf>])
 (./sections/10-limitations-conclusion.tex [10]
-Underfull \hbox (badness 2326) in paragraph at lines 14--15
-\T1/ptm/m/n/10 (+20) i-tory amend-ments $\T1/pcr/m/n/10 spec / external -[] war
-ning -[] adaptive -[]
+Underfull \hbox (badness 3229) in paragraph at lines 14--15
+\T1/ptm/m/n/10 (+20) run-time, sep-a-rat-ing na-tive and harness-built prim-i-t
+ives
+
+Underfull \hbox (badness 1521) in paragraph at lines 14--15
+\T1/ptm/m/n/10 (+20) with-out pool-ing re-sults. It will com-pare a bare agent
+
+Underfull \hbox (badness 1558) in paragraph at lines 14--15
+\T1/ptm/m/n/10 (+20) (E0), the same agent in a sand-box run-time (E1), and
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+\T1/pcr/m/n/10 warning -[] adaptive -[] crosshost -[] amendment -[] 003 . md$\T
+1/ptm/m/n/10 (+20) )
+
+Underfull \hbox (badness 6708) in paragraph at lines 14--15
+\T1/ptm/m/n/10 (+20) through CH-005 ($\T1/pcr/m/n/10 spec / external -[] warnin
+g -[] adaptive -[]
 
 Underfull \vbox (badness 3838) has occurred while \output is active)
 (./main.bbl
@@ -883,7 +913,7 @@ Underfull \hbox (badness 5288) in paragraph at lines 16--21
 Underfull \hbox (badness 10000) in paragraph at lines 16--21
 \T1/ptm/m/n/10 (+20) York.  [][]$\T1/pcr/m/n/10 https : / / www . pm . gov . au
  / media / press -[]
-
+[11]
 Underfull \hbox (badness 3930) in paragraph at lines 23--30
 []\T1/ptm/m/n/10 (+20) Anthropic.  In-ves-ti-gat-ing three real-world in-ci-
 
@@ -897,7 +927,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--30
 Underfull \hbox (badness 10000) in paragraph at lines 23--30
 \T1/pcr/m/n/10 incidents -[] cybersecurity -[] evals$[][]\T1/ptm/m/n/10 (+20) ,
  July 2026.
-[11]
+
 Underfull \hbox (badness 3108) in paragraph at lines 32--39
 []\T1/ptm/m/n/10 (+20) Anthropic Align-ment.  In-ves-ti-gat-ing un-in-tended
 
@@ -1054,15 +1084,17 @@ Underfull \hbox (badness 1789) in paragraph at lines 6--6
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 []|\T1/ptm/m/n/7 (+20) NC-09; mu-ta-tion: ac-
 ) (./tables/generated/tab-performance.tex)) (./appendices/failure-controls.tex)
-(./appendices/reproducibility-details.tex [15 <./figures/pdf/artifact-lineage.p
-df>]) [16] [17] (./main.aux) )
+(./appendices/reproducibility-details.tex
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [15 <./fig
+ures/pdf/artifact-lineage.pdf>]) [16] [17] (./main.aux) )
 (see the transcript file for additional information)</usr/local/texlive/2026/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/tex
 mf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (17 pages, 284627 bytes).
+Output written on main.pdf (17 pages, 284953 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'

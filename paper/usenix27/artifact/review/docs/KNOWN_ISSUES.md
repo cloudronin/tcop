@@ -23,9 +23,11 @@ restriction was created, or, for the remote-action mutation, that the
 remote action fields were ignored. This statement covers only those
 controls; see the repository-wide review of recorded passes for the others.
 
-Fix in progress: a new comparator study version that executes these
-controls through the same receiver intake. The sealed v1 artifact stays
-unchanged.
+Fixed in a new study version: `artifacts/context-value-comparator-v2/`
+executes these controls through the same receiver intake and computes each
+pass from the observed outcome (see
+`docs/context-value-comparator-v2-controls.md`). The sealed v1 artifact
+stays unchanged.
 
 ## Live negative controls and formula-computed validation tables
 

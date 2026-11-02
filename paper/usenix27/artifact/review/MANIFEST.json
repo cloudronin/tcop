@@ -30,11 +30,11 @@
     },
     {
       "path": "appendices/open-science.tex",
-      "sha256": "e580d405803afcf07c517518158547f8e986ae1c7441e68b85d3240d77ab09b6"
+      "sha256": "2d59a1c07f49bde44d87f5699fdd028c74dd0ae30632bc67d270af1150470224"
     },
     {
       "path": "appendices/reproducibility-details.tex",
-      "sha256": "ae8bf521caeac6c4012cf37479179bd63206bcf55ed98fd718909e1ff3c60ad4"
+      "sha256": "332d5f8004791b89ee780bc775bc6c813da2b168b8bed211d49c437f53efecd5"
     },
     {
       "path": "appendices/strategy-details.tex",
@@ -566,11 +566,11 @@
     },
     {
       "path": "docs/KNOWN_ISSUES.md",
-      "sha256": "8affbc0fa26f4137303432f8ef11bd3b13c64828a3489d1fcaae050e53115005"
+      "sha256": "6371fe0b3c901e496e93a9916b713f8febb39ff5c41aac54958cf301f7baf088"
     },
     {
       "path": "evidence/anonymity-audit.json",
-      "sha256": "522bc7bd545bb66eb4eb015e5f3b8531d1ec73b36b8f93d96cad7e739c30bfb9"
+      "sha256": "42b9ab471d250ab0d926907146d53d8cb3530125c33b11b8b1de86d2b76b95cc"
     },
     {
       "path": "evidence/anonymity-audit.md",
@@ -630,7 +630,7 @@
     },
     {
       "path": "evidence/source-verification.json",
-      "sha256": "4bb3b709f3b70b23aca294429288c87087a4e5655f27ca03a165d951d22af864"
+      "sha256": "59e5c046d9e40c8b63c73395b76ca2bc4fdc0525a9a95f44dc3aac747cd29fe3"
     },
     {
       "path": "evidence/source-verification.md",
@@ -646,67 +646,67 @@
     },
     {
       "path": "figures/pdf/architecture.pdf",
-      "sha256": "9a5f1e627ba7e8eac2c4c1a571bb8859ea018d4ce413a26a639811007f8234fc"
+      "sha256": "c71d8e0d7155cae0dfee5a02ad9422e2e5bcc5c9e21ffdaf6452849abe60c194"
     },
     {
       "path": "figures/pdf/artifact-lineage.pdf",
-      "sha256": "c9dc6498b8468a8325e0e77cab31640e475172701c16f8d860b347b9faac2f30"
+      "sha256": "58a10c8f653171880b2f761909f24fd276aa3ce06e52b99aacf180c616041e3a"
     },
     {
       "path": "figures/pdf/c2e-policy-frontier.pdf",
-      "sha256": "6b091cf548124e58873794fde2eaa6b167c348bc8722aa0edf30cac9a883823a"
+      "sha256": "691da0a1d0510166f92664306c3cc2acfb1a8876cd3fa163a942c21a6e55e9d7"
     },
     {
       "path": "figures/pdf/containment-window.pdf",
-      "sha256": "11886287e1dcabd77ba7cef851e7004a7bc62e7a928ae6eb684e677cc5001345"
+      "sha256": "8a8aeed2a12d98d793ef47ae6ec69d2ed9dc1bc8ad133f187507ac7da6779620"
     },
     {
       "path": "figures/pdf/deterministic-outcomes.pdf",
-      "sha256": "1c6de267ee781248a14182b39a8892dcf60b9dee929211d6d7b03788b2fba3da"
+      "sha256": "1714f34b966d1d263bc1df9b3fac8c426b1d734f5fa171ec7a03236f26ba12b1"
     },
     {
       "path": "figures/pdf/live-replay-treatments.pdf",
-      "sha256": "c50b56e51d6944c4d208437d31933b07258422177f5d36f228b86089b651df56"
+      "sha256": "baeeff73fb3731a1a688fff0cdfe1d2d200fdd9c14eb640baedac35051803a6f"
     },
     {
       "path": "figures/pdf/physical-timing.pdf",
-      "sha256": "9e18ebaf4b1a3adacf9270ace6fab7f194d121112e5feeb64947f1377be41bab"
+      "sha256": "96745b8af4f7885ff2e2d7ce6d4a85ba88bf49ba553b56b8ad2eecbf30393ca5"
     },
     {
       "path": "figures/pdf/security-availability.pdf",
-      "sha256": "ee07997b36f4325dc04e5574a4d1e21c0cf6d59e224d2cf70fcd9c99fcd0fe10"
+      "sha256": "df554f23f3498454ab8ef8c1b9a5052231e9208ecf00a3f912f5320631c0212a"
     },
     {
       "path": "figures/svg/architecture.svg",
-      "sha256": "11f682159423694f06f86e6b29f4a075475f60761e38d143845395a93379d878"
+      "sha256": "7df4c7e4846186322d97da2c7d7694982f9c24598f03f6563404eb0c1857027a"
     },
     {
       "path": "figures/svg/artifact-lineage.svg",
-      "sha256": "9e106a01e0f0ca5b8632189a4b5ff77a758bfd4a02c4a53914e12d8bbdd580b5"
+      "sha256": "78e26f8e3ecfad62dbae3a2e22a8fc4b34fb8a2b228ea5a98f1d839c614a4228"
     },
     {
       "path": "figures/svg/c2e-policy-frontier.svg",
-      "sha256": "826ed1509526df00ab20d20a292f9777063b1824c82a849f652c6110e3b12346"
+      "sha256": "b75bbc011aa87af8209ced7c6626c9f7089daacaa7fb7dfa529ca3aeee038d3a"
     },
     {
       "path": "figures/svg/containment-window.svg",
-      "sha256": "f977a0613d91e40233eecb4c6dfc4058e1e211f058986f89a0506b6bdd0242ef"
+      "sha256": "7d4b5f7c54e0281828ca21f6da5da6ef2768e57059f9ecfae00de088ac814a05"
     },
     {
       "path": "figures/svg/deterministic-outcomes.svg",
-      "sha256": "1abce8a2537c03a7c5666655a2a6f5c317177caccefa2bf41090057fff50fc75"
+      "sha256": "d073c4ede17c41b553e8269ba56a943315a0e1d8f8f87b9ab8b1b667f7297d1b"
     },
     {
       "path": "figures/svg/live-replay-treatments.svg",
-      "sha256": "6e3a74ca42a3637b6ae89d4d3460a6c81880a070aa6ff9877048b7503a1832ef"
+      "sha256": "02dba0c00f149b93dd61fa15f3e8736973879e10c930eb6052da0dd2707c71c0"
     },
     {
       "path": "figures/svg/physical-timing.svg",
-      "sha256": "77459a3d9cf42588500cb9659c04ef433749fa107606fd134ad78d36ef4ba995"
+      "sha256": "18162628f8101226022cab0a01eea1f1014a9b4c86c8d2cd89a48ce1daa12abb"
     },
     {
       "path": "figures/svg/security-availability.svg",
-      "sha256": "3c6857e56c840b39c81e892ad2c799738bd4e67f45b0643794930b82400d5ecd"
+      "sha256": "43f7608daa702bcad4d64ace62cc4850d34e3632daaab39e057c2770fa857818"
     },
     {
       "path": "generated/case-motivation-provenance.json",
@@ -714,7 +714,7 @@
     },
     {
       "path": "generated/figure-manifest.json",
-      "sha256": "cec0c29f5048b98ef717218e6190d2d8f3579ceb5bb31b1d5e92d80c2ee535e6"
+      "sha256": "cb3ecee663fcb60f525d1d029666478f91fb9fca5f1c0e88028e545ed43f9b9b"
     },
     {
       "path": "generated/future-work-provenance.json",
@@ -734,7 +734,7 @@
     },
     {
       "path": "main.tex",
-      "sha256": "6039c6bef3a4d9d549f12fd3de3d8a871761730c301b6b059736ba56192cdb44"
+      "sha256": "f8bd5717e984d8df0e9b4162286fb0cec728a526062f14ce207d2570df301e13"
     },
     {
       "path": "references.bib",
@@ -746,7 +746,7 @@
     },
     {
       "path": "sections/01-introduction.tex",
-      "sha256": "17e2d87597206495b90065670ae97c1525f957e557737bc7f0c9187e0de6ec52"
+      "sha256": "b5b689ba26d9a15b5f53b23be7cd66e7d6fd71dca0e589b321af9c307ded7f34"
     },
     {
       "path": "sections/02-problem-threat-model.tex",
@@ -782,7 +782,7 @@
     },
     {
       "path": "sections/10-limitations-conclusion.tex",
-      "sha256": "c64cdd4185c4c8decb5e22614562cd25ec19f567129bc3849ab05de2d57ff7dc"
+      "sha256": "82d62e25312ffa427d13c62f84bbf98f2a4779b10b7500670c3ab4322008fb28"
     },
     {
       "path": "tables/generated/tab-adaptive-authorization.tex",
