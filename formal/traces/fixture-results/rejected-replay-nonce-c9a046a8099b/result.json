@@ -75,7 +75,7 @@
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-replay-nonce-c9a046a8099b/FrozenTrace.cfg",
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-replay-nonce-c9a046a8099b/FrozenTrace.tla"
   ],
-  "seconds": 0.219,
+  "seconds": 0.27,
   "exit_code": 0,
   "outcome": "rejected",
   "reached_events": 3,

@@ -1,0 +1,236 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 1 and seed 2016268460830093496 with 10 workers on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90618] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryReceiptBound.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrust.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Sequences.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TCOPReceiver
+Semantic processing of module TCOPTrust
+Semantic processing of module TrustMC
+Semantic processing of module CanaryReceiptBound
+Starting... (2026-11-01 21:11:32)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-01 21:11:33.
+Error: Invariant ReceiptBoundRestrictions is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ quarantined = {}
+/\ trustBy = (p0 :> "none" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {}
+/\ effectAt = <<0, 0>>
+/\ accepted = {}
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = {}
+/\ choice = <<<<"none", "none">>, <<"none", "none">>>>
+/\ examined = {}
+/\ seenIds = {}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ trusted = {}
+/\ status = <<"unreceived", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 2: <RaiseTrust line 28, col 5 to line 32, col 93 of module TCOPTrust>
+/\ quarantined = {}
+/\ trustBy = (p0 :> "receiver" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {}
+/\ effectAt = <<0, 0>>
+/\ accepted = {}
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = {}
+/\ choice = <<<<"none", "none">>, <<"none", "none">>>>
+/\ examined = {}
+/\ seenIds = {}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ trusted = {p0}
+/\ status = <<"unreceived", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 3: <TrustReceive line 65, col 5 to line 69, col 95 of module TCOPTrust>
+/\ quarantined = {}
+/\ trustBy = (p0 :> "receiver" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1}
+/\ effectAt = <<0, 0>>
+/\ accepted = { [ message |-> 1,
+    at |-> 0,
+    id |-> 1,
+    nonce |-> 1,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = {}
+/\ choice = <<<<"freeze", "sandbox">>, <<"none", "none">>>>
+/\ examined = {1}
+/\ seenIds = {1}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ trusted = {p0}
+/\ status = <<"approval", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 4: <TrustSubmit line 78, col 19 to line 78, col 70 of module TCOPTrust>
+/\ quarantined = {}
+/\ trustBy = (p0 :> "receiver" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1}
+/\ effectAt = <<0, 0>>
+/\ accepted = { [ message |-> 1,
+    at |-> 0,
+    id |-> 1,
+    nonce |-> 1,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = {}
+/\ choice = <<<<"freeze", "sandbox">>, <<"none", "none">>>>
+/\ examined = {1}
+/\ seenIds = {1}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ trusted = {p0}
+/\ status = <<"pending", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 5: <TrustTakeEffect line 88, col 5 to line 90, col 92 of module TCOPTrust>
+/\ quarantined = {}
+/\ trustBy = (p0 :> "receiver" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = {}
+/\ delivered = {1}
+/\ effectAt = <<0, 0>>
+/\ accepted = { [ message |-> 1,
+    at |-> 0,
+    id |-> 1,
+    nonce |-> 1,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = { [ issuer |-> p0,
+    session |-> s0,
+    destination |-> d0,
+    trusted |-> TRUE,
+    action |-> <<"freeze", "sandbox">>,
+    quarantined |-> FALSE,
+    traffic |-> {},
+    minted |-> {},
+    held |-> {},
+    message |-> 1,
+    at |-> 0,
+    warningSession |-> s0,
+    removed |->
+        { <<"egress", d0>>,
+          <<"egress", d1>>,
+          <<"credential", c0>>,
+          <<"credential", c1>>,
+          <<"work", "benign">> } ] }
+/\ choice = <<<<"freeze", "sandbox">>, <<"none", "none">>>>
+/\ examined = {1}
+/\ seenIds = {1}
+/\ effective = {1}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ trusted = {p0}
+/\ status = <<"effective", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+882 states generated, 541 distinct states found, 420 states left on queue.
+The depth of the complete state graph search is 5.
+The average outdegree of the complete state graph is 5 (minimum is 1, the maximum 11 and the 95th percentile is 9).
+Finished in 00s at (2026-11-01 21:11:33)

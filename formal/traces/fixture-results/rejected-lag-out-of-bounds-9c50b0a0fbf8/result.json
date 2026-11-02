@@ -61,7 +61,7 @@
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-lag-out-of-bounds-9c50b0a0fbf8/FrozenTrace.cfg",
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-lag-out-of-bounds-9c50b0a0fbf8/FrozenTrace.tla"
   ],
-  "seconds": 0.226,
+  "seconds": 0.307,
   "exit_code": 0,
   "outcome": "rejected",
   "reached_events": 2,

@@ -72,7 +72,7 @@
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/FrozenTrace.cfg",
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-a1-without-denial-5d8854b60d77/FrozenTrace.tla"
   ],
-  "seconds": 0.228,
+  "seconds": 0.258,
   "exit_code": 0,
   "outcome": "rejected",
   "reached_events": 2,

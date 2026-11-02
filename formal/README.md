@@ -563,3 +563,209 @@ configurations satisfied their checks. The real TLA+ modules and real
 configurations were also compared against the preceding artifact hashes;
 none changed. The combined JSON-lines runner output is retained in
 `results/canary-and-real-checks.log`.
+
+## Victim-observer trust extension
+
+[tla/TCOPTrust.tla](tla/TCOPTrust.tla) extends the unchanged receiver model.
+It adds receiver-local trust, per-issuer quarantine, and a B-side receipt
+registry. [tla/TrustMC.tla](tla/TrustMC.tla) supplies the small model instances.
+The original `TCOPReceiver.tla`, its properties, and all original real and
+canary configurations remain unchanged. Trusted status expands which
+**tightenings** local policy may select; it never adds sandbox authority.
+
+| New property | Meaning |
+| --- | --- |
+| `ReceiptBoundRestrictions` | Every installed restriction is on the actual bound session and has a receiver-minted, peer-held receipt for that issuer/session/observed destination. |
+| `QuarantinedIssuerNoEffect` | No installed restriction is caused by an issuer quarantined at installation time. |
+| `ZeroTrustOwnDestinationsOnly` | If the issuer is untrusted when the effect occurs, its action is egress denial to a destination for which that issuer holds a valid receipt. |
+
+The checks inspect `effectAudit`, which is appended atomically with the
+unchanged `TakeEffect` action. Each record identifies the enforcing
+`BoundSession`, the warning's session, issuer, observed destination,
+selected action, actual removed authority, effect time, and snapshots of
+trust, quarantine, arrival, minting, and receipt possession. The properties
+recompute receipt membership from those snapshots; they do not trust an
+exported “accepted” or “eligible” verdict. `BoundSession` is the actual
+single enforcement context, not a session name copied from the warning.
+
+New model elements:
+
+- All peers start untrusted. `RaiseTrust(peer, actor)` can be taken only by
+  the receiver or operator. The receiver branch abstracts qualifying local
+  confirmations/local evidence, and the operator branch an explicit grant.
+  Warning processing and receipt possession never raise trust. The
+  independently checked `TrustRaisedLocally` invariant records grant origin.
+- `QuarantinePeer` records receiver-local quarantine independently for each
+  peer. Local policy checks it at intake, submission, and effect. If it
+  becomes ineligible while queued, `CancelBlocked` cancels the uninstalled
+  restriction. This removes no installed restriction and adds no authority.
+  A restriction installed before quarantine stays installed; the property
+  prevents new effects rather than retroactively changing its causal history.
+- `TrafficArrival(<<peer, session, destination>>)` records actual traffic
+  received at that peer. `MintReceipt` is a B-side operation after that
+  arrival, and `DeliverReceipt` gives the resulting receipt only to that
+  same peer. `ReceiptProvenance` separately checks `held ⊆ minted ⊆ traffic`.
+  `TrafficRoutes` is the fixed admitted, authenticated peer/service routing
+  census, not an address supplied by a warning. This abstracts the successful
+  request/arrival correlation; it does not assert that a live receipt
+  service already observes arrival or mints at this exact point in wall time.
+- `OwnDestinations(peer)` is derived from valid held receipt triples. An
+  untrusted issuer can select only egress denial within that set. A trusted
+  issuer can select the original broader local action set but still needs
+  the exact bound-session receipt. Trust never waives receipt or quarantine
+  checks, signature/replay checks, or the no-command property.
+- A study-policy refusal is recorded without a core acceptance or write.
+  The protected A0-A4 ladder and binding lag remain the original actions.
+  The extension introduces no release, reattach, unfreeze, or sandbox
+  command path.
+
+### Bounds and effect scope
+
+The main trust instances have two peers, two session identifiers, two
+destinations, two credentials, and two candidate warnings with at most one
+examined warning per execution. Peer A receives bound-session traffic to d0;
+peer B can receive traffic to d1 in a different session, so holding that
+other receipt cannot authorize a restriction on the bound session. Both
+warnings name the actual bound session. All peers can independently gain
+receiver/operator trust or be quarantined. Receipts start empty.
+
+The interval is 1 tick, approval delay 0, binding lag 0..1 for each kind,
+intake through tick 0, auxiliary receipt/trust/quarantine events through
+tick 1, and the original horizon is 6. There are no state constraints or
+symmetry reductions; peer/session/route roles distinguish the model values.
+The DFID iteration ceiling remains 50, above the completed search depth.
+Each individual property gets its own configuration. `TrustMC.cfg` also
+checks all three together with the original NoWidening, AcceptOnlyValid,
+EffectHolds, LyingPeerOnlyCostsAvailability, ladder/A4 checks, and bounded
+completion. Deadlock checking stays enabled.
+
+This is one admitted sandbox/session enforcement context, as in the base
+receiver model. The other session distinguishes foreign receipt context;
+its execution is not another modeled live sandbox. Egress denial, revocation,
+and freeze remove authority only in `BoundSession` in this abstraction.
+It makes no claim that a coarse live binding affects only one active session.
+Draft 006 requires inventorying every affected session: a multi-session
+freeze/provider group needs matching receipt coverage and a corresponding
+scope model before that mapping is admitted. It cannot be justified by
+assigning the warning's session label to a wider physical effect.
+
+`TrustSanity.cfg` uses one peer, one session, and one traffic route. Its
+exhaustive reachable-state reports must include: a legitimate untrusted
+restriction, a locally trusted freeze, a quarantined warning refused, and
+a queued warning cancelled. Thus the passing predicates are accompanied
+by actual allowed effects and trust/quarantine transitions, not an entirely
+inactive receiver. This remains a finite design check rather than temporal
+liveness checking in DFID.
+
+### Trust canaries
+
+The three new canaries each bypass exactly one named gate in their own
+module/config. Their checked property definitions remain in `TCOPTrust`.
+No canary changes the real model or the original safety canaries.
+
+| Canary | Single injected fault | Property that must be violated |
+| --- | --- | --- |
+| `CanaryReceiptBound` | `FaultNoSessionReceipt`: omit the issuer/session/destination receipt gate. | `ReceiptBoundRestrictions` |
+| `CanaryQuarantinedIssuer` | `FaultQuarantineBypass`: omit quarantine eligibility at intake/submission/effect. | `QuarantinedIssuerNoEffect` |
+| `CanaryZeroTrust` | `FaultUntrustedBroadAction`: omit the untrusted own-destination action ceiling. | `ZeroTrustOwnDestinationsOnly` |
+
+The receipt canary's trace gives p0 a receiver-local trust grant and then
+revokes credential c1 in the bound session with no receipt, proving a grant
+cannot substitute for receipt possession. The quarantine canary installs
+an egress denial for p0 while p0 is quarantined, despite otherwise valid
+receipt coverage. The zero-trust canary gives p0 a valid receipt for d0,
+then lets the still-untrusted issuer cause denial of d1, which it does not
+own. These are actual authority removals recorded with their causal
+snapshots, not just incorrectly labelled receive events.
+
+### Commands, fingerprints, and result records
+
+```sh
+# Full suite: all seven canaries, the thirteen original real configurations,
+# and the five trust configurations (three properties, combined, sanity).
+python3.11 -B formal/run_checks.py
+
+# Only the three new properties and their canaries.
+python3.11 -B formal/run_checks.py \
+  --config CanaryReceiptBound --config CanaryQuarantinedIssuer \
+  --config CanaryZeroTrust --config ReceiptBoundRestrictions \
+  --config QuarantinedIssuerNoEffect --config ZeroTrustOwnDestinationsOnly
+```
+
+`--canaries-only` now checks all seven intentional failures. `--bfs` remains
+available outside the sandbox. Any satisfied canary, violated real property,
+unrelated violation, or tool error fails the runner. No expected outcome
+of an original property or canary changed.
+
+The new trust cases pin fingerprint polynomial **1**. Polynomial 0 reached
+65,136 distinct states but hit the pinned TLC version's known final-report
+`ArithmeticException: Division by zero`; that result is preserved as a
+**tool error**, not a property pass, in
+`results/trust-fp0-reporting-failure.json` and its log. Changing the fingerprint
+polynomial changes only fingerprinting/reporting, not the specification,
+properties, states, or bounds. Polynomial 1 completed with the same state
+counts. The original thirteen checks and four canaries retain polynomial 0.
+Every new result records which polynomial actually ran.
+
+`results/summary-dfid.json` holds the full suite;
+`results/canaries-dfid.json` holds all expected failures. The trust subset
+is also retained in `results/trust-results-dfid.json`. Records include
+expected/actual outcome, state counts, search depth, run time, counterexample
+length for canaries, original receiver hash, trust-spec hash, checked-module
+and config hashes, exact command, and raw-log hash. Every record embeds the
+unchanged pinned-tools record SHA-256:
+`9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e`.
+Counterexample lengths include initial and violating states; DFID depth is
+its last search level, not BFS diameter. Counts include repeated generations
+across DFID iterations.
+
+| Check | Expected | Actual | Generated / distinct | DFID depth | Counterexample states | Seconds |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| [CanaryReceiptBound](results/dfid-CanaryReceiptBound.log) | violated | violated | 3,197 / 1,193 | 5 | 5 | 0.407 |
+| [CanaryQuarantinedIssuer](results/dfid-CanaryQuarantinedIssuer.log) | violated | violated | 31,191 / 4,891 | 8 | 8 | 0.691 |
+| [CanaryZeroTrust](results/dfid-CanaryZeroTrust.log) | violated | violated | 16,036 / 3,034 | 7 | 7 | 0.534 |
+| [ReceiptBoundRestrictions](results/dfid-ReceiptBoundRestrictions.log) | satisfied | satisfied | 1,759,601 / 65,136 | 26 | none | 27.508 |
+| [QuarantinedIssuerNoEffect](results/dfid-QuarantinedIssuerNoEffect.log) | satisfied | satisfied | 1,759,601 / 65,136 | 26 | none | 27.902 |
+| [ZeroTrustOwnDestinationsOnly](results/dfid-ZeroTrustOwnDestinationsOnly.log) | satisfied | satisfied | 1,759,601 / 65,136 | 26 | none | 27.804 |
+| [TrustMC](results/dfid-TrustMC.log) | satisfied | satisfied | 1,759,601 / 65,136 | 26 | none | 29.437 |
+| [TrustSanity](results/dfid-TrustSanity.log) | satisfied | satisfied | 24,194 / 1,478 | 21 | none | 0.654 |
+
+All 25 expected outcomes were met: seven canary violations and eighteen
+satisfied real configurations. All 22 existing trace fixtures also retained
+their expected outcomes. All 26 pre-existing TLA+ module/config inputs were
+compared against the previous artifact hashes and remain unchanged.
+
+### Mapping to draft 006 and code
+
+The draft changed while this work was in progress. Its later text explicitly
+contains the receipt/trust requirements. This mapping uses that version;
+`results/trust-source-hashes.json` identifies the source snapshot. Nothing
+outside `formal/` was edited.
+
+| Model element | Draft 006 and code mapping |
+| --- | --- |
+| Victim traffic and receiver-local warning policy | Draft 006 “Domain roles and population”: A observes arrived traffic at its own services, sends TCX to B's receiver, and sends no instruction to B's agent. |
+| B-minted, holder/session/destination-bound receipts | Draft 006 “Receipts in the victim direction” and “Formal properties and canaries.” `TrafficRoutes` abstracts the admitted authenticated peer/service binding from “Partner and zero-trust conditions.” Generic receipt validation exists in `witness.py`, but the proposed B-side acquisition/arrival/ownership registry is not implemented by `reliability.py` or `confirmation.py`; finding 1 still applies to the generic validators. |
+| Untrusted default and local trust raising | Draft 006 “Partner and zero-trust conditions.” `reliability.py:170-187,254-286` has receiver-local issuer state keyed by control group/scope, initially `unknown` with factor 400; `:361-398,433-434` uses independent evidence for transitions. This is related local evidence machinery, not the model's per-peer boolean grant API or zero-trust destination ceiling. `seed` is a scenario helper, not a demonstrated production operator-grant interface. |
+| Per-peer quarantine | Draft 006 “Profile wiring and release.” `reliability.py:41-85,399-439` defines/maintains quarantined state with factor zero; `:569-588` includes it in influence. The model abstracts thresholds, dwell, decay, confidence and scope to a per-peer quarantine set, with no recovery during the episode. |
+| Receiver confirmations | `confirmation.py:546-577,586-595,629-645` makes staged, source-novel receiver-local confirmation decisions; an observation cannot create and satisfy the same confirmation stage. It confirms subject containment, not directly the new issuer-trust grant. `RaiseTrust(...,"receiver")` abstracts a qualifying local confirmation/evidence decision, not an arbitrary peer assertion. |
+| Quarantine before all restrictive paths | `confirmation.py:442-460` admits quarantined-issuer investigative tips; `:612-628` can create a provisional response; `:469-480` denies a capability. Therefore the generic composition does **not** implement the new no-effect guard. Draft 006 explicitly calls for the study guard before this path, without changing generic profile rules. |
+| Quarantine while a write is queued | Draft 006 requires checking before delayed submission. The model additionally checks before installation and suppresses an uninstalled pending effect. `reliability.py:591-603` normally caches originally issued influence and handles compromise windows separately; these files do not establish pending native-write cancellation. The live binding must demonstrate this ability or expose the mismatch; the model is not that demonstration. |
+
+The new own-destination ceiling, receiver-only receipt acquisition/possession
+registry, explicit grant interface, stricter quarantine composition, and
+pending-effect suppression have no complete counterpart in the two generic
+profile modules. [FINDINGS.md](FINDINGS.md), finding 2, records that gap.
+The draft likewise describes profile wiring and receipt acquisition as work
+requiring admission, not as already active behavior.
+
+Cryptographic bytes, receipt IDs/expiry/rotation, multiple warnings per
+interaction, multi-session binding coarsening, confirmation thresholds,
+profile on/off ablations, recovery/release, and H1-Hn campaign timing are not
+implemented by this trust abstraction. Receipt triples remain valid for the
+bounded episode; actual arrivals and B-side provenance are explicit. The
+original A0 timing checks are preserved, without asserting that they prevent
+the victim's already-arrived H1. The existing trace schema/tool still checks
+the original receiver projection; it does not yet encode grant, quarantine,
+or receipt mint/delivery events and is not evidence of these new properties
+on live traces. Draft 006 requires that trace mapping before its input seal.

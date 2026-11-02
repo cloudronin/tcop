@@ -1,5 +1,5 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running depth-first search Model-Checking with fp 0 and seed -2837293969650172503 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 6978] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Running depth-first search Model-Checking with fp 0 and seed -4926235507631245749 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90289] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
 Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/accepted-approval-delay-868e257e593a/FrozenTrace.tla
 Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrace.tla
 Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
@@ -16,7 +16,7 @@ Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module TCOPTrace
 Semantic processing of module FrozenTrace
-Starting... (2026-11-01 19:02:34)
+Starting... (2026-11-01 21:07:22)
 <<"TCOP_TRACE_REACHED", 0>>
 Finished computing initial states: 1 states generated, with 1 of them distinct.
 Starting level 2: 1 states generated, 1 distinct states found.
@@ -49,4 +49,4 @@ Model checking completed. No error has been found.
   calculated (optimistic):  val = 1.1E-16
   based on the actual fingerprints:  val = 1.6E-7
 175 states generated, 13 distinct states found.
-Finished in 00s at (2026-11-01 19:02:34)
+Finished in 00s at (2026-11-01 21:07:22)

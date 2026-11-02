@@ -1,0 +1,228 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running depth-first search Model-Checking with fp 1 and seed 1138942027322546523 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 89927] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryReceiptBound.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrust.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Sequences.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TCOPReceiver
+Semantic processing of module TCOPTrust
+Semantic processing of module TrustMC
+Semantic processing of module CanaryReceiptBound
+Starting... (2026-11-01 21:06:24)
+Finished computing initial states: 1 states generated, with 1 of them distinct.
+Starting level 2: 1 states generated, 1 distinct states found.
+Starting level 3: 10 states generated, 10 distinct states found.
+Starting level 4: 108 states generated, 69 distinct states found.
+Starting level 5: 729 states generated, 342 distinct states found.
+Error: Invariant ReceiptBoundRestrictions is violated.
+Error: The behavior up to this point is:
+State 1:
+/\ quarantined = {}
+/\ trustBy = (p0 :> "none" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {}
+/\ effectAt = <<0, 0>>
+/\ accepted = {}
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = {}
+/\ choice = <<<<"none", "none">>, <<"none", "none">>>>
+/\ examined = {}
+/\ seenIds = {}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ trusted = {}
+/\ status = <<"unreceived", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 2:
+/\ quarantined = {}
+/\ trustBy = (p0 :> "receiver" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {}
+/\ effectAt = <<0, 0>>
+/\ accepted = {}
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = {}
+/\ choice = <<<<"none", "none">>, <<"none", "none">>>>
+/\ examined = {}
+/\ seenIds = {}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ trusted = {p0}
+/\ status = <<"unreceived", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 3:
+/\ quarantined = {}
+/\ trustBy = (p0 :> "receiver" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1}
+/\ effectAt = <<0, 0>>
+/\ accepted = { [ message |-> 1,
+    at |-> 0,
+    id |-> 1,
+    nonce |-> 1,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = {}
+/\ choice = <<<<"revoke_credential", c1>>, <<"none", "none">>>>
+/\ examined = {1}
+/\ seenIds = {1}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ trusted = {p0}
+/\ status = <<"approval", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 4:
+/\ quarantined = {}
+/\ trustBy = (p0 :> "receiver" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = { <<"egress", d0>>,
+  <<"egress", d1>>,
+  <<"credential", c0>>,
+  <<"credential", c1>>,
+  <<"work", "benign">> }
+/\ delivered = {1}
+/\ effectAt = <<0, 0>>
+/\ accepted = { [ message |-> 1,
+    at |-> 0,
+    id |-> 1,
+    nonce |-> 1,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = {}
+/\ choice = <<<<"revoke_credential", c1>>, <<"none", "none">>>>
+/\ examined = {1}
+/\ seenIds = {1}
+/\ effective = {}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {}
+/\ trusted = {p0}
+/\ status = <<"pending", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+State 5:
+/\ quarantined = {}
+/\ trustBy = (p0 :> "receiver" @@ p1 :> "none")
+/\ blocked = {}
+/\ traffic = {}
+/\ minted = {}
+/\ Authority = {<<"egress", d0>>, <<"egress", d1>>, <<"credential", c0>>, <<"work", "benign">>}
+/\ delivered = {1}
+/\ effectAt = <<0, 0>>
+/\ accepted = { [ message |-> 1,
+    at |-> 0,
+    id |-> 1,
+    nonce |-> 1,
+    priorIds |-> {},
+    priorNonces |-> {} ] }
+/\ now = 0
+/\ submitAt = <<0, 0>>
+/\ effectAudit = { [ issuer |-> p0,
+    session |-> s0,
+    destination |-> d0,
+    trusted |-> TRUE,
+    action |-> <<"revoke_credential", c1>>,
+    quarantined |-> FALSE,
+    traffic |-> {},
+    minted |-> {},
+    held |-> {},
+    message |-> 1,
+    at |-> 0,
+    warningSession |-> s0,
+    removed |-> {<<"credential", c1>>} ] }
+/\ choice = <<<<"revoke_credential", c1>>, <<"none", "none">>>>
+/\ examined = {1}
+/\ seenIds = {1}
+/\ effective = {1}
+/\ nextAttempt = 1
+/\ result = ( 0 :> "unattempted" @@
+  1 :> "unattempted" @@
+  2 :> "unattempted" @@
+  3 :> "unattempted" )
+/\ Covered = {<<"credential", c1>>}
+/\ trusted = {p0}
+/\ status = <<"effective", "unreceived">>
+/\ held = {}
+/\ Executed = <<>>
+/\ seenNonces = {1}
+/\ attempt = 0
+/\ a4 = "waiting"
+
+3197 states generated, 1193 distinct states found.
+Finished in 00s at (2026-11-01 21:06:25)

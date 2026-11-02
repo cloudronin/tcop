@@ -79,7 +79,7 @@
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-expired-7dbdd61fe0ac/FrozenTrace.cfg",
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-expired-7dbdd61fe0ac/FrozenTrace.tla"
   ],
-  "seconds": 0.22,
+  "seconds": 0.274,
   "exit_code": 0,
   "outcome": "rejected",
   "reached_events": 0,

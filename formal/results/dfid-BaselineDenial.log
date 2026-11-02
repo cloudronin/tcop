@@ -1,5 +1,5 @@
 TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
-Running depth-first search Model-Checking with fp 0 and seed 6232742247582200171 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 20984] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Running depth-first search Model-Checking with fp 0 and seed 7999487551068522606 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90431] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
 Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/MC.tla
 Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
 Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
@@ -14,7 +14,7 @@ Semantic processing of module FiniteSets
 Semantic processing of module TLC
 Semantic processing of module TCOPReceiver
 Semantic processing of module MC
-Starting... (2026-11-01 19:18:29)
+Starting... (2026-11-01 21:08:16)
 Finished computing initial states: 2 states generated, with 2 of them distinct.
 Starting level 2: 2 states generated, 2 distinct states found.
 Starting level 3: 6 states generated, 6 distinct states found.
@@ -37,4 +37,4 @@ Model checking completed. No error has been found.
   calculated (optimistic):  val = 1.4E-15
   based on the actual fingerprints:  val = 2.0E-6
 526 states generated, 56 distinct states found.
-Finished in 00s at (2026-11-01 19:18:29)
+Finished in 00s at (2026-11-01 21:08:16)

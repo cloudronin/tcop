@@ -61,3 +61,62 @@ The negative fixture traces are intentional conformance tests, not observed
 study incidents. There are no real smoke traces yet. The first real input
 will be Phase 3 smoke traces. Amendment 004 is sealed at `619cb4e` and was
 not edited.
+
+
+## Finding 2: the new victim-observer trust contract is not the generic profile composition
+
+**Classification:** model-code gap, not a TLC violation. **Status:** open;
+implement the study's explicit eligibility guard and receipt acquisition.
+
+**Question protected:** Can only a currently eligible, correctly receipted
+issuer cause the permitted restriction on the admitted session?
+
+`TCOPTrust` models the owner's three requested conditions. Draft amendment
+006 now states them in “Receipts in the victim direction,” “Partner and
+zero-trust conditions,” “Profile wiring and release,” and “Formal properties
+and canaries.” The source snapshot hashes are in
+`formal/results/trust-source-hashes.json`. The draft changed during this
+work; the mapping uses the later explicit trust/receipt text, not the
+initial roles-only version.
+
+Existing code provides related pieces, with these material differences:
+
+- `src/tcop/reliability.py:170-187` initializes an issuer as `unknown` with
+  nonzero factors (400), and its state is keyed by local domain, control
+  group and scope (`:254-286`), rather than the model's per-peer boolean
+  trust grant. Independent clean evidence can raise `unknown` to `normal`
+  (`:361-398`, `:433-434`). There is no receipt-owned-destination ceiling or
+  explicit production operator-grant API in this path. `seed` (`:289-318`)
+  is a deterministic scenario helper, not proof of such an API.
+- Quarantined state has factor zero (`src/tcop/reliability.py:41-85`,
+  `:436-437`), and factors enter warning influence (`:569-588`). That is
+  not the same as “no restriction.” `src/tcop/confirmation.py:442-460`
+  explicitly permits receipt-verified quarantined-issuer investigative
+  tips. With the default enabled provisional profile (`:65-85`), a scoped
+  provisional response can follow (`:612-628`); its envelope denies a
+  capability (`:469-480`). The study needs the stricter quarantine guard
+  before this route, without changing the generic profile's behavior.
+- `src/tcop/reliability.py:591-603` normally preserves an observation's
+  original influence and changes it retrospectively only for matching
+  compromise windows. The model instead rechecks quarantine before
+  submission and effect and cancels an uninstalled pending restriction.
+  A live binding's ability to suppress an already submitted but not yet
+  installed write is not established by this model or those profile files.
+- `src/tcop/confirmation.py:546-577`, `:586-595`, and `:629-645` implement
+  receiver-local staged/source-novel confirmation for subject containment.
+  They do not directly implement the model's issuer trust-grant transition.
+  A peer report cannot directly call the modeled receiver/operator grant.
+- Generic witness receipts exist, but finding 1's optional/misbound receipt
+  gaps remain. The B-owned issuance/actual-arrival/holder/session/destination
+  registry, and the exact own-destination action ceiling, are not supplied
+  by `reliability.py` or `confirmation.py`. Draft 006 describes receipt
+  acquisition and profile wiring as work requiring admission, not an
+  already deployed capability.
+
+No generic profile, intake, adapter, or amendment was edited here. The
+new checks are a bounded design contract, not proof of live implementation
+parity. The legacy `TCOPTrace` schema does not yet record trust grants,
+quarantine transitions, or B-side issuance/peer delivery. Its existing
+checks remain unchanged and must not be described as validating these new
+trust properties on actual traces. Draft 006 also requires that trace
+mapping before the relevant frozen-inputs seal.

@@ -61,7 +61,7 @@
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-missing-a4-3f075d0a1c3c/FrozenTrace.cfg",
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-missing-a4-3f075d0a1c3c/FrozenTrace.tla"
   ],
-  "seconds": 0.229,
+  "seconds": 0.405,
   "exit_code": 0,
   "outcome": "rejected",
   "reached_events": 3,

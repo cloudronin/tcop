@@ -64,7 +64,7 @@
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-widening-bd558a3b0de6/FrozenTrace.cfg",
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-widening-bd558a3b0de6/FrozenTrace.tla"
   ],
-  "seconds": 0.217,
+  "seconds": 0.272,
   "exit_code": 0,
   "outcome": "rejected",
   "reached_events": 3,

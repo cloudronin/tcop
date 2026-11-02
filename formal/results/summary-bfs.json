@@ -6,6 +6,7 @@
     "actual_outcome": "violated",
     "exit_code": 13,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -21,7 +22,7 @@
     "generated": 21,
     "distinct": 20,
     "dfid_level": null,
-    "seconds": 0.646,
+    "seconds": 0.683,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -47,7 +48,7 @@
     ],
     "counterexample_length": 4,
     "counterexample_transitions": 3,
-    "log_sha256": "801cded981f6f938b12b6555c22671565a056f8bdde86cbb47a7c051744938ac",
+    "log_sha256": "ec09495f116c9b7d7d5890d29ea249209c93b2cecf0dd57e4c37136a47b2e745",
     "property": "NoWidening",
     "fault": "FaultReattach: adapter re-adds removed A0 authority",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -59,6 +60,7 @@
     "actual_outcome": "violated",
     "exit_code": 12,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -74,7 +76,7 @@
     "generated": 17,
     "distinct": 16,
     "dfid_level": null,
-    "seconds": 0.611,
+    "seconds": 0.652,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -100,7 +102,7 @@
     ],
     "counterexample_length": 3,
     "counterexample_transitions": 2,
-    "log_sha256": "cdb5cd1761eac49735b33dff843dcd14ea14175fa360447dd28e13f4086fbc7a",
+    "log_sha256": "c5db58b2e50a80988963f771eb27fc171ccd367ecc8247d0177a0133faff1e3a",
     "property": "AcceptOnlyValid",
     "fault": "FaultValidWithoutNonce: drop only consumed-nonce validation",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -112,6 +114,7 @@
     "actual_outcome": "violated",
     "exit_code": 13,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -127,7 +130,7 @@
     "generated": 5,
     "distinct": 5,
     "dfid_level": null,
-    "seconds": 0.631,
+    "seconds": 0.659,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -153,7 +156,7 @@
     ],
     "counterexample_length": 5,
     "counterexample_transitions": 4,
-    "log_sha256": "26e89dd1bd9bc6378cd3a9d7fedddb4db7453a172b722f1f7b2353dfbf6ed1cb",
+    "log_sha256": "f39613c0e4347d1364b3bcee8d60b62b5cc9063129b1a3663c950b75fe3d6872",
     "property": "EffectHolds",
     "fault": "FaultHarmfulAuthorization: execute a covered action through an installed deny",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
@@ -165,6 +168,7 @@
     "actual_outcome": "violated",
     "exit_code": 12,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -180,7 +184,7 @@
     "generated": 2,
     "distinct": 2,
     "dfid_level": null,
-    "seconds": 0.631,
+    "seconds": 0.652,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -206,10 +210,175 @@
     ],
     "counterexample_length": 2,
     "counterexample_transitions": 1,
-    "log_sha256": "d3eb3317f38797763c79582ff0609d14b195d8602e754498f8231fb324150be7",
+    "log_sha256": "fee46084c847c37da723efe8ca2dc00805552dff55593f03fccd42d30242fa5f",
     "property": "LyingPeerOnlyCostsAvailability",
     "fault": "FaultReceiveCommand: execute the command field of a valid false observation",
     "canary_bounds_sha256": "a4a5ed370aa43b4d20bbd5cf333d4a201e2011aabc1b1ed0ee32f997fa128447"
+  },
+  {
+    "config": "CanaryReceiptBound",
+    "passed": true,
+    "expected_outcome": "violated",
+    "actual_outcome": "violated",
+    "exit_code": 12,
+    "mode": "bfs",
+    "fingerprint_polynomial": 1,
+    "provenance": "local_execution",
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
+    "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
+    "checked_module_sha256": "e10933b6246ab15c99b9650c6bcede078d8d301d214e80f2072846a4e6e05523",
+    "config_sha256": "2f7bb407451fb316de00bab1a5ce7e138291aaa78d11be48113f2d9940fbe24a",
+    "tlc_stats": {
+      "generated": 882,
+      "distinct": 541,
+      "queue_remaining": 420,
+      "depth": 5,
+      "depth_kind": "bfs_graph_depth"
+    },
+    "generated": 882,
+    "distinct": 541,
+    "dfid_level": null,
+    "seconds": 0.743,
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "-XX:+UseParallelGC",
+      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-cp",
+      "formal/tools/tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "auto",
+      "-fp",
+      "1",
+      "-metadir",
+      "formal/states/bfs-CanaryReceiptBound",
+      "-config",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryReceiptBound.cfg",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryReceiptBound.tla"
+    ],
+    "violated_properties": [
+      "ReceiptBoundRestrictions"
+    ],
+    "tlc_violation_labels": [
+      "ReceiptBoundRestrictions"
+    ],
+    "counterexample_length": 5,
+    "counterexample_transitions": 4,
+    "log_sha256": "71a39fa110f78f445f5b97d205e184676c959b9feffc23b44945fe01a52b191f",
+    "property": "ReceiptBoundRestrictions",
+    "fault": "FaultNoSessionReceipt: bypass exact issuer/session/destination receipt gate",
+    "canary_bounds_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
+    "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
+  },
+  {
+    "config": "CanaryQuarantinedIssuer",
+    "passed": true,
+    "expected_outcome": "violated",
+    "actual_outcome": "violated",
+    "exit_code": 12,
+    "mode": "bfs",
+    "fingerprint_polynomial": 1,
+    "provenance": "local_execution",
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
+    "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
+    "checked_module_sha256": "974ea5b61dd5e1c94ad9da7dd74270709d486cd183b663bc36384efaca9de661",
+    "config_sha256": "41ffddc492201bd49eae8abc429a118bef2773631be779d33c8e499dc9b7cbf6",
+    "tlc_stats": {
+      "generated": 22901,
+      "distinct": 7233,
+      "queue_remaining": 2342,
+      "depth": 11,
+      "depth_kind": "bfs_graph_depth"
+    },
+    "generated": 22901,
+    "distinct": 7233,
+    "dfid_level": null,
+    "seconds": 1.176,
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "-XX:+UseParallelGC",
+      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-cp",
+      "formal/tools/tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "auto",
+      "-fp",
+      "1",
+      "-metadir",
+      "formal/states/bfs-CanaryQuarantinedIssuer",
+      "-config",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryQuarantinedIssuer.cfg",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryQuarantinedIssuer.tla"
+    ],
+    "violated_properties": [
+      "QuarantinedIssuerNoEffect"
+    ],
+    "tlc_violation_labels": [
+      "QuarantinedIssuerNoEffect"
+    ],
+    "counterexample_length": 8,
+    "counterexample_transitions": 7,
+    "log_sha256": "dcaa712d2248fab5d54a4f2a2ef11373834b250a0a677707ad12452e4da55cb6",
+    "property": "QuarantinedIssuerNoEffect",
+    "fault": "FaultQuarantineBypass: let a quarantined issuer reach the binding effect",
+    "canary_bounds_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
+    "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
+  },
+  {
+    "config": "CanaryZeroTrust",
+    "passed": true,
+    "expected_outcome": "violated",
+    "actual_outcome": "violated",
+    "exit_code": 12,
+    "mode": "bfs",
+    "fingerprint_polynomial": 1,
+    "provenance": "local_execution",
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
+    "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
+    "checked_module_sha256": "1be4e8a420701fb88206e44d4a37d75fa984988ad8760595068bb46c12684fbc",
+    "config_sha256": "eea5fe8f458633bba417230ae2132cbcbf0e5ddaa522a0ba0d108fdeeaa4dbfc",
+    "tlc_stats": {
+      "generated": 15195,
+      "distinct": 4917,
+      "queue_remaining": 1953,
+      "depth": 10,
+      "depth_kind": "bfs_graph_depth"
+    },
+    "generated": 15195,
+    "distinct": 4917,
+    "dfid_level": null,
+    "seconds": 1.006,
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "-XX:+UseParallelGC",
+      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-cp",
+      "formal/tools/tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "auto",
+      "-fp",
+      "1",
+      "-metadir",
+      "formal/states/bfs-CanaryZeroTrust",
+      "-config",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryZeroTrust.cfg",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/canaries/CanaryZeroTrust.tla"
+    ],
+    "violated_properties": [
+      "ZeroTrustOwnDestinationsOnly"
+    ],
+    "tlc_violation_labels": [
+      "ZeroTrustOwnDestinationsOnly"
+    ],
+    "counterexample_length": 7,
+    "counterexample_transitions": 6,
+    "log_sha256": "cf8e31c503dd2f8881486e364bb11d8b61f009da2663f057050de42b3a730e29",
+    "property": "ZeroTrustOwnDestinationsOnly",
+    "fault": "FaultUntrustedBroadAction: allow freeze/revocation/non-owned egress without local trust",
+    "canary_bounds_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
+    "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
   },
   {
     "config": "NoWidening",
@@ -218,6 +387,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -233,7 +403,7 @@
     "generated": 93987,
     "distinct": 61566,
     "dfid_level": null,
-    "seconds": 1.437,
+    "seconds": 1.349,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -255,7 +425,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "7fa8bb7674a37c2fa863212b3720e5404c53063e63ead905f97aad6570e89914"
+    "log_sha256": "ac3f25b521f891b912569196eb46b16ddecc401da012da96634fec8aaf275422"
   },
   {
     "config": "AcceptOnlyValid",
@@ -264,6 +434,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -279,7 +450,7 @@
     "generated": 93987,
     "distinct": 61566,
     "dfid_level": null,
-    "seconds": 1.529,
+    "seconds": 1.55,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -301,7 +472,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "2b3657a1d7b81ff653a26b08cd5edc8610618d85ab0e15e2c8720597469ebb2a"
+    "log_sha256": "2cfb76c9e8da1665d44c98ebb103293dae94cf2e84917ae70c8a7c1fdc13efac"
   },
   {
     "config": "EffectHolds",
@@ -310,6 +481,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -325,7 +497,7 @@
     "generated": 93987,
     "distinct": 61566,
     "dfid_level": null,
-    "seconds": 1.495,
+    "seconds": 1.472,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -347,7 +519,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "b0b6d3815fcf77edbfd4c013b073c12d847213bb48f5e9cb78489a426bef9a9a"
+    "log_sha256": "d07b0d33fa18e1e166e24ebbf9b11004b72e5c7c97f9bc4a0a15c3e75a938f1f"
   },
   {
     "config": "LyingPeer",
@@ -356,6 +528,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -371,7 +544,7 @@
     "generated": 93987,
     "distinct": 61566,
     "dfid_level": null,
-    "seconds": 1.478,
+    "seconds": 1.627,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -393,7 +566,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "070e5df35f488e060428846dae2667879dfe35517c51204adfe97609a24b78d9"
+    "log_sha256": "eec04b5ada050ca7f6255fbf29cd65e6637f7b404ef2558a95bd4cab9bf8127e"
   },
   {
     "config": "MC",
@@ -402,6 +575,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -417,7 +591,7 @@
     "generated": 93987,
     "distinct": 61566,
     "dfid_level": null,
-    "seconds": 1.525,
+    "seconds": 1.624,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -439,7 +613,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "95fba24610cc64182f89fc6b5fa78450bdd393a0d44142817fa1bbc7b22b1a6e"
+    "log_sha256": "763defd76c3a24cb2046fb838d2ab3247ebf809aae61870ee56b6beb8a717006"
   },
   {
     "config": "TimingSlow",
@@ -448,6 +622,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -463,7 +638,7 @@
     "generated": 58,
     "distinct": 54,
     "dfid_level": null,
-    "seconds": 0.639,
+    "seconds": 0.667,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -485,7 +660,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "f18426542c842a34e482b51bfe596ba3ffa47a1b8200f1d1c7cd0906cf8142c4"
+    "log_sha256": "66e5eb94a56a963258cd400310ba2508cf46da109a5e4cb1c0639ba38b36982e"
   },
   {
     "config": "TimingSlowApproval",
@@ -494,6 +669,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -509,7 +685,7 @@
     "generated": 72,
     "distinct": 60,
     "dfid_level": null,
-    "seconds": 0.654,
+    "seconds": 0.662,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -531,7 +707,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "07347dae110cd1458cb525bfe227ef193bde1e8f217f50c045530568a889581f"
+    "log_sha256": "592869754d00f0d6d4c339a7cd65d8eba271e4b3ce8f647442ae6b34dc5e296d"
   },
   {
     "config": "TimingFast",
@@ -540,6 +716,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -555,7 +732,7 @@
     "generated": 92,
     "distinct": 88,
     "dfid_level": null,
-    "seconds": 0.654,
+    "seconds": 0.673,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -577,7 +754,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "9afa7758e6e9c6798fd5c27dd2710ffa4ea7eef0759839570ec39a0e9594b5c0"
+    "log_sha256": "d4ec99a6ffdba40d1222ca7b802003449da449bd42fc1caefe7689785a8d78fe"
   },
   {
     "config": "TimingFastCredential",
@@ -586,6 +763,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -601,7 +779,7 @@
     "generated": 78,
     "distinct": 74,
     "dfid_level": null,
-    "seconds": 0.649,
+    "seconds": 0.664,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -623,7 +801,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "d03a83e1d952ef5ac4520739bf9d20d5c4642cdf358626a43926749c60271094"
+    "log_sha256": "9244b97e5ea8bda006a6f5512357fd617b48ae507cef983304b6d14f80ff5fe9"
   },
   {
     "config": "BaselineDenial",
@@ -632,6 +810,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -647,7 +826,7 @@
     "generated": 62,
     "distinct": 56,
     "dfid_level": null,
-    "seconds": 0.666,
+    "seconds": 0.668,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -669,7 +848,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "85f7358be7d36e6b4328808420986c9c8ef78d28f22d3d342566508bfe55b10c"
+    "log_sha256": "c8c26603965b5fc5495b8b53561e963d8f0e4544323594d495f789fa6c2c3103"
   },
   {
     "config": "Sanity",
@@ -678,6 +857,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -693,7 +873,7 @@
     "generated": 43,
     "distinct": 41,
     "dfid_level": null,
-    "seconds": 0.631,
+    "seconds": 0.642,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -715,7 +895,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "1d19c3b3bb1db8c9476fd61decc6b7d1bf023948e6c134cacf6e1f51ce0dadbb"
+    "log_sha256": "59a63a0c53a6c53542cece661462fa067a253d316f0e20bdcc63784bb626590a"
   },
   {
     "config": "SanityLying",
@@ -724,6 +904,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -739,7 +920,7 @@
     "generated": 224,
     "distinct": 204,
     "dfid_level": null,
-    "seconds": 0.673,
+    "seconds": 0.663,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -761,7 +942,7 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "c9da65ed822d06914c5e5e0d49926c009fa4aea39b28d8096a6f2abba4233ee2"
+    "log_sha256": "2832f9e34a4cb90fe43f8d1599ba97527bf3152aface7db214bcaf7596373ef8"
   },
   {
     "config": "MCApprovalBaseline",
@@ -770,6 +951,7 @@
     "actual_outcome": "satisfied",
     "exit_code": 0,
     "mode": "bfs",
+    "fingerprint_polynomial": 0,
     "provenance": "local_execution",
     "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
     "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
@@ -785,7 +967,7 @@
     "generated": 80546,
     "distinct": 54198,
     "dfid_level": null,
-    "seconds": 1.564,
+    "seconds": 1.508,
     "command": [
       "/opt/homebrew/opt/openjdk/bin/java",
       "-XX:+UseParallelGC",
@@ -807,6 +989,252 @@
     "tlc_violation_labels": [],
     "counterexample_length": null,
     "counterexample_transitions": null,
-    "log_sha256": "a6baac68cf487df58c6e74076ae90424a6de03fc19c789dd2dc6b08605753fad"
+    "log_sha256": "868ec21092801dcdfb26d7abbaf03b213b1d2eb6faee82160a82e52d040f49dd"
+  },
+  {
+    "config": "ReceiptBoundRestrictions",
+    "passed": true,
+    "expected_outcome": "satisfied",
+    "actual_outcome": "satisfied",
+    "exit_code": 0,
+    "mode": "bfs",
+    "fingerprint_polynomial": 1,
+    "provenance": "local_execution",
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
+    "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
+    "checked_module_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
+    "config_sha256": "7bf4a31ed7d3efafe02435855e0494ea7d39b3075aca753f20e4a29d5987fc89",
+    "tlc_stats": {
+      "generated": 128313,
+      "distinct": 65136,
+      "queue_remaining": 0,
+      "depth": 25,
+      "depth_kind": "bfs_graph_depth"
+    },
+    "generated": 128313,
+    "distinct": 65136,
+    "dfid_level": null,
+    "seconds": 1.608,
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "-XX:+UseParallelGC",
+      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-cp",
+      "formal/tools/tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "auto",
+      "-fp",
+      "1",
+      "-metadir",
+      "formal/states/bfs-ReceiptBoundRestrictions",
+      "-config",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/ReceiptBoundRestrictions.cfg",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+    ],
+    "violated_properties": [],
+    "tlc_violation_labels": [],
+    "counterexample_length": null,
+    "counterexample_transitions": null,
+    "log_sha256": "3d7fa9b56d2f6b48d38f1d018fb02c0aab3e5541ad8ebef55400d90703e3ea09",
+    "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
+  },
+  {
+    "config": "QuarantinedIssuerNoEffect",
+    "passed": true,
+    "expected_outcome": "satisfied",
+    "actual_outcome": "satisfied",
+    "exit_code": 0,
+    "mode": "bfs",
+    "fingerprint_polynomial": 1,
+    "provenance": "local_execution",
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
+    "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
+    "checked_module_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
+    "config_sha256": "a3433422c66fe093d470194dd74171663de3f7e56937e135b5a5775c8d8d8d31",
+    "tlc_stats": {
+      "generated": 128313,
+      "distinct": 65136,
+      "queue_remaining": 0,
+      "depth": 25,
+      "depth_kind": "bfs_graph_depth"
+    },
+    "generated": 128313,
+    "distinct": 65136,
+    "dfid_level": null,
+    "seconds": 1.505,
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "-XX:+UseParallelGC",
+      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-cp",
+      "formal/tools/tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "auto",
+      "-fp",
+      "1",
+      "-metadir",
+      "formal/states/bfs-QuarantinedIssuerNoEffect",
+      "-config",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/QuarantinedIssuerNoEffect.cfg",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+    ],
+    "violated_properties": [],
+    "tlc_violation_labels": [],
+    "counterexample_length": null,
+    "counterexample_transitions": null,
+    "log_sha256": "76a677e925dc76122666650ca90322a78a7cc823221dc77e979d337dad82129e",
+    "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
+  },
+  {
+    "config": "ZeroTrustOwnDestinationsOnly",
+    "passed": true,
+    "expected_outcome": "satisfied",
+    "actual_outcome": "satisfied",
+    "exit_code": 0,
+    "mode": "bfs",
+    "fingerprint_polynomial": 1,
+    "provenance": "local_execution",
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
+    "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
+    "checked_module_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
+    "config_sha256": "3231c05c9e9ddb463979f84cd6b02519cd4dc236d7713a1740f5afb5d9033d27",
+    "tlc_stats": {
+      "generated": 128313,
+      "distinct": 65136,
+      "queue_remaining": 0,
+      "depth": 25,
+      "depth_kind": "bfs_graph_depth"
+    },
+    "generated": 128313,
+    "distinct": 65136,
+    "dfid_level": null,
+    "seconds": 1.601,
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "-XX:+UseParallelGC",
+      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-cp",
+      "formal/tools/tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "auto",
+      "-fp",
+      "1",
+      "-metadir",
+      "formal/states/bfs-ZeroTrustOwnDestinationsOnly",
+      "-config",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/ZeroTrustOwnDestinationsOnly.cfg",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+    ],
+    "violated_properties": [],
+    "tlc_violation_labels": [],
+    "counterexample_length": null,
+    "counterexample_transitions": null,
+    "log_sha256": "aede881acb5839165cdbbc3614901963588cdbe2cba7647df96c525a871eecf8",
+    "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
+  },
+  {
+    "config": "TrustMC",
+    "passed": true,
+    "expected_outcome": "satisfied",
+    "actual_outcome": "satisfied",
+    "exit_code": 0,
+    "mode": "bfs",
+    "fingerprint_polynomial": 1,
+    "provenance": "local_execution",
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
+    "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
+    "checked_module_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
+    "config_sha256": "6b84d34ceadf8e9a9b6d230c92d9a5b4c55e47b3c6ceb5842ee733df28889fd5",
+    "tlc_stats": {
+      "generated": 128313,
+      "distinct": 65136,
+      "queue_remaining": 0,
+      "depth": 25,
+      "depth_kind": "bfs_graph_depth"
+    },
+    "generated": 128313,
+    "distinct": 65136,
+    "dfid_level": null,
+    "seconds": 1.659,
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "-XX:+UseParallelGC",
+      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-cp",
+      "formal/tools/tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "auto",
+      "-fp",
+      "1",
+      "-metadir",
+      "formal/states/bfs-TrustMC",
+      "-config",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.cfg",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+    ],
+    "violated_properties": [],
+    "tlc_violation_labels": [],
+    "counterexample_length": null,
+    "counterexample_transitions": null,
+    "log_sha256": "082f4f9fbefb96c2ec82d2acb51d54c602cfc38805b6adcff4608fa71d9e77dd",
+    "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"
+  },
+  {
+    "config": "TrustSanity",
+    "passed": true,
+    "expected_outcome": "satisfied",
+    "actual_outcome": "satisfied",
+    "exit_code": 0,
+    "mode": "bfs",
+    "fingerprint_polynomial": 1,
+    "provenance": "local_execution",
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e",
+    "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42",
+    "checked_module_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a",
+    "config_sha256": "9e6700f5bb248345d93d26130e1d9c96cc4197f233e9b9ba29f6c62adf79104a",
+    "tlc_stats": {
+      "generated": 2116,
+      "distinct": 1478,
+      "queue_remaining": 0,
+      "depth": 20,
+      "depth_kind": "bfs_graph_depth"
+    },
+    "generated": 2116,
+    "distinct": 1478,
+    "dfid_level": null,
+    "seconds": 0.806,
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "-XX:+UseParallelGC",
+      "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla",
+      "-cp",
+      "formal/tools/tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "auto",
+      "-fp",
+      "1",
+      "-metadir",
+      "formal/states/bfs-TrustSanity",
+      "-config",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustSanity.cfg",
+      "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"
+    ],
+    "violated_properties": [],
+    "tlc_violation_labels": [],
+    "counterexample_length": null,
+    "counterexample_transitions": null,
+    "log_sha256": "47c07186363ce53059c8a937818a4f9316f9175eab71909fed95c9e834bd5f34",
+    "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6",
+    "reachability_witnesses": {
+      "untrustedRestriction": true,
+      "trustedFreeze": true,
+      "quarantinedWarningBlocked": true,
+      "pendingWarningCancelled": true
+    }
   }
 ]

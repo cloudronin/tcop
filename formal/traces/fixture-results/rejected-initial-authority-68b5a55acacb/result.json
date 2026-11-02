@@ -41,7 +41,7 @@
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-initial-authority-68b5a55acacb/FrozenTrace.cfg",
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/rejected-initial-authority-68b5a55acacb/FrozenTrace.tla"
   ],
-  "seconds": 0.218,
+  "seconds": 0.243,
   "exit_code": 0,
   "outcome": "rejected",
   "reached_events": 0,

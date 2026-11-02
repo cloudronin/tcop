@@ -1,0 +1,54 @@
+{"config": "ReceiptBoundRestrictions", "passed": false, "expected_outcome": "satisfied", "actual_outcome": "tool_error", "exit_code": 255, "mode": "dfid", "provenance": "local_execution", "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e", "spec_sha256": "8028cbaa4bf0b91871cf5278d4c66e9b3fe8ce44c058801879591cf0a5fa0e42", "checked_module_sha256": "7fe8cb84824e180577ae6b436841131f3834fd59b2ac8d1488f3c4c80195d61a", "config_sha256": "7bf4a31ed7d3efafe02435855e0494ea7d39b3075aca753f20e4a29d5987fc89", "tlc_stats": {"generated": 1759601, "distinct": 65136, "queue_remaining": null, "depth": 26, "depth_kind": "dfid_search_level"}, "generated": 1759601, "distinct": 65136, "dfid_level": 26, "seconds": 28.231, "command": ["/opt/homebrew/opt/openjdk/bin/java", "-XX:+UseParallelGC", "-DTLA-Library=/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla", "-cp", "formal/tools/tla2tools.jar", "tlc2.TLC", "-workers", "1", "-fp", "0", "-dfid", "50", "-metadir", "formal/states/dfid-ReceiptBoundRestrictions", "-config", "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/ReceiptBoundRestrictions.cfg", "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla"], "violated_properties": [], "tlc_violation_labels": [], "counterexample_length": null, "counterexample_transitions": null, "log_sha256": "b26a981045fe2861892b5d67d8bda924024657ee29180ae6790b1e4685645014", "trust_spec_sha256": "2e6a82d8294560d99c44ce689639a081aa7a206201b4bd0d10b7acc9df4a8ce6"}
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running depth-first search Model-Checking with fp 0 and seed 9139321365360598957 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 88869] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrust.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Sequences.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TCOPReceiver
+Semantic processing of module TCOPTrust
+Semantic processing of module TrustMC
+Starting... (2026-11-01 21:04:52)
+Finished computing initial states: 1 states generated, with 1 of them distinct.
+Starting level 2: 1 states generated, 1 distinct states found.
+Starting level 3: 12 states generated, 12 distinct states found.
+Starting level 4: 124 states generated, 69 distinct states found.
+Starting level 5: 675 states generated, 256 distinct states found.
+Starting level 6: 2463 states generated, 700 distinct states found.
+Starting level 7: 6861 states generated, 1542 distinct states found.
+Starting level 8: 15740 states generated, 2914 distinct states found.
+Starting level 9: 31121 states generated, 4907 distinct states found.
+Starting level 10: 54713 states generated, 7569 distinct states found.
+Starting level 11: 87800 states generated, 10981 distinct states found.
+Starting level 12: 131540 states generated, 15278 distinct states found.
+Starting level 13: 187292 states generated, 20530 distinct states found.
+Starting level 14: 256265 states generated, 26561 distinct states found.
+Starting level 15: 338395 states generated, 32913 distinct states found.
+Starting level 16: 431778 states generated, 39096 distinct states found.
+Starting level 17: 533570 states generated, 44851 distinct states found.
+Starting level 18: 641597 states generated, 50129 distinct states found.
+Starting level 19: 754902 states generated, 54872 distinct states found.
+Starting level 20: 872950 states generated, 58891 distinct states found.
+Starting level 21: 995017 states generated, 61920 distinct states found.
+Starting level 22: 1120113 states generated, 63772 distinct states found.
+Starting level 23: 1247061 states generated, 64628 distinct states found.
+Starting level 24: 1374865 states generated, 64968 distinct states found.
+Starting level 25: 1503009 states generated, 65104 distinct states found.
+Starting level 26: 1631289 states generated, 65136 distinct states found.
+Error: TLC threw an unexpected exception.
+This was probably caused by an error in the spec or model.
+See the User Output or TLC Console for clues to what happened.
+The exception was a java.lang.ArithmeticException
+: Division by zero
+1759601 states generated, 65136 distinct states found.
+Finished in 28s at (2026-11-01 21:05:20)
+

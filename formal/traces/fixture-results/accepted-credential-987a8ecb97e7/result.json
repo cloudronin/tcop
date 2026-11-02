@@ -39,7 +39,7 @@
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/accepted-credential-987a8ecb97e7/FrozenTrace.cfg",
     "/Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/traces/fixture-results/accepted-credential-987a8ecb97e7/FrozenTrace.tla"
   ],
-  "seconds": 0.248,
+  "seconds": 0.3,
   "exit_code": 0,
   "outcome": "accepted",
   "reached_events": 9

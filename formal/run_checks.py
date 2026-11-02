@@ -20,11 +20,16 @@ REAL_NAMES = ['NoWidening', 'AcceptOnlyValid', 'EffectHolds', 'LyingPeer', 'MC',
              'TimingSlow', 'TimingSlowApproval', 'TimingFast',
              'TimingFastCredential', 'BaselineDenial', 'Sanity', 'SanityLying',
              'MCApprovalBaseline']
+TRUST_NAMES = ['ReceiptBoundRestrictions', 'QuarantinedIssuerNoEffect',
+               'ZeroTrustOwnDestinationsOnly', 'TrustMC', 'TrustSanity']
 CANARIES = {
     'CanaryNoWidening': dict(property='NoWidening', fault='FaultReattach: adapter re-adds removed A0 authority'),
     'CanaryAcceptOnlyValid': dict(property='AcceptOnlyValid', fault='FaultValidWithoutNonce: drop only consumed-nonce validation'),
     'CanaryEffectHolds': dict(property='EffectHolds', fault='FaultHarmfulAuthorization: execute a covered action through an installed deny'),
     'CanaryLyingPeer': dict(property='LyingPeerOnlyCostsAvailability', fault='FaultReceiveCommand: execute the command field of a valid false observation'),
+    'CanaryReceiptBound': dict(property='ReceiptBoundRestrictions', fault='FaultNoSessionReceipt: bypass exact issuer/session/destination receipt gate', family='trust'),
+    'CanaryQuarantinedIssuer': dict(property='QuarantinedIssuerNoEffect', fault='FaultQuarantineBypass: let a quarantined issuer reach the binding effect', family='trust'),
+    'CanaryZeroTrust': dict(property='ZeroTrustOwnDestinationsOnly', fault='FaultUntrustedBroadAction: allow freeze/revocation/non-owned egress without local trust', family='trust'),
 }
 
 
@@ -59,14 +64,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--bfs', action='store_true', help='BFS with auto workers outside the sandbox; default DFID')
     selection = parser.add_mutually_exclusive_group()
-    selection.add_argument('--config', action='append', choices=REAL_NAMES + list(CANARIES), help='run only named configuration(s)')
-    selection.add_argument('--canaries-only', action='store_true', help='run the four required-failure checks only')
+    selection.add_argument('--config', action='append', choices=REAL_NAMES + TRUST_NAMES + list(CANARIES), help='run only named configuration(s)')
+    selection.add_argument('--canaries-only', action='store_true', help='run all seven required-failure checks only')
     args = parser.parse_args()
     tools_hash = checked_tools()
     mode = 'bfs' if args.bfs else 'dfid'
     receiver_hash = sha256(FORMAL/'tla/TCOPReceiver.tla')
     # Run canaries first so an unexpectedly satisfied canary is reported first.
-    names = args.config or (list(CANARIES) if args.canaries_only else list(CANARIES) + REAL_NAMES)
+    names = args.config or (list(CANARIES) if args.canaries_only else list(CANARIES) + REAL_NAMES + TRUST_NAMES)
     results = []
     for name in names:
         canary = CANARIES.get(name)
@@ -75,12 +80,14 @@ def main():
             config = FORMAL/f'tla/canaries/{name}.cfg'
             expected = 'violated'
         else:
-            spec = FORMAL/'tla/MC.tla'
+            spec = FORMAL/('tla/TrustMC.tla' if name in TRUST_NAMES else 'tla/MC.tla')
             config = FORMAL/f'tla/{name}.cfg'
             expected = 'satisfied'
+        trust_case = name in TRUST_NAMES or (canary and canary.get('family') == 'trust')
+        fingerprint = 1 if trust_case else 0
         command = [JAVA, '-XX:+UseParallelGC', '-DTLA-Library='+str(FORMAL/'tla'),
                    '-cp', 'formal/tools/tla2tools.jar', 'tlc2.TLC',
-                   '-workers', 'auto' if args.bfs else '1', '-fp', '0']
+                   '-workers', 'auto' if args.bfs else '1', '-fp', str(fingerprint)]
         if not args.bfs:
             command += ['-dfid', '50']
         command += ['-metadir', f'formal/states/{mode}-{name}',
@@ -101,7 +108,7 @@ def main():
         stats = tlc_stats(output)
         row = dict(config=name, passed=ok, expected_outcome=expected,
                    actual_outcome=outcome, exit_code=run.returncode,
-                   mode=mode, provenance='local_execution', pinned_tools_record_sha256=tools_hash,
+                   mode=mode, fingerprint_polynomial=fingerprint, provenance='local_execution', pinned_tools_record_sha256=tools_hash,
                    spec_sha256=receiver_hash, checked_module_sha256=sha256(spec),
                    config_sha256=sha256(config), tlc_stats=stats,
                    generated=stats['generated'], distinct=stats['distinct'],
@@ -113,7 +120,14 @@ def main():
                    log_sha256=sha256(log))
         if canary:
             row.update(property=canary['property'], fault=canary['fault'],
-                       canary_bounds_sha256=sha256(FORMAL/'tla/canaries/CanaryBounds.tla'))
+                       canary_bounds_sha256=sha256(FORMAL/('tla/TrustMC.tla' if canary.get('family') == 'trust' else 'tla/canaries/CanaryBounds.tla')))
+        if name in TRUST_NAMES or (canary and canary.get('family') == 'trust'):
+            row['trust_spec_sha256'] = sha256(FORMAL/'tla/TCOPTrust.tla')
+        if name == 'TrustSanity':
+            witnesses = ['untrustedRestriction', 'trustedFreeze', 'quarantinedWarningBlocked', 'pendingWarningCancelled']
+            row['reachability_witnesses'] = {w: w + ' |-> TRUE' in output for w in witnesses}
+            ok = ok and all(row['reachability_witnesses'].values())
+            row['passed'] = ok
         results.append(row)
         (FORMAL/'results'/f'summary-{mode}.json').write_text(json.dumps(results, indent=2)+'\n')
         if canary:
