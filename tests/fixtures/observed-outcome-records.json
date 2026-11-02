@@ -1,0 +1,30 @@
+[
+  {
+    "name": "nested control and mutation outcomes including false and zero",
+    "payload": {
+      "controls": [
+        {"expected": "signature_invalid", "observed": {"code": "signature_invalid", "restriction_created": false}, "passed": true},
+        {"expected": false, "observed": false, "passed": true}
+      ],
+      "mutations": {"unexpected_accept": {"expected": "rejected", "observed": "accepted", "passed": false}},
+      "conformance": {"expected": 0, "detail": {"unexpected_effects": 0}, "passed": true}
+    },
+    "rejected_record_indices": []
+  },
+  {
+    "name": "bare pass must fail",
+    "payload": {"control": "not_executed", "passed": true},
+    "rejected_record_indices": [0]
+  },
+  {
+    "name": "empty and reason-only evidence must fail even for failed checks",
+    "payload": [
+      {"passed": true, "observed": null},
+      {"passed": true, "observed": {}, "detail": "  "},
+      {"passed": false, "observed": [], "detail": {"nested": []}},
+      {"passed": true, "reason": "the implementation rejects it"},
+      {"passed": true, "observed": "", "detail": {"code": "expired"}}
+    ],
+    "rejected_record_indices": [0, 1, 2, 3]
+  }
+]
