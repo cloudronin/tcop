@@ -1,5 +1,11 @@
 # Amendment 006: Victim-Side Observation, Receipts, and Trust Conditions
 
+> **UNSEALED DRAFT.** This file is not part of the effective plan and must
+> not be cited as sealed. The plan and manifests pin amendments 001-005
+> only. The owner's decisions on this draft (2026-11-01) are recorded in
+> `docs/handoff/tcop-january-resume.md` and are not yet applied to this
+> text. Seal is planned for 2027-01-05.
+
 **DRAFT. Owner review. Not sealed. The campaign, receipt mechanism, and
 hostile-family counts below remain owner decisions.**
 
