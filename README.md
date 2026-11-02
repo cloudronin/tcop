@@ -145,7 +145,12 @@ and benchmark-truth streams are stored separately to prevent oracle leakage.
 
 ## CLI quick start
 
-Install into a Python 3.11+ environment:
+Install into a Python 3.11+ environment. To reproduce the sealed artifact
+root digests exactly, use **CPython 3.12.2**, the version the sealed
+artifacts record. Their `environment.json` records the interpreter version
+and is part of the digested root, so another Python version gives a
+different root digest even when every result file matches. See
+[docs/KNOWN_ISSUES.md](docs/KNOWN_ISSUES.md).
 
 ```bash
 python -m pip install -e .
