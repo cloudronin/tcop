@@ -1,5 +1,7 @@
 """Regression checks for paper evidence boundaries and anonymity rules."""
 import importlib.util
+import copy
+import json
 from pathlib import Path
 import unittest
 
@@ -97,6 +99,32 @@ class PreprintRepositoryLinkTests(unittest.TestCase):
         self.assertTrue(row["valid"])
         self.assertFalse(row["repository"])
         self.assertIsNone(row["tracked_at_head"])
+
+
+class CaseMotivationTests(unittest.TestCase):
+    def setUp(self):
+        self.data = json.loads((paperlib.PAPER / "data/case-motivation.json").read_text())
+        self.bibliography = (paperlib.PAPER / "references.bib").read_text()
+
+    def test_sourced_values_and_calendar_day_difference(self):
+        values = paperlib.case_motivation_values(self.data, self.bibliography)
+        self.assertEqual("July 9", values["CaseHFActivityStart"])
+        self.assertEqual("September 10", values["CaseAustraliaNotice"])
+        self.assertEqual("84", values["CaseAustraliaNoticeDays"])
+        self.assertEqual("mid-August", values["CaseAustraliaDiscovery"])
+
+    def test_unsourced_value_and_wrong_interval_fail(self):
+        for name, field, value in (("CaseYear", "source_keys", []),
+                                   ("CaseAustraliaNoticeDays", "value", 85)):
+            data = copy.deepcopy(self.data)
+            data["values"][name][field] = value
+            with self.subTest(name=name), self.assertRaises(SystemExit):
+                paperlib.case_motivation_values(data, self.bibliography)
+
+    def test_primary_bibtex_records_must_stay_exact(self):
+        changed = self.bibliography.replace("Press conference - New York", "Changed title")
+        with self.assertRaises(SystemExit):
+            paperlib.case_motivation_values(self.data, changed)
 
 
 if __name__ == "__main__":

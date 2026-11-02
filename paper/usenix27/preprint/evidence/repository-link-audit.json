@@ -7,10 +7,30 @@
     "spec/external-warning-adaptive-crosshost-amendment-005.md"
   ],
   "findings": [],
-  "head": "9b5c45af280d176dd90f77f1f5129d07fb397cf4",
+  "head": "921423baef94d6dfa0cbe374aadb7facfd69c8dc",
   "pass": true,
   "tag": "preprint-v1",
   "urls": [
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/",
+      "valid": true
+    },
     {
       "object_type": null,
       "pinned_to_tag": null,
@@ -108,6 +128,56 @@
       "repository": false,
       "repository_path": null,
       "tracked_at_head": null,
+      "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
       "url": "https://openid.net/specs/openid-caep-1_0-final.html",
       "valid": true
     },
@@ -129,6 +199,36 @@
       "repository_path": null,
       "tracked_at_head": null,
       "url": "https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "valid": true
+    },
+    {
+      "object_type": null,
+      "pinned_to_tag": null,
+      "ref": null,
+      "repository": false,
+      "repository_path": null,
+      "tracked_at_head": null,
+      "url": "https://www.pm.gov.au/media/press-conference-new-york",
       "valid": true
     },
     {

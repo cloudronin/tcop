@@ -13,6 +13,7 @@ import shutil
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from datetime import date
 from pathlib import Path
 from typing import Any, Iterable
 from urllib.parse import quote, unquote, urlsplit
@@ -1461,8 +1462,52 @@ def performance_macros() -> dict[str, str]:
     return values
 
 
+def case_motivation_values(data: dict[str, Any], bibliography: str) -> dict[str, str]:
+    """Validate the sourced claims without treating published dates as clocks."""
+    for key, source in data["sources"].items():
+        if "bibkey" in source:
+            match = re.search(r"@misc\{" + re.escape(source["bibkey"]) + r",.*?\n\}", bibliography, re.S)
+            if match is None or source["url"] not in match.group():
+                fail("case source missing from bibliography: " + key)
+            if hashlib.sha256(match.group().encode()).hexdigest() != source["entry_sha256"]:
+                fail("primary case bibliography entry changed: " + key)
+        elif not root_path(source["path"]).is_file():
+            fail("case design source missing: " + key)
+    values = {}
+    for name, record in data["values"].items():
+        if not record.get("source_keys") or any(key not in data["sources"] for key in record["source_keys"]):
+            fail("case value lacks a registered source: " + name)
+        value = record["value"]
+        if "difference" in record:
+            before, after = (date.fromisoformat(data["values"][key]["value"]) for key in record["difference"])
+            if (after - before).days != value:
+                fail("case calendar-day difference mismatch: " + name)
+        if record.get("format") == "month-day":
+            parsed = date.fromisoformat(value)
+            value = parsed.strftime("%B") + " " + str(parsed.day)
+        values[name] = str(value)
+    for name in ("DesignReliabilityVersion", "DesignConfirmationVersion"):
+        record = data["values"][name]
+        source = data["sources"][record["source_keys"][0]]
+        if "v" + str(record["value"]) not in root_path(source["path"]).read_text(encoding="utf-8"):
+            fail("profile version does not match local source: " + name)
+    return values
+
+
+def case_motivation_macros() -> dict[str, str]:
+    source = PAPER / "data" / "case-motivation.json"
+    data = read_json(source)
+    values = case_motivation_values(data, (PAPER / "references.bib").read_text(encoding="utf-8"))
+    write_json(GENERATED / "case-motivation-provenance.json", {
+        "source": relative(source), "sha256": sha256_file(source),
+        "sources": data["sources"], "values": data["values"], "macros": values,
+        "calendar_day_note": "Date subtraction is a calendar-day interval, not a clock-time duration.",
+    })
+    return values
+
+
 def generate_macros() -> None:
-    values = {**macro_values(), **future_work_macros(), **performance_macros()}
+    values = {**macro_values(), **future_work_macros(), **performance_macros(), **case_motivation_macros()}
     write_text(GENERATED / "results-macros.tex", "\n".join("\\newcommand{\\%s}{%s}" % (name, value) for name, value in values.items()))
     write_json(GENERATED / "paper-metadata.json", {
         "title": "TCOP: An Agentic Early Warning and Response Protocol",
@@ -1933,6 +1978,9 @@ def claim_ledger() -> list[dict[str, Any]]:
         "evidence_strength": "artifact-backed",
     }
     entries = [
+        ("C-MOTIVATION-01", "Primary reports describe models from three developers reaching third-party systems during evaluation, mixed retrospective detection, and ad hoc notification; Medicare notification followed access by 84 calendar days.", "primary-source motivation", "paper/usenix27/data/case-motivation.json", ["paper/usenix27/references.bib", "paper/usenix27/generated/case-motivation-provenance.json"], "2026; OpenAI/Anthropic/Moonshot models; UK AISI evaluation environment for Kimi K3; July 9/16/21 activity and public statements; June 18 to September 10 = 84 calendar days.", ["Primary-source context, not a TCOP experiment, prevalence estimate, or incident-prevention result."], "01-introduction.tex", "none", "supported with qualification"),
+        ("C-TRUST-DESIGN-01", "The design's zero-trust default limits an untrusted receipted warning to the warning peer's own destinations; broader tightening requires receiver-earned trust or an operator grant. The evaluated system used operator-configured trusted peers.", "unevaluated trust design", "design", ["profiles/reliability-high-risk-v0.3.json", "profiles/confirmation-high-risk-v0.4.json", "paper/usenix27/sections/02-problem-threat-model.tex"], "Design boundary only; zero-trust default not evaluated in this paper.", ["No claim that the evaluated path implements or validates the zero-trust default."], "02-problem-threat-model.tex", "none", "supported with qualification"),
+        ("C-PEER-TABLE-DESIGN-01", "The design keeps per-peer scope, reliability, reachability, and delivery latency local and never exchanges peer tables.", "unevaluated peer-table design", "design", ["paper/usenix27/sections/10-limitations-conclusion.tex"], "Design rationale; not a measured system result.", ["Peer-table design not evaluated here."], "10-limitations-conclusion.tex", "none", "supported with qualification"),
         ("C-ARCH-01", "TCOP exchanges signed, bounded context that the receiver treats as evidence rather than an enforcement command.", "architecture", "artifacts/tcx-validation-value-v2", ["canonical-tcx-example.json", "property-test-report.json"], "Action and enforcement metadata are ignored by the receiver evaluator.", [], "03-architecture-protocol.tex", "fig-tcx-acceptance", "supported"),
         ("C-AUTH-01", "Every gateway block in the evaluated end-to-end reference-deployment arms references a Domain-B-local policy and decision.", "authority", "artifacts/v0.6-agent-validation-live-origin-certified", ["reports/authorization-audit.json", "reports/end-to-end-live-results.json"], "Every reference-deployment gateway block references a Domain-B policy and decision.", [], "04-local-resolution-enforcement.tex", "tab-physical-end-to-end", "supported"),
         ("C-AUTH-02", "Remote action metadata was ignored in the tested receiver path.", "authority", "artifacts/tcx-validation-value-v2", ["property-test-report.json"], "The accepted action-semantic mutation ignores remote action and enforcement fields.", [], "04-local-resolution-enforcement.tex", "tab-protocol-assurance", "supported"),
@@ -1987,6 +2035,10 @@ def claim_ledger() -> list[dict[str, Any]]:
             "planned_table_figure": target,
             "status": status,
         })
+        if claim_id in {"C-TRUST-DESIGN-01", "C-PEER-TABLE-DESIGN-01"}:
+            records[-1].update({"scope": "unevaluated protocol design", "evidence_strength": "design statement, not an evaluated result"})
+        elif claim_id == "C-MOTIVATION-01":
+            records[-1].update({"scope": "primary-source incident context", "evidence_strength": "primary reports, not TCOP experimental evidence"})
     for index, wording in enumerate(prohibited, 1):
         records.append({
             **base,
@@ -2099,6 +2151,8 @@ def export_anonymous() -> dict[str, Any]:
         source = PAPER / directory
         if source.is_dir():
             shutil.copytree(source, review / directory, dirs_exist_ok=True)
+    (review / "data").mkdir(exist_ok=True)
+    shutil.copy2(PAPER / "data" / "case-motivation.json", review / "data" / "case-motivation.json")
     for source in (PAPER / "main.tex", PAPER / "references.bib"):
         if source.is_file():
             shutil.copy2(source, review / source.name)

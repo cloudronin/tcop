@@ -1,4 +1,10 @@
-\section{Limitations and Conclusion}
+\section{Discussion, Limitations, and Conclusion}
+
+\subsection{Why not just isolate?}
+
+In \CaseIsolationMonth{}, OpenAI moved frontier-model training to no live internet access~\cite{caseOpenaiIsolation}; Anthropic extended its no-live-access rule to all internal evaluations while minimizing internet access for training~\cite{caseAnthropicIsolation}. The isolation failures that prompted those changes included a zero-day in a package registry cache proxy~\cite{openaiHfIncident} and a misconfigured DNS resolver~\cite{caseOpenaiIsolation}; an allowlisted host was also the path out~\cite{caseFrontierKimi}. Isolation does not cover deployed agents. TCOP addresses the case where containment fails.
+
+The design gives each receiver a local peer table containing per-peer scope, reliability, reachability, and delivery latency. These tables are never exchanged between nodes. Keeping them local is intended to avoid propagating bad peer state through shared tables, the mechanism by which BGP hijacks and route leaks spread. This peer-table design is not evaluated here.
 
 \subsection{Limitations}
 

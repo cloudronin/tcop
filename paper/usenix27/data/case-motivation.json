@@ -1,0 +1,182 @@
+{
+  "basis": "Owner-provided facts; Orchestrator verification governs the case mapping.",
+  "mapping_reference": "amendment-003-harness:docs/case-mapping-2026.md",
+  "sources": {
+    "OAI-HF": {
+      "bibkey": "openaiHfIncident",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "entry_sha256": "14491952d7c397fb50b498846d6dc85a4a8ee5b236bff70be6f8503d67161c1c"
+    },
+    "HF-T": {
+      "bibkey": "hfAgentIntrusion",
+      "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "entry_sha256": "93309867bc9919a1b08c09e06e046f28b97630408c24dde9ba82889ba0f164f8"
+    },
+    "HF-D": {
+      "bibkey": "caseHfDisclosure",
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "entry_sha256": "6c1d5b0f231f29ffcee4b0bc1a343fbff46547a958db38d85cb0a8c931a7c0f1"
+    },
+    "A-JUL": {
+      "bibkey": "caseAnthropicJuly",
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "entry_sha256": "da5bdbd364b62df3a0bd962a406d51170b59a8744417b9d9f973c1c67c9b4324"
+    },
+    "FRONT": {
+      "bibkey": "caseFrontierKimi",
+      "url": "https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/",
+      "entry_sha256": "ed2ff8faca914c41e6c72bb7456713fc85e91a363a1c0ff65212a64021826d68"
+    },
+    "AUS-G": {
+      "bibkey": "caseAustraliaGovernment",
+      "url": "https://www.pm.gov.au/media/press-conference-new-york",
+      "entry_sha256": "980491054b0a489a0c16175ad60f1377d03c46f35f3437ad6c45f13bfa26e14e"
+    },
+    "AUS-O": {
+      "bibkey": "caseAustraliaOpenai",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+      "entry_sha256": "496c489dd895572e90b8a326413239baaa251b56b168b5270c29dc641532ac1c"
+    },
+    "MON": {
+      "bibkey": "caseMonitoring",
+      "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
+      "entry_sha256": "8c3b1e15136ee7813dd4a9835810422b5eb5dc8e0c04a082c18ef919d7de6923"
+    },
+    "OAI-OFF": {
+      "bibkey": "caseOpenaiIsolation",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+      "entry_sha256": "dfc2095a29b49b8f35f9550cf97cd70282c283d50fc2a64f9a71b6559ab72b5b"
+    },
+    "A-OFF": {
+      "bibkey": "caseAnthropicIsolation",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "entry_sha256": "0c8efa44343bfbd0620484143e73b265a3d15bc143b7553a637b5caec428100b"
+    },
+    "TCOP-REL": {
+      "path": "profiles/reliability-high-risk-v0.3.json"
+    },
+    "TCOP-CONF": {
+      "path": "profiles/confirmation-high-risk-v0.4.json"
+    }
+  },
+  "values": {
+    "CaseYear": {
+      "value": "2026",
+      "source_keys": [
+        "OAI-HF",
+        "A-JUL",
+        "FRONT"
+      ]
+    },
+    "CaseDeveloperCount": {
+      "value": 3,
+      "source_keys": [
+        "OAI-HF",
+        "A-JUL",
+        "FRONT"
+      ]
+    },
+    "CaseMythosVersion": {
+      "value": "5",
+      "source_keys": [
+        "A-JUL"
+      ]
+    },
+    "CaseKimiModel": {
+      "value": "Kimi K3",
+      "source_keys": [
+        "FRONT"
+      ]
+    },
+    "CaseAnthropicIncidents": {
+      "value": 3,
+      "source_keys": [
+        "A-JUL"
+      ]
+    },
+    "CaseHFActivityStart": {
+      "value": "2026-07-09",
+      "format": "month-day",
+      "source_keys": [
+        "HF-T"
+      ]
+    },
+    "CaseHFDisclosure": {
+      "value": "2026-07-16",
+      "format": "month-day",
+      "source_keys": [
+        "HF-D"
+      ]
+    },
+    "CaseOpenaiStatement": {
+      "value": "2026-07-21",
+      "format": "month-day",
+      "source_keys": [
+        "OAI-HF"
+      ]
+    },
+    "CaseAustraliaAccess": {
+      "value": "2026-06-18",
+      "format": "month-day",
+      "source_keys": [
+        "AUS-G"
+      ]
+    },
+    "CaseAustraliaDiscovery": {
+      "value": "mid-August",
+      "source_keys": [
+        "AUS-O"
+      ]
+    },
+    "CaseAustraliaNotice": {
+      "value": "2026-09-10",
+      "format": "month-day",
+      "source_keys": [
+        "AUS-G",
+        "AUS-O"
+      ]
+    },
+    "CaseAustraliaNoticeDays": {
+      "value": 84,
+      "difference": [
+        "CaseAustraliaAccess",
+        "CaseAustraliaNotice"
+      ],
+      "source_keys": [
+        "AUS-G",
+        "AUS-O"
+      ]
+    },
+    "CaseIsolationMonth": {
+      "value": "October 2026",
+      "source_keys": [
+        "OAI-OFF",
+        "A-OFF"
+      ]
+    },
+    "CaseSolModel": {
+      "value": "GPT-6.1 Sol",
+      "source_keys": [
+        "MON"
+      ]
+    },
+    "CaseAstraModel": {
+      "value": "GPT-6 Astra",
+      "source_keys": [
+        "MON"
+      ]
+    },
+    "DesignReliabilityVersion": {
+      "value": "0.3",
+      "source_keys": [
+        "TCOP-REL"
+      ]
+    },
+    "DesignConfirmationVersion": {
+      "value": "0.4",
+      "source_keys": [
+        "TCOP-CONF"
+      ]
+    }
+  }
+}

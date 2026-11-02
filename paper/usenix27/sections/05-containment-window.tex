@@ -1,8 +1,6 @@
 \section{Containment Windows and Outcome Accounting}
 
-A warning changes an outcome only if it becomes actionable before the receiver-local authorization boundary of an affected agent action. We call this interval a \emph{containment window}. It is action-relative: a warning can arrive too late for one completed operation and still affect a later agent action in the same workflow.
-
-Figure~\ref{fig:containment-window} shows the three accounting regimes. Before the first affected authorization, imported runtime evidence can support prospective blocking. After an initial harmful agent action but before later opportunities, it can reduce subsequent blast radius. After all relevant opportunities complete, it can remain useful for forensic or coordination work but is not credited as prevention.
+A warning can change an outcome only if it becomes actionable before the affected authorization boundary. This action-relative \emph{containment window} can close for a completed action while remaining open for a later one. Figure~\ref{fig:containment-window} distinguishes prospective blocking, subsequent blast-radius reduction, and late evidence useful only for coordination or forensics.
 
 \begin{figure}[t]
 \centering
@@ -11,6 +9,4 @@ Figure~\ref{fig:containment-window} shows the three accounting regimes. Before t
 \label{fig:containment-window}
 \end{figure}
 
-The evaluation therefore does not label an evidence receipt, policy change, or alert as a success by itself. A causal improvement requires accepted runtime evidence, a bound local subject, a local policy evaluation, a local decision, and a changed gateway disposition for the same agent-action opportunity. Late evidence is recorded separately from changed outcomes.
-
-This timing model serves two purposes. It prevents a late warning from being counted as a reversal of completed harm, and it exposes the timing precondition that any cross-domain early-warning system must satisfy. The single-environment reference-path deployment and replay studies vary delivery placement around these boundaries while holding the underlying synthetic action sequence fixed.
+An alert, evidence receipt, or policy change alone is not a causal improvement. Credit requires accepted evidence, a bound local subject, local policy evaluation and decision, and a changed gateway disposition for the same action opportunity. Late evidence never reverses completed harm. Reference-path and replay studies vary delivery timing while fixing the synthetic action sequence.

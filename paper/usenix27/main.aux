@@ -4,15 +4,28 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{liu2024prompt,zhan2024injecagent}
 \citation{openaiHfIncident,hfAgentIntrusion}
+\citation{caseAnthropicJuly}
+\citation{caseFrontierKimi}
+\citation{caseHfDisclosure}
+\citation{caseAnthropicJuly}
+\citation{caseAustraliaOpenai}
+\citation{hfAgentIntrusion}
+\citation{caseHfDisclosure}
+\citation{openaiHfIncident}
+\citation{caseAustraliaGovernment,caseAustraliaOpenai}
+\citation{openid-ssf-1.0}
+\citation{openid-risc-1.0}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \citation{nistZta,nistAbac}
+\citation{caseMonitoring}
 \citation{rats}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces TCOP architecture. TCOP transports signed runtime evidence to a receiver-local authorization boundary; Domain A cannot invoke Domain B's gateway.}}{2}{figure.1}\protected@file@percent }
-\newlabel{fig:architecture}{{1}{2}{TCOP architecture. TCOP transports signed runtime evidence to a receiver-local authorization boundary; Domain A cannot invoke Domain B's gateway}{figure.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Problem, Goals, and Threat Model}{2}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}System model and design goal}{2}{subsection.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Adversary and trust assumptions}{2}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Evaluated properties and scope}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Trust model (design)}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Evaluated properties and scope}{2}{subsection.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces TCOP architecture. TCOP transports signed runtime evidence to a receiver-local authorization boundary; Domain A cannot invoke Domain B's gateway.}}{3}{figure.1}\protected@file@percent }
+\newlabel{fig:architecture}{{1}{3}{TCOP architecture. TCOP transports signed runtime evidence to a receiver-local authorization boundary; Domain A cannot invoke Domain B's gateway}{figure.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Protocol properties and evaluation rules. The final row bounds outcome accounting rather than protocol security.}}{3}{table.1}\protected@file@percent }
 \newlabel{tab:security-goals}{{1}{3}{Protocol properties and evaluation rules. The final row bounds outcome accounting rather than protocol security}{table.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Architecture and Protocol Boundary}{3}{section.3}\protected@file@percent }
@@ -28,75 +41,71 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4}Receiver-Local Resolution and Enforcement}{4}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Local decision path}{4}{subsection.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Validation and failure handling}{4}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Authority evidence}{4}{subsection.4.3}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Complementary system contracts. TCOP supplies a receiver-side evidence-to-authorization boundary; it does not replace threat intelligence, response orchestration, tool access, or agent collaboration protocols.}}{5}{table.3}\protected@file@percent }
 \newlabel{tab:protocol-comparison}{{3}{5}{Complementary system contracts. TCOP supplies a receiver-side evidence-to-authorization boundary; it does not replace threat intelligence, response orchestration, tool access, or agent collaboration protocols}{table.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Authority evidence}{5}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Containment Windows and Outcome Accounting}{5}{section.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Action-relative containment-window regimes. A warning can be too late for one action and still be actionable for a later one.}}{5}{figure.3}\protected@file@percent }
 \newlabel{fig:containment-window}{{3}{5}{Action-relative containment-window regimes. A warning can be too late for one action and still be actionable for a later one}{figure.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Containment Windows and Outcome Accounting}{5}{section.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6}Matched Causal and Conformance Evaluation}{5}{section.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Evaluation questions and evidence hierarchy}{5}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Deterministic matched design}{5}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Admission rules and central control}{5}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Validation value beyond arrival}{5}{subsection.6.4}\protected@file@percent }
+\newlabel{sec:context-blanket}{{6.4}{5}{Validation value beyond arrival}{subsection.6.4}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Units of analysis and accounting. Counts are not interchangeable across rows.}}{6}{table.4}\protected@file@percent }
 \newlabel{tab:units}{{4}{6}{Units of analysis and accounting. Counts are not interchangeable across rows}{table.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Deterministic strict-pair outcomes. The full matched population includes improved and unchanged pairs. The zero worsened count follows from the containment-first monotonicity of the reported harmful-action measure.}}{6}{figure.4}\protected@file@percent }
 \newlabel{fig:deterministic}{{4}{6}{Deterministic strict-pair outcomes. The full matched population includes improved and unchanged pairs. The zero worsened count follows from the containment-first monotonicity of the reported harmful-action measure}{figure.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Deterministic matched design}{6}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Correlation under ambiguity}{6}{subsection.6.5}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Strict deterministic containment-first comparison. Balanced and utility configurations with unmatched local policies are excluded.}}{6}{table.5}\protected@file@percent }
 \newlabel{tab:deterministic}{{5}{6}{Strict deterministic containment-first comparison. Balanced and utility configurations with unmatched local policies are excluded}{table.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Admission rules and central control}{6}{subsection.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Validation value beyond arrival}{6}{subsection.6.4}\protected@file@percent }
-\newlabel{sec:context-blanket}{{6.4}{6}{Validation value beyond arrival}{subsection.6.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Mixed-action validation-value cohort governed by a sealed pre-analysis plan. Full-cohort harmful counts include mismatched-warning controls; the accepted binding-matched subset is reported separately in the text.}}{7}{table.6}\protected@file@percent }
-\newlabel{tab:validation-value}{{6}{7}{Mixed-action validation-value cohort governed by a sealed pre-analysis plan. Full-cohort harmful counts include mismatched-warning controls; the accepted binding-matched subset is reported separately in the text}{table.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Mixed-action validation-value cohort governed by a sealed pre-analysis plan. Full-cohort harmful counts include mismatched-warning controls; the accepted binding-matched subset is reported separately in the text.}}{6}{table.6}\protected@file@percent }
+\newlabel{tab:validation-value}{{6}{6}{Mixed-action validation-value cohort governed by a sealed pre-analysis plan. Full-cohort harmful counts include mismatched-warning controls; the accepted binding-matched subset is reported separately in the text}{table.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Result interpretation}{6}{subsection.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Agent, Replay, and Gateway Evaluation}{6}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Live trace generation and admission}{6}{subsection.7.1}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Validation-value evidence: executed receiver mutations and formula-computed illustrations.}}{7}{table.7}\protected@file@percent }
 \newlabel{tab:protocol-assurance}{{7}{7}{Validation-value evidence: executed receiver mutations and formula-computed illustrations}{table.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Correlation under ambiguity}{7}{subsection.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Result interpretation}{7}{subsection.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Agent, Replay, and Gateway Evaluation}{7}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Live trace generation and admission}{7}{subsection.7.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Strict replay and timing}{7}{subsection.7.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Post-denial substitution replay}{7}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Campaign Correlation strategy frontier:}{7}{section*.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Receiver-local strategy frontier. The same 10 harmful and 20 benign logical actions are evaluated per policy; this is a deterministic reference-policy result.}}{7}{table.8}\protected@file@percent }
+\newlabel{tab:c2e-frontier}{{8}{7}{Receiver-local strategy frontier. The same 10 harmful and 20 benign logical actions are evaluated per policy; this is a deterministic reference-policy result}{table.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Campaign Correlation frontier input composition (artifact identifier C2E). The fixed population contains five traces in each principal scenario; session lineage is the only strong relation exercised in this frontier.}}{7}{table.9}\protected@file@percent }
+\newlabel{tab:c2e-frontier-composition}{{9}{7}{Campaign Correlation frontier input composition (artifact identifier C2E). The fixed population contains five traces in each principal scenario; session lineage is the only strong relation exercised in this frontier}{table.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Single-environment reference-path deployment}{7}{subsection.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Measured scope}{7}{subsection.7.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Strict replay results by action-relative delivery placement. Early and boundary treatments share the tested discrete preauthorization region.}}{8}{figure.5}\protected@file@percent }
 \newlabel{fig:replay-timing}{{5}{8}{Strict replay results by action-relative delivery placement. Early and boundary treatments share the tested discrete preauthorization region}{figure.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Receiver-local strategy frontier. The same 10 harmful and 20 benign logical actions are evaluated per policy; this is a deterministic reference-policy result.}}{8}{table.8}\protected@file@percent }
-\newlabel{tab:c2e-frontier}{{8}{8}{Receiver-local strategy frontier. The same 10 harmful and 20 benign logical actions are evaluated per policy; this is a deterministic reference-policy result}{table.8}{}}
-\@writefile{toc}{\contentsline {paragraph}{Campaign Correlation strategy frontier:}{8}{section*.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Campaign Correlation frontier input composition (artifact identifier C2E). The fixed population contains five traces in each principal scenario; session lineage is the only strong relation exercised in this frontier.}}{8}{table.9}\protected@file@percent }
-\newlabel{tab:c2e-frontier-composition}{{9}{8}{Campaign Correlation frontier input composition (artifact identifier C2E). The fixed population contains five traces in each principal scenario; session lineage is the only strong relation exercised in this frontier}{table.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Single-environment reference-path deployment}{8}{subsection.7.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Receiver-local policy frontier in the sealed deterministic Campaign Correlation study. Arrival Guard and Standing Guard overlap at 10 benign actions constrained and 10 harmful actions blocked. The plotted points characterize configurable receiver strategies, not a mandatory TCOP response.}}{9}{figure.6}\protected@file@percent }
-\newlabel{fig:c2e-policy-frontier}{{6}{9}{Receiver-local policy frontier in the sealed deterministic Campaign Correlation study. Arrival Guard and Standing Guard overlap at 10 benign actions constrained and 10 harmful actions blocked. The plotted points characterize configurable receiver strategies, not a mandatory TCOP response}{figure.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Single-environment reference-path timing result. The late arm separates already forwarded harmful calls from subsequent calls blocked by a Domain-B-local decision.}}{9}{figure.7}\protected@file@percent }
-\newlabel{fig:physical}{{7}{9}{Single-environment reference-path timing result. The late arm separates already forwarded harmful calls from subsequent calls blocked by a Domain-B-local decision}{figure.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Measured scope}{9}{subsection.7.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Security and Availability}{9}{section.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Failure controls and receiver validation}{9}{subsection.8.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Receiver-local policy frontier in the sealed deterministic Campaign Correlation study. Arrival Guard and Standing Guard overlap at 10 benign actions constrained and 10 harmful actions blocked. The plotted points characterize configurable receiver strategies, not a mandatory TCOP response.}}{8}{figure.6}\protected@file@percent }
+\newlabel{fig:c2e-policy-frontier}{{6}{8}{Receiver-local policy frontier in the sealed deterministic Campaign Correlation study. Arrival Guard and Standing Guard overlap at 10 benign actions constrained and 10 harmful actions blocked. The plotted points characterize configurable receiver strategies, not a mandatory TCOP response}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Single-environment reference-path timing result. The late arm separates already forwarded harmful calls from subsequent calls blocked by a Domain-B-local decision.}}{8}{figure.7}\protected@file@percent }
+\newlabel{fig:physical}{{7}{8}{Single-environment reference-path timing result. The late arm separates already forwarded harmful calls from subsequent calls blocked by a Domain-B-local decision}{figure.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Security and Availability}{8}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Failure controls and receiver validation}{8}{subsection.8.1}\protected@file@percent }
+\citation{agentDojo}
+\citation{promptGuardTwo}
+\citation{stix21,taxii21,mispCore,dshieldFeeds}
+\citation{rid12,dots21,openc2v1}
+\citation{cacao20,bridges23}
 \@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Single-environment reference-path gateway arms. Each block is attributable to a Domain-B-local decision.}}{9}{table.10}\protected@file@percent }
 \newlabel{tab:physical}{{10}{9}{Single-environment reference-path gateway arms. Each block is attributable to a Domain-B-local decision}{table.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Measured availability cost in the selected RA-03 synthetic workload.}}{9}{figure.8}\protected@file@percent }
 \newlabel{fig:availability}{{8}{9}{Measured availability cost in the selected RA-03 synthetic workload}{figure.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Valid hostile peers}{9}{subsection.8.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Security-availability trade-off}{9}{subsection.8.3}\protected@file@percent }
-\citation{agentDojo}
-\citation{promptGuardTwo}
-\citation{stix21,taxii21,mispCore,dshieldFeeds}
-\citation{rid12,dots21,openc2v1}
-\citation{cacao20,bridges23}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}External-warning coverage and admission}{9}{subsection.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Local overhead}{9}{subsection.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Related Work}{9}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Threat-intelligence exchange}{9}{subsection.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Response orchestration}{9}{subsection.9.2}\protected@file@percent }
 \citation{keynote99,birgisson2014macaroons}
 \citation{hardy88}
 \citation{nistZta}
 \citation{spiffeFederation}
 \citation{rats}
 \citation{bye2010}
-\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Measured RA-03 availability cost under selected synthetic false-warning treatments and capability restriction; this is not a universal false-positive rate.}}{10}{table.11}\protected@file@percent }
-\newlabel{tab:utility}{{11}{10}{Measured RA-03 availability cost under selected synthetic false-warning treatments and capability restriction; this is not a universal false-positive rate}{table.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}External-warning coverage and admission}{10}{subsection.8.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Full external-warning pipeline coverage. All 168{} cases in the sealed detector-output ledger are evaluated; a warning is not a detector-quality estimate.}}{10}{table.12}\protected@file@percent }
-\newlabel{tab:independent-warning-full-pipeline}{{12}{10}{Full external-warning pipeline coverage. All \ExternalWarningFullSourceCases {} cases in the sealed detector-output ledger are evaluated; a warning is not a detector-quality estimate}{table.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Local overhead}{10}{subsection.8.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9}Related Work}{10}{section.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Threat-intelligence exchange}{10}{subsection.9.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Response orchestration}{10}{subsection.9.2}\protected@file@percent }
 \citation{mcpAuthorization}
 \citation{a2aSpec}
 \citation{anpSpec}
@@ -105,54 +114,72 @@
 \citation{draft-fane-opena2a-aap}
 \citation{draft-liu-ai-agent-authorization-integration}
 \citation{liu2024prompt,zhan2024injecagent}
-\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Full-population receiver authorization outcomes over 72{} attack-bearing and 96{} benign external source cases. Arrival Guard, Exact Binding, and Campaign Correlation use accepted evidence conditionally; Standing Guard is a standing local restriction.}}{11}{table.13}\protected@file@percent }
-\newlabel{tab:independent-warning-full-outcomes}{{13}{11}{Full-population receiver authorization outcomes over \ExternalWarningFullAttackCases {} attack-bearing and \ExternalWarningFullBenignCases {} benign external source cases. Arrival Guard, Exact Binding, and Campaign Correlation use accepted evidence conditionally; Standing Guard is a standing local restriction}{table.13}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Independent Warning Admission v2 derived controls. Each row contains 12{} derived cases. The substitution rows contain 8{} session-lineage and 4{} delegation variants.}}{11}{table.14}\protected@file@percent }
-\newlabel{tab:independent-warning-v2-controls}{{14}{11}{Independent Warning Admission v2 derived controls. Each row contains \ExternalWarningVTwoSelectedPositive {} derived cases. The substitution rows contain \ExternalWarningVTwoSessionNoRelationForwarded {} session-lineage and \ExternalWarningVTwoDelegationNoRelationForwarded {} delegation variants}{table.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Trust, identity, and local policy}{11}{subsection.9.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.4}Agent interoperability and tool protocols}{11}{subsection.9.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.5}Shared Signals and agent authorization}{11}{subsection.9.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.6}Agent and tool security}{11}{subsection.9.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {10}Limitations and Conclusion}{11}{section.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Limitations}{11}{subsection.10.1}\protected@file@percent }
+\citation{caseOpenaiIsolation}
+\citation{caseAnthropicIsolation}
+\citation{openaiHfIncident}
+\citation{caseOpenaiIsolation}
+\citation{caseFrontierKimi}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Measured RA-03 availability cost under selected synthetic false-warning treatments and capability restriction; this is not a universal false-positive rate.}}{10}{table.11}\protected@file@percent }
+\newlabel{tab:utility}{{11}{10}{Measured RA-03 availability cost under selected synthetic false-warning treatments and capability restriction; this is not a universal false-positive rate}{table.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Full external-warning pipeline coverage. All 168{} cases in the sealed detector-output ledger are evaluated; a warning is not a detector-quality estimate.}}{10}{table.12}\protected@file@percent }
+\newlabel{tab:independent-warning-full-pipeline}{{12}{10}{Full external-warning pipeline coverage. All \ExternalWarningFullSourceCases {} cases in the sealed detector-output ledger are evaluated; a warning is not a detector-quality estimate}{table.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Trust, identity, and local policy}{10}{subsection.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4}Agent interoperability and tool protocols}{10}{subsection.9.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.5}Shared Signals and agent authorization}{10}{subsection.9.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.6}Agent and tool security}{10}{subsection.9.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Discussion, Limitations, and Conclusion}{10}{section.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Why not just isolate?}{10}{subsection.10.1}\protected@file@percent }
 \citation{rfc8417,openid-ssf-1.0}
 \bibstyle{plain}
 \bibdata{references}
 \bibcite{a2aSpec}{1}
 \bibcite{anpSpec}{2}
-\bibcite{birgisson2014macaroons}{3}
-\bibcite{rats}{4}
-\bibcite{keynote99}{5}
-\bibcite{bridges23}{6}
-\bibcite{bye2010}{7}
-\bibcite{openid-caep-1.0}{8}
-\bibcite{agentDojo}{9}
-\bibcite{mispCore}{10}
-\bibcite{draft-fane-opena2a-aap}{11}
-\bibcite{hardy88}{12}
-\bibcite{nistAbac}{13}
-\bibcite{hfAgentIntrusion}{14}
-\bibcite{rfc8417}{15}
-\@writefile{toc}{\contentsline {paragraph}{Future work: runtime bindings across hosts.}{12}{section*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Conclusion}{12}{subsection.10.2}\protected@file@percent }
-\bibcite{cacao20}{16}
-\bibcite{draft-ietf-wimse-aims}{17}
-\bibcite{draft-liu-ai-agent-authorization-integration}{18}
-\bibcite{liu2024prompt}{19}
-\bibcite{promptGuardTwo}{20}
-\bibcite{mcpAuthorization}{21}
-\bibcite{rid12}{22}
-\bibcite{stix21}{23}
-\bibcite{taxii21}{24}
-\bibcite{openaiHfIncident}{25}
-\bibcite{dots21}{26}
-\bibcite{openc2v1}{27}
-\bibcite{nistZta}{28}
-\bibcite{dshieldFeeds}{29}
-\bibcite{openid-risc-1.0}{30}
-\bibcite{spiffeFederation}{31}
-\bibcite{openid-ssf-1.0}{32}
-\bibcite{zhan2024injecagent}{33}
+\bibcite{caseAustraliaGovernment}{3}
+\bibcite{caseAnthropicJuly}{4}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Full-population receiver authorization outcomes over 72{} attack-bearing and 96{} benign external source cases. Arrival Guard, Exact Binding, and Campaign Correlation use accepted evidence conditionally; Standing Guard is a standing local restriction.}}{11}{table.13}\protected@file@percent }
+\newlabel{tab:independent-warning-full-outcomes}{{13}{11}{Full-population receiver authorization outcomes over \ExternalWarningFullAttackCases {} attack-bearing and \ExternalWarningFullBenignCases {} benign external source cases. Arrival Guard, Exact Binding, and Campaign Correlation use accepted evidence conditionally; Standing Guard is a standing local restriction}{table.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Independent Warning Admission v2 derived controls. Each row contains 12{} derived cases. The substitution rows contain 8{} session-lineage and 4{} delegation variants.}}{11}{table.14}\protected@file@percent }
+\newlabel{tab:independent-warning-v2-controls}{{14}{11}{Independent Warning Admission v2 derived controls. Each row contains \ExternalWarningVTwoSelectedPositive {} derived cases. The substitution rows contain \ExternalWarningVTwoSessionNoRelationForwarded {} session-lineage and \ExternalWarningVTwoDelegationNoRelationForwarded {} delegation variants}{table.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Limitations}{11}{subsection.10.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Future work: runtime bindings across hosts.}{11}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Conclusion}{11}{subsection.10.3}\protected@file@percent }
+\bibcite{caseAnthropicIsolation}{5}
+\bibcite{birgisson2014macaroons}{6}
+\bibcite{rats}{7}
+\bibcite{keynote99}{8}
+\bibcite{bridges23}{9}
+\bibcite{bye2010}{10}
+\bibcite{openid-caep-1.0}{11}
+\bibcite{agentDojo}{12}
+\bibcite{mispCore}{13}
+\bibcite{draft-fane-opena2a-aap}{14}
+\bibcite{hardy88}{15}
+\bibcite{nistAbac}{16}
+\bibcite{caseHfDisclosure}{17}
+\bibcite{rfc8417}{18}
+\bibcite{cacao20}{19}
+\bibcite{draft-ietf-wimse-aims}{20}
+\bibcite{caseFrontierKimi}{21}
+\bibcite{hfAgentIntrusion}{22}
+\bibcite{draft-liu-ai-agent-authorization-integration}{23}
+\bibcite{liu2024prompt}{24}
+\bibcite{promptGuardTwo}{25}
+\bibcite{mcpAuthorization}{26}
+\bibcite{rid12}{27}
+\bibcite{stix21}{28}
+\bibcite{taxii21}{29}
+\bibcite{caseAustraliaOpenai}{30}
+\bibcite{openaiHfIncident}{31}
+\bibcite{caseOpenaiIsolation}{32}
+\bibcite{caseMonitoring}{33}
+\bibcite{dots21}{34}
+\bibcite{openc2v1}{35}
+\bibcite{nistZta}{36}
+\bibcite{dshieldFeeds}{37}
+\bibcite{openid-risc-1.0}{38}
+\bibcite{spiffeFederation}{39}
+\bibcite{openid-ssf-1.0}{40}
+\bibcite{zhan2024injecagent}{41}
 \@writefile{toc}{\contentsline {section}{\numberline {A}Open Science Appendix}{13}{appendix.A}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {B}Ethics Appendix}{14}{appendix.B}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {C}Frozen Strategy Details}{14}{appendix.C}\protected@file@percent }

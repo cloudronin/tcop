@@ -1,20 +1,18 @@
 \section{Receiver-Local Resolution and Enforcement}
 
-The receiving pipeline is runtime-evidence validation, local correlation, receiver-local strategy selection, policy evaluation, decision creation, and gateway enforcement for a pending agent action. The ordering matters. Evidence that cannot be correlated to a current local subject cannot affect an unrelated session, and accepted evidence has no direct mapping to an enforcement action.
+The receiver validates evidence, correlates local state, selects a strategy, evaluates policy, creates a decision, and authorizes the pending action. Accepted evidence does not itself select enforcement.
 
 \subsection{Local decision path}
 
-The receiver evaluates the chain: accepted imported evidence $\rightarrow$ local correlation $\rightarrow$ policy evaluation $\rightarrow$ local decision $\rightarrow$ gateway authorization. The implementation records the receipt reference, accepted evidence, policy identity, decision identity, and enforcement result. This makes a changed agent-action authorization traceable to the receiver's own decision path rather than to the arrival of a remote message alone.
-
-The gateway adapter calls a local authorization-evaluator interface and does not embed TCX resolver or strategy logic. This mirrors the policy-decision and policy-enforcement split in zero-trust architecture \cite{nistZta}. The reference enforcement point is a Docker MCP Gateway tool-call boundary; MCP's own authorization flow remains responsible for client access \cite{mcpAuthorization}.
+Records link the receipt, evidence, policy, decision, and gateway outcome. The gateway calls a local evaluator without embedding TCX strategy logic, following the policy-decision/enforcement split~\cite{nistZta}. The reference Docker MCP Gateway boundary supplements MCP's client-access authorization~\cite{mcpAuthorization}.
 
 \subsection{Validation and failure handling}
 
-The validation-value study exercises receiver checks through \ValidatorMutationCases{} deterministic mutations. Signature, issuer, version, receipt, expiry, and replay faults created no restriction in every case exercised. A valid message that contained action-like \texttt{action} or \texttt{enforcement} metadata was accepted only as evidence; those remote fields were ignored when the receiver created its local decision. Table~\ref{tab:protocol-assurance} reports this and distinguishes the formula-computed correlation and hostile-peer illustrations from executed evidence.
+The \ValidatorMutationCases{} executed mutations create no restriction for signature, issuer, version, receipt, expiry, or replay faults. Accepted remote \texttt{action} and \texttt{enforcement} fields are ignored. Table~\ref{tab:protocol-assurance} separates these tests from formula-computed correlation and hostile-peer illustrations.
 
-Authorization caching is disabled for correctness and counterfactual replay. Each authorization checks current receiver-local state, preventing an old decision from being reused after a context change. A separate fixed-time-to-live cache selection measures local overhead without changing the correctness path.
+Correctness and counterfactual replay disable caching so each authorization checks current local state. The separate fixed-TTL performance selection does not change that path.
 
-The receiver also owns failure behavior. If \texttt{tcopd-B} is unavailable or the authorization interface times out, the sender does not choose fail-open or fail-closed semantics. Domain B applies the disposition in its local policy. The design requires fresh state after gateway restart, but restart remains untested. The executed stale-decision control checks recomputation.
+Receiver outage and authorization timeout resolve through Domain B's policy. Gateway-restart recomputation remains an untested design requirement; the executed stale-decision control checks recomputation.
 
 \subsection{Authority evidence}
 

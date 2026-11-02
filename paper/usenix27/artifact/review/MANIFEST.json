@@ -473,6 +473,10 @@
       "sha256": "fb494ec0e4f3d41574f500136261a15b2f2efefa0f8f0faf5f147e308a6ab9e1"
     },
     {
+      "path": "data/case-motivation.json",
+      "sha256": "48cf6cbbc4c5485bd3c3de5b31a2f70bed4b4d678c0099e52f0fe30ea9b5aac5"
+    },
+    {
       "path": "data/generated/adaptive-authorization.csv",
       "sha256": "e9e16c63a9e6589ffd1bcc15a5d4e177e0c6b9012d5cf88999e0832a33f14d83"
     },
@@ -566,7 +570,7 @@
     },
     {
       "path": "evidence/anonymity-audit.json",
-      "sha256": "ad9fda6daaeedb5edab343e8f2c14ebaec5412be3d3078de7796c26cf331ace0"
+      "sha256": "7a1f7978181ac35ec29420979adc4ca512e1cbd4b6cebacf25175b21b38105d0"
     },
     {
       "path": "evidence/anonymity-audit.md",
@@ -626,7 +630,7 @@
     },
     {
       "path": "evidence/source-verification.json",
-      "sha256": "bf0b05d36521076406fbfc484a565ca98aed5d1bd22268e4a27089e11bad1cbd"
+      "sha256": "b82312923b37ff8ca0def6ab2f70fb32de3843336b292840cec2f1eda3ef97d5"
     },
     {
       "path": "evidence/source-verification.md",
@@ -642,71 +646,75 @@
     },
     {
       "path": "figures/pdf/architecture.pdf",
-      "sha256": "1666f743ae0358772d127bee61f710eb07400ed22b76b24e1b9364be49b3dd7f"
+      "sha256": "ce0ef4330ce19ebdc4f378ae8e0228ed8436a5bde83544e300bbda3cb6697e79"
     },
     {
       "path": "figures/pdf/artifact-lineage.pdf",
-      "sha256": "08a3424c3dca8783642379181c6fd18b2cfe33a5294a8f53a6aaea777477d3aa"
+      "sha256": "6443ff9b94dbd01bb4478eb76756c3a594572629bfe739507d0dc226485db644"
     },
     {
       "path": "figures/pdf/c2e-policy-frontier.pdf",
-      "sha256": "78df3ed4cb67e187a52b078c322a4c79ec65f85602271545b0152787302f02c5"
+      "sha256": "5a7b3745e76e48cf472f6aefc6dca8128cd2b5937a5ddc47dab6186d69a68376"
     },
     {
       "path": "figures/pdf/containment-window.pdf",
-      "sha256": "91e3578c163ae5e8d870c523ef84b5b57cbc05426d3c22b3b686ff8c8a5497ba"
+      "sha256": "117c3693176859ad52c3a021f4b19c860025124a6238d2314156d68794c85c02"
     },
     {
       "path": "figures/pdf/deterministic-outcomes.pdf",
-      "sha256": "b208e4af6fdeeca3f4f6ae84d62452c3147295360f4afd9f429eb378cbe1b56d"
+      "sha256": "47ad0804553f02fecbbdb4ea3d57543b8255e677b483029a065bfedf938d7f40"
     },
     {
       "path": "figures/pdf/live-replay-treatments.pdf",
-      "sha256": "9b7a3d60c9f9a5ba2fa7611377d0fc56ef4b7df2b999e8d8c4a79797499fadc7"
+      "sha256": "44bad153082a41f75d5590fdefcdb3ee96ddc6bf59d77c571faff6062e7de607"
     },
     {
       "path": "figures/pdf/physical-timing.pdf",
-      "sha256": "3f328dd883e099cba8f128dbfad9390c2160d78d6b53e972ee5fd686037177c4"
+      "sha256": "68c3675416aebd6301abd897f88d546f3f939f89fb34142140aa041637239878"
     },
     {
       "path": "figures/pdf/security-availability.pdf",
-      "sha256": "424c0e9596497db5ac15edc11c5e03e9cd863597e9c060a52c911012479b446b"
+      "sha256": "2c5bc78124918f761b5b9f8048d15cef1b16bd1cf51cc66254ee0917d137d9d6"
     },
     {
       "path": "figures/svg/architecture.svg",
-      "sha256": "f4044fc44d0a8fcefa3172853cfdef76ea0978c5d9eb31c190797b3d12b23f21"
+      "sha256": "3154792dd24b2ce319b2b0008df91270e1b3da0c18e545b9cbd10228c71c5d0e"
     },
     {
       "path": "figures/svg/artifact-lineage.svg",
-      "sha256": "52564bd7d21d94995ef3a9539cbb6b82efa720e40dada5b03762d87dc94363d0"
+      "sha256": "14702fc877d4d57c483ddbbfe1c49153a718313aeec40c195cb3af10e9db584e"
     },
     {
       "path": "figures/svg/c2e-policy-frontier.svg",
-      "sha256": "293f2cb0902536b0feeecaf64326080c600977b27af3bb0750928017b1c612e4"
+      "sha256": "5fbd85a8f9b0892620ce35ef4d75c77750d7cee57ce9c77043e235a1d5aaba1d"
     },
     {
       "path": "figures/svg/containment-window.svg",
-      "sha256": "3519a8ba00f58172b1d1fc065d1aaca368b60c7466b6b56c4e0bc9738d9a1673"
+      "sha256": "37f9ff275412996e6ef556ab258fa63c0dbdfdd790795cd25debd0770aadd5fd"
     },
     {
       "path": "figures/svg/deterministic-outcomes.svg",
-      "sha256": "35ca4516bca10bafc64c89eda73267b32254e0b147d3010d70a579f3e000676e"
+      "sha256": "34c443864861971f12085adb80b714e16860613991289c6d72ea6fe23c93b892"
     },
     {
       "path": "figures/svg/live-replay-treatments.svg",
-      "sha256": "df1027a45d1c288c4ebc046da9d1770d4ee3f69bdd73f3f14580e5ec95c39cdd"
+      "sha256": "991411cd3f0418087ff3f2dc73eedf81a52662333b381e080366972a8eb8e2a9"
     },
     {
       "path": "figures/svg/physical-timing.svg",
-      "sha256": "b47b746c1ebfdfac11a298521701eb72213bcbea1171bd26d61aeaa676c2e6d2"
+      "sha256": "f85db387869bcc4d7667aa55d4edec5a6982f67ad5f96b49d39e325302889900"
     },
     {
       "path": "figures/svg/security-availability.svg",
-      "sha256": "893d3bb6ab79d94d4ee2711bafab3a8abd0e8356e678561e62b559f97f3eb37f"
+      "sha256": "93b4566d9fa39d1661bd6f389088f7a4ca13688600b61ad17d20b1b233209c20"
+    },
+    {
+      "path": "generated/case-motivation-provenance.json",
+      "sha256": "302dcc03a4564204d43cfd7f0c5a63925297e0fccbc709c28491e97b91ba9866"
     },
     {
       "path": "generated/figure-manifest.json",
-      "sha256": "2cacc103ed8b0f4f572f3891c2bb1330871983e85474338e6a5983f00db031a6"
+      "sha256": "7fbfc333f151f19512f0c426b58ecf1f695ea23681937d71e874e233020287c3"
     },
     {
       "path": "generated/future-work-provenance.json",
@@ -718,7 +726,7 @@
     },
     {
       "path": "generated/results-macros.tex",
-      "sha256": "692ed2a8f608a30d025ee52f578fe8c2b627716502457be9232692e019e19dae"
+      "sha256": "9bd543cc351b81d10641a6c209b859e832e3d6efdd7d753ec98bbf7f8ce4aa59"
     },
     {
       "path": "generated/table-manifest.json",
@@ -730,7 +738,7 @@
     },
     {
       "path": "references.bib",
-      "sha256": "8a580460258ae0c51f72882e7d39649efa39ae577304d17ce4a014371709f9ff"
+      "sha256": "67d623fea0c2ed1459c35cf4398a73bf2bb8875973b63b934aefc12267c74b5a"
     },
     {
       "path": "reproduce.sh",
@@ -738,35 +746,35 @@
     },
     {
       "path": "sections/01-introduction.tex",
-      "sha256": "e7885ed07d4fc80e354c1b9ea7a4198c0aaebf1116768b08f45f0971056f4651"
+      "sha256": "17e2d87597206495b90065670ae97c1525f957e557737bc7f0c9187e0de6ec52"
     },
     {
       "path": "sections/02-problem-threat-model.tex",
-      "sha256": "a7eb7ff362333ae8aee062fe3067763b6ccd0fbe260ea820cee10d37e60ae82c"
+      "sha256": "bb49043fcbdb9e82d00c493f99b0c1836903b1bb10fc15233286ca151a50618c"
     },
     {
       "path": "sections/03-architecture-protocol.tex",
-      "sha256": "bd4ea3f26f4e72bf4ee7de1561fd33218faedb2f06463c7bcae4e4c77b292a8b"
+      "sha256": "d6cf6e43f0c1ef412cdd599e5df62961191c0d6bbbe7b7449b7284d94e6a803c"
     },
     {
       "path": "sections/04-local-resolution-enforcement.tex",
-      "sha256": "7cbf839b900f072f58c6458475d06daafe90e2d70ec7db81bd2f8112bcb0cfa3"
+      "sha256": "4bfef449d5512be09cb74349b05539806a34934b53d143ab5e9b6cd0f4251a18"
     },
     {
       "path": "sections/05-containment-window.tex",
-      "sha256": "65b8384a6073c1f35249c06f5c17b7540b34973b8a5c6fbd5d864d5cff8c6b91"
+      "sha256": "55fe2d9469818eba8a0d73f7900249cc79bde57a36056d5cf3b45adc60386ed8"
     },
     {
       "path": "sections/06-deterministic-evaluation.tex",
-      "sha256": "d7bc16ecd4f2a2f2bfc1f64587cb083fcae3964381704518d1e69a44ecaff888"
+      "sha256": "e215f825b385f4cdb89fa5efbf850c4f6f21a0e0067a43dc29606ee2fd37fd4e"
     },
     {
       "path": "sections/07-agent-gateway-evaluation.tex",
-      "sha256": "b0d2a37551931e98ef778b5c9a8a986b4e7f3c81ecb20136b38ac2352e8bdca3"
+      "sha256": "f359863ea430aa86fdd5ff19174ddd17d57e961a154cc05217a7a6bfe5b07064"
     },
     {
       "path": "sections/08-security-availability.tex",
-      "sha256": "13cfe1e579b6e0a05f2b9ac13b21fc49e78b221e81bacdfe66302e10f70799b3"
+      "sha256": "ee82c4051f8073867faaf3f5e87bfeeceff6f3f8072acd73f9bcb0d6d62185eb"
     },
     {
       "path": "sections/09-related-work.tex",
@@ -774,7 +782,7 @@
     },
     {
       "path": "sections/10-limitations-conclusion.tex",
-      "sha256": "4606c6fc031ccc00034e097ecef938e8e5c030b985a6d7487a8aa730eeeea98c"
+      "sha256": "c64cdd4185c4c8decb5e22614562cd25ec19f567129bc3849ab05de2d57ff7dc"
     },
     {
       "path": "tables/generated/tab-adaptive-authorization.tex",
