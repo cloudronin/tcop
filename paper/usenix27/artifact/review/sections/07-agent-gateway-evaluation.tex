@@ -2,13 +2,11 @@
 
 \subsection{Live trace generation and admission}
 
-We separate live trace generation from enforcement causality. A credentialed model runtime generated action attempts in a bounded synthetic environment. The certified cohort contains \LiveTraces{} eligible traces with no model error or refusal recorded in the cohort. We freeze the resulting action traces and compare treatments through strict replay, avoiding model nondeterminism in the paired evidence.
-
-The cohort covers synthetic prompt-injection propagation, synthetic credential and tool misuse, and a frozen benign metadata-write workflow. Eligibility is established from the captured action opportunity rather than from a model refusal or safe early termination.
+A credentialed model generated \LiveTraces{} eligible traces in bounded synthetic prompt-injection, credential/tool-misuse, and benign metadata-write scenarios, with no recorded model error or refusal. Eligibility depends on captured action opportunities, not refusal or safe early termination. Freezing the traces separates generation from enforcement causality and removes model nondeterminism from paired replay.
 
 \subsection{Strict replay and timing}
 
-Each strict replay presents the same captured agent-action sequence, local policy, strategy, gateway configuration, and receiver-local monitor conditions to local-only and TCOP treatments. The controlled difference is whether and when accepted signed runtime evidence is available. A replay records evidence receipt, local correlation, local decision change, gateway outcome, and the affected agent-action opportunity.
+Strict replay fixes captured actions, local policy, strategy, gateway configuration, and receiver monitors, varying only accepted evidence availability and timing. It records receipt, correlation, decision change, gateway outcome, and the affected action opportunity.
 
 The strict replay matrix contains \LiveReplayPairs{} paired comparisons. Figure~\ref{fig:replay-timing} reports action-relative placements. Early and boundary placements represent the tested preauthorization region; later placements can affect only later opportunities. The complete treatment table and normalized timing summary retain their denominators in Appendix~\ref{app:extended-results}.
 

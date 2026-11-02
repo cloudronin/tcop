@@ -1,0 +1,24 @@
+{
+  "author": "Vishnu Vettrivel",
+  "findings": [],
+  "pass": true,
+  "pdf": "paper/usenix27/preprint/main-preprint.pdf",
+  "urls": [
+    "https://openid.net/specs/openid-caep-1_0-final.html",
+    "https://openid.net/specs/openid-caep-1_0-final.html",
+    "https://datatracker.ietf.org/doc/draft-fane-opena2a-aap/02/",
+    "https://datatracker.ietf.org/doc/draft-fane-opena2a-aap/02/",
+    "https://www.rfc-editor.org/rfc/rfc8417",
+    "https://www.rfc-editor.org/rfc/rfc8417",
+    "https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/00/",
+    "https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/00/",
+    "https://datatracker.ietf.org/doc/draft-liu-ai-agent-authorization-integration/00/",
+    "https://datatracker.ietf.org/doc/draft-liu-ai-agent-authorization-integration/00/",
+    "https://openid.net/specs/openid-risc-1_0-final.html",
+    "https://openid.net/specs/openid-risc-1_0-final.html",
+    "https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html",
+    "https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html",
+    "https://github.com/cloudronin/tcop",
+    "https://github.com/cloudronin/tcop"
+  ]
+}

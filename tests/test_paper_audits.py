@@ -47,5 +47,29 @@ class PaperEvidenceTests(unittest.TestCase):
         self.assertTrue(all(r["pass_label"] == "Not tested" for r in rows if r["passed"] is None))
 
 
+class PaperBuildModeTests(unittest.TestCase):
+    def test_preprint_requires_identity_and_public_link(self):
+        text = "Vishnu Vettrivel Independent Researcher vishnu@uofa.net"
+        urls = ["https://github.com/cloudronin/tcop"]
+        self.assertEqual([], paperlib.preprint_findings(text, urls, "Vishnu Vettrivel"))
+        self.assertEqual([], paperlib.preprint_findings(
+            text.replace("Vettrivel", "V ettrivel"), urls, "Vishnu Vettrivel"))
+        self.assertTrue(paperlib.preprint_findings("Anonymous Submission", urls, ""))
+        self.assertTrue(paperlib.preprint_findings(text, [], "Vishnu Vettrivel"))
+
+    def test_preprint_rejects_anonymous_links_even_with_author(self):
+        text = "Vishnu Vettrivel Independent Researcher vishnu@uofa.net"
+        urls = ["https://github.com/cloudronin/tcop",
+                "https://anonymous.4open.science/r/tcop-B5A5/"]
+        self.assertIn("anonymous artifact link in preprint",
+                      paperlib.preprint_findings(text, urls, "Vishnu Vettrivel"))
+
+    def test_bibliography_rejects_duplicate_source_and_year(self):
+        url = "https://huggingface.co/blog/agent-intrusion-technical-timeline"
+        self.assertEqual([], paperlib.bibliography_findings("July 27, 2026.", url))
+        self.assertTrue(paperlib.bibliography_findings("2026,\n2026", url))
+        self.assertTrue(paperlib.bibliography_findings("2026", url + "\n" + url))
+
+
 if __name__ == "__main__":
     unittest.main()

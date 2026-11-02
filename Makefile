@@ -4,7 +4,7 @@ ARTIFACTS ?= artifacts/verify
 
 # Developer-only shortcuts.  The installed `tcop` CLI is the public TCOP
 # contract; no research logic is implemented in this Makefile.
-.PHONY: schema test verify benchmark experiments research-regression research-witness research-reliability research-confirmation research-minimality research-minimality-core research-minimality-combinations research-minimality-validation research-federated-v0.6 research-evidence-v0.6 research report clean paper-verify-sources paper-extract paper-figures paper-tables paper-build paper-number-audit paper-anonymity-audit paper-reproduce-core paper-check
+.PHONY: schema test verify benchmark experiments research-regression research-witness research-reliability research-confirmation research-minimality research-minimality-core research-minimality-combinations research-minimality-validation research-federated-v0.6 research-evidence-v0.6 research report clean paper-verify-sources paper-extract paper-figures paper-tables paper-build paper-number-audit paper-anonymity-audit paper-reproduce-core paper-check paper-preprint
 
 schema:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m tcop.schema_check
@@ -96,3 +96,8 @@ paper-check: paper-number-audit paper-anonymity-audit
 	$(PYTHON) paper/usenix27/scripts/verify_claims.py
 	$(PYTHON) paper/usenix27/scripts/verify_sources.py --stability-check
 	$(PYTHON) paper/usenix27/scripts/paperlib.py summary
+
+# Same generated manuscript inputs; the identified build has separate outputs
+# and runs every paper gate except anonymity, plus identity/link checks.
+paper-preprint: paper-figures paper-tables
+	PYTHON=$(PYTHON) paper/usenix27/scripts/build_paper.sh --preprint

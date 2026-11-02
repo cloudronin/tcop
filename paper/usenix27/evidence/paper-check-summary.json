@@ -2,6 +2,7 @@
   "body_pages": 13,
   "checks": {
     "anonymity": true,
+    "bibliography": true,
     "claims": true,
     "latex": true,
     "numbers": true,

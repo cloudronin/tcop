@@ -1,0 +1,15 @@
+{
+  "body_pages": 13,
+  "checks": {
+    "bibliography": true,
+    "claims": true,
+    "latex": true,
+    "numbers": true,
+    "page_budget": true,
+    "preprint_identity_and_links": true,
+    "source": true
+  },
+  "missing": [],
+  "paper_check": "pass",
+  "total_pages": 17
+}

@@ -1953,7 +1953,7 @@ def claim_ledger() -> list[dict[str, Any]]:
         ("C-CENTRAL-01", "Across 54 fact-equivalent audited cells, the central comparator records six regressions: three associated with authority placement and three with central outage.", "central comparator", "artifacts/federated-domain-v0.6-evidence", ["reports/central-comparator-audit.json"], "54 fact-equivalent cells; three authority-placement and three outage regressions.", [], "06-deterministic-evaluation.tex", "tab-central-comparator", "supported with qualification"),
         ("C-CENTRAL-02", "The evaluation does not establish universal superiority over centralized defense.", "limitation", "artifacts/federated-domain-v0.6-evidence", ["reports/central-comparator-audit.json"], "Bounded comparator scope.", [], "10-limitations-conclusion.tex", "tab-limitations", "supported"),
         ("C-LIMIT-01", "TCOP does not create detections and cannot prevent an origin compromise that no participating observer detects in time.", "limitation", "architecture", ["benchmark/studies/v0.6-agent-validation.yaml", "reports/containment-window-agent-results.json"], "Context is actionable only before consequential actions.", [], "10-limitations-conclusion.tex", "fig-containment-window", "supported with qualification"),
-        ("C-FUTURE-01", "The pre-registered cross-host study compares bare-agent, sandbox, and runtime-bound TCOP arms; native and harness results remain separate, with lag-calibrated grid finalization, pre-live sealed simulator predictions, and formal trace validation.", "future study design", "spec", ["spec/external-warning-adaptive-crosshost-amendment-003.md", "spec/external-warning-adaptive-crosshost-amendment-004.md", "spec/external-warning-adaptive-crosshost-amendment-005.md", "paper/usenix27/generated/future-work-provenance.json"], "E0/E1/E2; E2-native versus E2-extended; 10 s and 1 s same-action native polling contrasts; 3000 ms simulated operator latency; amendments 004 and 005 checked against their exact SHA-256 seals by future_work_macros.", ["Pre-registered future work, not an executed cross-host result; no runtime-security or incident-prevention claim."], "10-limitations-conclusion.tex", "none", "supported with qualification"),
+        ("C-FUTURE-01", "The pre-registered cross-host study compares bare-agent, sandbox, and runtime-bound TCOP modes; native and harness results remain separate. A binding can prevent a harmful action only if its effect precedes that action; the harness instant cut tests the gap from native polling.", "future study design", "spec", ["spec/external-warning-adaptive-crosshost-amendment-003.md", "spec/external-warning-adaptive-crosshost-amendment-004.md", "spec/external-warning-adaptive-crosshost-amendment-005.md", "paper/usenix27/generated/future-work-provenance.json"], "E0/E1/E2; abstract tightening actions bound per runtime; native and harness primitives never pooled; polling versus instant-cut timing prediction.", ["Pre-registered future work, not an executed cross-host result."], "10-limitations-conclusion.tex", "none", "supported with qualification"),
         ("C-LIMIT-02", "The Docker MCP Gateway is a reference enforcement point, not a reconstruction of a public incident architecture.", "limitation", "integrations/mcp-gateway", ["GATEWAY_SELECTION.md"], "Reference-only gateway role.", [], "07-agent-gateway-evaluation.tex", "tab-limitations", "supported"),
     ]
     prohibited = [
@@ -2031,7 +2031,8 @@ The manuscript cites primary standards or authoritative sources for STIX/TAXII, 
     return records
 
 
-def verify_claims() -> dict[str, Any]:
+def verify_claims(output_dir: Path | None = None) -> dict[str, Any]:
+    output_dir = EVIDENCE if output_dir is None else output_dir
     ledger = yaml.safe_load((EVIDENCE / "claim-evidence-ledger.yaml").read_text(encoding="utf-8"))["claims"]
     source_files = [PAPER / "main.tex", *(PAPER / "sections").glob("*.tex"), *(PAPER / "appendices").glob("*.tex")]
     manuscript = "\n".join(path.read_text(encoding="utf-8") for path in source_files)
@@ -2047,13 +2048,14 @@ def verify_claims() -> dict[str, Any]:
         "prohibited_phrase_hits": hits,
         "pass": not hits and not any(row["status"] == "unresolved" for row in central),
     }
-    write_json(EVIDENCE / "claim-audit.json", result)
+    write_json(output_dir / "claim-audit.json", result)
     if not result["pass"]:
         fail("unsupported or prohibited manuscript claim")
     return result
 
 
-def audit_numbers() -> dict[str, Any]:
+def audit_numbers(output_dir: Path | None = None) -> dict[str, Any]:
+    output_dir = EVIDENCE if output_dir is None else output_dir
     approved = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "2027", "0.6", "0.1", "5s", "01", "02", "03"}
     ignored = re.compile(
         r"(\\input|\\includegraphics|\\label|\\ref|\\cite|\\bibliography|"
@@ -2077,7 +2079,7 @@ def audit_numbers() -> dict[str, Any]:
         "pass": not findings,
         "rule": "Principal numeric results must be represented by generated result macros or generated tables.",
     }
-    write_json(EVIDENCE / "manuscript-number-audit.json", result)
+    write_json(output_dir / "manuscript-number-audit.json", result)
     if findings:
         fail("manuscript contains unlinked numeric claims")
     return result
@@ -2256,18 +2258,23 @@ def anonymity_audit() -> dict[str, Any]:
     return result
 
 
-def paper_check_summary() -> dict[str, Any]:
+def paper_check_summary(preprint: bool = False) -> dict[str, Any]:
+    output_dir = PAPER / "preprint" / "evidence" if preprint else EVIDENCE
     required = {
-        "source": EVIDENCE / "source-verification.json",
-        "claims": EVIDENCE / "claim-audit.json",
-        "numbers": EVIDENCE / "manuscript-number-audit.json",
-        "anonymity": EVIDENCE / "anonymity-audit.json",
-        "latex": EVIDENCE / "latex-audit.json",
-        "page_budget": EVIDENCE / "page-budget.json",
+        "source": output_dir / "source-verification.json",
+        "claims": output_dir / "claim-audit.json",
+        "numbers": output_dir / "manuscript-number-audit.json",
+        "anonymity": output_dir / "anonymity-audit.json",
+        "latex": output_dir / "latex-audit.json",
+        "page_budget": output_dir / "page-budget.json",
     }
+    required["bibliography"] = output_dir / "bibliography-audit.json"
+    if preprint:
+        del required["anonymity"]
+        required["preprint_identity_and_links"] = output_dir / "preprint-audit.json"
     checks = {name: bool(read_json(path).get("pass")) for name, path in required.items() if path.is_file()}
     missing = sorted(set(required) - set(checks))
-    budget = read_json(EVIDENCE / "page-budget.json") if (EVIDENCE / "page-budget.json").is_file() else {}
+    budget = read_json(output_dir / "page-budget.json") if (output_dir / "page-budget.json").is_file() else {}
     result = {
         "paper_check": "pass" if not missing and all(checks.values()) else "fail",
         "checks": checks,
@@ -2275,14 +2282,15 @@ def paper_check_summary() -> dict[str, Any]:
         "body_pages": budget.get("body_pages"),
         "total_pages": budget.get("total_pages"),
     }
-    write_json(EVIDENCE / "paper-check-summary.json", result)
+    write_json(output_dir / "paper-check-summary.json", result)
     if result["paper_check"] != "pass":
         fail("paper check summary has a failed or missing gate")
     return result
 
 
-def page_budget() -> dict[str, Any]:
-    pdf = PAPER / "main.pdf"
+def page_budget(pdf: Path | None = None, output_dir: Path | None = None) -> dict[str, Any]:
+    pdf = PAPER / "main.pdf" if pdf is None else pdf
+    output_dir = EVIDENCE if output_dir is None else output_dir
     from pypdf import PdfReader
     reader = PdfReader(str(pdf)) if pdf.is_file() else None
     pages = len(reader.pages) if reader else None
@@ -2306,39 +2314,40 @@ def page_budget() -> dict[str, Any]:
         "pass": body_pages is not None and body_pages <= 13 and "\\appendix" in source,
         "note": "The official submission page limit applies to body content. This check locates the first rendered appendix and counts its page toward the body when body and appendix material share it.",
     }
-    write_json(EVIDENCE / "page-budget.json", result)
+    write_json(output_dir / "page-budget.json", result)
     if not result["pass"]:
         fail("paper page or appendix structural check failed")
     return result
 
 
-def build_paper(submission: bool = False) -> None:
+def build_paper(submission: bool = False, preprint: bool = False) -> None:
     if submission:
         files = [PAPER / "main.tex", *(PAPER / "sections").glob("*.tex"), *(PAPER / "appendices").glob("*.tex")]
         body = "\n".join(path.read_text(encoding="utf-8") for path in files)
         if "TODO" in body or "anonymous artifact URL placeholder" in body:
             fail("submission mode permits neither TODOs nor placeholder artifact URLs")
+    output = PAPER / "preprint" if preprint else PAPER
+    output_dir = output / "evidence" if preprint else EVIDENCE
+    stem = "main-preprint" if preprint else "main"
+    source = "preprint/main-preprint.tex" if preprint else "main.tex"
+    options = ["-outdir=preprint"] if preprint else []
+    if preprint:
+        write_text(output / "main-preprint.tex", preprint_wrapper())
     subprocess.run(
-        ["latexmk", "-C"],
-        cwd=PAPER,
-        text=True,
-        capture_output=True,
-        check=False,
+        ["latexmk", "-C", *options, source] if preprint else ["latexmk", "-C"],
+        cwd=PAPER, text=True, capture_output=True, check=False,
     )
     completed = subprocess.run(
-        ["latexmk", "-pdf", "-interaction=nonstopmode", "-halt-on-error", "main.tex"],
-        cwd=PAPER,
-        text=True,
-        capture_output=True,
-        check=False,
+        ["latexmk", "-pdf", "-interaction=nonstopmode", "-halt-on-error", *options, source],
+        cwd=PAPER, text=True, capture_output=True, check=False,
     )
-    write_text(PAPER / "build.log", completed.stdout + completed.stderr)
+    write_text(output / "build.log", completed.stdout + completed.stderr)
     if completed.returncode:
-        fail("LaTeX build failed; inspect paper/usenix27/build.log")
-    latex_log = (PAPER / "main.log").read_text(encoding="utf-8", errors="ignore")
+        fail("LaTeX build failed; inspect " + relative(output / "build.log"))
+    latex_log = (output / (stem + ".log")).read_text(encoding="utf-8", errors="ignore")
     overfull = [float(value) for value in re.findall(r"Overfull \\hbox \(([0-9.]+)pt too wide\)", latex_log)]
     undefined = bool(re.search(r"undefined references|undefined citations|There were undefined", latex_log, re.I))
-    write_json(EVIDENCE / "latex-audit.json", {
+    write_json(output_dir / "latex-audit.json", {
         "overfull_hbox_points": overfull,
         "overfull_threshold_points": 1.0,
         "undefined_reference_or_citation": undefined,
@@ -2346,7 +2355,110 @@ def build_paper(submission: bool = False) -> None:
     })
     if undefined or any(value > 1.0 for value in overfull):
         fail("LaTeX reference or overfull-box audit failed")
-    page_budget()
+    pdf = output / (stem + ".pdf")
+    page_budget(pdf, output_dir)
+    audit_bibliography(pdf, output_dir)
+
+
+PREPRINT_NAME = "Vishnu Vettrivel"
+PREPRINT_AFFILIATION = "Independent Researcher"
+PREPRINT_EMAIL = "vishnu@uofa.net"
+PREPRINT_ARTIFACT_URL = "https://github.com/cloudronin/tcop"
+
+
+def preprint_wrapper() -> str:
+    # Only this generated build entry point carries identity. The shared
+    # manuscript and anonymous reviewer export remain free of author tokens.
+    return (r"\def\TCOPPreprint{1}" + "\n"
+            + r"\def\TCOPPreprintName{" + PREPRINT_NAME + "}\n"
+            + r"\def\TCOPPreprintAuthor{" + PREPRINT_NAME + r"\\"
+            + PREPRINT_AFFILIATION + r"\\\texttt{" + PREPRINT_EMAIL + "}}\n"
+            + r"\def\TCOPArtifactURL{" + PREPRINT_ARTIFACT_URL + "}\n"
+            + r"\input{main.tex}" + "\n")
+
+
+def bibliography_findings(text: str, bibliography: str) -> list[str]:
+    findings = []
+    if re.search(r"2026,\s*2026", text):
+        findings.append("repeated 2026 year in rendered bibliography")
+    timeline = "https://huggingface.co/blog/agent-intrusion-technical-timeline"
+    if bibliography.count(timeline) != 1:
+        findings.append("HF technical timeline must have exactly one bibliography entry")
+    return findings
+
+
+def audit_bibliography(pdf: Path, output_dir: Path) -> dict[str, Any]:
+    from pypdf import PdfReader
+    text = "\n".join(page.extract_text() or "" for page in PdfReader(str(pdf)).pages)
+    findings = bibliography_findings(text, (PAPER / "references.bib").read_text(encoding="utf-8"))
+    result = {"pdf": relative(pdf), "findings": findings, "pass": not findings}
+    write_json(output_dir / "bibliography-audit.json", result)
+    if findings:
+        fail("bibliography audit failed: " + "; ".join(findings))
+    return result
+
+
+def preprint_findings(text: str, urls: list[str], author: str) -> list[str]:
+    findings = []
+    # PDF extraction may split kerned words (for example, V ettrivel).
+    compact_text = re.sub(r"\s+", "", text)
+    for expected in (PREPRINT_NAME, PREPRINT_AFFILIATION, PREPRINT_EMAIL):
+        if re.sub(r"\s+", "", expected) not in compact_text:
+            findings.append("missing author-block field: " + expected)
+    if author != PREPRINT_NAME:
+        findings.append("missing preprint PDF author metadata")
+    if any("anonymous.4open.science" in value.lower() for value in [text, *urls]):
+        findings.append("anonymous artifact link in preprint")
+    if PREPRINT_ARTIFACT_URL not in urls:
+        findings.append("missing public repository link")
+    return findings
+
+
+def audit_preprint(pdf: Path, output_dir: Path) -> dict[str, Any]:
+    from pypdf import PdfReader
+    reader = PdfReader(str(pdf))
+    text = "\n".join(page.extract_text() or "" for page in reader.pages)
+    urls = []
+    for page in reader.pages:
+        for ref in page.get("/Annots", []):
+            action = ref.get_object().get("/A")
+            if action is not None:
+                action = action.get_object()
+                if action.get("/URI") is not None:
+                    urls.append(str(action["/URI"]))
+    metadata = reader.metadata or {}
+    first_page = reader.pages[0].extract_text() or ""
+    findings = preprint_findings(first_page, urls, str(metadata.get("/Author", "")))
+    if "anonymous.4open.science" in text.lower():
+        findings.append("anonymous artifact link in preprint text")
+    if "anonymous.4open.science" in str(metadata).lower():
+        findings.append("anonymous artifact link in PDF metadata")
+    result = {"pdf": relative(pdf), "author": str(metadata.get("/Author", "")),
+              "urls": urls, "findings": findings, "pass": not findings}
+    write_json(output_dir / "preprint-audit.json", result)
+    if findings:
+        fail("preprint identity/link audit failed: " + "; ".join(findings))
+    return result
+
+
+def build_preprint_checked(submission: bool = False) -> dict[str, Any]:
+    output = PAPER / "preprint"
+    output_dir = output / "evidence"
+    anonymous_pdf = PAPER / "main.pdf"
+    original = sha256_file(anonymous_pdf) if anonymous_pdf.is_file() else None
+    write_json(output_dir / "source-verification.json", verify_sources(stability_check=True))
+    audit_numbers(output_dir)
+    verify_claims(output_dir)
+    build_paper(submission=submission, preprint=True)
+    audit_preprint(output / "main-preprint.pdf", output_dir)
+    if original is not None and sha256_file(anonymous_pdf) != original:
+        fail("preprint build changed the anonymous PDF")
+    metadata = read_json(GENERATED / "paper-metadata.json")
+    metadata.update({"anonymous": False, "build_mode": "preprint", "author": PREPRINT_NAME,
+                     "affiliation": PREPRINT_AFFILIATION, "email": PREPRINT_EMAIL,
+                     "artifact_url": PREPRINT_ARTIFACT_URL})
+    write_json(output / "paper-metadata.json", metadata)
+    return paper_check_summary(preprint=True)
 
 
 def reproduce_core(agent_replay: bool = True, deterministic: bool = False) -> dict[str, Any]:
@@ -2379,8 +2491,11 @@ def main() -> None:
     parser.add_argument("command", choices=["verify-sources", "inventory", "extract", "tables", "figures", "macros", "ledger", "claims", "numbers", "anonymity", "export", "build", "reproduce", "summary"])
     parser.add_argument("--stability-check", action="store_true")
     parser.add_argument("--submission", action="store_true")
+    parser.add_argument("--preprint", action="store_true", help="build and check the identified preprint separately")
     parser.add_argument("--deterministic", action="store_true")
     args = parser.parse_args()
+    if args.preprint and args.command != "build":
+        parser.error("--preprint is supported only by the build command")
     if args.command == "verify-sources":
         result = verify_sources(args.stability_check)
     elif args.command == "inventory":
@@ -2407,8 +2522,11 @@ def main() -> None:
     elif args.command == "export":
         result = export_anonymous()
     elif args.command == "build":
-        build_paper(args.submission)
-        result = read_json(EVIDENCE / "page-budget.json")
+        if args.preprint:
+            result = build_preprint_checked(args.submission)
+        else:
+            build_paper(args.submission)
+            result = read_json(EVIDENCE / "page-budget.json")
     elif args.command == "summary":
         result = paper_check_summary()
     else:
