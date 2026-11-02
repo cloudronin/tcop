@@ -1,0 +1,215 @@
+{
+  "schema_version": "tcop.trace/1",
+  "trace_id": "rejected-missing-submit",
+  "sandbox_id": "sandboxB",
+  "sandbox_generation": "generation1",
+  "clock": {
+    "origin": "evidence_emitted",
+    "tick_duration_ns": 1000000
+  },
+  "parameters": {
+    "destinations": [
+      "d0",
+      "d1"
+    ],
+    "credentials": [
+      "c0",
+      "c1"
+    ],
+    "primary_destination": "d0",
+    "primary_credential": "c0",
+    "a0_kind": "egress",
+    "baseline_denies_a0": false,
+    "action_interval": 1,
+    "approval_delay": 0,
+    "min_lag": {
+      "deny_egress": 2,
+      "revoke_credential": 2,
+      "freeze": 2
+    },
+    "max_lag": {
+      "deny_egress": 3,
+      "revoke_credential": 3,
+      "freeze": 3
+    },
+    "receive_until": 0
+  },
+  "initial_authority": [
+    [
+      "egress",
+      "d0"
+    ],
+    [
+      "egress",
+      "d1"
+    ],
+    [
+      "credential",
+      "c0"
+    ],
+    [
+      "credential",
+      "c1"
+    ],
+    [
+      "work",
+      "benign"
+    ]
+  ],
+  "events": [
+    {
+      "type": "receive",
+      "t": 0,
+      "authority": [
+        [
+          "egress",
+          "d0"
+        ],
+        [
+          "egress",
+          "d1"
+        ],
+        [
+          "credential",
+          "c0"
+        ],
+        [
+          "credential",
+          "c1"
+        ],
+        [
+          "work",
+          "benign"
+        ]
+      ],
+      "message": "delivery1",
+      "observation_id": "observation1",
+      "nonce": "nonce1",
+      "signature_valid": true,
+      "peer_authorized": true,
+      "expires_at": 20,
+      "interaction_id": "interaction1",
+      "receipt_interaction_id": "interaction1",
+      "receipt_verified": true,
+      "receipt_receiver_local": true,
+      "decision": "accepted",
+      "selected": [
+        "deny_egress",
+        "d0"
+      ]
+    },
+    {
+      "type": "attempt",
+      "t": 1,
+      "authority": [
+        [
+          "egress",
+          "d0"
+        ],
+        [
+          "egress",
+          "d1"
+        ],
+        [
+          "credential",
+          "c0"
+        ],
+        [
+          "credential",
+          "c1"
+        ],
+        [
+          "work",
+          "benign"
+        ]
+      ],
+      "action": "A0",
+      "capability": [
+        "egress",
+        "d0"
+      ],
+      "authorized": true,
+      "denied": false,
+      "executed": true
+    },
+    {
+      "type": "attempt",
+      "t": 1,
+      "authority": [
+        [
+          "egress",
+          "d0"
+        ],
+        [
+          "egress",
+          "d1"
+        ],
+        [
+          "credential",
+          "c0"
+        ],
+        [
+          "credential",
+          "c1"
+        ],
+        [
+          "work",
+          "benign"
+        ]
+      ],
+      "action": "A4",
+      "capability": [
+        "work",
+        "benign"
+      ],
+      "authorized": true,
+      "denied": false,
+      "executed": true
+    },
+    {
+      "type": "effect",
+      "t": 2,
+      "authority": [
+        [
+          "egress",
+          "d1"
+        ],
+        [
+          "credential",
+          "c0"
+        ],
+        [
+          "credential",
+          "c1"
+        ],
+        [
+          "work",
+          "benign"
+        ]
+      ],
+      "message": "delivery1"
+    },
+    {
+      "type": "end",
+      "t": 2,
+      "authority": [
+        [
+          "egress",
+          "d1"
+        ],
+        [
+          "credential",
+          "c0"
+        ],
+        [
+          "credential",
+          "c1"
+        ],
+        [
+          "work",
+          "benign"
+        ]
+      ]
+    }
+  ]
+}

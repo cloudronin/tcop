@@ -1,0 +1,12 @@
+{
+  "kind": "runner classification checks; synthetic outputs, not TLC executions",
+  "checks": {
+    "canary_success_is_not_expected_rejection": true,
+    "wrong_property_is_not_expected_rejection": true,
+    "checker_failure_is_not_expected_rejection": true,
+    "violation_without_counterexample_is_not_expected_rejection": true,
+    "located_clause_resolves_to_unchanged_property": true
+  },
+  "passed": true,
+  "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+}

@@ -1,0 +1,244 @@
+[
+  {
+    "fixture": "accepted-slow.json",
+    "expected": {
+      "outcome": "accepted",
+      "first_rejected_step_index": null
+    },
+    "actual": "accepted",
+    "first_rejected_step_index": null,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "accepted-fast.json",
+    "expected": {
+      "outcome": "accepted",
+      "first_rejected_step_index": null
+    },
+    "actual": "accepted",
+    "first_rejected_step_index": null,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-widening.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 3
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 3,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-expired.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 0
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 0,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-replay-id.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 3
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 3,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-replay-nonce.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 3
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 3,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-covered-action.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 3
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 3,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-a1-without-denial.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 2
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 2,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-receipt-mismatch.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 0
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 0,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-receipt-absent.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 0
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 0,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "malformed-missing-nonce.json",
+    "expected": {
+      "outcome": "malformed",
+      "first_rejected_step_index": 0
+    },
+    "actual": "malformed",
+    "first_rejected_step_index": 0,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "malformed-command.json",
+    "expected": {
+      "outcome": "malformed",
+      "first_rejected_step_index": 0
+    },
+    "actual": "malformed",
+    "first_rejected_step_index": 0,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "accepted-no-evidence.json",
+    "expected": {
+      "outcome": "accepted",
+      "first_rejected_step_index": null
+    },
+    "actual": "accepted",
+    "first_rejected_step_index": null,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-initial-authority.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": -1
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": -1,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "accepted-replay-rejection.json",
+    "expected": {
+      "outcome": "accepted",
+      "first_rejected_step_index": null
+    },
+    "actual": "accepted",
+    "first_rejected_step_index": null,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "accepted-invalid-rejections.json",
+    "expected": {
+      "outcome": "accepted",
+      "first_rejected_step_index": null
+    },
+    "actual": "accepted",
+    "first_rejected_step_index": null,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "accepted-freeze.json",
+    "expected": {
+      "outcome": "accepted",
+      "first_rejected_step_index": null
+    },
+    "actual": "accepted",
+    "first_rejected_step_index": null,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "accepted-credential.json",
+    "expected": {
+      "outcome": "accepted",
+      "first_rejected_step_index": null
+    },
+    "actual": "accepted",
+    "first_rejected_step_index": null,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-missing-submit.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 1
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 1,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-missing-a4.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 3
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 3,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "rejected-lag-out-of-bounds.json",
+    "expected": {
+      "outcome": "rejected",
+      "first_rejected_step_index": 2
+    },
+    "actual": "rejected",
+    "first_rejected_step_index": 2,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  },
+  {
+    "fixture": "accepted-approval-delay.json",
+    "expected": {
+      "outcome": "accepted",
+      "first_rejected_step_index": null
+    },
+    "actual": "accepted",
+    "first_rejected_step_index": null,
+    "passed": true,
+    "pinned_tools_record_sha256": "9a96e57e11ecef2ed9303e99cbdc92092d025ec67f53a1cc2a4b42b767ab001e"
+  }
+]

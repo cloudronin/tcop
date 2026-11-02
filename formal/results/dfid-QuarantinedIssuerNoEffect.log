@@ -1,0 +1,52 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running depth-first search Model-Checking with fp 1 and seed 1655154460134735357 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90471] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrust.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Sequences.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TCOPReceiver
+Semantic processing of module TCOPTrust
+Semantic processing of module TrustMC
+Starting... (2026-11-01 21:09:02)
+Finished computing initial states: 1 states generated, with 1 of them distinct.
+Starting level 2: 1 states generated, 1 distinct states found.
+Starting level 3: 12 states generated, 12 distinct states found.
+Starting level 4: 124 states generated, 69 distinct states found.
+Starting level 5: 675 states generated, 256 distinct states found.
+Starting level 6: 2463 states generated, 700 distinct states found.
+Starting level 7: 6861 states generated, 1542 distinct states found.
+Starting level 8: 15740 states generated, 2914 distinct states found.
+Starting level 9: 31121 states generated, 4907 distinct states found.
+Starting level 10: 54713 states generated, 7569 distinct states found.
+Starting level 11: 87800 states generated, 10981 distinct states found.
+Starting level 12: 131540 states generated, 15278 distinct states found.
+Starting level 13: 187292 states generated, 20530 distinct states found.
+Starting level 14: 256265 states generated, 26561 distinct states found.
+Starting level 15: 338395 states generated, 32913 distinct states found.
+Starting level 16: 431778 states generated, 39096 distinct states found.
+Starting level 17: 533570 states generated, 44851 distinct states found.
+Starting level 18: 641597 states generated, 50129 distinct states found.
+Starting level 19: 754902 states generated, 54872 distinct states found.
+Starting level 20: 872950 states generated, 58891 distinct states found.
+Starting level 21: 995017 states generated, 61920 distinct states found.
+Starting level 22: 1120113 states generated, 63772 distinct states found.
+Starting level 23: 1247061 states generated, 64628 distinct states found.
+Starting level 24: 1374865 states generated, 64968 distinct states found.
+Starting level 25: 1503009 states generated, 65104 distinct states found.
+Starting level 26: 1631289 states generated, 65136 distinct states found.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 6.0E-9
+  based on the actual fingerprints:  val = .5
+1759601 states generated, 65136 distinct states found.
+Finished in 27s at (2026-11-01 21:09:30)

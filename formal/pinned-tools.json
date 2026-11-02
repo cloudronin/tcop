@@ -1,0 +1,42 @@
+{
+  "schema_version": "tcop.pinned-tools/1",
+  "tla_plus": {
+    "version": "v1.7.4",
+    "release_name": "The Xenophanes release",
+    "release_channel": "latest stable (study-owner supplied; no network verification)",
+    "project": "tlaplus/tlaplus",
+    "file": "tla2tools.jar",
+    "path": "formal/tools/tla2tools.jar",
+    "size_bytes": 2274532,
+    "sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+    "source": "https://github.com/tlaplus/tlaplus/releases/tag/v1.7.4",
+    "tlc_banner": "TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)"
+  },
+  "jdk": {
+    "executable": "/opt/homebrew/opt/openjdk/bin/java",
+    "observed_properties": {
+      "java.vendor": "Homebrew",
+      "java.vm.vendor": "Homebrew",
+      "java.vm.name": "OpenJDK 64-Bit Server VM",
+      "java.version": "27.0.1.0.3",
+      "java.runtime.version": "27.0.1.0.3",
+      "os.arch": "aarch64",
+      "java.home": "/opt/homebrew/Cellar/openjdk/27.0.1.0.3/libexec/openjdk.jdk/Contents/Home"
+    },
+    "homebrew": {
+      "formula": "openjdk",
+      "version": "27.0.1.0.3",
+      "path": "/opt/homebrew/Cellar/openjdk/27.0.1.0.3",
+      "poured_from_bottle": true,
+      "receipt_sha256": "ce5fa4d8794d2d7b6bba44f41246f3778246461dba4c51d2e84c97cb0a392363"
+    },
+    "observation_command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "-XshowSettings:properties",
+      "-version"
+    ],
+    "observation_output": "formal/results/java-properties.txt",
+    "observation_output_sha256": "dd79ee792e7eea8460d8d2422e132016f0501162bb65b2743dcd8adcc11a7ec3"
+  },
+  "observed_at_utc": "2026-11-02T02:53:40.047440+00:00"
+}

@@ -7,3 +7,8 @@ artifacts/*
 !artifacts/.gitkeep
 *.sqlite3
 
+
+# TLA+ tools (pinned jar fetched separately) and TLC working state
+formal/tools/*.jar
+formal/**/states/
+formal/**/*.bin

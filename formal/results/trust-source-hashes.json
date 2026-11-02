@@ -1,0 +1,9 @@
+{
+  "recorded_at_utc": "2026-11-02T05:07:16.049024+00:00",
+  "files": {
+    "spec/external-warning-adaptive-crosshost-amendment-006.md": "fb33527c424400abbe7bfb5d5c4ff574106e5507a8ac8ca916bb2deb3b0648c1",
+    "src/tcop/reliability.py": "7f2e6090da74558aa68d2aec41dfa5415e9cc5216c6ce965221300e82955677a",
+    "src/tcop/confirmation.py": "fb6a6326ad765dcc81706ab64de9fd42732a803e3c9598f6334b2af8e14445b1",
+    "src/tcop/witness.py": "cab2bffb25bda3ad765eac7ea645a1becc1ae2de1bbe98ae1770dfad27263979"
+  }
+}

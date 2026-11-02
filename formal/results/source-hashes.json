@@ -1,0 +1,14 @@
+{
+  "docs/tcop-framing-layering-and-bindings.md": "b93c5fca417a02427e39ee9f69c77aa577ef2e40350295e0c622e6498ff7d83f",
+  "spec/external-warning-adaptive-crosshost-amendment-002.md": "d5d73dc64bd5a95777796f59972cfeaaf0b0efcb2f071e9964f28aaff9d1cc40",
+  "spec/external-warning-adaptive-crosshost-amendment-003.md": "521ab718a6d75275f1546adf015a7e25daee0a3593fed29539a0ab61cafc3a57",
+  "spec/external-warning-adaptive-crosshost-amendment-004.md": "9546e30627eab69924f47d595fa536da22acee8edd818d1b268eee8ba02b0706",
+  "src/tcop/validation.py": "2699e0520787604132d14a9e63585a258139c948ccb28296d596e9012adcd924",
+  "src/tcop/trust.py": "4bed7a5e6ead29dc8a1cb7a8afae832c0587f0189f93a1973b100832c724a51e",
+  "src/tcop/federation.py": "5c714737ba190e73d25d338bd1091322caf8a7bd07b44bdfe2197c7947af7636",
+  "src/tcop/identity.py": "fb927074fb3694db2d593c3b6591dda3c5243ff3722c53b597fef6556767f77e",
+  "src/tcop/witness.py": "cab2bffb25bda3ad765eac7ea645a1becc1ae2de1bbe98ae1770dfad27263979",
+  "schemas/observation-v0.1.json": "2cfda9d7d025b3342e742b394099c3e90525f94703422bd5886bab7e1e9a28e1",
+  "schemas/tcx-observation-v0.2.schema.json": "1ac9f1423ba1b421c349187cd7019c2ab42073c1fc4a72eeec164107c71bfb93",
+  "schemas/interaction-receipt-v0.1.json": "f3d47fbc2bc33808cfd31a9ccc43d91613441d62b4b8162bdbb7b1638ed542b6"
+}

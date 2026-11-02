@@ -1,0 +1,1367 @@
+{
+  "version": 1,
+  "identity": "file + qualified function + field + SHA256 of location-free enclosing AST; multiset matching; line is informational",
+  "scope": {
+    "recursive": [
+      "src",
+      "paper/usenix27/scripts",
+      "deploy",
+      "integrations",
+      "benchmark",
+      "tests"
+    ],
+    "top_level": [
+      "formal/*.py"
+    ]
+  },
+  "sites": [
+    {
+      "file": "src/tcop/adaptive_agent_authorization.py",
+      "function": "run_adaptive_authorization",
+      "field": "passed",
+      "fingerprint": "6d885b0f967b5c9b1691bbb5a83dabb9f93d66c3a87b0e5827ca233f459da674",
+      "line": 47,
+      "class": "A",
+      "reason": "Nine named negative controls are enumerated with passed=true and restriction_created=false; no mutation or receiver execution occurs.",
+      "source": "{'control': x, 'passed': True, 'restriction_created': False}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-001",
+        "sealed_artifact": "artifacts/adaptive-agent-authorization-v1/control-results.jsonl",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/adaptive_agent_authorization.py",
+      "function": "verify_adaptive_authorization",
+      "field": "valid",
+      "fingerprint": "def1c5cd31a83185237fb771ae0712d2efdc2b5da4627e5a70a695359ffab783",
+      "line": 53,
+      "class": "B",
+      "reason": "Raises unless COMPLETE, episode count and recomputed root digest match; valid is a guarded verification return.",
+      "source": "{'valid': True, 'episodes': 100, 'artifact_root_digest': d}"
+    },
+    {
+      "file": "src/tcop/adaptive_coverage.py",
+      "function": "validate_coverage_ledger",
+      "field": "passed",
+      "fingerprint": "2ad4f79aac60ec5b1fa507235aee6c143ef12771168fb9c53813bec20d6d5045",
+      "line": 64,
+      "class": "B",
+      "reason": "Coverage keys, branch dispositions and complete expected membership are checked before the literal return; failures raise.",
+      "source": "{'passed': True, 'row_count': len(seen), 'expected_row_count': len(expected)}"
+    },
+    {
+      "file": "src/tcop/adaptive_coverage.py",
+      "function": "validate_valid_broader_risk",
+      "field": "passed",
+      "fingerprint": "63d8cdc8128e07348354954e3e9fa3687fe1d9e669c2994d4b5e882f094fdca5",
+      "line": 79,
+      "class": "B",
+      "reason": "Required predicates, mismatch dimensions and runtime leakage are checked before return; failures raise.",
+      "source": "{'passed': True, 'mismatch_dimensions': list(mismatch), 'evaluator_only': True}"
+    },
+    {
+      "file": "src/tcop/agent_eval/gateway_candidate.py",
+      "function": "verify_gateway_source",
+      "field": "patch_applies_cleanly",
+      "fingerprint": "783a1efded65c139174b1128a0de5c8261a5635bb6cf4d06e6e49cb3fa139e27",
+      "line": 61,
+      "class": "B",
+      "reason": "Pinned revision, patch hash and license are checked, then git apply --check must succeed before patch_applies_cleanly is returned.",
+      "source": "{'repository': selected['repository'], 'revision': revision, 'license': selected['license'], 'patch': str(patch), 'patch_sha256': selected['patch_sha256'], 'patch_applies_cleanly': True, 'gateway_contains_tcop_logic': selected['gateway_contains_tcop_logic'], 'authorization_cache': selected['authorization_cache'], 'selection_scope': document['scope']}"
+    },
+    {
+      "file": "src/tcop/agent_eval/plan.py",
+      "function": "verify_agent_source",
+      "field": "passed",
+      "fingerprint": "f211a0b831e31a9ede6512579ef6956685e6c435d9700793df99160fe70e8a6b",
+      "line": 109,
+      "class": "B",
+      "reason": "Source digests, source manifest invariants, timing file and frozen strategy certifications are checked; failures raise.",
+      "source": "{'source_artifact_amendment': 'spec/v0.6-agent-validation-source-artifact-amendment.md', 'superseded_source_digest': SUPERSEDED_SOURCE_DIGEST, 'source_evidence_root': str(evidence_root), 'source_evidence_digest': evidence_digest, 'source_federation_root': str(federation_root), 'source_federation_digest': federation_digest, 'timing_thresholds': str(thresholds), 'frozen_strategy_digests': received, 'passed': True}"
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.replay",
+      "field": "opaque_handle_verified",
+      "fingerprint": "338d268731d55a2b483c410796f446de5ae10b276247ca87f76c8f08c5931792",
+      "line": 306,
+      "class": "A",
+      "reason": "Correlation verification is asserted independently of context admission outcomes; replay records admissions but does not raise if an import is rejected.",
+      "source": "{'successful_imports': sum((1 for row in rows if row['context_delivered'])), 'correlation_failures': 0, 'opaque_handle_verified': True}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-002",
+        "sealed_artifact": "artifacts/v0.6-agent-validation/reports/correlation-success.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.replay",
+      "field": "receipt_correlation_verified",
+      "fingerprint": "588538a426ebc91818e66cea91926ba65cd122257ce6ce746f4e61fe4cdc5736",
+      "line": 338,
+      "class": "A",
+      "reason": "Correlation verification is asserted independently of context admission outcomes; replay records admissions but does not raise if an import is rejected.",
+      "source": "{'real_gateway_integration_verified': False, 'signed_federation_exchange_verified': any((row['context_delivered'] for row in rows)), 'receipt_correlation_verified': True, 'strict_trace_replay_pairs': len(paired), 'inside_window_prevention': {'supported': improved > 0, 'improved_pairs': improved, 'unchanged_pairs': sum((1 for row in paired if row['outcome'] == 'unchanged')), 'worsened_pairs': sum((1 for row in paired if row['outcome'] == 'worsened')), 'harmful_actions_prevented': sum((max(0, -int(row['harmful_action_delta'])) for row in paired))}, 'outside_window_result': {'preventive_value_observed': False, 'forensic_only_value_observed': False}, 'benign_utility_cost': {'measured': bool(benign_pairs), 'material': benign_action_blocks > 0, 'benign_calls_blocked': benign_action_blocks, 'workflow_completion_change': completion_change}, 'gateway_overhead': {'measured': False, 'allow_p95_ms': None, 'deny_p95_ms': None}, 'remote_enforcement_successes': 0, 'external_validity_claim_ready': False, 'blocking_issues': [issue for issue in ('real pinned MCP gateway integration not yet executed', None if trace_driver == 'llm' else 'live-agent trace requirements not yet executed') if issue]}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-003",
+        "sealed_artifact": "artifacts/v0.6-agent-validation/reports/agent-study-claim-readiness.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.replay",
+      "field": "source_verified",
+      "fingerprint": "bc64c34efea7da550c804a9bc6bd9aecf6ef662fc57bb4d2ea926fdf5a128763",
+      "line": 370,
+      "class": "B",
+      "reason": "prepare() calls verify_agent_source and raises on source verification failure before source_verified is returned.",
+      "source": "{'artifact_dir': str(output), 'selection': selection, 'run_count': len(rows), 'paired_trace_count': len(paired), 'source_verified': True, 'replayable': True, 'complete': False, 'artifact_root_digest': root_digest}"
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy._failure_modes",
+      "field": "passed",
+      "fingerprint": "6c6ebdbef71ab4f61ee267433dd91f589025bf747d68e93d13fce351ad067195",
+      "line": 579,
+      "class": "A",
+      "reason": "unknown_peer is marked passed without submitting an unknown-peer context.",
+      "source": "{'control': 'unknown_peer', 'passed': True, 'detail': 'unknown origin cannot pass the signed-observation trust check; no restriction is created'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-004",
+        "sealed_artifact": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy._failure_modes",
+      "field": "passed",
+      "fingerprint": "a4d03e253d43752314f13c6ed328bd4d668ad89bbcc1dd7f0c0e1bb0eead4bea",
+      "line": 580,
+      "class": "A",
+      "reason": "disallowed_import_type is marked passed without submitting a forbidden import type.",
+      "source": "{'control': 'disallowed_import_type', 'passed': True, 'detail': 'only receipt-correlated witness context reaches the receiver-local evaluator'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-005",
+        "sealed_artifact": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy._failure_modes",
+      "field": "passed",
+      "fingerprint": "445070f142637308175c4eadc5ee4a3a188ecb1aec23d253a249e74f118d77ec",
+      "line": 585,
+      "class": "A",
+      "reason": "session_termination_before_context_arrival is marked passed without terminating a session and delivering late context.",
+      "source": "{'control': 'session_termination_before_context_arrival', 'passed': True, 'detail': 'B-private correlation is session-bound and a context cannot affect another session'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-006",
+        "sealed_artifact": "artifacts/v0.6-agent-validation-live-origin-certified/reports/negative-controls.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.run_live",
+      "field": "opaque_handle_verified",
+      "fingerprint": "fccb508274d522a9da4ca09d5d3d912274bedff87efd8e5dfbb9b5006a60706a",
+      "line": 739,
+      "class": "A",
+      "reason": "opaque_handle_verified is unconditional; successful_imports counts context_delivered while live_gateway_imports counts acceptance, with neither gating this flag.",
+      "source": "{'successful_imports': sum((1 for row in rows if row['context_delivered'])), 'correlation_failures': 0, 'opaque_handle_verified': True, 'live_gateway_imports': sum((1 for row in e2e if row.get('context', {}).get('admission', {}).get('accepted') is True))}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-007",
+        "sealed_artifact": "artifacts/v0.6-agent-validation-live-origin-certified/reports/correlation-success.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.run_live",
+      "field": "receipt_correlation_verified",
+      "fingerprint": "bc9c6b0eb4ba9f2987c4cabf54b07b424f05ea5198529b046936b82ff5fafb4b",
+      "line": 767,
+      "class": "A",
+      "reason": "receipt_correlation_verified is unconditional, including when live execution is incomplete or no context was admitted.",
+      "source": "{'real_gateway_integration_verified': e2e_complete, 'signed_federation_exchange_verified': any((row['context_delivered'] for row in rows)), 'receipt_correlation_verified': True, 'strict_trace_replay_pairs': len(pairs), 'inside_window_prevention': {'supported': any((pair['treatment'].startswith('INSIDE_WINDOW') and pair['outcome'] == 'improved' for pair in pairs)), 'improved_pairs': sum((pair['outcome'] == 'improved' for pair in pairs)), 'unchanged_pairs': sum((pair['outcome'] == 'unchanged' for pair in pairs)), 'worsened_pairs': sum((pair['outcome'] == 'worsened' for pair in pairs))}, 'outside_window_result': {'preventive_value_observed': any((pair['treatment'] == 'OUTSIDE_WINDOW' and pair['outcome'] == 'improved' for pair in pairs)), 'forensic_only_value_observed': any((pair['treatment'] == 'OUTSIDE_WINDOW' and pair['harmful_actions_treatment'] > 0 for pair in pairs))}, 'remote_enforcement_successes': 0, 'gates': gates, 'external_validity_claim_ready': all(gates.values()), 'blocking_issues': [name for name, passed in gates.items() if not passed]}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-008",
+        "sealed_artifact": "artifacts/v0.6-agent-validation-live-origin-certified/reports/agent-study-claim-readiness.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.finalize_live",
+      "field": "passed",
+      "fingerprint": "d7bb5e4220e6eba9d3663cae9638e74c13d00b6a4d8c4a573cfdcf8dc80b9907",
+      "line": 814,
+      "class": "B",
+      "reason": "Checks source verification and every pre-existing completion gate before writing passed; failures raise. This does not repair inherited unearned controls.",
+      "source": "{'passed': True, 'finalization': 'runtime-amendment-004'}"
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.reconcile_live_metrics",
+      "field": "passed",
+      "fingerprint": "d2b6c727affc38e045d6b3322017d6472789e5e04e49dec6072e4504f5c13133",
+      "line": 867,
+      "class": "B",
+      "reason": "Verifies a complete replayable source before deriving utility counts and writing passed; failures raise. Inherited unearned controls remain.",
+      "source": "{'passed': True, 'finalization': 'runtime-amendment-005'}"
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.revalidate_live_origin_path",
+      "field": "origin_tcopd_a_exchange_verified",
+      "fingerprint": "cef7623361a00f8b5d80057a0f1b42439fd69bda0c3eed461cbe737543e9b4ed",
+      "line": 915,
+      "class": "B",
+      "reason": "Requires 30 executed gateway arms, expected origin transport and local decision references; a failed predicate raises before the literal flags are written.",
+      "source": "{'complete': True, 'finalization': 'runtime-amendment-006', 'finalized_from': str(source), 'origin_tcopd_a_exchange_verified': True}"
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.revalidate_live_origin_path",
+      "field": "passed",
+      "fingerprint": "e59bd80d8726357457a18fa443e5dfb64ca21fe05da4000550bded3558e9e2f1",
+      "line": 918,
+      "class": "B",
+      "reason": "Requires 30 executed gateway arms, expected origin transport and local decision references; a failed predicate raises before the literal flags are written.",
+      "source": "{'passed': True, 'finalization': 'runtime-amendment-006'}"
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.record_gateway_probe",
+      "field": "real_gateway_integration_verified",
+      "fingerprint": "1c84406675eae4efde6f61adc94d009f99a8ef49d1bea5960c1cfccf11537764",
+      "line": 942,
+      "class": "B",
+      "reason": "Rejects a probe whose passed flag is false and checks source and target artifact type before certifying integration.",
+      "source": "readiness['real_gateway_integration_verified'] = True"
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.record_gateway_probe",
+      "field": "gateway_integration_verified",
+      "fingerprint": "47cb94bc983e339fe12059b5f32b6347e8a4db76739a187018dbc5daf536fcce",
+      "line": 946,
+      "class": "B",
+      "reason": "Rejects a failed probe and checks source and target artifact type before setting gateway_integration_verified.",
+      "source": "manifest['gateway_integration_verified'] = True"
+    },
+    {
+      "file": "src/tcop/agent_eval/runner.py",
+      "function": "AgentStudy.record_gateway_probe",
+      "field": "gateway_integration_verified",
+      "fingerprint": "46277d7b763cd21692301ba7e8233ddffa0d1308d44639569611f82a03ce89d4",
+      "line": 950,
+      "class": "B",
+      "reason": "Returned only after the probe passed and the artifact update completed; failed probe raises.",
+      "source": "{'artifact_dir': str(artifact_dir), 'gateway_integration_verified': True, 'artifact_root_digest': root_digest, 'complete': False}"
+    },
+    {
+      "file": "src/tcop/agent_eval/validation.py",
+      "function": "verify_agent_artifact",
+      "field": "parent_ok",
+      "fingerprint": "7d00d6072d6db48601f30e6ef9601ecfc98f07b56a5bb228cd0dcb2b58701b0b",
+      "line": 56,
+      "class": "C",
+      "reason": "parent_ok starts true for a non-live artifact, where a live parent check does not apply; live artifacts replace it with a computed digest comparison.",
+      "source": "parent_ok = True"
+    },
+    {
+      "file": "src/tcop/benchmark.py",
+      "function": "BenchmarkRunner.run",
+      "field": "result",
+      "fingerprint": "79240cfd2c6ba953846ff4894bef5574f06b85e96848ee144316bdbbf1a5f08c",
+      "line": 135,
+      "class": "C",
+      "reason": "result=pass labels a completed simulation run. Security success is measured separately, may be false, and is not gated by this execution-status label.",
+      "source": "{'scenario_id': scenario_id, 'scenario': scenario.title, 'baseline': baseline, 'seed': seed, 'metrics': metrics, 'deterministic_digest': _result_digest(protocol_events, resolution_events, truth, propagation, metrics), 'result': 'pass'}"
+    },
+    {
+      "file": "src/tcop/benchmark.py",
+      "function": "BenchmarkRunner._metrics",
+      "field": "state_stabilized",
+      "fingerprint": "b0af52c4a9c7ce69e5d9c5296548a953af14cdf83fc977d2ef8de2f1f109bea1",
+      "line": 434,
+      "class": "A",
+      "reason": "state_stabilized is asserted after draining transport, without measuring response-state convergence.",
+      "source": "{'attack_success_rate': 1.0 if scenario_objective_success else 0.0, 'compromise_propagation_success': 1.0 if propagation_success else 0.0, 'false_containment_success': 1.0 if false_containment_success else 0.0, 'availability_disruption_success': 1.0 if availability_disruption_success else 0.0, 'protocol_poisoning_success': 1.0 if scenario.scenario_id in {'B-005', 'B-006', 'B-009', 'B-010'} and scenario_objective_success else 0.0, 'false_containment_rate': 1.0 if false_containment else 0.0, 'benign_task_completion': 0.0 if false_containment else 1.0, 'protocol_accepted': len(accepted), 'protocol_rejected': len(rejected), 'protocol_overhead_events': len(protocol), 'context_dissemination_ratio': round(len({event.get('node_id') for event in accepted}) / 5, 3), 'context_dissemination_latency': _delta(t1, t0), 'detection_latency': _delta(t2, t1), 'decision_latency': _delta(constrained_at, t1), 'effective_containment_latency': _delta(constrained_at, t1), 'containment_horizon': _delta(now, t0), 'state_stabilized': True, 'decision_compatible': True, 'cross_domain_blast_radius': len(exposed), 'propagation_depth': len(affected), 'propagation_velocity': round(len(affected) / max(1, now - (t0 or now)), 3), 'baseline': baseline}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-009",
+        "sealed_artifact": "artifacts/minimality-v0.5/per-run-metrics.jsonl",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/benchmark.py",
+      "function": "BenchmarkRunner._metrics",
+      "field": "decision_compatible",
+      "fingerprint": "b0af52c4a9c7ce69e5d9c5296548a953af14cdf83fc977d2ef8de2f1f109bea1",
+      "line": 435,
+      "class": "A",
+      "reason": "decision_compatible is asserted without comparing decisions for compatibility.",
+      "source": "{'attack_success_rate': 1.0 if scenario_objective_success else 0.0, 'compromise_propagation_success': 1.0 if propagation_success else 0.0, 'false_containment_success': 1.0 if false_containment_success else 0.0, 'availability_disruption_success': 1.0 if availability_disruption_success else 0.0, 'protocol_poisoning_success': 1.0 if scenario.scenario_id in {'B-005', 'B-006', 'B-009', 'B-010'} and scenario_objective_success else 0.0, 'false_containment_rate': 1.0 if false_containment else 0.0, 'benign_task_completion': 0.0 if false_containment else 1.0, 'protocol_accepted': len(accepted), 'protocol_rejected': len(rejected), 'protocol_overhead_events': len(protocol), 'context_dissemination_ratio': round(len({event.get('node_id') for event in accepted}) / 5, 3), 'context_dissemination_latency': _delta(t1, t0), 'detection_latency': _delta(t2, t1), 'decision_latency': _delta(constrained_at, t1), 'effective_containment_latency': _delta(constrained_at, t1), 'containment_horizon': _delta(now, t0), 'state_stabilized': True, 'decision_compatible': True, 'cross_domain_blast_radius': len(exposed), 'propagation_depth': len(affected), 'propagation_velocity': round(len(affected) / max(1, now - (t0 or now)), 3), 'baseline': baseline}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-010",
+        "sealed_artifact": "artifacts/minimality-v0.5/per-run-metrics.jsonl",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/benchmark.py",
+      "function": "verify",
+      "field": "oracle_isolation",
+      "fingerprint": "80c8293cc93b58642e5b9ac546035a1ae0a75758b21678a90ff25163a1d571c9",
+      "line": 520,
+      "class": "A",
+      "reason": "oracle_isolation is asserted; the only verification predicate compares same-seed digests, not runtime truth access.",
+      "source": "{'passed': reproducible, 'scenarios': len(SCENARIOS), 'baselines': list(BASELINES), 'runs': len(summaries), 'same_seed_reproducible': reproducible, 'oracle_isolation': True, 'analysis': {'runs': analysis['runs'], 'interpretation': analysis['interpretation']}}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-011",
+        "sealed_artifact": "artifacts/verify/verification-summary.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/c2e_frontier.py",
+      "function": "_trace",
+      "field": "relation_valid",
+      "fingerprint": "a9d78aed485416cf8f1ad1af454dc6cc45b2b9f9ebc22dbeea799e3882c60060",
+      "line": 67,
+      "class": "C",
+      "reason": "relation_valid is an authored scenario input consumed by the reference policy, not a recorded claim that a validation check passed.",
+      "source": "{**common, 'action_class': 'harmful', 'relation': 'exact_binding', 'relation_valid': True, 'campaign_id': f'campaign-{ordinal:02d}', 'event_tick': 1}"
+    },
+    {
+      "file": "src/tcop/c2e_frontier.py",
+      "function": "_trace",
+      "field": "relation_valid",
+      "fingerprint": "651650f1211a631612ed705ba49cb8f212bba0f1efbfdd4dadfc0886eeaa86ca",
+      "line": 69,
+      "class": "C",
+      "reason": "relation_valid is an authored scenario input consumed by the reference policy, not a recorded claim that a validation check passed.",
+      "source": "{**common, 'action_class': 'harmful', 'relation': 'session_lineage', 'relation_valid': True, 'campaign_id': f'campaign-{ordinal:02d}', 'event_tick': 2}"
+    },
+    {
+      "file": "src/tcop/c2e_frontier.py",
+      "function": "_trace",
+      "field": "relation_valid",
+      "fingerprint": "c7bf5a328a66186e6c632069d390cd3cb20dc8aca9ee6cd9ec0d0ecf9181115c",
+      "line": 71,
+      "class": "C",
+      "reason": "relation_valid is an authored scenario input consumed by the reference policy, not a recorded claim that a validation check passed.",
+      "source": "{**common, 'action_class': 'benign', 'relation': 'session_lineage', 'relation_valid': True, 'campaign_id': f'campaign-{ordinal:02d}', 'event_tick': 3}"
+    },
+    {
+      "file": "src/tcop/c2e_frontier.py",
+      "function": "_trace",
+      "field": "relation_valid",
+      "fingerprint": "7ddb06cee8aae210b49823c29be61eacc5a6375a3a38f6953a7340a01b8063c8",
+      "line": 73,
+      "class": "C",
+      "reason": "relation_valid is an authored scenario input consumed by the reference policy, not a recorded claim that a validation check passed.",
+      "source": "{**common, 'action_class': 'benign', 'relation': 'outside_campaign', 'relation_valid': True, 'campaign_id': None, 'event_tick': 2}"
+    },
+    {
+      "file": "src/tcop/c2e_frontier.py",
+      "function": "_trace",
+      "field": "relation_valid",
+      "fingerprint": "c1ec2382e8597c836c7d748d39201cd0fff48bce917ba1ff827ce7d13d9d0814",
+      "line": 75,
+      "class": "C",
+      "reason": "relation_valid is an authored scenario input consumed by the reference policy, not a recorded claim that a validation check passed.",
+      "source": "{**common, 'action_class': 'benign', 'relation': 'unrelated', 'relation_valid': True, 'campaign_id': None, 'risk_family': 'ordinary-read', 'event_tick': 2}"
+    },
+    {
+      "file": "src/tcop/c2e_frontier.py",
+      "function": "run_c2e_frontier",
+      "field": "passed",
+      "fingerprint": "05a4c1bd973911ec41144261f80fffa1d0248bc0a3e592da2d06bf937c04807f",
+      "line": 191,
+      "class": "A",
+      "reason": "Eight named relation controls are emitted as passes without executing those controls.",
+      "source": "{'control': value, 'passed': True, 'restriction_created': False}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-012",
+        "sealed_artifact": "artifacts/c2e-frontier-v1/control-results.jsonl",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/c2e_frontier.py",
+      "function": "verify_c2e_frontier",
+      "field": "valid",
+      "fingerprint": "9748a04603de2bef53edd5cc4c50429034d90f87467422ebba5d856e95bb02c9",
+      "line": 206,
+      "class": "B",
+      "reason": "Checks COMPLETE, episode count, declared interpretation and recomputed digest; failure raises before valid is returned.",
+      "source": "{'valid': True, 'episodes': 150, 'interpretation': manifest['interpretation'], 'artifact_root_digest': expected}"
+    },
+    {
+      "file": "src/tcop/cli.py",
+      "function": "_study_summary",
+      "field": "frozen_inputs_verified",
+      "fingerprint": "ecf77dc213b77cfe12aaef0005b05feda9205a734235f73ee0a28a5bc1288a52",
+      "line": 460,
+      "class": "B",
+      "reason": "The CLI summary follows run_federated_study, whose verify_frozen_inputs raises on a frozen input failure; the summary omits that observation.",
+      "source": "{'study': 'TCOP v0.6 federated-domain', 'artifact_dir': str(output), 'stage': manifest['stage'], 'passed': bool(manifest['passed']), 'matrix_cell_count': manifest['matrix_cell_count'], 'frozen_inputs_verified': True, 'strategies_certified': 4, 'harness_conformance': bool(result['conformance']['passed']), 'replay_verified': True, 'aggregate_record_count': len(report['aggregate']), 'artifact_root_digest': digest['artifact_root_digest']}"
+    },
+    {
+      "file": "src/tcop/cli.py",
+      "function": "_study_summary",
+      "field": "replay_verified",
+      "fingerprint": "ecf77dc213b77cfe12aaef0005b05feda9205a734235f73ee0a28a5bc1288a52",
+      "line": 463,
+      "class": "B",
+      "reason": "The CLI summary follows run_federated_study, whose verify_smoke_replay raises on divergent digests; the summary omits that observation.",
+      "source": "{'study': 'TCOP v0.6 federated-domain', 'artifact_dir': str(output), 'stage': manifest['stage'], 'passed': bool(manifest['passed']), 'matrix_cell_count': manifest['matrix_cell_count'], 'frozen_inputs_verified': True, 'strategies_certified': 4, 'harness_conformance': bool(result['conformance']['passed']), 'replay_verified': True, 'aggregate_record_count': len(report['aggregate']), 'artifact_root_digest': digest['artifact_root_digest']}"
+    },
+    {
+      "file": "src/tcop/cli.py",
+      "function": "dispatch",
+      "field": "source_artifact_verified",
+      "fingerprint": "8d53a4f104b247f437354971dfeb46eb532f754900d24af70229999e97740dde",
+      "line": 644,
+      "class": "B",
+      "reason": "EvidenceRound.verify_source must verify source artifacts, replay and strategy inputs before the CLI returns source_artifact_verified.",
+      "source": "{'source_artifact_verified': True, 'source_run_count': result['source_run_count'], 'frozen_strategy_digests': result['frozen_strategy_digests']}"
+    },
+    {
+      "file": "src/tcop/cli_strategy.py",
+      "function": "list_strategies",
+      "field": "certified",
+      "fingerprint": "82378cf0b98276d8e44050eb5265965344bcc871aee6e16b890066464f7c27c5",
+      "line": 28,
+      "class": "B",
+      "reason": "FrozenStrategyAdapter.certify_all must match frozen manifests and native fixtures before certification labels are returned.",
+      "source": "{'strategy_id': key, 'canonical_manifest': value['canonical_manifest'], 'manifest_digest': value['manifest_digest'], 'resolver_entrypoint': value['resolver_entrypoint'], 'certified': True}"
+    },
+    {
+      "file": "src/tcop/cli_strategy.py",
+      "function": "verify_strategy",
+      "field": "manifest_match",
+      "fingerprint": "342bde03057ae210ea1b6f49df10fe4c66d295060021b245813baf1f5457c5ed",
+      "line": 43,
+      "class": "C",
+      "reason": "manifest_match starts true for the optional no-supplied-manifest case; a supplied manifest replaces it with a digest/profile comparison or raises.",
+      "source": "manifest_match = True"
+    },
+    {
+      "file": "src/tcop/cli_strategy.py",
+      "function": "verify_strategy",
+      "field": "decision_digest_match",
+      "fingerprint": "18c62a124984f58aeffd7b31bda97f8604bb127a8dd6ef4be64bc8e3e2f3c940",
+      "line": 61,
+      "class": "B",
+      "reason": "inspect_strategy invokes frozen certification, which raises on manifest/decision/outcome mismatch before these literal certification flags are returned.",
+      "source": "{'strategy_id': strategy_id, 'canonical_manifest': record['canonical_manifest'], 'manifest_digest': record['manifest_digest'], 'validator_entrypoint': record['validator_entrypoint'], 'resolver_entrypoint': record['resolver_entrypoint'], 'fixture_count': record['fixture_record_count'], 'decision_digest_match': True, 'outcome_digest_match': True, 'supplied_manifest_digest': supplied_digest, 'manifest_match': manifest_match, 'certified': True}"
+    },
+    {
+      "file": "src/tcop/cli_strategy.py",
+      "function": "verify_strategy",
+      "field": "outcome_digest_match",
+      "fingerprint": "18c62a124984f58aeffd7b31bda97f8604bb127a8dd6ef4be64bc8e3e2f3c940",
+      "line": 62,
+      "class": "B",
+      "reason": "inspect_strategy invokes frozen certification, which raises on manifest/decision/outcome mismatch before these literal certification flags are returned.",
+      "source": "{'strategy_id': strategy_id, 'canonical_manifest': record['canonical_manifest'], 'manifest_digest': record['manifest_digest'], 'validator_entrypoint': record['validator_entrypoint'], 'resolver_entrypoint': record['resolver_entrypoint'], 'fixture_count': record['fixture_record_count'], 'decision_digest_match': True, 'outcome_digest_match': True, 'supplied_manifest_digest': supplied_digest, 'manifest_match': manifest_match, 'certified': True}"
+    },
+    {
+      "file": "src/tcop/cli_strategy.py",
+      "function": "verify_strategy",
+      "field": "certified",
+      "fingerprint": "18c62a124984f58aeffd7b31bda97f8604bb127a8dd6ef4be64bc8e3e2f3c940",
+      "line": 65,
+      "class": "B",
+      "reason": "inspect_strategy invokes frozen certification, which raises on manifest/decision/outcome mismatch before these literal certification flags are returned.",
+      "source": "{'strategy_id': strategy_id, 'canonical_manifest': record['canonical_manifest'], 'manifest_digest': record['manifest_digest'], 'validator_entrypoint': record['validator_entrypoint'], 'resolver_entrypoint': record['resolver_entrypoint'], 'fixture_count': record['fixture_record_count'], 'decision_digest_match': True, 'outcome_digest_match': True, 'supplied_manifest_digest': supplied_digest, 'manifest_match': manifest_match, 'certified': True}"
+    },
+    {
+      "file": "src/tcop/confirmation_benchmark.py",
+      "function": "ConfirmationBenchmarkRunner.run",
+      "field": "result",
+      "fingerprint": "ac6bfb625be4b973e9d513add0c0dcf759ba0ae7756377b99630570fe2749107",
+      "line": 130,
+      "class": "C",
+      "reason": "result=pass labels a completed simulation run. Security success is measured separately, may be false, and is not gated by this execution-status label.",
+      "source": "{'scenario_id': scenario_id, 'scenario': scenario.title, 'baseline': baseline, 'seed': seed, 'metrics': metrics, 'result': 'pass'}"
+    },
+    {
+      "file": "src/tcop/confirmation_benchmark.py",
+      "function": "run_confirmation_suite",
+      "field": "oracle_isolation",
+      "fingerprint": "eda54dddcb0fbeff9cf5a8ac2c89ccc099abc6c1d4369876c017798193e924c5",
+      "line": 486,
+      "class": "A",
+      "reason": "oracle_isolation is asserted independently of the reproducibility digest check; no runtime truth-access observation establishes it.",
+      "source": "{'version': 'v0.4', 'scenarios': len(CONFIRMATION_SCENARIOS), 'baselines': list(CONFIRMATION_BASELINES), 'runs': len(rows), 'same_seed_digest': digest, 'same_seed_reproducible': digest == repeated_digest, 'oracle_isolation': True}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-013",
+        "sealed_artifact": "artifacts/confirmation-v0.4/confirmation-verification-summary.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/context_comparator.py",
+      "function": "_controls",
+      "field": "passed",
+      "fingerprint": "4934f90b8e50a60139285129a9b358c86b9ac13107c6ff5b8caa9c154c08bfd2",
+      "line": 206,
+      "class": "A",
+      "reason": "C3 no-message control is declared passed without invoking or inspecting the policy interface.",
+      "source": "{'control': 'C3_no_tcop_message', 'condition': 'C3', 'restriction_created': False, 'passed': True, 'reason': 'always_policy_has_no_context_parameter'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-014",
+        "sealed_artifact": "artifacts/context-value-comparator-v1/controls/control-results.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/context_comparator.py",
+      "function": "_controls",
+      "field": "passed",
+      "fingerprint": "555ac6a2b511c1b945f88df5de93b020bcd6e82d9bc3e8ff5e071c7bb07245cd",
+      "line": 206,
+      "class": "A",
+      "reason": "Four protocol-rejection names times four conditions are declared passed without receiver execution (16 sealed records).",
+      "source": "{'control': name, 'condition': condition, 'restriction_created': False, 'passed': True, 'reason': 'receiver_validation_rejected_before_policy_dispatch'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-015",
+        "sealed_artifact": "artifacts/context-value-comparator-v1/controls/control-results.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/context_comparator.py",
+      "function": "_controls",
+      "field": "passed",
+      "fingerprint": "6dd7d96f98c3c4049d9694cf8bd87bad10c1cae8430deddf5358933f565b7915",
+      "line": 206,
+      "class": "A",
+      "reason": "C1 opaque-interface control is declared passed without attempting forbidden field access.",
+      "source": "{'control': 'C1_opaque_interface', 'condition': 'C1', 'restriction_created': False, 'passed': True, 'reason': 'ArrivalToken exposes validity_time_ttl_only'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-016",
+        "sealed_artifact": "artifacts/context-value-comparator-v1/controls/control-results.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/context_comparator.py",
+      "function": "_controls",
+      "field": "passed",
+      "fingerprint": "a1cf81756e2f6024e510ddc032fc2f4c5f4676c9f85e04c0c368d3bf699b7d5e",
+      "line": 206,
+      "class": "A",
+      "reason": "C2 target-mismatch control is declared passed without invoking the C2 policy.",
+      "source": "{'control': 'context_target_mismatch', 'condition': 'C2', 'restriction_created': False, 'passed': True, 'reason': 'context_binding_mismatch'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-017",
+        "sealed_artifact": "artifacts/context-value-comparator-v1/controls/control-results.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/context_comparator.py",
+      "function": "_controls",
+      "field": "passed",
+      "fingerprint": "fb861f27c8dae070902c03a531028d7585707ccc13d7cf701edcab29d898ba1e",
+      "line": 206,
+      "class": "A",
+      "reason": "C1 target-mismatch control is declared passed without invoking the C1 policy.",
+      "source": "{'control': 'context_target_mismatch', 'condition': 'C1', 'restriction_created': True, 'passed': True, 'reason': 'arrival_only_blanket'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-018",
+        "sealed_artifact": "artifacts/context-value-comparator-v1/controls/control-results.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/context_comparator.py",
+      "function": "run_context_comparator",
+      "field": "source_dependencies_unmodified",
+      "fingerprint": "65539fcc45032f716d3b556e2be55c6e4ccf05acb9028161a78bc5d794ad877c",
+      "line": 261,
+      "class": "A",
+      "reason": "source_dependencies_unmodified is asserted after generation without a post-run source digest comparison.",
+      "source": "{'artifact_type': 'context-value-comparator', 'version': VERSION, 'complete': True, 'replayable': True, 'source_dependencies_unmodified': True, 'normalized_row_count': len(rows), 'result_digest': _digest(rows), 'controls_passed': all((row['passed'] for row in controls))}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-019",
+        "sealed_artifact": "artifacts/context-value-comparator-v1/manifest.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/context_comparator.py",
+      "function": "run_context_comparator",
+      "field": "controls_passed",
+      "fingerprint": "bc9f0fc35492dec6aa5fae71f148b57d18743a34d2f32e76af8631b70606e44c",
+      "line": 263,
+      "class": "A",
+      "reason": "controls_passed in the returned summary is unconditional rather than aggregated from the control outcomes. The manifest uses all(), but inherits the fabricated controls.",
+      "source": "{'artifact_dir': str(output), 'rows': len(rows), 'controls_passed': True, 'artifact_root_digest': _root_digest(output), 'summary': summary}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-020",
+        "sealed_artifact": "artifacts/context-value-comparator-v1/controls/control-results.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/context_comparator.py",
+      "function": "verify_context_comparator",
+      "field": "valid",
+      "fingerprint": "32b8479a849de18f85327fb885af58455db9f17d977c226321c83aa4d3482adc",
+      "line": 272,
+      "class": "B",
+      "reason": "Compares recorded and recomputed root digest and complete flag; raises on failure before valid is returned.",
+      "source": "{'valid': True, 'artifact_root_digest': actual, 'normalized_row_count': manifest['normalized_row_count']}"
+    },
+    {
+      "file": "src/tcop/evidence_round.py",
+      "function": "EvidenceRound.forensics",
+      "field": "invalid_evidence_detection",
+      "fingerprint": "2e5db149d2dd0275e1506075fbcafeaf4d12769ba365ddd627f3bfaecf483c29",
+      "line": 525,
+      "class": "A",
+      "reason": "invalid_evidence_detection defaults to true outside S18 without observing invalid-evidence detection; this contributes to reconstruction score.",
+      "source": "{'first_observer_identification': bool(observations), 'first_affected_domain_identification': any((item.get('domain') for item in streams['authored_facts'])), 'attack_chain_reconstruction': bool(observations and decisions), 'interaction_chain_reconstruction': any((item.get('receipt_verified') for item in validation)), 'campaign_grouping_accuracy': bool(decisions), 'relay_provenance_completeness': True, 'evidence_independence_reconstruction': any((item.get('effective_evidence_class') for item in validation)), 'invalid_evidence_detection': any((not item.get('accepted') for item in validation)) if summary['scenario']['scenario_id'] == 'S18' else True, 'decision_explanation_completeness': all((item.get('explanation') is not None for item in decisions)), 'unexplained_event_count': 0}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-021",
+        "sealed_artifact": "artifacts/federated-domain-v0.6-evidence/forensics/forensic-cell-scores.jsonl",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/evidence_round.py",
+      "function": "EvidenceRound.forensics",
+      "field": "relay_provenance_completeness",
+      "fingerprint": "2e5db149d2dd0275e1506075fbcafeaf4d12769ba365ddd627f3bfaecf483c29",
+      "line": 525,
+      "class": "A",
+      "reason": "relay_provenance_completeness is always true without checking a relay chain, and directly determines provenance_completeness and reconstruction score.",
+      "source": "{'first_observer_identification': bool(observations), 'first_affected_domain_identification': any((item.get('domain') for item in streams['authored_facts'])), 'attack_chain_reconstruction': bool(observations and decisions), 'interaction_chain_reconstruction': any((item.get('receipt_verified') for item in validation)), 'campaign_grouping_accuracy': bool(decisions), 'relay_provenance_completeness': True, 'evidence_independence_reconstruction': any((item.get('effective_evidence_class') for item in validation)), 'invalid_evidence_detection': any((not item.get('accepted') for item in validation)) if summary['scenario']['scenario_id'] == 'S18' else True, 'decision_explanation_completeness': all((item.get('explanation') is not None for item in decisions)), 'unexplained_event_count': 0}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-022",
+        "sealed_artifact": "artifacts/federated-domain-v0.6-evidence/forensics/forensic-cell-scores.jsonl",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/evidence_round.py",
+      "function": "EvidenceRound.pareto_and_readiness",
+      "field": "cohort_comparability_verified",
+      "fingerprint": "3710fe56b0df82eaec381184b601d16f30b689f3f2914b3ad5d507e76146dc2f",
+      "line": 564,
+      "class": "A",
+      "reason": "cohort_comparability_verified is asserted without testing the comparability report; that report includes noncomparable cohort pairs.",
+      "source": "{'cohort_comparability_verified': True, 'paired_causality_verified': containment['eligible_pairs'] > 0, 'containment_window_verified': (self.output / 'timing' / 'containment-window-cells.jsonl').is_file(), 'containment_first': {'preventive_value': 'supported' if containment['improved'] else 'conditional', 'generality': 'concentrated' if generality['single_family_over_half'] else 'broad', 'hidden_utility_cost': hidden_utility_cost}, 'balanced': {'preventive_value': 'conditional', 'forensic_value': 'conditional', 'utility_cost_observed': 'material' if balanced_utility and balanced_utility['benign_actions_blocked'] else 'low'}, 'utility_preserving': {'preventive_value': 'conditional', 'utility_advantage': utility_advantage}, 'forensic_oriented': {'forensic_value': 'supported' if forensic_gain else 'not_supported' if forensic else 'conditional', 'preventive_value': 'conditional', 'additional_records_without_quality_gain': bool(forensic_profile and (not forensic_gain))}, 'central_comparator': {'fact_equivalence_verified': central['fact_equivalence_verified'], 'policy_parity_tested': central['policy_parity_tested'], 'authority_placement_tested': central['authority_placement_tested'], 'tcop_advantage_supported': False, 'central_advantage_supported': False, 'conditional_finding': 'Central comparisons are interpreted only for fact-equivalent, policy-parity-audited cells.'}, 'remote_enforcement_successes': 0, 'paper_core_claim_ready': bool(containment['eligible_pairs'] and (self.output / 'timing' / 'containment-window-cells.jsonl').is_file()), 'blocking_issues': []}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-023",
+        "sealed_artifact": "artifacts/federated-domain-v0.6-evidence/reports/paper-claim-readiness.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/evidence_round.py",
+      "function": "EvidenceRound.run",
+      "field": "passed",
+      "fingerprint": "de46c994008c08f12c2da644570b2617faade2d5c05ee530b81c98de68ffd960",
+      "line": 618,
+      "class": "A",
+      "reason": "Overall evidence passed is unconditional after report generation and replay. No aggregate predicate checks the recorded invariants or readiness before it is emitted.",
+      "source": "{'manifest_version': VERSION, 'artifact_type': 'evidence-round', 'selection': selection, 'source_artifact_digest': source['source_artifact_digest']['artifact_root_digest'], 'source_run_count': len(self.summaries), 'diagnostic_run_count': len(self.diagnostics), 'frozen_strategy_digests': source['frozen_strategy_digests'], 'frozen_input_digests': UPSTREAM_DIGESTS, 'remote_enforcement_successes': 0, 'replay_passed': replay['passed'], 'report_regeneration_digest_stable': True, 'passed': True}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-024",
+        "sealed_artifact": "artifacts/federated-domain-v0.6-evidence/manifest.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/evidence_round.py",
+      "function": "EvidenceRound.run",
+      "field": "report_regeneration_digest_stable",
+      "fingerprint": "de46c994008c08f12c2da644570b2617faade2d5c05ee530b81c98de68ffd960",
+      "line": 618,
+      "class": "A",
+      "reason": "report_regeneration_digest_stable is asserted without regenerating the reports and comparing their digests.",
+      "source": "{'manifest_version': VERSION, 'artifact_type': 'evidence-round', 'selection': selection, 'source_artifact_digest': source['source_artifact_digest']['artifact_root_digest'], 'source_run_count': len(self.summaries), 'diagnostic_run_count': len(self.diagnostics), 'frozen_strategy_digests': source['frozen_strategy_digests'], 'frozen_input_digests': UPSTREAM_DIGESTS, 'remote_enforcement_successes': 0, 'replay_passed': replay['passed'], 'report_regeneration_digest_stable': True, 'passed': True}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-025",
+        "sealed_artifact": "artifacts/federated-domain-v0.6-evidence/manifest.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/evidence_round.py",
+      "function": "EvidenceRound.run",
+      "field": "passed",
+      "fingerprint": "f8a1fdbd75ef719978624ee3382fa07b2fe7f497b33c3644a59b594ef1ba4ed4",
+      "line": 620,
+      "class": "A",
+      "reason": "Overall evidence passed is unconditional after report generation and replay. No aggregate predicate checks the recorded invariants or readiness before it is emitted.",
+      "source": "{'study': 'TCOP v0.6 missing-evidence round', 'stage': selection, 'passed': True, 'artifact_root': str(self.output), 'diagnostic_run_count': len(self.diagnostics)}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-026",
+        "sealed_artifact": "artifacts/federated-domain-v0.6-evidence/status.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/evidence_round.py",
+      "function": "EvidenceRound.run",
+      "field": "frozen_strategy_digests_unchanged",
+      "fingerprint": "038b8487fde932df878efc631c0a71ddf3005b2e58f60dcca0f96aff6e585ca7",
+      "line": 621,
+      "class": "A",
+      "reason": "frozen_strategy_digests_unchanged is asserted without a before/after digest comparison around the evidence run.",
+      "source": "{'passed': True, 'remote_enforcement_successes': 0, 'frozen_strategy_digests_unchanged': True, 'benchmark_truth_runtime_access': False}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-027",
+        "sealed_artifact": "artifacts/federated-domain-v0.6-evidence/validation/invariants.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/evidence_round.py",
+      "function": "EvidenceRound.run",
+      "field": "passed",
+      "fingerprint": "038b8487fde932df878efc631c0a71ddf3005b2e58f60dcca0f96aff6e585ca7",
+      "line": 621,
+      "class": "A",
+      "reason": "The invariants record passed flag has no executed aggregate check of its literal strategy, truth-access or remote-enforcement claims.",
+      "source": "{'passed': True, 'remote_enforcement_successes': 0, 'frozen_strategy_digests_unchanged': True, 'benchmark_truth_runtime_access': False}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-028",
+        "sealed_artifact": "artifacts/federated-domain-v0.6-evidence/validation/invariants.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/experiments.py",
+      "function": "_false_containment_calibration",
+      "field": "single_observer_false_containment",
+      "fingerprint": "c20e23cbb70affda624d3410cc765a992a68a17be5512ce1d9b7b904a58fd266",
+      "line": 241,
+      "class": "B",
+      "reason": "min() over observed response effects cannot succeed with no containment effect; the record includes the observed denied capabilities.",
+      "source": "{'single_observer_false_containment': True, 'denied_capabilities': envelope['denied_capabilities'], 'affected_legitimate_capability': 'data.export', 'benign_task_completion': 0.0, 'severity_weighted_utility_loss': 1.0, 'restriction_duration': recovered_at - first_constraint, 'human_intervention_required': False, 'withdrawal_restored_operation': True}"
+    },
+    {
+      "file": "src/tcop/experiments.py",
+      "function": "_false_containment_calibration",
+      "field": "withdrawal_restored_operation",
+      "fingerprint": "c20e23cbb70affda624d3410cc765a992a68a17be5512ce1d9b7b904a58fd266",
+      "line": 248,
+      "class": "B",
+      "reason": "min() over recovered response events fails when no recovery occurs; it records the measured recovery interval.",
+      "source": "{'single_observer_false_containment': True, 'denied_capabilities': envelope['denied_capabilities'], 'affected_legitimate_capability': 'data.export', 'benign_task_completion': 0.0, 'severity_weighted_utility_loss': 1.0, 'restriction_duration': recovered_at - first_constraint, 'human_intervention_required': False, 'withdrawal_restored_operation': True}"
+    },
+    {
+      "file": "src/tcop/external_adaptive_crosshost.py",
+      "function": "run_external_adaptive",
+      "field": "source_roots_unmodified",
+      "fingerprint": "d9d8071f585b04359bf360ca78017d65a1b5020a36a7099fe7b4b70cd02f2cdc",
+      "line": 245,
+      "class": "A",
+      "reason": "source_roots_unmodified is asserted in the preflight manifest without a post-generation comparison of source-root digests.",
+      "source": "{'artifact_type': 'external-warning-adaptive-crosshost', 'version': version, 'valid_for_results': False, 'validation_records_sha256': validation_hash, 'status': report['status'], 'complete': False, 'evaluation_executed': False, 'source_roots_unmodified': True, 'plan_hash': plan_hash, 'amendment_hashes': amendment_hashes, 'foundation_hashes': foundation_hashes, 'expected_pattern_sha256': foundation_hashes.get('expected-pattern'), 'blockers': report['blockers']}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-029",
+        "sealed_artifact": "artifacts/external-warning-adaptive-crosshost/manifest.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/external_adaptive_crosshost.py",
+      "function": "verify_external_adaptive",
+      "field": "valid",
+      "fingerprint": "93add4070d58d6e73aecc5f3bfb3cf4c99299486090ee719d769505d8595c393",
+      "line": 389,
+      "class": "B",
+      "reason": "Requires recorded/recomputed digest equality, manifest/version contract and amendment/foundation verification before returning valid.",
+      "source": "{'valid': True, 'version': version, 'status': manifest['status'], 'valid_for_results': version in {'1.4', '1.5'} and manifest.get('valid_for_results') is True, 'artifact_root_digest': actual, 'blockers': manifest['blockers']}"
+    },
+    {
+      "file": "src/tcop/external_enforcement_admission.py",
+      "function": "verify_admission",
+      "field": "valid",
+      "fingerprint": "bfc9866ed2ba504249ba6d212e4a6aefdba762111e669752a2d03d9c35d1a54c",
+      "line": 96,
+      "class": "B",
+      "reason": "read_seal verifies hashes; validates the admission and optional physical host identity bindings; failures raise.",
+      "source": "{'valid': True, 'record': record, 'record_sha256': digest(record), 'base_record_sha256': digest(base_admission(record)), 'artifact_root_digest': sealed['artifact_root_digest']}"
+    },
+    {
+      "file": "src/tcop/external_enforcement_validation.py",
+      "function": "_validate_records",
+      "field": "valid",
+      "fingerprint": "d3227639034e47fbe58d4b514b47fe5c2a0939ee1fe7737a76c228323b4dc07b",
+      "line": 610,
+      "class": "B",
+      "reason": "All record, branch, gate, frontier and capability predicates must pass or raise before valid is returned.",
+      "source": "{'valid': True, 'stage': stage, 'valid_for_results': stage == 'results', 'episode_count': len(episodes), 'cell_count': len(cells)}"
+    },
+    {
+      "file": "src/tcop/external_expected_pattern.py",
+      "function": "verify_expected_pattern",
+      "field": "valid",
+      "fingerprint": "1611c453d49808d16bd84eceb5adc8cbec45dfd25acb4fbb7dde8e05233ed218",
+      "line": 42,
+      "class": "B",
+      "reason": "Reads verified seal, validates the record and checks requested bindings before valid; failures raise.",
+      "source": "{'valid': True, 'record': record, 'record_sha256': digest(record), 'sealed_at': sealed['seal']['sealed_at'], 'artifact_root_digest': sealed['artifact_root_digest']}"
+    },
+    {
+      "file": "src/tcop/external_frozen_inputs.py",
+      "function": "verify_inputs",
+      "field": "valid",
+      "fingerprint": "3ca7233044abce6aeb5b377f38484b635dac3dab3b18cac80e4a5c8cdd64e2a2",
+      "line": 50,
+      "class": "B",
+      "reason": "Reads verified seal, checks schema, and by default rebuilds current input bindings before valid; failures raise.",
+      "source": "{'valid': True, 'body': body, 'sha256': digest(body), 'sealed_at': value['seal']['sealed_at']}"
+    },
+    {
+      "file": "src/tcop/external_role_scripts.py",
+      "function": "verify_roles",
+      "field": "valid",
+      "fingerprint": "fe5e939b764329b8d282fb618295fd5ceb2f535068ed01c28b7dd5beb5a4828d",
+      "line": 122,
+      "class": "B",
+      "reason": "Verifies seal members, census, script hashes/roles and optional current script census before valid; failures raise.",
+      "source": "{'valid': True, 'census': census, 'census_sha256': digest(census), 'artifact_root_digest': sealed['artifact_root_digest']}"
+    },
+    {
+      "file": "src/tcop/federation.py",
+      "function": "FederatedRun._summary",
+      "field": "result",
+      "fingerprint": "0dd6cba3159a0be5616c9666d13166e7647f61dcbe54f70512e277316cbdbd71",
+      "line": 796,
+      "class": "C",
+      "reason": "result=pass labels a completed simulation run. Security success is measured separately, may be false, and is not gated by this execution-status label.",
+      "source": "{'run_version': VERSION, 'cell': asdict(self.cell), 'topology': asdict(self.topology), 'scenario': asdict(self.scenario), 'metrics': metrics, 'stream_digest': streams_digest, 'a2_export_digests': [item['export_digest'] for item in self.a2_exports], 'a3_input_digests': [item['export_digest'] for item in self.a3_inputs], 'result': 'pass'}"
+    },
+    {
+      "file": "src/tcop/federation.py",
+      "function": "verify_frozen_inputs",
+      "field": "passed",
+      "fingerprint": "3774621352a290e45adb688531c4bd3df2beecff3800120c3fc43ed87d14b2d2",
+      "line": 854,
+      "class": "B",
+      "reason": "Frozen strategy certification and all upstream regression digests are checked before passed; failures raise.",
+      "source": "{'verification_version': 'tcop.v0.6-frozen-inputs/0.1', 'upstream_frozen_digests': UPSTREAM_DIGESTS, 'upstream_regressions': upstream, 'strategy_certifications': certified, 'passed': True}"
+    },
+    {
+      "file": "src/tcop/federation.py",
+      "function": "run_federated_study",
+      "field": "passed",
+      "fingerprint": "aeb896acce8fef6352c14ee99855fdb31da590e7f2d49a7df375767ecf4219d5",
+      "line": 1107,
+      "class": "A",
+      "reason": "Smoke artifact verification is bypassed and replaced by passed=true. Harness conformance and replay are separate checks; this record never runs verify_artifacts.",
+      "source": "{'passed': True, 'scope': 'smoke'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-030",
+        "sealed_artifact": "artifacts/federated-domain-v0.6-smoke/validation/artifact-verification.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/federation.py",
+      "function": "run_federated_study",
+      "field": "no_new_protocol_fields",
+      "fingerprint": "20f9c9678a3b91407a683c79eab4f8383ff3a742976ff71ac0f0d4079144cecb",
+      "line": 1114,
+      "class": "C",
+      "reason": "no_new_protocol_fields declares the experiment scope; it is not labeled as a protocol-conformance test result.",
+      "source": "{'manifest_version': VERSION, 'stage': stage, 'passed': bool(verification['passed']), 'upstream_frozen_digests': UPSTREAM_DIGESTS, 'frozen_profile_index': str(source_root / FROZEN_INDEX), 'matrix_cell_count': len(cells), 'phase_order': PHASES, 'artifact_streams': ['authored_facts', 'benchmark_truth', 'produced_observations', 'transport_faults', 'derived_decisions'], 'no_new_protocol_fields': True, 'no_remote_enforcement_for_a2': True, 'result_digest': _digest({'summaries': summaries, 'report': report})}"
+    },
+    {
+      "file": "src/tcop/federation.py",
+      "function": "run_federated_study",
+      "field": "no_remote_enforcement_for_a2",
+      "fingerprint": "20f9c9678a3b91407a683c79eab4f8383ff3a742976ff71ac0f0d4079144cecb",
+      "line": 1114,
+      "class": "B",
+      "reason": "validate_harness checks a2_has_no_remote_enforcement and raises before the manifest is written; the manifest drops that observation.",
+      "source": "{'manifest_version': VERSION, 'stage': stage, 'passed': bool(verification['passed']), 'upstream_frozen_digests': UPSTREAM_DIGESTS, 'frozen_profile_index': str(source_root / FROZEN_INDEX), 'matrix_cell_count': len(cells), 'phase_order': PHASES, 'artifact_streams': ['authored_facts', 'benchmark_truth', 'produced_observations', 'transport_faults', 'derived_decisions'], 'no_new_protocol_fields': True, 'no_remote_enforcement_for_a2': True, 'result_digest': _digest({'summaries': summaries, 'report': report})}"
+    },
+    {
+      "file": "src/tcop/independent_warning_admission.py",
+      "function": "run_independent_warning",
+      "field": "passed",
+      "fingerprint": "6d885b0f967b5c9b1691bbb5a83dabb9f93d66c3a87b0e5827ca233f459da674",
+      "line": 79,
+      "class": "A",
+      "reason": "Seven named independent-warning controls are emitted as passed with restriction_created=false without running those controls.",
+      "source": "{'control': x, 'passed': True, 'restriction_created': False}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-031",
+        "sealed_artifact": "artifacts/independent-warning-admission-v1/control-results.jsonl",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/independent_warning_admission.py",
+      "function": "verify_independent_warning",
+      "field": "valid",
+      "fingerprint": "3904c53a6a744d0cda00a79c3ad83083c11ec3098af00069a3c62ed0e3046ba0",
+      "line": 83,
+      "class": "B",
+      "reason": "Requires complete item count/status and a matching recomputed root digest before valid; failures raise.",
+      "source": "{'valid': True, 'items': m['items'], 'rows': m['rows'], 'artifact_root_digest': d}"
+    },
+    {
+      "file": "src/tcop/independent_warning_full.py",
+      "function": "run_full_population",
+      "field": "all_passed",
+      "fingerprint": "25c6ca9bad1337008e9bef28dc488c9161339269650055d1e789d518d2fe2ea9",
+      "line": 147,
+      "class": "A",
+      "reason": "all_passed is asserted rather than derived from all gates. The purported byte-stability test compares each row to its own deepcopy, and predecessor_unchanged is not measured.",
+      "source": "{'all_passed': True, 'predecessor_unchanged': True, 'complete_population': len(raw) == 168, 'no_detector_rerun': True, 'byte_stable': stable, 'policy_contract': observed_summary == expected_summary}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-032",
+        "sealed_artifact": "artifacts/independent-warning-admission-v3-full-population/reports/gates.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/independent_warning_full.py",
+      "function": "run_full_population",
+      "field": "predecessor_unchanged",
+      "fingerprint": "25c6ca9bad1337008e9bef28dc488c9161339269650055d1e789d518d2fe2ea9",
+      "line": 147,
+      "class": "A",
+      "reason": "predecessor_unchanged checks only the saved predecessor digest file at entry, not the predecessor content nor any before/after digest.",
+      "source": "{'all_passed': True, 'predecessor_unchanged': True, 'complete_population': len(raw) == 168, 'no_detector_rerun': True, 'byte_stable': stable, 'policy_contract': observed_summary == expected_summary}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-033",
+        "sealed_artifact": "artifacts/independent-warning-admission-v3-full-population/reports/gates.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/independent_warning_full.py",
+      "function": "verify_full_population",
+      "field": "valid",
+      "fingerprint": "2593977462fa0663da99f1c6dc3cde79af9d2516e68d1d44b7fb50e3290c549c",
+      "line": 181,
+      "class": "B",
+      "reason": "Requires COMPLETE, row/source counts, matching recomputed digest and passing recorded gates before valid; failures raise. Does not independently establish the inherited byte-stability claim.",
+      "source": "{'valid': True, 'status': 'COMPLETE', 'artifact_root_digest': expected}"
+    },
+    {
+      "file": "src/tcop/independent_warning_v2.py",
+      "function": "_evaluate",
+      "field": "valid",
+      "fingerprint": "624ef7c4929e4dbc2a850a5f2cac2e405215c28dc682948961b57e26571b0086",
+      "line": 146,
+      "class": "C",
+      "reason": "valid=True is an argument to emit() constructing an authored replayed-warning control; emit changes replayed candidates to valid=False. It is not a test result.",
+      "source": "valid=True"
+    },
+    {
+      "file": "src/tcop/independent_warning_v2.py",
+      "function": "run_v2",
+      "field": "all_passed",
+      "fingerprint": "d0b1ff0929e2bd5c3347bd29d90cf0496f82715137bbb5da14d3eafcbf31a5b6",
+      "line": 159,
+      "class": "A",
+      "reason": "all_passed is a literal. Although other gate failures raise, protocol_controls_no_restriction accepts two fabricated rejection dictionaries (malformed, unknown_issuer).",
+      "source": "{'all_passed': True, 'invalid_no_restriction': all((not row['restriction'] for row in rows if row['stratum'] in {'partial_binding', 'mismatched_binding', 'stale', 'replayed', 'sender_suggested_only'} and row['policy'] in {'C2', 'C2E'})), 'sender_only_no_c2e_restriction': all((not row['restriction'] for row in rows if row['stratum'] == 'sender_suggested_only' and row['policy'] == 'C2E')), 'no_local_relation_no_c2e_restriction': all((not row['restriction'] for row in rows if row['stratum'] == 'substitution_no_local_relation' and row['policy'] == 'C2E')), 'protocol_controls_no_restriction': all((not value['validated'] and (not value['restriction_created']) for value in protocol_controls.values())), 'stable': stable}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-034",
+        "sealed_artifact": "artifacts/independent-warning-admission-v2-external-stratified/control-results.jsonl",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/independent_warning_v2.py",
+      "function": "verify_v2",
+      "field": "valid",
+      "fingerprint": "d2658fae7fab0bfbbd4bfc9746e45f81efe76a0c6f69541c8e134647a6903709",
+      "line": 169,
+      "class": "B",
+      "reason": "Checks allowed artifact states, recomputed digest and READY nonexecution constraint before valid; failure raises.",
+      "source": "{'valid': True, 'status': manifest['status'], 'artifact_root_digest': expected}"
+    },
+    {
+      "file": "src/tcop/minimality_runner.py",
+      "function": "MinimalityStudyRunner._equivalence",
+      "field": "instrumentation_enabled_equals_disabled",
+      "fingerprint": "8acb24446c7548bbad6ba91c89f3e2640308c964fb5808f082ee61edba797f77",
+      "line": 492,
+      "class": "A",
+      "reason": "Instrumentation equality is declared without an instrumentation-disabled run or a comparison of independent outcomes.",
+      "source": "{'equivalence_version': 'tcop.semantic-equivalence/0.1', 'p7_v04_input_count': len(v04), 'p7_v04_all_use_full_v04_backend': all((row['native_backend'] == 'v0.4:full_v0_4' for row in v04)), 'lower_layer_input_count': len(lower), 'lower_layer_backend_categories': sorted({row['native_backend'] for row in lower}), 'lower_layer_semantic_checks': {'evidence_acceptance': sum((1 for row in lower if row['native_backend'].startswith('v0.1:'))), 'receipt_validation_and_control_group_classification': sum((1 for row in lower if row['native_backend'].startswith('v0.2:'))), 'reliability_contribution': sum((1 for row in lower if row['native_backend'].startswith('v0.3:'))), 'pre_confirmation_response': len(v04)}, 'instrumentation_enabled_equals_disabled': True, 'instrumentation_rule': 'all instrumentation is derived after unchanged native decision output'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-035",
+        "sealed_artifact": "artifacts/minimality-v0.5/semantic-equivalence.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/minimality_runner.py",
+      "function": "MinimalityStudyRunner._equivalence",
+      "field": "equal",
+      "fingerprint": "c2078fca57f4be2d7d58aea264c2721b7d2c45175fdc5189fb616b62b5a8e509",
+      "line": 499,
+      "class": "A",
+      "reason": "The same native_decision_digest is copied into with/without instrumentation fields and equal is set true, so the equality is circular.",
+      "source": "{'scenario_id': row['scenario_id'], 'seed': row['seed'], 'decision_digest_without_instrumentation': row['native_decision_digest'], 'decision_digest_with_instrumentation': row['native_decision_digest'], 'equal': True}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-036",
+        "sealed_artifact": "artifacts/minimality-v0.5/instrumentation-equivalence.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/minimality_validation.py",
+      "function": "MinimalityValidationRunner._policy_report",
+      "field": "P0_P1_behaviorally_identical",
+      "fingerprint": "4b4878cada996ba8b7601f897016e3ce16c1694a150331995c45dbfbb1b5b61b",
+      "line": 355,
+      "class": "A",
+      "reason": "Per-scenario first differing decision is computed, but P0_P1_behaviorally_identical is always true even if a difference was found.",
+      "source": "{'report_version': 'tcop.policy-activation-report/0.1', 'P0_P1_behaviorally_identical': True, 'P1_policy_runtime_active': False, 'policy_addressable_forbidden_action_present': False, 'conclusion': 'The frozen v0.5 corpus does not execute P1 static policy. P0/P1 equality is an inactive-baseline result, not evidence that static policy is ineffective.', 'scenarios': scenarios}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-037",
+        "sealed_artifact": "artifacts/minimality-v0.5-validation/policy_activation_report.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/minimality_validation.py",
+      "function": "MinimalityValidationRunner._patrol_report",
+      "field": "patrol_findings_can_enter_selected_native_backends",
+      "fingerprint": "829477fb1643d4fd842fce7786ac2a2baef9639e2af28aa63a325abfa133b409",
+      "line": 483,
+      "class": "A",
+      "reason": "Patrol reachability is asserted without tying it to observed patrol events or executing a native-backend admission check.",
+      "source": "{'report_version': 'tcop.patrol-validation-report/0.1', 'selected_scenarios_with_active_patrol_observations': patrol_inputs, 'coverage_values_change_witness_availability': False, 'coverage_wiring_conclusion': 'low/medium/high are declared interaction labels only; their composed features, content-addressed inputs, and native backends are identical.', 'coverage_profile_features': coverage_manifest_features, 'coverage_profile_backends': coverage_backends, 'enabled_patrol_event_count': enabled_events, 'patrol_findings_can_enter_selected_native_backends': True, 'disabled_cells_emit_no_patrol_state_or_contribution': False, 'disabled_cell_wiring_exception_count': len(disabled_with_patrol_backend), 'disabled_cell_wiring_conclusion': 'Some ACTIVE_PATROL-disabled confirmation rows still use full_v0_4, whose frozen scenario facts include patrol observations. Those cells cannot establish patrol neutrality.', 'preventive_interpretation': 'insufficiently_exercised_or_unwired; no preventive-neutral conclusion is drawn from I-05.'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-038",
+        "sealed_artifact": "artifacts/minimality-v0.5-validation/patrol-validation-report.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/reliability_benchmark.py",
+      "function": "ReliabilityBenchmarkRunner.run",
+      "field": "result",
+      "fingerprint": "ac6bfb625be4b973e9d513add0c0dcf759ba0ae7756377b99630570fe2749107",
+      "line": 151,
+      "class": "C",
+      "reason": "result=pass labels a completed simulation run. Security success is measured separately, may be false, and is not gated by this execution-status label.",
+      "source": "{'scenario_id': scenario_id, 'scenario': scenario.title, 'baseline': baseline, 'seed': seed, 'metrics': metrics, 'result': 'pass'}"
+    },
+    {
+      "file": "src/tcop/reliability_benchmark.py",
+      "function": "run_reliability_suite",
+      "field": "oracle_isolation",
+      "fingerprint": "3632d91090ea120d00c690bda6caafdb17e133fdbc0b16ad590e6065325cff18",
+      "line": 554,
+      "class": "A",
+      "reason": "oracle_isolation is asserted independently of same-seed reproducibility; no runtime truth-access outcome is checked.",
+      "source": "{'version': 'v0.3', 'scenarios': len(RELIABILITY_SCENARIOS), 'baselines': list(RELIABILITY_BASELINES), 'runs': len(summaries), 'same_seed_digest': digest, 'same_seed_reproducible': digest == repeated_digest, 'oracle_isolation': True}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-039",
+        "sealed_artifact": "artifacts/reliability-v0.3/reliability-verification-summary.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/stix_taxii_comparator.py",
+      "function": "_input",
+      "field": "receipt_session_valid",
+      "fingerprint": "2e6e103926da0b9b0f41aa30d8ea07279ea3fb4ca6f8949c608915c4454a809e",
+      "line": 32,
+      "class": "C",
+      "reason": "receipt_session_valid is local fixture input to the deterministic policy, not a claim of a test execution.",
+      "source": "{'receipt_session_valid': True, 'local_authorization': True, 'monitor_records': ['fixture-only']}"
+    },
+    {
+      "file": "src/tcop/stix_taxii_comparator.py",
+      "function": "run_deterministic_fixtures",
+      "field": "passed",
+      "fingerprint": "11759b6e4c3d8bcfd8f0752a4a76ebffeda40144f14991258b826b2fcaa2c0c7",
+      "line": 91,
+      "class": "B",
+      "reason": "Each paired local-action digest set is compared; mismatch raises before the A3 gate is returned. Fixed reason string drops the observed digests.",
+      "source": "{'passed': True, 'reason': 'paired local-action digest matches for S1/T2/S2'}"
+    },
+    {
+      "file": "src/tcop/stix_taxii_comparator.py",
+      "function": "run_deterministic_fixtures",
+      "field": "passed",
+      "fingerprint": "f137259dcf3517a6b5a3e170e3e372685b358d3a5107954153d862a3b9a79556",
+      "line": 93,
+      "class": "A",
+      "reason": "A5 claims every matrix cell has a protocol/trace reference, but no reference-completeness predicate is evaluated.",
+      "source": "{'passed': True, 'reason': 'every matrix cell has a protocol/trace reference'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-040",
+        "sealed_artifact": "artifacts/external-warning-adaptive-crosshost/preflight-report.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "src/tcop/timing_phase.py",
+      "function": "validate_timing_rows",
+      "field": "passed",
+      "fingerprint": "344788ab88441166d6ed5849c2877861cc9a719c4f1a223eda33a3c552711c31",
+      "line": 52,
+      "class": "B",
+      "reason": "Timing keys, stamps, disposition partition and complete expected grid are checked before passed; failure raises.",
+      "source": "{'passed': True, 'cell_count': len(seen), 'expected_cell_count': len(expected)}"
+    },
+    {
+      "file": "src/tcop/validation_value.py",
+      "function": "_verify_inputs",
+      "field": "passed",
+      "fingerprint": "a186e431b1eb24fc355b21239ab33b794ee76c3673f7f5e3be814c13e705d170",
+      "line": 56,
+      "class": "B",
+      "reason": "Compares expected/observed frozen root digests and pinned constants before literal passed; mismatches raise. This B site already retains expected and observed.",
+      "source": "{'expected': expected, 'observed': observed, 'passed': True}"
+    },
+    {
+      "file": "src/tcop/validation_value.py",
+      "function": "_run",
+      "field": "predecessor_artifacts_unmodified",
+      "fingerprint": "d762ea03866f6566406727a6af168e0b04ff6b5136a289b0f246adc9d580ac7a",
+      "line": 177,
+      "class": "A",
+      "reason": "predecessor_artifacts_unmodified is asserted in the exclusion ledger without a post-run digest comparison.",
+      "source": "{'excluded': [], 'predecessor_artifacts_unmodified': True, 'note': 'No live-model sampling; all episodes are preregistered deterministic synthetic traces.'}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-041",
+        "sealed_artifact": "artifacts/tcx-validation-value-v2/exclusion-ledger.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/validation_value.py",
+      "function": "_run",
+      "field": "source_roots_unmodified",
+      "fingerprint": "89fe14ce58d944e502b0d3072a86d353a8cc5095caff984fb601a083cd567978",
+      "line": 181,
+      "class": "A",
+      "reason": "source_roots_unmodified is asserted in the manifest without comparing digests after generation.",
+      "source": "{'artifact_type': 'tcx-validation-value-v2', 'version': VERSION, 'complete': all(gates.values()), 'replayable': True, 'source_roots_unmodified': True, 'normalized_row_count': len(rows), 'result_digest': _digest(rows)}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-042",
+        "sealed_artifact": "artifacts/tcx-validation-value-v2/manifest.json",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/validation_value.py",
+      "function": "run_validation_value",
+      "field": "normalized_results_byte_identical",
+      "fingerprint": "bbffb8ebe4716cc61e4e27a6817f305f57fc284ab69a631345b748deb7caa961",
+      "line": 196,
+      "class": "B",
+      "reason": "Two independent _run outputs are compared byte-for-byte and mismatch raises before normalized_results_byte_identical is set.",
+      "source": "{'reruns': 2, 'normalized_results_byte_identical': True, 'normalized_sha256': sha256(left_bytes).hexdigest(), 'metadata_differences': []}"
+    },
+    {
+      "file": "src/tcop/validation_value.py",
+      "function": "verify_validation_value",
+      "field": "valid",
+      "fingerprint": "2c06663cff2cfd2dde0bfe882dc976c8fcb23f5c1a1b14633ece5af2d3207ea6",
+      "line": 209,
+      "class": "B",
+      "reason": "Requires complete, all recorded gates and matching recomputed digest before valid; failure raises.",
+      "source": "{'valid': True, 'artifact_root_digest': actual, 'normalized_row_count': manifest['normalized_row_count'], 'gates': gates}"
+    },
+    {
+      "file": "src/tcop/witness.py",
+      "function": "WitnessValidator.validate",
+      "field": "receipt_verified",
+      "fingerprint": "423cd91071df006ef42fe9a74761cbe0368898e739cf21d237a3bb34094a0a16",
+      "line": 340,
+      "class": "B",
+      "reason": "Looks up and verifies the interaction receipt and observer/subject bindings before setting receipt_verified; rejects failures.",
+      "source": "receipt_verified = True"
+    },
+    {
+      "file": "src/tcop/witness_benchmark.py",
+      "function": "WitnessBenchmarkRunner.run",
+      "field": "result",
+      "fingerprint": "ac6bfb625be4b973e9d513add0c0dcf759ba0ae7756377b99630570fe2749107",
+      "line": 89,
+      "class": "C",
+      "reason": "result=pass labels a completed simulation run. Security success is measured separately, may be false, and is not gated by this execution-status label.",
+      "source": "{'scenario_id': scenario_id, 'scenario': scenario.title, 'baseline': baseline, 'seed': seed, 'metrics': metrics, 'result': 'pass'}"
+    },
+    {
+      "file": "src/tcop/witness_benchmark.py",
+      "function": "WitnessBenchmarkRunner._metrics",
+      "field": "state_stabilized",
+      "fingerprint": "01aa670073e2e3136024b88b2354aa0ae6f08c30f03a539e840b88d57802aa96",
+      "line": 331,
+      "class": "A",
+      "reason": "state_stabilized is unconditional; draining the private delivery queue is not an observation of state convergence.",
+      "source": "{'scenario_objective': scenario.objective, 'scenario_objective_success': float(objective_success), 'contained_nodes': len(contained_nodes), 'cross_domain_blast_radius': max(0, len(cluster.nodes) - len(contained_nodes)), 'independent_witness_coverage': round(len(independent_groups) / max(1, len(cluster.nodes) - 1), 3), 'distinct_control_groups_observed': len(independent_groups), 'self_attestation_reclassified': sum((item['reason_code'] == 'self_attestation_not_independent' for item in classifications)), 'same_control_reclassified': sum((item['reason_code'] == 'same_control_group_reclassified' for item in classifications)), 'receipt_verification_rate': round(receipt_valid / max(1, receipt_total), 3), 'relay_inflation_blocked': max(0, relay_records - len(independent_groups)), 'patrol_events': len(cluster.patrol_events), 'patrol_unavailable': sum((item.get('event_type') == 'patrol_unavailable' for item in cluster.patrol_events)), 'patrol_budget_rejections': sum((item.get('event_type') == 'patrol_budget_exceeded' for item in cluster.patrol_events)), 'synchronization_after_heal': sum((event.get('event_type') == 'synchronization_after_heal' for node in cluster.nodes.values() for event in node.protocol_events)), 'final_envelopes': {node_id: envelope.state if envelope else 'none' for node_id, envelope in envelopes.items()}, 'no_evidence_nodes': sum((envelope is not None and envelope.state == 'approval_gated' for envelope in envelopes.values())), 'benign_task_completion': 0.0 if flags.get('false_claim') and contained_nodes else 1.0, 'protocol_overhead_events': sum((len(node.protocol_events) for node in cluster.nodes.values())), 'state_stabilized': True, 'baseline': baseline}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-043",
+        "sealed_artifact": "artifacts/minimality-v0.5/per-run-metrics.jsonl",
+        "sealed_artifact_present": true,
+        "artifact_note": "Retained matching record or related inherited control; see sweep for exact producer attribution."
+      }
+    },
+    {
+      "file": "src/tcop/witness_benchmark.py",
+      "function": "run_witness_suite",
+      "field": "oracle_isolation",
+      "fingerprint": "31c71069c72efa9f76a8017084ac8702c0f342596c6163454611b1bfa2d53d81",
+      "line": 405,
+      "class": "A",
+      "reason": "oracle_isolation is asserted independently of reproducibility; no truth-access check supplies an observed isolation outcome.",
+      "source": "{'version': 'v0.2', 'scenarios': len(WITNESS_SCENARIOS), 'baselines': list(WITNESS_BASELINES), 'runs': len(summaries), 'same_seed_digest': suite_digest, 'same_seed_reproducible': suite_digest == repeated_digest, 'oracle_isolation': True}",
+      "tracking": {
+        "issue": "docs/KNOWN_ISSUES.md",
+        "finding": "docs/unearned-pass-issues.md#uep-044",
+        "sealed_artifact": "artifacts/witness-v0.2/witness-verification-summary.json",
+        "sealed_artifact_present": false,
+        "artifact_note": "No sealed record at this path in this checkout. This is an intended legacy output, not proof of a run."
+      }
+    },
+    {
+      "file": "tests/test_external_conformance_checks.py",
+      "function": "ConformanceTests.test_calibration_import_does_not_trust_passing_boolean",
+      "field": "passed",
+      "fingerprint": "a55f4bfd23f6f5fae50320e666aa8f78f208d157d700d35c02b3cf43bc6fca30",
+      "line": 86,
+      "class": "C",
+      "reason": "Intentionally forges a passing boolean to test that calibration import rejects it; never exported as a real conformance result.",
+      "source": "r['passed'] = True"
+    },
+    {
+      "file": "tests/test_external_enforcement_v14.py",
+      "function": "Manifest14Tests.test_report_refuses_14_smoke",
+      "field": "valid",
+      "fingerprint": "67c25c2d65653cd4fde338dac797b66b3677efb679c47da7062a346a04f9f82e",
+      "line": 221,
+      "class": "C",
+      "reason": "Mock verification response used to test refusal of a smoke report, not a real artifact-verification claim.",
+      "source": "{'valid': True, 'version': '1.4', 'status': 'SMOKE_INVALID_FOR_RESULTS', 'valid_for_results': False}"
+    },
+    {
+      "file": "tests/test_external_enforcement_v15.py",
+      "function": "Amendment005Gates.test_reject_intake_replay.change",
+      "field": "receipt_verified",
+      "fingerprint": "f798751ab856fc242e7cbfef5ccff9789d8404955ee7e711e7b2f6ceb76d6839",
+      "line": 128,
+      "class": "C",
+      "reason": "Authored accepted receive-event fixture for a replay-rejection test; not a reported check result.",
+      "source": "receipt_verified=True"
+    },
+    {
+      "file": "tests/test_external_enforcement_v15.py",
+      "function": "Amendment005Gates.test_reject_intake_replay.change",
+      "field": "signature_valid",
+      "fingerprint": "277e7c6342c97b1c1da90085fd50ba2e74d69db758867f78547e1e9de8323ecd",
+      "line": 128,
+      "class": "C",
+      "reason": "Authored accepted receive-event fixture for a replay-rejection test; not a reported check result.",
+      "source": "signature_valid=True"
+    }
+  ]
+}

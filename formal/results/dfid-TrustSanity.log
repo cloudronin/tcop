@@ -1,0 +1,807 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running depth-first search Model-Checking with fp 1 and seed -4507853126597780700 with 1 worker on 10 cores with 7282MB heap and 64MB offheap memory [pid: 90529] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 x86_64).
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TrustMC.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPTrust.tla
+Parsing file /Users/vishnu/Library/CloudStorage/Dropbox/Praxis/TCOP/.claude/worktrees/tcop-repo-sync-b4874b/formal/tla/TCOPReceiver.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Naturals.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Integers.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/Sequences.tla
+Parsing file /private/var/folders/tw/zxn04wss61b4fc6jz1y99vt40000gn/T/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TCOPReceiver
+Semantic processing of module TCOPTrust
+Semantic processing of module TrustMC
+Starting... (2026-11-01 21:10:27)
+Finished computing initial states: 1 states generated, with 1 of them distinct.
+Starting level 2: 1 states generated, 1 distinct states found.
+Starting level 3: 7 states generated, 7 distinct states found.
+Starting level 4: 40 states generated, 24 distinct states found.
+Starting level 5: 134 states generated, 56 distinct states found.
+Starting level 6: 328 states generated, 103 distinct states found.
+Starting level 7: 663 states generated, 172 distinct states found.
+Starting level 8: 1167 states generated, 267 distinct states found.
+Starting level 9: 1843 states generated, 386 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 10: 2716 states generated, 531 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 11: 3809 states generated, 693 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 12: 5119 states generated, 847 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 13: 6603 states generated, 982 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 14: 8222 states generated, 1102 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 15: 9961 states generated, 1208 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> TRUE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+Starting level 16: 11806 states generated, 1304 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 17: 13747 states generated, 1394 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> TRUE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 18: 15778 states generated, 1450 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> TRUE,
+  trustedFreeze |-> FALSE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 19: 17865 states generated, 1466 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 20: 19968 states generated, 1474 distinct states found.
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+[ trustTerminal |-> TRUE,
+  untrustedRestriction |-> FALSE,
+  trustedFreeze |-> TRUE,
+  quarantinedWarningBlocked |-> FALSE,
+  pendingWarningCancelled |-> FALSE ]
+Starting level 21: 22079 states generated, 1478 distinct states found.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 1.8E-12
+  based on the actual fingerprints:  val = 1.9E-4
+24194 states generated, 1478 distinct states found.
+Finished in 00s at (2026-11-01 21:10:28)

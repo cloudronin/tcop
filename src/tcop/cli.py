@@ -47,6 +47,10 @@ from .external_adaptive_crosshost import (
     run_external_adaptive,
     verify_external_adaptive,
 )
+from .external_enforcement_admission import seal_admission, verify_admission
+from .external_role_scripts import DEFAULT_SCRIPTS, census_roles, seal_roles, verify_roles
+from .external_expected_pattern import seal_expected_pattern, verify_expected_pattern
+from .external_foundation_seals import read_json
 from .external_acquisition import DEFAULT_BUNDLE as EXTERNAL_INPUT_BUNDLE, seal_acquisition_bundle
 from .adaptive_agent_authorization import ROOT as ADAPTIVE_AUTH_ROOT, run_adaptive_authorization, verify_adaptive_authorization, report_adaptive_authorization
 from .independent_warning_admission import ROOT as INDEPENDENT_WARNING_ROOT, acquire_independent, run_independent_warning, verify_independent_warning, report_independent_warning
@@ -274,6 +278,38 @@ def _add_study_and_artifact(commands: argparse._SubParsersAction[argparse.Argume
     external_acquire.add_argument("--plan", type=Path, default=Path("benchmark/studies/external-warning-adaptive-crosshost-v1.yaml")); external_acquire.add_argument("--bundle", type=Path, default=EXTERNAL_INPUT_BUNDLE); _format(external_acquire)
     external_run = external_nested.add_parser("run", help="perform the required external-study preflight and run only when every gate passes")
     external_run.add_argument("--plan", type=Path, default=Path("benchmark/studies/external-warning-adaptive-crosshost-v1.yaml")); external_run.add_argument("--output", type=Path, default=EXTERNAL_ADAPTIVE_ROOT); _format(external_run)
+    for option in ("admission", "census", "expected-pattern"):
+        external_run.add_argument("--" + option, type=Path, help="verified foundation seal directory")
+    admission_parser = external_nested.add_parser("admit", help="seal or verify a three-machine admission record")
+    admission_choice = admission_parser.add_mutually_exclusive_group(required=True)
+    admission_choice.add_argument("--record", type=Path)
+    admission_choice.add_argument("--verify", type=Path, dest="admission_verify")
+    admission_parser.add_argument("--output", type=Path)
+    _format(admission_parser)
+    roles_parser = external_nested.add_parser("roles", help="census, seal, or verify synthetic role scripts")
+    roles_nested = roles_parser.add_subparsers(dest="roles_command", required=True)
+    roles_census = roles_nested.add_parser("census")
+    roles_census.add_argument("--scripts-dir", type=Path, default=DEFAULT_SCRIPTS)
+    _format(roles_census)
+    roles_seal = roles_nested.add_parser("seal")
+    roles_seal.add_argument("--scripts-dir", type=Path, default=DEFAULT_SCRIPTS)
+    roles_seal.add_argument("--output", type=Path, required=True)
+    _format(roles_seal)
+    roles_verify = roles_nested.add_parser("verify")
+    roles_verify.add_argument("--artifact-dir", type=Path, required=True)
+    roles_verify.add_argument("--scripts-dir", type=Path)
+    roles_verify.add_argument("--script-id")
+    roles_verify.add_argument("--non-smoke", action="store_true")
+    _format(roles_verify)
+    pattern_parser = external_nested.add_parser("expected-pattern", help="seal or verify a pre-execution prediction")
+    pattern_nested = pattern_parser.add_subparsers(dest="pattern_command", required=True)
+    pattern_seal = pattern_nested.add_parser("seal")
+    pattern_seal.add_argument("--input", type=Path, required=True)
+    pattern_seal.add_argument("--output", type=Path, required=True)
+    _format(pattern_seal)
+    pattern_verify = pattern_nested.add_parser("verify")
+    pattern_verify.add_argument("--artifact-dir", type=Path, required=True)
+    _format(pattern_verify)
     external_verify = external_nested.add_parser("verify", help="verify an external-warning study artifact, including a sealed BLOCKED preflight")
     external_verify.add_argument("--artifact-dir", type=Path, default=EXTERNAL_ADAPTIVE_ROOT); _format(external_verify)
     external_report = external_nested.add_parser("report", help="report the study status and supported claims")
@@ -524,7 +560,20 @@ def dispatch(args: argparse.Namespace) -> tuple[Any, str]:
             if args.validation_value_command == "verify": return verify_validation_value(args.artifact_dir), args.format
         if args.study_command == "external-adaptive":
             if args.external_adaptive_command == "acquire": return seal_acquisition_bundle(args.bundle, args.plan), args.format
-            if args.external_adaptive_command == "run": return run_external_adaptive(args.output, args.plan), args.format
+            if args.external_adaptive_command == "admit":
+                if args.admission_verify:
+                    if args.output is not None: raise TCOPCommandError("--output cannot be used with --verify")
+                    return verify_admission(args.admission_verify), args.format
+                if args.output is None: raise TCOPCommandError("admit --record requires --output")
+                return seal_admission(read_json(args.record), args.output), args.format
+            if args.external_adaptive_command == "roles":
+                if args.roles_command == "census": return census_roles(args.scripts_dir), args.format
+                if args.roles_command == "seal": return seal_roles(args.scripts_dir, args.output), args.format
+                return verify_roles(args.artifact_dir, non_smoke=args.non_smoke, scripts_dir=args.scripts_dir, script_id=args.script_id), args.format
+            if args.external_adaptive_command == "expected-pattern":
+                if args.pattern_command == "seal": return seal_expected_pattern(read_json(args.input), args.output), args.format
+                return verify_expected_pattern(args.artifact_dir), args.format
+            if args.external_adaptive_command == "run": return run_external_adaptive(args.output, args.plan, admission=args.admission, census=args.census, expected_pattern=args.expected_pattern), args.format
             if args.external_adaptive_command == "verify": return verify_external_adaptive(args.artifact_dir), args.format
             if args.external_adaptive_command == "report": return report_external_adaptive(args.artifact_dir), args.format
         if args.study_command == "adaptive-authorization":

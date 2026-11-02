@@ -1,0 +1,76 @@
+{
+  "schema": "tcop.external-enforcement-admission/1.0",
+  "synthetic_fixture": true,
+  "pins": {
+    "openclaw": {
+      "release": "2026.9.2",
+      "commit": "3928bad9badfcb6c7d140530435e806fb8092190",
+      "npm_integrity": "sha512-M6C7UsnX815nv26qBJFYGe6aGzv+ftZLRzV6S9oRXUtXg2Yn67eVntpssT94kgkquKVSeUxerUg0j1ONp4WYQg=="
+    },
+    "nemoclaw": {
+      "commit": "88fe14f3fb9a0bf72997cce19ec88b5b2ee08391"
+    },
+    "openshell": {
+      "version": "0.0.116",
+      "commit": "d1155aa70042d3e2ee49dbfa15346b108b7c1d92"
+    }
+  },
+  "hosts": {
+    "runner": {
+      "identity": "synthetic-runner",
+      "hardware_id_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "os_admin_account": "synthetic-admin-runner",
+      "administration_statement": "Synthetic fixture only. Distinct physical machine under the named local administration."
+    },
+    "host_a": {
+      "identity": "synthetic-host_a",
+      "hardware_id_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "os_admin_account": "synthetic-admin-host_a",
+      "administration_statement": "Synthetic fixture only. Distinct physical machine under the named local administration.",
+      "nemoclaw_notice": {
+        "version": "2026-04-01b",
+        "accepted": true
+      }
+    },
+    "host_b": {
+      "identity": "synthetic-host_b",
+      "hardware_id_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+      "os_admin_account": "synthetic-admin-host_b",
+      "administration_statement": "Synthetic fixture only. Distinct physical machine under the named local administration.",
+      "nemoclaw_notice": {
+        "version": "2026-04-01b",
+        "accepted": true
+      }
+    }
+  },
+  "clock_offset": {
+    "a_to_b_ms": 1.25,
+    "method": "synthetic bidirectional timestamp fixture",
+    "measured_at": "2026-11-01T12:00:00Z"
+  },
+  "policy": {
+    "tier": "restricted",
+    "presets": [],
+    "installed_effective_baseline_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "arms": {
+    "E0": {
+      "agent_release": "2026.9.2"
+    },
+    "E1": {
+      "agent_release": "2026.9.2",
+      "baseline_policy_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "E2": {
+      "agent_release": "2026.9.2",
+      "baseline_policy_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  },
+  "sandbox": {
+    "id": "synthetic-sandbox-id",
+    "name": "synthetic-b",
+    "workspace": "synthetic-workspace",
+    "gateway": "synthetic-gateway",
+    "host_identity": "synthetic-host_b"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "accepted-slow.json": {
+    "outcome": "accepted",
+    "first_rejected_step_index": null
+  },
+  "accepted-fast.json": {
+    "outcome": "accepted",
+    "first_rejected_step_index": null
+  },
+  "rejected-widening.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 3
+  },
+  "rejected-expired.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 0
+  },
+  "rejected-replay-id.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 3
+  },
+  "rejected-replay-nonce.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 3
+  },
+  "rejected-covered-action.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 3
+  },
+  "rejected-a1-without-denial.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 2
+  },
+  "rejected-receipt-mismatch.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 0
+  },
+  "rejected-receipt-absent.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 0
+  },
+  "malformed-missing-nonce.json": {
+    "outcome": "malformed",
+    "first_rejected_step_index": 0
+  },
+  "malformed-command.json": {
+    "outcome": "malformed",
+    "first_rejected_step_index": 0
+  },
+  "accepted-no-evidence.json": {
+    "outcome": "accepted",
+    "first_rejected_step_index": null
+  },
+  "rejected-initial-authority.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": -1
+  },
+  "accepted-replay-rejection.json": {
+    "outcome": "accepted",
+    "first_rejected_step_index": null
+  },
+  "accepted-invalid-rejections.json": {
+    "outcome": "accepted",
+    "first_rejected_step_index": null
+  },
+  "accepted-freeze.json": {
+    "outcome": "accepted",
+    "first_rejected_step_index": null
+  },
+  "accepted-credential.json": {
+    "outcome": "accepted",
+    "first_rejected_step_index": null
+  },
+  "rejected-missing-submit.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 1
+  },
+  "rejected-missing-a4.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 3
+  },
+  "rejected-lag-out-of-bounds.json": {
+    "outcome": "rejected",
+    "first_rejected_step_index": 2
+  },
+  "accepted-approval-delay.json": {
+    "outcome": "accepted",
+    "first_rejected_step_index": null
+  }
+}
