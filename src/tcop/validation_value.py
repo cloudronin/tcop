@@ -126,8 +126,10 @@ def _properties() -> dict[str, Any]:
         result = accept(context, deepcopy(fixture.receipt))
         mutations[field] = {"code": result["code"], "restriction_created": result["restriction_created"], "passed": not result["restriction_created"]}
     wrong_receipt = deepcopy(fixture.context); wrong_receipt["interaction_receipt_hash"] = "0" * 64
-    mutations["receipt_reference"] = {**accept(wrong_receipt, deepcopy(fixture.receipt)), "passed": True}
-    mutations["expires_at"] = {**accept(deepcopy(fixture.context), deepcopy(fixture.receipt), 2_300_000_061), "passed": True}
+    wrong_result = accept(wrong_receipt, deepcopy(fixture.receipt))
+    mutations["receipt_reference"] = {**wrong_result, "passed": wrong_result["code"] == "receipt_unknown" and not wrong_result["restriction_created"]}
+    expired_result = accept(deepcopy(fixture.context), deepcopy(fixture.receipt), 2_300_000_061)
+    mutations["expires_at"] = {**expired_result, "passed": expired_result["code"] == "expired" and not expired_result["restriction_created"]}
     evaluator = receiver_for_fixture(fixture); first = evaluator.accept_imported_context(deepcopy(fixture.context), deepcopy(fixture.receipt), session_id="session-719", principal_id="agent-account-19", now=2_300_000_000); replay = evaluator.accept_imported_context(deepcopy(fixture.context), deepcopy(fixture.receipt), session_id="session-719", principal_id="agent-account-19", now=2_300_000_000)
     mutations["replay"] = {"code": replay["code"], "restriction_created": replay["restriction_created"], "passed": first["accepted"] and replay["code"] == "context_replayed"}
     semantic_fixture = create_fixture("RA-01", scripted_trace("RA-01"), metadata={"action": "deny", "enforcement": "block", "scope": "*"})
